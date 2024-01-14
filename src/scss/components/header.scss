@@ -6,7 +6,10 @@
     }
 
     &__logo {
-        width: 145px;
+        img {
+            width: 145px;
             height: 30px;
+        }
+        
     }
 }
