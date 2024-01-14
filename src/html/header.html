@@ -1,3 +1,55 @@
 <header class="header">
-  header
+  <div class="header__container">
+    <a class="header__logo" href="#">
+      <svg>
+        <use href="/src/images/Sprite.svg#icon-logo"></use>
+      </svg>
+      <!-- <img src="/src/svgIcons/logo.svg" alt=""> -->
+    </a>
+    <nav class="header__menu menu">
+      <ul class="menu__list">
+        <li class="menu__item"><a href="#">Main page</a></li>
+        <li class="menu__item"><a href="#"><span class="menu__item-icon">
+              <svg>
+                <use href=""></use>
+              </svg>
+            </span>NFT</a></li>
+        <li class="menu__item"><a href="#">Pictures</a></li>
+        <li class="menu__item"><a href="#">Auction</a></li>
+        <li class="menu__item"><a href="#">Pricing</a></li>
+        <li class="menu__item"><a href="#">Contacts</a></li>
+        <li class="menu__item"><a href="#">Blog</a></li>
+      </ul>
+    </nav>
+    <div class="header__dropdown dropdown">
+      <button class="dropdown__btn">
+        <span class="dropdown__btn-text">ENG</span>
+        <span class="dropdown__btn-icon">
+          <svg>
+            <use href=""></use>
+          </svg>
+        </span>
+      </button>
+      <ul class="dropdown-content">
+        <li><a href="#">ENG</a></li>
+        <li><a href="#">UA</a></li>
+        <li><a href="#">FR</a></li>
+      </ul>
+    </div>
+    <a href="#" class="header__authorization authorization">
+      <button class="authorization__btn">
+        <span class="authorization__btn-text">Authorization</span>
+      </button>
+    </a>
+    <a href="#" class="header__premium premium">
+      <button class="premium__btn">
+        <span class="premium__btn-text">Premium access</span>
+      </button>
+    </a>
+    <button class="header__burger">
+      <span class="header__burger-span"></span>
+      <span class="header__burger-span"></span>
+      <span class="header__burger-span"></span>
+    </button>
+  </div>
 </header>

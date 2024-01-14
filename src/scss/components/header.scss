@@ -1,0 +1,12 @@
+.header {
+    background: var(--background, #1D1F21);
+
+    &__container {
+        display: flex;
+    }
+
+    &__logo {
+        width: 145px;
+            height: 30px;
+    }
+}
