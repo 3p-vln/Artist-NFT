@@ -1,22 +1,26 @@
 function burger() {
-    document.querySelector('.header__burger')
-        .addEventListener("click", function (e) {
-            const headerBurgerMenu = document.querySelector('.header__menu');
-            const headerBurger = document.querySelector('.header__burger');
-            const burgerBackdrop = document.querySelector('.burger-backdrop');
-            document.body.classList.toggle('lock');
-            burgerBackdrop.classList.toggle('active')
-            headerBurger.classList.toggle('active');
-            headerBurgerMenu.classList.toggle('active');
-        });
+    const headerBurger = document.querySelector('.header__burger');
+    const headerMenu = document.querySelector('.header__menu');
+    const body = document.querySelector("body");
+    const burgerBackdrop = document.querySelector('.burger-backdrop');
+    const buttonauthorization = document.querySelector('.authorization');
 
-    document.querySelector('.burger-backdrop').addEventListener("click", function (e) {
-        const headerBurgerMenu = document.querySelector('.header-menu');
-        const headerBurger = document.querySelector('.header-burger');
-        const burgerBackdrop = document.querySelector('.burger-backdrop');
-        document.body.classList.toggle('lock');
-        burgerBackdrop.classList.toggle('active')
-        headerBurger.classList.toggle('active');
-        headerBurgerMenu.classList.toggle('active');
-    });
+    if (headerBurger) {
+        headerBurger.addEventListener('click', () => {
+            headerBurger.classList.toggle("_active");
+            burgerBackdrop.classList.toggle('_active');
+            headerMenu.classList.toggle('_active');
+            buttonauthorization.classList.toggle('_active');
+            body.classList.toggle("_lock");
+        });
+        burgerBackdrop.addEventListener('click', () => {
+            headerBurger.classList.toggle("_active");
+            burgerBackdrop.classList.toggle("_active");
+            headerMenu.classList.toggle('_active');
+            buttonauthorization.classList.toggle('_active');
+            body.classList.toggle("_lock");
+        });
+    }
 }
+
+burger();
