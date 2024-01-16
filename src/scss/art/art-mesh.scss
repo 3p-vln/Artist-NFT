@@ -5,6 +5,7 @@
     grid-template-rows: 420px 420px 420px 420px;
     padding: 0 15px;
     margin-top: 50px;
+    margin-bottom: 75px;
 
     @media (max-width:1024px) {
         grid-template-columns: repeat(auto-fit, minmax(302px, 1fr));
@@ -12,8 +13,9 @@
         padding: 0;
     }
 
-    @media (max-width:663px) {
+    @media (max-width:652px) {
         gap: 19px;
+        margin-bottom: 35px;
     }
 
     // @media (max-width:693px) {
