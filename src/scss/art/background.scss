@@ -32,6 +32,11 @@
         top: 95px
     }
 
+    &__blur{
+        position: absolute;
+        left: 9%;
+    }
+
     svg{
         position: absolute;
         width: 25px;
