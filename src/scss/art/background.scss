@@ -1,0 +1,47 @@
+.background {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+
+    @media (max-width:1100px) {
+        display: none;
+    }
+
+    @media (max-width:1100px) {
+        display: none;
+    }
+
+    &__make-art,
+    &__no-war {
+        font-size: 75px;
+        letter-spacing: 1px;
+        font-weight: 700;
+        color: transparent;
+        -webkit-text-stroke: 1px $whiteTwo;
+        opacity: 0.2;
+        position: absolute;
+    }
+
+    &__make-art {
+        left: -40px;
+        top: 95px;
+    }
+
+    &__no-war {
+        right: -29px;
+        top: 95px
+    }
+
+    &__blur{
+        position: absolute;
+        left: 9%;
+    }
+
+    svg{
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: 24.5%;
+        top: 194px;
+    }
+}
