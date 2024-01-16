@@ -1,5 +1,5 @@
 <header class="header">
-
+  <div class="burger-backdrop"></div>
   <div class="header__container">
     <a class="header__logo" href="#">
       <svg class="header__logo-svg">
@@ -21,6 +21,28 @@
         <li class="menu__item"><a href="#">Contacts</a></li>
         <li class="menu__item"><a href="#">Blog</a></li>
       </ul>
+      <div class="menu__buttons">
+        <div class="header__dropdown dropdown">
+          <button class="dropdown__btn">
+            <span class="dropdown__btn-text">ENG</span>
+            <span class="dropdown__btn-arrow">
+              <svg class="dropdown__btn-arrow-svg">
+                <use href="#header-arrow"></use>
+              </svg>
+            </span>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">ENG</a>
+            <a href="#">UA</a>
+            <a href="#">FR</a>
+          </div>
+        </div>
+        <a href="#" class="header__authorization authorization">
+          <button class="authorization__btn">
+            <span class="authorization__btn-text">Authorization</span>
+          </button>
+        </a>
+      </div>
     </nav>
 
     <div class="header__btn-wrapper">

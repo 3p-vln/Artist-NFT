@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-    burger();
-});
+import { burger } from './modules/burger';
+
 
