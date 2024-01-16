@@ -13,7 +13,8 @@ export const webpackConfig = (isMode) => {
   return {
     entry: {
       main: path.join(paths.src, 'js/main.js'),
-      app: path.join(paths.src, 'js/app.js'),    },
+      app: path.join(paths.src, 'js/app.js'),    
+    },
 
     mode: isMode ? 'development' : 'production',
 
