@@ -1,0 +1,41 @@
+.make {
+    &__content {
+        display: flex;
+    }
+    
+    &__left {
+        &-social {}
+    
+        &-title {}
+    
+        &-text {}
+    
+        &-btns {}
+    }
+    
+    .social {
+        display: flex;
+        gap: 18px;
+        &__link {
+            &-svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+    
+    .btns {}
+    
+    .btns__premium {}
+    
+    .btns__premium-btn {}
+    
+    .btns__discover {}
+    
+    .btns__discover-btn {}
+    
+    .make__right {}
+    
+    .make__right-img {}
+}
+
