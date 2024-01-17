@@ -53,11 +53,11 @@
         }
 
         &:last-child{
-            @media (max-width:995px) {
+            @media (max-width:1024px) {
                 display: none;
             }
 
-            @media (max-width:663px) {
+            @media (max-width:995px) {
                 display: block;
             }
         }
