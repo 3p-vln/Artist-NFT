@@ -18,6 +18,10 @@
         @media (max-width:1024px) {
             padding-top: calc(0px + (88 - 0) * ((100vw - 375px) / (1024 - 375)));
         }
+        
+        @media (max-width:425px) {
+            padding-right: calc(80px + (0 - 80) * (100vw - 375px)/(425 - 375));
+        }
     }
 
     &__title {
@@ -30,6 +34,7 @@
         @media (max-width:1440px) {
             font-size: calc(36px + (64 - 36) * ((100vw - 375px)/(1440 - 375)));
             line-height: calc(40px + (65 - 40) * ((100vw - 375px)/(1440 - 375)));
+            margin-bottom: calc(8px + (16 - 8) * ((100vw - 375px)/(1440 - 375)));
         }
     }
 
@@ -44,6 +49,7 @@
         @media (max-width:1440px) {
             font-size: calc(15px + (16 - 15) * ((100vw - 375px)/(1440 - 375)));
             line-height: calc(24px + (28 - 24) * ((100vw - 375px)/(1440 - 375)));
+            margin-bottom: calc(22px + (40 - 22) * ((100vw - 375px)/(1440 - 375)));
         }
 
         @media (max-width:1024px) {
@@ -62,6 +68,10 @@
             padding: 18px 22px 19px 22px;
             border-radius: 16px;
             background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
+
+            @media (max-width:1024px) {
+                padding: 12px 30px 13px 28px;
+            }
 
             svg {
                 width: 24px;
@@ -88,13 +98,18 @@
     &__picture {
         position: relative;
         min-width: 625px;
-        max-width: 625px;
+        // max-width: 625px;
         width: 100%;
         min-height: 616px;
         height: 100%;
 
-        @media (max-width: 1440px) {
-            // aspect-ratio: 1.5;
+        @media (max-width: 1024px) {
+            min-width: 0;
+            max-width: 625px;
+        }
+
+        @media (max-width: 670px) {
+            min-height: calc(350px + (616 - 350) * ((100vw - 375px)/(670 - 375)));
         }
     }
 
@@ -104,6 +119,7 @@
         bottom: 0;
         max-width: 617px;
         max-height: 617px;
+        margin-right: 8px;
 
         img {
             width: 100%;
@@ -117,7 +133,10 @@
         top: 40px;
         border-radius: 24px;
         max-width: 561px;
+        min-width: 309px;
         max-height: 561px;
+        min-height: 309px;
+        margin-left: 62px;
 
         img {
             width: 100%;
