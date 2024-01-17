@@ -8,3 +8,29 @@
 
 // main
 @import 'main/make';
+
+body {
+  font-family: 'ProximaNova';
+}
+
+[ class*="__container"
+
+] {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1170px;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  // overflow: hidden;
+  overflow: clip  ;
+}
+
+.page {
+  flex: 1 1 auto;
+  // background-position: center;
+  // background-size: cover;
+}

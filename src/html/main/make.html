@@ -1,4 +1,11 @@
 <section id="make" class="make">
+    <div class="make__blurs">
+        <picture>
+            <!-- <source srcset="images/main/make-art/blurs/blur.webp" type="webp" /> -->
+            <img src="images/main/make-art/blurs/blur.png" width="758" height="899" alt="blur"
+                class="make__blurs-first">
+        </picture>
+    </div>
     <div class="container">
         <div class="make__content">
             <div class="make__left">
@@ -29,17 +36,25 @@
                 </p>
                 <div class="make__left-btns btns">
                     <a href="#" class="btns__premium">
-                        <button class="btns__premium-btn"></button>
+                        <button class="btns__premium-btn">
+                            <svg class="btns__premium-btn-svg">
+                                <use href="#make__icon-crown" />
+                            </svg>
+                            <span>Premium access</span>
+                        </button>
                     </a>
                     <a href="#" class="btns__discover">
-                        <button class="btns__discover-btn"></button>
+                        <button class="btns__discover-btn">
+                            <span>Discover</span>
+                        </button>
                     </a>
                 </div>
             </div>
             <div class="make__right">
                 <picture>
-                    <!-- <source srcset="./src/images/main/make-art/make-art.webp"> -->
-                    <img src="./src/images/main/make-art/make-art.png" alt="woman" class="make__right-img">
+                    <source srcset="images/main/make-art/make-art-mobile.png"media="(max-width: 768px)"/>
+                    <!-- <source srcset="./src/images/main/make-art/make-art.webp" type="webp"/> -->
+                    <img src="images/main/make-art/make-art.png" alt="woman" class="make__right-img">
                 </picture>
             </div>
         </div>
