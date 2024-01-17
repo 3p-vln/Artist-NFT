@@ -6,10 +6,11 @@
     position: relative;
 
     &__container {
-        max-width: $maxWidthContainer;
-        padding: 0 15px;
-        margin: 0 auto;
         position: relative;
-        z-index: 15;
+        z-index: 2;
     }
 }
+
+@import 'custom/background';
+@import 'custom/are-you-ready';
+@import 'custom/custom-mesh';

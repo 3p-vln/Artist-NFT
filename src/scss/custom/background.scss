@@ -1,0 +1,75 @@
+.background {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+
+    @media (max-width:1100px) {
+        display: block;
+    }
+
+    &__custom,
+    &__unique {
+        font-family: "ProximaNova";
+        font-size: 79px;
+        letter-spacing: 1px;
+        font-weight: 700;
+        color: transparent;
+        -webkit-text-stroke: 1px $whiteTwo;
+        opacity: 0.2;
+        position: absolute;
+
+        @media (max-width:1440px) {
+            font-size: calc(50px + (79 - 50) * ((100vw - 375px)/(1440 - 375)));
+        }
+    }
+
+    &__custom {
+        left: -106px;
+        top: 87px;
+
+        @media (max-width:1024px) {
+            display: none;
+        }
+    }
+
+    &__unique {
+        right: 381px;
+        top: 612px;
+
+        @media (max-width:1024px) {
+            top: 11px;
+            right: -144px;
+        }
+    }
+
+    &__blur {
+        position: absolute;
+        left: 0;
+        top: -70px;
+
+        @media (max-width:768px) {
+            display: none;
+        }
+
+        &_mob {
+            display: none;
+            @media (max-width:768px) {
+                display: block;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+    svg {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: 54.25%;
+        top: 476px;
+
+        @media (max-width:768px) {
+            display: none;
+        }
+    }
+}
