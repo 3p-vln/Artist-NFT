@@ -1,7 +1,7 @@
 .footer {
     background: var(--frames, #212426);
     height: 108px;
-    // z-index: -1;
+    z-index: 2;
 
     @media (max-width: 768px) {
         height: 257px;
@@ -51,7 +51,7 @@
 
         &__link {
             color: var(--secondary, #C8D2DC);
-            font-family: 'ProximaNova-Regular' sans-serif;
+            font-family: 'ProximaNova';
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
@@ -120,7 +120,7 @@
     .footer__reserved {
         text-align: center;
         color: var(--secondary, #C8D2DC);
-        font-family: 'ProximaNova-Regular' sans-serif;
+        font-family: 'ProximaNova';
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
