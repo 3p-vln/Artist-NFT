@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('html/head.html', { 'title': 'Art which inspire', 'srcStyle': 'art' })
+  @@include('html/head.html', { 'title': 'Art which inspire', 'srcStyle': 'make-art' })
   <body>
     <div class="wrapper">
       @@include('html/header.html')
       <main class="page">
-        @@include('html/art/background.html')
+        @@include('html/make-art/background.html')
         <div class="page__container"> 
-            @@include('html/art/art-head.html')
-            @@include('html/art/art-mesh.html')
+            @@include('html/make-art/art-head.html')
+            @@include('html/make-art/art-mesh.html')
         </div>
       </main>
       @@include('html/footer.html') 
       @@include('html/Sprite.html')
   </body>
-  <script src="js/main.burger.js"></script>
-  <script src="js/main.app.js"></script>
+  <script src="js/app.min.js"></script>
   <script src="js/main.min.js"></script>
 </html>

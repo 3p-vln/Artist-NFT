@@ -10,9 +10,9 @@
 @import 'main/make';
 
 //art
-@import 'art/art-head';
-@import 'art/background';
-@import 'art/art-mesh';
+@import 'make-art/art-head';
+@import 'make-art/background';
+@import 'make-art/art-mesh';
 
 body {
   font-family: 'ProximaNova';
@@ -23,7 +23,7 @@ body {
 ] {
   margin: 0 auto;
   padding: 0 15px;
-  max-width: 1170px;
+  max-width: $maxWidthContainer;
 }
 
 .wrapper {
