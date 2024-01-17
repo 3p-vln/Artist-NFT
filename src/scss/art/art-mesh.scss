@@ -5,6 +5,7 @@
     grid-template-rows: 420px 420px 420px 420px;
     padding: 0 15px;
     margin-top: 50px;
+    margin-bottom: 75px;
 
     @media (max-width:1024px) {
         grid-template-columns: repeat(auto-fit, minmax(302px, 1fr));
@@ -12,13 +13,10 @@
         padding: 0;
     }
 
-    @media (max-width:663px) {
+    @media (max-width:652px) {
         gap: 19px;
+        margin-bottom: 35px;
     }
-
-    // @media (max-width:693px) {
-    //     grid-template-rows: 200px 412px 420px 420px 420px;
-    // }
 
     .card {
         width: 100%;
@@ -95,7 +93,7 @@
 
                 &__name {
                     color: $whiteTwo;
-                    font-family: sans-serif;
+                    font-family: "ProximaNova";
                     font-size: 36px;
                     font-weight: 700;
                     line-height: 49.5px;
@@ -109,7 +107,7 @@
 
                 &__about {
                     color: $whiteTwo;
-                    font-family: sans-serif;
+                    font-family: "ProximaNova";
                     font-size: 14px;
                     font-weight: 400;
                     line-height: 21px;
@@ -119,7 +117,7 @@
 
                 &__price {
                     color: $whiteTwo;
-                    font-family: sans-serif;
+                    font-family: "ProximaNova";
                     font-size: 26px;
                     font-weight: 700;
                     line-height: 33.5px;
@@ -161,7 +159,7 @@
                 }
 
                 p {
-                    font-family: sans-serif;
+                    font-family: "ProximaNova";
                     font-size: 18px;
                     font-weight: 700;
                     line-height: 26.5px;
@@ -202,7 +200,7 @@
                 }
 
                 &__access {
-                    font-family: sans-serif;
+                    font-family: "ProximaNova";
                     font-size: 18px;
                     font-weight: 700;
                     line-height: 26.5px;
@@ -215,7 +213,7 @@
                 }
 
                 &__content {
-                    font-family: sans-serif;
+                    font-family: "ProximaNova";
                     font-size: 26px;
                     font-weight: 700;
                     line-height: 33.5px;
