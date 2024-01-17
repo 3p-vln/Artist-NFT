@@ -1,0 +1,12 @@
+@import 'style';
+
+
+.page {
+    background: $background;
+    position: relative;
+
+    &__container {
+        position: relative;
+        z-index: 2;
+    }
+}
