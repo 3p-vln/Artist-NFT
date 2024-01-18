@@ -2,6 +2,7 @@
 @import 'config/fonts';
 @import 'config/vars';
 @import 'config/reset';
+@import 'config/_media-breakpoints.scss';
 
 @import 'components/header';
 @import 'components/footer';
@@ -36,7 +37,7 @@ body {
   display: flex;
   flex-direction: column;
   // overflow: hidden;
-  overflow: clip  ;
+  overflow: clip;
 }
 
 .page {
