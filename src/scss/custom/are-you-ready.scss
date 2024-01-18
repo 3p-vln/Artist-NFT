@@ -5,27 +5,29 @@
     padding: 0 15px;
     gap: 20px;
 
-    @media (max-width:1024px) {
+    @include media-breakpoint-down(md) {
         flex-direction: column;
         padding: 0;
         gap: 15px;
         margin-top: calc(62px + (62 - 21) * ((100vw - 375px) / (1024 - 375)));
+
     }
 
     &__info {
         font-family: "ProximaNova";
         padding-top: 88px;
 
-        @media (max-width:1024px) {
+        @include media-breakpoint-down(md) {
             padding-top: calc(0px + (88 - 0) * ((100vw - 375px) / (1024 - 375)));
+
         }
 
-        @media (max-width:425px) {
+        @include media-breakpoint-down(xs) {
             padding-right: calc(80px + (0 - 80) * (100vw - 375px)/(425 - 375));
         }
 
-        @media (max-width:375px) {
-            padding-right: calc(0px + (80 - 0) * (100vw - 320px)/(375 - 320));
+        @include media-breakpoint-down(xxs) {
+            padding-right: 0;
         }
     }
 
@@ -36,7 +38,7 @@
         line-height: 65px;
         margin-bottom: 16px;
 
-        @media (max-width:1440px) {
+        @include media-breakpoint-down(lg) {
             font-size: calc(36px + (64 - 36) * ((100vw - 375px)/(1440 - 375)));
             line-height: calc(40px + (65 - 40) * ((100vw - 375px)/(1440 - 375)));
             margin-bottom: calc(8px + (16 - 8) * ((100vw - 375px)/(1440 - 375)));
@@ -51,13 +53,13 @@
         max-width: 270px;
         margin-bottom: 40px;
 
-        @media (max-width:1440px) {
+        @include media-breakpoint-down(lg) {
             font-size: calc(15px + (16 - 15) * ((100vw - 375px)/(1440 - 375)));
             line-height: calc(24px + (28 - 24) * ((100vw - 375px)/(1440 - 375)));
             margin-bottom: calc(22px + (40 - 22) * ((100vw - 375px)/(1440 - 375)));
         }
 
-        @media (max-width:1024px) {
+        @include media-breakpoint-down(md) {
             max-width: 100%;
         }
     }
@@ -92,13 +94,13 @@
                     left: 100%;
                     transition: .5s ease-in-out;
 
-                    @media (max-width:768px) {
+                    @include media-breakpoint-down(sm) {
                         display: none;
                     }
                 }
             }
 
-            @media (max-width:1024px) {
+            @include media-breakpoint-down(md) {
                 padding: 12px 30px 13px 28px;
             }
 
@@ -106,7 +108,7 @@
                 width: 24px;
                 height: 24px;
 
-                @media (max-width:1440px) {
+                @include media-breakpoint-down(lg) {
                     width: calc(18px + (24 - 18) * ((100vw - 375px)/(1440 - 375)));
                     height: calc(18px + (24 - 18) * ((100vw - 375px)/(1440 - 375)));
                 }
@@ -117,7 +119,7 @@
                 font-weight: 700;
                 line-height: 26.5px;
 
-                @media (max-width:1440px) {
+                @include media-breakpoint-down(lg) {
                     font-size: calc(15px + (18 - 15) * ((100vw - 375px)/(1440 - 375)));
                 }
             }
@@ -132,7 +134,7 @@
         min-height: 616px;
         height: 100%;
 
-        @media (max-width: 1024px) {
+        @include media-breakpoint-down(md) {
             min-width: 0;
             max-width: 625px;
         }
