@@ -5,13 +5,13 @@
         padding-top: 80px;
         padding-bottom: 100px;
 
-        @media (max-width: 1024px) {
+        @include media-breakpoint-down(md){
             flex-direction: column;
             justify-content: center;
             gap: 32px;
         }
 
-        @media (max-width: 375px) {
+        @include media-breakpoint-down(xxs){
             padding-top: 62px;
         }
     }
@@ -23,14 +23,14 @@
         z-index: 2;
         max-width: 39.65%;
 
-        @media (max-width: 1024px) {
+        @include media-breakpoint-down(md){
             padding: 0;
             justify-content: center;
             align-items: center;
             max-width: 100%;
         }
 
-        @media (max-width: 375px) {
+        @include media-breakpoint-down(xxs){
             justify-content: start;
             align-items: start;
         }
@@ -46,18 +46,17 @@
             line-height: 65px;
             width: 475px;
 
-            @media (max-width: 1024px) {
+            @include media-breakpoint-down(md){
                 text-align: center;
                 max-width: 475px;
                 width: 100%;
             }
 
-            @media (max-width: 576px) {
+            @include media-breakpoint-down(xs){
                 font-size: 48px;
-
             }
 
-            @media (max-width: 375px) {
+            @include media-breakpoint-down(xxs){
                 padding: 0;
                 font-size: 36px;
                 max-width: 271px;
@@ -76,11 +75,11 @@
             padding: 14px 0 0 3px;
             max-width: 271px;
 
-            @media (max-width: 1024px) {
+            @include media-breakpoint-down(md){
                 text-align: center;
             }
 
-            @media (max-width: 375px) {
+            @include media-breakpoint-down(xxs){
                 text-align: left;
                 line-height: 24px;
                 padding: 8px 0 0 0;
@@ -92,7 +91,7 @@
         display: flex;
         gap: 18px;
 
-        @media (max-width: 375px) {
+        @include media-breakpoint-down(xxs){
             display: none;
         }
 
@@ -109,7 +108,7 @@
         gap: 12px;
         padding: 40px 0 0 2px;
 
-        @media (max-width: 375px) {
+        @include media-breakpoint-down(xxs){
             padding: 22px 0 0 0px;
         }
 
@@ -123,10 +122,12 @@
                 padding: 18px 22px 19px 22px;
                 justify-content: center;
                 align-items: center;
+                position: relative;
+                overflow: hidden;
                 border-radius: 16px;
                 background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
 
-                @media (max-width: 375px) {
+                @include media-breakpoint-down(xxs){
                     width: 170px;
                     height: 52px;
                 }
@@ -148,6 +149,30 @@
                     line-height: 26.5px;
                     text-wrap: nowrap;
                 }
+
+                &:hover {
+                    &::before {
+                        left: 130%;
+                        transition: .5s ease-in-out;
+                        @media (max-width:768px) {
+                            display: none;
+                        }
+                    }
+                }
+
+                &::before {
+                    content: "";
+                    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+                    height: 64px;
+                    width: 50px;
+                    position: absolute;
+                    top: 0px;
+                    left: -95px;
+                    transform: skewX(-45deg);
+                    @include media-breakpoint-down(xxs){
+                        height: 52px;
+                    }
+                }
             }
         }
 
@@ -161,10 +186,12 @@
                 padding: 18px 36px 19px 37px;
                 justify-content: center;
                 align-items: center;
+                position: relative;
+                overflow: hidden;
                 border-radius: 16px;
                 background: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.10) 9.27%, rgba(209, 181, 255, 0.10) 84.06%));
 
-                @media (max-width: 375px) {
+                @include media-breakpoint-down(xxs){
                     width: 117px;
                     height: 52px;
                 }
@@ -180,6 +207,30 @@
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                 }
+
+                &:hover {
+                    &::before {
+                        left: 130%;
+                        transition: .5s ease-in-out;
+                        @media (max-width:768px) {
+                            display: none;
+                        }
+                    }
+                }
+
+                &::before {
+                    content: "";
+                    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+                    height: 64px;
+                    width: 50px;
+                    position: absolute;
+                    top: 0px;
+                    left: -95px;
+                    transform: skewX(-45deg);
+                    @include media-breakpoint-down(xxs){
+                        height: 52px;
+                    }
+                }
             }
         }
     }
@@ -188,7 +239,7 @@
         width: 100%;
         max-width: 60.35%;
 
-        @media (max-width: 1024px) {
+        @include media-breakpoint-down(md){
             max-width: 100%;
             display: flex;
             justify-content: center;
@@ -204,18 +255,18 @@
         max-width: 688px;
         aspect-ratio: 1 / 0.92;
 
-        @media (max-width: 1024px) {
+        @include media-breakpoint-down(md){
             justify-content: center;
         }
 
-        @media (max-width: 768px) {
+        @include media-breakpoint-down(sm){
             display: block;
             min-width: 100%;
             min-height: 100%;
             transform: translateX(0px);
         }
 
-        @media (max-width: 375px) {
+        @include media-breakpoint-down(xxs){
             aspect-ratio: 1 / 0.82;
             transform: scale(1.35) translateX(8%) translateY(4%);
         }
@@ -225,7 +276,7 @@
             width: 100%;
             height: 100%;
 
-            @media (max-width: 768px) {
+            @include media-breakpoint-down(sm){
                 position: relative;
                 left: 50%;
                 transform: translateX(-50%);

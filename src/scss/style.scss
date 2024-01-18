@@ -1,4 +1,6 @@
 @use 'sass:math';
+
+@import 'config/_media-breakpoints';
 @import 'config/fonts';
 @import 'config/vars';
 @import 'config/reset';
