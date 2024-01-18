@@ -3,17 +3,14 @@
     height: 108px;
     z-index: 2;
 
-    @media (max-width: 768px) {
+    @include media-breakpoint-down(sm) {
         height: 257px;
     }
 
     .__container {
-        max-width: 1170px;
-        margin: 0 auto;
-        padding: 0 15px;
         height: 108px;
 
-        @media (max-width: 768px) {
+        @include media-breakpoint-down(sm) {
             height: 257px;
         }
     }
@@ -29,12 +26,8 @@
         align-items: center;
         padding: 11px 0 12px 0;
 
-        @media (max-width: 768px) {
+        @include media-breakpoint-down(sm) {
             align-items: start;
-
-            &-casual {}
-
-            &-social {}
         }
     }
 
@@ -43,7 +36,7 @@
         align-items: center;
         gap: 13px;
 
-        @media (max-width: 768px) {
+        @include media-breakpoint-down(sm) {
             flex-direction: column;
             align-items: start;
             gap: 23px;
@@ -59,7 +52,7 @@
             opacity: 0.6;
             padding-right: 17px;
 
-            @media (max-width: 768px) {
+            @include media-breakpoint-down(sm) {
                 padding-right: 0px;
             }
         }
@@ -75,9 +68,10 @@
         }
 
         &__link-logo {
-            @media (max-width: 768px) {
+            @include media-breakpoint-down(sm) {
                 padding-top: 10px;
             }
+
             &-svg {
                 width: 161px;
                 height: 46px;
@@ -85,12 +79,12 @@
         }
     }
 
-    @media (max-width: 768px) {
+    @include media-breakpoint-down(sm) {
         .casual:nth-child(2) {
-            .casual__link{
+            .casual__link {
                 padding-top: 7px;
             }
-           
+
         }
     }
 
@@ -99,7 +93,7 @@
         gap: 18px;
         padding-right: 15px;
 
-        @media (max-width: 768px) {
+        @include media-breakpoint-down(sm) {
             padding-top: 21px;
             padding-right: 0px;
         }
@@ -127,7 +121,7 @@
         line-height: 20px;
         position: relative;
 
-        @media (max-width: 768px) {
+        @include media-breakpoint-down(sm) {
             font-size: 14px;
             background-color: #1d1f21;
             padding: 13px 10px 14px;
@@ -145,7 +139,8 @@
         width: 100%;
         height: 1px;
         opacity: 0.05;
-        @media (max-width: 768px) {
+
+        @include media-breakpoint-down(sm) {
             top: -65px;
         }
     }

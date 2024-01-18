@@ -35,20 +35,22 @@
         top: 28px;
         left: -1.3%;
 
-        @media (max-width: 375px) {
+        @include media-breakpoint-down(xxs){
             font-size: 50px;
             top: 12px;
             left: 50%;
         }
+
     }
 
     &__not {
         bottom: -703px;
         right: 41.2%;
 
-        @media (max-width: 1024px) {
+        @include media-breakpoint-down(md){
             display: none;
         }
+
     }
 
 
@@ -59,7 +61,7 @@
         top: 50px;
         right: 11.9%;
 
-        @media (max-width: 1024px) {
+        @include media-breakpoint-down(md){
             display: none;
         }
     }
@@ -71,7 +73,7 @@
         top: 230px;
         left: 52.9%;
 
-        @media (max-width: 375px) {
+        @include media-breakpoint-down(xxs){
             top: 400px;
             left: 28%;
         }
@@ -84,12 +86,18 @@
         top: 60px;
         right: 45.5%;
 
-        @media (max-width: 375px) {
+        @include media-breakpoint-down(md){
+            top: 10px;
+            right: 30%;
+        }
+
+        @include media-breakpoint-down(xxs){
             width: 36px;
             height: 48px;
             top: 362px;
             right: 9.5%;
         }
+
     }
 
     &__star-second {
@@ -100,7 +108,7 @@
         left: 44%;
         z-index: 3;
 
-        @media (max-width: 375px) {
+        @include media-breakpoint-down(xxs){
             width: 30px;
             height: 41px;
             top: 367px;
