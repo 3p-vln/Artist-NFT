@@ -202,6 +202,9 @@
                     &::before {
                         left: 100%;
                         transition: .5s ease-in-out;
+                        @media (max-width:768px) {
+                            display: none;
+                        }
                     }
                 }
 
