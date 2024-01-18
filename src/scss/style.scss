@@ -7,6 +7,7 @@
 @import 'components/footer';
 
 // main
+@import 'main/background';
 @import 'main/make';
 
 //art
@@ -26,6 +27,8 @@ body {
   margin: 0 auto;
   padding: 0 15px;
   max-width: $maxWidthContainer;
+  position: relative;
+  z-index: 2;
 }
 
 .wrapper {
@@ -38,6 +41,7 @@ body {
 
 .page {
   flex: 1 1 auto;
+  position: relative;
   // background-position: center;
   // background-size: cover;
 }

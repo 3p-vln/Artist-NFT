@@ -1,21 +1,4 @@
 .make {
-
-    // overflow-x: hidden;
-    &__blurs {
-        position: relative;
-        z-index: 0;
-
-        &-first {
-            position: absolute;
-            top: 0px;
-            left: -13.5%;
-            max-width: 100%;
-            vertical-align: top;
-            overflow: clip;
-            z-index: -1;
-        }
-    }
-
     &__content {
         display: flex;
         justify-content: space-between;
@@ -44,14 +27,13 @@
             padding: 0;
             justify-content: center;
             align-items: center;
+            max-width: 100%;
         }
 
         @media (max-width: 375px) {
             justify-content: start;
             align-items: start;
         }
-
-        &-social {}
 
         &-title {
             padding: 24px 0 0 2px;
@@ -104,8 +86,6 @@
                 padding: 8px 0 0 0;
             }
         }
-
-        &-btns {}
     }
 
     .social {
@@ -128,6 +108,10 @@
         display: flex;
         gap: 12px;
         padding: 40px 0 0 2px;
+
+        @media (max-width: 375px) {
+            padding: 22px 0 0 0px;
+        }
 
         &__premium {
             &-btn {
@@ -203,6 +187,12 @@
     &__wrapper {
         width: 100%;
         max-width: 60.35%;
+
+        @media (max-width: 1024px) {
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+        }
     }
 
 
@@ -223,6 +213,11 @@
             min-width: 100%;
             min-height: 100%;
             transform: translateX(0px);
+        }
+
+        @media (max-width: 375px) {
+            aspect-ratio: 1 / 0.82;
+            transform: scale(1.35) translateX(8%) translateY(4%);
         }
 
         &-img {

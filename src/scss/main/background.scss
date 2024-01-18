@@ -1,0 +1,110 @@
+.background {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+
+    &__blurs {
+        position: relative;
+        z-index: 0;
+
+        &-first {
+            position: absolute;
+            top: 0px;
+            left: 0%;
+            max-width: 100%;
+            vertical-align: top;
+            overflow: clip;
+            z-index: -1;
+        }
+    }
+
+    &__not,
+    &__make {
+        font-family: "ProximaNova";
+        font-size: 79px;
+        letter-spacing: 1px;
+        font-weight: 700;
+        color: transparent;
+        -webkit-text-stroke: 1px $whiteTwo;
+        opacity: 0.2;
+        position: absolute;
+        text-wrap: nowrap;
+    }
+
+    &__make {
+        top: 28px;
+        left: -1.3%;
+
+        @media (max-width: 375px) {
+            font-size: 50px;
+            top: 12px;
+            left: 50%;
+        }
+    }
+
+    &__not {
+        bottom: -703px;
+        right: 41.2%;
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+
+
+    &__ellipse-first {
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        top: 50px;
+        right: 11.9%;
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    &__ellipse-second {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 230px;
+        left: 52.9%;
+
+        @media (max-width: 375px) {
+            top: 400px;
+            left: 28%;
+        }
+    }
+
+    &__star-first {
+        width: 46px;
+        height: 62px;
+        position: absolute;
+        top: 60px;
+        right: 45.5%;
+
+        @media (max-width: 375px) {
+            width: 36px;
+            height: 48px;
+            top: 362px;
+            right: 9.5%;
+        }
+    }
+
+    &__star-second {
+        width: 36px;
+        height: 48px;
+        position: absolute;
+        top: 550px;
+        left: 44%;
+        z-index: 3;
+
+        @media (max-width: 375px) {
+            width: 30px;
+            height: 41px;
+            top: 367px;
+            left: 0%;
+        }
+    }
+}
