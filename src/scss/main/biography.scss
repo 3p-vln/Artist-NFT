@@ -57,14 +57,48 @@
         &-columns {}
     }
 
-    .columns {
+    .columns-swiper {
         display: flex;
-        &__item {
-            display: flex;
-            flex-direction: column;
-            &-year {}
 
-            &-paragraph {}
+        .columns-wrapper {
+            width: 100%;
+            .columns-slide {
+                display: flex;
+                flex-direction: column;
+
+                &__year {
+                    padding: 7px 13px;
+                    color: var(--secondary, #C5FF98);
+                    font-family: "ProximaNova";
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 20px;
+                    position: relative;
+                    width: 60px;
+                }
+
+                &__year::after {
+                    content: '';
+                    position: absolute;
+                    top: 0px;
+                    left: 0;
+                    width: 100%;
+                    height: 32px;
+                    border-radius: 10px;
+                    background: var(--10-secondary, rgba(197, 255, 152, 0.10));
+                }
+
+                &__paragraph {
+                    max-width: 155px;
+                    color: var(--text, #FCFFFF);
+                    font-family: "ProximaNova";
+                    font-size: clamp(14px, 2.5vw, 16px);
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 28px;
+                }
+            }
         }
     }
 }

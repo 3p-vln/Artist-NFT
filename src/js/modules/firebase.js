@@ -1,7 +1,7 @@
-import { initializeApp } from "firebase/app";
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import { initializeApp } from 'firebase/app';
+import { getAuth } from "firebase/auth";
 import { getFirestore } from 'firebase/firestore';
-import { getDatabase } from 'firebase/database';
+import { getStorage } from 'firebase/storage';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCFDHjyCkH0iQMHWYr8nVcO6IIBzHwxXec",
@@ -13,29 +13,38 @@ const firebaseConfig = {
   measurementId: "G-NNSQZW2MNN"
 };
 
-class Firebase {
-  constructor() {
-    if (!Firebase.instance) {
-      this.app = initializeApp(firebaseConfig);
-      Firebase.instance = this;
-    }
+// class Firebase {
+//   constructor() {
+//     if (!Firebase.instance) {
+//       this.app = initializeApp(firebaseConfig);
+//       Firebase.instance = this;
+//     }
 
-    return Firebase.instance;
-  }
+//     return Firebase.instance;
+//   }
 
-  getAuth() {
-    return getAuth(this.app);
-  }
+//   getAuth() {
+//     return getAuth(this.app);
+//   }
 
-  getFirestore() {
-    return getFirestore(this.app);
-  }
+//   getFirestore() {
+//     return getFirestore(this.app);
+//   }
 
-  getDatabase() {
-    return getDatabase(this.app);
-  }
-}
+//   getDatabase() {
+//     return getDatabase(this.app);
+//   }
+// }
 
-const firebase = new Firebase();
+// const firebase = new Firebase();
 
-export default firebase;
+const app = initializeApp(firebaseConfig);
+const secondaryApp = initializeApp(firebaseConfig, 'Secondary');
+const auth = getAuth(app);
+const db = getFirestore(app);
+const storage = getStorage(app)
+
+export default app;
+export  {auth, db, storage, secondaryApp}
+
+// export default firebase;
