@@ -1,4 +1,6 @@
 @use 'sass:math';
+
+@import 'config/_media-breakpoints';
 @import 'config/fonts';
 @import 'config/vars';
 @import 'config/reset';
@@ -10,6 +12,7 @@
 // main
 @import 'main/background';
 @import 'main/make';
+@import 'main/biography';
 
 //art
 

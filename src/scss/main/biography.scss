@@ -1,0 +1,70 @@
+.biography {
+    &__content {
+        display: flex;
+    }
+
+    &__wrapper {
+        width: 100%;
+        max-width: 44.5%;
+    }
+
+    &__image {
+        display: flex;
+        align-items: center;
+        max-width: 488px;
+        aspect-ratio: 1 / 0.92;
+
+        &-img {
+            // width: 100%;
+        }
+    }
+
+    &__info {
+        max-width: 55.5%;
+
+        &-subtitle {
+            font-family: "ProximaNova";
+            font-size: clamp(14px, 2.5vw, 18px);
+            font-style: normal;
+            font-weight: 700;
+            line-height: 26.5px;
+            letter-spacing: 1.8px;
+            background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        &-title {
+            color: var(--text, #FCFFFF);
+            font-family: "ProximaNova";
+            font-size: clamp(26px, 2.5vw, 36px);
+            font-style: normal;
+            font-weight: 700;
+            line-height: 34px;
+        }
+
+        &-paragraph {
+            max-width: 550px;
+            color: var(--text, #FCFFFF);
+            font-family: "ProximaNova";
+            font-size: clamp(15px, 2.5vw, 16px);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px;
+        }
+
+        &-columns {}
+    }
+
+    .columns {
+        display: flex;
+        &__item {
+            display: flex;
+            flex-direction: column;
+            &-year {}
+
+            &-paragraph {}
+        }
+    }
+}
