@@ -4,7 +4,7 @@ export default class ArtLoad {
     constructor(info, id) {
         this.info = info;
         this.id = id;
-        this.arts = document.querySelector('.art-mesh');
+        this.arts = $('.art-mesh');
         this.addClass();
         this.loaditem();
     }
@@ -12,19 +12,19 @@ export default class ArtLoad {
     addClass() {
         this.classInfo = 'card';
         if (this.info.lock == false) {
-            this.classInfo = 'card unlocl';
+            this.classInfo = 'card unlock';
         } else if (this.info.lock == true) {
             this.classInfo = 'card lock';
         }
     }
 
     loaditem() {
-        this.cardBlock.append(`
+        this.arts.append(`
             <div class="card ${this.id} ${this.classInfo}">
                 <div class="card__picture">
                     <img src="${this.info.img}" alt="art">
                 </div>
-                <div class="card__info_unlock">
+                <div class="card__info card__info_unlock">
                     <div class="info">
                         <h3 class="info__name">${this.info.name} </h3>
                         <p class="info__about">${this.info.about}</p>
@@ -43,7 +43,7 @@ export default class ArtLoad {
                     </div>
                 </div>
 
-                <div class="card__info_lock">
+                <div class="card__info card__info_lock">
                     <p class="card__access">${this.info.sub}</p>
                     <div class="card__content">
                         <svg>
