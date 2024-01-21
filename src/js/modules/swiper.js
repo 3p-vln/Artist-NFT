@@ -15,3 +15,20 @@ function stockSwiper() {
   });
 }
 stockSwiper();
+
+function biographySwiper() {
+  let swiper = new Swiper('.columns-swiper', {
+    breakpoints: {
+      1920: {
+        slidesPerView: 3,
+      },
+      376: {
+        slidesPerView: 3,
+      },
+      375: {
+        slidesPerView: 2.5,
+      }
+    }
+  });
+}
+biographySwiper();
