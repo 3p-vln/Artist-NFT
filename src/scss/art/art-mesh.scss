@@ -7,7 +7,7 @@
     margin-top: 50px;
     margin-bottom: 75px;
 
-    @media (max-width:1024px) {
+    @include media-breakpoint-down(md) {
         grid-template-columns: repeat(auto-fit, minmax(302px, 1fr));
         grid-template-rows: auto;
         padding: 0;
@@ -24,6 +24,7 @@
         position: relative;
         cursor: pointer;
 
+        
         @media (max-width:663px) {
             height: 412px;
         }
@@ -31,7 +32,7 @@
         &:first-child {
             grid-column: 1/3;
 
-            @media (max-width:1024px) {
+            @include media-breakpoint-down(md) {
                 grid-column: auto;
             }
 
@@ -43,7 +44,7 @@
         &:nth-child(7) {
             grid-column: 2/4;
 
-            @media (max-width:1024px) {
+            @include media-breakpoint-down(md) {
                 grid-column: auto;
             }
 
@@ -53,7 +54,7 @@
         }
 
         &:last-child{
-            @media (max-width:1024px) {
+            @include media-breakpoint-down(md) {
                 display: none;
             }
 
@@ -109,7 +110,7 @@
                     line-height: 49.5px;
                     text-align: center;
 
-                    @media (max-width:1440px) {
+                    @include media-breakpoint-down(lg) {
                         font-size: calc(25px + (36 - 25) * ((100vw - 375px)/(1440 - 375)));
                         line-height: calc(35px + (49.5 - 35) * ((100vw - 375px)/(1440 - 375)));
                     }
@@ -133,7 +134,7 @@
                     line-height: 33.5px;
                     margin-top: 16px;
 
-                    @media (max-width:1440px) {
+                    @include media-breakpoint-down(lg) {
                         font-size: 20px;
                         line-height: 20px;
                         margin-top: 5px;
@@ -165,7 +166,7 @@
                     &::before {
                         left: 100%;
                         transition: .5s ease-in-out;
-                        @media (max-width:768px) {
+                        @include media-breakpoint-down(sm) {
                             display: none;
                         }
                     }
@@ -235,7 +236,7 @@
                     justify-content: center;
                     gap: 16px;
 
-                    @media (max-width:1440px) {
+                    @include media-breakpoint-down(lg) {
                         gap: calc(5px + (16 - 5) * ((100vw - 1024px)/(1440 - 1024)));
                     }
 
