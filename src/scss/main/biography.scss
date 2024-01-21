@@ -1,18 +1,36 @@
 .biography {
     &__content {
         display: flex;
+        padding-top: 14px;
+        padding-bottom: 80px;
+        gap: 47px;
+
+        @include media-breakpoint-down(md){
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+        }
     }
 
     &__wrapper {
         width: 100%;
         max-width: 44.5%;
+
+       
     }
 
     &__image {
+        margin-left: 22px;
         display: flex;
         align-items: center;
         max-width: 488px;
         aspect-ratio: 1 / 0.92;
+        width: 448.414px;
+        height: 589.669px;
+        transform: rotate(-3.862deg);
+        border-radius: 24px;
+        background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
 
         &-img {
             // width: 100%;
@@ -21,6 +39,14 @@
 
     &__info {
         max-width: 55.5%;
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+
+        @include media-breakpoint-down(md){
+            justify-content: center;
+            align-items: center;
+        }
 
         &-subtitle {
             font-family: "ProximaNova";
@@ -42,6 +68,7 @@
             font-style: normal;
             font-weight: 700;
             line-height: 34px;
+            padding-top: 10px;
         }
 
         &-paragraph {
@@ -52,16 +79,20 @@
             font-style: normal;
             font-weight: 400;
             line-height: 28px;
+            padding-top: 25px;
+            padding-right: 30px;
         }
 
         &-columns {}
     }
 
     .columns-swiper {
+        padding-top: 40px;
         display: flex;
 
         .columns-wrapper {
             width: 100%;
+
             .columns-slide {
                 display: flex;
                 flex-direction: column;
