@@ -82,6 +82,7 @@
     "cleave.js": "^1.6.0",
     "firebase": "^10.7.1",
     "inputmask": "^5.0.8",
+    "jquery": "^3.7.1",
     "just-validate": "^4.3.0",
     "lozad": "^1.16.0",
     "sass-loader": "^13.3.2",
