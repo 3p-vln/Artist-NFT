@@ -9,5 +9,4 @@ async function snap() {
         const load = new CustomLoad(doc.data(), doc.id);
     });
 }
-
 snap();
