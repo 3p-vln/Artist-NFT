@@ -24,6 +24,18 @@
         position: relative;
         cursor: pointer;
 
+        &.unlock{
+            .card__info_lock{
+                display: none;
+            }
+        }
+
+        &.lock{
+            .card__info_unlock {
+                display: none;
+            }
+        }
+
         
         @media (max-width:663px) {
             height: 412px;
