@@ -30,6 +30,7 @@
         // transform: rotate(-3.862deg);
         border-radius: 24px;
         position: relative;
+
         &-img {
             position: absolute;
             top: 5%;
@@ -39,6 +40,10 @@
             height: 100%;
             max-width: 444px;
             max-height: 570px;  
+
+            @include media-breakpoint-down(lg){
+                left: 10px;
+            }
         }
 
         &-bg {
@@ -54,7 +59,8 @@
     }
 
     &__info {
-        padding-left: 35px;
+        margin-left: 15px;
+        padding-left: 20px;
         max-width: 55.5%;
         padding-top: 42px;
         display: flex;

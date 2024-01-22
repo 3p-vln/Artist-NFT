@@ -25,9 +25,7 @@ body {
   font-family: 'ProximaNova';
 }
 
-[ class*="__container"
-
-] {
+[ class*="__container"] {
   margin: 0 auto;
   padding: 0 15px;
   max-width: $maxWidthContainer;
@@ -40,7 +38,6 @@ body {
   display: flex;
   flex-direction: column;
   // overflow: hidden;
-  overflow: clip;
 }
 
 .page {
