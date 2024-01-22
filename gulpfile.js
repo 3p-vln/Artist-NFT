@@ -1,5 +1,7 @@
 import gulp from 'gulp';
 import { filePaths } from './gulp/config/paths.js';
+import { plugins } from './gulp/config/plugins.js';
+
 /**
  * Импорт задач
  */

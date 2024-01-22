@@ -1,6 +1,12 @@
 @import 'style';
 @import "../../node_modules/swiper/swiper-bundle";
 
+// main
+
+@import 'main/background';
+@import 'main/make';
+@import 'main/biography';
+
 
 .page {
    background: var(--background, #1D1F21);
