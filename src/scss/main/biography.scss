@@ -32,19 +32,15 @@
         // grid-area: img;
 
         @include media-breakpoint-down(md) {
-            grid-row: 1 / 1;
-        }
-
-
-        @include media-breakpoint-down(md) {
             // margin-right: 0px;
             max-width: 100%;
             // display: flex;
             // justify-content: center;
-            order: 2;
+            // order: 2;
             margin-left: auto;
             margin-right: auto;
             margin-left: 13%;
+            grid-row: 2;
         }
     }
 
@@ -87,11 +83,11 @@
         }
     }
 
-    &__text {
-        @include media-breakpoint-down(md) {
-            order: 1;
-        }
-    }
+    // &__text {
+    //     @include media-breakpoint-down(md) {
+    //         order: 1;
+    //     }
+    // }
 
     &__info {
 
@@ -149,7 +145,7 @@
 
             @include media-breakpoint-down(md) {
                 padding-right: 0px;
-                order: 3;
+                // order: 3;
             }
         }
 
@@ -163,9 +159,9 @@
         overflow: visible;
         padding-left: 56px;
 
-        @include media-breakpoint-down(md) {
-            order: 4;
-        }
+        // @include media-breakpoint-down(md) {
+        //     order: 4;
+        // }
 
         .columns-wrapper {
             // width: 100%;
