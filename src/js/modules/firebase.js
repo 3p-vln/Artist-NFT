@@ -13,31 +13,6 @@ const firebaseConfig = {
   measurementId: "G-NNSQZW2MNN"
 };
 
-// class Firebase {
-//   constructor() {
-//     if (!Firebase.instance) {
-//       this.app = initializeApp(firebaseConfig);
-//       Firebase.instance = this;
-//     }
-
-//     return Firebase.instance;
-//   }
-
-//   getAuth() {
-//     return getAuth(this.app);
-//   }
-
-//   getFirestore() {
-//     return getFirestore(this.app);
-//   }
-
-//   getDatabase() {
-//     return getDatabase(this.app);
-//   }
-// }
-
-// const firebase = new Firebase();
-
 const app = initializeApp(firebaseConfig);
 const secondaryApp = initializeApp(firebaseConfig, 'Secondary');
 const auth = getAuth(app);
@@ -46,5 +21,3 @@ const storage = getStorage(app)
 
 export default app;
 export  {auth, db, storage, secondaryApp}
-
-// export default firebase;
