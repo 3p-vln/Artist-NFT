@@ -1,4 +1,4 @@
-import $ from 'jquery'; 
+import $ from 'jquery';
 
 export default class ArtLoad {
     constructor(info, id) {
@@ -12,23 +12,27 @@ export default class ArtLoad {
     addClass() {
         this.classInfo = 'card';
         if (this.info.lock == false) {
-            this.classInfo = 'card unlock';
+            this.classInfo = 'unlock';
         } else if (this.info.lock == true) {
-            this.classInfo = 'card lock';
+            this.classInfo = 'lock';
         }
     }
 
     loaditem() {
-        this.arts.append(`
+        if (this.info.lock == false) {
+            this.arts.append(`
             <div class="card ${this.id} ${this.classInfo}">
                 <div class="card__picture">
-                    <img src="${this.info.img}" alt="art">
+                    <picture>
+                        <source srcset="${this.info.imgWebP}" type="image/webp">
+                        <img src="${this.info.img}" alt="art" itype="image/jpg">
+                    </picture>
                 </div>
                 <div class="card__info card__info_unlock">
                     <div class="info">
                         <h3 class="info__name">${this.info.name} </h3>
                         <p class="info__about">${this.info.about}</p>
-                        <p class="info__price">$ ${this.info.price}</p>    
+                        <p class="info__price">$${this.info.price}</p>    
                     </div>
                     <div class="btns">
                         <a href="#" class="btn">
@@ -42,7 +46,17 @@ export default class ArtLoad {
                         </a>
                     </div>
                 </div>
-
+            </div>
+        `);
+        } else if (this.info.lock == true) {
+            this.arts.append(`
+            <div class="card ${this.id} ${this.classInfo}">
+                <div class="card__picture">
+                    <picture>
+                        <source srcset="${this.info.imgWebP}" type="image/webp">
+                        <img src="${this.info.img}" alt="art" itype="image/jpg">
+                    </picture>
+                </div>
                 <div class="card__info card__info_lock">
                     <p class="card__access">${this.info.sub}</p>
                     <div class="card__content">
@@ -62,5 +76,6 @@ export default class ArtLoad {
                 </div>
             </div>
         `);
+        }
     }
 }

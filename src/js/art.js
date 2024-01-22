@@ -1,6 +1,6 @@
 import $ from 'jquery';
-import {db} from './modules/firebase';
-import {collection, getDocs} from 'firebase/firestore';
+import { db } from './modules/firebase';
+import { collection, getDocs } from 'firebase/firestore';
 import ArtLoad from './modules/artLoad';
 
 async function snap() {
@@ -11,6 +11,5 @@ async function snap() {
 }
 
 snap();
-
 
 
