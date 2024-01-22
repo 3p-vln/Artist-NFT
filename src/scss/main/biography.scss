@@ -5,22 +5,51 @@
         grid-template-columns: minmax(208px, 500px) auto;
         padding-top: 2px;
         padding-bottom: 80px;
-        // gap: 47px;
 
         @include media-breakpoint-down(md) {
-            // grid-template-columns: auto;\
-            grid-template-columns: 1fr;
+            grid-template-columns: minmax(20px, 1fr);
             margin-left: 0;
             margin-right: 0;
             justify-content: center;
-            // align-items: center;
+            align-items: center;
+            justify-items: center;
             gap: 32px;
-            // grid-template:
-            //     "text"
-            //     "img"
-            //     "paragraph"
-            //     "columns-swiper" auto/auto;
+        }
+    }
 
+    &__text {
+        &-subtitle {
+            font-family: "ProximaNova";
+            font-size: clamp(14px, 2.5vw, 18px);
+            font-style: normal;
+            font-weight: 700;
+            line-height: 26.5px;
+            letter-spacing: 1.8px;
+            background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            padding-left: 56px;
+            padding-top: 44px;
+    
+            @include media-breakpoint-down(md) {
+                padding-left: 0px;
+            }
+        }
+    
+        &-title {
+            color: var(--text, #FCFFFF);
+            font-family: "ProximaNova";
+            font-size: clamp(26px, 2.5vw, 36px);
+            font-style: normal;
+            font-weight: 700;
+            line-height: 34px;
+            padding-top: 10px;
+            padding-left: 56px;
+    
+            @include media-breakpoint-down(md) {
+                padding-left: 0px;
+            }
         }
     }
 
@@ -34,13 +63,15 @@
         @include media-breakpoint-down(md) {
             // margin-right: 0px;
             max-width: 100%;
-            // display: flex;
-            // justify-content: center;
+            display: flex;
+            justify-content: center;
             // order: 2;
             margin-left: auto;
             margin-right: auto;
-            margin-left: 13%;
+            // margin-left: 13%;
             grid-row: 2;
+            height: 100%;
+            width: 100%;
         }
     }
 
@@ -48,6 +79,7 @@
         // margin-left: 22px;
         display: flex;
         align-items: center;
+        justify-content: center;
         max-width: 488px;
         aspect-ratio: 1 / 1.2;
         // width: 488.414px;
@@ -55,6 +87,11 @@
         // transform: rotate(-3.862deg);
         border-radius: 24px;
         position: relative;
+
+        @include media-breakpoint-down(md) {
+            height: 100%;
+            width: 100%;
+        }
 
         &-img {
             position: absolute;
@@ -65,6 +102,11 @@
             height: 100%;
             max-width: 444px;
             max-height: 570px;
+
+            @include media-breakpoint-down(md) {
+                height: 100%;
+                width: 100%;
+            }
 
             @include media-breakpoint-down(lg) {
                 left: 10px;
@@ -80,94 +122,55 @@
             height: 105%;
             max-width: 480px;
             max-height: 650px;
+
+            @include media-breakpoint-down(md) {
+                height: 100%;
+                width: 100%;
+            }
         }
     }
 
-    // &__text {
-    //     @include media-breakpoint-down(md) {
-    //         order: 1;
-    //     }
-    // }
-
-    &__info {
-
+    &__paragraph {
+        max-width: 550px;
+        color: var(--text, #FCFFFF);
+        font-family: "ProximaNova";
+        font-size: clamp(15px, 2.5vw, 16px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+        padding-bottom: 20px;
+        // padding-right: 30px;
+        // padding-left: 56px;
+        transform: translateX(56px);
 
         @include media-breakpoint-down(md) {
-            justify-content: center;
-            align-items: center;
-            margin-left: 0;
-            padding-left: 0;
-            max-width: 100%;
+            padding-right: 0px;
+            transform: translateX(0px);
+            // order: 3;
         }
-
-        &-subtitle {
-            font-family: "ProximaNova";
-            font-size: clamp(14px, 2.5vw, 18px);
-            font-style: normal;
-            font-weight: 700;
-            line-height: 26.5px;
-            letter-spacing: 1.8px;
-            background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            padding-left: 56px;
-            padding-top: 42px;
-
-            @include media-breakpoint-down(md) {
-                order: 1;
-            }
-        }
-
-        &-title {
-            color: var(--text, #FCFFFF);
-            font-family: "ProximaNova";
-            font-size: clamp(26px, 2.5vw, 36px);
-            font-style: normal;
-            font-weight: 700;
-            line-height: 34px;
-            padding-top: 10px;
-            padding-left: 56px;
-        }
-
-        &-paragraph {
-            max-width: 550px;
-            color: var(--text, #FCFFFF);
-            font-family: "ProximaNova";
-            font-size: clamp(15px, 2.5vw, 16px);
-            font-style: normal;
-            font-weight: 400;
-            line-height: 28px;
-            padding-top: 25px;
-            // padding-right: 30px;
-            // padding-left: 56px;
-            transform: translateX(56px);
-
-            @include media-breakpoint-down(md) {
-                padding-right: 0px;
-                // order: 3;
-            }
-        }
-
-        &-columns {}
     }
 
     .columns-swiper {
-        padding-top: 40px;
+        transform: translateY(23px);
         width: 100%;
         max-width: 100%;
         overflow: visible;
-        padding-left: 56px;
+        padding-left: 35px;
 
-        // @include media-breakpoint-down(md) {
-        //     order: 4;
-        // }
+        @include media-breakpoint-down(md) {
+            padding-left: 0px;
+        }
 
         .columns-wrapper {
             // width: 100%;
             max-width: 100%;
             display: flex;
+            justify-content: center;
             gap: 5px;
+
+            @include media-breakpoint-down(xs) {
+                justify-content: start;
+            }
 
             .columns-slide {
                 display: flex;
