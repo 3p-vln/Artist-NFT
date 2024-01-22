@@ -1,7 +1,7 @@
 .background {
-    position: absolute;
+    position: relative;
     width: 100%;
-    z-index: 1;
+    z-index: 1;  
 
     &__blurs {
         position: relative;
@@ -34,11 +34,13 @@
     &__make {
         top: 28px;
         left: -1.3%;
+        
 
-        @include media-breakpoint-down(xxs){
+        @include media-breakpoint-down(xs){
             font-size: 50px;
             top: 12px;
             left: 50%;
+            // display: none;
         }
 
     }
@@ -50,9 +52,7 @@
         @include media-breakpoint-down(md){
             display: none;
         }
-
     }
-
 
     &__ellipse-first {
         width: 10px;

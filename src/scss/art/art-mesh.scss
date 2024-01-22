@@ -177,6 +177,7 @@
                     &::before {
                         left: 100%;
                         transition: .5s ease-in-out;
+                        
                         @include media-breakpoint-down(sm) {
                             display: none;
                         }

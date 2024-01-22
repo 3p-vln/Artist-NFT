@@ -13,6 +13,7 @@ function burger() {
             buttonauthorization.classList.toggle('_active');
             body.classList.toggle("_lock");
         });
+        
         burgerBackdrop.addEventListener('click', () => {
             headerBurger.classList.toggle("_active");
             burgerBackdrop.classList.toggle("_active");
