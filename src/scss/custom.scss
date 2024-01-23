@@ -1,5 +1,7 @@
 @import 'style';
-
+@import 'custom/background';
+@import 'custom/are-you-ready';
+@import 'custom/custom-mesh';
 
 .page {
     background: $background;
@@ -10,7 +12,3 @@
         z-index: 2;
     }
 }
-
-@import 'custom/background';
-@import 'custom/are-you-ready';
-@import 'custom/custom-mesh';
