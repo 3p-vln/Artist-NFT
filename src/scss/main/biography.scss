@@ -8,8 +8,6 @@
 
         @include media-breakpoint-down(md) {
             grid-template-columns: minmax(345px, 1fr);
-            margin-left: 0;
-            margin-right: 0;
             justify-content: center;
             align-items: center;
             justify-items: center;
@@ -19,12 +17,12 @@
         @include media-breakpoint-down(xs) {
             padding-bottom: 0px;   
         }
-    }
 
-    @include media-breakpoint-down(xs) {
-        &__content:nth-child(1) {
-            justify-items: start;
-        }     
+        &::nth-child(1) {
+            @include media-breakpoint-down(xs) {
+                justify-items: start;
+            }
+        }
     }
 
     &__text {
@@ -139,7 +137,7 @@
                 left: 55px;
                 width: 90%;
                 height: 98%;
-                transform: rotate(3.137deg);
+                transform: rotate(3deg);
             }
             
         }
@@ -228,6 +226,11 @@
                     padding: 0 5px;
                 }
 
+                @include media-breakpoint-down(xs) {
+                    max-width: 131px;
+                    
+                }
+
                 &__year {
                     padding: 7px 13px;
                     color: var(--secondary, #C5FF98);
@@ -264,9 +267,19 @@
                     @include media-breakpoint-down(xs) {
                         line-height: 24px;
                         width: 135px;
+
+                        // &-third {
+                        //     margin-right: 50px;
+                        // }
                     }
                 }
             }
+
+            // .columns-slide:nth-child(3) {
+            //     margin-right: 150px;
+            // }
         }
+
+        
     }
 }

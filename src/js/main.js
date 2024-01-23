@@ -1,2 +1,4 @@
 import stockSwiper from './modules/swiper';
-import { snap } from './biography';
+import biographySwiper from './modules/swiper';
+import { snapBiography } from './biography';
+import { snapPremium } from './premium';

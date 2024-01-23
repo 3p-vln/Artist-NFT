@@ -109,6 +109,7 @@
         }
 
         &__premium {
+            // сделать компонент как кнопку
             &-btn {
                 max-width: 209px;
                 min-width: 170px;
@@ -209,6 +210,7 @@
                     &::before {
                         left: 130%;
                         transition: .5s ease-in-out;
+
                         @include media-breakpoint-down(sm){
                             display: none;
                         }
@@ -224,6 +226,7 @@
                     top: 0px;
                     left: -95px;
                     transform: skewX(-45deg);
+                    
                     @include media-breakpoint-down(xxs){
                         height: 52px;
                     }

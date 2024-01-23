@@ -6,19 +6,18 @@ const wrapper =  document.querySelector('wrapper');
 (async function () {
     const querySnapshot = await getDocs(collection(db, "main-biography"));
     querySnapshot.forEach(doc => {
-         const data = doc.data()
-        // console.log(doc.data().img);
-        document.querySelector('#biography__img').src = data.img;
-        document.querySelector('#biography__bg').src = data.bg;
-        document.querySelector('#biography__subtitle').innerHTML = data.subtitle;
-        document.querySelector('#biography__title').innerHTML = data.title;
-        document.querySelector('#biography__paragraph').innerHTML = data.paragraph;
-        document.querySelector('#biography__column-year-first').innerHTML = data.columnYearFirst;
-        document.querySelector('#biography__column-paragraph-first').innerHTML = data.columnParagraphFirst;
-        document.querySelector('#biography__column-year-second').innerHTML = data.columnYearSecond;
-        document.querySelector('#biography__column-paragraph-second').innerHTML = data.columnParagraphSecond;
-        document.querySelector('#biography__column-year-third').innerHTML = data.columnYearThird;
-        document.querySelector('#biography__column-paragraph-third').innerHTML = data.columnParagraphThird;
+        const data = doc.data()
+        document.querySelector('#biography-img').src = data.img;
+        document.querySelector('#biography-bg').src = data.bg;
+        document.querySelector('#biography-subtitle').innerHTML = data.subtitle;
+        document.querySelector('#biography-title').innerHTML = data.title;
+        document.querySelector('#biography-paragraph').innerHTML = data.paragraph;
+        document.querySelector('#biography-column-year-first').innerHTML = data.columnYearFirst;
+        document.querySelector('#biography-column-paragraph-first').innerHTML = data.columnParagraphFirst;
+        document.querySelector('#biography-column-year-second').innerHTML = data.columnYearSecond;
+        document.querySelector('#biography-column-paragraph-second').innerHTML = data.columnParagraphSecond;
+        document.querySelector('#biography-column-year-third').innerHTML = data.columnYearThird;
+        document.querySelector('#biography-column-paragraph-third').innerHTML = data.columnParagraphThird;
     })
-    console.log(querySnapshot);
+    // console.log(querySnapshot);
 })();
