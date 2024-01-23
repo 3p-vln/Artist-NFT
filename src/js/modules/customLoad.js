@@ -1,27 +1,20 @@
-import $ from 'jquery'; 
+import $ from 'jquery';
 
-export default class CustomLoad {
-    constructor(info, id) {
-        this.info = info;
-        this.id = id;
-        this.custom = $('.custom-mesh');
-        this.loaditem();
-    }
-
-    loaditem() {
-        this.custom.append(`
-            <div class="card ${this.id}">
+export function customLoad(info, id) {
+    const custom = $('.custom-mesh');
+    custom.append(`
+            <div class="card ${id}">
                 <div class="card__picture">
                     <picture>
-                        <source srcset="${this.info.imgWebP}" type="image/webp">
-                        <img src="${this.info.img}" alt="art" itype="image/jpg">
+                        <source srcset="${info.imgWebP}" type="image/webp">
+                        <img src="${info.img}" alt="art" itype="image/jpg">
                     </picture>
                 </div>
                 <div class="card__info">
                     <div class="info">
-                        <h3 class="info__name">${this.info.name}</h3>
-                        <p class="info__about">${this.info.about}</p>
-                        <p class="info__price">$${this.info.price}</p>    
+                        <h3 class="info__name">${info.name}</h3>
+                        <p class="info__about">${info.about}</p>
+                        <p class="info__price">$${info.price}</p>    
                     </div>
                     <div class="btns">
                         <a href="#" class="btn">
@@ -37,5 +30,4 @@ export default class CustomLoad {
                 </div>
             </div>
         `);
-    }
 }
