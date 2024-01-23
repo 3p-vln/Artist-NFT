@@ -11,8 +11,8 @@
             gap: 32px;
         }
 
-        @include media-breakpoint-down(xxs){
-            padding-top: 62px;
+        @include media-breakpoint-down(xs){
+            padding-top: 126px;
         }
     }
 
@@ -258,12 +258,12 @@
 
         @include media-breakpoint-down(sm){
             display: block;
-            min-width: 100%;
+            min-width: 90%;
             min-height: 100%;
             transform: translateX(0px);
         }
 
-        @include media-breakpoint-down(xxs){
+        @include media-breakpoint-down(xs){
             aspect-ratio: 1 / 0.82;
             transform: scale(1.35) translateX(8%) translateY(4%);
         }

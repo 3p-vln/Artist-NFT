@@ -395,7 +395,7 @@
         }
     }
 
-    .burger-backdrop {
+    .burger_backdrop {
         display: none;
         position: fixed;
         transform: translateY(64px);
@@ -405,7 +405,7 @@
         background-color: rgba(0, 0, 0, 0.75);
     }
 
-    .burger-backdrop._active {
+    .burger_backdrop._active {
         display: block;
     }
 

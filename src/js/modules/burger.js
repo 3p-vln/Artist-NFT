@@ -2,7 +2,7 @@ function burger() {
     const headerBurger = document.querySelector('.header__burger');
     const headerMenu = document.querySelector('.header__menu');
     const body = document.querySelector("body");
-    const burgerBackdrop = document.querySelector('.burger-backdrop');
+    const burgerBackdrop = document.querySelector('.burger_backdrop');
     const buttonAuthorization = document.querySelector('.authorization');
 
     if (headerBurger) {
