@@ -8,13 +8,13 @@
     margin-bottom: 75px;
 
     @include media-breakpoint-down(md) {
-        grid-template-columns: repeat(auto-fit, minmax(302px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(263px, 1fr));
         grid-template-rows: auto;
         padding: 0;
         margin-top: calc(47px + (57 - 47) * ((100vw - 375px) / (1024 - 375)));
     }
 
-    @media (max-width:652px) {
+    @include media-breakpoint-down(sm) {
         gap: 19px;
         margin-bottom: 35px;
     }
@@ -25,15 +25,15 @@
         position: relative;
         cursor: pointer;
 
-        @media (max-width:663px) {
+        @include media-breakpoint-down(xs) {
             height: 412px;
         }
 
         &:first-child {
             grid-column: 1;
 
-            @media (max-width:652px) {
-                height: 199px;
+            @include media-breakpoint-down(xs) {
+                height: calc(199px + (412 - 199) * ((100vw - 375px) / (663 - 375)));
             }
         }
 
@@ -46,8 +46,8 @@
         }
 
         &:nth-child(5){
-            @media (max-width:652px) {
-                height: 199px;
+            @include media-breakpoint-down(xs) {
+                height: calc(199px + (412 - 199) * ((100vw - 375px) / (663 - 375)));
             }
         }
 
@@ -66,19 +66,19 @@
                 grid-column: auto;
             }
 
-            @media (max-width:652px) {
+            @include media-breakpoint-down(xs) {
                 display: none;
             }
         }
 
         &:nth-child(8) {
-            @media (max-width:652px) {
+            @include media-breakpoint-down(xs) {
                 display: none;
             }
         }
 
         &:nth-child(9) {
-            @media (max-width:652px) {
+            @include media-breakpoint-down(xs) {
                 display: none;
             }
         }
@@ -88,11 +88,11 @@
                 display: none;
             }
 
-            @media (max-width:995px) {
+            @media (max-width:878px) {
                 display: block;
             }
 
-            @media (max-width:652px) {
+            @include media-breakpoint-down(xs) {
                 display: none;
             }
         }
