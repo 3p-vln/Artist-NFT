@@ -6,14 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/main.min.css?_v=20240123194301">
+  <link rel="stylesheet" href="css/main.min.css?_v=20240123194855">
   <title>Artist NFT</title>
 </head>
 
   <body>
     <div class="wrapper">
       <header class="header">
-  <div class="burger-backdrop"></div>
+  <div class="burger_backdrop"></div>
+
   <div class="header__container">
     <a class="header__logo" href="#">
       <svg class="header__logo-svg">
@@ -24,17 +25,23 @@
     <nav class="header__menu menu">
       <ul class="menu__list">
         <li class="menu__item"><a href="index.html">Main page</a></li>
+
         <li class="menu__item"><a href="#"><span class="menu__item-lock">
               <svg class="menu__item-lock-svg">
                 <use href="#header-lock"></use>
               </svg>
             </span>NFT</a></li>
         <li class="menu__item"><a href="art.html">Pictures</a></li>
+
         <li class="menu__item"><a href="#">Auction</a></li>
+
         <li class="menu__item"><a href="#">Pricing</a></li>
+
         <li class="menu__item"><a href="#">Contacts</a></li>
+
         <li class="menu__item"><a href="#">Blog</a></li>
       </ul>
+
       <div class="menu__buttons">
         <div class="dropdown header__dropdown">
           <button class="dropdown__btn">
@@ -45,12 +52,14 @@
               </svg>
             </span>
           </button>
+
           <div class="dropdown-content">
             <a href="#">ENG</a>
             <a href="#">UA</a>
             <a href="#">FR</a>
           </div>
         </div>
+
         <a href="#" class="authorization header__authorization">
           <button class="authorization__btn">
             <span class="authorization__btn-text">Authorization</span>
@@ -69,6 +78,7 @@
             </svg>
           </span>
         </button>
+        
         <div class="dropdown-content">
           <a href="#">ENG</a>
           <a href="#">UA</a>
@@ -83,7 +93,7 @@
           <span class="authorization__btn-text">Authorization</span>
         </button>
       </a>
-      <a href="#" class="header__premium premium">
+      <a href="#" class="premium header__premium">
         <button class="premium__btn">
           <span class="premium__btn-text">Premium access</span>
           <svg class="premium__btn-icon">
@@ -101,14 +111,18 @@
 </header>
       <main class="page">
         <div class="background">
+
     <div class="background__blurs">
         <picture>
-            
-            
-            <source srcset="images/main/make-art/blurs/blur-mobile.png" media="(max-width:375px)" width="958" height="899" alt="blur">
+            <source srcset="images/main/make-art/blurs/blur-mobile.png" media="(max-width:576px)" width="958" height="899" alt="blur">
             <img src="images/main/make-art/blurs/blur.png" width="758" height="899" alt="blur" class="background__blurs-first">
         </picture>
+        <picture>
+            <source srcset="images/main/biography/blurs/blur-mobile.png" media="(max-width:576px)" width="958" height="899" alt="blur">
+            <img src="images/main/biography/blurs/blur.png" width="958" height="1199" alt="blur" class="background__blurs-second">
+        </picture>
     </div>
+
     <p class="background__make">MAKE ART</p>
     <p class="background__not">NOT WAR</p>
     <svg class="background__ellipse-first">
@@ -123,6 +137,14 @@
     <svg class="background__star-second">
         <use href="#star"></use>
     </svg>
+
+    <svg class="background__ellipse-third">
+        <use href="#elipse"></use>
+    </svg>
+    <svg class="background__star-third">
+        <use href="#star"></use>
+    </svg>
+
 </div>
  
         <div class="page__container"> 
@@ -171,53 +193,103 @@
             </div>
         </div>
         <div class="make__wrapper">
+
             <div class="make__right">
                 <picture>
                     <source srcset="images/main/make-art/make-art-mobile.png" media="(max-width: 768px)">
-                    
                     <img src="images/main/make-art/make-art.png" alt="woman" class="make__right-img">
                 </picture>
             </div>
+            
+            
         </div>
 
     </div>
 </section> 
           <section id="biography" class="biography">
     <div class="biography__content">
+
+        <div class="biography__text">
+            <h3 id="biography-subtitle" class="biography__text-subtitle"></h3>
+            <h2 id="biography-title" class="biography__text-title"></h2>
+        </div>
+
         <div class="biography__wrapper">
             <div class="biography__image">
-                <img id="biography__bg" alt="bg" class="biography__image-bg">
-                <img id="biography__img" alt="woman" class="biography__image-img">
+                <img id="biography-bg" alt="bg" class="biography__image-bg">
+                <img id="biography-img" alt="woman" class="biography__image-img">
             </div>
         </div>
-        <div class="biography__info">
-            <h3 id="biography__subtitle" class="biography__info-subtitle"></h3>
-            <h2 id="biography__title" class="biography__info-title"></h2>
-            <p id="biography__paragraph" class="biography__info-paragraph">
-            </p>
-            <div class="biography__info-columns columns-swiper swiper">
-                <div class="columns-wrapper swiper-wrapper">
-                    <div class="columns-slide swiper-slide">
-                        <h2 id="biography__column-year-first" class="columns-slide__year"></h2>
-                        <h3 id="biography__column-paragraph-first" class="columns-slide__paragraph"></h3>
-                    </div>
-                    <div class="columns-slide swiper-slide">
-                        <h2 id="biography__column-year-second" class="columns-slide__year"></h2>
-                        <h3 id="biography__column-paragraph-second" class="columns-slide__paragraph"></h3>
-                    </div>
-                    <div class="columns-slide swiper-slide">
-                        <h2 id="biography__column-year-third" class="columns-slide__year"></h2>
-                        <h3 id="biography__column-paragraph-third" class="columns-slide__paragraph"></h3>
-                    </div>
+
+        <p id="biography-paragraph" class="biography__paragraph">
+        </p>
+
+        <div class="biography__columns columns-swiper swiper">
+            <div class="columns-wrapper swiper-wrapper">
+                <div class="columns-slide swiper-slide">
+                    <h2 id="biography-column-year-first" class="columns-slide__year"></h2>
+                    <h3 id="biography-column-paragraph-first" class="columns-slide__paragraph"></h3>
+                </div>
+                <div class="columns-slide swiper-slide">
+                    <h2 id="biography-column-year-second" class="columns-slide__year"></h2>
+                    <h3 id="biography-column-paragraph-second" class="columns-slide__paragraph"></h3>
+                </div>
+                <div class="columns-slide swiper-slide">
+                    <h2 id="biography-column-year-third" class="columns-slide__year"></h2>
+                    <h3 id="biography-column-paragraph-third" class="columns-slide__paragraph"></h3>
                 </div>
             </div>
         </div>
+        
+    </div>
+</section> 
+          <section id="premium" class="premium">
+    <div class="premium__content">
+        <div class="premium__banner">
+            <div class="info premium__banner-info">
+                <svg class="info__svg">
+                    <use href="#banner-crown"/>
+                </svg>
+                <h2 id="premium-banner-title" class="info__title"></h2>
+                <p id="premium-banner-paragraph" class="info__paragraph"></p>
+                <button class="info__btn">
+                    <span id="premium-banner-btn-text"></span>
+                </button>
+            </div>
+            <div class="premium__banner-ruby">
+                <picture>
+                    <source id="premium-banner-ruby-mobile" media="(max-width:1024)">
+                    <img id="premium-banner-ruby" alt="ruby" class="premium__banner-ruby-img">
+                </picture>
+
+            </div>
+            <div class="premium__banner-emerald">
+                <picture>
+                    <source id="premium-banner-emerald-mobile" media="(max-width:1024)">
+                    <img id="premium-banner-emerald" alt="emerald" class="premium__banner-emerald-img">
+                </picture>
+            </div>
+            <div class="premium__banner-sapphire">
+                <picture>
+                    <source id="premium-banner-sapphire-mobile" media="(max-width:1024)">
+                    <img id="premium-banner-sapphire" alt="sapphire" class="premium__banner-sapphire-img">
+                </picture>
+            </div>
+            <div class="premium__banner-circle">
+                <picture>
+                    <source id="premium-banner-circle-mobile" media="(max-width:1024)">
+                    <img id="premium-banner-circle" alt="circle" class="premium__banner-circle-img">
+                </picture>
+            </div>
+        </div>
+
+        
     </div>
 </section> 
         </div>
       </main>
       <footer class="footer">
-    <div class="__container">
+    <div class="footer__container">
         <div class="footer__content">
             <div class="footer__links">
                 <div class="casual footer__links-casual">
@@ -382,8 +454,12 @@
       <symbol id="bag" viewBox="0 0 24 25" fill="none">
             <path d="M18 7.5H16V6.5C16 4.3 14.2 2.5 12 2.5C9.8 2.5 8 4.3 8 6.5V7.5H6C4.9 7.5 4 8.4 4 9.5V19.5C4 21.2 5.3 22.5 7 22.5H17C18.7 22.5 20 21.2 20 19.5V9.5C20 8.4 19.1 7.5 18 7.5ZM10 6.5C10 5.4 10.9 4.5 12 4.5C13.1 4.5 14 5.4 14 6.5V7.5H10V6.5Z" fill="#1D1F21"/>
       </symbol>
+
+      <symbol id="banner-crown" viewBox="0 0 45 45" fill="none">
+            <path d="M10.2267 36.7514C10.2267 37.1631 10.5567 37.5 10.9767 37.5H34.0307C34.4432 37.5 34.7807 37.1631 34.7807 36.7514V34.0122H10.2267V36.7514ZM40.9304 12.7581C40.6529 12.571 40.2929 12.5858 40.0305 12.788L30.1159 20.656L23.1562 7.8621C22.9012 7.37549 22.1062 7.38313 21.8437 7.8621L14.884 20.656L4.96948 12.788C4.70698 12.5784 4.347 12.571 4.07701 12.7581C3.79954 12.9453 3.68702 13.2897 3.78456 13.604L9.94409 32.5149H35.063L41.2153 13.604C41.3129 13.2897 41.2004 12.9453 40.9304 12.7581Z" fill="#FCFFFF"/>
+      </symbol>
 </svg>
   </div></body>
-  <script src="js/app.min.js?_v=20240123194301"></script>
-  <script src="js/main.min.js?_v=20240123194301"></script>
+  <script src="js/app.min.js?_v=20240123194855"></script>
+  <script src="js/main.min.js?_v=20240123194855"></script>
 </html>
