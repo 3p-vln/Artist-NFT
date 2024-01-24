@@ -138,9 +138,6 @@
                     margin-top: 16px;
 
                     @include media-breakpoint-down(lg) {
-                        font-size: 20px;
-                        line-height: 20px;
-                        margin-top: 5px;
                         font-size: calc(20px + (26 - 20) * ((100vw - 375px)/(1440 - 375)));
                         line-height: calc(20px + (33.5 - 20) * ((100vw - 375px)/(1440 - 375)));
                         margin-top: calc(5px + (16 - 5) * ((100vw - 375px)/(1440 - 375)));
