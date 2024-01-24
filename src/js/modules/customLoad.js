@@ -17,11 +17,11 @@ export function customLoad(info, id) {
                         <p class="info__price">$${info.price}</p>    
                     </div>
                     <div class="btns">
-                        <a href="#" class="btn">
-                            <p>Buy</p>
+                        <a href="#" class="btn black">
+                            <span>Buy</span>
                         </a>
-                        <a href="#" class="btn">
-                            <p>View</p>
+                        <a href="#" class="btn black">
+                            <span>View</span>
                             <svg>
                                 <use href="#btn-arr"></use>
                             </svg>

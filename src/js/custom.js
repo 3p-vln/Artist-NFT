@@ -10,3 +10,20 @@ async function snap() {
     });
 }
 snap();
+
+function focus() {
+    $('.custom-mesh').on('click', '.card', (event) => {
+        $('.active').removeClass('active');
+        const clickedElement = $(event.currentTarget);
+        clickedElement.addClass('active');
+        clickedElement.find('.btn').removeClass('btn_active');
+        setTimeout(function(){
+          clickedElement.find('.btn').addClass('btn_active');
+        },1);
+      });
+      
+      $('.custom-mesh').on('mouseleave', '.card', () => {
+        $('.active').removeClass('active');
+      });
+}
+focus();

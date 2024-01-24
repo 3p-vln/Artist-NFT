@@ -25,11 +25,11 @@ export function artLoad(info, id) {
                                 <p class="info__price">$${info.price}</p>    
                             </div>
                             <div class="btns">
-                                <a href="#" class="btn">
-                                    <p>Buy</p>
+                                <a href="#" class="btn black">
+                                    <span>Buy</span>
                                 </a>
-                                <a href="#" class="btn">
-                                    <p>View</p>
+                                <a href="#" class="btn black">
+                                    <span>View</span>
                                     <svg>
                                         <use href="#btn-arr"></use>
                                     </svg>
@@ -56,8 +56,8 @@ export function artLoad(info, id) {
                                 <p>${info.close}</p>
                             </div>
                             <div class="btns">
-                                <a href="custom.html" class="btn">
-                                    <p>Unlock</p>
+                                <a href="custom.html" class="btn black">
+                                    <span>Unlock</span>
                                     <svg>
                                         <use href="#btn-arr"></use>
                                     </svg>

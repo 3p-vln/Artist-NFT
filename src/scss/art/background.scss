@@ -4,11 +4,7 @@
     z-index: 1;
     margin-top: 65px;
 
-    @media (max-width:1100px) {
-        display: none;
-    }
-
-    @media (max-width:1100px) {
+    @include media-breakpoint-down(md) {
         display: none;
     }
 
