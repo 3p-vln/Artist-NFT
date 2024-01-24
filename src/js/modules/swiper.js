@@ -2,6 +2,8 @@ import Swiper, { Navigation, Pagination, Autoplay, Scrollbar } from 'swiper';
 Swiper.use([Navigation, Pagination, Autoplay, Scrollbar]);
 
 function biographySwiper() {
+  // поправить брейкпоинты
+  
   let swiper = new Swiper('.columns-swiper', {
     slidesPerView: 'auto',
     breakpoints: {

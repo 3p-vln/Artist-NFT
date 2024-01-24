@@ -8,8 +8,8 @@
     margin-bottom: 75px;
 
     @include media-breakpoint-down(md) {
-        grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
-        gap: 19px;
+        grid-template-columns: repeat(auto-fit, minmax(263px, 1fr));        
+        grid-template-rows: auto;
         padding: 0;
     }
 
@@ -138,6 +138,10 @@
                     margin-top: 16px;
 
                     @include media-breakpoint-down(lg) {
+                        font-size: 20px;
+                        line-height: 20px;
+                        margin-top: 5px;
+                        font-size: calc(20px + (26 - 20) * ((100vw - 375px)/(1440 - 375)));
                         line-height: calc(20px + (33.5 - 20) * ((100vw - 375px)/(1440 - 375)));
                         margin-top: calc(5px + (16 - 5) * ((100vw - 375px)/(1440 - 375)));
                     }

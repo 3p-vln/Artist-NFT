@@ -1,16 +1,11 @@
-._lock {
-    overflow: hidden;
-}
-
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: var(--background, #1D1F21);
+    background: $background;
     height: 64px;
     z-index: 12;
-
 
     &__container {
         display: flex;
@@ -36,8 +31,6 @@
         }
     }
 
-    &__menu {}
-
     .menu {
         margin-left: 14px;
         flex: 1;
@@ -48,7 +41,7 @@
             right: -100%;
             width: 39%;
             height: 100%;
-            background: var(--background, #1D1F21);
+            background: $background;
             background-size: cover;
             padding: 100px 100px 180px 50px;
             transition: right 0.3s ease 0s;
@@ -87,45 +80,43 @@
             @include media-breakpoint-down(xxs) {
                 align-items: center;
             }
-
         }
 
         &__item {
             a {
                 position: relative;
-                color: var(--secondary, #C8D2DC);
+                color: $gray6Color;
                 font-family: 'Manrope';
                 font-size: 14px;
-                font-style: normal;
                 font-weight: 400;
                 line-height: 19px;
                 padding: 8px 12px;
                 text-wrap: nowrap;
-            }
 
-            a:hover {
-                background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                transition: all 0.5s ease-in-out;
-            }
-
-            a::before {
-                position: absolute;
-                top: 0px;
-                left: 0px;
-                content: '';
-                width: 100%;
-                height: 35px;
-                opacity: 0;
-                border-radius: 8px;
-                background: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.10) 9.27%, rgba(209, 181, 255, 0.10) 84.06%));
-            }
-
-            a:hover::before {
-                opacity: 1;
-                transition: all 0.5s;
+                &:hover {
+                    background: $rainbowBtnGradient;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    transition: all 0.5s ease-in-out;
+                }
+    
+                &::before {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    content: '';
+                    width: 100%;
+                    height: 35px;
+                    opacity: 0;
+                    border-radius: 8px;
+                    background: $darkerGradientBtn;
+                }
+    
+                &:hover::before {
+                    opacity: 1;
+                    transition: all 0.5s;
+                }
             }
 
             @media (max-width: 1100px) {
@@ -169,22 +160,18 @@
     }
 
     @media (max-width: 1100px) {
-        ._active {
+        .header__menu_active {
             right: 0;
             transition: right 0.3s ease 0s;
         }
     }
-
-
-
-    &__dropdown {}
 
     .dropdown {
         position: relative;
         display: inline-block;
 
         &__btn {
-            background: var(--frames, #212426);
+            background: $backgroundSecond;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -195,10 +182,9 @@
         }
 
         &__btn-text {
-            color: var(--secondary, #C8D2DC);
+            color: $gray6Color;
             font-family: 'Manrope';
             font-size: 14px;
-            font-style: normal;
             font-weight: 400;
             line-height: 19px;
         }
@@ -214,7 +200,7 @@
         &-content {
             display: none;
             position: absolute;
-            background-color: #f1f1f1;
+            background-color: $whiteColor;
             width: 100%;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 1;
@@ -227,7 +213,7 @@
 
     /* Изменение цвета выпадающих ссылок при наведении курсора */
     .dropdown-content a:hover {
-        background-color: #ddd;
+        background-color: $gray6Color;
     }
 
     /* Показать выпадающее меню при наведении курсора */
@@ -272,15 +258,14 @@
             overflow: hidden;
             gap: 10px;
             border-radius: 12px;
-            background: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.10) 9.27%, rgba(209, 181, 255, 0.10) 84.06%));
+            background: $darkerGradientBtn;
 
             &-text {
                 font-family: 'ProximaNova';
                 font-size: 14px;
-                font-style: normal;
                 font-weight: 700;
                 line-height: 20px;
-                background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
+                background: $rainbowBtnGradient;
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
@@ -290,7 +275,7 @@
             &:hover {
                 &::before {
                     left: 130%;
-                    transition: .5s ease-in-out;
+                    transition: left .5s ease-in-out;
 
                     @media (max-width:768px) {
                         display: none;
@@ -300,7 +285,7 @@
 
             &::before {
                 content: "";
-                background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+                background: $hoverBtn;
                 height: 64px;
                 width: 50px;
                 position: absolute;
@@ -315,7 +300,6 @@
         }
     }
 
-
     &__premium {}
 
     .premium {
@@ -329,7 +313,7 @@
             position: relative;
             overflow: hidden;
             border-radius: 12px;
-            background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
+            background: $rainbowBtnGradient;
 
             @media (max-width: 1100px) {
                 transform: translateX(7px);
@@ -340,14 +324,13 @@
                 justify-content: center;
                 align-items: center;
                 border-radius: 9px;
-                background: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.10) 9.27%, rgba(209, 181, 255, 0.10) 84.06%));
+                background: $darkerGradientBtn;
             }
 
             &-text {
-                color: var(--background, #1D1F21);
+                color: $background;
                 font-family: 'ProximaNova';
                 font-size: 14px;
-                font-style: normal;
                 font-weight: 700;
                 line-height: 20px;
                 text-wrap: nowrap;
@@ -380,7 +363,7 @@
 
             &::before {
                 content: "";
-                background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+                background: $hoverBtn;
                 height: 64px;
                 width: 50px;
                 position: absolute;
@@ -395,7 +378,7 @@
         }
     }
 
-    .burger_backdrop {
+    .burger__backdrop {
         display: none;
         position: fixed;
         transform: translateY(64px);
@@ -403,10 +386,10 @@
         width: 100%;
         z-index: 2;
         background-color: rgba(0, 0, 0, 0.75);
-    }
 
-    .burger_backdrop._active {
-        display: block;
+        &_active {
+            display: block;
+        }
     }
 
     &__burger {
@@ -420,13 +403,13 @@
             margin-right: 5px;
             gap: 5px;
             order: 2;
-            background: var(--background, #1D1F21);
+            background: $background;
 
             &-span-top {
                 margin-left: 22px;
                 height: 2px;
                 width: 6px;
-                background: #FFFFFF;
+                background: $whiteTwo;
                 z-index: 13;
                 -webkit-transition: all 0.3s easy--in-out;
                 transition: all 0.3s ease-in-out;
@@ -436,7 +419,7 @@
                 margin-left: 12px;
                 height: 2px;
                 width: 16px;
-                background: #FFFFFF;
+                background: $whiteTwo;
                 z-index: 13;
                 -webkit-transition: all 0.3s easy--in-out;
                 transition: all 0.3s ease-in-out;
@@ -446,32 +429,28 @@
                 margin-left: 16px;
                 height: 2px;
                 width: 12px;
-                background: #FFFFFF;
+                background: $whiteTwo;
                 z-index: 13;
                 -webkit-transition: all 0.3s easy--in-out;
                 transition: all 0.3s ease-in-out;
             }
 
-        }
+            .header__burger.header__burger_active .header__burger-span-middle {
+                opacity: 0;
+            }
+    
+            .header__burger.header__burger_active .header__burger-span-top {
+                margin-left: -1px;
+                width: 20px;
+                transform: translateY(8px) translateX(10px) rotate(45deg);
+            }
+    
+            .header__burger.header__burger_active .header__burger-span-bottom {
+                margin-left: 8px;
+                width: 20px;
+                transform: translateY(-6px) translateX(1px) rotate(-45deg);
+            }
 
-        &-span {}
-    }
-
-    @media (max-width: 1100px) {
-        .header__burger._active .header__burger-span-middle {
-            opacity: 0;
-        }
-
-        .header__burger._active .header__burger-span-top {
-            margin-left: -1px;
-            width: 20px;
-            transform: translateY(8px) translateX(10px) rotate(45deg);
-        }
-
-        .header__burger._active .header__burger-span-bottom {
-            margin-left: 8px;
-            width: 20px;
-            transform: translateY(-6px) translateX(1px) rotate(-45deg);
         }
     }
 }

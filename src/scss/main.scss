@@ -7,11 +7,3 @@
 @import 'main/make';
 @import 'main/biography';
 @import 'main/premium';
-
-
-.page {
-   background: var(--background, #1D1F21); // переменные из фигмы которых нет в проекте +1 вынести в глобальный стиль
-}
-
-
-
