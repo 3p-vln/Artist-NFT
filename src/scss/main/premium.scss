@@ -1,0 +1,250 @@
+.premium {
+    &__content {
+        padding-top: 16px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__banner {
+        position: relative;
+        overflow: hidden;
+        max-width: 1140px;
+        height: 446px;
+        border-radius: 24px;
+        padding: 83px 110px;
+        margin-bottom: 11px;
+        background: var(--additional, linear-gradient(95deg, #6880FF 9.27%, #3CA7F4 50.77%, #8C45FF 84.06%));
+
+        @include media-breakpoint-down(md) {
+            max-height: 650px;
+            padding: 32px 26px;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            gap: 12px;
+
+            @include media-breakpoint-down(md) {
+                align-items: center;
+            }
+
+            &__svg {
+                width: 45px;
+                height: 45px;
+            }
+
+            &__title {
+                color: var(--text, #FCFFFF);
+                font-family: "ProximaNova";
+                font-size: clamp(26px, 2.5vw, 36px);
+                font-weight: 700;
+                line-height: 49.5px;
+            }
+
+            &__paragraph {
+                color: var(--text, #FCFFFF);
+                font-family: "ProximaNova";
+                font-size: clamp(15px, 2.5vw, 16px);
+                font-weight: 400;
+                line-height: 28px;
+                max-width: 440px;
+                ;
+            }
+
+            &__btn {
+                display: flex;
+                padding: 18px 37px 19px 37px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 16px;
+                background: var(--background, #1D1F21);
+                position: relative;
+                overflow: hidden;
+
+                span {
+                    font-family: "ProximaNova";
+                    font-size: clamp(15px, 2.5vw, 18px);
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 26.5px;
+                    background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+
+              
+                &::before {
+                    content: "";
+                    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+                    height: 64px;
+                    width: 50px;
+                    position: absolute;
+                    top: 0px;
+                    left: -95px;
+                    transform: skewX(-45deg);
+                    transition: left .5s ease-in-out; // указать тип анимации
+
+                    @include media-breakpoint-down(xs) {
+                        height: 52px;
+                    }
+                }
+
+                &:hover {
+                    &::before {
+                        left: 130%;
+                      
+                        @include media-breakpoint-down(sm) {
+                            display: none;
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+        &-ruby {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+
+            &-img {
+                width: 100%;
+            }
+        }
+
+        &-emerald {
+            position: absolute;
+            top: 19.5%;
+            right: 82px;
+            z-index: 1;
+
+            &-img {
+                width: 100%;
+            }
+        }
+
+        &-sapphire {
+            position: absolute;
+            top: 0;
+            right: 250px;
+            z-index: 1;
+
+            &-img {
+                width: 100%;
+            }
+        }
+
+        &-circle {
+            position: absolute;
+            top: 0;
+            right: 0px;
+            z-index: 0;
+
+            &-img {
+                width: 100%;
+            }
+        }
+    }
+
+    &-swiper {
+        width: 100%;
+        max-width: 100%;
+        overflow: visible;
+    }
+
+    &-wrapper {
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &-slide {
+        display: flex;
+        flex-direction: column;
+        border-radius: 12px;
+        background: var(--frames, #212426);
+        width: 350px;
+        height: 600px;
+
+        &__nft {
+            font-family: "ProximaNova";
+            font-size: clamp(14px, 2.5vw, 18px);
+            font-style: normal;
+            font-weight: 700;
+            line-height: 26.5px;
+            letter-spacing: 1.8px;
+            background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        &__item {
+            
+            width: 254px;
+            height: 334px;
+            object-fit: cover;
+
+            &-img {
+                border: 50%;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__title {
+            color: var(--text, #FCFFFF);
+            font-family: "ProximaNova";
+            font-size: clamp(18px, 2.5vw, 20px);
+            font-style: normal;
+            font-weight: 700;
+            line-height: 30px;
+        }
+
+        &__paragraph {
+            color: var(--secondary, #C8D2DC);
+            font-family: "ProximaNova";
+            font-size: clamp(12px, 2.5vw, 14px);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 21px;
+        }
+
+        &__price {
+            display: flex;
+
+            &-value {
+                color: var(--text, #FCFFFF);
+                font-family: "ProximaNova";
+                font-size: clamp(22px, 2.5vw, 26px);
+                font-style: normal;
+                font-weight: 700;
+                line-height: 33.5px;
+            }
+
+            &-btn {
+                display: inline-flex;
+                padding: 14px 30px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 12px;
+                background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
+
+                span {
+                    color: var(--background, #1D1F21);
+                    font-family: "Proxima Nova";
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}

@@ -3,8 +3,10 @@
 }
 
 .header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
     background: var(--background, #1D1F21);
     height: 64px;
     z-index: 12;
@@ -48,7 +50,7 @@
             height: 100%;
             background: var(--background, #1D1F21);
             background-size: cover;
-            padding: 100px 100px 100px 50px;
+            padding: 100px 100px 180px 50px;
             transition: right 0.3s ease 0s;
             overflow: auto;
             display: flex;
@@ -393,7 +395,7 @@
         }
     }
 
-    .burger-backdrop {
+    .burger_backdrop {
         display: none;
         position: fixed;
         transform: translateY(64px);
@@ -403,7 +405,7 @@
         background-color: rgba(0, 0, 0, 0.75);
     }
 
-    .burger-backdrop._active {
+    .burger_backdrop._active {
         display: block;
     }
 

@@ -22,13 +22,49 @@ function biographySwiper() {
       1920: {
         slidesPerView: 3,
       },
-      376: {
+      577: {
         slidesPerView: 3,
       },
-      375: {
+      576: {
+        slidesPerView: 3,
+        spaceBetween: 0,
+      },
+      450: {
+        slidesPerView: 3,
+        spaceBetween: 0,
+      },
+      449: {
         slidesPerView: 2.5,
+        spaceBetween: 0,
+      },
+      375: {
+        slidesPerView: 2.3,
+        spaceBetween: 5,
       }
     }
   });
 }
 biographySwiper();
+
+function premiumSwiper() {
+  let swiper = new Swiper('.premium-swiper', {
+    centeredSlides: 'true',
+    centerSlides: 'true',
+    updateOnWindowResize: true,
+    breakpoints: {
+      1920: {
+        slidesPerView: 5,
+        spaceBetween: 30,
+      },
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 30,
+      },
+      375: {
+        slidesPerView: 2.3,
+        spaceBetween: 5,
+      }
+    }
+  });
+}
+premiumSwiper();

@@ -52,19 +52,19 @@
             opacity: 0.6;
             padding-right: 17px;
 
+            &:hover {
+                opacity: 1;
+                background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition: all 0.25s ease-in-out;
+
+            }
+
             @include media-breakpoint-down(sm) {
                 padding-right: 0px;
             }
-        }
-
-        &__link:hover {
-            opacity: 1;
-            background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            transition: all 0.25s ease-in-out;
-
         }
 
         &__link-logo {
@@ -98,7 +98,7 @@
             padding-right: 0px;
         }
 
-        @media (max-width: 360px) {
+        @include media-breakpoint-down(xxs) {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
         }
