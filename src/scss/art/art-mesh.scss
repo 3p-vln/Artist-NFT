@@ -8,7 +8,8 @@
     margin-bottom: 75px;
 
     @include media-breakpoint-down(md) {
-        grid-template-columns: repeat(auto-fit, minmax(263px, 1fr));        grid-template-rows: auto;
+        grid-template-columns: repeat(auto-fit, minmax(263px, 1fr));        
+        grid-template-rows: auto;
         padding: 0;
     }
 
@@ -146,6 +147,7 @@
                     margin-top: 16px;
 
                     @include media-breakpoint-down(lg) {
+                        // убрать дублирование кода
                         font-size: 20px;
                         line-height: 20px;
                         margin-top: 5px;

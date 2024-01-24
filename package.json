@@ -86,6 +86,7 @@
     "just-validate": "^4.3.0",
     "lozad": "^1.16.0",
     "sass-loader": "^13.3.2",
+    "scroll-lock": "^2.1.5",
     "style-loader": "^3.3.3",
     "swiper": "^8.4.7"
   }

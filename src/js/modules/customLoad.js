@@ -2,6 +2,7 @@ import $ from 'jquery';
 
 export function customLoad(info, id) {
     const custom = $('.custom-mesh');
+    
     custom.append(`
             <div class="card ${id}">
                 <div class="card__picture">

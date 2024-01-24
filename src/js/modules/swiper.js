@@ -17,6 +17,8 @@ function stockSwiper() {
 stockSwiper();
 
 function biographySwiper() {
+  // поправить брейкпоинты
+  
   let swiper = new Swiper('.columns-swiper', {
     breakpoints: {
       1920: {
