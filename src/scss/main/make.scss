@@ -107,20 +107,8 @@
         }
 
         &__premium {
-            // сделать компонент как кнопку
             &-btn {
-                max-width: 209px;
-                min-width: 170px;
-                max-height: 64px;
-                min-height: 52px;
-                display: flex;
                 padding: 18px 22px 19px 22px;
-                justify-content: center;
-                align-items: center;
-                position: relative;
-                overflow: hidden;
-                border-radius: 16px;
-                background: $rainbowBtnGradient;
 
                 @include media-breakpoint-down(xs){
                     width: 170px;
@@ -134,98 +122,31 @@
                     min-height: 18px;
                 }
 
-                span {
-                    padding-left: 8px;
+                p {
                     color: $background;
-                    font-family: 'ProximaNova';
                     font-size: clamp(15px, 2.5vw, 18px);
-                    font-weight: 700;
-                    line-height: 26.5px;
+                    font-family: 'ProximaNova';
                     text-wrap: nowrap;
-                }
-
-                &:hover {
-                    &::before {
-                        left: 130%;
-                        transition: .5s ease-in-out;
-
-                        @include media-breakpoint-down(sm){
-                            display: none;
-                        }
-                    }
-                }
-
-                &::before {
-                    content: "";
-                    background: $hoverBtn;
-                    height: 64px;
-                    width: 50px;
-                    position: absolute;
-                    top: 0px;
-                    left: -95px;
-                    transform: skewX(-45deg);
-                    @include media-breakpoint-down(xs){
-                        height: 52px;
-                    }
                 }
             }
         }
 
         &__discover {
             &-btn {
-                max-width: 145px;
-                min-width: 117px;
-                max-height: 64px;
-                min-height: 52px;
-                display: flex;
                 padding: 18px 36px 19px 37px;
-                justify-content: center;
-                align-items: center;
-                position: relative;
-                overflow: hidden;
-                border-radius: 16px;
-                background: $darkerGradientBtn;
 
                 @include media-breakpoint-down(xs){
                     width: 117px;
                     height: 52px;
                 }
 
-                span {
+                p {
                     font-family: 'ProximaNova';
-                    font-size: clamp(15px, 2.5vw, 18px);
-                    font-weight: 700;
-                    line-height: 26.5px;
                     background: $rainbowBtnGradient;
                     background-clip: text;
+                    font-size: clamp(15px, 2.5vw, 18px);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
-                }
-
-                &:hover {
-                    &::before {
-                        left: 130%;
-                        transition: .5s ease-in-out;
-
-                        @include media-breakpoint-down(sm){
-                            display: none;
-                        }
-                    }
-                }
-
-                &::before {
-                    content: "";
-                    background: $hoverBtn;
-                    height: 64px;
-                    width: 50px;
-                    position: absolute;
-                    top: 0px;
-                    left: -95px;
-                    transform: skewX(-45deg);
-                    
-                    @include media-breakpoint-down(xxs){
-                        height: 52px;
-                    }
                 }
             }
         }

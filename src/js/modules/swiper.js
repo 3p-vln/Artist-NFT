@@ -24,16 +24,17 @@ biographySwiper();
 
 function premiumSwiper() {
   let swiper = new Swiper('.premium-swiper', {
+    // loop: 'true',
     centeredSlides: 'true',
     centerSlides: 'true',
     updateOnWindowResize: true,
     breakpoints: {
       1920: {
-        slidesPerView: 5,
+        slidesPerView: 4,
         spaceBetween: 30,
       },
       1024: {
-        slidesPerView: 5,
+        slidesPerView: 4,
         spaceBetween: 30,
       },
       375: {

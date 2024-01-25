@@ -38,7 +38,7 @@
             -webkit-text-fill-color: transparent;
             padding-left: 56px;
             padding-top: 44px;
-            max-width: 118px;
+            max-width: 210px;
     
             @include media-breakpoint-down(md) {
                 padding-left: 0px;
@@ -116,7 +116,7 @@
         &-img {
             position: absolute;
             top: 5%;
-            left: 10%;
+            left: 9%;
             z-index: 2;
             width: 100%;
             height: 100%;
@@ -147,7 +147,7 @@
             right: -0%;
             z-index: 1;
             width: 100%;
-            height: 105%;
+            height: 106%;
             max-width: 480px;
             max-height: 650px;
 
@@ -223,7 +223,17 @@
 
                 @include media-breakpoint-down(xs) {
                     max-width: 131px;
-                    
+
+                    &:nth-child(1) {
+                        margin-right: 7px;
+                    }
+                    &:nth-child(2) {
+                        margin-right: 8px;
+                    }
+    
+                    &:nth-child(3) {
+                        margin-right: 40px;
+                    }
                 }
 
                 &__year {
@@ -262,6 +272,7 @@
                         width: 135px;
                     }
                 }
+               
             }
         }
     }

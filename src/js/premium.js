@@ -3,6 +3,13 @@ import {collection, getDocs} from 'firebase/firestore';
 
 const wrapper =  document.querySelector('wrapper');
 
+// async function snap() {
+//     const querySnapshot = await getDocs(collection(db, "main-premium"));
+//     querySnapshot.forEach((doc) => {
+//         new premiumLoad(doc.data(), doc.id);
+//     });
+// }
+// snap();
 
 (async function () {
     const querySnapshot = await getDocs(collection(db, "main-premium"));
@@ -13,14 +20,6 @@ const wrapper =  document.querySelector('wrapper');
         document.querySelector('#premium-banner-title').innerHTML = data.bannerTitle;
         document.querySelector('#premium-banner-paragraph').innerHTML = data.bannerParagraph;
         document.querySelector('#premium-banner-btn-text').innerHTML = data.bannerBtnText;
-        document.querySelector('#premium-banner-ruby').src = data.bannerRuby;
-        document.querySelector('#premium-banner-ruby-mobile').src = data.bannerRubyMobile;
-        document.querySelector('#premium-banner-emerald').src = data.bannerEmerald;
-        document.querySelector('#premium-banner-emerald-mobile').src = data.bannerEmeraldMobile;
-        document.querySelector('#premium-banner-sapphire').src = data.bannerSapphire;
-        document.querySelector('#premium-banner-sapphire-mobile').src = data.bannerSapphireMobile;
-        document.querySelector('#premium-banner-circle').src = data.bannerCircle;
-        document.querySelector('#premium-banner-circle-mobile').src = data.bannerCircleMobile;
 
         document.querySelector('#premium-card-nft-text').innerHTML = data.cardNftText;
         document.querySelector('#premium-card-title').innerHTML = data.cardTitle;

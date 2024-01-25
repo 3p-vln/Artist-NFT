@@ -248,19 +248,10 @@
 
     .authorization {
         &__btn {
-            width: 130px;
-            height: 48px;
-            display: flex;
             padding: 14px 22px;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-            gap: 10px;
             border-radius: 12px;
-            background: $darkerGradientBtn;
 
-            &-text {
+            p {
                 font-family: 'ProximaNova';
                 font-size: 14px;
                 font-weight: 700;
@@ -304,8 +295,6 @@
 
     .premium {
         &__btn {
-            width: 147px;
-            height: 48px;
             display: flex;
             padding: 14px 21px 14px 22px;
             justify-content: center;
@@ -316,10 +305,8 @@
             background: $rainbowBtnGradient;
 
             @media (max-width: 1100px) {
-                transform: translateX(7px);
+                transform: translateX(3px);
                 display: flex;
-                width: 32px;
-                height: 32px;
                 padding: 7px;
                 justify-content: center;
                 align-items: center;
@@ -327,7 +314,7 @@
                 background: $darkerGradientBtn;
             }
 
-            &-text {
+            p {
                 color: $background;
                 font-family: 'ProximaNova';
                 font-size: 14px;
@@ -353,9 +340,9 @@
             &:hover {
                 &::before {
                     left: 130%;
-                    transition: .5s ease-in-out;
+                    transition: left .5s ease-in-out;
 
-                    @media (max-width:768px) {
+                    @include media-breakpoint-down(sm) {
                         display: none;
                     }
                 }
@@ -434,23 +421,24 @@
                 -webkit-transition: all 0.3s easy--in-out;
                 transition: all 0.3s ease-in-out;
             }
+        }
+    }
 
-            .header__burger.header__burger_active .header__burger-span-middle {
-                opacity: 0;
-            }
+    @media (max-width: 1100px) { 
+        .header__burger.header__burger_active .header__burger-span-middle {
+            opacity: 0;
+        }
     
-            .header__burger.header__burger_active .header__burger-span-top {
-                margin-left: -1px;
-                width: 20px;
-                transform: translateY(8px) translateX(10px) rotate(45deg);
-            }
+        .header__burger.header__burger_active .header__burger-span-top {
+            margin-left: -1px;
+            width: 20px;
+            transform: translateY(8px) translateX(10px) rotate(45deg);
+        }
     
-            .header__burger.header__burger_active .header__burger-span-bottom {
-                margin-left: 8px;
-                width: 20px;
-                transform: translateY(-6px) translateX(1px) rotate(-45deg);
-            }
-
+        .header__burger.header__burger_active .header__burger-span-bottom {
+            margin-left: 8px;
+            width: 20px;
+            transform: translateY(-6px) translateX(1px) rotate(-45deg);
         }
     }
 }
