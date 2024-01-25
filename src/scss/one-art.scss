@@ -1,7 +1,7 @@
 @import 'style';
-@import 'art/art-head';
-@import 'art/background';
-@import 'art/art-mesh';
+@import 'oneArt/bread-crumbs';
+@import 'oneArt/one-art';
+@import 'oneArt/procces';
 
 .page {
     position: relative;
@@ -9,6 +9,7 @@
     &__container {
         position: relative;
         z-index: 2;
-        margin-top: 124px;
+        margin-top: 96px;
     }
 }
+

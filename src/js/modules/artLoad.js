@@ -28,7 +28,7 @@ export function artLoad(info, id) {
                                 <a href="#" class="btn black">
                                     <span>Buy</span>
                                 </a>
-                                <a href="#" class="btn black">
+                                <a href="oneArt.html?id=${id}" class="btn black">
                                     <span>View</span>
                                     <svg>
                                         <use href="#btn-arr"></use>
@@ -68,5 +68,3 @@ export function artLoad(info, id) {
                 `);
     }
 }
-
-// artLoad();
