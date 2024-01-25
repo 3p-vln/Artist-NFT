@@ -24,23 +24,34 @@ biographySwiper();
 
 function premiumSwiper() {
   let swiper = new Swiper('.premium-swiper', {
-    // loop: 'true',
+    loop: true,
     centeredSlides: 'true',
-    centerSlides: 'true',
     updateOnWindowResize: true,
     breakpoints: {
-      1920: {
-        slidesPerView: 4,
-        spaceBetween: 30,
-      },
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 30,
-      },
       375: {
-        slidesPerView: 2.3,
-        spaceBetween: 5,
-      }
+        slidesPerView: 1.15,
+        spaceBetween: 16,
+      },
+      576: {
+        slidesPerView: 1.7,
+        spaceBetween: 16,
+      },
+      768: {
+        slidesPerView: 2.5,
+        spaceBetween: 30,
+      },
+      1439: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      1440: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      1920: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
     }
   });
 }
