@@ -2,8 +2,6 @@ import $ from 'jquery';
 import { db } from './modules/firebase';
 import { collection, getDocs } from 'firebase/firestore';
 
-
-
 async function getArts() {
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get('id');
@@ -19,6 +17,8 @@ async function getArts() {
             text: doc.data().text,
             price: doc.data().price,
             lock: doc.data().lock,
+            sub: doc.data().sub,
+            close: doc.data().close
         });
     });
 
@@ -27,8 +27,7 @@ async function getArts() {
     console.log(art);
     const product = $('.one-art');
     console.log(art[0]);
-    document.querySelector('#product').innerHTML=art[0].name;
-    product.html('');
+    document.querySelector('#product').innerHTML = art[0].name;
     product.append(`
         <div class="art ${art[0].id}">
             <div class="art__picture">
@@ -65,8 +64,33 @@ async function getArts() {
                 </div>
         </div>
         </div>
-
     `);
+    document.querySelector('#imgWebP').srcset = art[0].imgWebP;
+    document.querySelector('#imgJpg').src = art[0].img;
+
+    const info = $('.about');
+    if (art[0].lock == true) {
+        info.append(`
+        <div class="about__lock">
+            <p class="about__access">${art[0].sub}</p>
+            <div class="about__content">
+                <svg>
+                    <use href="#locked-content"></use>
+                </svg>
+                <p>${art[0].close}</p>
+            </div>
+            <div class="btns">
+                <a href="#" class="btn black">
+                    <span>Unlock</span>
+                    <svg>
+                        <use href="#btn-arr"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        `)
+    }
+
 }
 
 getArts();

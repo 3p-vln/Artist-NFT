@@ -68,5 +68,3 @@ export function artLoad(info, id) {
                 `);
     }
 }
-
-// artLoad();
