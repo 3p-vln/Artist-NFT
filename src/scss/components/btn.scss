@@ -19,8 +19,8 @@
 
     &:hover {
         &::before {
-            left: 100%;
-            transition: .5s ease-in-out;
+            left: 130%;
+            transition: left .5s ease-in-out;
 
             @include media-breakpoint-down(sm) {
                 display: none;
@@ -43,7 +43,6 @@
 
         span {
             font-family: "ProximaNova";
-            font-size: 18px;
             font-weight: 700;
             line-height: 26.5px;
             background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
@@ -81,8 +80,8 @@
 
         &:hover {
             &::before {
-                left: 100%;
-                transition: .5s ease-in-out;
+                left: 130%;
+                transition: left .5s ease-in-out;
 
                 @include media-breakpoint-down(sm) {
                     display: none;
@@ -105,7 +104,58 @@
         }
 
         p {
-            font-size: clamp(15px, 2.5vw, 18px);
+            font-weight: 700;
+            line-height: 26.5px;
+        }
+    }
+
+    &.grey {
+        gap: 8px;
+        padding: 14px 22px;
+        background: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.10) 9.27%, rgba(209, 181, 255, 0.10) 84.06%));
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        &::before {
+            content: "";
+            background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+            height: 100px;
+            width: 50px;
+            position: absolute;
+            top: 0px;
+            left: -95px;
+            transform: skewX(-45deg);
+        }
+
+        &:hover {
+            &::before {
+                left: 130%;
+                transition: left .5s ease-in-out;
+
+                @include media-breakpoint-down(sm) {
+                    display: none;
+                }
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            padding: 12px 30px 13px 28px;
+        }
+
+        svg {
+            width: 24px;
+            height: 24px;
+
+            @include media-breakpoint-down(lg) {
+                width: calc(18px + (24 - 18) * ((100vw - 375px)/(1440 - 375)));
+                height: calc(18px + (24 - 18) * ((100vw - 375px)/(1440 - 375)));
+            }
+        }
+
+        p {
             font-weight: 700;
             line-height: 26.5px;
         }
