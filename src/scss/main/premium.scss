@@ -84,31 +84,6 @@
                     padding-top: 8px;
                 }
             }
-
-            &__btn {
-                padding: 18px 37px 19px 37px;
-
-                @include media-breakpoint-down(md) {
-                    width: auto;
-                }
-
-                @include media-breakpoint-down(xs) {
-                    margin-top: 24px;
-                    padding: 12px 28px 13px 29px;
-                    border-radius: 12px;
-                }
-
-                p {
-                    font-family: "ProximaNova";
-                    font-size: clamp(15px, 2.5vw, 18px);
-                    font-weight: 700;
-                    line-height: 26.5px;
-                    background: $rainbowBtnGradient;
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-            }
         }
 
         &-ruby {
