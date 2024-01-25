@@ -1,18 +1,19 @@
 <!doctype html>
 <html lang="ru">
-  <head>
+<head>
   <meta charset="UTF-8">
   <meta name="description" content="Put your description here.">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/main.min.css?_v=20240125173501">
-  <title>Artist NFT</title>
+  <link rel="stylesheet" href="css/one-art.min.css?_v=20240125173501">
+  <title>About art</title>
 </head>
 
-  <body>
-    <div class="wrapper">
-      <header class="header">
+
+<body>
+  <div class="wrapper">
+    <header class="header">
   <div class="burger__backdrop"></div>
 
   <div class="header__container">
@@ -62,7 +63,7 @@
         </div>
 
         <a href="#" class="authorization header__authorization">
-          <button class="btn grey authorization__btn">
+          <button class="authorization__btn btn grey">
             <p>Authorization</p>
           </button>
         </a>
@@ -89,12 +90,12 @@
       </div>
 
       <a href="#" class="authorization header__authorization">
-        <button class="btn grey authorization__btn">
+        <button class="authorization__btn btn grey">
           <p>Authorization</p>
         </button>
       </a>
 
-      <a href="#" class="premium header__premium">
+      <a href="#" class="header__premium premium">
         <button class="premium__btn">
           <p>Premium access</p>
           <svg class="premium__btn-icon">
@@ -111,243 +112,41 @@
     </div>
   </div>
 </header>
-      <main class="page">
-        <div class="background">
-
-    <div class="background__blurs">
-        <picture>
-            <source srcset="images/main/make-art/blurs/blur-mobile.png" media="(max-width:576px)" width="958" height="899" alt="blur">
-            <img src="images/main/make-art/blurs/blur.png" width="758" height="899" alt="blur" class="background__blurs-first">
-        </picture>
-        <picture>
-            <source srcset="images/main/biography/blurs/blur-mobile.png" media="(max-width:576px)" width="958" height="899" alt="blur">
-            <img src="images/main/biography/blurs/blur.png" width="958" height="1199" alt="blur" class="background__blurs-second">
-        </picture>
-        <picture>
-            <source srcset="images/main/get-premium/blurs/blur-mobile.png" media="(max-width:576px)" width="958" height="899" alt="blur">
-            <img src="images/main/get-premium/blurs/blur.png" width="1558" height="1399" alt="blur" class="background__blurs-third">
-        </picture>
-    </div>
-
-    <p class="background__make">MAKE ART</p>
-    <p class="background__not">NOT WAR</p>
-    <svg class="background__ellipse-first">
-        <use href="#elipse"></use>
+    <main class="page">
+      
+      <div class="page__container">
+        <div class="bread-crumbs">
+    <a href="idex.html" class="main">Main page</a>
+    <svg>
+        <use href="#right-arr"></use>
     </svg>
-    <svg class="background__ellipse-second">
-        <use href="#elipse"></use>
+    <a href="art.html" class="art">Art</a>
+    <svg>
+        <use href="#right-arr"></use>
     </svg>
-    
-    <svg class="background__star-first">
-        <use href="#star"></use>
-    </svg>
-    
-    <svg class="background__star-second">
-        <use href="#star"></use>
-    </svg>
-
-    <svg class="background__ellipse-third">
-        <use href="#elipse"></use>
-    </svg>
-    <svg class="background__star-third">
-        <use href="#star"></use>
-    </svg>
-
+    <a class="curent-art" id="product" href="#"></a>
 </div>
- 
-        <div class="page__container"> 
-          <section id="make" class="make">
-    <div class="make__content">
-        <div class="make__left">
-            <div class="social make__left-social">
-                <a class="social__link" href="#">
-                    <svg class="social__link-svg">
-                        <use href="#icon-instagram"/>
-                    </svg>
-                </a>
-
-                <a class="social__link" href="#">
-                    <svg class="social__link-svg">
-                        <use href="#icon-twitter"/>
-                    </svg>
-                </a>
-
-                <a class="social__link" href="#">
-                    <svg class="social__link-svg">
-                        <use href="#icon-telegram"/>
-                    </svg>
-                </a>
-
-                <a class="social__link" href="#">
-                    <svg class="social__link-svg">
-                        <use href="#icon-pinterest"/>
-                    </svg>
-                </a>
-            </div>
-
-            <h1 class="make__left-title">We are here to inspire and share art</h1>
-            <p class="make__left-text">Indulgence announcing uncommonly met she continuing two unpleasing terminated </p>
-
-            <div class="btns make__left-btns">
-                <a href="#" class="btns__premium">
-                    <button class="btn gradient btns__premium-btn">
-                        <svg class="btns__premium-btn-svg">
-                            <use href="#default-crown"/>
-                        </svg>
-                        <p>Premium access</p>
-                    </button>
-                </a>
-                <a href="#" class="btns__discover">
-                    <button class="btn grey btns__discover-btn">
-                        <p>Discover</p>
-                    </button>
-                </a>
-            </div>
-        </div>
-        <div class="make__wrapper">
-
-            <div class="make__right">
-                <picture>
-                    <source srcset="images/main/make-art/make-art-mobile.png" media="(max-width: 768px)">
-                    <img src="images/main/make-art/make-art.png" alt="woman" class="make__right-img">
-                </picture>
-            </div>
-            
-        </div>
-
+        <div class="one-art"></div>
+        <div class="procces">
+    <div class="procces__head">
+        <svg>
+            <use href="#video"></use>
+        </svg>
+        <p class="procces__title">PROCCESS</p>
     </div>
-</section> 
-          <section id="biography" class="biography">
-    <div class="biography__content">
-
-        <div class="biography__text">
-            <h3 id="biography-subtitle" class="biography__text-subtitle"></h3>
-            <h2 id="biography-title" class="biography__text-title"></h2>
+    <div class="procces__about">
+        <div class="procces__about_bg">
+            <picture>
+                <source id="imgWebP" srcset="" type="image/webp">
+                <img id="imgJpg" src="" alt="art" itype="image/jpg">
+            </picture>
         </div>
-
-        <div class="biography__wrapper">
-            <div class="biography__image">
-                <img id="biography-bg" alt="bg" class="biography__image-bg">
-                <img id="biography-img" alt="woman" class="biography__image-img">
-            </div>
-        </div>
-
-        <p id="biography-paragraph" class="biography__paragraph">
-        </p>
-
-        <div class="swiper biography__columns columns-swiper">
-            <div class="swiper-wrapper columns-wrapper">
-                <div class="columns-slide swiper-slide">
-                    <h2 id="biography-column-year-first" class="columns-slide__year"></h2>
-                    <h3 id="biography-column-paragraph-first" class="columns-slide__paragraph"></h3>
-                </div>
-                <div class="columns-slide swiper-slide">
-                    <h2 id="biography-column-year-second" class="columns-slide__year"></h2>
-                    <h3 id="biography-column-paragraph-second" class="columns-slide__paragraph"></h3>
-                </div>
-                <div class="columns-slide swiper-slide">
-                    <h2 id="biography-column-year-third" class="columns-slide__year"></h2>
-                    <h3 id="biography-column-paragraph-third" class="columns-slide__paragraph"></h3>
-                </div>
-            </div>
-        </div>
-        
+        <div class="about"></div>
     </div>
-</section> 
-          <section id="premium" class="premium">
-    <div class="premium__content">
-        <div class="premium__banner">
-            <div class="info premium__banner-info">
-                <svg class="info__svg">
-                    <use href="#default-crown"/>
-                </svg>
-                <h2 id="premium-banner-title" class="info__title"></h2>
-                <p id="premium-banner-paragraph" class="info__paragraph"></p>
-                <button class="btn black info__btn">
-                    <span id="premium-banner-btn-text"></span>
-                </button>
-            </div>
-
-            <div class="premium__banner-ruby">
-                <picture>
-                    <source srcset="images/main/get-premium/ruby-mobile.png" media="(max-width: 1023px)">
-                    <img src="images/main/get-premium/ruby.png" alt="ruby" class="premium__banner-ruby-img">
-                </picture>
-            </div>
-
-            <div class="premium__banner-emerald">
-                <picture>
-                    <source srcset="images/main/get-premium/emerald-mobile.png" media="(max-width: 1023px)">
-                    <img src="images/main/get-premium/emerald.png" alt="emerald" class="premium__banner-emerald-img">
-                </picture>
-            </div>
-
-            <div class="premium__banner-sapphire">
-                <picture>
-                    <source srcset="images/main/get-premium/sapphire-mobile.png" media="(max-width: 1023px)">
-                    <img src="images/main/get-premium/sapphire.png" alt="sapphire" class="premium__banner-sapphire-img">
-                </picture>
-            </div>
-            
-            <div class="premium__banner-circle">
-                <picture>
-                    <img src="images/main/get-premium/circle.svg" alt="circle" class="premium__banner-circle-img">
-                </picture>
-            </div>
-        </div>
-
-        <div class="swiper premium-swiper">
-            <div class="swiper-wrapper premium-wrapper">
-            </div>
-        </div>
-    </div>
-</section> 
-          <section id="contact" class="contact">
-
-    <div class="contact-background">
-        <picture>
-            <source srcset="images/main/contact/sapphire-first-mobile.png" media="(max-width:576px)">
-            <img src="images/main/contact/sapphire-first.png" alt="" class="contact-background__sapphire-first">
-        </picture>
-        <picture>
-            <source srcset="images/main/contact/sapphire-second-mobile.png" media="(max-width:576px)">
-            <img src="images/main/contact/sapphire-second.png" alt="" class="contact-background__sapphire-second">
-        </picture>
-        <picture><source srcset="images/main/contact/sapphire-third.webp" type="image/webp"><img src="images/main/contact/sapphire-third.png" alt="" class="contact-background__sapphire-third"></picture>
-        <picture><source srcset="images/main/contact/cube.webp" type="image/webp"><img src="images/main/contact/cube.png" alt="" class="contact-background__cube"></picture>
-    </div>
-
-    <div class="contact__content">
-       <h3 class="contact__subtitle">CONTACT ME</h3>
-       <h2 class="contact__title">Want to apply your work or an question appeared? </h2>
-       <form class="contact__form form">
-            <div class="form__item">
-                <label for="" class="form__item-label">Name</label>
-                <input type="text" class="form__item-input" placeholder="Your name">
-            </div>
-            <div class="form__item">
-                <label for="" class="form__item-label">Mail</label>
-                <input type="email" class="form__item-input" placeholder="Your mail">
-            </div>
-            <div class="form__item">
-                <label for="" class="form__item-label">Your question</label>
-                <textarea class="form__item-textarea" name="" id="" cols="30" rows="10" placeholder="Your question"></textarea>
-            </div>
-            <a href="#" class="form__send">
-                <button class="btn gradient form__send-btn">
-                    <p>Send message</p>
-                </button>
-            </a>
-            <div class="form__agree">
-                <input type="checkbox" class="form__agree-checkbox">
-                <label class="form__agree-label">I agree with<a href="#">Privacy Policy</a>and<a href="#">Terms of use</a></label>
-            </div>
-       </form>
-    </div>
-</section> 
-        </div>
-      </main>
-      <footer class="footer">
+</div>
+</div>
+    </main>
+    <footer class="footer">
     <div class="footer__container">
         <div class="footer__content">
             <div class="footer__links">
@@ -363,7 +162,7 @@
                     <a class="casual__link" href="#">Terms of use</a>
                 </div>
 
-                <div class="social footer__links-social">
+                <div class="footer__links-social social">
                     <a class="social__link" href="#">
                         <svg class="social__link-svg">
                             <use href="#icon-instagram"/>
@@ -393,8 +192,8 @@
             <span class="footer__reserved">All rights reserved © 2022</span>
         </div>
     </div>
-</footer> 
-      <svg style="width: 0; height: 0; position: absolute;" xmlns="http://www.w3.org/2000/svg">
+</footer>
+    <svg style="width: 0; height: 0; position: absolute;" xmlns="http://www.w3.org/2000/svg">
       <symbol id="icon-logo" viewBox="0 0 161 46" fill="none">
             <path d="M20.6831 11.6895C14.9244 13.6289 15.3855 20.984 15.4131 21.1289C14.2363 14.1456 14.1933 10.4364 18.5445 8.37226C21.7122 6.86949 24.7754 10.3114 20.6831 11.6895Z" fill="url(#paint0_linear_78_3746)"/>
             <path d="M10.0627 13.0171C10.6057 11.5915 11.5654 11.3017 12.4698 11.4625C13.5732 11.6586 13.798 12.9906 13.4602 14.0592C11.993 18.6999 13.993 22.9244 15.5204 24.6699C11.5378 23.4899 8.88263 16.1147 10.0627 13.0171Z" fill="url(#paint1_linear_78_3746)"/>
@@ -539,7 +338,8 @@
             </defs>
       </symbol>
 </svg>
-  </div></body>
-  <script src="js/app.min.js?_v=20240125173501"></script>
-  <script src="js/main.min.js?_v=20240125173501"></script>
+</div></body>
+<script src="js/app.min.js?_v=20240125173501"></script>
+<script src="js/oneArt.min.js?_v=20240125173501"></script>
+
 </html>
