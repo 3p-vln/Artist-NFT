@@ -53,56 +53,6 @@
                 max-width: 440px;
             }
 
-            &__btn {
-                display: flex;
-                padding: 18px 37px 19px 37px;
-                justify-content: center;
-                align-items: center;
-                border-radius: 16px;
-                background: $background;
-                position: relative;
-                overflow: hidden;
-
-                span {
-                    font-family: "ProximaNova";
-                    font-size: clamp(15px, 2.5vw, 18px);
-                    font-weight: 700;
-                    line-height: 26.5px;
-                    background: $rainbowBtnGradient;
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-
-              
-                &::before {
-                    content: "";
-                    background: $hoverBtn;
-                    height: 64px;
-                    width: 50px;
-                    position: absolute;
-                    top: 0px;
-                    left: -95px;
-                    transform: skewX(-45deg);
-                    transition: left .5s ease-in-out; // указать тип анимации
-
-                    @include media-breakpoint-down(xs) {
-                        height: 52px;
-                    }
-                }
-
-                &:hover {
-                    &::before {
-                        left: 130%;
-                      
-                        @include media-breakpoint-down(sm) {
-                            display: none;
-                        }
-                    }
-                }
-
-            }
-
         }
 
         &-ruby {
