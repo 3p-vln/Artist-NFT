@@ -166,10 +166,8 @@
                 margin-top: 20px;
                 display: flex;
                 gap: 12px;
-
-                @include media-breakpoint-down(md) {
-                    flex-wrap: wrap;
-                }
+                width: 257px;
+                justify-content: center;
             }
         }
 

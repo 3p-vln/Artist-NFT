@@ -17,7 +17,7 @@
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: auto;
         margin-bottom: 35px;
-        aspect-ratio: 1/10.5766;
+        aspect-ratio: 1/6.5766;
     }
 
     .card {
@@ -154,10 +154,8 @@
                 margin-top: 20px;
                 display: flex;
                 gap: 12px;
-
-                @include media-breakpoint-down(md) {
-                    flex-wrap: wrap;
-                }
+                width: 257px;
+                justify-content: center;
             }
         }
 
