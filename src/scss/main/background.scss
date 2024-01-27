@@ -36,6 +36,31 @@
                 left: 0%;
             }
         }
+
+        &-third {
+            position: absolute;
+            top: 1564px;
+            left: 0%;
+            max-width: 100%;
+            vertical-align: top;
+            overflow: clip;
+            z-index: -1;
+
+            @include media-breakpoint-down(md) {
+                top: 2700px;
+                left: 0%;
+            }
+
+            @include media-breakpoint-down(sm) {
+                top: 2200px;
+                left: 0%;
+            }
+
+            @include media-breakpoint-down(xs) {
+                top: 1900px;
+                left: 0%;
+            }
+        }
     }
 
     &__not,
