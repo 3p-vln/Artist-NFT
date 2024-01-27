@@ -1,6 +1,7 @@
 .procces {
     margin-bottom: 30px;
-    padding: 0 80px 0 15px;
+    padding: 0 0 0 15px;
+    max-width: 1060px;
 
     @include media-breakpoint-down(md) {
         padding: 0;
@@ -43,7 +44,7 @@
         border-radius: 12px;
         overflow: hidden;
         position: relative;
-        aspect-ratio: 1.79/1;
+        aspect-ratio: 1.77/1;
 
         &_bg {
             width: 100%;
