@@ -8,8 +8,7 @@
     margin-bottom: 75px;
 
     @include media-breakpoint-down(md) {
-        grid-template-columns: repeat(auto-fit, minmax(263px, 1fr));        
-        grid-template-rows: auto;
+        grid-template-columns: repeat(auto-fit, minmax(226px, 1fr));        
         padding: 0;
     }
 
