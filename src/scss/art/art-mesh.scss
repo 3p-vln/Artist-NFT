@@ -169,11 +169,18 @@
         &.lock {
             display: block;
 
+            &.active{
+                .card__picture {
+                    filter: blur(11px);
+                }
+
+            }
+
             .card {
                 &__info {
                     display: flex;
                     background: rgba(29, 31, 33, 0.8);
-                    backdrop-filter: blur(11px);
+                    // backdrop-filter: blur(11px);
                     padding: 0 5px;
                 }
 
