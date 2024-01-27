@@ -34,7 +34,7 @@
             }
         }
 
-        &.undefined {
+        &.lock {
             .card__info_unlock {
                 display: none;
             }
@@ -166,7 +166,7 @@
             }
         }
 
-        &.undefined {
+        &.lock {
             display: block;
 
             .card {
