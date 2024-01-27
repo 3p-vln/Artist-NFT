@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', { 'title': 'About art', 'srcStyle': 'one-art' })
+
+<body>
+  @@include('html/preloader.html')
+  <div class="wrapper">
+    @@include('html/header.html')
+    <main class="page">
+      <!-- @@include('html/custom/background.html') -->
+      <div class="page__container">
+        @@include('html/oneArt/bread-crumbs.html')
+        <div class="one-art"></div>
+        @@include('html/oneArt/procces.html')
+        @@include('html/main/contact.html') 
+    </main>
+    @@include('html/footer.html')
+    @@include('html/Sprite.html')
+</body>
+<script src="js/app.min.js"></script>
+<script src="js/oneArt.min.js"></script>
+
+</html>

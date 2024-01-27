@@ -1,0 +1,16 @@
+@import 'style';
+@import 'oneArt/bread-crumbs';
+@import 'oneArt/one-art';
+@import 'oneArt/procces';
+@import 'main/contact';
+
+.page {
+    position: relative;
+
+    &__container {
+        position: relative;
+        z-index: 2;
+        margin-top: 96px;
+    }
+}
+

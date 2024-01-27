@@ -12,7 +12,7 @@ async function snap() {
 snap();
 
 function focus() {
-    $('.art-mesh').on('click', '.card', (event) => {
+    $('.art-mesh').on('click mouseenter', '.card', (event) => {
         $('.active').removeClass('active');
         const clickedElement = $(event.currentTarget);
         clickedElement.addClass('active');
