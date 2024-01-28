@@ -4,12 +4,12 @@ export function artLoad(info, id) {
     let classInfo = " ";
     if (info.lock == false) {
         classInfo = "unlock";
-    } else if (info.lock == true) {
+    } else {
         classInfo = "lock";
+        console.log(classInfo)
     }
     const arts = $('.art-mesh');
     if (info.lock == false) {
-        classInfo = 'unlock';
         arts.append(`
                     <div class="card ${id} ${classInfo}">
                         <div class="card__picture">
@@ -40,7 +40,7 @@ export function artLoad(info, id) {
                 `);
     } else if (info.lock == true) {
         arts.append(`
-                    <div class="card ${id} ${this.classInfo}">
+                    <div class="card ${id} ${classInfo}">
                         <div class="card__picture">
                             <picture>
                                 <source srcset="${info.imgWebP}" type="image/webp">

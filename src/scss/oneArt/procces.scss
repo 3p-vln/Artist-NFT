@@ -46,33 +46,140 @@
         position: relative;
         aspect-ratio: 1.77/1;
 
-        &_bg {
-            width: 100%;
-            height: 100%;
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-
         .about {
             width: 100%;
             height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+
+            &__bg {
+                width: 100%;
+                height: 100%;
+
+                &_blur {
+                    filter: blur(11px);
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &__unlock {
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                .play {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 64px;
+                    height: 64px;
+
+                    @include media-breakpoint-down(xs){
+                        width: 39px;
+                        height: 39px;
+                    }
+                }
+            }
+
+            &__info {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                bottom: 0;
+                border-radius: 12px;
+                width: 100%;
+                padding: 0px 16px 12px 16px;
+
+                @include media-breakpoint-down(xs){
+                    padding: 0px 11px 9px 11px;
+                }
+
+                .info {
+                    border-radius: 12px;
+                    width: 100%;
+                    padding: 8px 20px 8px 10px;
+                    background: rgba(29, 31, 33, 0.80);
+                    backdrop-filter: blur(13.5px);
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    @include media-breakpoint-down(xs){
+                        padding: 6px 20px 6px 10px;
+                    }
+                }
+
+                .auth {
+                    display: flex;
+                    align-items: center;
+                    gap: 14px;
+
+                    &__name {
+                        color: $whiteTwo;
+                        font-size: 15px;
+                        font-weight: 700;
+                        line-height: 26.5px;
+                    }
+                }
+            }
+
+            &__premium {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                svg {
+                    width: 18px;
+                    height: 18px;
+                }
+
+                .premium {
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 26.5px;
+                    letter-spacing: 1.4px;
+                    background: linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+
+                @include media-breakpoint-down(xs){
+                    display: none;
+                }
+            }
+
+            &__date {
+                color: $whiteTwo;
+                opacity: 0.5;
+                font-size: clamp(12px, 2.5vw, 15px);
+                font-weight: 400;
+                line-height: 24px;
+            }
 
             &__lock {
                 height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
                 background: rgba(29, 31, 33, 0.8);
-                backdrop-filter: blur(11px);
                 font-weight: 700;
+                z-index: 5;
             }
 
             &__access {
