@@ -18,7 +18,11 @@ async function getArts() {
             price: doc.data().price,
             lock: doc.data().lock,
             sub: doc.data().sub,
-            close: doc.data().close
+            close: doc.data().close,
+            authName: doc.data().authName,
+            authImg: doc.data().authImg,
+            authImgWebP: doc.data().autnImgWebP,
+            date: doc.data().date,
         });
     });
 
@@ -104,25 +108,32 @@ async function getArts() {
                 </picture>
             </div>
             <div class="about__unlock">
-                <p class="about__access">${art[0].sub}</p>
-                <div class="about__content">
-                    <svg>
-                        <use href="#locked-content"></use>
-                    </svg>
-                    <p>${art[0].close}</p>
-                </div>
-                <div class="btns">
-                    <a href="#" class="btn black">
-                        <span>Unlock</span>
-                        <svg>
-                            <use href="#btn-arr"></use>
-                        </svg>
-                    </a>
+                <svg class="play">
+                    <use href="#play"></use>
+                </svg>
+                <div class="about__info">
+                    <div class="info">
+                        <div class="auth">
+                            <div class="auth__img">
+                                <picture>
+                                    <source srcset="${art[0].authImgWebP}" type="image/webp">
+                                    <img src="${art[0].authImg}" alt="art" itype="image/png">
+                                </picture>
+                            </div>
+                            <p class="auth__name">${art[0].authName}</p>
+                        </div>
+                        <div class="about__premium">
+                            <svg>
+                                <use href="#gradient-crown"></use>
+                            </svg>
+                            <p class="premium">premium content</p>
+                        </div>
+                        <p class="about__date">${art[0].date}</p>
+                    </div>
                 </div>
             </div>
         `)
     }
-
 }
 
 getArts();
