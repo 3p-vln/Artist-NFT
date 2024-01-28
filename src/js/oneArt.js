@@ -65,29 +65,61 @@ async function getArts() {
         </div>
         </div>
     `);
-    document.querySelector('#imgWebP').srcset = art[0].imgWebP;
-    document.querySelector('#imgJpg').src = art[0].img;
+    // document.querySelector('#imgWebP').srcset = art[0].imgWebP;
+    // document.querySelector('#imgJpg').src = art[0].img;
 
     const info = $('.about');
     if (art[0].lock == true) {
         info.append(`
-        <div class="about__lock">
-            <p class="about__access">${art[0].sub}</p>
-            <div class="about__content">
-                <svg>
-                    <use href="#locked-content"></use>
-                </svg>
-                <p>${art[0].close}</p>
+            <div class="about__bg about__bg_blur">
+                <picture>
+                    <source srcset="${art[0].imgWebP}" type="image/webp">
+                    <img src="${art[0].img}" alt="art" itype="image/jpg">
+                </picture>
             </div>
-            <div class="btns">
-                <a href="#" class="btn black">
-                    <span>Unlock</span>
+            <div class="about__lock">
+                <p class="about__access">${art[0].sub}</p>
+                <div class="about__content">
                     <svg>
-                        <use href="#btn-arr"></use>
+                        <use href="#locked-content"></use>
                     </svg>
-                </a>
+                    <p>${art[0].close}</p>
+                </div>
+                <div class="btns">
+                    <a href="#" class="btn black">
+                        <span>Unlock</span>
+                        <svg>
+                            <use href="#btn-arr"></use>
+                        </svg>
+                    </a>
+                </div>
             </div>
-        </div>
+        `)
+    } else if (art[0].lock == false) {
+        info.append(`
+            <div class="about__bg">
+                <picture>
+                    <source srcset="${art[0].imgWebP}" type="image/webp">
+                    <img src="${art[0].img}" alt="art" itype="image/jpg">
+                </picture>
+            </div>
+            <div class="about__unlock">
+                <p class="about__access">${art[0].sub}</p>
+                <div class="about__content">
+                    <svg>
+                        <use href="#locked-content"></use>
+                    </svg>
+                    <p>${art[0].close}</p>
+                </div>
+                <div class="btns">
+                    <a href="#" class="btn black">
+                        <span>Unlock</span>
+                        <svg>
+                            <use href="#btn-arr"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
         `)
     }
 

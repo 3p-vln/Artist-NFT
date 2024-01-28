@@ -46,18 +46,6 @@
         position: relative;
         aspect-ratio: 1.77/1;
 
-        &_bg {
-            width: 100%;
-            height: 100%;
-            filter: blur(11px);
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-
         .about {
             width: 100%;
             height: 100%;
@@ -65,14 +53,34 @@
             top: 0;
             left: 0;
 
+            &__bg {
+                width: 100%;
+                height: 100%;
+
+                &_blur{
+                    filter: blur(11px);
+                }
+    
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
             &__lock {
                 height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
                 background: rgba(29, 31, 33, 0.8);
                 font-weight: 700;
+                z-index: 5;
             }
 
             &__access {
