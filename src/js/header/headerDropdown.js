@@ -14,7 +14,7 @@ dropdowns.forEach(dropdown => {
     });
 
     options.forEach(option => {
-        option.addEventListener('click', () {
+        option.addEventListener('click', () => {
             selected.innerText = option.innerText;
             select.classList.remove('select-clicked');
             svg.classList.remove('svg-rotate');

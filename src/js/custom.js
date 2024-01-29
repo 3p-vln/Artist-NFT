@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import { db } from './modules/firebase';
 import { collection, getDocs } from 'firebase/firestore';
-import { customLoad } from './modules/customLoad';
+import { customLoad } from './custom/customLoad';
 
 async function snap() {
   const querySnapshot = await getDocs(collection(db, "art"));

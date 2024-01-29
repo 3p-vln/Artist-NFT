@@ -68,7 +68,6 @@
     "gulp-webp-html-nosvg": "^1.0.1",
     "gulp-webpcss": "^1.1.1",
     "gulp-zip": "^5.1.0",
-    "postcss-preset-env": "^8.5.0",
     "prettier": "2.8.8",
     "sass": "*1.62.1",
     "vinyl-ftp": "^0.6.1",
@@ -87,6 +86,6 @@
     "sass-loader": "^13.3.2",
     "scroll-lock": "^2.1.5",
     "style-loader": "^3.3.3",
-    "swiper": "^8.4.7"
+    "swiper": "^11.0.5"
   }
 }
