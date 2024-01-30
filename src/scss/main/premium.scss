@@ -211,8 +211,9 @@
     }
 
     &-wrapper {
-        max-width: 100%;
+        width: 100%;
         display: flex;
+        align-items: start;
         // justify-content: center;
     }
 
@@ -226,7 +227,9 @@
         border-radius: 12px;
         background: $backgroundSecond;
         transition: transform 0.3s ease-in-out;
-        width: 100%;
+        // width: 100%;
+        width: 437.5px;
+        // width: 350px;
         // max-width: 350px;
         height: 600px;
 
