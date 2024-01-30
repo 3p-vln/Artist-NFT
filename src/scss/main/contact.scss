@@ -77,7 +77,7 @@
 
         @include media-breakpoint-down(xs) {
             padding-top: 0px;
-            padding-bottom: 32px;
+            padding-bottom: 42px;
             align-items: start;
             transform: translateY(-3px);
         }
@@ -132,6 +132,35 @@
             flex-direction: column;
             padding-top: 15px;
             gap: 7px;
+            position: relative;
+
+            .just-validate-error-label {
+                position: absolute;
+                top: 10px;
+                right: 50%;
+                transform: translateX(50%);
+                padding: 8px;
+                font-size: 14px;
+                font-weight: 700;
+                border-radius: 7px;
+                text-wrap: nowrap;
+                background: $rainbowBtnGradient;
+                z-index: 3;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 28px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: $rainbowBtnGradient;
+                    height: 10px;
+                    width: 10px;
+                    clip-path: polygon(0 0, 53% 100%, 100% 0);
+                    z-index: 3;
+
+                }
+            }
 
             &-label {
                 color: $gray6Color;
@@ -208,25 +237,54 @@
             align-items: center;
             padding-top: 18px;
             gap: 10px;
+            position: relative;
 
             @include media-breakpoint-down(xs) {
                 padding-top: 15px;
             }
 
             &-checkbox {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+                clip: rect(0 0 0 0);
+                padding-left: 20px;
+                // transform: translateY(5px) translateX(-6px);
+            }
+
+            &-checkstyle {
+                position: absolute;
+                top: 0;
+                left: 0%;
                 width: 20px;
                 height: 20px;
                 border-radius: 7px;
                 border: 1px solid var(--stroke, #525960);
-                background: $background;
+
+            }
+
+            &-checkbox:checked + .form__agree-checkstyle::before {
+                content: '';
+                width: 14px;
+                height: 14px;
+                background: $rainbowBtnGradient;
+                position: absolute;
+                border-radius: 5px;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
             }
 
             &-label {
+                cursor: pointer;
                 color: $gray6Color;
                 font-family: "ProximaNova";
                 font-size: 14px;
                 font-weight: 400;
                 line-height: 21px;
+                padding-left: 30px;
+                transform: translateY(1px);
 
                 a {
                     padding: 0 8px;
@@ -234,6 +292,32 @@
                     font-size: 14px;
                     font-weight: 600;
                     text-decoration-line: underline;
+                }
+            }
+
+            .just-validate-error-label {
+                position: absolute;
+                bottom: -40px;
+                left: 0;
+                padding: 8px;
+                font-size: 14px;
+                font-weight: 700;
+                border-radius: 7px;
+                text-wrap: nowrap;
+                background: $rainbowBtnGradient;
+                z-index: 3;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: -9px;
+                    left: 4%;
+                    background: rgb(104, 201, 255);
+                    height: 10px;
+                    width: 10px;
+                    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+                    z-index: 3;
+
                 }
             }
         }
