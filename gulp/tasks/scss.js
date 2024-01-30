@@ -5,9 +5,6 @@ import rename from 'gulp-rename';
 import cleanCss from 'gulp-clean-css'; // Сжатие CSS файла
 import webpCss from 'gulp-webpcss'; // Вывод WEBP изображений
 import groupMediaQueries from 'gulp-group-css-media-queries'; // Группировка медиа запросов
-import autoprefixer from 'autoprefixer';
-import postcss from 'gulp-postcss';
-import postcssPresetEnv from 'postcss-preset-env';
 
 import { filePaths } from '../config/paths.js';
 import { plugins } from '../config/plugins.js';
@@ -33,7 +30,6 @@ const scss = () => {
       .pipe(plugins.if(isBuild, groupMediaQueries()))
 
       .pipe(plugins.if(isBuild, webpCss(webpConfig)))
-      .pipe(plugins.if(isBuild, postcss([autoprefixer(), postcssPresetEnv()])))
 
       /** Раскомментировать если нужен не сжатый дубль файла стилей */
       // .pipe(gulp.dest(filePaths.build.css))

@@ -1,4 +1,4 @@
-import {db} from './modules/firebase';
+import {db} from '../modules/firebase';
 import {collection, getDocs} from 'firebase/firestore';
 
 const wrapper =  document.querySelector('wrapper');

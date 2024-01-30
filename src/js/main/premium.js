@@ -1,7 +1,7 @@
 import $ from 'jquery';
-import {db} from './modules/firebase';
+import {db} from '../modules/firebase';
 import {collection, getDocs} from 'firebase/firestore';
-import { premiumLoad } from './modules/premiumLoad';
+import { premiumLoad } from './premiumLoad';
 
 const wrapper =  document.querySelector('wrapper');
 
