@@ -12,7 +12,7 @@
       <ul class="menu__list">
         <li class="menu__item"><a href="index.html">Main page</a></li>
 
-        <li class="menu__item"><a href="#"><span class="menu__item-lock">
+        <li class="menu__item"><a href="nft.html"><span class="menu__item-lock">
               <svg class="menu__item-lock-svg">
                 <use href="#header-lock"></use>
               </svg>
@@ -30,37 +30,24 @@
       </ul>
 
       <div class="menu__buttons">
-        <!-- <div class="header__dropdown dropdown">
-          <div class="select">
-            <span class="selected">1</span>
-            <svg class="svg">
-              <use href="#header-arrow"></use>
-            </svg>
-          </div>
-          <ul class="menu">
-            <li class="active">1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-          </ul>
-        </div> -->
-
-        <div class="header__dropdown dropdown">       
-          <button class="dropdown__btn">
-            <span class="dropdown__btn-text">ENG</span>
-            <span class="dropdown__btn-arrow">
-              <svg class="dropdown__btn-arrow-svg">
+  
+        <div class="header__dropdown select__content">
+          <a class="select__btn">
+            <p class="select__btn_p select__btn_p--active">ENG</p>
+            <div class="select__btn_after">
+              <svg>
                 <use href="#header-arrow"></use>
               </svg>
-            </span>
-          </button>
-
-          <div class="dropdown-content">
-            <a href="#">ENG</a>
-            <a href="#">UA</a>
-            <a href="#">FR</a>
-          </div>
+            </div>
+          </a>
+          <ul class="select__list">
+            <li class="select__list-item">ENG</li>
+            <li class="select__list-item">UA</li>
+            <li class="select__list-item">FR</li>
+            <li class="select__list-item">POL</li>
+            <li class="select__list-item">SPA</li>
+          </ul>
+          <input type="text" name="select-category" value="" class="select__input-hidden">
         </div>
 
         <a href="#" class="header__authorization authorization">
@@ -73,42 +60,23 @@
 
     <div class="header__btn-wrapper">
 
-      <!-- <div class="header__dropdown dropdown">
-        <div class="select">
-          <span class="selected">1</span>
-          <svg class="svg">
-            <use href="#header-arrow"></use>
-          </svg>
-        </div>
-        <ul class="menu">
-          <li class="active">1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-        </ul>
-      </div> -->
-
-      <div class="header__dropdown dropdown">
-        <button class="dropdown__btn">
-          <span class="dropdown__btn-text">ENG</span>
-          <span class="dropdown__btn-arrow">
-            <svg class="dropdown__btn-arrow-svg">
+      <div class="header__dropdown select__content">
+        <a class="select__btn">
+          <p class="select__btn_p select__btn_p--active">ENG</p>
+          <div class="select__btn_after">
+            <svg>
               <use href="#header-arrow"></use>
             </svg>
-          </span>
-        </button>
-
-        <div class="dropdown-content">
-          <a href="#">ENG</a>
-          <a href="#">UA</a>
-          <a href="#">FR</a>
-        </div>
-        <!-- <ul class="dropdown-content">
-        <li><a href="#">ENG</a></li>
-        <li><a href="#">UA</a></li>
-        <li><a href="#">FR</a></li>
-      </ul> -->
+          </div>
+        </a>
+        <ul class="select__list">
+          <li class="select__list-item">ENG</li>
+          <li class="select__list-item">UA</li>
+          <li class="select__list-item">FR</li>
+          <li class="select__list-item">POL</li>
+          <li class="select__list-item">SPA</li>
+        </ul>
+        <input type="text" name="select-category" value="" class="select__input-hidden">
       </div>
 
       <a href="#" class="header__authorization authorization">
@@ -133,5 +101,4 @@
       </button>
     </div>
   </div>
-  <!-- <script src="js/headerDropdowm.js"></script> -->
 </header>

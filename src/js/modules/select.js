@@ -8,7 +8,8 @@ document.querySelectorAll('.select__content').forEach(function (dropDownWrapper)
 
     dropDownBtn.addEventListener('click', function (e) {
         dropDownList.classList.toggle('select__list--visible');
-        dropDownAfter.classList.toggle('select__btn_after--active')
+        dropDownAfter.classList.toggle('select__btn_after--active');
+        dropDownBtn.classList.toggle('select__btn-clicked');
         this.classList.add('select__button--active');
     });
 
@@ -17,6 +18,7 @@ document.querySelectorAll('.select__content').forEach(function (dropDownWrapper)
             e.stopPropagation();
             dropDownTitle.innerText = this.innerText;
             dropDownBtn.focus();
+            dropDownBtn.classList.toggle('select__btn-clicked');
             dropDownInput.value = this.dataset.value;
             dropDownAfter.classList.remove('select__btn_after--active');
             dropDownList.classList.remove('select__list--visible');

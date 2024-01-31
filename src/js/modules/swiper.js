@@ -25,54 +25,60 @@ biographySwiper();
 
 function premiumSwiper() {
 
-  new Swiper('.premium-swiper', {
-    slidesPerView: 1.3,
-    spaceBetween: 16,
-    centeredSlides: false,
-    loop: true,
-    breakpoints: {
-      420: {
-        slidesPerView: 2.3,
-        centeredSlides: true,
-        loop: true,
-      },
-      940: {
-        slidesPerView: 3,
-        centeredSlides: true,
-        loop: true,
-      },
-      1024: {
-        slidesPerView: 3.3,
-        spaceBetween: 20,
-        centeredSlides: true,
-        loop: true,
-      },
-      1240: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-        centeredSlides: true,
-        loop: true,
-      },
-      1441: {
-        slidesPerView: 4.5,
-        spaceBetween: 30,
-        centeredSlides: true,
-        loop: true,
-      },
-      1550: {
-        slidesPerView: 5,
-        spaceBetween: 30,
-        centeredSlides: true,
-        loop: true,
-      },
-    },
-  });
-}
+  // new Swiper('.premium-swiper', {
+  //   slidesPerView: 1.3,
+  //   spaceBetween: 16,
+  //   centeredSlides: false,
+  //   loop: true,
+  //   breakpoints: {
+  //     420: {
+  //       slidesPerView: 2.3,
+  //       centeredSlides: true,
+  //       loop: true,
+  //     },
+  //     940: {
+  //       slidesPerView: 3,
+  //       centeredSlides: true,
+  //       loop: true,
+  //     },
+  //     1024: {
+  //       slidesPerView: 3.3,
+  //       spaceBetween: 20,
+  //       centeredSlides: true,
+  //       loop: true,
+  //     },
+  //     1240: {
+  //       slidesPerView: 4,
+  //       spaceBetween: 20,
+  //       centeredSlides: true,
+  //       loop: true,
+  //     },
+  //     1441: {
+  //       slidesPerView: 4.5,
+  //       spaceBetween: 30,
+  //       centeredSlides: true,
+  //       loop: true,
+  //     },
+  //     1550: {
+  //       slidesPerView: 5,
+  //       spaceBetween: 30,
+  //       centeredSlides: true,
+  //       loop: true,
+  //     },
+  //   },
+  // });
 
-  // let swiper = new Swiper('.premium-swiper', {
+  // new Swiper('.premium-swiper', {
   //   loop: true,
   //   centeredSlides: true,
   //   updateOnWindowResize: true,
+
+  //   on: {
+  //     init: function () {
+  //       console.log('swiper initialized');
+  //     },
+  //   },
+
   //   breakpoints: {
   //     375: {
   //       slidesPerView: 1.15,
@@ -95,7 +101,7 @@ function premiumSwiper() {
   //       loop: true,
   //     },
   //     // 1440: {
-  //     //   slidesPerView: 3,
+  //     //   slidesPerView: 4,
   //     //   spaceBetween: 30,
   //     //   loop: true,
   //     // },
@@ -106,4 +112,7 @@ function premiumSwiper() {
   //     // },
   //   }
   // });
+}
 premiumSwiper();
+
+

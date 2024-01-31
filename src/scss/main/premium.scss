@@ -213,8 +213,9 @@
     &-wrapper {
         width: 100%;
         display: flex;
+        transform: translate3d(0px, 0px, 0px, 0px);
         align-items: start;
-        // justify-content: center;
+        justify-content: start;
     }
 
     // .swiper-slide {

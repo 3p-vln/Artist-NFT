@@ -3,6 +3,9 @@ import {db} from '../modules/firebase';
 import {collection, getDocs} from 'firebase/firestore';
 import { premiumLoad } from './premiumLoad';
 
+import Swiper from 'swiper';
+import { Navigation, Pagination, Autoplay, Scrollbar } from 'swiper/modules';
+
 const wrapper =  document.querySelector('wrapper');
 
 async function snap() {
@@ -10,7 +13,56 @@ async function snap() {
     querySnapshot.forEach((doc) => {
         new premiumLoad(doc.data(), doc.id);
     });
-    // console.log(querySnapshot);
+    console.log(querySnapshot);
+
+    new Swiper('.premium-swiper', {
+        loop: true,
+        // centeredSlides: true,
+        updateOnWindowResize: true,
+    
+        on: {
+          init: function () {
+            console.log('swiper initialized');
+          },
+        },
+    
+        breakpoints: {
+            420: {
+                      slidesPerView: 2.3,
+                      centeredSlides: true,
+                      loop: true,
+                    },
+                    940: {
+                      slidesPerView: 3,
+                      centeredSlides: true,
+                      loop: true,
+                    },
+                    1024: {
+                      slidesPerView: 3.3,
+                      spaceBetween: 20,
+                      centeredSlides: true,
+                      loop: true,
+                    },
+                    1240: {
+                      slidesPerView: 4,
+                      spaceBetween: 20,
+                      centeredSlides: true,
+                      loop: true,
+                    },
+                    1441: {
+                      slidesPerView: 4.5,
+                      spaceBetween: 30,
+                      centeredSlides: true,
+                      loop: true,
+                    },
+                    1550: {
+                      slidesPerView: 5,
+                      spaceBetween: 30,
+                      centeredSlides: true,
+                      loop: true,
+                    },
+        }
+      });
 }
 snap();
 
@@ -23,13 +75,6 @@ snap();
         document.querySelector('#premium-banner-title').innerHTML = data.bannerTitle;
         document.querySelector('#premium-banner-paragraph').innerHTML = data.bannerParagraph;
         document.querySelector('#premium-banner-btn-text').innerHTML = data.bannerBtnText;
-
-        // document.querySelector('#premium-card-nft-text').innerHTML = data.cardNftText;
-        // document.querySelector('#premium-card-title').innerHTML = data.cardTitle;
-        // document.querySelector('#premium-card-paragraph').innerHTML = data.cardParagraph;
-        // document.querySelector('#premium-card-value').innerHTML = data.cardValue;
-        // document.querySelector('#premium-card-btn-text').innerHTML = data.cardBtnText;
-        // document.querySelector('#premium-card-img-first').src = data.cardImgFirst;
     })
     // console.log(querySnapshot);
 })();
