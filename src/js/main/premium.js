@@ -13,18 +13,18 @@ async function snap() {
     querySnapshot.forEach((doc) => {
         new premiumLoad(doc.data(), doc.id);
     });
-    console.log(querySnapshot);
+    // console.log(querySnapshot);
 
     new Swiper('.premium-swiper', {
         loop: true,
         // centeredSlides: true,
         updateOnWindowResize: true,
     
-        on: {
-          init: function () {
-            console.log('swiper initialized');
-          },
-        },
+        // on: {
+        //   init: function () {
+        //     console.log('swiper initialized');
+        //   },
+        // },
     
         breakpoints: {
             420: {
