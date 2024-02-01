@@ -7,6 +7,12 @@
         display: none;
     }
 
+    &__btn-clicked {
+        border: 2px #26489a solid;
+        box-shadow: 0 0 0.8em #26489a;
+        transition: box-shadow 0.5 ease-in-out;
+    }
+
     &__btn {
         width: 100%;
         color: $whiteTwo;
@@ -21,7 +27,8 @@
         font-weight: 600;
         line-height: 21px;
         cursor: pointer;
-
+        transition: all 0.5 ease-in-out;
+        
         &_p {
             margin: 0;
             display: none;
@@ -36,6 +43,7 @@
             pointer-events: none;
             width: 24px;
             height: 24px;
+            transition: transform 0.3s ease-in-out;
 
             svg {
                 width: 100%;

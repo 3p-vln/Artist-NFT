@@ -1,49 +1,6 @@
-<div class="background">
+"use strict"
 
-    <div class="background__blurs">
-        <picture>
-            <source srcset="images/main/make-art/blurs/blur-mobile.png" media="(max-width:576px)" width="958" height="899" alt="blur">
-            <img src="images/main/make-art/blurs/blur.png" width="758" height="899" alt="blur"
-                class="background__blurs-first">
-        </picture>
-        <picture>
-            <source srcset="images/main/biography/blurs/blur-mobile.png" media="(max-width:576px)" width="958" height="899" alt="blur">
-            <img src="images/main/biography/blurs/blur.png" width="958" height="1199" alt="blur"
-                class="background__blurs-second">
-        </picture>
-        <picture>
-            <source srcset="images/main/get-premium/blurs/blur-mobile.png" media="(max-width:576px)" width="958" height="899" alt="blur">
-            <img src="images/main/get-premium/blurs/blur.png" width="1558" height="1399" alt="blur"
-                class="background__blurs-third">
-        </picture>
-    </div>
-
-    <p class="background__make">MAKE ART</p>
-    <p class="background__not">NOT WAR</p>
-    <svg class="background__ellipse-first">
-        <use href="#elipse"></use>
-    </svg>
-    <svg class="background__ellipse-second">
-        <use href="#elipse"></use>
-    </svg>
-    
-    <svg class="background__star-first">
-        <use href="#star"></use>
-    </svg>
-    
-    <svg class="background__star-second">
-        <use href="#star"></use>
-    </svg>
-
-    <svg class="background__ellipse-third">
-        <use href="#elipse"></use>
-    </svg>
-    <svg class="background__star-third">
-        <use href="#star"></use>
-    </svg>
-
-    <!-- <script src="/src/js/modules/paralax.js">
-        window.onload = function () {
+window.onload = function () {
     const paralax = document.querySelector('.background');
 
     if (paralax) {
@@ -69,7 +26,7 @@
             positionX = positionX + (distX * speed);
             positionY = positionY + (distY * speed);
 
-            ellipseFirst.background.cssText = 'transform: translate(${positionX / forEllipse}%,${positionY / forEllipse}%);';
+            ellipseFirst.style.cssText = 'transform: translate(${positionX / forEllipse}%,${positionY / forEllipse}%);';
             ellipseSecond.style.cssText = 'transform: translate(${positionX / forEllipse}%,${positionY / forEllipse}%);';
             ellipseThird.style.cssText = 'transform: translate(${positionX / forEllipse}%,${positionY / forEllipse}%);';
             starFirst.style.cssText = 'transform: translate(${positionX / forStar}%,${positionY / forStar}%);';
@@ -92,5 +49,3 @@
         });
     }
 }
-    </script> -->
-</div>
