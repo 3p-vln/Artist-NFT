@@ -13,7 +13,12 @@ function burger() {
             burgerBackdrop.classList.toggle('burger__backdrop_active');
             headerMenu.classList.toggle('header__menu_active');
             buttonAuthorization.classList.toggle('authorization_active');
-            // disablePageScroll($scrollableElement);  
+           
+            if (headerBurger.classList.contains('header__burger_active')) {
+                disablePageScroll($scrollableElement);
+            } else {
+                enablePageScroll($scrollableElement);
+            } 
         });
         
         burgerBackdrop.addEventListener('click', () => {
@@ -21,14 +26,14 @@ function burger() {
             burgerBackdrop.classList.toggle('burger__backdrop_active');
             headerMenu.classList.toggle('header__menu_active');
             buttonAuthorization.classList.toggle('authorization_active');
-            // disablePageScroll($scrollableElement); 
+
+            if (headerBurger.classList.contains('header__burger_active')) {
+                disablePageScroll($scrollableElement);
+            } else {
+                enablePageScroll($scrollableElement);
+            } 
         });
-        
     } 
-    // else {
-    //     enablePageScroll($scrollableElement);   
-    // }
-    
 }
 
 burger();

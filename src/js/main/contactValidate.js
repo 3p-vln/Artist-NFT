@@ -1,39 +1,13 @@
 import JustValidate from 'just-validate';
 
-// document.querySelectorAll(".form__send-btn")
-// .forEach(function (elem) {
-//   elem.onclick = function (e) {
-//     document.elem.reset();
-//     // let selector = this.dataset.clearSelector;
-//     // document.querySelectorAll(selector)
-//     // .forEach(function (item) {
-//     //   item.value = "";
-//     // });
-//   };
-// });
-
-// $(".form__send-btn").click(function() {
-
-//     $("form")[0].reset();
-
-// });
-
-// const form = document.getElementById("myForm");
-
-// form.addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     e.target.reset(); // очищаем форму
-//   })
-
-
 function validate() {
-    
-    const validate = new JustValidate('#form',{
+    const form = document.querySelector('#form');
+    const validate = new JustValidate('#form', {
         errorLabelStyle: {
             color: '#1D1F21'
         }
     });
-    
+
     validate.addField("#name", [
         {
             rule: 'required',
@@ -82,14 +56,15 @@ function validate() {
             rule: 'required',
             errorMessage: 'Accept the user agreement'
         },
-    ])  
+    ]);
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the default form submission
+        if (validate.validate()) {
+            // Если валидация успешна, сбросить значения полей
+            form.reset();
+        }
+    });
 }
 
 validate();
-
-
-
-
-
-
-
