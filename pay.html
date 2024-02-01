@@ -1,24 +1,25 @@
 <!doctype html>
 <html lang="eng">
-  <head>
+<head>
   <meta charset="UTF-8">
   <meta name="description" content="Put your description here.">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/main.min.css?_v=20240201145759">
-  <title>Artist NFT</title>
+  <link rel="stylesheet" href="css/pay.min.css?_v=20240201145759">
+  <title>PURCHASE</title>
 </head>
 
-  <body>
-    <div class="preloader">
+
+<body>
+  <div class="preloader">
     <div class="preloader__row">
         <div class="preloader__item"></div>
         <div class="preloader__item"></div>
     </div>
 </div>
-    <div class="wrapper">
-      <header class="header">
+  <div class="wrapper">
+    <header class="header">
   <div class="burger__backdrop"></div>
 
   <div class="header__container">
@@ -71,7 +72,7 @@
         </div>
 
         <a href="#" class="authorization header__authorization">
-          <button class="btn grey authorization__btn">
+          <button class="btn authorization__btn grey">
             <span>Authorization</span>
           </button>
         </a>
@@ -100,12 +101,12 @@
       </div>
 
       <a href="#" class="authorization header__authorization">
-        <button class="btn grey authorization__btn">
+        <button class="btn authorization__btn grey">
           <span>Authorization</span>
         </button>
       </a>
 
-      <a href="#" class="premium header__premium">
+      <a href="#" class="header__premium premium">
         <button class="premium__btn">
           <span>Premium access</span>
           <svg class="premium__btn-icon">
@@ -122,243 +123,153 @@
     </div>
   </div>
 </header>
-      <main class="page">
-        <div class="background">
-
-    <div class="background__blurs">
-        <picture>
-            <source srcset="images/main/make-art/blurs/blur-mobile.png" media="(max-width:576px)" width="958" height="899" alt="blur">
-            <img src="images/main/make-art/blurs/blur.png" width="758" height="899" alt="blur" class="background__blurs-first">
-        </picture>
-        <picture>
-            <source srcset="images/main/biography/blurs/blur-mobile.png" media="(max-width:576px)" width="958" height="899" alt="blur">
-            <img src="images/main/biography/blurs/blur.png" width="958" height="1199" alt="blur" class="background__blurs-second">
-        </picture>
-        <picture>
-            <source srcset="images/main/get-premium/blurs/blur-mobile.png" media="(max-width:576px)" width="958" height="899" alt="blur">
-            <img src="images/main/get-premium/blurs/blur.png" width="1558" height="1399" alt="blur" class="background__blurs-third">
-        </picture>
+    <main class="page">
+      
+      <div class="page__container">
+        <div class="payment">
+    <div class="form payment__form">
+        <div class="form__head">
+            <h2 class="form__subtitle">PURCHASE</h2>
+            <h3 class="form__title">Payment for
+                <span id="pay-name"></span>
+            </h3>
+        </div>
+        <div class="form__tabs tabs">
+            <div class="tabs__nav">
+                <button class="tabs__nav-btn" type="button" data-tab="#card">Credit card</button>
+                <button class="tabs__nav-btn" type="button" data-tab="#paypal">PayPal</button>
+                <button class="tabs__nav-btn" type="button" data-tab="#crypto">Crypto</button>
+            </div>
+            <div class="tabs__content">
+                <div class="tabs__item" id="card">
+                    <form class="form tabs__form" autocomplete="off">
+                        <div class="form__item">
+                            <label class="form__item-label">Card number</label>
+                            <input type="number" class="form__item-input" id="card-numb" name="card-numb" placeholder="0000 0000 0000 0000" autocomplete="off">
+                        </div>
+                        <div class="form__dete-and-cvv">
+                            <div class="form__item">
+                                <label class="form__item-label">Date</label>
+                                <input type="text" class="form__item-input" id="date" placeholder="01/01" autocomplete="off">
+                            </div>
+                            <div class="form__item">
+                                <label class="form__item-label">CVV</label>
+                                <input type="password" class="form__item-input" id="cvv" placeholder="000" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <label class="form__item-label">Name on card</label>
+                            <input type="text" class="form__item-input" id="name" name="name" placeholder="Ivan Ivanov" autocomplete="off">
+                        </div>
+                        <a href="#" class="form__send">
+                            <button class="btn form__send-btn gradient" type="submit">
+                                <p>Purchase</p>
+                            </button>
+                        </a>
+                        <div class="form__agree">
+                            <label class="form__agree-label">
+                                <input type="checkbox" class="form__agree-checkbox" id="checkbox" autocomplete="off">
+                                <span class="form__agree-checkstyle"></span>
+                                I agree with<a href="#">Privacy Policy</a>and<a href="#">Terms of use</a>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="tabs__item" id="paypal">
+                    <form class="form tabs__form" autocomplete="off">
+                        <div class="form__item">
+                            <label class="form__item-label">Card number</label>
+                            <input type="number" class="form__item-input" id="card-numb" name="card-numb" placeholder="0000 0000 0000 0000" autocomplete="off">
+                        </div>
+                        <div class="form__dete-and-cvv">
+                            <div class="form__item">
+                                <label class="form__item-label">Date</label>
+                                <input type="text" class="form__item-input" id="date" placeholder="01/01" autocomplete="off">
+                            </div>
+                            <div class="form__item">
+                                <label class="form__item-label">CVV</label>
+                                <input type="password" class="form__item-input" id="cvv" placeholder="000" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <label class="form__item-label">Name on card</label>
+                            <input type="text" class="form__item-input" id="name" name="name" placeholder="Ivan Ivanov" autocomplete="off">
+                        </div>
+                        <a href="#" class="form__send">
+                            <button class="btn form__send-btn gradient" type="submit">
+                                <p>Purchase</p>
+                            </button>
+                        </a>
+                        <div class="form__agree">
+                            <label class="form__agree-label">
+                                <input type="checkbox" class="form__agree-checkbox" id="checkbox" autocomplete="off">
+                                <span class="form__agree-checkstyle"></span>
+                                I agree with<a href="#">Privacy Policy</a>and<a href="#">Terms of use</a>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="tabs__item" id="crypto">
+                    <form class="form tabs__form" autocomplete="off">
+                        <div class="form__item">
+                            <label class="form__item-label">To purchase item by crypto you have to send money to this
+                                wallet. After 5 minute result will sent in your mail</label>
+                            <div class="form__copy">
+                                <p class="copy-text">EQBSSl0Xlo3...kkHTmFw5YVYOiWJ. </p>
+                                <a href="#" class="copy-btn">
+                                    <svg>
+                                        <use href="#copy"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <label class="form__item-label">E-mail</label>
+                            <input type="text" class="form__item-input" id="name" name="name" placeholder="Your e-mail" autocomplete="off">
+                        </div>
+                        <a href="#" class="form__send">
+                            <button class="btn form__send-btn gradient" type="submit">
+                                <p>Check</p>
+                            </button>
+                        </a>
+                        <div class="form__agree">
+                            <label class="form__agree-label">
+                                <input type="checkbox" class="form__agree-checkbox" id="checkbox" autocomplete="off">
+                                <span class="form__agree-checkstyle"></span>
+                                I agree with<a href="#">Privacy Policy</a>and<a href="#">Terms of use</a>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <p class="background__make">MAKE ART</p>
-    <p class="background__not">NOT WAR</p>
-    <svg class="background__ellipse-first">
-        <use href="#elipse"></use>
-    </svg>
-    <svg class="background__ellipse-second">
-        <use href="#elipse"></use>
-    </svg>
-    
-    <svg class="background__star-first">
-        <use href="#star"></use>
-    </svg>
-    
-    <svg class="background__star-second">
-        <use href="#star"></use>
-    </svg>
-
-    <svg class="background__ellipse-third">
-        <use href="#elipse"></use>
-    </svg>
-    <svg class="background__star-third">
-        <use href="#star"></use>
-    </svg>
+    <div class="payment__about">
+        <div class="about">
+            <h3 class="about__title" id="art-name"></h3>
+            <div class="about__price">
+                <div class="price">
+                    <p class="price__text">PRICE</p>
+                    <p class="price__cost" id="price">$</p>
+                </div>
+                <div class="bid">
+                    <p>BID</p>
+                </div>
+            </div>
+            <h3 class="about__detailed">DETAILED INFO</h3>
+            <div class="detailed">
+                <p class="detailed__size">36 × 27 in
+                    <br>91.4 × 68.6 cm
+                </p>
+                <p class="detailed__info">This work is part of a limited edition set.</p>
+            </div>
+            <p class="about__info" id="art-info"></p>
+        </div>
+    </div>
 </div>
- 
-        <div class="page__container"> 
-          <section id="make" class="make">
-    <div class="make__content">
-        <div class="make__left">
-            <div class="social make__left-social">
-                <a class="social__link" href="#">
-                    <svg class="social__link-svg">
-                        <use href="#icon-instagram"/>
-                    </svg>
-                </a>
-
-                <a class="social__link" href="#">
-                    <svg class="social__link-svg">
-                        <use href="#icon-twitter"/>
-                    </svg>
-                </a>
-
-                <a class="social__link" href="#">
-                    <svg class="social__link-svg">
-                        <use href="#icon-telegram"/>
-                    </svg>
-                </a>
-
-                <a class="social__link" href="#">
-                    <svg class="social__link-svg">
-                        <use href="#icon-pinterest"/>
-                    </svg>
-                </a>
-            </div>
-
-            <h1 class="make__left-title">We are here to inspire and share art</h1>
-            <p class="make__left-text">Indulgence announcing uncommonly met she continuing two unpleasing terminated </p>
-
-            <div class="btns make__left-btns">
-                <a href="#" class="btns__premium">
-                    <button class="btn gradient btns__premium-btn">
-                        <svg class="btns__premium-btn-svg">
-                            <use href="#default-crown"/>
-                        </svg>
-                        <span>Premium access</span>
-                    </button>
-                </a>
-                <a href="#" class="btns__discover">
-                    <button class="btn grey btns__discover-btn">
-                        <span>Discover</span>
-                    </button>
-                </a>
-            </div>
-        </div>
-        <div class="make__wrapper">
-
-            <div class="make__right">
-                <picture>
-                    <source srcset="images/main/make-art/make-art-mobile.png" media="(max-width: 768px)">
-                    <img src="images/main/make-art/make-art.png" alt="woman" class="make__right-img">
-                </picture>
-            </div>
-            
-        </div>
-
-    </div>
-</section> 
-          <section id="biography" class="biography">
-    <div class="biography__content">
-
-        <div class="biography__text">
-            <h3 id="biography-subtitle" class="biography__text-subtitle"></h3>
-            <h2 id="biography-title" class="biography__text-title"></h2>
-        </div>
-
-        <div class="biography__wrapper">
-            <div class="biography__image">
-                <img id="biography-bg" alt="bg" class="biography__image-bg">
-                <img id="biography-img" alt="woman" class="biography__image-img">
-            </div>
-        </div>
-
-        <p id="biography-paragraph" class="biography__paragraph">
-        </p>
-
-        <div class="swiper biography__columns columns-swiper">
-            <div class="swiper-wrapper columns-wrapper">
-                <div class="columns-slide swiper-slide">
-                    <h2 id="biography-column-year-first" class="columns-slide__year"></h2>
-                    <h3 id="biography-column-paragraph-first" class="columns-slide__paragraph"></h3>
-                </div>
-                <div class="columns-slide swiper-slide">
-                    <h2 id="biography-column-year-second" class="columns-slide__year"></h2>
-                    <h3 id="biography-column-paragraph-second" class="columns-slide__paragraph"></h3>
-                </div>
-                <div class="columns-slide swiper-slide">
-                    <h2 id="biography-column-year-third" class="columns-slide__year"></h2>
-                    <h3 id="biography-column-paragraph-third" class="columns-slide__paragraph"></h3>
-                </div>
-            </div>
-        </div>
-        
-    </div>
-</section> 
-          <section id="premium" class="premium">
-    <div class="premium__content">
-        <div class="premium__banner">
-            <div class="info premium__banner-info">
-                <svg class="info__svg">
-                    <use href="#default-crown"/>
-                </svg>
-                <h2 id="premium-banner-title" class="info__title"></h2>
-                <p id="premium-banner-paragraph" class="info__paragraph"></p>
-                <button class="btn black info__btn">
-                    <span id="premium-banner-btn-text"></span>
-                </button>
-            </div>
-
-            <div class="premium__banner-ruby">
-                <picture>
-                    <source srcset="images/main/get-premium/ruby-mobile.png" media="(max-width: 1023px)">
-                    <img src="images/main/get-premium/ruby.png" alt="ruby" class="premium__banner-ruby-img">
-                </picture>
-            </div>
-
-            <div class="premium__banner-emerald">
-                <picture>
-                    <source srcset="images/main/get-premium/emerald-mobile.png" media="(max-width: 1023px)">
-                    <img src="images/main/get-premium/emerald.png" alt="emerald" class="premium__banner-emerald-img">
-                </picture>
-            </div>
-
-            <div class="premium__banner-sapphire">
-                <picture>
-                    <source srcset="images/main/get-premium/sapphire-mobile.png" media="(max-width: 1023px)">
-                    <img src="images/main/get-premium/sapphire.png" alt="sapphire" class="premium__banner-sapphire-img">
-                </picture>
-            </div>
-            
-            <div class="premium__banner-circle">
-                <picture>
-                    <img src="images/main/get-premium/circle.svg" alt="circle" class="premium__banner-circle-img">
-                </picture>
-            </div>
-        </div>
-
-        <div class="swiper premium-swiper">
-            <div class="swiper-wrapper premium-wrapper">
-            </div>
-        </div>
-    </div>
-</section> 
-          <section id="contact" class="contact">
-
-    <div class="contact-background">
-        <picture>
-            <source srcset="images/main/contact/sapphire-first-mobile.png" media="(max-width:576px)">
-            <img src="images/main/contact/sapphire-first.png" alt="" class="contact-background__sapphire-first">
-        </picture>
-        <picture>
-            <source srcset="images/main/contact/sapphire-second-mobile.png" media="(max-width:576px)">
-            <img src="images/main/contact/sapphire-second.png" alt="" class="contact-background__sapphire-second">
-        </picture>
-        <picture><source srcset="images/main/contact/sapphire-third.webp" type="image/webp"><img src="images/main/contact/sapphire-third.png" alt="" class="contact-background__sapphire-third"></picture>
-        <picture><source srcset="images/main/contact/cube.webp" type="image/webp"><img src="images/main/contact/cube.png" alt="" class="contact-background__cube"></picture>
-    </div>
-
-    <div class="contact__content">
-        <h3 class="contact__subtitle">CONTACT ME</h3>
-        <h2 class="contact__title">Want to apply your work or an question appeared? </h2>
-        <form class="contact__form form" id="form" autocomplete="off">
-            <div class="form__item">
-                <label class="form__item-label">Name</label>
-                <input type="text" class="form__item-input" id="name" name="name" placeholder="Your name" autocomplete="off">
-            </div>
-            <div class="form__item">
-                <label class="form__item-label">Mail</label>
-                <input type="email" class="form__item-input" id="email" placeholder="Your mail" autocomplete="off">
-            </div>
-            <div class="form__item">
-                <label class="form__item-label">Your question</label>
-                <textarea class="form__item-textarea" id="question" name="" id="" cols="30" rows="10" placeholder="Your question" autocomplete="off"></textarea>
-            </div>
-                <button id="clean" class="btn gradient form__send-btn" type="submit">
-                    <p>Send message</p>
-                </button>
-            <div class="form__agree">
-                
-                <label class="form__agree-label">
-                    <input type="checkbox" class="form__agree-checkbox" id="checkbox" autocomplete="off">
-                    <span class="form__agree-checkstyle"></span>
-                    I agree with<a href="#">Privacy Policy</a>and<a href="#">Terms of use</a></label>
-            </div>
-        </form>
-    </div>
-</section> 
-        </div>
-      </main>
-      <footer class="footer">
+      </div>
+    </main>
+    <footer class="footer">
     <div class="footer__container">
         <div class="footer__content">
             <div class="footer__links">
@@ -374,7 +285,7 @@
                     <a class="casual__link" href="#">Terms of use</a>
                 </div>
 
-                <div class="social footer__links-social">
+                <div class="footer__links-social social">
                     <a class="social__link" href="#">
                         <svg class="social__link-svg">
                             <use href="#icon-instagram"/>
@@ -405,7 +316,7 @@
         </div>
     </div>
 </footer>
-      <svg style="width: 0; height: 0; position: absolute;" xmlns="http://www.w3.org/2000/svg">
+    <svg style="width: 0; height: 0; position: absolute;" xmlns="http://www.w3.org/2000/svg">
       <symbol id="icon-logo" viewBox="0 0 161 46" fill="none">
             <path d="M20.6831 11.6895C14.9244 13.6289 15.3855 20.984 15.4131 21.1289C14.2363 14.1456 14.1933 10.4364 18.5445 8.37226C21.7122 6.86949 24.7754 10.3114 20.6831 11.6895Z" fill="url(#paint0_linear_78_3746)"/>
             <path d="M10.0627 13.0171C10.6057 11.5915 11.5654 11.3017 12.4698 11.4625C13.5732 11.6586 13.798 12.9906 13.4602 14.0592C11.993 18.6999 13.993 22.9244 15.5204 24.6699C11.5378 23.4899 8.88263 16.1147 10.0627 13.0171Z" fill="url(#paint1_linear_78_3746)"/>
@@ -594,7 +505,8 @@
             <path d="M5.25 4.5V2.25C5.25 2.05109 5.32902 1.86032 5.46967 1.71967C5.61032 1.57902 5.80109 1.5 6 1.5H15C15.1989 1.5 15.3897 1.57902 15.5303 1.71967C15.671 1.86032 15.75 2.05109 15.75 2.25V12.75C15.75 12.9489 15.671 13.1397 15.5303 13.2803C15.3897 13.421 15.1989 13.5 15 13.5H12.75V15.75C12.75 16.164 12.4125 16.5 11.9948 16.5H3.00525C2.90635 16.5006 2.8083 16.4816 2.71674 16.4442C2.62519 16.4068 2.54192 16.3517 2.47174 16.282C2.40156 16.2123 2.34584 16.1294 2.30779 16.0381C2.26974 15.9468 2.2501 15.8489 2.25 15.75L2.25225 5.25C2.25225 4.836 2.58975 4.5 3.0075 4.5H5.25ZM6.75 4.5H12.75V12H14.25V3H6.75V4.5Z" fill="#FCFFFF"/>
       </symbol>
 </svg>
-  </div></body>
-  <script src="js/app.min.js?_v=20240201145759"></script>
-  <script src="js/main.min.js?_v=20240201145759"></script>
+</div></body>
+<script src="js/app.min.js?_v=20240201145759"></script>
+<script src="js/pay.min.js?_v=20240201145759"></script>
+
 </html>
