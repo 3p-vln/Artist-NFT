@@ -1,12 +1,11 @@
+@import '../config/_media-breakpoints';
+@import '../config/vars';
+
 .background {
     position: absolute;
     width: 100%;
     z-index: 1;
     margin-top: 65px;
-
-    @media (max-width:1100px) {
-        display: block;
-    }
 
     &__blur {
         position: absolute;

@@ -1,3 +1,6 @@
+@import '../config/_media-breakpoints';
+@import '../config/vars';
+
 .select {
     &__content {
         position: relative;
