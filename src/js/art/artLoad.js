@@ -22,10 +22,10 @@ export function artLoad(info, id) {
                             <div class="info">
                                 <h3 class="info__name">${info.name} </h3>
                                 <p class="info__about">${info.about}</p>
-                                <p class="info__price">$${info.price}</p>    
+                                <p class="info__price">${info.price}</p>    
                             </div>
                             <div class="btns">
-                                <a href="#" class="btn black">
+                                <a href="pay.html?id=${id}" class="btn black">
                                     <span>Buy</span>
                                 </a>
                                 <a href="oneArt.html?id=${id}" class="btn black">

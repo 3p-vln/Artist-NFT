@@ -17,6 +17,7 @@ export const webpackConfig = (isMode) => {
       custom: path.join(paths.src, 'js/custom.js'),  
       oneArt: path.join(paths.src, 'js/oneArt.js'),  
       become: path.join(paths.src, 'js/become.js'),  
+      pay: path.join(paths.src, 'js/pay.js'),  
       app: path.join(paths.src, 'js/app.js'),    
     },
 
