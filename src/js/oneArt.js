@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import { db } from './modules/firebase';
 import { collection, getDocs } from 'firebase/firestore';
+import { validate } from './main/contactValidate';
 
 async function getArts() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -49,9 +50,9 @@ async function getArts() {
                     </div>
                     <div class="info__buy">
                         <div class="info__buy_first">
-                            <p class="info__price">$${art[0].price}</p>
+                            <p class="info__price">${art[0].price}</p>
                             <div class="info__btn">
-                                <a href="#" class="btn gradient">
+                                <a href="pay.html?id=${art[0].id}" class="btn gradient">
                                     <svg>
                                     <use href="#coin"></use>
                                     </svg>

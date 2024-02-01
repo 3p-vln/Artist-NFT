@@ -1,8 +1,7 @@
 @import 'style';
-@import 'oneArt/background';
-@import 'oneArt/bread-crumbs';
-@import 'oneArt/one-art';
-@import 'oneArt/procces';
+@import 'become-a-part/background';
+@import 'become-a-part/part-of-team';
+@import 'become-a-part/our-benefits';
 @import 'main/contact';
 
 .page {
@@ -11,7 +10,6 @@
     &__container {
         position: relative;
         z-index: 2;
-        margin-top: 96px;
+        margin-top: 113px;
     }
 }
-
