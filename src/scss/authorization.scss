@@ -14,10 +14,49 @@
     @include media-breakpoint-down(sm) {
         padding: 20px 0 196px;
     }
+  }
 
-    &__svg {
-        width: 172px;
-        height: 46px;
+  .tabs {
+    &__button{
+      outline: none;
+      background: none;
+      // background: transparent;
+      color: $whiteColor;
+      width: 129px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 14px 19px;
+      font-size: clamp(14px, 2.5vw, 18px);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      border-radius: 12px;
+      // line-height: 175%;
+      transition: background 1000ms linear, color 300ms linear;
+
+      &_active {
+        background: $rainbowBtnGradient;
+        font-size: 18px;
+        font-weight: 400;
+        // line-height: 133%;
+        color: $background;
+      }
+
+      @include media-breakpoint-down(xs) {
+        font-size: 14px;
+        width: 164px;
+      }
+    }
+  }
+
+  .form {
+    &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      align-items: flex-start;
+      margin-bottom: 17px;
     }
 
     &__container {
@@ -89,61 +128,50 @@
         }
     }
 
-    .form {
-        &__item {
-            display: flex;
-            flex-direction: column;
-            gap: 9px;
-            align-items: flex-start;
-            margin-bottom: 17px;
-        }
+  &__accaunt {
+    display: none;
 
-        &__item-label {
-            font-family: 'ProximaNova';
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 150%;
-            color: $gray6Color;
-        }
+    &_visible {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      align-items: center;
+    }
+  }
 
-        &__item-input {
-            width: 410px;
-            background: $backgroundSecond;
-            padding: 21px 32px 22px;
-            border-radius: 9px;
-            color: $whiteColor;
-            font-size: 16px;
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: $gray6Color;
+  }
 
-            &::placeholder {
-                font-family: 'ProximaNova';
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 131%;
-                color: $gray6Color;
-                opacity: 0.6;
-            }
+  &__link {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    text-decoration: underline;
+    color:$blueAuth;
+  }
 
-            @include media-breakpoint-down(xs) {
-                width: 345px;
-            }
-        }
+  .roles {
+    opacity: 0;
+    max-height: 0;
+    transition: max-height 300ms linear, opacity 200ms linear;
+    width: 258px;
+    // margin: 0 auto 29px 0;
+    // transition: $standartTrans;
 
-        &__button {
-            width: 410px;
-            background: $rainbowBtnGradient;
-            font-weight: 700;
-            font-size: 18px;
-            line-height: 147%;
-            color: $background;
-            border-radius: 16px;
-            padding: 18px 0 19px;
-            margin-top: 5px;
-            margin-bottom: 15px;
+    &_visible {
+      opacity: 1;
+      
+      margin: 0 auto 29px 0;
+      display: block;
+    }
 
-            @include media-breakpoint-down(xs) {
-                width: 345px;
-            }
-        }
+    @include media-breakpoint-down(xs) {
+      width: 345px;
+      margin: 0 auto 29px;
     }
 
     &__accaunt {
@@ -154,10 +182,12 @@
     }
 
     &__text {
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 150%;
-        color: $gray6Color;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      color: $gray6Color;
+      text-align: left;
+      margin-bottom: 15px;
     }
 
     &__link {
@@ -171,59 +201,34 @@
     .roles {
         display: none;
 
-        &_visible {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-        }
+    &__check-label {
+      border-radius: 38px;
+      width: 22px;
+      height: 22px;
+      background: $backgroundSecond;
+      border: 1px solid #525960;
+      cursor: pointer;
+      transition: opacity 300ms linear;
 
-        &__text {
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 150%;
-            color: $gray6Color;
-            text-align: left;
-        }
+      &:before {
+        opacity: 0;
+      }
+      
 
-        &__box {
-            display: flex;
-            justify-content: space-between;
-            color: $whiteColor;
-            gap: 16px;
-        }
+      &_active {
+        position: relative;
 
-        &__check {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
-
-        &__check-label {
-            border-radius: 38px;
-            width: 22px;
-            height: 22px;
-            background: $backgroundSecond;
-            border: 1px solid #525960;
-            cursor: pointer;
-
-            &_active {
-                position: relative;
-                &::before {
-                    content: '';
-                    width: 14px;
-                    height: 14px;
-                    background: var(
-                        --primary,
-                        linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%)
-                    );
-                    position: absolute;
-                    border-radius: 5px;
-                    top: 50%;
-                    left: 50%;
-                    transform: translateX(-50%) translateY(-50%);
-                }
-            }
+        &::before {
+          content: "";
+          opacity: 1;
+          width: 14px;
+          height: 14px;
+          background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
+          position: absolute;
+          border-radius: 5px;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
         }
     }
 }
