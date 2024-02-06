@@ -1,4 +1,5 @@
 // document.addEventListener("DOMContentLoaded", () => {
+//     import { premiumSwiper(); } from './main/premium';
 // });
 
 import stockSwiper from './modules/swiper';
