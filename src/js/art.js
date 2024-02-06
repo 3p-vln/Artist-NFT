@@ -6,7 +6,7 @@ import { artLoad } from './art/artLoad';
 async function snap() {
     const querySnapshot = await getDocs(collection(db, 'art'));
     querySnapshot.forEach(doc => {
-        new artLoad(doc.data(), doc.id);
+        new artLoad(doc.data(), doc.id, '.art-mesh');
     });
 }
 snap();
