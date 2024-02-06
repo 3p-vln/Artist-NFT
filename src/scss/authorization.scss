@@ -1,5 +1,5 @@
 @import 'style';
-@import './authorization/backround.scss';
+@import './authorization/background.scss';
 @import './config/vars.scss';
 @import './config/media-breakpoints';
 
@@ -151,7 +151,7 @@
         font-size: 14px;
         line-height: 150%;
         text-decoration: underline;
-        color: $blueAuth;
+        // color: $blueAuth;
     }
 
     .roles {
