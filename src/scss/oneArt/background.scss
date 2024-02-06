@@ -1,0 +1,18 @@
+@import '../config/_media-breakpoints';
+@import '../config/vars';
+
+.background {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  margin-top: 65px;
+
+  &__blur {
+    position: absolute;
+    left: 0;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+}

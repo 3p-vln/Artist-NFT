@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="eng">
+@@include('html/modules/head.html', { 'title': 'Authorization', 'srcStyle': 'authorization' })
+
+<body>
+  @@include('html/modules/preloader.html')
+  <div class="wrapper">
+    <main class="page">
+      @@include('html/authorization/background.html')
+        <div class="page__container">
+          <div class="authorization">
+            <svg class="background__svg">
+              <use href="#star"></use>
+            </svg>
+            <a class="authorization__logo">
+              <svg class="authorization__svg">
+                <use href="#icon-logo"></use>
+              </svg>
+              
+            </a>
+            <h2 class="authorization__title">Authorization</h2>
+            <div class="tabs authorization__tabs">
+              <button class="tabs__button tabs__button_active">Log in</button>
+              <button class="tabs__button">Sign up</button>
+            </div>
+            <div class=" roles autorization__roles roles_visible">
+              <p class="roles__text">Select your role</p>
+              <div class="roles__box">
+                <div class="roles__check">
+                  <span class="roles__check-label roles__check-label_active"></span>
+                  <p class="roles__check-text">Customer</p>
+                </div>
+                <div class="roles__check">
+                  <span class="roles__check-label"></span>
+                  <p class="roles__check-text">Admin</p>
+                </div>
+                <div class="roles__check">
+                  <span class="roles__check-label"></span>
+                  <p class="roles__check-text">Artist</p>
+                </div>
+              </div>
+            </div>
+            <form action="#" class="form authorization__form">
+              <div class="form__item">
+                <label for="" class="form__item-label">E-mail</label>
+                <input type="email" class="form__item-input" placeholder="Your e-mail">
+              </div>
+              <div class="form__item">
+                <label for="" class="form__item-label">Passwrod</label>
+                <input type="password" class="form__item-input" placeholder="Your password">
+              </div>
+              <button class="form__button">Send message</button>
+            </form>
+            <div class="authorization__accaunt">
+              <p class="authorization__text">Don’t have account yet?</p>
+              <a href="#" class="authorization__link">Sign up</a>
+            </div>
+          </div>
+        </div>
+    </main>
+    @@include('html/modules/Sprite.html')
+</body>
+<script src="js/app.min.js"></script>
+<!-- <script src="js/authorization.min.js"></script> -->
+
+</html>

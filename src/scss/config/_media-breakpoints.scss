@@ -24,7 +24,7 @@ $breakpoints: (
   @if map-has-key($breakpoints, $breakpoint) {
     $breakpoint-value: map-get($breakpoints, $breakpoint);
 
-    @media (max-width: $breakpoint-value - 1) {
+    @media (max-width: $breakpoint-value) {
       @content;
     }
   } @else {

@@ -1,38 +1,39 @@
 import $ from 'jquery';
 import { db } from './modules/firebase';
 import { collection, getDocs } from 'firebase/firestore';
+import { validate } from './main/contactValidate';
 
 async function getArts() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const productId = urlParams.get('id');
-    console.log(productId);
-    const productArts = [];
-    const productDataArts = await getDocs(collection(db, "art"));
-    productDataArts.forEach((doc) => {
-        productArts.push({
-            id: doc.id,
-            img: doc.data().img,
-            imgWebP: doc.data().imgWebP,
-            name: doc.data().name,
-            text: doc.data().text,
-            price: doc.data().price,
-            lock: doc.data().lock,
-            sub: doc.data().sub,
-            close: doc.data().close,
-            authName: doc.data().authName,
-            authImg: doc.data().authImg,
-            authImgWebP: doc.data().autnImgWebP,
-            date: doc.data().date,
-        });
+  const urlParams = new URLSearchParams(window.location.search);
+  const productId = urlParams.get('id');
+  console.log(productId);
+  const productArts = [];
+  const productDataArts = await getDocs(collection(db, 'art'));
+  productDataArts.forEach((doc) => {
+    productArts.push({
+      id: doc.id,
+      img: doc.data().img,
+      imgWebP: doc.data().imgWebP,
+      name: doc.data().name,
+      text: doc.data().text,
+      price: doc.data().price,
+      lock: doc.data().lock,
+      sub: doc.data().sub,
+      close: doc.data().close,
+      authName: doc.data().authName,
+      authImg: doc.data().authImg,
+      authImgWebP: doc.data().autnImgWebP,
+      date: doc.data().date,
     });
+  });
 
-    const art = [];
-    art.push(productArts.find((item) => item.id === productId));
-    console.log(art);
-    const product = $('.one-art');
-    console.log(art[0]);
-    document.querySelector('#product').innerHTML = art[0].name;
-    product.append(`
+  const art = [];
+  art.push(productArts.find((item) => item.id === productId));
+  console.log(art);
+  const product = $('.one-art');
+  console.log(art[0]);
+  document.querySelector('#product').innerHTML = art[0].name;
+  product.append(`
         <div class="art ${art[0].id}">
             <div class="art__picture">
                 <picture>
@@ -49,9 +50,9 @@ async function getArts() {
                     </div>
                     <div class="info__buy">
                         <div class="info__buy_first">
-                            <p class="info__price">$${art[0].price}</p>
+                            <p class="info__price">${art[0].price}</p>
                             <div class="info__btn">
-                                <a href="#" class="btn gradient">
+                                <a href="pay.html?id=${art[0].id}&name=art" class="btn gradient">
                                     <svg>
                                     <use href="#coin"></use>
                                     </svg>
@@ -69,12 +70,12 @@ async function getArts() {
         </div>
         </div>
     `);
-    // document.querySelector('#imgWebP').srcset = art[0].imgWebP;
-    // document.querySelector('#imgJpg').src = art[0].img;
+  // document.querySelector('#imgWebP').srcset = art[0].imgWebP;
+  // document.querySelector('#imgJpg').src = art[0].img;
 
-    const info = $('.about');
-    if (art[0].lock == true) {
-        info.append(`
+  const info = $('.about');
+  if (art[0].lock == true) {
+    info.append(`
             <div class="about__bg about__bg_blur">
                 <picture>
                     <source srcset="${art[0].imgWebP}" type="image/webp">
@@ -98,9 +99,9 @@ async function getArts() {
                     </a>
                 </div>
             </div>
-        `)
-    } else if (art[0].lock == false) {
-        info.append(`
+        `);
+  } else if (art[0].lock == false) {
+    info.append(`
             <div class="about__bg">
                 <picture>
                     <source srcset="${art[0].imgWebP}" type="image/webp">
@@ -132,8 +133,8 @@ async function getArts() {
                     </div>
                 </div>
             </div>
-        `)
-    }
+        `);
+  }
 }
 
 getArts();

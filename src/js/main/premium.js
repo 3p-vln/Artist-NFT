@@ -1,16 +1,16 @@
 import $ from 'jquery';
-import {db} from '../modules/firebase';
-import {collection, getDocs} from 'firebase/firestore';
+import { db } from '../modules/firebase';
+import { collection, getDocs } from 'firebase/firestore';
 import { premiumLoad } from './premiumLoad';
 
 import Swiper from 'swiper';
 import { Navigation, Pagination, Autoplay, Scrollbar } from 'swiper/modules';
 
-const wrapper =  document.querySelector('wrapper');
+const wrapper = document.querySelector('wrapper');
 
 async function snap() {
-    const querySnapshot = await getDocs(collection(db, "main-swiper"));
-    querySnapshot.forEach((doc) => {
+    const querySnapshot = await getDocs(collection(db, 'main-swiper'));
+    querySnapshot.forEach(doc => {
         new premiumLoad(doc.data(), doc.id);
     });
     // console.log(querySnapshot);
@@ -19,13 +19,13 @@ async function snap() {
     //     loop: true,
     //     // centeredSlides: true,
     //     updateOnWindowResize: true,
-    
+
     //     // on: {
     //     //   init: function () {
     //     //     console.log('swiper initialized');
     //     //   },
     //     // },
-    
+
     //     breakpoints: {
     //         420: {
     //                   slidesPerView: 2.3,
@@ -67,14 +67,14 @@ async function snap() {
 snap();
 
 (async function () {
-    const querySnapshot = await getDocs(collection(db, "main-premium"));
+    const querySnapshot = await getDocs(collection(db, 'main-premium'));
     querySnapshot.forEach(doc => {
-        const data = doc.data()
-        
-        // до сих пор не переделал!!!!! 
+        const data = doc.data();
+
+        // до сих пор не переделал!!!!!
         document.querySelector('#premium-banner-title').innerHTML = data.bannerTitle;
         document.querySelector('#premium-banner-paragraph').innerHTML = data.bannerParagraph;
         document.querySelector('#premium-banner-btn-text').innerHTML = data.bannerBtnText;
-    })
+    });
     // console.log(querySnapshot);
 })();

@@ -1,16 +1,16 @@
 import $ from 'jquery';
 
-export function artLoad(info, id) {
-    let classInfo = " ";
-    if (info.lock == false) {
-        classInfo = "unlock";
-    } else {
-        classInfo = "lock";
-        console.log(classInfo)
-    }
-    const arts = $('.art-mesh');
-    if (info.lock == false) {
-        arts.append(`
+export function artLoad(info, id, content) {
+  let classInfo = ' ';
+  if (info.lock == false) {
+    classInfo = 'unlock';
+  } else {
+    classInfo = 'lock';
+    console.log(classInfo);
+  }
+  const arts = $(content);
+  if (info.lock == false) {
+    arts.append(`
                     <div class="card ${id} ${classInfo}">
                         <div class="card__picture">
                             <picture>
@@ -22,10 +22,10 @@ export function artLoad(info, id) {
                             <div class="info">
                                 <h3 class="info__name">${info.name} </h3>
                                 <p class="info__about">${info.about}</p>
-                                <p class="info__price">$${info.price}</p>    
+                                <p class="info__price">${info.price}</p>    
                             </div>
                             <div class="btns">
-                                <a href="#" class="btn black">
+                                <a href="pay.html?id=${id}&name=art" class="btn black">
                                     <span>Buy</span>
                                 </a>
                                 <a href="oneArt.html?id=${id}" class="btn black">
@@ -38,8 +38,8 @@ export function artLoad(info, id) {
                         </div>
                     </div>
                 `);
-    } else if (info.lock == true) {
-        arts.append(`
+  } else if (info.lock == true) {
+    arts.append(`
                     <div class="card ${id} ${classInfo}">
                         <div class="card__picture">
                             <picture>
@@ -56,7 +56,7 @@ export function artLoad(info, id) {
                                 <p>${info.close}</p>
                             </div>
                             <div class="btns">
-                                <a href="custom.html" class="btn black">
+                                <a href="oneArt.html?id=${id}" class="btn black">
                                     <span>Unlock</span>
                                     <svg>
                                         <use href="#btn-arr"></use>
@@ -66,5 +66,5 @@ export function artLoad(info, id) {
                         </div>
                     </div>
                 `);
-    }
+  }
 }

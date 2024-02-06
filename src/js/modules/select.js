@@ -30,6 +30,7 @@ document.querySelectorAll('.select__content').forEach(function (dropDownWrapper)
             dropDownBtn.classList.remove('select__btn--active');
             dropDownAfter.classList.remove('select__btn_after--active');
             dropDownList.classList.remove('select__list--visible');
+            dropDownBtn.classList.remove('select__btn-clicked');
         }
     });
 
@@ -38,6 +39,7 @@ document.querySelectorAll('.select__content').forEach(function (dropDownWrapper)
             dropDownBtn.classList.remove('select__btn--active');
             dropDownAfter.classList.remove('select__btn_after--active');
             dropDownList.classList.remove('select__list--visible');
+            dropDownBtn.classList.remove('select__btn-clicked');
         }
     });
 });

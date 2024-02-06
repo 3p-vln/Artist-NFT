@@ -1,29 +1,32 @@
+@import '../config/_media-breakpoints';
+@import '../config/vars';
+
 .bread-crumbs {
-    font-family: 'Manrope';
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 19px;
-    letter-spacing: -0.3px;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    padding: 0 15px;
-    margin-bottom: 25px;
+  font-family: 'Manrope';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: -0.3px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 15px;
+  margin-bottom: 25px;
 
-    @include media-breakpoint-down(sm) {
-        padding: 0;
-        margin-bottom: 32px;
-    }
+  @include media-breakpoint-down(sm) {
+    padding: 0;
+    margin-bottom: 32px;
+  }
 
-    .main,
-    .art,
-    .curent-art {
-        color: $whiteTwo;
-        opacity: 0.5;
-    }
+  .main,
+  .art,
+  .curent-art {
+    color: $whiteTwo;
+    opacity: 0.5;
+  }
 
-    svg {
-        width: 16px;
-        height: 16px;
-    }
+  svg {
+    width: 16px;
+    height: 16px;
+  }
 }

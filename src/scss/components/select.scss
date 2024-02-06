@@ -1,3 +1,6 @@
+@import '../config/_media-breakpoints';
+@import '../config/vars';
+
 .select {
     &__content {
         position: relative;
@@ -8,8 +11,7 @@
     }
 
     &__btn-clicked {
-        border: 2px #26489a solid;
-        box-shadow: 0 0 0.8em #26489a;
+        box-shadow: 0 0 10px 2px #26489a;
         transition: box-shadow 0.5 ease-in-out;
     }
 
@@ -28,7 +30,7 @@
         line-height: 21px;
         cursor: pointer;
         transition: all 0.5 ease-in-out;
-        
+
         &_p {
             margin: 0;
             display: none;
@@ -82,7 +84,7 @@
         }
 
         &::-webkit-scrollbar-thumb {
-            background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
+            background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
             border-radius: 12px;
             width: 100%;
         }
@@ -90,7 +92,6 @@
         &-item {
             width: 100%;
             padding: 15px 20px 15px 32px;
-
 
             &::before {
                 display: none;

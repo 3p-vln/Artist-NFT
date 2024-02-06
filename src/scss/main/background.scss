@@ -1,184 +1,187 @@
+@import '../config/_media-breakpoints';
+@import '../config/vars';
+
 .background {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+
+  &__blurs {
     position: relative;
     width: 100%; 
     z-index: 1;
 
-    &__blurs {
-        position: relative;
-        z-index: 0;
-
-        &-first {
-            position: absolute;
-            top: 64px;
-            left: 0%;
-            max-width: 100%;
-            vertical-align: top;
-            overflow: clip;
-            z-index: -1;
-        }
-
-        &-second {
-            position: absolute;
-            top: 600px;
-            left: 0%;
-            max-width: 100%;
-            vertical-align: top;
-            overflow: clip;
-            z-index: -1;
-
-            @include media-breakpoint-down(md) {
-                top: 1100px;
-                left: 0%;
-            }
-
-            @include media-breakpoint-down(xs) {
-                top: 600px;
-                left: 0%;
-            }
-        }
-
-        &-third {
-            position: absolute;
-            top: 1564px;
-            left: 0%;
-            max-width: 100%;
-            vertical-align: top;
-            overflow: clip;
-            z-index: -1;
-
-            @include media-breakpoint-down(md) {
-                top: 2700px;
-                left: 0%;
-            }
-
-            @include media-breakpoint-down(sm) {
-                top: 2200px;
-                left: 0%;
-            }
-
-            @include media-breakpoint-down(xs) {
-                top: 1900px;
-                left: 0%;
-            }
-        }
+    &-first {
+      position: absolute;
+      top: 64px;
+      left: 0%;
+      max-width: 100%;
+      vertical-align: top;
+      overflow: clip;
+      z-index: -1;
     }
 
-    &__not,
-    &__make {
-        font-family: "ProximaNova";
-        font-size: 79px;
-        letter-spacing: 1px;
-        font-weight: 700;
-        color: transparent;
-        -webkit-text-stroke: 1px $whiteTwo;
-        opacity: 0.2;
-        position: absolute;
-        text-wrap: nowrap;
+    &-second {
+      position: absolute;
+      top: 600px;
+      left: 0%;
+      max-width: 100%;
+      vertical-align: top;
+      overflow: clip;
+      z-index: -1;
+
+      @include media-breakpoint-down(md) {
+        top: 1100px;
+        left: 0%;
+      }
+
+      @include media-breakpoint-down(xs) {
+        top: 600px;
+        left: 0%;
+      }
     }
 
-    &__make {
-        top: 90px;
-        left: -1.3%;
+    &-third {
+      position: absolute;
+      top: 1564px;
+      left: 0%;
+      max-width: 100%;
+      vertical-align: top;
+      overflow: clip;
+      z-index: -1;
 
-        @include media-breakpoint-down(xs) {
-            font-size: 50px;
-            top: 76px;
-            left: 50%;
-        }
+      @include media-breakpoint-down(md) {
+        top: 2700px;
+        left: 0%;
+      }
+
+      @include media-breakpoint-down(sm) {
+        top: 2200px;
+        left: 0%;
+      }
+
+      @include media-breakpoint-down(xs) {
+        top: 1900px;
+        left: 0%;
+      }
+    }
+  }
+
+  &__not,
+  &__make {
+    font-family: 'ProximaNova';
+    font-size: 79px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 1px $whiteTwo;
+    opacity: 0.2;
+    position: absolute;
+    text-wrap: nowrap;
+  }
+
+  &__make {
+    top: 90px;
+    left: -1.3%;
+
+    @include media-breakpoint-down(xs) {
+      font-size: 50px;
+      top: 76px;
+      left: 50%;
+    }
+  }
+
+  &__not {
+    bottom: -768px;
+    right: 41.2%;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  &__ellipse-first {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 112px;
+    right: 11.9%;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  &__ellipse-second {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 294px;
+    left: 52.9%;
+
+    @include media-breakpoint-down(xs) {
+      top: 464px;
+      left: 28%;
+    }
+  }
+
+  &__star-first {
+    width: 46px;
+    height: 62px;
+    position: absolute;
+    top: 124px;
+    right: 45.5%;
+
+    @include media-breakpoint-down(md) {
+      top: 74px;
+      right: 30%;
     }
 
-    &__not {
-        bottom: -768px;
-        right: 41.2%;
-
-        @include media-breakpoint-down(md) {
-            display: none;
-        }
+    @include media-breakpoint-down(xs) {
+      width: 36px;
+      height: 48px;
+      top: 426px;
+      right: 9.5%;
     }
+  }
 
-    &__ellipse-first {
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        top: 112px;
-        right: 11.9%;
+  &__star-second {
+    width: 36px;
+    height: 48px;
+    position: absolute;
+    top: 614px;
+    left: 44%;
+    z-index: 3;
 
-        @include media-breakpoint-down(md) {
-            display: none;
-        }
+    @include media-breakpoint-down(xs) {
+      width: 30px;
+      height: 41px;
+      top: 431px;
+      left: 0%;
     }
+  }
 
-    &__ellipse-second {
-        width: 25px;
-        height: 25px;
-        position: absolute;
-        top: 294px;
-        left: 52.9%;
+  &__ellipse-third {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 1184px;
+    left: 7%;
 
-        @include media-breakpoint-down(xs) {
-            top: 464px;
-            left: 28%;
-        }
+    @include media-breakpoint-down(md) {
+      display: none;
     }
+  }
 
-    &__star-first {
-        width: 46px;
-        height: 62px;
-        position: absolute;
-        top: 124px;
-        right: 45.5%;
+  &__star-third {
+    width: 46px;
+    height: 62px;
+    position: absolute;
+    top: 1018px;
+    left: 5.3%;
 
-        @include media-breakpoint-down(md) {
-            top: 74px;
-            right: 30%;
-        }
-
-        @include media-breakpoint-down(xs) {
-            width: 36px;
-            height: 48px;
-            top: 426px;
-            right: 9.5%;
-        }
-
+    @include media-breakpoint-down(md) {
+      display: none;
     }
-
-    &__star-second {
-        width: 36px;
-        height: 48px;
-        position: absolute;
-        top: 614px;
-        left: 44%;
-        z-index: 3;
-
-        @include media-breakpoint-down(xs) {
-            width: 30px;
-            height: 41px;
-            top: 431px;
-            left: 0%;
-        }
-    }
-
-    &__ellipse-third {
-        width: 25px;
-        height: 25px;
-        position: absolute;
-        top: 1184px;
-        left: 7%;
-
-        @include media-breakpoint-down(md) {
-            display: none;
-        }
-    }
-
-    &__star-third {
-        width: 46px;
-        height: 62px;
-        position: absolute;
-        top: 1018px;
-        left: 5.3%;
-
-        @include media-breakpoint-down(md) {
-            display: none;
-        }
-    }
+  }
 }

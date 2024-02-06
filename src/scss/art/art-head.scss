@@ -1,66 +1,69 @@
+@import '../config/_media-breakpoints';
+@import '../config/vars';
+
 .art-head {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-    margin-top: 60px;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  margin-top: 60px;
+  position: relative;
+
+  @include media-breakpoint-down(lg) {
+    margin-top: calc(26px + (60 - 26) * ((100vw - 375px) / (1440 - 375)));
+    gap: calc(16px + (18 - 16) * ((100vw - 375px) / (1440 - 375)));
+  }
+
+  svg {
+    position: absolute;
+    left: 240px;
+    top: -13px;
+    width: 45px;
+    height: 65px;
 
     @include media-breakpoint-down(lg) {
-        margin-top: calc(26px + (60 - 26) * ((100vw - 375px)/(1440 - 375)));
-        gap: calc(16px + (18 - 16) * ((100vw - 375px)/(1440 - 375)));
+      width: calc(26px + (45 - 26) * ((100vw - 375px) / (1440 - 375)));
+      height: calc(36px + (65 - 36) * ((100vw - 375px) / (1440 - 375)));
     }
 
-    svg {
-        position: absolute;
-        left: 240px;
-        top: -13px;
-        width: 45px;
-        height: 65px;
-
-        @include media-breakpoint-down(lg) {
-            width: calc(26px + (45 - 26) * ((100vw - 375px)/(1440 - 375)));
-            height: calc(36px + (65 - 36) * ((100vw - 375px)/(1440 - 375)));
-        }
-
-        @include media-breakpoint-down(md) {
-            left: auto;
-            right: 140px;
-        }
-
-        @include media-breakpoint-down(sm) {
-            top: -20px;
-            right: 15px;
-        }
-
-        @include media-breakpoint-down(xs) {
-            right: -20px;
-        }
+    @include media-breakpoint-down(md) {
+      left: auto;
+      right: 140px;
     }
 
-    &__title {
-        color: $whiteTwo;
-        font-family: "ProximaNova";
-        font-size: clamp(36px, 5vw, 64px);
-        font-weight: 700;
-        line-height: 65px;
-
-        @include media-breakpoint-down(lg) {
-            line-height: calc(40px + (65 - 40) * ((100vw - 375px)/(1440 - 375)));
-        }
+    @include media-breakpoint-down(sm) {
+      top: -20px;
+      right: 15px;
     }
 
-    &__subtitle {
-        color: $whiteTwo;
-        font-family: "ProximaNova";
-        font-size: clamp(15px, 2.5vw, 16px);
-        font-weight: 400;
-        line-height: 28px;
-        max-width: 400px;
-        text-align: center;
-
-        @include media-breakpoint-down(lg) {
-            line-height: calc(24px + (28 - 24) * ((100vw - 375px)/(1440 - 375)));
-        }
+    @include media-breakpoint-down(xs) {
+      right: -20px;
     }
+  }
+
+  &__title {
+    color: $whiteTwo;
+    font-family: 'ProximaNova';
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 700;
+    line-height: 65px;
+
+    @include media-breakpoint-down(lg) {
+      line-height: calc(40px + (65 - 40) * ((100vw - 375px) / (1440 - 375)));
+    }
+  }
+
+  &__subtitle {
+    color: $whiteTwo;
+    font-family: 'ProximaNova';
+    font-size: clamp(15px, 2.5vw, 16px);
+    font-weight: 400;
+    line-height: 28px;
+    max-width: 400px;
+    text-align: center;
+
+    @include media-breakpoint-down(lg) {
+      line-height: calc(24px + (28 - 24) * ((100vw - 375px) / (1440 - 375)));
+    }
+  }
 }

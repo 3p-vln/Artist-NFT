@@ -1,0 +1,223 @@
+<div class="payment">
+    <div class="payment__form form">
+        <div class="form__head">
+            <h2 class="form__subtitle">PURCHASE</h2>
+            <h3 class="form__title">
+                Payment for
+                <span id="pay-name"></span>
+            </h3>
+        </div>
+        <div class="form__tabs tabs">
+            <div class="tabs__nav">
+                <button class="tabs__nav-btn" type="button" data-tab="#card">Credit card</button>
+                <button class="tabs__nav-btn" type="button" data-tab="#paypal">PayPal</button>
+                <button class="tabs__nav-btn" type="button" data-tab="#crypto">Crypto</button>
+                <div class="selector"></div>
+            </div>
+            <div class="tabs__content">
+                <div class="tabs__item" id="card">
+                    <form class="tabs__form form" autocomplete="off">
+                        <div class="form__item">
+                            <label class="form__item-label">Card number</label>
+                            <input
+                                type="text"
+                                class="form__item-input"
+                                id="card-numb"
+                                name="card-numb"
+                                placeholder="0000 0000 0000 0000"
+                                autocomplete="off"
+                            />
+                        </div>
+                        <div class="form__dete-and-cvv">
+                            <div class="form__item">
+                                <label class="form__item-label">Date</label>
+                                <input
+                                    type="text"
+                                    class="form__item-input"
+                                    id="date"
+                                    placeholder="01/01"
+                                    autocomplete="off"
+                                />
+                            </div>
+                            <div class="form__item">
+                                <label class="form__item-label">CVV</label>
+                                <input
+                                    type="password"
+                                    class="form__item-input"
+                                    id="cvv"
+                                    placeholder="000"
+                                    autocomplete="off"
+                                />
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <label class="form__item-label">Name on card</label>
+                            <input
+                                type="text"
+                                class="form__item-input"
+                                id="name"
+                                name="name"
+                                placeholder="Ivan Ivanov"
+                                autocomplete="off"
+                            />
+                        </div>
+                        <a href="#" class="form__send">
+                            <button class="form__send-btn btn gradient" type="submit">
+                                <p>Purchase</p>
+                            </button>
+                        </a>
+                        <div class="form__agree">
+                            <label class="form__agree-label">
+                                <input
+                                    type="checkbox"
+                                    class="form__agree-checkbox"
+                                    id="checkbox"
+                                    autocomplete="off"
+                                />
+                                <span class="form__agree-checkstyle"></span>
+                                I agree with<a href="#">Privacy Policy</a>and<a href="#"
+                                    >Terms of use</a
+                                >
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="tabs__item" id="paypal">
+                    <form class="tabs__form form" autocomplete="off">
+                        <div class="form__item">
+                            <label class="form__item-label">Card number</label>
+                            <input
+                                type="text"
+                                class="form__item-input"
+                                id="card-numb"
+                                name="card-numb"
+                                placeholder="0000 0000 0000 0000"
+                                autocomplete="off"
+                            />
+                        </div>
+                        <div class="form__dete-and-cvv">
+                            <div class="form__item">
+                                <label class="form__item-label">Date</label>
+                                <input
+                                    type="text"
+                                    class="form__item-input"
+                                    id="date"
+                                    placeholder="01/01"
+                                    autocomplete="off"
+                                />
+                            </div>
+                            <div class="form__item">
+                                <label class="form__item-label">CVV</label>
+                                <input
+                                    type="password"
+                                    class="form__item-input"
+                                    id="cvv"
+                                    placeholder="000"
+                                    autocomplete="off"
+                                />
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <label class="form__item-label">Name on card</label>
+                            <input
+                                type="text"
+                                class="form__item-input"
+                                id="name"
+                                name="name"
+                                placeholder="Ivan Ivanov"
+                                autocomplete="off"
+                            />
+                        </div>
+                        <a href="#" class="form__send">
+                            <button class="form__send-btn btn gradient" type="submit">
+                                <p>Purchase</p>
+                            </button>
+                        </a>
+                        <div class="form__agree">
+                            <label class="form__agree-label">
+                                <input
+                                    type="checkbox"
+                                    class="form__agree-checkbox"
+                                    id="checkbox"
+                                    autocomplete="off"
+                                />
+                                <span class="form__agree-checkstyle"></span>
+                                I agree with<a href="#">Privacy Policy</a>and<a href="#"
+                                    >Terms of use</a
+                                >
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="tabs__item" id="crypto">
+                    <form class="tabs__form form" autocomplete="off">
+                        <div class="form__item">
+                            <label class="form__item-label"
+                                >To purchase item by crypto you have to send money to this wallet.
+                                After 5 minute result will sent in your mail</label
+                            >
+                            <div class="form__copy">
+                                <p class="copy-text">EQBSSl0Xlo3...kkHTmFw5YVYOiWJ.</p>
+                                <a href="#" class="copy-btn">
+                                    <svg>
+                                        <use href="#copy"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <label class="form__item-label">E-mail</label>
+                            <input
+                                type="text"
+                                class="form__item-input"
+                                id="name"
+                                name="name"
+                                placeholder="Your e-mail"
+                                autocomplete="off"
+                            />
+                        </div>
+                        <a href="#" class="form__send">
+                            <button class="form__send-btn btn gradient" type="submit">
+                                <p>Check</p>
+                            </button>
+                        </a>
+                        <div class="form__agree">
+                            <label class="form__agree-label">
+                                <input
+                                    type="checkbox"
+                                    class="form__agree-checkbox"
+                                    id="checkbox"
+                                    autocomplete="off"
+                                />
+                                <span class="form__agree-checkstyle"></span>
+                                I agree with<a href="#">Privacy Policy</a>and<a href="#"
+                                    >Terms of use</a
+                                >
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="payment__about">
+        <div class="about">
+            <h3 class="about__title" id="art-name"></h3>
+            <div class="about__price">
+                <div class="price">
+                    <p class="price__text">PRICE</p>
+                    <p class="price__cost" id="price">$</p>
+                </div>
+                <div class="bid">
+                    <p>BID</p>
+                </div>
+            </div>
+            <h3 class="about__detailed">DETAILED INFO</h3>
+            <div class="detailed">
+                <p class="detailed__size">36 × 27 in <br />91.4 × 68.6 cm</p>
+                <p class="detailed__info">This work is part of a limited edition set.</p>
+            </div>
+            <p class="about__info" id="art-info"></p>
+        </div>
+    </div>
+</div>

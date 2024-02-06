@@ -4,7 +4,6 @@
 @import 'config/fonts';
 @import 'config/vars';
 @import 'config/reset';
-@import 'config/_media-breakpoints.scss';
 
 @import 'components/header';
 @import 'components/footer';
@@ -16,7 +15,7 @@ body {
   font-family: 'ProximaNova';
 }
 
-[ class*="__container"] {
+[class*='__container'] {
   margin: 0 auto;
   padding: 0 15px;
   max-width: $maxWidthContainer;

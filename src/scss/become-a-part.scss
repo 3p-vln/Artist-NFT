@@ -1,0 +1,15 @@
+@import 'style';
+@import 'become-a-part/background';
+@import 'become-a-part/part-of-team';
+@import 'become-a-part/our-benefits';
+@import 'main/contact';
+
+.page {
+    position: relative;
+
+    &__container {
+        position: relative;
+        z-index: 2;
+        margin-top: 113px;
+    }
+}
