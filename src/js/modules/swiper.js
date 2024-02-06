@@ -78,6 +78,11 @@ function premiumSwiper() {
     },
 
     breakpoints: {
+      320: {
+        slidesPerView: 1.15,
+        spaceBetween: 16,
+        loop: true,
+      },
       375: {
         slidesPerView: 1.15,
         spaceBetween: 16,

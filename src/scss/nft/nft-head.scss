@@ -23,6 +23,10 @@
         @include media-breakpoint-down(lg) {
             line-height: calc(40px + (65 - 40) * ((100vw - 375px) / (1440 - 375)));
         }
+
+        @include media-breakpoint-down(xs) {
+            padding-top: 12px;
+        }
     }
 
     &__subtitle {
@@ -50,12 +54,21 @@
         justify-content: center;
         align-items: center;
 
-        @media (max-width: 1100px) {
-            grid-template-columns: repeat(2, minmax(200px, 350px));
+        @include media-breakpoint-down(md) {
+            grid-template-columns: repeat(2, minmax(163px, 350px));
         }
 
-        @include media-breakpoint-down(sm) {
-            grid-template-columns: repeat(2, minmax(200px, 1fr));
+        @include media-breakpoint-down(xs) {
+            grid-template-columns: repeat(2, auto);
+            gap: 16px 20px;
+        }
+
+        @include media-breakpoint-down(xs) {
+            padding-top: 44px;
+        }
+
+        @include media-breakpoint-down(xxs) {
+            gap: 10px 10px;
         }
     }
 
@@ -65,20 +78,31 @@
         border-radius: 12px;
         background: $backgroundSecond;
         transition: transform 0.3s ease-in-out;
-        width: 350px;
-        // width: 437.5px;
-        // width: 350px;
-        // max-width: 350px;
+        max-width: 100%;
         height: 600px;
 
+        @include media-breakpoint-down(sm) {
+            height: 515px;
+        }
+
         @include media-breakpoint-down(xs) {
-            height: 450px;
+            min-height: 339px;
+            min-width: 163px;
+            width: 100%;
+            height: 100%;
+        }
+
+        @include media-breakpoint-down(xxs) {
+            min-height: 339px;
+            min-width: 143px;
+            width: 100%;
+            height: 100%;
         }
 
         &__nft {
             padding: 17px 0 0 20px;
             font-family: 'ProximaNova';
-            font-size: clamp(14px, 2.5vw, 18px);
+            font-size: clamp(12px, 2.5vw, 18px);
             font-weight: 700;
             line-height: 26.5px;
             letter-spacing: 1.8px;
@@ -90,31 +114,40 @@
 
             @include media-breakpoint-down(xs) {
                 letter-spacing: 1.4px;
-                padding: 26px 0 0 17px;
+                padding: 4px 0 0 11px;
                 order: 2;
                 max-width: 60px;
             }
         }
 
         &__item {
-            // width: 354px;
-            // height: 334px;
             height: 350px;
             padding: 40px 53px 70px;
             display: flex;
             justify-content: center;
             align-items: center;
 
-            @include media-breakpoint-down(xs) {
+            // @include media-breakpoint-down(sm) {
+            //     height: 163px;
+            //     padding: 10px;
+            // }
+
+            @include media-breakpoint-down(sm) {
                 height: 250px;
-                padding: 10px;
+                padding: 20px 35px;
+                // order: 1;
+            }
+
+            @include media-breakpoint-down(xs) {
+                height: 163px;
+                padding: 20px 35px;
                 order: 1;
             }
 
             &-img {
                 aspect-ratio: 1/1;
                 max-width: 264px;
-                width: 100%;
+                width: fit-content;
                 height: 100%;
                 border-radius: 50%;
                 -o-object-fit: cover;
@@ -130,22 +163,28 @@
         &__title {
             color: $whiteTwo;
             font-family: 'ProximaNova';
-            font-size: clamp(18px, 2.5vw, 20px);
+            font-size: clamp(13px, 2.5vw, 20px);
             font-weight: 700;
             line-height: 30px;
             padding: 35px 24px 0 24px;
 
             @include media-breakpoint-down(xs) {
                 order: 3;
-                padding: 0px 17px 0 17px;
-                transform: translateY(-3px);
+                padding: 0px 11px 0 11px;
+                line-height: 26.5px;
+                transform: translateY(-10px);
+            }
+
+            @include media-breakpoint-down(xxs) {
+                padding: 5px 11px 5px 11px;
+                line-height: 16.5px;
             }
         }
 
         &__paragraph {
             color: $gray6Color;
             font-family: 'ProximaNova';
-            font-size: clamp(12px, 2.5vw, 14px);
+            font-size: clamp(10px, 2.5vw, 14px);
             font-weight: 400;
             line-height: 21px;
             padding: 0 24px 20px 24px;
@@ -153,8 +192,9 @@
 
             @include media-breakpoint-down(xs) {
                 order: 4;
-                padding: 0 17px 10px 17px;
-                transform: translateY(-3px);
+                padding: 0 17px 0px 12px;
+                transform: translateY(-14px);
+                line-height: 15.5px;
             }
         }
 
@@ -168,13 +208,20 @@
 
             @include media-breakpoint-down(xs) {
                 order: 5;
-                padding: 9px 21px 17px 17px;
+                padding: 0px 11px 17px 11px;
+                align-items: start;
+                flex-direction: column;
+                transform: translateY(-10px);
+
+                a {
+                    width: 100%;
+                }
             }
 
             &-value {
                 color: $whiteTwo;
                 font-family: 'ProximaNova';
-                font-size: clamp(22px, 2.5vw, 26px);
+                font-size: clamp(14px, 2.5vw, 26px);
                 font-weight: 700;
                 line-height: 33.5px;
             }
@@ -190,14 +237,17 @@
                 background: $rainbowBtnGradient;
 
                 @include media-breakpoint-down(xs) {
-                    padding: 10px 20px;
+                    padding: 7px 15px;
                     border-radius: 8px;
+                    max-width: 100%;
+                    width: 100%;
+                    transform: translateY(1px);
                 }
 
                 p {
                     color: $background;
                     font-family: 'ProximaNova';
-                    font-size: 14px;
+                    font-size: clamp(12px, 2.5vw, 14px);
                     font-weight: 700;
                     line-height: 20px;
                 }
@@ -237,6 +287,10 @@
                 height: 1px;
                 opacity: 0.05;
                 background: $whiteTwo;
+
+                @include media-breakpoint-down(xs) {
+                    display: none;
+                }
             }
         }
     }

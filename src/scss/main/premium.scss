@@ -19,7 +19,10 @@
         border-radius: 24px;
         padding: 83px 110px;
         margin-bottom: 11px;
-        background: var(--additional, linear-gradient(95deg, #6880FF 9.27%, #3CA7F4 50.77%, #8C45FF 84.06%));
+        background: var(
+            --additional,
+            linear-gradient(95deg, #6880ff 9.27%, #3ca7f4 50.77%, #8c45ff 84.06%)
+        );
 
         @include media-breakpoint-down(md) {
             height: 550px;
@@ -60,7 +63,7 @@
 
             &__title {
                 color: $whiteTwo;
-                font-family: "ProximaNova";
+                font-family: 'ProximaNova';
                 font-size: clamp(26px, 2.5vw, 36px);
                 font-weight: 700;
                 line-height: 49.5px;
@@ -73,7 +76,7 @@
 
             &__paragraph {
                 color: $whiteTwo;
-                font-family: "ProximaNova";
+                font-family: 'ProximaNova';
                 font-size: clamp(15px, 2.5vw, 16px);
                 font-weight: 400;
                 line-height: 28px;
@@ -99,12 +102,11 @@
                 }
 
                 span {
-                    font-family: "ProximaNova";
+                    font-family: 'ProximaNova';
                     font-size: clamp(15px, 2.5vw, 18px);
                     background-clip: text;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
-
                 }
             }
         }
@@ -118,7 +120,6 @@
             @include media-breakpoint-down(md) {
                 bottom: 0;
                 right: 0;
-
             }
 
             &-img {
@@ -141,6 +142,11 @@
 
             @include media-breakpoint-down(xs) {
                 bottom: 15%;
+                transform: translateX(50%) scale(1.2);
+            }
+
+            @include media-breakpoint-down(xxs) {
+                bottom: 10%;
                 transform: translateX(50%) scale(1.2);
             }
 
@@ -240,7 +246,7 @@
 
         &__nft {
             padding: 17px 0 0 20px;
-            font-family: "ProximaNova";
+            font-family: 'ProximaNova';
             font-size: clamp(14px, 2.5vw, 18px);
             font-weight: 700;
             line-height: 26.5px;
@@ -257,10 +263,13 @@
                 order: 2;
                 max-width: 60px;
             }
+
+            @include media-breakpoint-down(xxs) {
+                padding: 6px 0 0 17px;
+            }
         }
 
         &__item {
-
             // width: 354px;
             // height: 334px;
             height: 350px;
@@ -271,14 +280,14 @@
 
             @include media-breakpoint-down(xs) {
                 height: 250px;
-                padding: 10px;
+                padding: 20px 35px;
                 order: 1;
             }
 
             &-img {
                 aspect-ratio: 1/1;
                 max-width: 264px;
-                width: 100%;
+                width: fit-content;
                 height: 100%;
                 border-radius: 50%;
                 -o-object-fit: cover;
@@ -293,7 +302,7 @@
 
         &__title {
             color: $whiteTwo;
-            font-family: "ProximaNova";
+            font-family: 'ProximaNova';
             font-size: clamp(18px, 2.5vw, 20px);
             font-weight: 700;
             line-height: 30px;
@@ -308,16 +317,16 @@
 
         &__paragraph {
             color: $gray6Color;
-            font-family: "ProximaNova";
+            font-family: 'ProximaNova';
             font-size: clamp(12px, 2.5vw, 14px);
             font-weight: 400;
             line-height: 21px;
-            padding: 0 24px 20px 24px; 
+            padding: 0 24px 20px 24px;
             max-width: 350px;
 
             @include media-breakpoint-down(xs) {
                 order: 4;
-                padding: 0 17px 10px 17px; 
+                padding: 0 17px 10px 17px;
                 transform: translateY(-3px);
             }
         }
@@ -337,7 +346,7 @@
 
             &-value {
                 color: $whiteTwo;
-                font-family: "ProximaNova";
+                font-family: 'ProximaNova';
                 font-size: clamp(22px, 2.5vw, 26px);
                 font-weight: 700;
                 line-height: 33.5px;
@@ -360,14 +369,18 @@
 
                 p {
                     color: $background;
-                    font-family: "ProximaNova";
+                    font-family: 'ProximaNova';
                     font-size: 14px;
                     font-weight: 700;
                     line-height: 20px;
                 }
                 &::before {
-                    content: "";
-                    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+                    content: '';
+                    background: linear-gradient(
+                        90deg,
+                        rgba(255, 255, 255, 0.1),
+                        rgba(255, 255, 255, 0.5)
+                    );
                     height: 100px;
                     width: 50px;
                     position: absolute;
@@ -375,12 +388,12 @@
                     left: -95px;
                     transform: skewX(-45deg);
                 }
-        
+
                 &:hover {
                     &::before {
                         left: 130%;
-                        transition: left .5s ease-in-out;
-        
+                        transition: left 0.5s ease-in-out;
+
                         @include media-breakpoint-down(sm) {
                             display: none;
                         }
