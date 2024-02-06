@@ -57,6 +57,7 @@
     &__button{
       outline: none;
       background: none;
+      // background: transparent;
       color: $whiteColor;
       width: 129px;
       display: flex;
@@ -69,6 +70,7 @@
       line-height: 24px;
       border-radius: 12px;
       // line-height: 175%;
+      transition: background 1000ms linear, color 300ms linear;
 
       &_active {
         background: $rainbowBtnGradient;
@@ -76,15 +78,11 @@
         font-weight: 400;
         // line-height: 133%;
         color: $background;
-        &_hover {
-          &:hover {
-            background: $hoverBtn;
-          }
-        }
       }
 
       @include media-breakpoint-down(xs) {
         font-size: 14px;
+        width: 164px;
       }
     }
   }
@@ -147,10 +145,14 @@
   }
 
   &__accaunt {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    align-items: center;
+    display: none;
+
+    &_visible {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      align-items: center;
+    }
   }
 
   &__text {
@@ -169,15 +171,24 @@
   }
 
   .roles {
-    display: none;
+    opacity: 0;
+    max-height: 0;
+    transition: max-height 300ms linear, opacity 200ms linear;
+    width: 258px;
+    // margin: 0 auto 29px 0;
+    // transition: $standartTrans;
 
     &_visible {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
+      opacity: 1;
+      
+      margin: 0 auto 29px 0;
+      display: block;
     }
-   
+
+    @include media-breakpoint-down(xs) {
+      width: 345px;
+      margin: 0 auto 29px;
+    }
 
 
     &__text {
@@ -186,6 +197,7 @@
       line-height: 150%;
       color: $gray6Color;
       text-align: left;
+      margin-bottom: 15px;
     }
 
     &__box {
@@ -208,11 +220,19 @@
       background: $backgroundSecond;
       border: 1px solid #525960;
       cursor: pointer;
+      transition: opacity 300ms linear;
+
+      &:before {
+        opacity: 0;
+      }
+      
 
       &_active {
         position: relative;
+
         &::before {
           content: "";
+          opacity: 1;
           width: 14px;
           height: 14px;
           background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
