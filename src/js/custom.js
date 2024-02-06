@@ -1,19 +1,18 @@
 import $ from 'jquery';
 import { db } from './modules/firebase';
 import { collection, getDocs } from 'firebase/firestore';
-import { customLoad } from './custom/customLoad';
-
+import { artLoad } from './art/artLoad';
 
 async function snap() {
-  const querySnapshot = await getDocs(collection(db, "art"));
+  const querySnapshot = await getDocs(collection(db, 'art'));
   querySnapshot.forEach((doc) => {
-    new customLoad(doc.data(), doc.id);
+    new artLoad(doc.data(), doc.id, '.custom-mesh');
   });
 }
 snap();
 
 async function snap2() {
-  const querySnapshot = await getDocs(collection(db, "custom"));
+  const querySnapshot = await getDocs(collection(db, 'custom'));
   querySnapshot.forEach((doc) => {
     const data = doc.data();
     document.querySelector('#clother-webp').srcset = data.imgWebP;
@@ -40,17 +39,17 @@ function focus() {
 focus();
 
 async function selectLoad() {
-  const querySnapshot = await getDocs(collection(db, "clothers"));
+  const querySnapshot = await getDocs(collection(db, 'clothers'));
   querySnapshot.forEach((doc) => {
     const data = doc.data();
     console.log(doc.id);
-    if(doc.id == "type"){
+    if (doc.id == 'type') {
       document.querySelector('#hoodie').innerHTML = data.hoodie;
-      document.querySelector('#shitr').innerHTML = data.shitr;  
-      document.querySelector('#sweater').innerHTML = data.sweater;  
-      document.querySelector('#t-shitr').innerHTML = data.tShitr;  
+      document.querySelector('#shitr').innerHTML = data.shitr;
+      document.querySelector('#sweater').innerHTML = data.sweater;
+      document.querySelector('#t-shitr').innerHTML = data.tShitr;
     }
-    if(doc.id == "size"){
+    if (doc.id == 'size') {
       document.querySelector('#xs').innerHTML = data.xs;
       document.querySelector('#s').innerHTML = data.s;
       document.querySelector('#m').innerHTML = data.m;

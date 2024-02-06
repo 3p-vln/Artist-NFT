@@ -2,166 +2,191 @@
 @import '../config/vars';
 
 .btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+
+  &::before {
+    content: '';
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.5)
+    );
+    height: 100px;
+    width: 50px;
+    position: absolute;
+    top: 0px;
+    left: -95px;
+    transform: skewX(-45deg);
+  }
+
+  &:hover {
+    &::before {
+      left: 130%;
+      transition: left 0.5s ease-in-out;
+
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+  }
+
+  &.black {
+    padding: 18px 31px 19px 30px;
+    background: var(--background, #1d1f21);
+    gap: 5px;
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+
+    @include media-breakpoint-down(xs) {
+      width: auto;
+    }
+
+    span {
+      font-family: 'ProximaNova';
+      font-weight: 700;
+      line-height: 26.5px;
+      background: var(
+        --primary,
+        linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%)
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &.gradient {
+    gap: 8px;
+    padding: 18px 22px 19px 22px;
+    background: var(
+      --primary,
+      linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%)
+    );
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
 
     &::before {
-        content: "";
-        background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
-        height: 100px;
-        width: 50px;
-        position: absolute;
-        top: 0px;
-        left: -95px;
-        transform: skewX(-45deg);
+      content: '';
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.5)
+      );
+      height: 100px;
+      width: 50px;
+      position: absolute;
+      top: 0px;
+      left: -95px;
+      transform: skewX(-45deg);
     }
 
     &:hover {
-        &::before {
-            left: 130%;
-            transition: left .5s ease-in-out;
+      &::before {
+        left: 130%;
+        transition: left 0.5s ease-in-out;
 
-            @include media-breakpoint-down(sm) {
-                display: none;
-            }
+        @include media-breakpoint-down(sm) {
+          display: none;
         }
+      }
     }
 
-    &.black {
-        padding: 18px 31px 19px 30px;
-        background: var(--background, #1D1F21);
-        gap: 5px;
-
-        @include media-breakpoint-down(md) {
-            width: 100%;
-        }
-
-        @include media-breakpoint-down(xs) {
-            width: auto;
-        }
-
-        span {
-            font-family: "ProximaNova";
-            font-weight: 700;
-            line-height: 26.5px;
-            background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        svg {
-            width: 24px;
-            height: 24px;
-        }
+    @include media-breakpoint-down(md) {
+      padding: 12px 30px 13px 28px;
     }
 
-    &.gradient {
-        gap: 8px;
-        padding: 18px 22px 19px 22px;
-        background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
+    svg {
+      width: 24px;
+      height: 24px;
 
-        svg {
-            width: 24px;
-            height: 24px;
-        }
-
-        &::before {
-            content: "";
-            background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
-            height: 100px;
-            width: 50px;
-            position: absolute;
-            top: 0px;
-            left: -95px;
-            transform: skewX(-45deg);
-        }
-
-        &:hover {
-            &::before {
-                left: 130%;
-                transition: left .5s ease-in-out;
-
-                @include media-breakpoint-down(sm) {
-                    display: none;
-                }
-            }
-        }
-
-        @include media-breakpoint-down(md) {
-            padding: 12px 30px 13px 28px;
-        }
-
-        svg {
-            width: 24px;
-            height: 24px;
-
-            @include media-breakpoint-down(lg) {
-                width: calc(18px + (24 - 18) * ((100vw - 375px)/(1440 - 375)));
-                height: calc(18px + (24 - 18) * ((100vw - 375px)/(1440 - 375)));
-            }
-        }
-
-        span {
-            color: #1D1F21;
-            font-weight: 700;
-            line-height: 26.5px;
-        }
+      @include media-breakpoint-down(lg) {
+        width: calc(18px + (24 - 18) * ((100vw - 375px) / (1440 - 375)));
+        height: calc(18px + (24 - 18) * ((100vw - 375px) / (1440 - 375)));
+      }
     }
 
-    &.grey {
-        gap: 8px;
-        padding: 14px 22px;
-        background: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.10) 9.27%, rgba(209, 181, 255, 0.10) 84.06%));
-
-        svg {
-            width: 24px;
-            height: 24px;
-        }
-
-        &::before {
-            content: "";
-            background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
-            height: 100px;
-            width: 50px;
-            position: absolute;
-            top: 0px;
-            left: -95px;
-            transform: skewX(-45deg);
-        }
-
-        &:hover {
-            &::before {
-                left: 130%;
-                transition: left .5s ease-in-out;
-
-                @include media-breakpoint-down(sm) {
-                    display: none;
-                }
-            }
-        }
-
-        @include media-breakpoint-down(md) {
-            padding: 12px 30px 13px 28px;
-        }
-
-        svg {
-            width: 24px;
-            height: 24px;
-
-            @include media-breakpoint-down(lg) {
-                width: calc(18px + (24 - 18) * ((100vw - 375px)/(1440 - 375)));
-                height: calc(18px + (24 - 18) * ((100vw - 375px)/(1440 - 375)));
-            }
-        }
-
-        span {
-            font-weight: 700;
-            // line-height: 26.5px;
-        }
+    span {
+      color: #1d1f21;
+      font-weight: 700;
+      line-height: 26.5px;
     }
+  }
+
+  &.grey {
+    gap: 8px;
+    padding: 14px 22px;
+    background: var(
+      --linear-10,
+      linear-gradient(
+        95deg,
+        rgba(104, 201, 255, 0.1) 9.27%,
+        rgba(209, 181, 255, 0.1) 84.06%
+      )
+    );
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    &::before {
+      content: '';
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.5)
+      );
+      height: 100px;
+      width: 50px;
+      position: absolute;
+      top: 0px;
+      left: -95px;
+      transform: skewX(-45deg);
+    }
+
+    &:hover {
+      &::before {
+        left: 130%;
+        transition: left 0.5s ease-in-out;
+
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: 12px 30px 13px 28px;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+
+      @include media-breakpoint-down(lg) {
+        width: calc(18px + (24 - 18) * ((100vw - 375px) / (1440 - 375)));
+        height: calc(18px + (24 - 18) * ((100vw - 375px) / (1440 - 375)));
+      }
+    }
+
+    span {
+      font-weight: 700;
+      // line-height: 26.5px;
+    }
+  }
 }

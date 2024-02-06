@@ -15,7 +15,7 @@ body {
   font-family: 'ProximaNova';
 }
 
-[ class*="__container"] {
+[class*='__container'] {
   margin: 0 auto;
   padding: 0 15px;
   max-width: $maxWidthContainer;

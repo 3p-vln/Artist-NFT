@@ -1,10 +1,9 @@
 import $ from 'jquery';
 
 export function premiumLoad(data, id) {
+  const premium = $('.premium-wrapper');
 
-    const premium = $('.premium-wrapper');
-
-    premium.append(`
+  premium.append(`
                 <div class="swiper-slide premium-slide ${id}">
                     <h2 class="premium-slide__nft">${data.cardNftText}</h2>
                     <div class="premium-slide__item">
@@ -22,5 +21,5 @@ export function premiumLoad(data, id) {
                     </div>
                 </div>
                 `);
-    // console.log(premium)
+  // console.log(premium)
 }

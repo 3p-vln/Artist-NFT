@@ -5,16 +5,16 @@
 @import 'custom/custom-form';
 
 .page {
-    background: $background;
+  background: $background;
+  position: relative;
+
+  &__container {
     position: relative;
+    z-index: 2;
+    margin-top: 85px;
 
-    &__container {
-        position: relative;
-        z-index: 2;
-        margin-top: 85px;
-
-        @include media-breakpoint-down(md){
-            margin-top: 125px;
-        }
+    @include media-breakpoint-down(md) {
+      margin-top: 125px;
     }
+  }
 }
