@@ -11,26 +11,26 @@
     position: relative;
 
     @include media-breakpoint-down(lg) {
-        margin-top: calc(26px + (60 - 26) * ((100vw - 375px)/(1440 - 375)));
-        gap: calc(16px + (18 - 16) * ((100vw - 375px)/(1440 - 375)));
+        margin-top: calc(26px + (60 - 26) * ((100vw - 375px) / (1440 - 375)));
+        gap: calc(16px + (18 - 16) * ((100vw - 375px) / (1440 - 375)));
     }
 
     &__title {
         text-align: center;
         color: $whiteTwo;
-        font-family: "ProximaNova";
+        font-family: 'ProximaNova';
         font-size: clamp(36px, 5vw, 64px);
         font-weight: 700;
         line-height: 65px;
 
         @include media-breakpoint-down(lg) {
-            line-height: calc(40px + (65 - 40) * ((100vw - 375px)/(1440 - 375)));
+            line-height: calc(40px + (65 - 40) * ((100vw - 375px) / (1440 - 375)));
         }
     }
 
     &__subtitle {
         color: $whiteTwo;
-        font-family: "ProximaNova";
+        font-family: 'ProximaNova';
         font-size: clamp(15px, 2.5vw, 16px);
         font-weight: 400;
         line-height: 28px;
@@ -38,7 +38,7 @@
         text-align: center;
 
         @include media-breakpoint-down(lg) {
-            line-height: calc(24px + (28 - 24) * ((100vw - 375px)/(1440 - 375)));
+            line-height: calc(24px + (28 - 24) * ((100vw - 375px) / (1440 - 375)));
         }
     }
 }

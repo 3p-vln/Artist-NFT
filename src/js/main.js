@@ -1,4 +1,5 @@
 // document.addEventListener("DOMContentLoaded", () => {
+//     import { premiumSwiper(); } from './main/premium';
 // });
 
 import stockSwiper from './modules/swiper';
@@ -8,7 +9,6 @@ import setMouseParalaxStyle from './modules/paralax';
 import { snapBiography } from './main/biography';
 import { snapPremium } from './main/premium';
 import premiumSwiper from './modules/swiper';
-
 
 import { validate } from './main/contactValidate';
 

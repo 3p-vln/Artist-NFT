@@ -6,5 +6,5 @@ import { tab } from './pay/tabs';
 import { copytext } from './pay/copy';
 
 document.querySelector('copy-btn').addEventListener('click', function () {
-    copytext('.form__copy')
-})
+  copytext('.form__copy');
+});
