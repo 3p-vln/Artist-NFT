@@ -3,6 +3,7 @@ import { db } from './modules/firebase';
 import { collection, getDocs } from 'firebase/firestore';
 import { artLoad } from './art/artLoad';
 import { validate } from './custom/customValidate';
+import { focus } from './art/focus';
 
 async function snap() {
     const querySnapshot = await getDocs(collection(db, 'art'));
@@ -12,7 +13,7 @@ async function snap() {
 }
 snap();
 
-async function snap2() {
+async function imgLoad() {
     const querySnapshot = await getDocs(collection(db, 'custom'));
     querySnapshot.forEach(doc => {
         const data = doc.data();
@@ -20,24 +21,7 @@ async function snap2() {
         document.querySelector('#clother-img').src = data.img;
     });
 }
-snap2();
-
-function focus() {
-    $('.custom-mesh').on('click mouseenter', '.card', event => {
-        $('.active').removeClass('active');
-        const clickedElement = $(event.currentTarget);
-        clickedElement.addClass('active');
-        clickedElement.find('.btn').removeClass('btn_active');
-        setTimeout(function () {
-            clickedElement.find('.btn').addClass('btn_active');
-        }, 1);
-    });
-
-    $('.custom-mesh').on('mouseleave', '.card', () => {
-        $('.active').removeClass('active');
-    });
-}
-focus();
+imgLoad();
 
 async function selectLoad() {
     const querySnapshot = await getDocs(collection(db, 'clothers'));
@@ -63,3 +47,5 @@ async function selectLoad() {
 }
 
 selectLoad();
+
+focus('.custom-mesh');
