@@ -95,6 +95,10 @@
         @include media-breakpoint-down(xs) {
             transform: scale(0.8) translateY(-64px) translateX(-37px);
         }
+
+        @include media-breakpoint-down(xs) {
+            transform: scale(0.8) translateY(-64px) translateX(-17px);
+        }
     }
 
     &__image {
@@ -184,6 +188,11 @@
             transform: translateX(0px) translateY(-72px);
             line-height: 24px;
         }
+
+        @include media-breakpoint-down(xxs) {
+            max-width: 300px;
+            transform: translateX(5px) translateY(-72px);
+        }
     }
 
     .columns-swiper {
@@ -199,6 +208,11 @@
 
         @include media-breakpoint-down(xs) {
             transform: translateX(-5px) translateY(-68px);
+            line-height: 24px;
+        }
+
+        @include media-breakpoint-down(xxs) {
+            transform: translateX(25px) translateY(-68px);
             line-height: 24px;
         }
 
@@ -235,6 +249,14 @@
 
                     &:nth-child(3) {
                         margin-right: 40px;
+                    }
+                }
+
+                @include media-breakpoint-down(xxs) {
+                    max-width: 131px;
+
+                    &:nth-child(3) {
+                        margin-right: 85px;
                     }
                 }
 

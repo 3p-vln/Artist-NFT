@@ -22,10 +22,7 @@
         border-radius: 24px;
         padding: 83px 110px;
         margin-bottom: 11px;
-        background: var(
-            --additional,
-            linear-gradient(95deg, #6880ff 9.27%, #3ca7f4 50.77%, #8c45ff 84.06%)
-        );
+        background: var(--additional, linear-gradient(95deg, #6880ff 9.27%, #3ca7f4 50.77%, #8c45ff 84.06%));
 
         @include media-breakpoint-down(md) {
             height: 550px;
@@ -145,6 +142,11 @@
 
             @include media-breakpoint-down(xs) {
                 bottom: 15%;
+                transform: translateX(50%) scale(1.2);
+            }
+
+            @include media-breakpoint-down(xxs) {
+                bottom: 10%;
                 transform: translateX(50%) scale(1.2);
             }
 
@@ -274,14 +276,14 @@
 
             @include media-breakpoint-down(xs) {
                 height: 250px;
-                padding: 10px;
+                padding: 20px 35px;
                 order: 1;
             }
 
             &-img {
                 aspect-ratio: 1/1;
                 max-width: 264px;
-                width: 100%;
+                width: fit-content;
                 height: 100%;
                 border-radius: 50%;
                 -o-object-fit: cover;
@@ -301,6 +303,10 @@
             font-weight: 700;
             line-height: 30px;
             padding: 35px 24px 0 24px;
+
+            @include media-breakpoint-down(md) {
+                padding: 15px 24px 0 24px;
+            }
 
             @include media-breakpoint-down(xs) {
                 order: 3;
@@ -370,11 +376,7 @@
                 }
                 &::before {
                     content: '';
-                    background: linear-gradient(
-                        90deg,
-                        rgba(255, 255, 255, 0.1),
-                        rgba(255, 255, 255, 0.5)
-                    );
+                    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5));
                     height: 100px;
                     width: 50px;
                     position: absolute;
