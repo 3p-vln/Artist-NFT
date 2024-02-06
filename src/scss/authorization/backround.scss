@@ -1,0 +1,61 @@
+@import '../config/_media-breakpoints';
+@import '../config/vars';
+
+.background {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  // margin-top: 65px;
+
+  &__blur-left {
+    position: absolute;
+    left: 0;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  &__blur-right {
+    position: absolute;
+    right: 0;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  &__svg {
+    width: 46px;
+    height: 62px;
+    position: absolute;
+    top: 31%;
+    left: 20%;
+
+    @include media-breakpoint-down(sm) {
+      top: 24%;
+      left: 7%;
+    }
+
+    @include media-breakpoint-down(xs) {
+      top: 8%;
+      left: 0%;
+    }
+  }
+
+  &__blur-mobile {
+    display: none;
+
+    @include media-breakpoint-down(sm) {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      // transform: rotate(-180deg);
+      width: 100%;
+    }
+  }
+}
