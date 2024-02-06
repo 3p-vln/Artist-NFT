@@ -17,30 +17,18 @@ $mainWeight: 400; // !указать здесь основное начерта�
 $headerHeight: 100;
 $footerHeight: 100;
 
-$background: var(--background, #1d1f21);
+$background: #1d1f21;
 $whiteColor: #fff;
 $whiteTwo: #fcffff;
 $blackColor: #000;
-$backgroundSecond: var(--frames, #212426);
+$backgroundSecond: #212426;
 $mainDarkColor: #333;
 $gray3Color: #828282;
 $gray4Color: #bdbdbd;
 $gray5Color: #e0e0e0;
-$gray6Color: var(--secondary, #c8d2dc);
-$cheryColor: #956d84; //Бавзовий вишневий колір(колір, шрифтів, кнпок, фону...z)
-$redColor: #e72222; //Колір бордеру блоку знижок на картці товару
-$yellowColor: #f8e582; //Колір зірок на картці товару
-$greenColor: var(
-  --secondary,
-  #c5ff98
-); // цвет для оплаты или для первого мейн свайпера
-$greenBg: var(
-  --10-secondary,
-  rgba(197, 255, 152, 0.1)
-); // цвет бєка для оплаты или для первого мейн свайпера
-
-$firstAccentColor: $blackColor;
-$secondAccentColor: $redColor;
+$gray6Color: #c8d2dc;
+$greenColor: #c5ff98; // цвет для оплаты или для первого мейн свайпера
+$greenBg: rgba(197, 255, 152, 0.1); // цвет бєка для оплаты или для первого мейн свайпера
 
 $fontFamily: $mainFont, sans-serif; // Семейство шрифта по умолчанию
 $fontColor: $blackColor; // Цвет шрифта по умолчанию
@@ -51,26 +39,16 @@ $standartTrans: all 280ms ease-in-out 0ms;
 
 $btnBoxShadow: 0px 2px 3px rgba(#000, 10%), 0px 8px 3px rgba(#000, 10%);
 
-$lightBoxShadow: 0 0 2px 0 rgba(#000, 10%), 0 0 4px 0 rgba(#000, 10%),
-  0 0 8px 0 rgba(#000, 10%);
+$lightBoxShadow: 0 0 2px 0 rgba(#000, 10%), 0 0 4px 0 rgba(#000, 10%), 0 0 8px 0 rgba(#000, 10%);
 
-$hoverBoxShadow: 0 0 5px 0 rgba(#000, 10%), 0 0 10px 0 rgba(#000, 10%),
-  0 0 15px 0 rgba(#000, 10%);
+$hoverBoxShadow: 0 0 5px 0 rgba(#000, 10%), 0 0 10px 0 rgba(#000, 10%), 0 0 15px 0 rgba(#000, 10%);
 
-$hoverBtn: linear-gradient(
-  90deg,
-  rgba(255, 255, 255, 0.1),
-  rgba(255, 255, 255, 0.5)
-);
+$hoverBtn: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5));
 $rainbowBtnGradient: var(
-  --primary,
-  linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%)
+    --primary,
+    linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%)
 ); // яркий градиент
 $darkerGradientBtn: var(
-  --linear-10,
-  linear-gradient(
-    95deg,
-    rgba(104, 201, 255, 0.1) 9.27%,
-    rgba(209, 181, 255, 0.1) 84.06%
-  )
+    --linear-10,
+    linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%)
 ); // темный градиент

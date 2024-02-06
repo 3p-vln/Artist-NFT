@@ -2,116 +2,112 @@
 @import '../config/vars';
 
 .select {
-  &__content {
-    position: relative;
-  }
-
-  &__input-hidden {
-    display: none;
-  }
-
-  &__btn-clicked {
-    border: 2px #26489a solid;
-    box-shadow: 0 0 0.8em #26489a;
-    transition: box-shadow 0.5 ease-in-out;
-  }
-
-  &__btn {
-    width: 100%;
-    color: $whiteTwo;
-    border-radius: 9px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 20px 20px 32px;
-    background: $backgroundSecond;
-    font-family: 'ProximaNova';
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 21px;
-    cursor: pointer;
-    transition: all 0.5 ease-in-out;
-
-    &_p {
-      margin: 0;
-      display: none;
-
-      &--active {
-        display: block;
-        pointer-events: none;
-      }
+    &__content {
+        position: relative;
     }
 
-    &_after {
-      pointer-events: none;
-      width: 24px;
-      height: 24px;
-      transition: transform 0.3s ease-in-out;
-
-      svg {
-        width: 100%;
-        height: 100%;
-      }
-
-      &--active {
-        transform: rotate(180deg);
-      }
-    }
-  }
-
-  &__list {
-    color: $whiteTwo;
-    background: $backgroundSecond;
-    width: 100%;
-    position: absolute;
-    top: 115%;
-    z-index: 15;
-    display: none;
-    font-family: 'ProximaNova';
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 21px;
-    border: 1px solid #6d787f;
-    border-radius: 9px;
-    max-height: 206px;
-    overflow: auto;
-    cursor: pointer;
-
-    &::-webkit-scrollbar {
-      width: 4px;
-      height: 4px;
-      background-color: #6d787f;
-      border-radius: 50%;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background: var(
-        --primary,
-        linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%)
-      );
-      border-radius: 12px;
-      width: 100%;
-    }
-
-    &-item {
-      width: 100%;
-      padding: 15px 20px 15px 32px;
-
-      &::before {
+    &__input-hidden {
         display: none;
-      }
-
-      &:hover {
-        background-color: #ebebebb0;
-      }
     }
 
-    &--visible {
-      display: block;
+    &__btn-clicked {
+        box-shadow: 0 0 10px 2px #26489a;
+        transition: box-shadow 0.5 ease-in-out;
     }
 
-    .active {
-      display: block;
+    &__btn {
+        width: 100%;
+        color: $whiteTwo;
+        border-radius: 9px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 20px 20px 32px;
+        background: $backgroundSecond;
+        font-family: 'ProximaNova';
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 21px;
+        cursor: pointer;
+        transition: all 0.5 ease-in-out;
+
+        &_p {
+            margin: 0;
+            display: none;
+
+            &--active {
+                display: block;
+                pointer-events: none;
+            }
+        }
+
+        &_after {
+            pointer-events: none;
+            width: 24px;
+            height: 24px;
+            transition: transform 0.3s ease-in-out;
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+
+            &--active {
+                transform: rotate(180deg);
+            }
+        }
     }
-  }
+
+    &__list {
+        color: $whiteTwo;
+        background: $backgroundSecond;
+        width: 100%;
+        position: absolute;
+        top: 115%;
+        z-index: 15;
+        display: none;
+        font-family: 'ProximaNova';
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 21px;
+        border: 1px solid #6d787f;
+        border-radius: 9px;
+        max-height: 206px;
+        overflow: auto;
+        cursor: pointer;
+
+        &::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+            background-color: #6d787f;
+            border-radius: 50%;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
+            border-radius: 12px;
+            width: 100%;
+        }
+
+        &-item {
+            width: 100%;
+            padding: 15px 20px 15px 32px;
+
+            &::before {
+                display: none;
+            }
+
+            &:hover {
+                background-color: #ebebebb0;
+            }
+        }
+
+        &--visible {
+            display: block;
+        }
+
+        .active {
+            display: block;
+        }
+    }
 }
