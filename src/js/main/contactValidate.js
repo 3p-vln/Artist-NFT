@@ -73,12 +73,16 @@ export function validate() {
             // },
         ]);
 
-    form.addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent the default form submission
-        if (validate.validate()) {
-            // Если валидация успешна, сбросить значения полей
-            form.reset();
-        }
+    // form.addEventListener('submit', function (event) {
+    //     event.preventDefault(); // Prevent the default form submission
+    //     if (validate.validate()) {
+    //         // Если валидация успешна, сбросить значения полей
+    //         form.reset();
+    //     }
+    // });
+
+    validate.onSuccess(event => {
+        form.reset();
     });
 }
 

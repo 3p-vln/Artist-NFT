@@ -11,7 +11,7 @@ const wrapper = document.querySelector('wrapper');
 export async function snapPremiumSwiper() {
     const querySnapshot = await getDocs(collection(db, 'main-swiper'));
     querySnapshot.forEach(doc => {
-        new premiumLoad(doc.data(), doc.id);
+        premiumLoad(doc.data(), doc.id);
     });
     // console.log(querySnapshot);
 
