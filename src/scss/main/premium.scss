@@ -207,6 +207,9 @@
         padding-left: 15px;
         padding-right: 15px;
         padding-bottom: 24px;
+        display: flex;
+        align-items: start;
+        // transform: translateX(-50%);
 
         @include media-breakpoint-down(xs) {
             padding-top: 14px;
@@ -219,7 +222,7 @@
     &-wrapper {
         width: 100%;
         display: flex;
-        transform: translate3d(0px, 0px, 0px, 0px);
+        transform: translate3d(0px, 0px, 0px, 0px) translateX(-50%);
         align-items: start;
         justify-content: start;
     }

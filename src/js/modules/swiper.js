@@ -3,7 +3,7 @@ import Swiper from 'swiper';
 import { Navigation, Pagination, Autoplay, Scrollbar } from 'swiper/modules';
 Swiper.use([Navigation, Pagination, Autoplay, Scrollbar]);
 
-function biographySwiper() {
+export function biographySwiper() {
     let swiper = new Swiper('.columns-swiper', {
         slidesPerView: 'auto',
         breakpoints: {
@@ -20,9 +20,9 @@ function biographySwiper() {
         },
     });
 }
-biographySwiper();
+// biographySwiper();
 
-function premiumSwiper() {
+export function premiumSwiper() {
     new Swiper('.premium-swiper', {
         loop: true,
         centeredSlides: true,
@@ -63,4 +63,4 @@ function premiumSwiper() {
         },
     });
 }
-premiumSwiper();
+// premiumSwiper();
