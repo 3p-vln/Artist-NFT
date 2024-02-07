@@ -1,9 +1,8 @@
 const tabButtons = document.querySelectorAll('.tabs__button');
-console.log(tabButtons);
 const roles = document.querySelector('.roles');
-console.log(roles);
 const checkLabeles = document.querySelectorAll('.roles__check-label');
 const tabAccaunts = document.querySelectorAll('.authorization__accaunt');
+const autBlock = document.querySelector('.authorization');
 
 tabButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -20,9 +19,11 @@ tabButtons.forEach(button => {
         if (tabButtons[1].classList.contains('tabs__button_active')) {
             roles.classList.add('roles_visible');
             roles.style.maxHeight = roles.scrollHeight + 'px';
+            autBlock.classList.add('authorization_log');
         } else {
             roles.classList.remove('roles_visible');
             roles.style.maxHeight = null;
+            autBlock.classList.remove('authorization_log');
         }
 
         tabAccaunts.forEach(tab => {
