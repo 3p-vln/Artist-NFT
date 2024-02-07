@@ -48,6 +48,3 @@ checkLabeles.forEach(label => {
 });
 
 tabButtons[0].click();
-
-
-console.log('work')
