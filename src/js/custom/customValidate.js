@@ -1,6 +1,6 @@
 import JustValidate from 'just-validate';
 
-function validate() {
+export function validate() {
     const form = document.querySelector('#form');
     const validate = new JustValidate('#form', {
         errorLabelStyle: {
@@ -35,5 +35,3 @@ function validate() {
         }
     });
 }
-
-validate();

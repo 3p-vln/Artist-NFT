@@ -2,7 +2,7 @@ import $ from 'jquery';
 import { db } from '../modules/firebase';
 import { collection, getDocs } from 'firebase/firestore';
 
-async function getPayInfo() {
+export async function getPayInfo() {
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get('id');
     const productCategory = urlParams.get('name');
@@ -39,5 +39,3 @@ async function getPayInfo() {
     document.querySelector('#price').innerHTML = art[0].price;
     document.querySelector('#art-info').innerHTML = art[0].text;
 }
-
-getPayInfo();

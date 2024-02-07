@@ -1,4 +1,4 @@
-function tab() {
+export function tab() {
   const tabsBtn = document.querySelectorAll('.tabs__nav-btn');
   const tabsItems = document.querySelectorAll('.tabs__item');
 
@@ -26,4 +26,3 @@ function tab() {
   document.querySelector('.tabs__nav-btn').click();
 }
 
-tab();

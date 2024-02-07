@@ -15,4 +15,3 @@ export function focus(content) {
         $('.active').removeClass('active');
     });
 }
-// focus(con);
