@@ -5,8 +5,11 @@
 <body>
   @@include('html/modules/preloader.html')
   <div class="wrapper">
-    <svg class="background__svg">
+    <svg class="background__svg-star">
       <use href="#star"></use>
+    </svg>
+    <svg class="background__svg-ellipse">
+      <use href="#elipse"></use>
     </svg>
     <main class="page">
       @@include('html/authorization/background.html')
@@ -21,8 +24,8 @@
             </a>
             <h2 class="authorization__title">Authorization</h2>
             <div class="tabs authorization__tabs">
-              <button class="tabs__button" data-tab="#accaunt-log">Log in</button>
-              <button class="tabs__button" data-tab="#accaunt-sign">Sign up</button>
+              <button class="tabs__button" data-tab="#accaunt-sign">Log in</button>
+              <button class="tabs__button" data-tab="#accaunt-log">Sign up</button>
             </div>
             <div class=" roles autorization__roles">
               <p class="roles__text">Select your role</p>

@@ -8,10 +8,10 @@ import { Navigation, Pagination, Autoplay, Scrollbar } from 'swiper/modules';
 
 const wrapper = document.querySelector('wrapper');
 
-async function snap() {
+export async function snapPremiumSwiper() {
     const querySnapshot = await getDocs(collection(db, 'main-swiper'));
     querySnapshot.forEach(doc => {
-        new premiumLoad(doc.data(), doc.id);
+        premiumLoad(doc.data(), doc.id);
     });
     // console.log(querySnapshot);
 
@@ -64,9 +64,9 @@ async function snap() {
     //     }
     //   });
 }
-snap();
+// snapPremiumSwiper();
 
-(async function () {
+export async function snapPremiumBanner() {
     const querySnapshot = await getDocs(collection(db, 'main-premium'));
     querySnapshot.forEach(doc => {
         const data = doc.data();
@@ -77,4 +77,5 @@ snap();
         document.querySelector('#premium-banner-btn-text').innerHTML = data.bannerBtnText;
     });
     // console.log(querySnapshot);
-})();
+}
+// snapPremiumBanner();

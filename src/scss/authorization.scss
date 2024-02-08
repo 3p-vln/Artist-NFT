@@ -11,11 +11,14 @@
     align-items: center;
     padding: 186px 0 196px;
 
-    // &__container {
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-    // }
+    &_log{
+      padding-top: 144px;
+    }
+
+    &__svg {
+      width: 172px;
+      height: 46px;
+    }
 
     &__title {
         font-family: 'ProximaNova';
@@ -86,7 +89,7 @@
         &__item {
             display: flex;
             flex-direction: column;
-            gap: 9px;
+            gap: 6px;
             align-items: flex-start;
             margin-bottom: 17px;
         }
@@ -138,41 +141,6 @@
         width: 345px;
       }
     }
-        // .tabs {
-        //     &__button {
-        //         outline: none;
-        //         background: none;
-        //         color: $whiteColor;
-        //         width: 129px;
-        //         display: flex;
-        //         justify-content: center;
-        //         align-items: center;
-        //         padding: 14px 19px;
-        //         font-size: clamp(14px, 2.5vw, 18px);
-        //         font-weight: 400;
-        //         font-size: 16px;
-        //         line-height: 24px;
-        //         border-radius: 12px;
-        //         // line-height: 175%;
-
-        //         &_active {
-        //             background: $rainbowBtnGradient;
-        //             font-size: 18px;
-        //             font-weight: 400;
-        //             // line-height: 133%;
-        //             color: $background;
-        //             &_hover {
-        //                 &:hover {
-        //                     background: $hoverBtn;
-        //                 }
-        //             }
-        //         }
-
-        //         @include media-breakpoint-down(xs) {
-        //             font-size: 14px;
-        //         }
-        //     }
-        // }
     }
 
     &__accaunt {
@@ -211,7 +179,6 @@
 
         &_visible {
             opacity: 1;
-
             margin: 0 auto 29px 0;
             display: block;
         }
@@ -220,13 +187,6 @@
             width: 345px;
             margin: 0 auto 29px;
         }
-
-        // &__accaunt {
-        //     display: flex;
-        //     justify-content: center;
-        //     gap: 8px;
-        //     align-items: center;
-        // }
 
         &__text {
             font-weight: 400;
@@ -241,7 +201,7 @@
           display: flex;
           justify-content: space-between;
           color:$whiteColor;
-          gap: 16px;
+          gap: 7px;
         }
 
         &__check {
@@ -282,6 +242,14 @@
                     transform: translate(-50%,-50%);
                 }
             }
+        }
+
+         &__check-text {
+            font-weight: 600;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 171%;
+            font-family: 'ProximaNova';
         }
     }
 }
