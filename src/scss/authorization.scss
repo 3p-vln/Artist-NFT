@@ -11,13 +11,13 @@
     align-items: center;
     padding: 186px 0 196px;
 
-    &_log{
-      padding-top: 144px;
+    &_log {
+        padding-top: 144px;
     }
 
     &__svg {
-      width: 172px;
-      height: 46px;
+        width: 172px;
+        height: 46px;
     }
 
     &__title {
@@ -95,52 +95,51 @@
         }
 
         &__item-label {
-          font-family: 'ProximaNova';
-          font-weight: 400;
-          font-size: 14px;
-          line-height: 150%;
-          color: $gray6Color;
+            font-family: 'ProximaNova';
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150%;
+            color: $gray6Color;
         }
 
-    &__item-input {
-      width: 410px;
-      background: $backgroundSecond;
-      padding: 21px 32px 22px;
-      border-radius: 9px;
-      color: $whiteColor;
-      font-size: 16px;
+        &__item-input {
+            width: 410px;
+            background: $backgroundSecond;
+            padding: 21px 32px 22px;
+            border-radius: 9px;
+            color: $whiteColor;
+            font-size: 16px;
 
-      &::placeholder {
-        font-family: 'ProximaNova';
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 131%;
-        color: $gray6Color;
-        opacity: 0.6;
-      }
+            &::placeholder {
+                font-family: 'ProximaNova';
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 131%;
+                color: $gray6Color;
+                opacity: 0.6;
+            }
 
-      @include media-breakpoint-down(xs) {
-        width: 345px;
-      }
-    }
+            @include media-breakpoint-down(xs) {
+                width: 345px;
+            }
+        }
 
-    
-    &__button {
-      width: 410px;
-      background: $rainbowBtnGradient;
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 147%;
-      color: $background;
-      border-radius: 16px;
-      padding: 18px 0 19px;
-      margin-top: 5px;
-      margin-bottom: 15px;
+        &__button {
+            width: 410px;
+            background: $rainbowBtnGradient;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 147%;
+            color: $background;
+            border-radius: 16px;
+            padding: 18px 0 19px;
+            margin-top: 5px;
+            margin-bottom: 15px;
 
-      @include media-breakpoint-down(xs) {
-        width: 345px;
-      }
-    }
+            @include media-breakpoint-down(xs) {
+                width: 345px;
+            }
+        }
     }
 
     &__accaunt {
@@ -173,14 +172,13 @@
         opacity: 0;
         max-height: 0;
         transition: max-height 300ms linear, opacity 200ms linear;
-        width: 258px;
-        // margin: 0 auto 29px 0;
-        // transition: $standartTrans;
+        width: 410px;
 
         &_visible {
             opacity: 1;
-            margin: 0 auto 29px 0;
-            display: block;
+            margin-bottom: 29px;
+            display: flex;
+            justify-content: flex-start;
         }
 
         @include media-breakpoint-down(xs) {
@@ -198,16 +196,16 @@
         }
 
         &__box {
-          display: flex;
-          justify-content: space-between;
-          color:$whiteColor;
-          gap: 7px;
+            display: flex;
+            justify-content: space-between;
+            color: $whiteColor;
+            gap: 7px;
         }
 
         &__check {
-          display: flex;
-          gap: 10px;
-          align-items: center;
+            display: flex;
+            gap: 10px;
+            align-items: center;
         }
 
         &__check-label {
@@ -239,12 +237,12 @@
                     border-radius: 5px;
                     top: 50%;
                     left: 50%;
-                    transform: translate(-50%,-50%);
+                    transform: translate(-50%, -50%);
                 }
             }
         }
 
-         &__check-text {
+        &__check-text {
             font-weight: 600;
             font-weight: 600;
             font-size: 14px;
