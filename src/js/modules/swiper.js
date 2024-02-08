@@ -3,7 +3,7 @@ import Swiper from 'swiper';
 import { Navigation, Pagination, Autoplay, Scrollbar } from 'swiper/modules';
 Swiper.use([Navigation, Pagination, Autoplay, Scrollbar]);
 
-function biographySwiper() {
+export function biographySwiper() {
     let swiper = new Swiper('.columns-swiper', {
         slidesPerView: 'auto',
         breakpoints: {
@@ -20,58 +20,47 @@ function biographySwiper() {
         },
     });
 }
-biographySwiper();
+// biographySwiper();
 
-function premiumSwiper() {
+export function premiumSwiper() {
+    new Swiper('.premium-swiper', {
+        loop: true,
+        centeredSlides: true,
+        updateOnWindowResize: true,
 
-  new Swiper('.premium-swiper', {
-    loop: true,
-    centeredSlides: true,
-    updateOnWindowResize: true,
+        on: {
+            init: function () {
+                console.log('swiper initialized');
+            },
+        },
 
-    on: {
-      init: function () {
-        console.log('swiper initialized');
-      },
-    },
-
-    breakpoints: {
-      320: {
-        slidesPerView: 1.15,
-        spaceBetween: 16,
-        loop: true,
-      },
-      375: {
-        slidesPerView: 1.15,
-        spaceBetween: 16,
-        loop: true,
-      },
-      576: {
-        slidesPerView: 1.7,
-        spaceBetween: 16,
-        loop: true,
-      },
-      768: {
-        slidesPerView: 2.5,
-        spaceBetween: 30,
-        loop: true,
-      },
-      1439: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        loop: true,
-      },
-      // 1440: {
-      //   slidesPerView: 4,
-      //   spaceBetween: 30,
-      //   loop: true,
-      // },
-      // 1920: {
-      //   slidesPerView: 3,
-      //   spaceBetween: 30,
-      //   loop: true,
-      // },
-    },
-  });
+        breakpoints: {
+            320: {
+                slidesPerView: 1.15,
+                spaceBetween: 16,
+                loop: true,
+            },
+            376: {
+                slidesPerView: 1.3,
+                spaceBetween: 16,
+                loop: true,
+            },
+            576: {
+                slidesPerView: 1.7,
+                spaceBetween: 16,
+                loop: true,
+            },
+            768: {
+                slidesPerView: 2.5,
+                spaceBetween: 30,
+                loop: true,
+            },
+            1439: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                loop: true,
+            },
+        },
+    });
 }
-premiumSwiper();
+// premiumSwiper();

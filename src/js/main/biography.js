@@ -3,7 +3,7 @@ import { collection, getDocs } from 'firebase/firestore';
 
 const wrapper = document.querySelector('wrapper');
 
-(async function () {
+export async function snapBiography() {
   const querySnapshot = await getDocs(collection(db, 'main-biography'));
   querySnapshot.forEach((doc) => {
     const data = doc.data();
@@ -26,4 +26,6 @@ const wrapper = document.querySelector('wrapper');
       data.columnParagraphThird;
   });
   // console.log(querySnapshot);
-})();
+};
+
+// snapBiography();
