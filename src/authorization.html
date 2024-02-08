@@ -28,7 +28,8 @@
               <button class="tabs__button" data-tab="#accaunt-log">Sign up</button>
             </div>
             <div class=" roles autorization__roles">
-              <p class="roles__text">Select your role</p>
+              <div class="roles__inner">
+                <p class="roles__text">Select your role</p>
               <div class="roles__box">
                 <div class="roles__check">
                   <span class="roles__check-label"></span>
@@ -43,17 +44,18 @@
                   <p class="roles__check-text">Artist</p>
                 </div>
               </div>
+              </div>
             </div>
-            <form action="#" class="form authorization__form">
+            <form action="#" class="form authorization__form" id="auth-form">
               <div class="form__item">
                 <label for="" class="form__item-label">E-mail</label>
-                <input type="email" class="form__item-input" placeholder="Your e-mail">
+                <input type="email" class="form__item-input" placeholder="Your e-mail" id="email">
               </div>
               <div class="form__item">
                 <label for="" class="form__item-label">Passwrod</label>
-                <input type="password" class="form__item-input" placeholder="Your password">
+                <input type="password" class="form__item-input" placeholder="Your password" id="password">
               </div>
-              <button class="form__button">Send message</button>
+              <button class="form__button" type="submit">Send message</button>
             </form>
             <div class="authorization__accaunt" id="accaunt-sign">
               <p class="authorization__text">Don’t have account yet?</p>

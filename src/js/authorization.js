@@ -1,3 +1,10 @@
+import JustValidate from "just-validate";
+const validator = new JustValidate(document.querySelector('#auth-form', {
+   errorLabelStyle: {
+            color: '#1D1F21',
+        },
+}));
+const form = document.getElementById('auth-form');
 const tabButtons = document.querySelectorAll('.tabs__button');
 const roles = document.querySelector('.roles');
 const checkLabeles = document.querySelectorAll('.roles__check-label');
@@ -49,3 +56,37 @@ checkLabeles.forEach(label => {
 });
 
 tabButtons[0].click();
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  if (validator.validate()) {
+    form.reset();
+  }
+});
+
+
+validator
+    .addField(document.querySelector('#email'), [
+        {
+            rule: 'required',
+            errorMessage: 'Enter your email',
+        },
+        {
+            rule: 'customRegexp',
+            value: /^[-\w.]+@([а-яёa-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$/,
+            errorMessage: 'Write correct email',
+        },
+    ])
+    .addField(document.querySelector('#password'), [
+        {
+            rule: 'required',
+        },
+        {
+            rule: 'customRegexp',
+            value: /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/g,
+            errorMessage: 'incorrect password',
+            
+        },
+    ]);
+
+  
