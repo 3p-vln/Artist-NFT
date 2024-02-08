@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/one-art.min.css?_v=20240208164454">
-  <title>About art</title>
+  <link rel="stylesheet" href="css/authorization.min.css?_v=20240208164454">
+  <title>Authorization</title>
 </head>
 
 
@@ -20,237 +20,72 @@
 </div>
 
   <div class="wrapper">
-    <header class="header">
-  <div class="burger__backdrop"></div>
-
-  <div class="header__container">
-    <a class="header__logo" href="index.html">
-      <svg class="header__logo-svg">
-        <use href="#icon-logo"/>
-      </svg>
-    </a>
-
-    <nav class="header__menu menu">
-      <ul class="menu__list">
-        <li class="menu__item"><a href="index.html">Main page</a></li>
-
-        <li class="menu__item">
-          <a href="nft.html"><span class="menu__item-lock">
-              <svg class="menu__item-lock-svg">
-                <use href="#header-lock"></use>
-              </svg> </span>NFT</a>
-        </li>
-
-        <li class="menu__item"><a href="art.html">Pictures</a></li>
-
-        <li class="menu__item"><a href="#">Auction</a></li>
-
-        <li class="menu__item"><a href="#">Pricing</a></li>
-
-        <li class="menu__item"><a href="custom.html">Contacts</a></li>
-
-        <li class="menu__item"><a href="#">Blog</a></li>
-      </ul>
-
-      <div class="menu__buttons">
-        <div class="header__dropdown select__content">
-          <a class="select__btn">
-            <p class="select__btn_p select__btn_p--active">ENG</p>
-            <div class="select__btn_after">
-              <svg>
-                <use href="#icon-arrow"></use>
-              </svg>
-            </div>
-          </a>
-          <ul class="select__list">
-            <li class="select__list-item">ENG</li>
-            <li class="select__list-item">UA</li>
-            <li class="select__list-item">FR</li>
-            <li class="select__list-item">POL</li>
-            <li class="select__list-item">SPA</li>
-          </ul>
-          <input type="text" name="select-category" value="" class="select__input-hidden">
-        </div>
-
-        <a href="authorization.html" class="authorization header__authorization">
-          <button class="btn authorization__btn grey">
-            <span>Authorization</span>
-          </button>
-          
-        </a>
-      </div>
-    </nav>
-
-    <div class="header__btn-wrapper">
-      <div class="header__dropdown select__content">
-        <a class="select__btn">
-          <p class="select__btn_p select__btn_p--active">ENG</p>
-          <div class="select__btn_after">
-            <svg>
-              <use href="#icon-arrow"></use>
-            </svg>
-          </div>
-        </a>
-        <ul class="select__list">
-          <li class="select__list-item">ENG</li>
-          <li class="select__list-item">UA</li>
-          <li class="select__list-item">FR</li>
-          <li class="select__list-item">POL</li>
-          <li class="select__list-item">SPA</li>
-        </ul>
-        <input type="text" name="select-category" value="" class="select__input-hidden">
-      </div>
-
-      <a href="authorization.html" class="authorization header__authorization">
-        <button class="btn authorization__btn grey">
-          <span>Authorization</span>
-        </button>
-      </a>
-
-      <a href="#" class="header__premium premium">
-        <button class="premium__btn">
-          <span>Premium access</span>
-          <svg class="premium__btn-icon">
-            <use href="#header-crown"></use>
-          </svg>
-        </button>
-      </a>
-
-      <button class="header__burger">
-        <span class="header__burger-span-top"></span>
-        <span class="header__burger-span-middle"></span>
-        <span class="header__burger-span-bottom"></span>
-      </button>
-    </div>
-  </div>
-</header>
-
+    <svg class="background__svg-star">
+      <use href="#star"></use>
+    </svg>
+    <svg class="background__svg-ellipse">
+      <use href="#elipse"></use>
+    </svg>
     <main class="page">
       <div class="background">
-  <picture><source srcset="images/nft-card/blurs/blur.webp" type="image/webp"><img src="images/nft-card/blurs/blur.png" class="background__blur"></picture>
+
+  <picture><source srcset="images/authorization/blurs/blur-left.webp" type="image/webp"><img src="images/authorization/blurs/blur-left.png" class="background__blur-left"></picture>
+  <picture><source srcset="images/authorization/blurs/blur-right.webp" type="image/webp"><img src="images/authorization/blurs/blur-right.png" class="background__blur-right"></picture>
+  <picture><source srcset="images/authorization/blurs/blur-mobile.webp" type="image/webp"><img src="images/authorization/blurs/blur-mobile.png" alt="blur" class="background__blur-mobile"></picture>
 </div>
-
-      <div class="page__container">
-        <div class="bread-crumbs">
-  <a href="index.html" class="main">Main page</a>
-  <svg>
-    <use href="#right-arr"></use>
-  </svg>
-  <a href="art.html" class="art">Art</a>
-  <svg>
-    <use href="#right-arr"></use>
-  </svg>
-  <a class="curent-art" id="product" href="#"></a>
-</div>
-
-        <div class="one-art"></div>
-        <div class="procces">
-  <div class="procces__head">
-    <svg>
-      <use href="#video"></use>
-    </svg>
-    <p class="procces__title">PROCCESS</p>
-  </div>
-  <div class="procces__about">
-    <div class="about"></div>
-  </div>
-</div>
-
-        <section id="contact" class="contact">
-    <div class="contact-background">
-        <picture>
-            <source srcset="images/main/contact/sapphire-first-mobile.png" media="(max-width:576px)">
-            <img src="images/main/contact/sapphire-first.png" alt="" class="contact-background__sapphire-first">
-        </picture>
-        <picture>
-            <source srcset="images/main/contact/sapphire-second-mobile.png" media="(max-width:576px)">
-            <img src="images/main/contact/sapphire-second.png" alt="" class="contact-background__sapphire-second">
-        </picture>
-        <picture><source srcset="images/main/contact/sapphire-third.webp" type="image/webp"><img src="images/main/contact/sapphire-third.png" alt="" class="contact-background__sapphire-third"></picture>
-        <picture><source srcset="images/main/contact/cube.webp" type="image/webp"><img src="images/main/contact/cube.png" alt="" class="contact-background__cube"></picture>
-    </div>
-
-    <div class="contact__content">
-        <h3 class="contact__subtitle">CONTACT ME</h3>
-        <h2 class="contact__title">Want to apply your work or an question appeared?</h2>
-        <form class="contact__form form" id="form" autocomplete="off">
-            <div class="form__item">
-                <label class="form__item-label">Name</label>
-                <input type="text" class="form__item-input" id="name" name="name" placeholder="Your name" autocomplete="off">
-            </div>
-            <div class="form__item">
-                <label class="form__item-label">Mail</label>
-                <input type="email" class="form__item-input" id="email" placeholder="Your mail" autocomplete="off">
-            </div>
-            <div class="form__item">
-                <label class="form__item-label">Your question</label>
-                <textarea class="form__item-textarea" id="question" name="" id="" cols="30" rows="10" placeholder="Your question" autocomplete="off"></textarea>
-            </div>
-            <a href="#" class="form__send">
-                <button id="clean" class="btn form__send-btn gradient" type="submit">
-                    <p>Send message</p>
-                </button>
+        <div class="page__container">
+          <div class="authorization">
+            
+            <a class="authorization__logo">
+              <svg class="authorization__svg">
+                <use href="#icon-logo"></use>
+              </svg>
+              
             </a>
-
-            <div class="form__agree">
-                
-                <label class="form__agree-label">
-                    <input type="checkbox" class="form__agree-checkbox" id="checkbox" autocomplete="off">
-                    <span class="form__agree-checkstyle"></span>
-                    I agree with<a href="#">Privacy Policy</a>and<a href="#">Terms of use</a></label>
+            <h2 class="authorization__title">Authorization</h2>
+            <div class="authorization__tabs tabs">
+              <button class="tabs__button" data-tab="#accaunt-sign">Log in</button>
+              <button class="tabs__button" data-tab="#accaunt-log">Sign up</button>
             </div>
-        </form>
-    </div>
-</section>
-
-      </div>
+            <div class="autorization__roles roles">
+              <p class="roles__text">Select your role</p>
+              <div class="roles__box">
+                <div class="roles__check">
+                  <span class="roles__check-label"></span>
+                  <p class="roles__check-text">Customer</p>
+                </div>
+                <div class="roles__check">
+                  <span class="roles__check-label"></span>
+                  <p class="roles__check-text">Admin</p>
+                </div>
+                <div class="roles__check">
+                  <span class="roles__check-label"></span>
+                  <p class="roles__check-text">Artist</p>
+                </div>
+              </div>
+            </div>
+            <form action="#" class="authorization__form form">
+              <div class="form__item">
+                <label for="" class="form__item-label">E-mail</label>
+                <input type="email" class="form__item-input" placeholder="Your e-mail">
+              </div>
+              <div class="form__item">
+                <label for="" class="form__item-label">Passwrod</label>
+                <input type="password" class="form__item-input" placeholder="Your password">
+              </div>
+              <button class="form__button">Send message</button>
+            </form>
+            <div class="authorization__accaunt" id="accaunt-sign">
+              <p class="authorization__text">Don’t have account yet?</p>
+              <a href="#" class="authorization__link">Sign up</a>
+            </div>
+            <div class="authorization__accaunt" id="accaunt-log">
+              <p class="authorization__text">Already have accoun?</p>
+              <a href="#" class="authorization__link">Log in</a>
+            </div>
+          </div>
+        </div>
     </main>
-    <footer class="footer">
-  <div class="footer__container">
-    <div class="footer__content">
-      <div class="footer__links">
-        <div class="casual footer__links-casual">
-          <a class="casual__link-logo" href="#">
-            <svg class="casual__link-logo-svg">
-              <use href="#icon-logo"/>
-            </svg>
-          </a>
-
-          <a class="casual__link" href="#">Privacy policy</a>
-          <a class="casual__link" href="#">Terms of use</a>
-        </div>
-
-        <div class="footer__links-social social">
-          <a class="social__link" href="#">
-            <svg class="social__link-svg">
-              <use href="#icon-instagram"/>
-            </svg>
-          </a>
-
-          <a class="social__link" href="#">
-            <svg class="social__link-svg">
-              <use href="#icon-twitter"/>
-            </svg>
-          </a>
-
-          <a class="social__link" href="#">
-            <svg class="social__link-svg">
-              <use href="#icon-telegram"/>
-            </svg>
-          </a>
-
-          <a class="social__link" href="#">
-            <svg class="social__link-svg">
-              <use href="#icon-pinterest"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-      <span class="footer__reserved">All rights reserved © 2022</span>
-    </div>
-  </div>
-</footer>
-
     <svg style="width: 0; height: 0; position: absolute" xmlns="http://www.w3.org/2000/svg">
   <symbol id="icon-logo" viewBox="0 0 161 46" fill="none">
     <path d="M20.6831 11.6895C14.9244 13.6289 15.3855 20.984 15.4131 21.1289C14.2363 14.1456 14.1933 10.4364 18.5445 8.37226C21.7122 6.86949 24.7754 10.3114 20.6831 11.6895Z" fill="url(#paint0_linear_78_3746)"/>
@@ -443,6 +278,6 @@
 
 </div></body>
 <script src="js/app.min.js?_v=20240208164454"></script>
-<script src="js/oneArt.min.js?_v=20240208164454"></script>
+<script src="js/authorization.min.js?_v=20240208164454"></script>
 
 </html>

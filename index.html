@@ -6,17 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/main.min.css?_v=20240201145759">
+  <link rel="stylesheet" href="css/main.min.css?_v=20240208164454">
   <title>Artist NFT</title>
 </head>
 
   <body>
-    <div class="preloader">
+    <div class="preloader visible">
     <div class="preloader__row">
         <div class="preloader__item"></div>
         <div class="preloader__item"></div>
     </div>
 </div>
+
     <div class="wrapper">
       <header class="header">
   <div class="burger__backdrop"></div>
@@ -32,11 +33,12 @@
       <ul class="menu__list">
         <li class="menu__item"><a href="index.html">Main page</a></li>
 
-        <li class="menu__item"><a href="nft.html"><span class="menu__item-lock">
+        <li class="menu__item">
+          <a href="nft.html"><span class="menu__item-lock">
               <svg class="menu__item-lock-svg">
                 <use href="#header-lock"></use>
-              </svg>
-            </span>NFT</a></li>
+              </svg> </span>NFT</a>
+        </li>
 
         <li class="menu__item"><a href="art.html">Pictures</a></li>
 
@@ -44,19 +46,18 @@
 
         <li class="menu__item"><a href="#">Pricing</a></li>
 
-        <li class="menu__item"><a href="#">Contacts</a></li>
+        <li class="menu__item"><a href="custom.html">Contacts</a></li>
 
         <li class="menu__item"><a href="#">Blog</a></li>
       </ul>
 
       <div class="menu__buttons">
-  
         <div class="header__dropdown select__content">
           <a class="select__btn">
             <p class="select__btn_p select__btn_p--active">ENG</p>
             <div class="select__btn_after">
               <svg>
-                <use href="#header-arrow"></use>
+                <use href="#icon-arrow"></use>
               </svg>
             </div>
           </a>
@@ -70,22 +71,22 @@
           <input type="text" name="select-category" value="" class="select__input-hidden">
         </div>
 
-        <a href="#" class="authorization header__authorization">
+        <a href="authorization.html" class="authorization header__authorization">
           <button class="btn grey authorization__btn">
             <span>Authorization</span>
           </button>
+          
         </a>
       </div>
     </nav>
 
     <div class="header__btn-wrapper">
-
       <div class="header__dropdown select__content">
         <a class="select__btn">
           <p class="select__btn_p select__btn_p--active">ENG</p>
           <div class="select__btn_after">
             <svg>
-              <use href="#header-arrow"></use>
+              <use href="#icon-arrow"></use>
             </svg>
           </div>
         </a>
@@ -99,7 +100,7 @@
         <input type="text" name="select-category" value="" class="select__input-hidden">
       </div>
 
-      <a href="#" class="authorization header__authorization">
+      <a href="authorization.html" class="authorization header__authorization">
         <button class="btn grey authorization__btn">
           <span>Authorization</span>
         </button>
@@ -122,198 +123,196 @@
     </div>
   </div>
 </header>
+
       <main class="page">
         <div class="background">
+  <div class="background__blurs">
+    <picture>
+      <source srcset="images/main/make-art/blurs/blur-mobile.png" media="(max-width:576px)" width="958" height="899" alt="blur">
+      <img src="images/main/make-art/blurs/blur.png" width="758" height="899" alt="blur" class="background__blurs-first">
+    </picture>
+    <picture>
+      <source srcset="images/main/biography/blurs/blur-mobile.png" media="(max-width:576px)" width="958" height="899" alt="blur">
+      <img src="images/main/biography/blurs/blur.png" width="958" height="1199" alt="blur" class="background__blurs-second">
+    </picture>
+    <picture>
+      <source srcset="images/main/get-premium/blurs/blur-mobile.png" media="(max-width:576px)" width="958" height="899" alt="blur">
+      <img src="images/main/get-premium/blurs/blur.png" width="1558" height="1399" alt="blur" class="background__blurs-third">
+    </picture>
+  </div>
 
-    <div class="background__blurs">
-        <picture>
-            <source srcset="images/main/make-art/blurs/blur-mobile.png" media="(max-width:576px)" width="958" height="899" alt="blur">
-            <img src="images/main/make-art/blurs/blur.png" width="758" height="899" alt="blur" class="background__blurs-first">
-        </picture>
-        <picture>
-            <source srcset="images/main/biography/blurs/blur-mobile.png" media="(max-width:576px)" width="958" height="899" alt="blur">
-            <img src="images/main/biography/blurs/blur.png" width="958" height="1199" alt="blur" class="background__blurs-second">
-        </picture>
-        <picture>
-            <source srcset="images/main/get-premium/blurs/blur-mobile.png" media="(max-width:576px)" width="958" height="899" alt="blur">
-            <img src="images/main/get-premium/blurs/blur.png" width="1558" height="1399" alt="blur" class="background__blurs-third">
-        </picture>
-    </div>
+  <p class="background__make">MAKE ART</p>
+  <p class="background__not">NOT WAR</p>
+  <svg class="background__ellipse-first">
+    <use href="#elipse"></use>
+  </svg>
+  <svg class="background__ellipse-second">
+    <use href="#elipse"></use>
+  </svg>
 
-    <p class="background__make">MAKE ART</p>
-    <p class="background__not">NOT WAR</p>
-    <svg class="background__ellipse-first">
-        <use href="#elipse"></use>
-    </svg>
-    <svg class="background__ellipse-second">
-        <use href="#elipse"></use>
-    </svg>
-    
-    <svg class="background__star-first">
-        <use href="#star"></use>
-    </svg>
-    
-    <svg class="background__star-second">
-        <use href="#star"></use>
-    </svg>
+  <svg class="background__star-first">
+    <use href="#star"></use>
+  </svg>
 
-    <svg class="background__ellipse-third">
-        <use href="#elipse"></use>
-    </svg>
-    <svg class="background__star-third">
-        <use href="#star"></use>
-    </svg>
+  <svg class="background__star-second">
+    <use href="#star"></use>
+  </svg>
+
+  <svg class="background__ellipse-third">
+    <use href="#elipse"></use>
+  </svg>
+  <svg class="background__star-third">
+    <use href="#star"></use>
+  </svg>
 </div>
  
         <div class="page__container"> 
           <section id="make" class="make">
-    <div class="make__content">
-        <div class="make__left">
-            <div class="social make__left-social">
-                <a class="social__link" href="#">
-                    <svg class="social__link-svg">
-                        <use href="#icon-instagram"/>
-                    </svg>
-                </a>
+  <div class="make__content">
+    <div class="make__left">
+      <div class="social make__left-social">
+        <a class="social__link" href="#">
+          <svg class="social__link-svg">
+            <use href="#icon-instagram"/>
+          </svg>
+        </a>
 
-                <a class="social__link" href="#">
-                    <svg class="social__link-svg">
-                        <use href="#icon-twitter"/>
-                    </svg>
-                </a>
+        <a class="social__link" href="#">
+          <svg class="social__link-svg">
+            <use href="#icon-twitter"/>
+          </svg>
+        </a>
 
-                <a class="social__link" href="#">
-                    <svg class="social__link-svg">
-                        <use href="#icon-telegram"/>
-                    </svg>
-                </a>
+        <a class="social__link" href="#">
+          <svg class="social__link-svg">
+            <use href="#icon-telegram"/>
+          </svg>
+        </a>
 
-                <a class="social__link" href="#">
-                    <svg class="social__link-svg">
-                        <use href="#icon-pinterest"/>
-                    </svg>
-                </a>
-            </div>
+        <a class="social__link" href="#">
+          <svg class="social__link-svg">
+            <use href="#icon-pinterest"/>
+          </svg>
+        </a>
+      </div>
 
-            <h1 class="make__left-title">We are here to inspire and share art</h1>
-            <p class="make__left-text">Indulgence announcing uncommonly met she continuing two unpleasing terminated </p>
+      <h1 class="make__left-title">We are here to inspire and share art</h1>
+      <p class="make__left-text">
+        Indulgence announcing uncommonly met she continuing two unpleasing
+        terminated
+      </p>
 
-            <div class="btns make__left-btns">
-                <a href="#" class="btns__premium">
-                    <button class="btn gradient btns__premium-btn">
-                        <svg class="btns__premium-btn-svg">
-                            <use href="#default-crown"/>
-                        </svg>
-                        <span>Premium access</span>
-                    </button>
-                </a>
-                <a href="#" class="btns__discover">
-                    <button class="btn grey btns__discover-btn">
-                        <span>Discover</span>
-                    </button>
-                </a>
-            </div>
-        </div>
-        <div class="make__wrapper">
-
-            <div class="make__right">
-                <picture>
-                    <source srcset="images/main/make-art/make-art-mobile.png" media="(max-width: 768px)">
-                    <img src="images/main/make-art/make-art.png" alt="woman" class="make__right-img">
-                </picture>
-            </div>
-            
-        </div>
-
+      <div class="btns make__left-btns">
+        <a href="#" class="btns__premium">
+          <button class="btn gradient btns__premium-btn">
+            <svg class="btns__premium-btn-svg">
+              <use href="#default-crown"/>
+            </svg>
+            <span>Premium access</span>
+          </button>
+        </a>
+        <a href="#" class="btns__discover">
+          <button class="btn grey btns__discover-btn">
+            <span>Discover</span>
+          </button>
+        </a>
+      </div>
     </div>
-</section> 
+    <div class="make__wrapper">
+      <div class="make__right">
+        <picture>
+          <source srcset="images/main/make-art/make-art-mobile.png" media="(max-width: 768px)">
+          <img src="images/main/make-art/make-art.png" alt="woman" class="make__right-img">
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+ 
           <section id="biography" class="biography">
-    <div class="biography__content">
-
-        <div class="biography__text">
-            <h3 id="biography-subtitle" class="biography__text-subtitle"></h3>
-            <h2 id="biography-title" class="biography__text-title"></h2>
-        </div>
-
-        <div class="biography__wrapper">
-            <div class="biography__image">
-                <img id="biography-bg" alt="bg" class="biography__image-bg">
-                <img id="biography-img" alt="woman" class="biography__image-img">
-            </div>
-        </div>
-
-        <p id="biography-paragraph" class="biography__paragraph">
-        </p>
-
-        <div class="swiper biography__columns columns-swiper">
-            <div class="swiper-wrapper columns-wrapper">
-                <div class="columns-slide swiper-slide">
-                    <h2 id="biography-column-year-first" class="columns-slide__year"></h2>
-                    <h3 id="biography-column-paragraph-first" class="columns-slide__paragraph"></h3>
-                </div>
-                <div class="columns-slide swiper-slide">
-                    <h2 id="biography-column-year-second" class="columns-slide__year"></h2>
-                    <h3 id="biography-column-paragraph-second" class="columns-slide__paragraph"></h3>
-                </div>
-                <div class="columns-slide swiper-slide">
-                    <h2 id="biography-column-year-third" class="columns-slide__year"></h2>
-                    <h3 id="biography-column-paragraph-third" class="columns-slide__paragraph"></h3>
-                </div>
-            </div>
-        </div>
-        
+  <div class="biography__content">
+    <div class="biography__text">
+      <h3 id="biography-subtitle" class="biography__text-subtitle"></h3>
+      <h2 id="biography-title" class="biography__text-title"></h2>
     </div>
-</section> 
+
+    <div class="biography__wrapper">
+      <div class="biography__image">
+        <img id="biography-bg" alt="bg" class="biography__image-bg">
+        <img id="biography-img" alt="woman" class="biography__image-img">
+      </div>
+    </div>
+
+    <p id="biography-paragraph" class="biography__paragraph"></p>
+
+    <div class="swiper biography__columns columns-swiper">
+      <div class="swiper-wrapper columns-wrapper">
+        <div class="columns-slide swiper-slide">
+          <h2 id="biography-column-year-first" class="columns-slide__year"></h2>
+          <h3 id="biography-column-paragraph-first" class="columns-slide__paragraph"></h3>
+        </div>
+        <div class="columns-slide swiper-slide">
+          <h2 id="biography-column-year-second" class="columns-slide__year"></h2>
+          <h3 id="biography-column-paragraph-second" class="columns-slide__paragraph"></h3>
+        </div>
+        <div class="columns-slide swiper-slide">
+          <h2 id="biography-column-year-third" class="columns-slide__year"></h2>
+          <h3 id="biography-column-paragraph-third" class="columns-slide__paragraph"></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
           <section id="premium" class="premium">
-    <div class="premium__content">
-        <div class="premium__banner">
-            <div class="info premium__banner-info">
-                <svg class="info__svg">
-                    <use href="#default-crown"/>
-                </svg>
-                <h2 id="premium-banner-title" class="info__title"></h2>
-                <p id="premium-banner-paragraph" class="info__paragraph"></p>
-                <button class="btn black info__btn">
-                    <span id="premium-banner-btn-text"></span>
-                </button>
-            </div>
+  <div class="premium__content">
+    <div class="premium__banner">
+      <div class="info premium__banner-info">
+        <svg class="info__svg">
+          <use href="#default-crown"/>
+        </svg>
+        <h2 id="premium-banner-title" class="info__title"></h2>
+        <p id="premium-banner-paragraph" class="info__paragraph"></p>
+        <button class="btn black info__btn">
+          <span id="premium-banner-btn-text"></span>
+        </button>
+      </div>
 
-            <div class="premium__banner-ruby">
-                <picture>
-                    <source srcset="images/main/get-premium/ruby-mobile.png" media="(max-width: 1023px)">
-                    <img src="images/main/get-premium/ruby.png" alt="ruby" class="premium__banner-ruby-img">
-                </picture>
-            </div>
+      <div class="premium__banner-ruby">
+        <picture>
+          <source srcset="images/main/get-premium/ruby-mobile.png" media="(max-width: 1023px)">
+          <img src="images/main/get-premium/ruby.png" alt="ruby" class="premium__banner-ruby-img">
+        </picture>
+      </div>
 
-            <div class="premium__banner-emerald">
-                <picture>
-                    <source srcset="images/main/get-premium/emerald-mobile.png" media="(max-width: 1023px)">
-                    <img src="images/main/get-premium/emerald.png" alt="emerald" class="premium__banner-emerald-img">
-                </picture>
-            </div>
+      <div class="premium__banner-emerald">
+        <picture>
+          <source srcset="images/main/get-premium/emerald-mobile.png" media="(max-width: 1023px)">
+          <img src="images/main/get-premium/emerald.png" alt="emerald" class="premium__banner-emerald-img">
+        </picture>
+      </div>
 
-            <div class="premium__banner-sapphire">
-                <picture>
-                    <source srcset="images/main/get-premium/sapphire-mobile.png" media="(max-width: 1023px)">
-                    <img src="images/main/get-premium/sapphire.png" alt="sapphire" class="premium__banner-sapphire-img">
-                </picture>
-            </div>
-            
-            <div class="premium__banner-circle">
-                <picture>
-                    <img src="images/main/get-premium/circle.svg" alt="circle" class="premium__banner-circle-img">
-                </picture>
-            </div>
-        </div>
+      <div class="premium__banner-sapphire">
+        <picture>
+          <source srcset="images/main/get-premium/sapphire-mobile.png" media="(max-width: 1023px)">
+          <img src="images/main/get-premium/sapphire.png" alt="sapphire" class="premium__banner-sapphire-img">
+        </picture>
+      </div>
 
-        <div class="swiper premium-swiper">
-            <div class="swiper-wrapper premium-wrapper">
-            </div>
-        </div>
+      <div class="premium__banner-circle">
+        <picture>
+          <img src="images/main/get-premium/circle.svg" alt="circle" class="premium__banner-circle-img">
+        </picture>
+      </div>
     </div>
-</section> 
-          <section id="contact" class="contact">
 
+    <div class="swiper premium-swiper">
+      <div class="swiper-wrapper premium-wrapper"></div>
+    </div>
+  </div>
+</section>
+ 
+          <section id="contact" class="contact">
     <div class="contact-background">
         <picture>
             <source srcset="images/main/contact/sapphire-first-mobile.png" media="(max-width:576px)">
@@ -329,7 +328,7 @@
 
     <div class="contact__content">
         <h3 class="contact__subtitle">CONTACT ME</h3>
-        <h2 class="contact__title">Want to apply your work or an question appeared? </h2>
+        <h2 class="contact__title">Want to apply your work or an question appeared?</h2>
         <form class="contact__form form" id="form" autocomplete="off">
             <div class="form__item">
                 <label class="form__item-label">Name</label>
@@ -343,9 +342,12 @@
                 <label class="form__item-label">Your question</label>
                 <textarea class="form__item-textarea" id="question" name="" id="" cols="30" rows="10" placeholder="Your question" autocomplete="off"></textarea>
             </div>
+            <a href="#" class="form__send">
                 <button id="clean" class="btn gradient form__send-btn" type="submit">
                     <p>Send message</p>
                 </button>
+            </a>
+
             <div class="form__agree">
                 
                 <label class="form__agree-label">
@@ -355,246 +357,247 @@
             </div>
         </form>
     </div>
-</section> 
+</section>
+ 
         </div>
       </main>
       <footer class="footer">
-    <div class="footer__container">
-        <div class="footer__content">
-            <div class="footer__links">
-                
-                <div class="casual footer__links-casual">
-                    <a class="casual__link-logo" href="#">
-                        <svg class="casual__link-logo-svg">
-                            <use href="#icon-logo"/>
-                        </svg>
-                    </a>
+  <div class="footer__container">
+    <div class="footer__content">
+      <div class="footer__links">
+        <div class="casual footer__links-casual">
+          <a class="casual__link-logo" href="#">
+            <svg class="casual__link-logo-svg">
+              <use href="#icon-logo"/>
+            </svg>
+          </a>
 
-                    <a class="casual__link" href="#">Privacy policy</a>
-                    <a class="casual__link" href="#">Terms of use</a>
-                </div>
-
-                <div class="social footer__links-social">
-                    <a class="social__link" href="#">
-                        <svg class="social__link-svg">
-                            <use href="#icon-instagram"/>
-                        </svg>
-                    </a>
-
-                    <a class="social__link" href="#">
-                        <svg class="social__link-svg">
-                            <use href="#icon-twitter"/>
-                        </svg>
-                    </a>
-
-                    <a class="social__link" href="#">
-                        <svg class="social__link-svg">
-                            <use href="#icon-telegram"/>
-                        </svg>
-                    </a>
-
-                    <a class="social__link" href="#">
-                        <svg class="social__link-svg">
-                            <use href="#icon-pinterest"/>
-                        </svg>
-                    </a>
-                </div>
-
-            </div>
-            <span class="footer__reserved">All rights reserved © 2022</span>
+          <a class="casual__link" href="#">Privacy policy</a>
+          <a class="casual__link" href="#">Terms of use</a>
         </div>
+
+        <div class="social footer__links-social">
+          <a class="social__link" href="#">
+            <svg class="social__link-svg">
+              <use href="#icon-instagram"/>
+            </svg>
+          </a>
+
+          <a class="social__link" href="#">
+            <svg class="social__link-svg">
+              <use href="#icon-twitter"/>
+            </svg>
+          </a>
+
+          <a class="social__link" href="#">
+            <svg class="social__link-svg">
+              <use href="#icon-telegram"/>
+            </svg>
+          </a>
+
+          <a class="social__link" href="#">
+            <svg class="social__link-svg">
+              <use href="#icon-pinterest"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <span class="footer__reserved">All rights reserved © 2022</span>
     </div>
+  </div>
 </footer>
-      <svg style="width: 0; height: 0; position: absolute;" xmlns="http://www.w3.org/2000/svg">
-      <symbol id="icon-logo" viewBox="0 0 161 46" fill="none">
-            <path d="M20.6831 11.6895C14.9244 13.6289 15.3855 20.984 15.4131 21.1289C14.2363 14.1456 14.1933 10.4364 18.5445 8.37226C21.7122 6.86949 24.7754 10.3114 20.6831 11.6895Z" fill="url(#paint0_linear_78_3746)"/>
-            <path d="M10.0627 13.0171C10.6057 11.5915 11.5654 11.3017 12.4698 11.4625C13.5732 11.6586 13.798 12.9906 13.4602 14.0592C11.993 18.6999 13.993 22.9244 15.5204 24.6699C11.5378 23.4899 8.88263 16.1147 10.0627 13.0171Z" fill="url(#paint1_linear_78_3746)"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.0636 37.7979H16.7752V30.0376C15.3758 29.8162 13.9931 29.5103 12.7178 29.0951C8.98578 27.88 8.00398 26.3245 8.00001 25.2149C7.99754 24.5236 8.32296 23.7279 8.97205 23.4899C9.73616 23.2098 11.2022 23.477 13.7503 25.4075C15.4388 26.6866 17.7427 27.217 20.0155 27.3113C23.0863 27.4239 25.6785 27.1913 26.9856 26.6606C26.9927 26.6584 26.9998 26.6562 27.0068 26.6539C27.0187 26.6485 27.0304 26.643 27.042 26.6375C27.0432 26.637 27.0445 26.6378 27.0445 26.6391C27.0445 26.6403 27.0457 26.6412 27.0468 26.6408C27.335 26.5434 27.5906 26.3984 27.8136 26.2058C28.2851 25.8164 28.7971 24.7921 28.7971 24.1157C28.7971 23.4187 28.5613 22.8755 28.0899 22.4861C27.639 22.0966 27.0548 21.9019 26.3373 21.9019H22.0636V26.1446C19.7715 26.0043 17.8062 25.7103 16.7752 25.4284V17.2899H27.0445C29.2583 17.2899 31.0006 17.9459 32.2714 19.2577C33.5423 20.5491 34.1777 22.1684 34.1777 24.1157C34.1777 26.0424 33.5423 27.6618 32.2714 28.9736C31.0006 30.265 29.2583 30.9106 27.0445 30.9106H22.0636V37.7979Z" fill="url(#paint2_linear_78_3746)"/>
-            <path d="M47.0785 32.0524C45.7824 32.0524 44.7212 31.5254 43.8951 30.4714V35.7273H41.1817V21.4766H43.8951V22.7799C44.707 21.7401 45.7681 21.2203 47.0785 21.2203C48.4317 21.2203 49.5284 21.7045 50.3688 22.6731C51.2234 23.6274 51.6507 24.9449 51.6507 26.6257C51.6507 28.3064 51.2234 29.631 50.3688 30.5996C49.5284 31.5682 48.4317 32.0524 47.0785 32.0524ZM46.2239 29.6382C47.0073 29.6382 47.634 29.3604 48.1041 28.8049C48.5883 28.2494 48.8305 27.523 48.8305 26.6257C48.8305 25.7426 48.5883 25.0233 48.1041 24.4678C47.634 23.9123 47.0073 23.6345 46.2239 23.6345C45.7824 23.6345 45.3408 23.7485 44.8993 23.9764C44.4577 24.2043 44.123 24.482 43.8951 24.8096V28.4631C44.123 28.7907 44.4577 29.0684 44.8993 29.2963C45.3551 29.5242 45.7966 29.6382 46.2239 29.6382Z" fill="white"/>
-            <path d="M58.4877 32.0524C56.8925 32.0524 55.5749 31.5539 54.5352 30.5569C53.4954 29.5598 52.9755 28.2494 52.9755 26.6257C52.9755 25.1016 53.474 23.8197 54.4711 22.7799C55.4824 21.7401 56.7643 21.2203 58.3168 21.2203C59.8551 21.2203 61.1014 21.7473 62.0557 22.8013C63.01 23.8411 63.4872 25.2084 63.4872 26.9034V27.5016H55.8171C55.9025 28.1853 56.2088 28.7551 56.7358 29.2109C57.2628 29.6667 57.9465 29.8946 58.7868 29.8946C59.2426 29.8946 59.734 29.802 60.261 29.6168C60.8023 29.4316 61.2296 29.1824 61.543 28.869L62.7394 30.621C61.6996 31.5753 60.2824 32.0524 58.4877 32.0524ZM60.8593 25.6642C60.8165 25.0802 60.5815 24.5532 60.1542 24.0832C59.7412 23.6132 59.1287 23.3782 58.3168 23.3782C57.5477 23.3782 56.9494 23.6132 56.5221 24.0832C56.0948 24.539 55.8456 25.066 55.7743 25.6642H60.8593Z" fill="white"/>
-            <path d="M70.2543 32.0524C68.659 32.0524 67.3486 31.5468 66.3231 30.5355C65.2976 29.5242 64.7848 28.2209 64.7848 26.6257C64.7848 25.0446 65.2976 23.7485 66.3231 22.7372C67.3486 21.7259 68.659 21.2203 70.2543 21.2203C72.0775 21.2203 73.4377 21.8399 74.3351 23.079L72.5617 24.7455C72.0632 24.0049 71.3368 23.6345 70.3825 23.6345C69.5564 23.6345 68.8798 23.9123 68.3528 24.4678C67.84 25.009 67.5836 25.7283 67.5836 26.6257C67.5836 27.523 67.84 28.2494 68.3528 28.8049C68.8798 29.3604 69.5564 29.6382 70.3825 29.6382C71.3083 29.6382 72.0347 29.2678 72.5617 28.5272L74.3351 30.1723C73.4377 31.4257 72.0775 32.0524 70.2543 32.0524Z" fill="white"/>
-            <path d="M85.8087 31.7961H83.0953V25.5147C83.0953 24.831 82.9315 24.3467 82.6039 24.0618C82.2763 23.777 81.7991 23.6345 81.1724 23.6345C80.2181 23.6345 79.4347 24.0405 78.8223 24.8524V31.7961H76.1089V17.5454H78.8223V22.8227C79.1926 22.3811 79.6911 22.0037 80.3178 21.6903C80.9588 21.3769 81.671 21.2203 82.4543 21.2203C83.5653 21.2203 84.3986 21.5051 84.9541 22.0749C85.5238 22.6446 85.8087 23.4422 85.8087 24.4678V31.7961Z" fill="white"/>
-            <path d="M93.3523 32.0524C91.757 32.0524 90.4395 31.5539 89.3997 30.5569C88.3599 29.5598 87.8401 28.2494 87.8401 26.6257C87.8401 25.1016 88.3386 23.8197 89.3356 22.7799C90.3469 21.7401 91.6288 21.2203 93.1814 21.2203C94.7197 21.2203 95.966 21.7473 96.9203 22.8013C97.8746 23.8411 98.3518 25.2084 98.3518 26.9034V27.5016H90.6816C90.7671 28.1853 91.0733 28.7551 91.6003 29.2109C92.1273 29.6667 92.811 29.8946 93.6514 29.8946C94.1072 29.8946 94.5986 29.802 95.1256 29.6168C95.6669 29.4316 96.0942 29.1824 96.4075 28.869L97.604 30.621C96.5642 31.5753 95.147 32.0524 93.3523 32.0524ZM95.7238 25.6642C95.6811 25.0802 95.4461 24.5532 95.0188 24.0832C94.6057 23.6132 93.9932 23.3782 93.1814 23.3782C92.4122 23.3782 91.814 23.6132 91.3867 24.0832C90.9594 24.539 90.7101 25.066 90.6389 25.6642H95.7238Z" fill="white"/>
-            <path d="M109.99 31.7961H107.277V25.5574C107.277 24.2755 106.643 23.6345 105.375 23.6345C104.392 23.6345 103.609 24.0405 103.025 24.8524V31.7961H100.312V21.4766H103.025V22.8227C103.922 21.7544 105.126 21.2203 106.636 21.2203C107.747 21.2203 108.58 21.5123 109.136 22.0962C109.705 22.6802 109.99 23.485 109.99 24.5105V31.7961Z" fill="white"/>
-            <path d="M115.291 31.5183C114.949 31.8602 114.543 32.0311 114.073 32.0311C113.603 32.0311 113.197 31.8602 112.855 31.5183C112.513 31.1765 112.342 30.7705 112.342 30.3005C112.342 29.8305 112.513 29.4245 112.855 29.0827C113.197 28.7408 113.603 28.5699 114.073 28.5699C114.543 28.5699 114.949 28.7408 115.291 29.0827C115.633 29.4245 115.804 29.8305 115.804 30.3005C115.804 30.7705 115.633 31.1765 115.291 31.5183Z" fill="white"/>
-            <path d="M127.06 31.7961H124.347V30.7278C123.606 31.6109 122.516 32.0524 121.078 32.0524C120.152 32.0524 119.319 31.7533 118.578 31.1551C117.852 30.5426 117.488 29.7023 117.488 28.634C117.488 27.523 117.845 26.6898 118.557 26.1343C119.283 25.5788 120.124 25.301 121.078 25.301C122.545 25.301 123.635 25.7212 124.347 26.5616V25.1728C124.347 24.6458 124.14 24.2256 123.727 23.9123C123.314 23.5989 122.766 23.4422 122.082 23.4422C120.957 23.4422 119.953 23.8482 119.07 24.6601L118.044 22.844C119.269 21.7615 120.772 21.2203 122.552 21.2203C123.877 21.2203 124.959 21.5265 125.8 22.139C126.64 22.7514 127.06 23.7485 127.06 25.1301V31.7961ZM122.167 30.215C123.179 30.215 123.905 29.9159 124.347 29.3177V28.0358C123.905 27.4375 123.179 27.1384 122.167 27.1384C121.612 27.1384 121.149 27.2809 120.779 27.5657C120.408 27.8364 120.223 28.2138 120.223 28.6981C120.223 29.1681 120.408 29.5385 120.779 29.8091C121.149 30.0797 121.612 30.215 122.167 30.215Z" fill="white"/>
-            <path d="M132.465 31.7961H129.751V21.4766H132.465V22.8868C132.849 22.4025 133.341 22.0037 133.939 21.6903C134.537 21.3769 135.143 21.2203 135.755 21.2203V23.8696C135.57 23.8268 135.321 23.8055 135.007 23.8055C134.552 23.8055 134.067 23.9194 133.554 24.1473C133.042 24.3752 132.679 24.6529 132.465 24.9805V31.7961Z" fill="white"/>
-            <path d="M140.912 32.0524C139.957 32.0524 139.231 31.8103 138.732 31.326C138.234 30.8417 137.985 30.1438 137.985 29.2322V23.8482H136.275V21.4766H137.985V18.6564H140.719V21.4766H142.813V23.8482H140.719V28.5058C140.719 28.8334 140.805 29.104 140.976 29.3177C141.147 29.5313 141.375 29.6382 141.659 29.6382C142.087 29.6382 142.4 29.5385 142.599 29.3391L143.176 31.3901C142.678 31.8317 141.923 32.0524 140.912 32.0524Z" fill="white"/>
-            <path d="M148.387 32.0524C147.49 32.0524 146.628 31.91 145.802 31.6251C144.99 31.3403 144.313 30.9486 143.772 30.45L144.947 28.5485C145.346 28.9189 145.887 29.2465 146.571 29.5313C147.255 29.8162 147.903 29.9586 148.515 29.9586C149.085 29.9586 149.512 29.8589 149.797 29.6595C150.096 29.4601 150.246 29.1895 150.246 28.8477C150.246 28.5913 150.089 28.3847 149.776 28.2281C149.477 28.0571 149.099 27.9361 148.644 27.8649C148.202 27.7936 147.711 27.6868 147.169 27.5444C146.642 27.4019 146.151 27.231 145.695 27.0316C145.254 26.8322 144.876 26.5188 144.563 26.0915C144.264 25.65 144.114 25.1087 144.114 24.4678C144.114 23.5562 144.492 22.787 145.246 22.1603C146.001 21.5336 147.034 21.2203 148.344 21.2203C149.94 21.2203 151.328 21.6903 152.511 22.6304L151.421 24.4891C151.093 24.1473 150.652 23.8624 150.096 23.6345C149.555 23.4066 148.978 23.2927 148.366 23.2927C147.881 23.2927 147.49 23.3924 147.191 23.5918C146.892 23.777 146.742 24.0191 146.742 24.3182C146.742 24.5461 146.892 24.7384 147.191 24.8951C147.49 25.0375 147.867 25.1443 148.323 25.2156C148.779 25.2868 149.27 25.4007 149.797 25.5574C150.324 25.6998 150.816 25.8779 151.271 26.0915C151.727 26.2909 152.105 26.6185 152.404 27.0743C152.703 27.5301 152.852 28.0856 152.852 28.7408C152.852 29.7094 152.454 30.507 151.656 31.1337C150.873 31.7462 149.783 32.0524 148.387 32.0524Z" fill="white"/>
-            <defs>
-                  <linearGradient id="paint0_linear_78_3746" x1="12" y1="20.5" x2="32.995" y2="27.1491" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#51EAFF"/>
-                        <stop offset="1" stop-color="#2B59FF"/>
-                  </linearGradient>
-                  <linearGradient id="paint1_linear_78_3746" x1="12" y1="20.5" x2="32.995" y2="27.1491" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#51EAFF"/>
-                        <stop offset="1" stop-color="#2B59FF"/>
-                  </linearGradient>
-                  <linearGradient id="paint2_linear_78_3746" x1="12" y1="20.5" x2="32.995" y2="27.1491" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#51EAFF"/>
-                        <stop offset="1" stop-color="#2B59FF"/>
-                  </linearGradient>
-            </defs>
-      </symbol>
 
-      <symbol id="header-lock" viewBox="0 0 14 15" fill="none">
-            <path d="M7.00001 1.66666C5.39176 1.66666 4.08334 2.97507 4.08334 4.58332V5.74999H3.50001C2.85659 5.74999 2.33334 6.27324 2.33334 6.91666V12.1667C2.33334 12.8101 2.85659 13.3333 3.50001 13.3333H10.5C11.1434 13.3333 11.6667 12.8101 11.6667 12.1667V6.91666C11.6667 6.27324 11.1434 5.74999 10.5 5.74999H9.91668V4.58332C9.91668 2.97507 8.60826 1.66666 7.00001 1.66666ZM5.25001 4.58332C5.25001 3.61849 6.03518 2.83332 7.00001 2.83332C7.96484 2.83332 8.75001 3.61849 8.75001 4.58332V5.74999H5.25001V4.58332ZM10.5012 12.1667H7.58334V10.8378C7.93043 10.6354 8.16668 10.2632 8.16668 9.83332C8.16668 9.18991 7.64343 8.66666 7.00001 8.66666C6.35659 8.66666 5.83334 9.18991 5.83334 9.83332C5.83334 10.2627 6.06959 10.6354 6.41668 10.8378V12.1667H3.50001V6.91666H10.5L10.5012 12.1667Z" fill="#C8D2DC"/>
-      </symbol>
+      <svg style="width: 0; height: 0; position: absolute" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="icon-logo" viewBox="0 0 161 46" fill="none">
+    <path d="M20.6831 11.6895C14.9244 13.6289 15.3855 20.984 15.4131 21.1289C14.2363 14.1456 14.1933 10.4364 18.5445 8.37226C21.7122 6.86949 24.7754 10.3114 20.6831 11.6895Z" fill="url(#paint0_linear_78_3746)"/>
+    <path d="M10.0627 13.0171C10.6057 11.5915 11.5654 11.3017 12.4698 11.4625C13.5732 11.6586 13.798 12.9906 13.4602 14.0592C11.993 18.6999 13.993 22.9244 15.5204 24.6699C11.5378 23.4899 8.88263 16.1147 10.0627 13.0171Z" fill="url(#paint1_linear_78_3746)"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.0636 37.7979H16.7752V30.0376C15.3758 29.8162 13.9931 29.5103 12.7178 29.0951C8.98578 27.88 8.00398 26.3245 8.00001 25.2149C7.99754 24.5236 8.32296 23.7279 8.97205 23.4899C9.73616 23.2098 11.2022 23.477 13.7503 25.4075C15.4388 26.6866 17.7427 27.217 20.0155 27.3113C23.0863 27.4239 25.6785 27.1913 26.9856 26.6606C26.9927 26.6584 26.9998 26.6562 27.0068 26.6539C27.0187 26.6485 27.0304 26.643 27.042 26.6375C27.0432 26.637 27.0445 26.6378 27.0445 26.6391C27.0445 26.6403 27.0457 26.6412 27.0468 26.6408C27.335 26.5434 27.5906 26.3984 27.8136 26.2058C28.2851 25.8164 28.7971 24.7921 28.7971 24.1157C28.7971 23.4187 28.5613 22.8755 28.0899 22.4861C27.639 22.0966 27.0548 21.9019 26.3373 21.9019H22.0636V26.1446C19.7715 26.0043 17.8062 25.7103 16.7752 25.4284V17.2899H27.0445C29.2583 17.2899 31.0006 17.9459 32.2714 19.2577C33.5423 20.5491 34.1777 22.1684 34.1777 24.1157C34.1777 26.0424 33.5423 27.6618 32.2714 28.9736C31.0006 30.265 29.2583 30.9106 27.0445 30.9106H22.0636V37.7979Z" fill="url(#paint2_linear_78_3746)"/>
+    <path d="M47.0785 32.0524C45.7824 32.0524 44.7212 31.5254 43.8951 30.4714V35.7273H41.1817V21.4766H43.8951V22.7799C44.707 21.7401 45.7681 21.2203 47.0785 21.2203C48.4317 21.2203 49.5284 21.7045 50.3688 22.6731C51.2234 23.6274 51.6507 24.9449 51.6507 26.6257C51.6507 28.3064 51.2234 29.631 50.3688 30.5996C49.5284 31.5682 48.4317 32.0524 47.0785 32.0524ZM46.2239 29.6382C47.0073 29.6382 47.634 29.3604 48.1041 28.8049C48.5883 28.2494 48.8305 27.523 48.8305 26.6257C48.8305 25.7426 48.5883 25.0233 48.1041 24.4678C47.634 23.9123 47.0073 23.6345 46.2239 23.6345C45.7824 23.6345 45.3408 23.7485 44.8993 23.9764C44.4577 24.2043 44.123 24.482 43.8951 24.8096V28.4631C44.123 28.7907 44.4577 29.0684 44.8993 29.2963C45.3551 29.5242 45.7966 29.6382 46.2239 29.6382Z" fill="white"/>
+    <path d="M58.4877 32.0524C56.8925 32.0524 55.5749 31.5539 54.5352 30.5569C53.4954 29.5598 52.9755 28.2494 52.9755 26.6257C52.9755 25.1016 53.474 23.8197 54.4711 22.7799C55.4824 21.7401 56.7643 21.2203 58.3168 21.2203C59.8551 21.2203 61.1014 21.7473 62.0557 22.8013C63.01 23.8411 63.4872 25.2084 63.4872 26.9034V27.5016H55.8171C55.9025 28.1853 56.2088 28.7551 56.7358 29.2109C57.2628 29.6667 57.9465 29.8946 58.7868 29.8946C59.2426 29.8946 59.734 29.802 60.261 29.6168C60.8023 29.4316 61.2296 29.1824 61.543 28.869L62.7394 30.621C61.6996 31.5753 60.2824 32.0524 58.4877 32.0524ZM60.8593 25.6642C60.8165 25.0802 60.5815 24.5532 60.1542 24.0832C59.7412 23.6132 59.1287 23.3782 58.3168 23.3782C57.5477 23.3782 56.9494 23.6132 56.5221 24.0832C56.0948 24.539 55.8456 25.066 55.7743 25.6642H60.8593Z" fill="white"/>
+    <path d="M70.2543 32.0524C68.659 32.0524 67.3486 31.5468 66.3231 30.5355C65.2976 29.5242 64.7848 28.2209 64.7848 26.6257C64.7848 25.0446 65.2976 23.7485 66.3231 22.7372C67.3486 21.7259 68.659 21.2203 70.2543 21.2203C72.0775 21.2203 73.4377 21.8399 74.3351 23.079L72.5617 24.7455C72.0632 24.0049 71.3368 23.6345 70.3825 23.6345C69.5564 23.6345 68.8798 23.9123 68.3528 24.4678C67.84 25.009 67.5836 25.7283 67.5836 26.6257C67.5836 27.523 67.84 28.2494 68.3528 28.8049C68.8798 29.3604 69.5564 29.6382 70.3825 29.6382C71.3083 29.6382 72.0347 29.2678 72.5617 28.5272L74.3351 30.1723C73.4377 31.4257 72.0775 32.0524 70.2543 32.0524Z" fill="white"/>
+    <path d="M85.8087 31.7961H83.0953V25.5147C83.0953 24.831 82.9315 24.3467 82.6039 24.0618C82.2763 23.777 81.7991 23.6345 81.1724 23.6345C80.2181 23.6345 79.4347 24.0405 78.8223 24.8524V31.7961H76.1089V17.5454H78.8223V22.8227C79.1926 22.3811 79.6911 22.0037 80.3178 21.6903C80.9588 21.3769 81.671 21.2203 82.4543 21.2203C83.5653 21.2203 84.3986 21.5051 84.9541 22.0749C85.5238 22.6446 85.8087 23.4422 85.8087 24.4678V31.7961Z" fill="white"/>
+    <path d="M93.3523 32.0524C91.757 32.0524 90.4395 31.5539 89.3997 30.5569C88.3599 29.5598 87.8401 28.2494 87.8401 26.6257C87.8401 25.1016 88.3386 23.8197 89.3356 22.7799C90.3469 21.7401 91.6288 21.2203 93.1814 21.2203C94.7197 21.2203 95.966 21.7473 96.9203 22.8013C97.8746 23.8411 98.3518 25.2084 98.3518 26.9034V27.5016H90.6816C90.7671 28.1853 91.0733 28.7551 91.6003 29.2109C92.1273 29.6667 92.811 29.8946 93.6514 29.8946C94.1072 29.8946 94.5986 29.802 95.1256 29.6168C95.6669 29.4316 96.0942 29.1824 96.4075 28.869L97.604 30.621C96.5642 31.5753 95.147 32.0524 93.3523 32.0524ZM95.7238 25.6642C95.6811 25.0802 95.4461 24.5532 95.0188 24.0832C94.6057 23.6132 93.9932 23.3782 93.1814 23.3782C92.4122 23.3782 91.814 23.6132 91.3867 24.0832C90.9594 24.539 90.7101 25.066 90.6389 25.6642H95.7238Z" fill="white"/>
+    <path d="M109.99 31.7961H107.277V25.5574C107.277 24.2755 106.643 23.6345 105.375 23.6345C104.392 23.6345 103.609 24.0405 103.025 24.8524V31.7961H100.312V21.4766H103.025V22.8227C103.922 21.7544 105.126 21.2203 106.636 21.2203C107.747 21.2203 108.58 21.5123 109.136 22.0962C109.705 22.6802 109.99 23.485 109.99 24.5105V31.7961Z" fill="white"/>
+    <path d="M115.291 31.5183C114.949 31.8602 114.543 32.0311 114.073 32.0311C113.603 32.0311 113.197 31.8602 112.855 31.5183C112.513 31.1765 112.342 30.7705 112.342 30.3005C112.342 29.8305 112.513 29.4245 112.855 29.0827C113.197 28.7408 113.603 28.5699 114.073 28.5699C114.543 28.5699 114.949 28.7408 115.291 29.0827C115.633 29.4245 115.804 29.8305 115.804 30.3005C115.804 30.7705 115.633 31.1765 115.291 31.5183Z" fill="white"/>
+    <path d="M127.06 31.7961H124.347V30.7278C123.606 31.6109 122.516 32.0524 121.078 32.0524C120.152 32.0524 119.319 31.7533 118.578 31.1551C117.852 30.5426 117.488 29.7023 117.488 28.634C117.488 27.523 117.845 26.6898 118.557 26.1343C119.283 25.5788 120.124 25.301 121.078 25.301C122.545 25.301 123.635 25.7212 124.347 26.5616V25.1728C124.347 24.6458 124.14 24.2256 123.727 23.9123C123.314 23.5989 122.766 23.4422 122.082 23.4422C120.957 23.4422 119.953 23.8482 119.07 24.6601L118.044 22.844C119.269 21.7615 120.772 21.2203 122.552 21.2203C123.877 21.2203 124.959 21.5265 125.8 22.139C126.64 22.7514 127.06 23.7485 127.06 25.1301V31.7961ZM122.167 30.215C123.179 30.215 123.905 29.9159 124.347 29.3177V28.0358C123.905 27.4375 123.179 27.1384 122.167 27.1384C121.612 27.1384 121.149 27.2809 120.779 27.5657C120.408 27.8364 120.223 28.2138 120.223 28.6981C120.223 29.1681 120.408 29.5385 120.779 29.8091C121.149 30.0797 121.612 30.215 122.167 30.215Z" fill="white"/>
+    <path d="M132.465 31.7961H129.751V21.4766H132.465V22.8868C132.849 22.4025 133.341 22.0037 133.939 21.6903C134.537 21.3769 135.143 21.2203 135.755 21.2203V23.8696C135.57 23.8268 135.321 23.8055 135.007 23.8055C134.552 23.8055 134.067 23.9194 133.554 24.1473C133.042 24.3752 132.679 24.6529 132.465 24.9805V31.7961Z" fill="white"/>
+    <path d="M140.912 32.0524C139.957 32.0524 139.231 31.8103 138.732 31.326C138.234 30.8417 137.985 30.1438 137.985 29.2322V23.8482H136.275V21.4766H137.985V18.6564H140.719V21.4766H142.813V23.8482H140.719V28.5058C140.719 28.8334 140.805 29.104 140.976 29.3177C141.147 29.5313 141.375 29.6382 141.659 29.6382C142.087 29.6382 142.4 29.5385 142.599 29.3391L143.176 31.3901C142.678 31.8317 141.923 32.0524 140.912 32.0524Z" fill="white"/>
+    <path d="M148.387 32.0524C147.49 32.0524 146.628 31.91 145.802 31.6251C144.99 31.3403 144.313 30.9486 143.772 30.45L144.947 28.5485C145.346 28.9189 145.887 29.2465 146.571 29.5313C147.255 29.8162 147.903 29.9586 148.515 29.9586C149.085 29.9586 149.512 29.8589 149.797 29.6595C150.096 29.4601 150.246 29.1895 150.246 28.8477C150.246 28.5913 150.089 28.3847 149.776 28.2281C149.477 28.0571 149.099 27.9361 148.644 27.8649C148.202 27.7936 147.711 27.6868 147.169 27.5444C146.642 27.4019 146.151 27.231 145.695 27.0316C145.254 26.8322 144.876 26.5188 144.563 26.0915C144.264 25.65 144.114 25.1087 144.114 24.4678C144.114 23.5562 144.492 22.787 145.246 22.1603C146.001 21.5336 147.034 21.2203 148.344 21.2203C149.94 21.2203 151.328 21.6903 152.511 22.6304L151.421 24.4891C151.093 24.1473 150.652 23.8624 150.096 23.6345C149.555 23.4066 148.978 23.2927 148.366 23.2927C147.881 23.2927 147.49 23.3924 147.191 23.5918C146.892 23.777 146.742 24.0191 146.742 24.3182C146.742 24.5461 146.892 24.7384 147.191 24.8951C147.49 25.0375 147.867 25.1443 148.323 25.2156C148.779 25.2868 149.27 25.4007 149.797 25.5574C150.324 25.6998 150.816 25.8779 151.271 26.0915C151.727 26.2909 152.105 26.6185 152.404 27.0743C152.703 27.5301 152.852 28.0856 152.852 28.7408C152.852 29.7094 152.454 30.507 151.656 31.1337C150.873 31.7462 149.783 32.0524 148.387 32.0524Z" fill="white"/>
+    <defs>
+      <linearGradient id="paint0_linear_78_3746" x1="12" y1="20.5" x2="32.995" y2="27.1491" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#51EAFF"/>
+        <stop offset="1" stop-color="#2B59FF"/>
+      </linearGradient>
+      <linearGradient id="paint1_linear_78_3746" x1="12" y1="20.5" x2="32.995" y2="27.1491" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#51EAFF"/>
+        <stop offset="1" stop-color="#2B59FF"/>
+      </linearGradient>
+      <linearGradient id="paint2_linear_78_3746" x1="12" y1="20.5" x2="32.995" y2="27.1491" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#51EAFF"/>
+        <stop offset="1" stop-color="#2B59FF"/>
+      </linearGradient>
+    </defs>
+  </symbol>
 
-      <symbol id="header-arrow" viewBox="0 0 18 19" fill="none">
-            <path d="M9.00002 10.0325L6.34502 7.37751C6.2045 7.23782 6.01441 7.15942 5.81627 7.15942C5.61813 7.15942 5.42804 7.23782 5.28752 7.37751C5.21723 7.44723 5.16143 7.53018 5.12335 7.62158C5.08528 7.71297 5.06567 7.811 5.06567 7.91001C5.06567 8.00902 5.08528 8.10705 5.12335 8.19844C5.16143 8.28984 5.21723 8.37279 5.28752 8.44251L8.46752 11.6225C8.53724 11.6928 8.6202 11.7486 8.71159 11.7867C8.80298 11.8248 8.90101 11.8444 9.00002 11.8444C9.09903 11.8444 9.19706 11.8248 9.28846 11.7867C9.37985 11.7486 9.4628 11.6928 9.53252 11.6225L12.75 8.44251C12.8195 8.37243 12.8745 8.28932 12.9119 8.19794C12.9492 8.10656 12.9681 8.00872 12.9675 7.91001C12.9681 7.81131 12.9492 7.71346 12.9119 7.62208C12.8745 7.5307 12.8195 7.44759 12.75 7.37751C12.6095 7.23782 12.4194 7.15942 12.2213 7.15942C12.0231 7.15942 11.833 7.23782 11.6925 7.37751L9.00002 10.0325Z" fill="#C8D2DC"/>
-      </symbol>
+  <symbol id="header-lock" viewBox="0 0 14 15" fill="none">
+    <path d="M7.00001 1.66666C5.39176 1.66666 4.08334 2.97507 4.08334 4.58332V5.74999H3.50001C2.85659 5.74999 2.33334 6.27324 2.33334 6.91666V12.1667C2.33334 12.8101 2.85659 13.3333 3.50001 13.3333H10.5C11.1434 13.3333 11.6667 12.8101 11.6667 12.1667V6.91666C11.6667 6.27324 11.1434 5.74999 10.5 5.74999H9.91668V4.58332C9.91668 2.97507 8.60826 1.66666 7.00001 1.66666ZM5.25001 4.58332C5.25001 3.61849 6.03518 2.83332 7.00001 2.83332C7.96484 2.83332 8.75001 3.61849 8.75001 4.58332V5.74999H5.25001V4.58332ZM10.5012 12.1667H7.58334V10.8378C7.93043 10.6354 8.16668 10.2632 8.16668 9.83332C8.16668 9.18991 7.64343 8.66666 7.00001 8.66666C6.35659 8.66666 5.83334 9.18991 5.83334 9.83332C5.83334 10.2627 6.06959 10.6354 6.41668 10.8378V12.1667H3.50001V6.91666H10.5L10.5012 12.1667Z" fill="#C8D2DC"/>
+  </symbol>
 
-      <symbol id="header-crown" viewBox="0 0 18 18" fill="none">
-            <path d="M4.09069 14.7006C4.09069 14.8653 4.22267 15 4.39068 15H13.6123C13.7773 15 13.9123 14.8653 13.9123 14.7006V13.6049H4.09069V14.7006ZM16.3721 5.10323C16.2612 5.0284 16.1172 5.03434 16.0122 5.1152L12.0464 8.26241L9.26248 3.14484C9.16046 2.9502 8.84249 2.95325 8.73749 3.14484L5.95361 8.26241L1.98779 5.1152C1.88279 5.03137 1.7388 5.0284 1.63081 5.10323C1.51981 5.17811 1.47481 5.31587 1.51382 5.44161L3.97764 13.006H14.0252L16.4861 5.44161C16.5251 5.31587 16.4802 5.17811 16.3721 5.10323Z" fill="url(#paint0_linear_44_789)"/>
-            <defs>
-                  <linearGradient id="paint0_linear_44_789" x1="2.49754" y1="7.875" x2="14.5855" y2="9.13916" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#68C9FF"/>
-                        <stop offset="0.994746" stop-color="#D1B5FF"/>
-                  </linearGradient>
-            </defs>
-      </symbol>
+  <symbol id="icon-arrow" viewBox="0 0 18 19" fill="none">
+    <path d="M9.00002 10.0325L6.34502 7.37751C6.2045 7.23782 6.01441 7.15942 5.81627 7.15942C5.61813 7.15942 5.42804 7.23782 5.28752 7.37751C5.21723 7.44723 5.16143 7.53018 5.12335 7.62158C5.08528 7.71297 5.06567 7.811 5.06567 7.91001C5.06567 8.00902 5.08528 8.10705 5.12335 8.19844C5.16143 8.28984 5.21723 8.37279 5.28752 8.44251L8.46752 11.6225C8.53724 11.6928 8.6202 11.7486 8.71159 11.7867C8.80298 11.8248 8.90101 11.8444 9.00002 11.8444C9.09903 11.8444 9.19706 11.8248 9.28846 11.7867C9.37985 11.7486 9.4628 11.6928 9.53252 11.6225L12.75 8.44251C12.8195 8.37243 12.8745 8.28932 12.9119 8.19794C12.9492 8.10656 12.9681 8.00872 12.9675 7.91001C12.9681 7.81131 12.9492 7.71346 12.9119 7.62208C12.8745 7.5307 12.8195 7.44759 12.75 7.37751C12.6095 7.23782 12.4194 7.15942 12.2213 7.15942C12.0231 7.15942 11.833 7.23782 11.6925 7.37751L9.00002 10.0325Z" fill="#C8D2DC"/>
+  </symbol>
 
-      <symbol id="icon-instagram" viewBox="0 0 24 24" fill="none">
-            <path d="M12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.224 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.987 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.722 17.912 21.475 18.55C21.2247 19.2178 20.8311 19.8226 20.322 20.322C19.822 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.122 21.94C15.056 21.987 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.722 5.45 21.475C4.78233 21.2245 4.17753 20.8309 3.678 20.322C3.16941 19.8222 2.77593 19.2175 2.525 18.55C2.277 17.913 2.11 17.187 2.06 16.122C2.013 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.812 2.277 6.088 2.525 5.45C2.77524 4.78218 3.1688 4.17732 3.678 3.678C4.17767 3.16923 4.78243 2.77573 5.45 2.525C6.088 2.277 6.812 2.11 7.878 2.06C8.944 2.013 9.283 2 12 2ZM12 7C10.6739 7 9.40215 7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7ZM18.5 6.75C18.5 6.41848 18.3683 6.10054 18.1339 5.86612C17.8995 5.6317 17.5815 5.5 17.25 5.5C16.9185 5.5 16.6005 5.6317 16.3661 5.86612C16.1317 6.10054 16 6.41848 16 6.75C16 7.08152 16.1317 7.39946 16.3661 7.63388C16.6005 7.8683 16.9185 8 17.25 8C17.5815 8 17.8995 7.8683 18.1339 7.63388C18.3683 7.39946 18.5 7.08152 18.5 6.75ZM12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9Z" fill="url(#paint0_linear_44_745)"/>
-            <defs>
-                  <linearGradient id="paint0_linear_44_745" x1="3.33005" y1="10.125" x2="19.5104" y2="11.4787" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#68C9FF"/>
-                        <stop offset="0.994746" stop-color="#D1B5FF"/>
-                  </linearGradient>
-            </defs>
-      </symbol>
+  <symbol id="header-crown" viewBox="0 0 18 18" fill="none">
+    <path d="M4.09069 14.7006C4.09069 14.8653 4.22267 15 4.39068 15H13.6123C13.7773 15 13.9123 14.8653 13.9123 14.7006V13.6049H4.09069V14.7006ZM16.3721 5.10323C16.2612 5.0284 16.1172 5.03434 16.0122 5.1152L12.0464 8.26241L9.26248 3.14484C9.16046 2.9502 8.84249 2.95325 8.73749 3.14484L5.95361 8.26241L1.98779 5.1152C1.88279 5.03137 1.7388 5.0284 1.63081 5.10323C1.51981 5.17811 1.47481 5.31587 1.51382 5.44161L3.97764 13.006H14.0252L16.4861 5.44161C16.5251 5.31587 16.4802 5.17811 16.3721 5.10323Z" fill="url(#paint0_linear_44_789)"/>
+    <defs>
+      <linearGradient id="paint0_linear_44_789" x1="2.49754" y1="7.875" x2="14.5855" y2="9.13916" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#68C9FF"/>
+        <stop offset="0.994746" stop-color="#D1B5FF"/>
+      </linearGradient>
+    </defs>
+  </symbol>
 
-      <symbol id="icon-twitter" viewBox="0 0 24 24" fill="none">
-            <path d="M22.5 6.00011L20.25 6.37511L21.75 4.50011L19.125 5.25011C15.75 1.50011 10.5 5.62511 12 9.00011C6 9.00011 3 4.50011 3 4.50011C3 4.50011 0.75 7.87511 4.5 10.5001L2.25 9.75011C2.25 12.0001 3.75 13.5001 6.375 14.2501H3.75C5.25 17.2501 7.875 17.2501 7.875 17.2501C7.875 17.2501 5.625 19.1251 1.5 19.1251C13.875 25.1251 21.375 13.8751 20.25 7.87511L22.5 6.00011Z" fill="url(#paint0_linear_44_746)"/>
-            <defs>
-                  <linearGradient id="paint0_linear_44_746" x1="2.89655" y1="10.6985" x2="19.8256" y2="12.4407" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#68C9FF"/>
-                        <stop offset="0.994746" stop-color="#D1B5FF"/>
-                  </linearGradient>
-            </defs>
-      </symbol>
+  <symbol id="icon-instagram" viewBox="0 0 24 24" fill="none">
+    <path d="M12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.224 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.987 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.722 17.912 21.475 18.55C21.2247 19.2178 20.8311 19.8226 20.322 20.322C19.822 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.122 21.94C15.056 21.987 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.722 5.45 21.475C4.78233 21.2245 4.17753 20.8309 3.678 20.322C3.16941 19.8222 2.77593 19.2175 2.525 18.55C2.277 17.913 2.11 17.187 2.06 16.122C2.013 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.812 2.277 6.088 2.525 5.45C2.77524 4.78218 3.1688 4.17732 3.678 3.678C4.17767 3.16923 4.78243 2.77573 5.45 2.525C6.088 2.277 6.812 2.11 7.878 2.06C8.944 2.013 9.283 2 12 2ZM12 7C10.6739 7 9.40215 7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7ZM18.5 6.75C18.5 6.41848 18.3683 6.10054 18.1339 5.86612C17.8995 5.6317 17.5815 5.5 17.25 5.5C16.9185 5.5 16.6005 5.6317 16.3661 5.86612C16.1317 6.10054 16 6.41848 16 6.75C16 7.08152 16.1317 7.39946 16.3661 7.63388C16.6005 7.8683 16.9185 8 17.25 8C17.5815 8 17.8995 7.8683 18.1339 7.63388C18.3683 7.39946 18.5 7.08152 18.5 6.75ZM12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9Z" fill="url(#paint0_linear_44_745)"/>
+    <defs>
+      <linearGradient id="paint0_linear_44_745" x1="3.33005" y1="10.125" x2="19.5104" y2="11.4787" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#68C9FF"/>
+        <stop offset="0.994746" stop-color="#D1B5FF"/>
+      </linearGradient>
+    </defs>
+  </symbol>
 
-      <symbol id="icon-telegram" viewBox="0 0 24 24" fill="none">
-            <path d="M20.665 3.71706L2.93497 10.5541C1.72497 11.0401 1.73197 11.7151 2.71297 12.0161L7.26497 13.4361L17.797 6.79106C18.295 6.48806 18.75 6.65106 18.376 6.98306L9.84297 14.6841H9.84097L9.84297 14.6851L9.52897 19.3771C9.98897 19.3771 10.192 19.1661 10.45 18.9171L12.661 16.7671L17.26 20.1641C18.108 20.6311 18.717 20.3911 18.928 19.3791L21.947 5.15106C22.256 3.91206 21.474 3.35106 20.665 3.71706Z" fill="url(#paint0_linear_44_747)"/>
-            <defs>
-                  <linearGradient id="paint0_linear_44_747" x1="3.33146" y1="10.4262" x2="19.4771" y2="12.0368" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#68C9FF"/>
-                        <stop offset="0.994746" stop-color="#D1B5FF"/>
-                  </linearGradient>
-            </defs>
-      </symbol>
+  <symbol id="icon-twitter" viewBox="0 0 24 24" fill="none">
+    <path d="M22.5 6.00011L20.25 6.37511L21.75 4.50011L19.125 5.25011C15.75 1.50011 10.5 5.62511 12 9.00011C6 9.00011 3 4.50011 3 4.50011C3 4.50011 0.75 7.87511 4.5 10.5001L2.25 9.75011C2.25 12.0001 3.75 13.5001 6.375 14.2501H3.75C5.25 17.2501 7.875 17.2501 7.875 17.2501C7.875 17.2501 5.625 19.1251 1.5 19.1251C13.875 25.1251 21.375 13.8751 20.25 7.87511L22.5 6.00011Z" fill="url(#paint0_linear_44_746)"/>
+    <defs>
+      <linearGradient id="paint0_linear_44_746" x1="2.89655" y1="10.6985" x2="19.8256" y2="12.4407" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#68C9FF"/>
+        <stop offset="0.994746" stop-color="#D1B5FF"/>
+      </linearGradient>
+    </defs>
+  </symbol>
 
-      <symbol id="icon-pinterest" viewBox="0 0 24 24" fill="none">
-            <path d="M12.24 2.40002C6.95995 2.40002 4.19995 5.76002 4.19995 9.48002C4.19995 11.28 5.15995 13.08 6.71995 14.04C7.19995 14.28 7.07995 14.04 7.43995 12.6C7.43995 12.48 7.43995 12.36 7.31995 12.24C5.15995 9.60002 6.95995 4.44002 12 4.44002C19.32 4.44002 17.88 14.52 13.32 14.52C12.36 14.64 11.52 13.92 11.52 12.96V12.48C12 11.16 12.36 9.96002 12.48 8.64002C12.48 6.12002 8.75995 6.48002 8.75995 9.84002C8.75995 10.44 8.87995 11.04 9.11995 11.52C9.11995 11.52 7.91995 16.44 7.67995 17.28C7.43995 18.72 7.55995 20.16 7.79995 21.48C7.67995 21.6 7.79995 21.6 7.79995 21.6H7.91995C8.75995 20.4 9.47995 19.2 9.95995 17.88C10.08 17.28 10.68 15.12 10.68 15.12C11.28 15.96 12.36 16.44 13.44 16.44C17.16 16.44 19.8 13.2 19.8 9.24002C19.8 5.28002 16.44 2.40002 12.24 2.40002Z" fill="url(#paint0_linear_2985_1746)"/>
-            <defs>
-                  <linearGradient id="paint0_linear_2985_1746" x1="5.23739" y1="10.2" x2="17.888" y2="11.06" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#68C9FF"/>
-                        <stop offset="0.994746" stop-color="#D1B5FF"/>
-                  </linearGradient>
-            </defs>
-      </symbol>
+  <symbol id="icon-telegram" viewBox="0 0 24 24" fill="none">
+    <path d="M20.665 3.71706L2.93497 10.5541C1.72497 11.0401 1.73197 11.7151 2.71297 12.0161L7.26497 13.4361L17.797 6.79106C18.295 6.48806 18.75 6.65106 18.376 6.98306L9.84297 14.6841H9.84097L9.84297 14.6851L9.52897 19.3771C9.98897 19.3771 10.192 19.1661 10.45 18.9171L12.661 16.7671L17.26 20.1641C18.108 20.6311 18.717 20.3911 18.928 19.3791L21.947 5.15106C22.256 3.91206 21.474 3.35106 20.665 3.71706Z" fill="url(#paint0_linear_44_747)"/>
+    <defs>
+      <linearGradient id="paint0_linear_44_747" x1="3.33146" y1="10.4262" x2="19.4771" y2="12.0368" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#68C9FF"/>
+        <stop offset="0.994746" stop-color="#D1B5FF"/>
+      </linearGradient>
+    </defs>
+  </symbol>
 
-      <symbol id="star" viewBox="0 0 46 62" fill="none">
-            <g clip-path="url(#clip0_55_977)">
-                  <path d="M46 30.8126C25.1366 30.8126 23 41.009 23 62C23 41.009 20.8634 30.8126 0 30.8126C20.8634 30.8126 23 20.991 23 0C23 20.991 25.1366 30.8126 46 30.8126Z" fill="#FCFFFF"/>
-            </g>
-            <defs>
-                  <clipPath id="clip0_55_977">
-                        <rect width="46" height="62" fill="white"/>
-                  </clipPath>
-            </defs>
-      </symbol>
+  <symbol id="icon-pinterest" viewBox="0 0 24 24" fill="none">
+    <path d="M12.24 2.40002C6.95995 2.40002 4.19995 5.76002 4.19995 9.48002C4.19995 11.28 5.15995 13.08 6.71995 14.04C7.19995 14.28 7.07995 14.04 7.43995 12.6C7.43995 12.48 7.43995 12.36 7.31995 12.24C5.15995 9.60002 6.95995 4.44002 12 4.44002C19.32 4.44002 17.88 14.52 13.32 14.52C12.36 14.64 11.52 13.92 11.52 12.96V12.48C12 11.16 12.36 9.96002 12.48 8.64002C12.48 6.12002 8.75995 6.48002 8.75995 9.84002C8.75995 10.44 8.87995 11.04 9.11995 11.52C9.11995 11.52 7.91995 16.44 7.67995 17.28C7.43995 18.72 7.55995 20.16 7.79995 21.48C7.67995 21.6 7.79995 21.6 7.79995 21.6H7.91995C8.75995 20.4 9.47995 19.2 9.95995 17.88C10.08 17.28 10.68 15.12 10.68 15.12C11.28 15.96 12.36 16.44 13.44 16.44C17.16 16.44 19.8 13.2 19.8 9.24002C19.8 5.28002 16.44 2.40002 12.24 2.40002Z" fill="url(#paint0_linear_2985_1746)"/>
+    <defs>
+      <linearGradient id="paint0_linear_2985_1746" x1="5.23739" y1="10.2" x2="17.888" y2="11.06" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#68C9FF"/>
+        <stop offset="0.994746" stop-color="#D1B5FF"/>
+      </linearGradient>
+    </defs>
+  </symbol>
 
-      <symbol id="elipse" viewBox="0 0 25 25" fill="none">
-            <circle opacity="0.4" cx="12.5" cy="12.5" r="12" stroke="#FCFFFF"/>
-      </symbol>
+  <symbol id="star" viewBox="0 0 46 62" fill="none">
+    <g clip-path="url(#clip0_55_977)">
+      <path d="M46 30.8126C25.1366 30.8126 23 41.009 23 62C23 41.009 20.8634 30.8126 0 30.8126C20.8634 30.8126 23 20.991 23 0C23 20.991 25.1366 30.8126 46 30.8126Z" fill="#FCFFFF"/>
+    </g>
+    <defs>
+      <clipPath id="clip0_55_977">
+        <rect width="46" height="62" fill="white"/>
+      </clipPath>
+    </defs>
+  </symbol>
 
-      <symbol id="locked-content" viewBox="0 0 40 40" fill="none">
-            <path d="M28.3334 15V11.6667C28.3334 7 24.6667 3.33333 20.0001 3.33333C15.3334 3.33333 11.6667 7 11.6667 11.6667V15C8.83341 15 6.66675 17.1667 6.66675 20V31.6667C6.66675 34.5 8.83341 36.6667 11.6667 36.6667H28.3334C31.1667 36.6667 33.3334 34.5 33.3334 31.6667V20C33.3334 17.1667 31.1667 15 28.3334 15ZM15.0001 11.6667C15.0001 8.83333 17.1667 6.66666 20.0001 6.66666C22.8334 6.66666 25.0001 8.83333 25.0001 11.6667V15H15.0001V11.6667ZM21.8334 25.8333L21.6667 26V28.3333C21.6667 29.3333 21.0001 30 20.0001 30C19.0001 30 18.3334 29.3333 18.3334 28.3333V26C17.3334 25 17.1667 23.5 18.1667 22.5C19.1667 21.5 20.6667 21.3333 21.6667 22.3333C22.6667 23.1667 22.8334 24.8333 21.8334 25.8333Z" fill="#C8D2DC"/>
-      </symbol>
+  <symbol id="elipse" viewBox="0 0 25 25" fill="none">
+    <circle opacity="0.4" cx="12.5" cy="12.5" r="12" stroke="#FCFFFF"/>
+  </symbol>
 
-      <symbol id="btn-arr" viewBox="0 0 24 25" fill="none">
-            <path d="M7.0001 13.5001L14.5901 13.5001L11.2901 16.7901C11.1018 16.9784 10.996 17.2338 10.996 17.5001C10.996 17.7664 11.1018 18.0218 11.2901 18.2101C11.4784 18.3984 11.7338 18.5041 12.0001 18.5041C12.2664 18.5041 12.5218 18.3984 12.7101 18.2101L17.7101 13.2101C17.8011 13.115 17.8725 13.0028 17.9201 12.8801C18.0201 12.6366 18.0201 12.3635 17.9201 12.1201C17.8725 11.9973 17.8011 11.8852 17.7101 11.7901L12.7101 6.79006C12.6171 6.69633 12.5065 6.62194 12.3847 6.57117C12.2628 6.5204 12.1321 6.49426 12.0001 6.49426C11.8681 6.49426 11.7374 6.5204 11.6155 6.57117C11.4937 6.62194 11.3831 6.69633 11.2901 6.79006C11.1964 6.88302 11.122 6.99362 11.0712 7.11548C11.0204 7.23734 10.9943 7.36805 10.9943 7.50006C10.9943 7.63207 11.0204 7.76278 11.0712 7.88464C11.122 8.00649 11.1964 8.11709 11.2901 8.21006L14.5901 11.5001L7.0001 11.5001C6.73489 11.5001 6.48053 11.6054 6.293 11.793C6.10546 11.9805 6.0001 12.2348 6.0001 12.5001C6.0001 12.7653 6.10546 13.0196 6.293 13.2072C6.48053 13.3947 6.73489 13.5001 7.0001 13.5001Z" fill="url(#paint0_linear_55_1770)"/>
-            <defs>
-                  <linearGradient id="paint0_linear_55_1770" x1="17.1974" y1="13.6251" x2="7.49307" y2="12.8142" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#68C9FF"/>
-                        <stop offset="0.994746" stop-color="#D1B5FF"/>
-                  </linearGradient>
-            </defs>
-      </symbol>
+  <symbol id="locked-content" viewBox="0 0 40 40" fill="none">
+    <path d="M28.3334 15V11.6667C28.3334 7 24.6667 3.33333 20.0001 3.33333C15.3334 3.33333 11.6667 7 11.6667 11.6667V15C8.83341 15 6.66675 17.1667 6.66675 20V31.6667C6.66675 34.5 8.83341 36.6667 11.6667 36.6667H28.3334C31.1667 36.6667 33.3334 34.5 33.3334 31.6667V20C33.3334 17.1667 31.1667 15 28.3334 15ZM15.0001 11.6667C15.0001 8.83333 17.1667 6.66666 20.0001 6.66666C22.8334 6.66666 25.0001 8.83333 25.0001 11.6667V15H15.0001V11.6667ZM21.8334 25.8333L21.6667 26V28.3333C21.6667 29.3333 21.0001 30 20.0001 30C19.0001 30 18.3334 29.3333 18.3334 28.3333V26C17.3334 25 17.1667 23.5 18.1667 22.5C19.1667 21.5 20.6667 21.3333 21.6667 22.3333C22.6667 23.1667 22.8334 24.8333 21.8334 25.8333Z" fill="#C8D2DC"/>
+  </symbol>
 
-      <symbol id="default-crown" viewBox="0 0 24 25" fill="currentColor">
-            <path d="M5.45425 20.1008C5.45425 20.3203 5.63023 20.5 5.85424 20.5H18.1497C18.3697 20.5 18.5497 20.3203 18.5497 20.1008V18.6398H5.45425V20.1008ZM21.8295 7.30431C21.6815 7.20453 21.4896 7.21245 21.3496 7.32026L16.0618 11.5165L12.35 4.69312C12.2139 4.43359 11.79 4.43767 11.65 4.69312L7.93814 11.5165L2.65039 7.32026C2.51039 7.20849 2.3184 7.20453 2.17441 7.30431C2.02642 7.40415 1.96641 7.58782 2.01843 7.75548L5.30352 17.8413H18.7003L21.9815 7.75548C22.0335 7.58782 21.9736 7.40415 21.8295 7.30431Z" fill="currentColor"/>
-      </symbol>
+  <symbol id="btn-arr" viewBox="0 0 24 25" fill="none">
+    <path d="M7.0001 13.5001L14.5901 13.5001L11.2901 16.7901C11.1018 16.9784 10.996 17.2338 10.996 17.5001C10.996 17.7664 11.1018 18.0218 11.2901 18.2101C11.4784 18.3984 11.7338 18.5041 12.0001 18.5041C12.2664 18.5041 12.5218 18.3984 12.7101 18.2101L17.7101 13.2101C17.8011 13.115 17.8725 13.0028 17.9201 12.8801C18.0201 12.6366 18.0201 12.3635 17.9201 12.1201C17.8725 11.9973 17.8011 11.8852 17.7101 11.7901L12.7101 6.79006C12.6171 6.69633 12.5065 6.62194 12.3847 6.57117C12.2628 6.5204 12.1321 6.49426 12.0001 6.49426C11.8681 6.49426 11.7374 6.5204 11.6155 6.57117C11.4937 6.62194 11.3831 6.69633 11.2901 6.79006C11.1964 6.88302 11.122 6.99362 11.0712 7.11548C11.0204 7.23734 10.9943 7.36805 10.9943 7.50006C10.9943 7.63207 11.0204 7.76278 11.0712 7.88464C11.122 8.00649 11.1964 8.11709 11.2901 8.21006L14.5901 11.5001L7.0001 11.5001C6.73489 11.5001 6.48053 11.6054 6.293 11.793C6.10546 11.9805 6.0001 12.2348 6.0001 12.5001C6.0001 12.7653 6.10546 13.0196 6.293 13.2072C6.48053 13.3947 6.73489 13.5001 7.0001 13.5001Z" fill="url(#paint0_linear_55_1770)"/>
+    <defs>
+      <linearGradient id="paint0_linear_55_1770" x1="17.1974" y1="13.6251" x2="7.49307" y2="12.8142" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#68C9FF"/>
+        <stop offset="0.994746" stop-color="#D1B5FF"/>
+      </linearGradient>
+    </defs>
+  </symbol>
 
-      <symbol id="bag" viewBox="0 0 24 25" fill="none">
-            <path d="M18 7.5H16V6.5C16 4.3 14.2 2.5 12 2.5C9.8 2.5 8 4.3 8 6.5V7.5H6C4.9 7.5 4 8.4 4 9.5V19.5C4 21.2 5.3 22.5 7 22.5H17C18.7 22.5 20 21.2 20 19.5V9.5C20 8.4 19.1 7.5 18 7.5ZM10 6.5C10 5.4 10.9 4.5 12 4.5C13.1 4.5 14 5.4 14 6.5V7.5H10V6.5Z" fill="#1D1F21"/>
-      </symbol>
+  <symbol id="default-crown" viewBox="0 0 24 25" fill="currentColor">
+    <path d="M5.45425 20.1008C5.45425 20.3203 5.63023 20.5 5.85424 20.5H18.1497C18.3697 20.5 18.5497 20.3203 18.5497 20.1008V18.6398H5.45425V20.1008ZM21.8295 7.30431C21.6815 7.20453 21.4896 7.21245 21.3496 7.32026L16.0618 11.5165L12.35 4.69312C12.2139 4.43359 11.79 4.43767 11.65 4.69312L7.93814 11.5165L2.65039 7.32026C2.51039 7.20849 2.3184 7.20453 2.17441 7.30431C2.02642 7.40415 1.96641 7.58782 2.01843 7.75548L5.30352 17.8413H18.7003L21.9815 7.75548C22.0335 7.58782 21.9736 7.40415 21.8295 7.30431Z" fill="currentColor"/>
+  </symbol>
 
-      <symbol id="coin" viewBox="0 0 24 24" fill="none">
-            <path d="M12 3C7.03716 3 3 7.03716 3 12C3 16.9628 7.03716 21 12 21C16.9628 21 21 16.9628 21 12C21 7.03716 16.9628 3 12 3ZM14.8274 14.7492C14.5556 15.1454 14.1995 15.4427 13.7326 15.6645C13.3883 15.8172 13.0298 15.9109 12.6595 15.9458V17.1555C12.6595 17.3402 12.5102 17.489 12.326 17.489H11.3278C11.1431 17.489 10.9942 17.3397 10.9942 17.1555V15.8412C10.8063 15.795 10.6211 15.7305 10.4355 15.6457C9.93667 15.4422 9.53436 15.1105 9.25218 14.6644C8.96907 14.2504 8.81691 13.7666 8.79335 13.1951C8.78582 13.0142 8.92384 12.8607 9.10427 12.8484L10.0007 12.7872C10.1812 12.7768 10.3338 12.9045 10.355 13.0807C10.3908 13.3807 10.4751 13.629 10.5995 13.7986C10.7394 14.0087 10.9189 14.1467 11.1902 14.2579C11.7649 14.5109 12.496 14.5113 13.002 14.3168C13.2262 14.2207 13.385 14.1104 13.49 13.9748C13.58 13.8457 13.6243 13.71 13.6243 13.548C13.6243 13.3958 13.5852 13.2837 13.4905 13.1622C13.441 13.0962 13.3134 12.9728 12.9775 12.8385C12.8136 12.7843 12.3877 12.6633 11.7395 12.5064C10.9825 12.3175 10.5444 12.1743 10.2725 12.0269C9.86789 11.813 9.56404 11.5463 9.37325 11.2359C9.17775 10.9198 9.07883 10.559 9.07883 10.1642C9.07883 9.73457 9.19895 9.3252 9.43544 8.9474C9.6804 8.57901 10.0417 8.28977 10.4855 8.10322C10.6339 8.03585 10.8025 7.97932 10.9947 7.9341V6.82188C10.9947 6.63721 11.144 6.48835 11.3282 6.48835H12.3265C12.5111 6.48835 12.66 6.63769 12.66 6.82188V7.87522C12.9601 7.92515 13.238 8.00099 13.49 8.10134C13.9776 8.32039 14.3314 8.61387 14.5839 9.0044C14.8368 9.37278 14.9796 9.81513 15.0046 10.3112C15.0135 10.493 14.875 10.6485 14.6932 10.6607L13.7755 10.7224C13.5984 10.7347 13.4462 10.6084 13.4222 10.4346C13.3708 10.0582 13.2451 9.79534 13.0373 9.63188C12.8013 9.43072 12.4588 9.33698 11.9802 9.33698C11.5115 9.33698 11.1351 9.4279 10.9198 9.59372C10.745 9.72845 10.6631 9.8905 10.6631 10.1034C10.6631 10.2674 10.7144 10.396 10.8157 10.4864C10.8694 10.5288 11.1624 10.7196 12.1098 10.9189C12.8922 11.1035 13.4674 11.2717 13.7826 11.4074C14.2847 11.6335 14.6437 11.9251 14.8543 12.2756C15.0893 12.6275 15.2076 13.0213 15.2076 13.466C15.2076 13.9286 15.0799 14.3601 14.8274 14.7492Z" fill="#1D1F21"/>
-      </symbol>
+  <symbol id="bag" viewBox="0 0 24 25" fill="none">
+    <path d="M18 7.5H16V6.5C16 4.3 14.2 2.5 12 2.5C9.8 2.5 8 4.3 8 6.5V7.5H6C4.9 7.5 4 8.4 4 9.5V19.5C4 21.2 5.3 22.5 7 22.5H17C18.7 22.5 20 21.2 20 19.5V9.5C20 8.4 19.1 7.5 18 7.5ZM10 6.5C10 5.4 10.9 4.5 12 4.5C13.1 4.5 14 5.4 14 6.5V7.5H10V6.5Z" fill="#1D1F21"/>
+  </symbol>
 
-      <symbol id="right-arr" viewBox="0 0 16 17" fill="none">
-            <path d="M8.47345 8.49999L6.11345 10.86C5.98928 10.9849 5.91959 11.1539 5.91959 11.33C5.91959 11.5061 5.98928 11.6751 6.11345 11.8C6.17543 11.8625 6.24916 11.9121 6.3304 11.9459C6.41164 11.9798 6.49878 11.9972 6.58679 11.9972C6.67479 11.9972 6.76193 11.9798 6.84317 11.9459C6.92441 11.9121 6.99814 11.8625 7.06012 11.8L9.88679 8.97333C9.94927 8.91135 9.99887 8.83762 10.0327 8.75638C10.0666 8.67514 10.084 8.588 10.084 8.49999C10.084 8.41199 10.0666 8.32485 10.0327 8.24361C9.99887 8.16237 9.94927 8.08864 9.88679 8.02666L7.06012 5.16666C6.99783 5.10487 6.92395 5.05599 6.84272 5.02281C6.7615 4.98964 6.67452 4.97282 6.58679 4.97333C6.49905 4.97282 6.41207 4.98964 6.33085 5.02281C6.24962 5.05599 6.17575 5.10487 6.11345 5.16666C5.98929 5.29157 5.91959 5.46054 5.91959 5.63666C5.91959 5.81278 5.98929 5.98175 6.11345 6.10666L8.47345 8.49999Z" fill="#C8D2DC"/>
-      </symbol>
+  <symbol id="coin" viewBox="0 0 24 24" fill="none">
+    <path d="M12 3C7.03716 3 3 7.03716 3 12C3 16.9628 7.03716 21 12 21C16.9628 21 21 16.9628 21 12C21 7.03716 16.9628 3 12 3ZM14.8274 14.7492C14.5556 15.1454 14.1995 15.4427 13.7326 15.6645C13.3883 15.8172 13.0298 15.9109 12.6595 15.9458V17.1555C12.6595 17.3402 12.5102 17.489 12.326 17.489H11.3278C11.1431 17.489 10.9942 17.3397 10.9942 17.1555V15.8412C10.8063 15.795 10.6211 15.7305 10.4355 15.6457C9.93667 15.4422 9.53436 15.1105 9.25218 14.6644C8.96907 14.2504 8.81691 13.7666 8.79335 13.1951C8.78582 13.0142 8.92384 12.8607 9.10427 12.8484L10.0007 12.7872C10.1812 12.7768 10.3338 12.9045 10.355 13.0807C10.3908 13.3807 10.4751 13.629 10.5995 13.7986C10.7394 14.0087 10.9189 14.1467 11.1902 14.2579C11.7649 14.5109 12.496 14.5113 13.002 14.3168C13.2262 14.2207 13.385 14.1104 13.49 13.9748C13.58 13.8457 13.6243 13.71 13.6243 13.548C13.6243 13.3958 13.5852 13.2837 13.4905 13.1622C13.441 13.0962 13.3134 12.9728 12.9775 12.8385C12.8136 12.7843 12.3877 12.6633 11.7395 12.5064C10.9825 12.3175 10.5444 12.1743 10.2725 12.0269C9.86789 11.813 9.56404 11.5463 9.37325 11.2359C9.17775 10.9198 9.07883 10.559 9.07883 10.1642C9.07883 9.73457 9.19895 9.3252 9.43544 8.9474C9.6804 8.57901 10.0417 8.28977 10.4855 8.10322C10.6339 8.03585 10.8025 7.97932 10.9947 7.9341V6.82188C10.9947 6.63721 11.144 6.48835 11.3282 6.48835H12.3265C12.5111 6.48835 12.66 6.63769 12.66 6.82188V7.87522C12.9601 7.92515 13.238 8.00099 13.49 8.10134C13.9776 8.32039 14.3314 8.61387 14.5839 9.0044C14.8368 9.37278 14.9796 9.81513 15.0046 10.3112C15.0135 10.493 14.875 10.6485 14.6932 10.6607L13.7755 10.7224C13.5984 10.7347 13.4462 10.6084 13.4222 10.4346C13.3708 10.0582 13.2451 9.79534 13.0373 9.63188C12.8013 9.43072 12.4588 9.33698 11.9802 9.33698C11.5115 9.33698 11.1351 9.4279 10.9198 9.59372C10.745 9.72845 10.6631 9.8905 10.6631 10.1034C10.6631 10.2674 10.7144 10.396 10.8157 10.4864C10.8694 10.5288 11.1624 10.7196 12.1098 10.9189C12.8922 11.1035 13.4674 11.2717 13.7826 11.4074C14.2847 11.6335 14.6437 11.9251 14.8543 12.2756C15.0893 12.6275 15.2076 13.0213 15.2076 13.466C15.2076 13.9286 15.0799 14.3601 14.8274 14.7492Z" fill="#1D1F21"/>
+  </symbol>
 
-      <symbol id="video" viewBox="0 0 25 25" fill="none">
-            <path d="M12.9168 12.3958C12.5002 11.1458 11.2502 10.3125 10.0002 10.3125C8.85433 10.3125 7.81266 10.9375 7.29183 11.875C6.97933 12.3958 7.18766 13.0208 7.7085 13.3333C8.22933 13.6458 8.85433 13.4375 9.16683 12.9167C9.47933 12.3958 10.1043 12.2917 10.6252 12.5C11.146 12.7083 11.2502 13.4375 11.0418 13.9583C10.8335 14.2708 10.521 14.4792 10.1043 14.4792C9.47933 14.4792 9.06266 14.8958 9.06266 15.5208V16.5625C9.06266 17.1875 9.47933 17.6042 10.1043 17.6042C10.7293 17.6042 11.146 17.1875 11.146 16.5625V16.3542C12.6043 15.8333 13.5418 14.0625 12.9168 12.3958ZM9.896 18.75C9.271 18.75 8.85433 19.1667 8.85433 19.7917C8.85433 20.4167 9.271 20.8333 9.896 20.8333C10.521 20.8333 10.9377 20.4167 10.9377 19.7917C10.9377 19.1667 10.521 18.75 9.896 18.75ZM22.396 7.39583C22.0835 7.1875 21.6668 7.1875 21.3543 7.39583L17.7085 9.27083C17.6043 7.60417 16.2502 6.25 14.5835 6.25H5.2085C3.43766 6.25 2.0835 7.60417 2.0835 9.375V15.625C2.0835 17.3958 3.43766 18.75 5.2085 18.75H7.50016C7.60433 18.5417 7.7085 18.3333 7.81266 18.125C7.50016 17.7083 7.29183 17.1875 7.29183 16.5625V15.5208C7.29183 15.3125 7.29183 15.1042 7.396 14.8958C7.18766 14.7917 6.97933 14.7917 6.771 14.6875C5.521 13.9583 5.10433 12.3958 5.8335 11.1458C6.771 9.6875 8.3335 8.75 10.0002 8.75C11.9793 8.75 13.7502 10 14.3752 11.875C14.7918 13.0208 14.6877 14.375 14.1668 15.4167C13.7502 16.25 13.1252 16.875 12.396 17.3958C12.2918 17.7083 12.1877 17.9167 11.9793 18.2292C12.0835 18.3333 12.1877 18.5417 12.2918 18.75H14.5835C16.2502 18.75 17.6043 17.3958 17.7085 15.7292L21.4585 17.6042C21.9793 17.8125 22.6043 17.6042 22.8127 17.1875C22.9168 16.9792 22.9168 16.875 22.9168 16.6667V8.33333C22.9168 8.02083 22.7085 7.60417 22.396 7.39583Z" fill="url(#paint0_linear_55_1746)"/>
-            <defs>
-                  <linearGradient id="paint0_linear_55_1746" x1="3.46896" y1="12.1745" x2="20.2024" y2="14.1745" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#68C9FF"/>
-                        <stop offset="0.994746" stop-color="#D1B5FF"/>
-                  </linearGradient>
-            </defs>
-      </symbol>
+  <symbol id="right-arr" viewBox="0 0 16 17" fill="none">
+    <path d="M8.47345 8.49999L6.11345 10.86C5.98928 10.9849 5.91959 11.1539 5.91959 11.33C5.91959 11.5061 5.98928 11.6751 6.11345 11.8C6.17543 11.8625 6.24916 11.9121 6.3304 11.9459C6.41164 11.9798 6.49878 11.9972 6.58679 11.9972C6.67479 11.9972 6.76193 11.9798 6.84317 11.9459C6.92441 11.9121 6.99814 11.8625 7.06012 11.8L9.88679 8.97333C9.94927 8.91135 9.99887 8.83762 10.0327 8.75638C10.0666 8.67514 10.084 8.588 10.084 8.49999C10.084 8.41199 10.0666 8.32485 10.0327 8.24361C9.99887 8.16237 9.94927 8.08864 9.88679 8.02666L7.06012 5.16666C6.99783 5.10487 6.92395 5.05599 6.84272 5.02281C6.7615 4.98964 6.67452 4.97282 6.58679 4.97333C6.49905 4.97282 6.41207 4.98964 6.33085 5.02281C6.24962 5.05599 6.17575 5.10487 6.11345 5.16666C5.98929 5.29157 5.91959 5.46054 5.91959 5.63666C5.91959 5.81278 5.98929 5.98175 6.11345 6.10666L8.47345 8.49999Z" fill="#C8D2DC"/>
+  </symbol>
 
-      <symbol id="play" viewBox="0 0 64 64" fill="none">
-            <path d="M31.9999 58.6668C26.7258 58.6668 21.57 57.1029 17.1847 54.1727C12.7994 51.2425 9.38148 47.0778 7.36314 42.2051C5.34481 37.3324 4.81672 31.9706 5.84566 26.7978C6.8746 21.6249 9.41435 16.8734 13.1438 13.144C16.8732 9.41459 21.6247 6.87484 26.7975 5.8459C31.9704 4.81696 37.3321 5.34505 42.2048 7.36339C47.0775 9.38172 51.2423 12.7997 54.1725 17.185C57.1026 21.5703 58.6666 26.726 58.6666 32.0002C58.6583 39.0701 55.8461 45.848 50.8469 50.8472C45.8478 55.8464 39.0698 58.6585 31.9999 58.6668Z" fill="#B2B1FF"/>
-            <path d="M26.6666 45.0416C25.2526 45.0357 23.8983 44.4709 22.8991 43.4703C21.9 42.4697 21.3371 41.1145 21.3333 39.7005V24.2995C21.3338 23.3634 21.5805 22.444 22.0487 21.6335C22.5169 20.823 23.1901 20.15 24.0006 19.6819C24.8112 19.2138 25.7306 18.9672 26.6666 18.9668C27.6027 18.9664 28.5223 19.2123 29.3333 19.6797L42.6666 27.3802C43.4774 27.8485 44.1506 28.522 44.6187 29.3329C45.0868 30.1438 45.3333 31.0637 45.3333 32C45.3333 32.9363 45.0868 33.8562 44.6187 34.6671C44.1506 35.478 43.4774 36.1515 42.6666 36.6198L29.3333 44.3203C28.5233 44.7912 27.6035 45.0401 26.6666 45.0416Z" fill="#6563FF"/>
-      </symbol>
+  <symbol id="video" viewBox="0 0 25 25" fill="none">
+    <path d="M12.9168 12.3958C12.5002 11.1458 11.2502 10.3125 10.0002 10.3125C8.85433 10.3125 7.81266 10.9375 7.29183 11.875C6.97933 12.3958 7.18766 13.0208 7.7085 13.3333C8.22933 13.6458 8.85433 13.4375 9.16683 12.9167C9.47933 12.3958 10.1043 12.2917 10.6252 12.5C11.146 12.7083 11.2502 13.4375 11.0418 13.9583C10.8335 14.2708 10.521 14.4792 10.1043 14.4792C9.47933 14.4792 9.06266 14.8958 9.06266 15.5208V16.5625C9.06266 17.1875 9.47933 17.6042 10.1043 17.6042C10.7293 17.6042 11.146 17.1875 11.146 16.5625V16.3542C12.6043 15.8333 13.5418 14.0625 12.9168 12.3958ZM9.896 18.75C9.271 18.75 8.85433 19.1667 8.85433 19.7917C8.85433 20.4167 9.271 20.8333 9.896 20.8333C10.521 20.8333 10.9377 20.4167 10.9377 19.7917C10.9377 19.1667 10.521 18.75 9.896 18.75ZM22.396 7.39583C22.0835 7.1875 21.6668 7.1875 21.3543 7.39583L17.7085 9.27083C17.6043 7.60417 16.2502 6.25 14.5835 6.25H5.2085C3.43766 6.25 2.0835 7.60417 2.0835 9.375V15.625C2.0835 17.3958 3.43766 18.75 5.2085 18.75H7.50016C7.60433 18.5417 7.7085 18.3333 7.81266 18.125C7.50016 17.7083 7.29183 17.1875 7.29183 16.5625V15.5208C7.29183 15.3125 7.29183 15.1042 7.396 14.8958C7.18766 14.7917 6.97933 14.7917 6.771 14.6875C5.521 13.9583 5.10433 12.3958 5.8335 11.1458C6.771 9.6875 8.3335 8.75 10.0002 8.75C11.9793 8.75 13.7502 10 14.3752 11.875C14.7918 13.0208 14.6877 14.375 14.1668 15.4167C13.7502 16.25 13.1252 16.875 12.396 17.3958C12.2918 17.7083 12.1877 17.9167 11.9793 18.2292C12.0835 18.3333 12.1877 18.5417 12.2918 18.75H14.5835C16.2502 18.75 17.6043 17.3958 17.7085 15.7292L21.4585 17.6042C21.9793 17.8125 22.6043 17.6042 22.8127 17.1875C22.9168 16.9792 22.9168 16.875 22.9168 16.6667V8.33333C22.9168 8.02083 22.7085 7.60417 22.396 7.39583Z" fill="url(#paint0_linear_55_1746)"/>
+    <defs>
+      <linearGradient id="paint0_linear_55_1746" x1="3.46896" y1="12.1745" x2="20.2024" y2="14.1745" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#68C9FF"/>
+        <stop offset="0.994746" stop-color="#D1B5FF"/>
+      </linearGradient>
+    </defs>
+  </symbol>
 
-      <symbol id="gradient-crown" viewBox="0 0 18 19" fill="none">
-            <path d="M4.09069 15.2006C4.09069 15.3653 4.22267 15.5 4.39068 15.5H13.6123C13.7773 15.5 13.9123 15.3653 13.9123 15.2006V14.1049H4.09069V15.2006ZM16.3721 5.60323C16.2612 5.5284 16.1172 5.53434 16.0122 5.6152L12.0464 8.76241L9.26248 3.64484C9.16046 3.4502 8.84249 3.45325 8.73749 3.64484L5.95361 8.76241L1.98779 5.6152C1.88279 5.53137 1.7388 5.5284 1.63081 5.60323C1.51981 5.67811 1.47481 5.81587 1.51382 5.94161L3.97764 13.506H14.0252L16.4861 5.94161C16.5251 5.81587 16.4802 5.67811 16.3721 5.60323Z" fill="url(#paint0_linear_55_2565)"/>
-            <defs>
-                  <linearGradient id="paint0_linear_55_2565" x1="2.49754" y1="8.375" x2="14.5855" y2="9.63916" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#68C9FF"/>
-                        <stop offset="0.994746" stop-color="#D1B5FF"/>
-                  </linearGradient>
-            </defs>
-      </symbol>
+  <symbol id="play" viewBox="0 0 64 64" fill="none">
+    <path d="M31.9999 58.6668C26.7258 58.6668 21.57 57.1029 17.1847 54.1727C12.7994 51.2425 9.38148 47.0778 7.36314 42.2051C5.34481 37.3324 4.81672 31.9706 5.84566 26.7978C6.8746 21.6249 9.41435 16.8734 13.1438 13.144C16.8732 9.41459 21.6247 6.87484 26.7975 5.8459C31.9704 4.81696 37.3321 5.34505 42.2048 7.36339C47.0775 9.38172 51.2423 12.7997 54.1725 17.185C57.1026 21.5703 58.6666 26.726 58.6666 32.0002C58.6583 39.0701 55.8461 45.848 50.8469 50.8472C45.8478 55.8464 39.0698 58.6585 31.9999 58.6668Z" fill="#B2B1FF"/>
+    <path d="M26.6666 45.0416C25.2526 45.0357 23.8983 44.4709 22.8991 43.4703C21.9 42.4697 21.3371 41.1145 21.3333 39.7005V24.2995C21.3338 23.3634 21.5805 22.444 22.0487 21.6335C22.5169 20.823 23.1901 20.15 24.0006 19.6819C24.8112 19.2138 25.7306 18.9672 26.6666 18.9668C27.6027 18.9664 28.5223 19.2123 29.3333 19.6797L42.6666 27.3802C43.4774 27.8485 44.1506 28.522 44.6187 29.3329C45.0868 30.1438 45.3333 31.0637 45.3333 32C45.3333 32.9363 45.0868 33.8562 44.6187 34.6671C44.1506 35.478 43.4774 36.1515 42.6666 36.6198L29.3333 44.3203C28.5233 44.7912 27.6035 45.0401 26.6666 45.0416Z" fill="#6563FF"/>
+  </symbol>
 
-      <symbol id="form-arr" viewBox="0 0 24 24" fill="none">
-            <path d="M12.0002 12.7099L8.46019 9.16993C8.27283 8.98368 8.01938 8.87914 7.75519 8.87914C7.49101 8.87914 7.23756 8.98368 7.05019 9.16993C6.95646 9.2629 6.88207 9.3735 6.8313 9.49536C6.78053 9.61722 6.75439 9.74792 6.75439 9.87993C6.75439 10.0119 6.78053 10.1427 6.8313 10.2645C6.88207 10.3864 6.95646 10.497 7.05019 10.5899L11.2902 14.8299C11.3832 14.9237 11.4938 14.9981 11.6156 15.0488C11.7375 15.0996 11.8682 15.1257 12.0002 15.1257C12.1322 15.1257 12.2629 15.0996 12.3848 15.0488C12.5066 14.9981 12.6172 14.9237 12.7102 14.8299L17.0002 10.5899C17.0929 10.4965 17.1662 10.3857 17.216 10.2638C17.2657 10.142 17.291 10.0115 17.2902 9.87993C17.291 9.74833 17.2657 9.61787 17.216 9.49603C17.1662 9.37419 17.0929 9.26337 17.0002 9.16993C16.8128 8.98368 16.5594 8.87914 16.2952 8.87914C16.031 8.87914 15.7776 8.98368 15.5902 9.16993L12.0002 12.7099Z" fill="url(#paint0_linear_55_3703)"/>
-            <defs>
-                  <linearGradient id="paint0_linear_55_3703" x1="11.0346" y1="14.7103" x2="11.2864" y2="9.63383" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#68C9FF"/>
-                        <stop offset="0.994746" stop-color="#D1B5FF"/>
-                  </linearGradient>
-            </defs>
-      </symbol>
+  <symbol id="gradient-crown" viewBox="0 0 18 19" fill="none">
+    <path d="M4.09069 15.2006C4.09069 15.3653 4.22267 15.5 4.39068 15.5H13.6123C13.7773 15.5 13.9123 15.3653 13.9123 15.2006V14.1049H4.09069V15.2006ZM16.3721 5.60323C16.2612 5.5284 16.1172 5.53434 16.0122 5.6152L12.0464 8.76241L9.26248 3.64484C9.16046 3.4502 8.84249 3.45325 8.73749 3.64484L5.95361 8.76241L1.98779 5.6152C1.88279 5.53137 1.7388 5.5284 1.63081 5.60323C1.51981 5.67811 1.47481 5.81587 1.51382 5.94161L3.97764 13.506H14.0252L16.4861 5.94161C16.5251 5.81587 16.4802 5.67811 16.3721 5.60323Z" fill="url(#paint0_linear_55_2565)"/>
+    <defs>
+      <linearGradient id="paint0_linear_55_2565" x1="2.49754" y1="8.375" x2="14.5855" y2="9.63916" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#68C9FF"/>
+        <stop offset="0.994746" stop-color="#D1B5FF"/>
+      </linearGradient>
+    </defs>
+  </symbol>
 
-      <symbol id="star-gradient" viewBox="0 0 28 28" fill="none">
-            <g clip-path="url(#clip0_120_2711)">
-                  <path d="M20.4869 24.5C20.3003 24.5008 20.1163 24.4568 19.9502 24.3717L14.0002 21.2567L8.05021 24.3717C7.857 24.4733 7.63917 24.5186 7.42147 24.5026C7.20377 24.4865 6.99494 24.4097 6.81871 24.2809C6.64249 24.1521 6.50594 23.9764 6.42459 23.7738C6.34325 23.5713 6.32036 23.3499 6.35854 23.135L7.52521 16.5667L2.71854 11.9C2.56858 11.7504 2.46219 11.5627 2.41081 11.3572C2.35943 11.1516 2.36498 10.936 2.42688 10.7333C2.4945 10.526 2.61888 10.3418 2.78592 10.2015C2.95296 10.0613 3.15595 9.97071 3.37188 9.94001L10.0219 8.97168L12.9502 2.98668C13.0457 2.78943 13.1949 2.62308 13.3806 2.50668C13.5663 2.39029 13.781 2.32855 14.0002 2.32855C14.2194 2.32855 14.4341 2.39029 14.6198 2.50668C14.8055 2.62308 14.9547 2.78943 15.0502 2.98668L18.0135 8.96001L24.6635 9.92835C24.8795 9.95904 25.0825 10.0496 25.2495 10.1899C25.4165 10.3301 25.5409 10.5143 25.6085 10.7217C25.6704 10.9243 25.676 11.14 25.6246 11.3455C25.5732 11.551 25.4668 11.7387 25.3169 11.8883L20.5102 16.555L21.6769 23.1233C21.7185 23.3421 21.6967 23.5681 21.614 23.7749C21.5313 23.9816 21.3912 24.1604 21.2102 24.29C20.9989 24.4381 20.7446 24.5119 20.4869 24.5Z" fill="url(#paint0_linear_120_2711)"/>
-            </g>
-            <defs>
-                  <linearGradient id="paint0_linear_120_2711" x1="3.92438" y1="11.338" x2="22.7478" y2="12.9914" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#68C9FF"/>
-                        <stop offset="0.994746" stop-color="#D1B5FF"/>
-                  </linearGradient>
-                  <clipPath id="clip0_120_2711">
-                        <rect width="28" height="28" fill="white"/>
-                  </clipPath>
-            </defs>
-      </symbol>
+  <symbol id="form-arr" viewBox="0 0 24 24" fill="none">
+    <path d="M12.0002 12.7099L8.46019 9.16993C8.27283 8.98368 8.01938 8.87914 7.75519 8.87914C7.49101 8.87914 7.23756 8.98368 7.05019 9.16993C6.95646 9.2629 6.88207 9.3735 6.8313 9.49536C6.78053 9.61722 6.75439 9.74792 6.75439 9.87993C6.75439 10.0119 6.78053 10.1427 6.8313 10.2645C6.88207 10.3864 6.95646 10.497 7.05019 10.5899L11.2902 14.8299C11.3832 14.9237 11.4938 14.9981 11.6156 15.0488C11.7375 15.0996 11.8682 15.1257 12.0002 15.1257C12.1322 15.1257 12.2629 15.0996 12.3848 15.0488C12.5066 14.9981 12.6172 14.9237 12.7102 14.8299L17.0002 10.5899C17.0929 10.4965 17.1662 10.3857 17.216 10.2638C17.2657 10.142 17.291 10.0115 17.2902 9.87993C17.291 9.74833 17.2657 9.61787 17.216 9.49603C17.1662 9.37419 17.0929 9.26337 17.0002 9.16993C16.8128 8.98368 16.5594 8.87914 16.2952 8.87914C16.031 8.87914 15.7776 8.98368 15.5902 9.16993L12.0002 12.7099Z" fill="url(#paint0_linear_55_3703)"/>
+    <defs>
+      <linearGradient id="paint0_linear_55_3703" x1="11.0346" y1="14.7103" x2="11.2864" y2="9.63383" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#68C9FF"/>
+        <stop offset="0.994746" stop-color="#D1B5FF"/>
+      </linearGradient>
+    </defs>
+  </symbol>
 
-      <symbol id="copy" viewBox="0 0 18 18" fill="none">
-            <path d="M5.25 4.5V2.25C5.25 2.05109 5.32902 1.86032 5.46967 1.71967C5.61032 1.57902 5.80109 1.5 6 1.5H15C15.1989 1.5 15.3897 1.57902 15.5303 1.71967C15.671 1.86032 15.75 2.05109 15.75 2.25V12.75C15.75 12.9489 15.671 13.1397 15.5303 13.2803C15.3897 13.421 15.1989 13.5 15 13.5H12.75V15.75C12.75 16.164 12.4125 16.5 11.9948 16.5H3.00525C2.90635 16.5006 2.8083 16.4816 2.71674 16.4442C2.62519 16.4068 2.54192 16.3517 2.47174 16.282C2.40156 16.2123 2.34584 16.1294 2.30779 16.0381C2.26974 15.9468 2.2501 15.8489 2.25 15.75L2.25225 5.25C2.25225 4.836 2.58975 4.5 3.0075 4.5H5.25ZM6.75 4.5H12.75V12H14.25V3H6.75V4.5Z" fill="#FCFFFF"/>
-      </symbol>
+  <symbol id="star-gradient" viewBox="0 0 28 28" fill="none">
+    <g clip-path="url(#clip0_120_2711)">
+      <path d="M20.4869 24.5C20.3003 24.5008 20.1163 24.4568 19.9502 24.3717L14.0002 21.2567L8.05021 24.3717C7.857 24.4733 7.63917 24.5186 7.42147 24.5026C7.20377 24.4865 6.99494 24.4097 6.81871 24.2809C6.64249 24.1521 6.50594 23.9764 6.42459 23.7738C6.34325 23.5713 6.32036 23.3499 6.35854 23.135L7.52521 16.5667L2.71854 11.9C2.56858 11.7504 2.46219 11.5627 2.41081 11.3572C2.35943 11.1516 2.36498 10.936 2.42688 10.7333C2.4945 10.526 2.61888 10.3418 2.78592 10.2015C2.95296 10.0613 3.15595 9.97071 3.37188 9.94001L10.0219 8.97168L12.9502 2.98668C13.0457 2.78943 13.1949 2.62308 13.3806 2.50668C13.5663 2.39029 13.781 2.32855 14.0002 2.32855C14.2194 2.32855 14.4341 2.39029 14.6198 2.50668C14.8055 2.62308 14.9547 2.78943 15.0502 2.98668L18.0135 8.96001L24.6635 9.92835C24.8795 9.95904 25.0825 10.0496 25.2495 10.1899C25.4165 10.3301 25.5409 10.5143 25.6085 10.7217C25.6704 10.9243 25.676 11.14 25.6246 11.3455C25.5732 11.551 25.4668 11.7387 25.3169 11.8883L20.5102 16.555L21.6769 23.1233C21.7185 23.3421 21.6967 23.5681 21.614 23.7749C21.5313 23.9816 21.3912 24.1604 21.2102 24.29C20.9989 24.4381 20.7446 24.5119 20.4869 24.5Z" fill="url(#paint0_linear_120_2711)"/>
+    </g>
+    <defs>
+      <linearGradient id="paint0_linear_120_2711" x1="3.92438" y1="11.338" x2="22.7478" y2="12.9914" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#68C9FF"/>
+        <stop offset="0.994746" stop-color="#D1B5FF"/>
+      </linearGradient>
+      <clipPath id="clip0_120_2711">
+        <rect width="28" height="28" fill="white"/>
+      </clipPath>
+    </defs>
+  </symbol>
+
+  <symbol id="copy" viewBox="0 0 18 18" fill="none">
+    <path d="M5.25 4.5V2.25C5.25 2.05109 5.32902 1.86032 5.46967 1.71967C5.61032 1.57902 5.80109 1.5 6 1.5H15C15.1989 1.5 15.3897 1.57902 15.5303 1.71967C15.671 1.86032 15.75 2.05109 15.75 2.25V12.75C15.75 12.9489 15.671 13.1397 15.5303 13.2803C15.3897 13.421 15.1989 13.5 15 13.5H12.75V15.75C12.75 16.164 12.4125 16.5 11.9948 16.5H3.00525C2.90635 16.5006 2.8083 16.4816 2.71674 16.4442C2.62519 16.4068 2.54192 16.3517 2.47174 16.282C2.40156 16.2123 2.34584 16.1294 2.30779 16.0381C2.26974 15.9468 2.2501 15.8489 2.25 15.75L2.25225 5.25C2.25225 4.836 2.58975 4.5 3.0075 4.5H5.25ZM6.75 4.5H12.75V12H14.25V3H6.75V4.5Z" fill="#FCFFFF"/>
+  </symbol>
 </svg>
+
   </div></body>
-  <script src="js/app.min.js?_v=20240201145759"></script>
-  <script src="js/main.min.js?_v=20240201145759"></script>
+  <script src="js/app.min.js?_v=20240208164454"></script>
+  <script src="js/main.min.js?_v=20240208164454"></script>
 </html>
