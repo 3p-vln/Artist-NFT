@@ -17,7 +17,6 @@ export async function querySnapshot(dbName, callback) {
                         })
                 )
         ).then(() => {
-            console.log(5);
             preloader();
         });
     });
