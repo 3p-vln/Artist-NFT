@@ -276,7 +276,6 @@
                 overflow: hidden;
                 clip: rect(0 0 0 0);
                 padding-left: 20px;
-                // transform: translateY(5px) translateX(-6px);
             }
 
             &-checkstyle {
@@ -374,9 +373,6 @@
     }
 
     &__about {
-        // padding: 20px 15px 28px 21px;
-        // max-width: 350px;
-
         margin-top: 17px;
 
         .about {
@@ -420,10 +416,7 @@
                 &__text {
                     font-size: 14px;
                     font-weight: 700;
-                    background: var(
-                        --primary,
-                        linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%)
-                    );
+                    background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
                     background-clip: text;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
