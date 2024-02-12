@@ -247,6 +247,10 @@
             height: 450px;
         }
 
+        @include media-breakpoint-down(xxs) {
+            height: 465px;
+        }
+
         &__nft {
             padding: 17px 0 0 20px;
             font-family: 'ProximaNova';
