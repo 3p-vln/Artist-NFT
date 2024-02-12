@@ -4,7 +4,6 @@
 @import 'config/fonts';
 @import 'config/vars';
 @import 'config/reset';
-
 @import 'components/header';
 @import 'components/footer';
 @import 'components/btn';
@@ -12,26 +11,26 @@
 @import 'components/select';
 
 body {
-    font-family: ProximaNova;
+    font-family: "ProximaNova";
 }
 
 [class*='__container'] {
+    position: relative;
+    z-index: 2;
     margin: 0 auto;
     padding: 0 15px;
     max-width: $maxWidthContainer;
-    position: relative;
-    z-index: 2;
 }
 
 .wrapper {
-    min-height: 100%;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    min-height: 100%;
 }
 
 .page {
-    flex: 1 1 auto;
     position: relative;
+    flex: 1 1 auto;
     background: $background;
 }

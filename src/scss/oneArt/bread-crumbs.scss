@@ -1,6 +1,3 @@
-@import '../config/_media-breakpoints';
-@import '../config/vars';
-
 .bread-crumbs {
     font-family: Manrope;
     font-size: 14px;
@@ -13,10 +10,12 @@
     padding: 0 15px;
     margin-bottom: 25px;
 
+    /* stylelint-disable */
     @include media-breakpoint-down(sm) {
         padding: 0;
         margin-bottom: 32px;
     }
+    /* stylelint-enable */
 
     .main,
     .art,

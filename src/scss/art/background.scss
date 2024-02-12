@@ -1,27 +1,8 @@
-@import '../config/_media-breakpoints';
-@import '../config/vars';
-
 .background {
     position: absolute;
-    width: 100%;
     z-index: 1;
     margin-top: 65px;
-
-    @include media-breakpoint-down(md) {
-        display: none;
-    }
-
-    &__make-art,
-    &__no-war {
-        font-family: ProximaNova;
-        font-size: 79px;
-        letter-spacing: 1px;
-        font-weight: 700;
-        color: transparent;
-        -webkit-text-stroke: 1px $whiteTwo;
-        opacity: 0.2;
-        position: absolute;
-    }
+    width: 100%;
 
     &__make-art {
         left: -40px;
@@ -40,9 +21,25 @@
 
     svg {
         position: absolute;
-        width: 25px;
-        height: 25px;
         right: 24.5%;
         top: 194px;
+        width: 25px;
+        height: 25px;
+    }
+
+    &__make-art,
+    &__no-war {
+        position: absolute;
+        font-family: "ProximaNova";
+        font-weight: 700;
+        font-size: 79px;
+        letter-spacing: 1px;
+        -webkit-text-stroke: 1px $whiteTwo;
+        color: transparent;
+        opacity: 0.2;
+    }
+
+    @include media-breakpoint-down(md) {
+        display: none;
     }
 }

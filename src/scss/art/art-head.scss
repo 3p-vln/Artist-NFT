@@ -1,18 +1,10 @@
-@import '../config/_media-breakpoints';
-@import '../config/vars';
-
 .art-head {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 18px;
     margin-top: 60px;
-    position: relative;
-
-    @include media-breakpoint-down(lg) {
-        margin-top: calc(26px + (60 - 26) * ((100vw - 375px) / (1440 - 375)));
-        gap: calc(16px + (18 - 16) * ((100vw - 375px) / (1440 - 375)));
-    }
+    gap: 18px;
 
     svg {
         position: absolute;
@@ -32,8 +24,8 @@
         }
 
         @include media-breakpoint-down(sm) {
-            top: -20px;
             right: 15px;
+            top: -20px;
         }
 
         @include media-breakpoint-down(xs) {
@@ -42,11 +34,11 @@
     }
 
     &__title {
-        color: $whiteTwo;
-        font-family: ProximaNova;
-        font-size: clamp(36px, 5vw, 64px);
+        font-family: "ProximaNova";
         font-weight: 700;
+        font-size: clamp(36px, 5vw, 64px);
         line-height: 65px;
+        color: $whiteTwo;
 
         @include media-breakpoint-down(lg) {
             line-height: calc(40px + (65 - 40) * ((100vw - 375px) / (1440 - 375)));
@@ -54,16 +46,21 @@
     }
 
     &__subtitle {
-        color: $whiteTwo;
-        font-family: ProximaNova;
-        font-size: clamp(15px, 2.5vw, 16px);
-        font-weight: 400;
-        line-height: 28px;
         max-width: 400px;
+        font-family: "ProximaNova";
+        font-weight: 400;
+        font-size: clamp(15px, 2.5vw, 16px);
+        line-height: 28px;
         text-align: center;
+        color: $whiteTwo;
 
         @include media-breakpoint-down(lg) {
             line-height: calc(24px + (28 - 24) * ((100vw - 375px) / (1440 - 375)));
         }
+    }
+
+    @include media-breakpoint-down(lg) {
+        margin-top: calc(26px + (60 - 26) * ((100vw - 375px) / (1440 - 375)));
+        gap: calc(16px + (18 - 16) * ((100vw - 375px) / (1440 - 375)));
     }
 }

@@ -1,0 +1,3 @@
+dist/**/*.css
+src/scss/config/**/*.scss
+node_modules/

@@ -1,22 +1,19 @@
-@import '../config/_media-breakpoints';
-@import '../config/vars';
-
 .btn {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
     overflow: hidden;
     border-radius: 16px;
 
     &::before {
         content: '';
-        background: linear-gradient(90deg, rgb(255 255 255 / 10%), rgb(255 255 255 / 50%));
-        height: 100px;
-        width: 50px;
         position: absolute;
-        top: 0;
         left: -95px;
+        top: 0;
+        width: 50px;
+        height: 100px;
+        background: linear-gradient(90deg, rgb(255 255 255 / 10%), rgb(255 255 255 / 50%));
         transform: skewX(-45deg);
     }
 
@@ -36,6 +33,20 @@
         background: var(--background, #1d1f21);
         gap: 5px;
 
+        span {
+            font-family: "ProximaNova";
+            font-weight: 700;
+            line-height: 26.5px;
+            -webkit-text-fill-color: transparent;
+            background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
+            background-clip: text;
+        }
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+
         @include media-breakpoint-down(md) {
             width: 100%;
         }
@@ -43,42 +54,43 @@
         @include media-breakpoint-down(xs) {
             width: auto;
         }
-
-        span {
-            font-family: ProximaNova;
-            font-weight: 700;
-            line-height: 26.5px;
-            background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
-            background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        svg {
-            width: 24px;
-            height: 24px;
-        }
     }
 
     &.gradient {
-        gap: 8px;
         padding: 18px 22px 19px;
         background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
+        gap: 8px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: -95px;
+            top: 0;
+            width: 50px;
+            height: 100px;
+            background: linear-gradient(90deg, rgb(255 255 255 / 10%), rgb(255 255 255 / 50%));
+            transform: skewX(-45deg);
+        }
 
         svg {
             width: 24px;
             height: 24px;
         }
 
-        &::before {
-            content: '';
-            background: linear-gradient(90deg, rgb(255 255 255 / 10%), rgb(255 255 255 / 50%));
-            height: 100px;
-            width: 50px;
-            position: absolute;
-            top: 0;
-            left: -95px;
-            transform: skewX(-45deg);
+        svg {
+            width: 24px;
+            height: 24px;
+
+            @include media-breakpoint-down(lg) {
+                width: calc(18px + (24 - 18) * ((100vw - 375px) / (1440 - 375)));
+                height: calc(18px + (24 - 18) * ((100vw - 375px) / (1440 - 375)));
+            }
+        }
+
+        span {
+            font-weight: 700;
+            line-height: 26.5px;
+            color: #1d1f21;
         }
 
         &:hover {
@@ -94,44 +106,42 @@
 
         @include media-breakpoint-down(md) {
             padding: 12px 30px 13px 28px;
-        }
-
-        svg {
-            width: 24px;
-            height: 24px;
-
-            @include media-breakpoint-down(lg) {
-                width: calc(18px + (24 - 18) * ((100vw - 375px) / (1440 - 375)));
-                height: calc(18px + (24 - 18) * ((100vw - 375px) / (1440 - 375)));
-            }
-        }
-
-        span {
-            color: #1d1f21;
-            font-weight: 700;
-            line-height: 26.5px;
         }
     }
 
     &.grey {
-        gap: 8px;
         padding: 14px 22px;
         background: var(--linear-10, linear-gradient(95deg, rgb(104 201 255 / 10%) 9.27%, rgb(209 181 255 / 10%) 84.06%));
+        gap: 8px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: -95px;
+            top: 0;
+            width: 50px;
+            height: 100px;
+            background: linear-gradient(90deg, rgb(255 255 255 / 10%), rgb(255 255 255 / 50%));
+            transform: skewX(-45deg);
+        }
 
         svg {
             width: 24px;
             height: 24px;
         }
 
-        &::before {
-            content: '';
-            background: linear-gradient(90deg, rgb(255 255 255 / 10%), rgb(255 255 255 / 50%));
-            height: 100px;
-            width: 50px;
-            position: absolute;
-            top: 0;
-            left: -95px;
-            transform: skewX(-45deg);
+        svg {
+            width: 24px;
+            height: 24px;
+
+            @include media-breakpoint-down(lg) {
+                width: calc(18px + (24 - 18) * ((100vw - 375px) / (1440 - 375)));
+                height: calc(18px + (24 - 18) * ((100vw - 375px) / (1440 - 375)));
+            }
+        }
+
+        span {
+            font-weight: 700;
         }
 
         &:hover {
@@ -147,21 +157,6 @@
 
         @include media-breakpoint-down(md) {
             padding: 12px 30px 13px 28px;
-        }
-
-        svg {
-            width: 24px;
-            height: 24px;
-
-            @include media-breakpoint-down(lg) {
-                width: calc(18px + (24 - 18) * ((100vw - 375px) / (1440 - 375)));
-                height: calc(18px + (24 - 18) * ((100vw - 375px) / (1440 - 375)));
-            }
-        }
-
-        span {
-            font-weight: 700;
-            // line-height: 26.5px;line-height
         }
     }
 }
