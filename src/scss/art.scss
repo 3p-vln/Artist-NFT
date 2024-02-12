@@ -4,11 +4,11 @@
 @import 'art/art-mesh';
 
 .page {
-  position: relative;
-
-  &__container {
     position: relative;
-    z-index: 2;
-    margin-top: 124px;
-  }
+
+    &__container {
+        position: relative;
+        z-index: 2;
+        margin-top: 124px;
+    }
 }

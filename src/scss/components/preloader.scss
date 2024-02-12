@@ -1,35 +1,29 @@
-@import '../config/_media-breakpoints';
-@import '../config/vars';
-
 .preloader {
     position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background: $background;
     z-index: 1001;
+    background: $background;
+    inset: 0;
 
     &__row {
         position: relative;
-        top: 50%;
         left: 50%;
-        width: 70px;
-        height: 70px;
+        top: 50%;
         margin-top: -35px;
         margin-left: -35px;
+        width: 70px;
+        height: 70px;
         text-align: center;
         animation: preloader-rotate 2s infinite linear;
     }
 
     &__item {
         position: absolute;
-        display: inline-block;
         top: 0;
-        background-color: $whiteTwo;
+        display: inline-block;
         border-radius: 100%;
         width: 35px;
         height: 35px;
+        background-color: $whiteTwo;
         animation: preloader-bounce 2s infinite ease-in-out;
 
         &:last-child {
@@ -40,14 +34,14 @@
     }
 
     &.visible {
-        visibility: visible;
         opacity: 1;
+        visibility: visible;
         transition: opacity 2s linear;
     }
 
     &.hidden {
-        visibility: hidden;
         opacity: 0;
+        visibility: hidden;
         transition: visibility 0s 2s, opacity 2s linear;
     }
 }

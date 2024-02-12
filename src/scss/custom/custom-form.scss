@@ -1,22 +1,19 @@
-@import '../config/_media-breakpoints';
-@import '../config/vars';
-
 .custom-form {
     position: relative;
 
     &__background {
         position: absolute;
-        width: 100%;
         z-index: -1;
+        width: 100%;
 
         &_sapphire-first {
             position: absolute;
-            top: 268px;
             left: -27.5%;
-            max-width: 100%;
+            top: 268px;
+            z-index: -1;
             vertical-align: top;
             overflow: clip;
-            z-index: -1;
+            max-width: 100%;
 
             @include media-breakpoint-down(xs) {
                 left: unset;
@@ -27,12 +24,12 @@
 
         &_sapphire-second {
             position: absolute;
-            top: 184px;
             left: 0%;
-            max-width: 100%;
+            top: 184px;
+            z-index: -1;
             vertical-align: top;
             overflow: clip;
-            z-index: -1;
+            max-width: 100%;
 
             @include media-breakpoint-down(xs) {
                 left: unset;
@@ -43,12 +40,12 @@
 
         &_sapphire-third {
             position: absolute;
-            top: 590px;
             left: 6%;
-            max-width: 100%;
+            top: 590px;
+            z-index: -1;
             vertical-align: top;
             overflow: clip;
-            z-index: -1;
+            max-width: 100%;
 
             @include media-breakpoint-down(xs) {
                 display: none;
@@ -57,12 +54,12 @@
 
         &_cube {
             position: absolute;
-            top: 94px;
             right: -35%;
-            max-width: 100%;
+            top: 94px;
+            z-index: -1;
             vertical-align: top;
             overflow: clip;
-            z-index: -1;
+            max-width: 100%;
 
             @include media-breakpoint-down(xs) {
                 display: none;
@@ -73,29 +70,28 @@
     &__content {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
         padding-top: 63px;
         padding-bottom: 40px;
 
         @include media-breakpoint-down(xs) {
-            padding-top: 0px;
-            padding-bottom: 32px;
             align-items: start;
+            padding-top: 0;
+            padding-bottom: 32px;
             transform: translateY(-3px);
         }
     }
 
     &__subtitle {
-        font-family: 'ProximaNova';
-        font-size: clamp(14px, 2.5vw, 18px);
+        font-family: "ProximaNova";
         font-weight: 700;
+        font-size: clamp(14px, 2.5vw, 18px);
         line-height: 26.5px;
         letter-spacing: 1.8px;
+        -webkit-text-fill-color: transparent;
         background: $rainbowBtnGradient;
         background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
 
         @include media-breakpoint-down(xs) {
             letter-spacing: 1.4px;
@@ -103,20 +99,20 @@
     }
 
     &__title {
-        color: $whiteTwo;
-        text-align: center;
-        font-family: 'ProximaNova';
-        font-size: clamp(26px, 2.5vw, 36px);
-        font-weight: 700;
-        line-height: 49.5px;
-        max-width: 540px;
         padding-bottom: 22px;
+        max-width: 540px;
+        font-family: "ProximaNova";
+        font-weight: 700;
+        font-size: clamp(26px, 2.5vw, 36px);
+        line-height: 49.5px;
+        text-align: center;
+        color: $whiteTwo;
 
         @include media-breakpoint-down(xs) {
+            padding-bottom: 0;
+            max-width: 306px;
             line-height: 34px;
             text-align: left;
-            max-width: 306px;
-            padding-bottom: 0px;
         }
     }
 
@@ -125,72 +121,62 @@
         flex-direction: column;
         justify-content: center;
 
-        @include media-breakpoint-down(xs) {
-            max-width: 100%;
-            width: 100%;
-        }
-
         &__item {
+            position: relative;
             display: flex;
             flex-direction: column;
             padding-top: 11px;
             padding-bottom: 15px;
             gap: 7px;
-            position: relative;
 
             .just-validate-error-label {
                 position: absolute;
-                top: 10px;
                 right: 50%;
-                transform: translateX(50%);
-                padding: 8px;
-                font-size: 14px;
-                font-weight: 700;
-                border-radius: 7px;
-                text-wrap: nowrap;
-                background: $rainbowBtnGradient;
+                top: 10px;
                 z-index: 3;
+                border-radius: 7px;
+                padding: 8px;
+                font-weight: 700;
+                font-size: 14px;
+                background: $rainbowBtnGradient;
+                transform: translateX(50%);
+                text-wrap: nowrap;
 
                 &::after {
                     content: '';
                     position: absolute;
-                    top: 28px;
                     left: 50%;
-                    transform: translateX(-50%);
-                    background: $rainbowBtnGradient;
-                    height: 10px;
-                    width: 10px;
-                    clip-path: polygon(0 0, 53% 100%, 100% 0);
+                    top: 28px;
                     z-index: 3;
+                    clip-path: polygon(0 0, 53% 100%, 100% 0);
+                    width: 10px;
+                    height: 10px;
+                    background: $rainbowBtnGradient;
+                    transform: translateX(-50%);
                 }
             }
 
-            &:last-child {
-                padding-bottom: 0;
-            }
-
             &-label {
-                color: $gray6Color;
-                font-family: 'ProximaNova';
-                font-size: 14px;
+                font-family: "ProximaNova";
                 font-weight: 400;
+                font-size: 14px;
                 line-height: 21px;
+                color: $gray6Color;
             }
 
             &-input {
-                max-width: 410px;
                 display: flex;
-                height: 64px;
-                padding: 21px 32px 22px;
                 align-items: center;
                 border-radius: 9px;
-                background: $backgroundSecond;
-
-                color: $gray6Color;
-                font-family: 'ProximaNova';
-                font-size: 16px;
+                padding: 21px 32px 22px;
+                height: 64px;
+                max-width: 410px;
+                font-family: "ProximaNova";
                 font-weight: 400;
+                font-size: 16px;
                 line-height: 21px;
+                color: $gray6Color;
+                background: $backgroundSecond;
 
                 @include media-breakpoint-down(xs) {
                     max-width: none;
@@ -198,36 +184,35 @@
             }
 
             &-textarea {
-                max-width: 410px;
                 display: flex;
-                height: 182px;
-                padding: 21px 32px 22px;
                 align-items: center;
                 border-radius: 9px;
+                padding: 21px 32px 22px;
+                height: 182px;
+                max-width: 410px;
+                font-family: "ProximaNova";
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 21px;
+                color: $gray6Color;
                 background: $backgroundSecond;
                 resize: none;
-
-                color: $gray6Color;
-                font-family: 'ProximaNova';
-                font-size: 16px;
-                font-weight: 400;
-                line-height: 21px;
 
                 @include media-breakpoint-down(xs) {
                     max-width: none;
                 }
             }
+
+            &:last-child {
+                padding-bottom: 0;
+            }
         }
 
         .radio {
-            @include media-breakpoint-down(xs) {
-                padding-right: 83px;
-            }
-
             &__label {
-                cursor: pointer;
-                margin-left: -12px;
                 position: relative;
+                margin-left: -12px;
+                cursor: pointer;
 
                 &:first-child {
                     margin-left: 0;
@@ -235,10 +220,10 @@
             }
 
             input {
+                position: absolute;
                 width: 32px;
                 height: 32px;
                 opacity: 0;
-                position: absolute;
 
                 &:checked + .custom-radio {
                     z-index: 10;
@@ -247,12 +232,12 @@
 
             .custom-radio {
                 position: relative;
+                z-index: 1;
                 display: inline-block;
-                width: 32px;
-                height: 32px;
                 outline: 4px solid $background;
                 border-radius: 50%;
-                z-index: 1;
+                width: 32px;
+                height: 32px;
 
                 &_red {
                     background-color: #ca3838;
@@ -314,113 +299,121 @@
                     background-color: #000;
                 }
             }
+
+            @include media-breakpoint-down(xs) {
+                padding-right: 83px;
+            }
         }
 
         &__send-btn {
             margin-top: 15px;
+            padding: 18px 0 19px;
             width: 410px;
-            padding: 18px 0px 19px 0px;
+
+            p {
+                font-family: "ProximaNova";
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 26.5px;
+                color: $background;
+            }
 
             @include media-breakpoint-down(xs) {
                 width: 100%;
             }
-
-            p {
-                color: $background;
-                font-family: 'ProximaNova';
-                font-size: 18px;
-                font-weight: 700;
-                line-height: 26.5px;
-            }
         }
 
         &__agree {
+            position: relative;
             display: flex;
-            justify-content: start;
             align-items: center;
+            justify-content: start;
             padding-top: 18px;
             gap: 10px;
-            position: relative;
-
-            @include media-breakpoint-down(xs) {
-                padding-top: 15px;
-            }
 
             &-checkbox {
                 position: absolute;
+                overflow: hidden;
+                padding-left: 20px;
                 width: 1px;
                 height: 1px;
-                overflow: hidden;
                 clip: rect(0 0 0 0);
-                padding-left: 20px;
-                // transform: translateY(5px) translateX(-6px);
             }
 
             &-checkstyle {
                 position: absolute;
-                top: 0;
                 left: 0%;
+                top: 0;
+                border: 1px solid var(--stroke, #525960);
+                border-radius: 7px;
                 width: 20px;
                 height: 20px;
-                border-radius: 7px;
-                border: 1px solid var(--stroke, #525960);
             }
 
             &-checkbox:checked + .form__agree-checkstyle::before {
                 content: '';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                border-radius: 5px;
                 width: 14px;
                 height: 14px;
                 background: $rainbowBtnGradient;
-                position: absolute;
-                border-radius: 5px;
-                top: 50%;
-                left: 50%;
                 transform: translateX(-50%) translateY(-50%);
             }
 
             &-label {
-                cursor: pointer;
-                color: $gray6Color;
-                font-family: 'ProximaNova';
-                font-size: 14px;
-                font-weight: 400;
-                line-height: 21px;
                 padding-left: 30px;
+                font-family: "ProximaNova";
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 21px;
+                color: $gray6Color;
                 transform: translateY(1px);
+                cursor: pointer;
 
                 a {
                     padding: 0 8px;
-                    color: var(--color-3, #86a8ff);
-                    font-size: 14px;
                     font-weight: 600;
+                    font-size: 14px;
                     text-decoration-line: underline;
+                    color: var(--color-3, #86a8ff);
                 }
             }
 
             .just-validate-error-label {
                 position: absolute;
-                bottom: -40px;
                 left: 0;
-                padding: 8px;
-                font-size: 14px;
-                font-weight: 700;
-                border-radius: 7px;
-                text-wrap: nowrap;
-                background: $rainbowBtnGradient;
+                bottom: -40px;
                 z-index: 3;
+                border-radius: 7px;
+                padding: 8px;
+                font-weight: 700;
+                font-size: 14px;
+                background: $rainbowBtnGradient;
+                text-wrap: nowrap;
 
                 &::after {
                     content: '';
                     position: absolute;
-                    top: -9px;
                     left: 4%;
-                    background: rgb(104, 201, 255);
-                    height: 10px;
-                    width: 10px;
-                    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+                    top: -9px;
                     z-index: 3;
+                    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+                    width: 10px;
+                    height: 10px;
+                    background: rgb(104 201 255);
                 }
             }
+
+            @include media-breakpoint-down(xs) {
+                padding-top: 15px;
+            }
+        }
+
+        @include media-breakpoint-down(xs) {
+            width: 100%;
+            max-width: 100%;
         }
     }
 }

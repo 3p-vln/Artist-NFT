@@ -4,12 +4,12 @@
 @import './config/media-breakpoints';
 
 .authorization {
-    margin: 0 auto;
-    max-width: 410px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
     padding: 186px 0 196px;
+    max-width: 410px;
 
     &_log {
         padding-top: 144px;
@@ -21,13 +21,13 @@
     }
 
     &__title {
+        margin-bottom: 13px;
         font-family: 'ProximaNova';
         font-weight: 700;
         font-size: 36px;
         line-height: 137%;
-        color: $whiteTwo;
-        margin-bottom: 13px;
         text-align: center;
+        color: $whiteTwo;
 
         @include media-breakpoint-down(xs) {
             font-size: 26px;
@@ -36,51 +36,48 @@
 
     &__tabs {
         display: flex;
+        margin-bottom: 23px;
         border-radius: 12px;
         padding: 7px 8px;
         background: $backgroundSecond;
-        // gap:20px;
-        margin-bottom: 23px;
 
         @include media-breakpoint-down(xs) {
             width: 345px;
         }
     }
 
-    @include media-breakpoint-down(sm) {
-        padding: 20px 0 196px;
-    }
-
     .tabs {
         &__button {
-            outline: none;
-            background: none;
-            // background: transparent;
-            color: $whiteColor;
-            width: 129px;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
+            outline: none;
+            border-radius: 12px;
             padding: 14px 19px;
-            font-size: clamp(14px, 2.5vw, 18px);
+            width: 129px;
             font-weight: 400;
             font-size: 16px;
             line-height: 24px;
-            border-radius: 12px;
-            // line-height: 175%;
+            color: $whiteColor;
+            background: none;
             transition: background 1000ms linear, color 300ms linear;
+            // line-height: 175%;
+
+line-heightline-height
+
+line-heighttransition
 
             &_active {
-                background: $rainbowBtnGradient;
-                font-size: 18px;
                 font-weight: 400;
-                // line-height: 133%;
+                font-size: 18px;
                 color: $background;
+                background: $rainbowBtnGradient;
+                // line-height: 133%;line-heightline-heightline-heightcolor
             }
 
             @include media-breakpoint-down(xs) {
-                font-size: 14px;
                 width: 164px;
+                font-size: 14px;
             }
         }
     }
@@ -89,9 +86,9 @@
         &__item {
             display: flex;
             flex-direction: column;
-            gap: 6px;
             align-items: flex-start;
             margin-bottom: 17px;
+            gap: 6px;
         }
 
         &__item-label {
@@ -103,12 +100,12 @@
         }
 
         &__item-input {
-            width: 410px;
-            background: $backgroundSecond;
-            padding: 21px 32px 22px;
             border-radius: 9px;
-            color: $whiteColor;
+            padding: 21px 32px 22px;
+            width: 410px;
             font-size: 16px;
+            color: $whiteColor;
+            background: $backgroundSecond;
 
             &::placeholder {
                 font-family: 'ProximaNova';
@@ -125,16 +122,16 @@
         }
 
         &__button {
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 16px;
+            padding: 18px 0 19px;
             width: 410px;
-            background: $rainbowBtnGradient;
             font-weight: 700;
             font-size: 18px;
             line-height: 147%;
             color: $background;
-            border-radius: 16px;
-            padding: 18px 0 19px;
-            margin-top: 5px;
-            margin-bottom: 15px;
+            background: $rainbowBtnGradient;
 
             @include media-breakpoint-down(xs) {
                 width: 345px;
@@ -147,9 +144,9 @@
 
         &_visible {
             display: flex;
+            align-items: center;
             justify-content: center;
             gap: 8px;
-            align-items: center;
         }
     }
 
@@ -169,30 +166,25 @@
     }
 
     .roles {
-        opacity: 0;
-        max-height: 0;
-        transition: max-height 300ms linear, opacity 200ms linear;
         width: 410px;
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 300ms linear, opacity 200ms linear;
 
         &_visible {
-            opacity: 1;
-            margin-bottom: 29px;
             display: flex;
             justify-content: flex-start;
-        }
-
-        @include media-breakpoint-down(xs) {
-            width: 345px;
-            margin: 0 auto 29px;
+            margin-bottom: 29px;
+            opacity: 1;
         }
 
         &__text {
+            margin-bottom: 15px;
             font-weight: 400;
             font-size: 14px;
             line-height: 150%;
-            color: $gray6Color;
             text-align: left;
-            margin-bottom: 15px;
+            color: $gray6Color;
         }
 
         &__box {
@@ -204,20 +196,20 @@
 
         &__check {
             display: flex;
-            gap: 10px;
             align-items: center;
+            gap: 10px;
         }
 
         &__check-label {
+            border: 1px solid #525960;
             border-radius: 38px;
             width: 22px;
             height: 22px;
             background: $backgroundSecond;
-            border: 1px solid #525960;
-            cursor: pointer;
             transition: opacity 300ms linear;
+            cursor: pointer;
 
-            &:before {
+            &::before {
                 opacity: 0;
             }
 
@@ -226,28 +218,33 @@
 
                 &::before {
                     content: '';
-                    opacity: 1;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    border-radius: 5px;
                     width: 14px;
                     height: 14px;
-                    background: var(
-                        --primary,
-                        linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%)
-                    );
-                    position: absolute;
-                    border-radius: 5px;
-                    top: 50%;
-                    left: 50%;
+                    background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
+                    opacity: 1;
                     transform: translate(-50%, -50%);
                 }
             }
         }
 
         &__check-text {
-            font-weight: 600;
+            font-family: 'ProximaNova';
             font-weight: 600;
             font-size: 14px;
             line-height: 171%;
-            font-family: 'ProximaNova';
         }
+
+        @include media-breakpoint-down(xs) {
+            margin: 0 auto 29px;
+            width: 345px;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding: 20px 0 196px;
     }
 }
