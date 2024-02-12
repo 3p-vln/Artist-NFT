@@ -16,12 +16,12 @@
     padding: 0 15px;
     height: 64px;
     margin: 0 auto;
-    // position: fixed;
+    // position: fixed;position
     justify-content: start;
     align-items: center;
     z-index: 12;
 
-    @media (max-width: 1100px) {
+    @media (width <= 1100px) {
       justify-content: space-between;
     }
   }
@@ -37,7 +37,7 @@
     margin-left: 14px;
     flex: 1;
 
-    @media (max-width: 1100px) {
+    @media (width <= 1100px) {
       position: fixed;
       top: 64px;
       right: -100%;
@@ -64,16 +64,16 @@
 
     @include media-breakpoint-down(xxs) {
       align-items: center;
-      padding: 100px 100px 100px 100px;
+      padding: 100px;
     }
 
     &__list {
       display: inline-flex;
       align-items: flex-start;
       justify-content: space-between;
-      gap: 0px;
+      gap: 0;
 
-      @media (max-width: 1100px) {
+      @media (width <= 1100px) {
         display: flex;
         flex-direction: column;
         align-items: start;
@@ -88,7 +88,7 @@
       a {
         position: relative;
         color: $gray6Color;
-        font-family: 'Manrope';
+        font-family: Manrope;
         font-size: 14px;
         font-weight: 400;
         line-height: 19px;
@@ -98,15 +98,15 @@
         &:hover {
           background: $rainbowBtnGradient;
           background-clip: text;
-          -webkit-background-clip: text;
+          background-clip: text;
           -webkit-text-fill-color: transparent;
           transition: all 0.5s ease-in-out;
         }
 
         &::before {
           position: absolute;
-          top: 0px;
-          left: 0px;
+          top: 0;
+          left: 0;
           content: '';
           width: 100%;
           height: 35px;
@@ -121,7 +121,7 @@
         }
       }
 
-      @media (max-width: 1100px) {
+      @media (width <= 1100px) {
         padding: 13px 20px;
 
         a {
@@ -142,7 +142,7 @@
     &__buttons {
       display: none;
 
-      @media (max-width: 1100px) {
+      @media (width <= 1100px) {
         display: flex;
         flex-direction: column-reverse;
         align-items: start;
@@ -161,7 +161,7 @@
     }
   }
 
-  @media (max-width: 1100px) {
+  @media (width <= 1100px) {
     .header__menu_active {
       right: 0;
       transition: right 0.3s ease 0s;
@@ -173,13 +173,11 @@
       width: 74px;
       height: 35px;
       padding: 8px 12px;
-
       color: $gray6Color;
-      font-family: 'Manrope';
+      font-family: Manrope;
       font-size: 14px;
       font-weight: 400;
       line-height: 19px;
-
       display: flex;
       gap: 4px;
 
@@ -191,9 +189,8 @@
 
     &__list {
       max-height: 110px;
-
       color: $gray6Color;
-      font-family: 'Manrope';
+      font-family: Manrope;
       font-size: 14px;
       font-weight: 400;
       line-height: 19px;
@@ -210,7 +207,7 @@
     align-items: center;
     gap: 8px;
 
-    @media (max-width: 1100px) {
+    @media (width <= 1100px) {
       .select__content {
         display: none;
       }
@@ -227,13 +224,13 @@
       border-radius: 12px;
 
       span {
-        font-family: 'ProximaNova';
+        font-family: ProximaNova;
         font-size: 14px;
         font-weight: 700;
         line-height: 20px;
         background: $rainbowBtnGradient;
         background-clip: text;
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         text-wrap: nowrap;
       }
@@ -243,7 +240,7 @@
           left: 130%;
           transition: left 0.5s ease-in-out;
 
-          @media (max-width: 768px) {
+          @media (width <= 768px) {
             display: none;
           }
         }
@@ -255,7 +252,7 @@
         height: 64px;
         width: 50px;
         position: absolute;
-        top: 0px;
+        top: 0;
         left: -95px;
         transform: skewX(-45deg);
 
@@ -277,7 +274,7 @@
       border-radius: 12px;
       background: $rainbowBtnGradient;
 
-      @media (max-width: 1100px) {
+      @media (width <= 1100px) {
         transform: translateX(3px);
         display: flex;
         padding: 7px;
@@ -289,13 +286,13 @@
 
       span {
         color: $background;
-        font-family: 'ProximaNova';
+        font-family: ProximaNova;
         font-size: 14px;
         font-weight: 700;
         line-height: 20px;
         text-wrap: nowrap;
 
-        @media (max-width: 1100px) {
+        @media (width <= 1100px) {
           display: none;
         }
       }
@@ -305,7 +302,7 @@
         width: 18px;
         height: 18px;
 
-        @media (max-width: 1100px) {
+        @media (width <= 1100px) {
           display: block;
         }
       }
@@ -327,7 +324,7 @@
         height: 64px;
         width: 50px;
         position: absolute;
-        top: 0px;
+        top: 0;
         left: -95px;
         transform: skewX(-45deg);
 
@@ -345,7 +342,7 @@
     height: 100%;
     width: 100%;
     z-index: 2;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgb(0 0 0 / 75%);
 
     &_active {
       display: block;
@@ -355,7 +352,7 @@
   &__burger {
     display: none;
 
-    @media (max-width: 1100px) {
+    @media (width <= 1100px) {
       position: relative;
       cursor: pointer;
       display: flex;
@@ -371,7 +368,7 @@
         width: 6px;
         background: $whiteTwo;
         z-index: 13;
-        -webkit-transition: all 0.3s easy--in-out;
+        transition: all 0.3s easy--in-out;
         transition: all 0.3s ease-in-out;
       }
 
@@ -381,7 +378,7 @@
         width: 16px;
         background: $whiteTwo;
         z-index: 13;
-        -webkit-transition: all 0.3s easy--in-out;
+        transition: all 0.3s easy--in-out;
         transition: all 0.3s ease-in-out;
       }
 
@@ -391,13 +388,13 @@
         width: 12px;
         background: $whiteTwo;
         z-index: 13;
-        -webkit-transition: all 0.3s easy--in-out;
+        transition: all 0.3s easy--in-out;
         transition: all 0.3s ease-in-out;
       }
     }
   }
 
-  @media (max-width: 1100px) {
+  @media (width <= 1100px) {
     .header__burger.header__burger_active .header__burger-span-middle {
       opacity: 0;
     }

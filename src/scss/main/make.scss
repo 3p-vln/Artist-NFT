@@ -41,7 +41,7 @@
         &-title {
             padding: 24px 0 0 2px;
             color: $whiteTwo;
-            font-family: 'ProximaNova';
+            font-family: ProximaNova;
             font-size: 64px;
             font-weight: 700;
             line-height: 65px;
@@ -64,7 +64,7 @@
 
         &-text {
             color: $whiteTwo;
-            font-family: 'ProximaNova';
+            font-family: ProximaNova;
             font-size: clamp(15px, 2.5vw, 16px);
             font-weight: 400;
             line-height: 28px;
@@ -78,7 +78,7 @@
             @include media-breakpoint-down(xs) {
                 text-align: left;
                 line-height: 24px;
-                padding: 8px 0 0 0;
+                padding: 8px 0 0;
             }
         }
     }
@@ -105,7 +105,7 @@
         padding: 40px 0 0 2px;
 
         @include media-breakpoint-down(xs) {
-            padding: 22px 0 0 0px;
+            padding: 22px 0 0;
         }
 
         &__premium {
@@ -129,7 +129,7 @@
                 span {
                     color: $background;
                     font-size: clamp(15px, 2.5vw, 18px);
-                    font-family: 'ProximaNova';
+                    font-family: ProximaNova;
                     text-wrap: nowrap;
                 }
             }
@@ -145,11 +145,11 @@
                 }
 
                 span {
-                    font-family: 'ProximaNova';
+                    font-family: ProximaNova;
                     background: $rainbowBtnGradient;
                     background-clip: text;
                     font-size: clamp(15px, 2.5vw, 18px);
-                    -webkit-background-clip: text;
+                    background-clip: text;
                     -webkit-text-fill-color: transparent;
                     line-height: 26.5px;
                 }
@@ -183,7 +183,7 @@
             display: block;
             min-width: 90%;
             min-height: 100%;
-            transform: translateX(0px);
+            transform: translateX(0);
         }
 
         @include media-breakpoint-down(xs) {

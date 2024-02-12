@@ -16,7 +16,7 @@
   }
 
   &__info {
-    font-family: 'ProximaNova';
+    font-family: ProximaNova;
     padding-top: 88px;
 
     @include media-breakpoint-down(md) {
@@ -79,7 +79,7 @@
       max-width: 625px;
     }
 
-    @media (max-width: 670px) {
+    @media (width <= 670px) {
       min-height: calc(350px + (616 - 350) * ((100vw - 375px) / (670 - 375)));
     }
   }
