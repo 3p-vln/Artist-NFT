@@ -1,83 +1,80 @@
-@import '../config/_media-breakpoints';
-@import '../config/vars';
-
 .background {
-  position: absolute;
-  width: 100%;
-  z-index: 1;
-  margin-top: 65px;
-
-  @media (max-width: 1100px) {
-    display: block;
-  }
-
-  &__become,
-  &__team {
-    font-family: 'ProximaNova';
-    font-size: 79px;
-    letter-spacing: 1px;
-    font-weight: 700;
-    color: transparent;
-    -webkit-text-stroke: 1px $whiteTwo;
-    opacity: 0.2;
     position: absolute;
+    z-index: 1;
+    margin-top: 65px;
+    width: 100%;
 
-    @include media-breakpoint-down(lg) {
-      font-size: calc(50px + (79 - 50) * ((100vw - 375px) / (1440 - 375)));
-    }
-  }
+    &__become {
+        left: -7.5%;
+        top: 48px;
 
-  &__become {
-    left: -7.5%;
-    top: 48px;
-
-    @include media-breakpoint-down(md) {
-      left: auto;
-      right: -95px;
-      top: 2px;
-    }
-  }
-
-  &__team {
-    right: 30.5%;
-    top: 517px;
-
-    @include media-breakpoint-down(md) {
-      top: 495px;
-      right: auto;
-      left: -82px;
-    }
-  }
-
-  &__blur {
-    position: absolute;
-    left: 0;
-    top: -70px;
-
-    @include media-breakpoint-down(sm) {
-      display: none;
+        @include media-breakpoint-down(md) {
+            left: auto;
+            right: -95px;
+            top: 2px;
+        }
     }
 
-    &_mob {
-      display: none;
+    &__team {
+        right: 30.5%;
+        top: 517px;
 
-      @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
+            left: -82px;
+            right: auto;
+            top: 495px;
+        }
+    }
+
+    &__blur {
+        position: absolute;
+        left: 0;
+        top: -70px;
+
+        &_mob {
+            display: none;
+
+            @include media-breakpoint-down(sm) {
+                display: block;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+
+    svg {
+        position: absolute;
+        right: 54.5%;
+        top: 486px;
+        width: 25px;
+        height: 25px;
+
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+
+    &__become,
+    &__team {
+        position: absolute;
+        font-family: "ProximaNova";
+        font-weight: 700;
+        font-size: 79px;
+        letter-spacing: 1px;
+        -webkit-text-stroke: 1px $whiteTwo;
+        color: transparent;
+        opacity: 0.2;
+
+        @include media-breakpoint-down(lg) {
+            font-size: calc(50px + (79 - 50) * ((100vw - 375px) / (1440 - 375)));
+        }
+    }
+
+    @media (width <= 1100px) {
         display: block;
-        width: 100%;
-        object-fit: contain;
-      }
     }
-  }
-
-  svg {
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: 54.5%;
-    top: 486px;
-
-    @include media-breakpoint-down(sm) {
-      display: none;
-    }
-  }
 }
