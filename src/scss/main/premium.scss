@@ -296,10 +296,9 @@
                 -o-object-fit: cover;
                 object-fit: cover;
 
-                // @include media-breakpoint-down(xs) {
-                //     max-width: 164px;
-                //     height: 60%;
-                // }
+                @include media-breakpoint-down(md) {
+                    max-width: 200px;
+                }
             }
         }
 
