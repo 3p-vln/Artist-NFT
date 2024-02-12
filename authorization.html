@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/authorization.min.css?_v=20240208164454">
+  <link rel="stylesheet" href="css/authorization.min.css?_v=20240212210559">
   <title>Authorization</title>
 </head>
 
@@ -48,7 +48,8 @@
               <button class="tabs__button" data-tab="#accaunt-log">Sign up</button>
             </div>
             <div class="autorization__roles roles">
-              <p class="roles__text">Select your role</p>
+              <div class="roles__inner">
+                <p class="roles__text">Select your role</p>
               <div class="roles__box">
                 <div class="roles__check">
                   <span class="roles__check-label"></span>
@@ -63,17 +64,18 @@
                   <p class="roles__check-text">Artist</p>
                 </div>
               </div>
+              </div>
             </div>
-            <form action="#" class="authorization__form form">
+            <form action="#" class="authorization__form form" id="auth-form">
               <div class="form__item">
                 <label for="" class="form__item-label">E-mail</label>
-                <input type="email" class="form__item-input" placeholder="Your e-mail">
+                <input type="email" class="form__item-input" placeholder="Your e-mail" id="email">
               </div>
               <div class="form__item">
                 <label for="" class="form__item-label">Passwrod</label>
-                <input type="password" class="form__item-input" placeholder="Your password">
+                <input type="password" class="form__item-input" placeholder="Your password" id="password">
               </div>
-              <button class="form__button">Send message</button>
+              <button class="form__button" type="submit">Send message</button>
             </form>
             <div class="authorization__accaunt" id="accaunt-sign">
               <p class="authorization__text">Don’t have account yet?</p>
@@ -277,7 +279,7 @@
 </svg>
 
 </div></body>
-<script src="js/app.min.js?_v=20240208164454"></script>
-<script src="js/authorization.min.js?_v=20240208164454"></script>
+<script src="js/app.min.js?_v=20240212210559"></script>
+<script src="js/authorization.min.js?_v=20240212210559"></script>
 
 </html>
