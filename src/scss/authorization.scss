@@ -160,10 +160,13 @@
     }
 
     .roles {
-        width: 410px;
         max-height: 0;
         opacity: 0;
         transition: max-height 300ms linear, opacity 200ms linear;
+
+        &__inner {
+            width: 410px;
+        }
 
         &_visible {
             display: flex;
