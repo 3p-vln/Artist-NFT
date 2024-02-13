@@ -311,6 +311,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
+            @include media-breakpoint-down(xs) {
+                margin: 0px 15px 0 5px;
+                width: 40px;
+                height: 40px;
+            }
             svg {
                 transform: rotate(90deg);
                 width: 30.52px;
@@ -332,15 +338,40 @@
                 align-items: center;
                 color: #fff;
                 font-family: 'ProximaNova';
-                font-size: 20px;
+                font-size: clamp(18px, 2.5vw, 20px);
                 font-weight: 700;
                 line-height: 30px;
                 letter-spacing: 0%;
                 text-align: center;
+
+                @include media-breakpoint-down(xs) {
+                    width: 40px;
+                    height: 40px;
+                }
             }
-            .active {
+            &-item_active {
+                width: 48px;
+                height: 48px;
+                margin: 0px 9px;
+                border-radius: 10px;
                 background: $rainbowBtnGradient;
+                cursor: pointer;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 color: rgb(29, 31, 33);
+                font-family: 'ProximaNova';
+                font-size: clamp(18px, 2.5vw, 20px);
+                font-weight: 700;
+                line-height: 30px;
+                letter-spacing: 0%;
+                text-align: center;
+
+                @include media-breakpoint-down(xs) {
+                    width: 40px;
+                    height: 40px;
+                }
             }
         }
 
@@ -357,6 +388,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
+            @include media-breakpoint-down(xs) {
+                margin: 0px 5px 0 15px;
+                width: 40px;
+                height: 40px;
+            }
             svg {
                 transform: rotate(-90deg);
                 width: 30.52px;
