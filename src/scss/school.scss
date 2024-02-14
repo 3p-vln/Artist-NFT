@@ -5,25 +5,25 @@
 @import './school/backround.scss';
 
 .register {
-  color:$whiteTwo;
   padding-top: 88px;
+  color:$whiteTwo;
 
   &__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &__inner-text {
     position: absolute;
     left: -30%;
-    -webkit-text-stroke: 1px #fcffff;
-    color: transparent;
     top: 0%;
+    display: inline-block;
     font-weight: 700;
     font-size: 80px;
-    display: inline-block;
+    -webkit-text-stroke: 1px #fcffff;
+    color: transparent;
     opacity: 0.2;
   }
 
@@ -32,28 +32,28 @@
   }
 
   &__title {
+    margin-bottom: 16px;
     font-weight: 700;
     font-size: 64px;
     line-height: 102%;
-    margin-bottom: 16px;
   }
 
   &__text {
+    margin-bottom: 40px;
+    max-width: 271px;
     font-weight: 400;
     font-size: 16px;
     line-height: 175%;
-    margin-bottom: 40px;
-    max-width: 271px;
   }
 
   &__button {
+    border-radius: 16px;
+    padding: 18px 0 19px;
     width: 209px;
-    background: $rainbowBtnGradient;
     font-weight: 700;
     font-size: 18px;
     line-height: 147%;
     color: $background;
-    border-radius: 16px;
-    padding: 18px 0 19px;
+    background: $rainbowBtnGradient;
   }
 }
