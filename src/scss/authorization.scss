@@ -61,18 +61,12 @@
             color: $whiteColor;
             background: none;
             transition: background 1000ms linear, color 300ms linear;
-            // line-height: 175%;
-
-line-heightline-height
-
-line-heighttransition
 
             &_active {
                 font-weight: 400;
                 font-size: 18px;
                 color: $background;
                 background: $rainbowBtnGradient;
-                // line-height: 133%;line-heightline-heightline-heightcolor
             }
 
             @include media-breakpoint-down(xs) {
@@ -166,7 +160,6 @@ line-heighttransition
     }
 
     .roles {
-        width: 410px;
         max-height: 0;
         opacity: 0;
         transition: max-height 300ms linear, opacity 200ms linear;
@@ -189,7 +182,6 @@ line-heighttransition
 
         &__box {
             display: flex;
-            justify-content: space-between;
             color: $whiteColor;
             gap: 7px;
         }

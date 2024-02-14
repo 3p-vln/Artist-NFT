@@ -108,13 +108,14 @@
 
                 &__price {
                     margin-right: 20px;
+                    min-width: 95px;
                     font-weight: 700;
                     font-size: clamp(22px, 2.5vw, 26px);
                     line-height: 33.5px;
                     color: $whiteTwo;
 
                     @include media-breakpoint-down(sm) {
-                        margin-right: 60px;
+                        margin-right: 35px;
                     }
                 }
 
