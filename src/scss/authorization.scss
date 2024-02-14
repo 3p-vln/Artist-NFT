@@ -164,10 +164,6 @@
         opacity: 0;
         transition: max-height 300ms linear, opacity 200ms linear;
 
-        &__inner {
-            width: 410px;
-        }
-
         &_visible {
             display: flex;
             justify-content: flex-start;
@@ -186,7 +182,6 @@
 
         &__box {
             display: flex;
-            justify-content: space-between;
             color: $whiteColor;
             gap: 7px;
         }
