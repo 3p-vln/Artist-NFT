@@ -202,7 +202,7 @@
     }
 
     // .swiper-slide {
-    //     width: 350px;widthwidthwidthwidthwidth
+    //     width: 350px;widthwidthwidthwidthwidthwidthwidthwidth
     // }
 
     &-slide {
@@ -249,15 +249,15 @@
                 object-fit: cover;
                 aspect-ratio: 1/1;
 
+                // @include media-breakpoint-down(xs) {height
+                //     max-width: 164px;max-widthmax-widthmax-widthmax-widthmax-widthmax-widthmax-width
+                //     height: 60%;heightheightheightheightheightmax-widthheightheight
+                // }
+
 
                 @include media-breakpoint-down(md) {
                     max-width: 200px;
                 }
-
-                // @include media-breakpoint-down(xs) {height
-                //     max-width: 164px;max-widthmax-widthmax-widthmax-width
-                //     height: 60%;heightheightmax-widthheightheight
-                // }
 
             }
 
