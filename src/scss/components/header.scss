@@ -125,19 +125,6 @@
       }
     }
 
-    @include media-breakpoint-down(sm) {
-      width: 50%;
-    }
-
-    @include media-breakpoint-down(xs) {
-      width: 100%;
-    }
-
-    @include media-breakpoint-down(xxs) {
-      align-items: center;
-      padding: 100px;
-    }
-
     @media (width <= 1100px) {
       position: fixed;
       right: -100%;
@@ -153,6 +140,18 @@
       background: $background;
       background-size: cover;
       transition: right 0.3s ease 0s;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 50%;
+    }
+
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+    }
+
+    @include media-breakpoint-down(xxs) {
+      align-items: center;
+      padding: 100px;
     }
   }
 
