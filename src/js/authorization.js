@@ -10,6 +10,8 @@ const roles = document.querySelector('.roles');
 const checkLabeles = document.querySelectorAll('.roles__check-label');
 const tabAccaunts = document.querySelectorAll('.authorization__accaunt');
 const autBlock = document.querySelector('.authorization');
+const tabsSelect = document.querySelector('.tabs__select');
+const inputs = document.querySelectorAll('.form__item-input');
 
 tabButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -18,10 +20,12 @@ tabButtons.forEach(button => {
         let currentTab = document.querySelector(tabId);
 
         tabButtons.forEach(tabButton => {
-            tabButton.classList.remove('tabs__button_active');
+          tabButton.classList.remove('tabs__button_active');
+          // tabsSelect.classList.remove('tabs__select_active');
         });
 
-        button.classList.add('tabs__button_active');
+      button.classList.add('tabs__button_active');
+      tabsSelect.classList.toggle('tabs__select_active');
 
         if (tabButtons[1].classList.contains('tabs__button_active')) {
             roles.classList.add('roles_visible');
@@ -85,7 +89,6 @@ validator
             rule: 'customRegexp',
             value: /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/g,
             errorMessage: 'incorrect password',
-            
         },
     ]);
 
