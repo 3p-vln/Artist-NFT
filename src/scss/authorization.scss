@@ -74,6 +74,9 @@
             border-radius: 12px;
             // line-height: 175%;
             transition: color 300ms linear;
+            color: $whiteColor;
+            background: none;
+            transition: background 1000ms linear, color 300ms linear;
 
             &_active {
                 // background: $rainbowBtnGradient;
@@ -84,6 +87,7 @@
                 position: relative;
                 z-index: 2;
                 transition: transform 300ms linear;
+                background: $rainbowBtnGradient;
             }
 
 
@@ -224,6 +228,7 @@
     }
 
     .roles {
+        max-height: 0;
         opacity: 0;
         max-height: 0;
         transition: max-height 300ms linear, opacity 200ms linear;
@@ -252,7 +257,6 @@
 
         &__box {
             display: flex;
-            justify-content: space-between;
             color: $whiteColor;
             gap: 7px;
         }
