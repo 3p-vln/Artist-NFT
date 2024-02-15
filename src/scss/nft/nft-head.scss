@@ -8,7 +8,7 @@
     gap: 18px;
 
     &__title {
-        font-family: "ProximaNova";
+        font-family: 'ProximaNova';
         font-weight: 700;
         font-size: clamp(36px, 5vw, 64px);
         line-height: 65px;
@@ -26,7 +26,7 @@
 
     &__subtitle {
         max-width: 400px;
-        font-family: "ProximaNova";
+        font-family: 'ProximaNova';
         font-weight: 400;
         font-size: clamp(15px, 2.5vw, 16px);
         line-height: 28px;
@@ -51,7 +51,7 @@
         justify-content: center;
         grid-template-columns: repeat(3, minmax(200px, 350px));
         padding-top: 50px;
-        padding-bottom: 100px;
+        padding-bottom: 52px;
         gap: 24px 30px;
 
         @include media-breakpoint-down(md) {
@@ -60,11 +60,8 @@
 
         @include media-breakpoint-down(xs) {
             grid-template-columns: repeat(2, auto);
-            gap: 16px 20px;
-        }
-
-        @include media-breakpoint-down(xs) {
             padding-top: 44px;
+            gap: 16px 20px;
         }
 
         @include media-breakpoint-down(xxs) {
@@ -81,31 +78,10 @@
         background: $backgroundSecond;
         transition: transform 0.3s ease-in-out;
 
-        max-width: 100%;
-        height: 600px;
-
-        @include media-breakpoint-down(sm) {
-            height: 535px;
-        }
-
-        @include media-breakpoint-down(xs) {
-            min-height: 339px;
-            min-width: 163px;
-            width: 100%;
-            height: 100%;
-        }
-
-        @include media-breakpoint-down(xxs) {
-            min-height: 339px;
-            min-width: 143px;
-            width: 100%;
-            height: 100%;
-        }
-
         &__nft {
             padding: 17px 0 0 20px;
             max-width: 65px;
-            font-family: "ProximaNova";
+            font-family: 'ProximaNova';
             font-weight: 700;
             font-size: clamp(12px, 2.5vw, 18px);
             line-height: 26.5px;
@@ -137,44 +113,30 @@
                 object-fit: cover;
                 aspect-ratio: 1/1;
 
-                // @include media-breakpoint-down(xs) {height
-                //     max-width: 164px;max-widthmax-widthmax-widthmax-width
-                //     height: 60%;heightheightmax-widthheightheight
-                // }
-            }
-
-            @include media-breakpoint-down(sm) {
-                padding: 35px 35px;
-            }
-
-            @include media-breakpoint-down(xs) {
-                order: 1;
-            }
-
-            &-img {
-                aspect-ratio: 1/1;
-                max-width: 264px;
-                width: fit-content;
-                height: 100%;
-                border-radius: 50%;
-                -o-object-fit: cover;
-                object-fit: cover;
-
                 @include media-breakpoint-down(sm) {
                     max-width: 200px;
+                    max-height: 200px;
                 }
 
                 @include media-breakpoint-down(xs) {
                     max-width: 123px;
+                    max-height: 123px;
                 }
-                //padding: 20px 35px;
-                //height: 163px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                padding: 35px;
+            }
+
+            @include media-breakpoint-down(xs) {
+                order: 1;
+                padding: 20px;
             }
         }
 
         &__title {
-            padding: 35px 24px 0;
-            font-family: "ProximaNova";
+            padding: 33px 24px 0;
+            font-family: 'ProximaNova';
             font-weight: 700;
             font-size: clamp(13px, 2.5vw, 20px);
             line-height: 30px;
@@ -196,7 +158,7 @@
         &__paragraph {
             padding: 0 24px 20px;
             max-width: 350px;
-            font-family: "ProximaNova";
+            font-family: 'ProximaNova';
             font-weight: 400;
             font-size: clamp(10px, 2.5vw, 14px);
             line-height: 21px;
@@ -206,7 +168,7 @@
                 order: 4;
                 padding: 0 17px 0 12px;
                 line-height: 15.5px;
-                transform: translateY(-14px);
+                transform: translateY(-10px);
             }
         }
 
@@ -234,11 +196,15 @@
             }
 
             &-value {
-                font-family: "ProximaNova";
+                font-family: 'ProximaNova';
                 font-weight: 700;
                 font-size: clamp(14px, 2.5vw, 26px);
                 line-height: 33.5px;
                 color: $whiteTwo;
+
+                @include media-breakpoint-down(xs) {
+                    padding-top: 2px;
+                }
             }
 
             &-btn {
@@ -253,9 +219,6 @@
 
                 &::before {
                     content: '';
-                    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5));
-                    height: 100px;
-                    width: 50px;
                     position: absolute;
                     left: -95px;
                     top: 0;
@@ -266,7 +229,7 @@
                 }
 
                 p {
-                    font-family: "ProximaNova";
+                    font-family: 'ProximaNova';
                     font-weight: 700;
                     font-size: clamp(12px, 2.5vw, 14px);
                     line-height: 20px;
@@ -282,6 +245,10 @@
                             display: none;
                         }
                     }
+                }
+
+                @include media-breakpoint-down(xs) {
+                    margin-top: 2px;
                 }
 
                 @include media-breakpoint-down(xs) {
@@ -306,24 +273,130 @@
             }
         }
 
-    &-nav {
         @include media-breakpoint-down(sm) {
-            height: 515px;
+            max-height: 535px;
         }
 
         @include media-breakpoint-down(xs) {
-            width: 100%;
-            height: 100%;
             min-width: 163px;
-            min-height: 339px;
+            max-height: 339px;
         }
 
         @include media-breakpoint-down(xxs) {
-            width: 100%;
-            height: 100%;
-            min-width: 143px;
-            min-height: 339px;
+            min-width: 145px;
+            max-height: 370px;
         }
     }
-}
+
+    &-pagination {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 50px;
+
+        &__prev {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 55px;
+            border: 2px solid rgb(82, 89, 96);
+            border-radius: 10px;
+            width: 48px;
+            height: 48px;
+            box-sizing: border-box;
+            background: rgb(33, 36, 38);
+            cursor: pointer;
+
+            svg {
+                width: 30.52px;
+                height: 26.25px;
+                transform: rotate(90deg);
+            }
+
+            @include media-breakpoint-down(xs) {
+                margin: 0 15px 0 5px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        &__next {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 55px;
+            border: 2px solid rgb(82, 89, 96);
+            border-radius: 10px;
+            width: 48px;
+            height: 48px;
+            box-sizing: border-box;
+            background: rgb(33, 36, 38);
+            cursor: pointer;
+
+            svg {
+                width: 30.52px;
+                height: 26.25px;
+                transform: rotate(-90deg);
+            }
+
+            @include media-breakpoint-down(xs) {
+                margin: 0 5px 0 15px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        &__list {
+            display: flex;
+
+            &-item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 9px;
+                border-radius: 10px;
+                width: 48px;
+                height: 48px;
+                font-family: 'ProximaNova';
+                font-weight: 700;
+                font-size: clamp(18px, 2.5vw, 20px);
+                line-height: 30px;
+                letter-spacing: 0%;
+                text-align: center;
+                color: #fff;
+                background: rgb(33, 36, 38);
+                cursor: pointer;
+
+                @include media-breakpoint-down(xs) {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+            &-item_active {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 9px;
+                border-radius: 10px;
+                width: 48px;
+                height: 48px;
+                font-family: 'ProximaNova';
+                font-weight: 700;
+                font-size: clamp(18px, 2.5vw, 20px);
+                line-height: 30px;
+                letter-spacing: 0%;
+                text-align: center;
+                color: rgb(29, 31, 33);
+                background: $rainbowBtnGradient;
+                cursor: pointer;
+
+                @include media-breakpoint-down(xs) {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+    }
 }

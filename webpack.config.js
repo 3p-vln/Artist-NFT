@@ -19,6 +19,9 @@ export const webpackConfig = isMode => {
             become: path.join(paths.src, 'js/become.js'),
             pay: path.join(paths.src, 'js/pay.js'),
             authorization: path.join(paths.src, 'js/authorization.js'),
+            nft: path.join(paths.src, 'js/nft.js'),
+            premium: path.join(paths.src, 'js/premium.js'),
+            school: path.join(paths.src, 'js/school.js'),
             app: path.join(paths.src, 'js/app.js'),
         },
 

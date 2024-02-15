@@ -112,16 +112,23 @@
                             alt="diamond"
                             class="artist__decor-img artist__decor-img_second"
                         />
-                        <img
-                            src="./images/school/artist/right-big-brilliant.png"
-                            alt="diamond"
-                            class="artist__decor-img artist__decor-img_third"
-                        />
+                        <img src="./images/school/artist/right-big-brilliant.png" alt="diamond" class="artist__decor-img artist__decor-img_third" />
+
+                        <img src="./images/school/artist/left-bot-brilliant-mobile.png" alt="" class="artist__decor-img artist__decor-img_mob-first">
+
+                        <!-- <img src="./images/school/artist/right-big-brilliant.png" alt="" class="artist__decor-img artist__decor-img_mob-second"> -->
                         <h2 class="artist__title">Artist School Fees</h2>
                         <p class="artist__descr">Indulgence announcing uncommonly met she continuing two unpleasing terminated</p>
 
+                        <div class="tabs artist__tabs">
+                            <button class="tabs__button" data-tab="#card-week">One week</button>
+                            <button class="tabs__button" data-tab="#card-month">Month</button>
+                            <button class="tabs__button tabs__button_last" data-tab="#card-individual">Individual</button>
+                            <div class="tabs__select"></div>
+                        </div>
+
                         <div class="artist__cards">
-                            <div class="card artist__card">
+                            <div class="card artist__card" id="card-week">
                                 <h2 class="card__plan">1 WEEK</h2>
 
                                 <div class="card__choise">
@@ -171,7 +178,7 @@
                                 </div>
                             </div>
 
-                            <div class="card artist__card card_individual">
+                            <div class="card artist__card card_individual" id="card-individual">
                                 <div class="card__box">
                                     <h2 class="card__plan">Individual</h2>
 
@@ -223,7 +230,7 @@
                                 </div>
                             </div>
 
-                            <div class="card artist__card">
+                            <div class="card artist__card" id="card-month">
                                 <h2 class="card__plan">MONTH</h2>
 
                                 <div class="card__choise">
@@ -279,5 +286,7 @@
             @@include('html/modules/footer.html') @@include('html/modules/Sprite.html')
         </div>
     </body>
+    
     <script src="js/app.min.js"></script>
+    <script src="js/school.min.js"></script>
 </html>
