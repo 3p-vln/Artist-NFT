@@ -1,0 +1,236 @@
+.pricing-head {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 74px;
+    padding-top: 52px;
+    gap: 17px;
+
+    &__title {
+        font-family: 'ProximaNova';
+        font-weight: 700;
+        font-size: clamp(36px, 5vw, 64px);
+        line-height: 65px;
+        text-align: center;
+        color: $whiteTwo;
+        max-width: 569px;
+
+        @include media-breakpoint-down(lg) {
+            line-height: calc(40px + (65 - 40) * ((100vw - 375px) / (1440 - 375)));
+        }
+
+        @include media-breakpoint-down(xs) {
+            text-align: left;
+            padding-top: 12px;
+            max-width: 271px;
+        }
+    }
+
+    &__subtitle {
+        max-width: 400px;
+        font-family: 'ProximaNova';
+        font-weight: 400;
+        font-size: clamp(15px, 2.5vw, 16px);
+        line-height: 28px;
+        text-align: center;
+        color: $whiteTwo;
+
+        @include media-breakpoint-down(lg) {
+            line-height: calc(24px + (28 - 24) * ((100vw - 375px) / (1440 - 375)));
+        }
+
+        @include media-breakpoint-down(xs) {
+            text-align: left;
+            max-width: 280px;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        margin-top: calc(26px + (60 - 26) * ((100vw - 375px) / (1440 - 375)));
+        gap: calc(16px + (18 - 16) * ((100vw - 375px) / (1440 - 375)));
+    }
+
+    @include media-breakpoint-down(xs) {
+        align-items: start;
+    }
+}
+
+.purchase {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 78px;
+    padding-bottom: 50px;
+
+    .purchase__nav {
+        display: none;
+        .purchase__nav-btn {
+        }
+        .selector {
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        gap: 31px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        max-width: 350px;
+        height: 650px;
+        border-radius: 12px;
+        padding: 13px 0px 18px 27px;
+        background: $backgroundSecond;
+
+        @include media-breakpoint-down(lg) {
+            max-width: 320px;
+            padding: 13px 0px 5px 5px;
+        }
+
+        &-wrapper {
+            max-width: 340px;
+            @include media-breakpoint-down(lg) {
+                max-width: 310px;
+                margin: 0 auto;
+            }
+            &__time {
+                font-family: 'ProximaNova';
+                font-size: 80px;
+                font-weight: 700;
+                line-height: 97px;
+                letter-spacing: 0%;
+                text-align: center;
+                color: $backgroundSecond;
+                -webkit-text-stroke: 1px $whiteTwo;
+                opacity: 0.2;
+                padding-right: 30px;
+
+                @include media-breakpoint-down(lg) {
+                    padding-right: 5px;
+                }
+            }
+            &__blur {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            &__item {
+                position: absolute;
+                top: 44px;
+                left: 44px;
+            }
+            &__access {
+                border-radius: 8px 0 0 8px;
+                background: $rainbowBtnGradient;
+                max-width: 275px;
+                width: 100%;
+                padding: 14px 0 11px 25px;
+                margin: 44px 0 28px auto;
+                position: relative;
+
+                &-title {
+                    /* h4 */
+                    color: rgb(29, 31, 33);
+                    font-family: 'ProximaNova';
+                    font-size: 26px;
+                    font-weight: 700;
+                    line-height: 33.5px;
+                    letter-spacing: 0%;
+                    text-align: left;
+                }
+                &-subtitle {
+                    color: rgb(29, 31, 33);
+                    font-family: 'ProximaNova';
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 21px;
+                    letter-spacing: 0%;
+                    opacity: 0.7;
+                    transform: translateY(-5px);
+                }
+            }
+
+            &__column {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                transform: translateY(-2px);
+                padding-right: 50px;
+
+                @include media-breakpoint-down(lg) {
+                    padding-right: 27px;
+                }
+
+                &-item {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                    padding-bottom: 20px;
+
+                    &-svg {
+                        min-width: 24px;
+                        min-height: 24px;
+                        max-width: 24px;
+                        max-height: 24px;
+                    }
+
+                    &-text {
+                        color: rgb(200, 210, 220);
+                        font-family: 'ProximaNova';
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 21px;
+                        letter-spacing: 0%;
+                        text-align: left;
+                    }
+                }
+                &-item::after {
+                    content: '';
+                    position: absolute;
+                    top: 86%;
+                    left: 0;
+                    width: 108%;
+                    height: 1px;
+                    background: rgb(82, 89, 96);
+                }
+            }
+        }
+
+        &__price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 35px;
+            padding-top: 23px;
+
+            &-btn {
+                padding: 14px 50px;
+                border-radius: 12px;
+                span {
+                    color: rgb(29, 31, 33);
+                    font-family: 'ProximaNova';
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 26.5px;
+                    letter-spacing: 0%;
+                    text-align: left;
+                }
+            }
+            &-value {
+                color: rgb(252, 255, 255);
+                font-family: 'ProximaNova';
+                font-size: 22px;
+                font-weight: 700;
+                line-height: 33.5px;
+                letter-spacing: 0%;
+                text-align: left;
+            }
+        }
+    }
+}
