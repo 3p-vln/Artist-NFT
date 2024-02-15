@@ -249,7 +249,6 @@ export function validate() {
                 '#form-crypto'.reset();
             });
         }
-        console.log('finish');
     });
 }
 
