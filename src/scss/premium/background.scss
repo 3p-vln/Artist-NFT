@@ -42,6 +42,11 @@
         width: 45px;
         height: 65px;
 
+        @include media-breakpoint-down(lg) {
+            top: 116px;
+            left: 20%;
+        }
+
         @include media-breakpoint-down(xs) {
             left: unset;
             right: 0;
