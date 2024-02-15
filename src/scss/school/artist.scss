@@ -1,0 +1,280 @@
+.artist {
+    color: $whiteTwo;
+    padding-bottom: 65px;
+    position: relative;
+
+    &__decor-text {
+      position: absolute;
+      font-weight: 700;
+      font-size: 80px;
+      -webkit-text-stroke: 1px #fcffff;
+      color: transparent;
+      opacity: 0.2;
+      z-index: 2;
+
+      &_first {
+        left: -17%;
+        top: 3%;
+      }
+
+      &_second {
+        right: -176px;
+        top: 31px;
+      }
+    }
+
+    &__decor-star {
+      position: absolute;
+      width: 46px;
+      height: 62px;
+      top: -1%;
+      left: 21%;
+    }
+
+    &__decor-elipse {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      top: 14%;
+      left: 80%;
+    }
+
+    &__decor-img {
+      position: absolute;
+
+      &_blur {
+        left: -24%;
+        bottom: 10%;
+        z-index: 0;
+      }
+
+      &_first {
+        z-index: 1;
+        left: -13%;
+        top: 6%;
+      }
+
+      &_second {
+        right: 12%;
+        top: -2%;
+      }
+
+      &_third {
+        right: -13%;
+        top: 9%;
+      }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 137%;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    &__descr {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 175%;
+        text-align: center;
+        max-width: 415px;
+        margin: 0 auto;
+        margin-bottom: 93px;
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 14px 0 15px;
+    }
+
+    &__card {
+        border-radius: 12px;
+        background: $backgroundSecond;
+        width: 350px;
+        padding: 21px 0 18px;
+    }
+
+    .card {
+        position: relative;
+
+        &_individual {
+            background: $benefitsStarBoxGradient;
+            background: linear-gradient(130deg, #31fff3 0%, #ad7aff 99.47%);
+            top: -40px;
+            &:before {
+                content: '';
+                position: absolute;
+                top: -5px;
+                bottom: -5px;
+                left: -5px;
+                right: -5px;
+                background: linear-gradient(283deg, #ad7aff, rgb(10, 159, 185));
+
+                z-index: -2;
+                border-radius: 12px;
+            }
+        }
+
+        &__box {
+            background: $backgroundSecond;
+            border-radius: 12px;
+            margin-top: -20px;
+            padding-top: 16px;
+        }
+        &__plan {
+            font-weight: 700;
+            font-size: 80px;
+            -webkit-text-stroke: 1px #fcffff;
+            color: transparent;
+            opacity: 0.2;
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        &__choise {
+            display: flex;
+            justify-content: flex-end;
+            // align-items: flex-end;
+            position: relative;
+        }
+
+        &__choise-descr-box {
+            width: 275px;
+            padding: 14px 0 15px 25px;
+            background: $benefitsStarBoxGradient;
+            position: relative;
+            z-index: 4;
+            border-radius: 8px 0 0 8px;
+            margin-bottom: 27px;
+        }
+
+        &__choise-descr-title {
+            font-weight: 700;
+            font-size: 26px;
+            line-height: 110%;
+            color: $background;
+        }
+
+        &__choise-descr-text {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150%;
+            color: $background;
+            opacity: 0.7;
+        }
+
+        &__choise-img {
+            position: absolute;
+            left: 0;
+            bottom: 17px;
+            z-index: 1;
+        }
+
+        &__choise-decor {
+            position: absolute;
+            top: -136px;
+            left: 0;
+            z-index: 0;
+        }
+
+        &__descr-box {
+            margin-bottom: 29px;
+        }
+
+        &__descr {
+            display: flex;
+            justify-content: flex-start;
+            gap: 16px;
+            align-items: center;
+            width: 293px;
+            margin: 0 auto;
+            border-bottom: 1px solid $borderGrayColor;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+
+            &_last {
+                border-bottom: none;
+            }
+        }
+
+        &__descr-svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        &__descr-text {
+            max-width: 226px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150%;
+            color: $gray6Color;
+        }
+
+        &__cost {
+            display: flex;
+            // justify-content: space-between;
+            gap: 20px;
+            align-items: center;
+            width: 293px;
+            margin: 0 auto;
+        }
+
+        &__button {
+            width: 177px;
+            background: $rainbowBtnGradient;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 147%;
+            color: $background;
+            border-radius: 12px;
+            padding: 18px 0 16px;
+            margin-left: -2px;
+        }
+
+        &__price {
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 152%;
+        }
+
+        &_individual .card__plan {
+          margin-bottom: 60px;
+        }
+
+        &_individual .card__choise-descr-box {
+            background: $individPlanGradient;
+        }
+
+        &_individual .card__choise-img {
+          bottom: 27px;
+        }
+
+        &_individual .card__choise-descr-title {
+          color: $whiteTwo;
+        }
+
+        &_individual .card__choise-descr-text {
+          color: $whiteTwo;
+          opacity: 0.7;
+        }
+
+        &_individual .card__button {
+            background: $background;
+        }
+
+        &_individual .card__button-text {
+            background: linear-gradient(130deg, #31fff3 0%, #ad7aff 99.47%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+    }
+
+    // .card_individual .card__plan {
+    //   background: linear-gradient(130deg, #00adc5 0%, #ad7aff 99.47%);
+    //
+    // }
+}
