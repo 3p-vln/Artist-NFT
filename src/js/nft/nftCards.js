@@ -31,8 +31,19 @@ export function navigation() {
             getDocs(nftsCollection).then(querySnapshot => {
                 querySnapshot.forEach(doc => {
                     const data = doc.data();
-                    nftArr.push(data);
+                    nftArr.push({
+                        id: doc.id,
+                        cardBtnText: data.cardBtnText,
+                        cardImg: data.cardImg,
+                        cardImgWebp: data.cardImgWebp,
+                        cardNftText: data.cardNftText,
+                        cardParagraph: data.cardParagraph,
+                        cardTitle: data.cardTitle,
+                        cardValue: data.cardValue,
+                        text: data.text,
+                    });
                 });
+                // console.log(nftArr);
                 renderNFTs(nftArr.slice(0, 12));
                 updateActiveClass();
                 updateURL();
@@ -42,10 +53,11 @@ export function navigation() {
         function renderNFTs(product, id) {
             const card = $('.nfts-content');
             card.html('');
+            let index = 0;
 
             product.forEach(nft => {
                 const cardHtml = `
-                <div class="nfts-content__item card ${id}">
+                <div class="nfts-content__item card ${nftArr[index].id}">
                     <h2 class="card__nft">${nft.cardNftText}</h2>
                     <div class="card__item">
                         <picture>
@@ -57,7 +69,7 @@ export function navigation() {
                     <p class="card__paragraph">${nft.cardParagraph}</p>
                     <div class="card__price">
                         <h2 class="card__price-value">${nft.cardValue}</h2>
-                        <a href="pay.html?id=${id}&name=nft">
+                        <a href="pay.html?id=${nftArr[index].id}&name=nft">
                             <button class="card__price-btn">
                                 <p>${nft.cardBtnText}</p>
                             </button>
@@ -67,6 +79,7 @@ export function navigation() {
                 `;
 
                 card.append(cardHtml);
+                index++;
             });
         }
 
