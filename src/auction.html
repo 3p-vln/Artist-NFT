@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="eng">
-  @@include('html/modules/head.html', { 'title': 'Pricing', 'srcStyle': 'pricing' })
+  @@include('html/modules/head.html', { 'title': 'Auction', 'srcStyle': 'auction' })
   <body>
     @@include('html/modules/preloader.html')
     <div class="wrapper">
       @@include('html/modules/header.html')
       <main class="page">
-        @@include('html/pricing/background.html')
+        @@include('html/auction/background.html')
         <div class="page__container"> 
-            @@include('html/pricing/pricing-head.html')
+            @@include('html/auction/bread-crumbs.html')
+            @@include('html/auction/auction-head.html')
           </div>
         </div>
       </main>
       @@include('html/modules/footer.html') 
       @@include('html/modules/Sprite.html')
   </body>
-  <script src="js/pricing.min.js"></script>
+  <!-- <script src="js/auction.min.js"></script> -->
   <script src="js/app.min.js"></script>
 </html>

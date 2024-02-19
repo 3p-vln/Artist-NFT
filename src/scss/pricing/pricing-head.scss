@@ -354,9 +354,10 @@
                         text-align: left;
                     }
                 }
-                &-item::after {
+                &-item:not(:last-child)::after {
                     content: '';
                     position: absolute;
+                    display: flex;
                     top: 86%;
                     left: 0;
                     // width: 108%;
@@ -369,6 +370,7 @@
                         top: 87%;
                     }
                 }
+
             }
         }
 
