@@ -3,6 +3,8 @@
     z-index: 1001;
     background: $background;
     inset: 0;
+    opacity: 1;
+    transition: opacity 1s ease;
 
     &__row {
         position: relative;
@@ -33,13 +35,9 @@
         }
     }
 
-    .loaded_hiding & {
+    &.loaded {
         opacity: 0;
-        transition: 0.3s opacity;
-    }
-
-    .loaded & {
-        display: none;
+        pointer-events: none;
     }
 }
 

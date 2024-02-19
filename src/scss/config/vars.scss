@@ -30,6 +30,7 @@ $gray6Color: #c8d2dc;
 $greenColor: #c5ff98; // цвет для оплаты или для первого мейн свайпера
 $greenBg: rgba(197, 255, 152, 0.1); // цвет бєка для оплаты или для первого мейн свайпера
 $blueAuthColor: #7e51ff;
+$borderGrayColor:#525960;
 
 $fontFamily: $mainFont, sans-serif; // Семейство шрифта по умолчанию
 $fontColor: $blackColor; // Цвет шрифта по умолчанию
@@ -47,3 +48,5 @@ $hoverBoxShadow: 0 0 5px 0 rgba(#000, 10%), 0 0 10px 0 rgba(#000, 10%), 0 0 15px
 $hoverBtn: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5));
 $rainbowBtnGradient: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%)); // яркий градиент
 $darkerGradientBtn: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%)); // темный градиент
+$benefitsStarBoxGradient: linear-gradient(130deg, #68c9ff 0%, #d1b5ff 99.47%);
+$individPlanGradient: linear-gradient(130deg, #00adc5 0%, #ad7aff 99.47%);
