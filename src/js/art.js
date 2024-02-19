@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import { db } from './modules/firebase';
 import { collection, getDocs } from 'firebase/firestore';
 import { artLoad } from './art/artLoad';
@@ -11,6 +10,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             new artLoad(doc.data(), doc.id, '.art-mesh');
         });
     }
-    snap();
+    await snap();
     focus('.art-mesh');
+
+    const loadingIsFinished = new Event('loadingIsFinished');
+    document.dispatchEvent(loadingIsFinished);
 });

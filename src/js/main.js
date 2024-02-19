@@ -8,10 +8,12 @@ import { premiumSwiper } from './modules/swiper';
 import { validate } from './main/contactValidate';
 
 document.addEventListener('DOMContentLoaded', async () => {
-    snapBiography();
-    snapPremiumBanner();
-    snapPremiumSwiper();
+    await snapBiography();
+    await snapPremiumBanner();
+    await snapPremiumSwiper();
     biographySwiper();
     premiumSwiper();
     validate();
+    const artLoadEvent = new Event('loadingIsFinished');
+    document.dispatchEvent(artLoadEvent);
 });
