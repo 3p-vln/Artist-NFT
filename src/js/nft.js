@@ -4,6 +4,8 @@ import { collection, doc, getDocs } from 'firebase/firestore';
 import { navigation } from './nft/nftCards';
 
 document.addEventListener('DOMContentLoaded', async () => {
-    navigation();
+    await navigation();
+    const artLoadEvent = new Event('loadingIsFinished');
+    document.dispatchEvent(artLoadEvent);
 });
 
