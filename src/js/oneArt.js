@@ -139,4 +139,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     getArts();
     validate();
+
+    const loadingIsFinished = new Event('loadingIsFinished');
+    document.dispatchEvent(loadingIsFinished);
 });

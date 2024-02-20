@@ -9,4 +9,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     tab();
     getPayInfo();
     validate();
+
+    const loadingIsFinished = new Event('loadingIsFinished');
+    document.dispatchEvent(loadingIsFinished);
 });
