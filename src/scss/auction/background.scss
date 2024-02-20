@@ -1,0 +1,63 @@
+.background {
+    position: absolute;
+    z-index: 1;
+    margin-top: 65px;
+    width: 100%;
+
+    &__ellipse {
+        position: absolute;
+        left: 9.3%;
+        top: 582px;
+        width: 15px;
+        height: 15px;
+
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+    }
+
+    &__star-first {
+        position: absolute;
+        left: 7.2%;
+        top: 50px;
+        width: 46px;
+        height: 62px;
+
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+    }
+
+    &__star-second {
+        position: absolute;
+        right: 16.3%;
+        top: 48px;
+        width: 24px;
+        height: 33px;
+
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+    }
+
+    &__blur-first {
+        position: absolute;
+        top: -60px;
+        left: 0;
+        z-index: -1;
+
+        @include media-breakpoint-down(xs) {
+            display: none;
+        }
+    }
+    &__blur-second {
+        position: absolute;
+        top: -60px;
+        right: 0;
+        z-index: -1;
+
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+    }
+}
