@@ -6,10 +6,6 @@ export function validate() {
         errorLabelStyle: {
             color: '#1D1F21',
         },
-        // submitHandler: function (form, values, ajax) {
-        //     console.log('Form is valid. Resetting...');
-        //     form.reset();
-        // },
     });
 
     validate
@@ -18,9 +14,6 @@ export function validate() {
                 rule: 'required',
                 errorMessage: 'Enter your name',
             },
-            // {
-            //     rule: 'text',
-            // },
             {
                 rule: 'customRegexp',
                 value: /^[а-яА-ЯёЁa-zA-Z]+$/,
@@ -68,22 +61,10 @@ export function validate() {
                 rule: 'required',
                 errorMessage: 'Accept the user agreement',
             },
-            // {
-            //     rule: 'checkbox',
-            // },
         ]);
-
-    // form.addEventListener('submit', function (event) {
-    //     event.preventDefault(); // Prevent the default form submission
-    //     if (validate.validate()) {
-    //         // Если валидация успешна, сбросить значения полей
-    //         form.reset();
-    //     }
-    // });
 
     validate.onSuccess(event => {
         form.reset();
     });
 }
 
-// validate();
