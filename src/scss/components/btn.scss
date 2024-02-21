@@ -118,7 +118,7 @@
         &::before {
             content: '';
             position: absolute;
-            left: -95px;
+            left: -100px;
             top: 0;
             width: 50px;
             height: 100px;
@@ -142,7 +142,12 @@
         }
 
         span {
+            font-family: 'ProximaNova';
             font-weight: 700;
+            -webkit-text-fill-color: transparent;
+            background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
+            background-clip: text;
+            -webkit-background-clip: text;
         }
 
         &:hover {
