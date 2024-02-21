@@ -1,26 +1,25 @@
 <!doctype html>
 <html lang="eng">
-<head>
+  <head>
   <meta charset="UTF-8">
   <meta name="description" content="Put your description here.">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/one-art.min.css?_v=20240221093427">
-  <title>About art</title>
+  <link rel="stylesheet" href="css/auction.min.css?_v=20240221093427">
+  <title>Auction</title>
 </head>
 
-
-<body>
-  <div class="preloader visible">
+  <body>
+    <div class="preloader visible">
     <div class="preloader__row">
         <div class="preloader__item"></div>
         <div class="preloader__item"></div>
     </div>
 </div>
 
-  <div class="wrapper">
-    <header class="header">
+    <div class="wrapper">
+      <header class="header">
     <div class="burger__backdrop"></div>
 
     <div class="header__container">
@@ -77,7 +76,7 @@
                 </div>
 
                 <a href="authorization.html" class="authorization header__authorization">
-                    <button class="btn authorization__btn grey">
+                    <button class="btn grey authorization__btn">
                         <span>Authorization</span>
                     </button>
                 </a>
@@ -105,7 +104,7 @@
             </div>
 
             <a href="authorization.html" class="authorization header__authorization">
-                <button class="btn authorization__btn grey">
+                <button class="btn grey authorization__btn">
                     <span>Authorization</span>
                 </button>
             </a>
@@ -128,87 +127,159 @@
     </div>
 </header>
 
-    <main class="page">
-      <div class="background">
-  <picture><source srcset="images/nft-card/blurs/blur.webp" type="image/webp"><img src="images/nft-card/blurs/blur.png" class="background__blur"></picture>
-</div>
-
-      <div class="page__container">
-        <div class="bread-crumbs">
-  <a href="index.html" class="main">Main page</a>
-  <svg>
-    <use href="#right-arr"></use>
-  </svg>
-  <a href="art.html" class="art">Art</a>
-  <svg>
-    <use href="#right-arr"></use>
-  </svg>
-  <a class="curent-art" id="product" href="#"></a>
-</div>
-
-        <div class="one-art"></div>
-        <div class="procces">
-  <div class="procces__head">
-    <svg>
-      <use href="#video"></use>
+      <main class="page">
+        <div class="background">
+    <svg class="background__star-first">
+        <use href="#star"></use>
     </svg>
-    <p class="procces__title">PROCCESS</p>
-  </div>
-  <div class="procces__about">
-    <div class="about"></div>
-  </div>
+
+    <svg class="background__star-second">
+        <use href="#star"></use>
+    </svg>
+
+    <svg class="background__ellipse">
+        <use href="#elipse"></use>
+    </svg>
+
+    <picture><source srcset="images/auction/blurs/blur-left.webp" type="image/webp"><img src="images/auction/blurs/blur-left.png" alt="blur" class="background__blur-first"></picture>
+    <picture><source srcset="images/auction/blurs/blur-right.webp" type="image/webp"><img src="images/auction/blurs/blur-right.png" alt="blur" class="background__blur-second"></picture>
 </div>
 
-        <section id="contact" class="contact">
-    <div class="contact-background">
-        <picture>
-            <source srcset="images/main/contact/sapphire-first-mobile.png" media="(max-width:576px)">
-            <img src="images/main/contact/sapphire-first.png" alt="" class="contact-background__sapphire-first">
-        </picture>
-        <picture>
-            <source srcset="images/main/contact/sapphire-second-mobile.png" media="(max-width:576px)">
-            <img src="images/main/contact/sapphire-second.png" alt="" class="contact-background__sapphire-second">
-        </picture>
-        <picture><source srcset="images/main/contact/sapphire-third.webp" type="image/webp"><img src="images/main/contact/sapphire-third.png" alt="" class="contact-background__sapphire-third"></picture>
-        <picture><source srcset="images/main/contact/cube.webp" type="image/webp"><img src="images/main/contact/cube.png" alt="" class="contact-background__cube"></picture>
+        <div class="page__container"> 
+            <div class="bread-crumbs">
+    <a href="index.html" class="main">Main page</a>
+    <svg>
+        <use href="#right-arr"></use>
+    </svg>
+    <a href="auction.html" class="auction-page">Auction</a>
+</div>
+
+            <section class="auction">
+    <div class="auction-content">
+        <div class="auction__image">
+            <picture><source srcset="images/nft-card/card-item.webp" type="image/webp"><img src="images/nft-card/card-item.png" alt="lot" class="auction__image-img"></picture>
+        </div>
+        <div class="auction__info">
+            <h3 class="auction__info-subtitle">AUCTION</h3>
+            <h2 class="auction__info-title">Title of picture or NFT</h2>
+            <div class="auction__info-columns columns">
+                <div class="columns__item">
+                    <h2 class="columns__item-text">36 × 27 in <br class="br-desctop">91.4 × 68.6 cm</h2>
+                </div>
+                <div class="columns__item">
+                    <h2 class="columns__item-text">Estimated value</h2>
+                    <h3 class="columns__item-value">$6,000</h3>
+                </div>
+                <div class="columns__item">
+                    <h2 class="columns__item-text">This work is part of a limited edition set.</h2>
+                </div>
+            </div>
+            <div class="auction__info-bargain bargain">
+                <h2 class="bargain__title">highest price</h2>
+                <h3 class="bargain__value">$100 322</h3>
+                <form action="" class="bargain__form">
+                    <label for="" class="bargain__form-label">Place your bid</label>
+                    <div class="bargain__form-wrapper">
+                        <input type="text" class="bargain__form-input" placeholder="$100 322">
+                        <button class="btn bargain__form-btn gradient">
+                            <span>Place bid</span>
+                        </button>
+                    </div>
+                </form>
+                <div class="bargain__date">
+                    <h2 class="bargain__date-timer">28d 17h 26m 31s</h2>
+                    <h3 class="bargain__date-deadline">Live март 5, 8:00pm</h3>
+                </div>
+                <h4 class="bargain__description">
+                    You can purchase Art or NFT using popular system of payment. We accepting PayPal, Visa/Mastercard. Any crypto currency
+                </h4>
+            </div>
+        </div>
     </div>
 
-    <div class="contact__content">
-        <h3 class="contact__subtitle">CONTACT ME</h3>
-        <h2 class="contact__title">Want to apply your work or an question appeared?</h2>
-        <form class="contact__form form" id="form" autocomplete="off">
-            <div class="form__item">
-                <label class="form__item-label">Name</label>
-                <input type="text" class="form__item-input" id="name" name="name" placeholder="Your name" autocomplete="off">
-            </div>
-            <div class="form__item">
-                <label class="form__item-label">Mail</label>
-                <input type="email" class="form__item-input" id="email" placeholder="Your mail" autocomplete="off">
-            </div>
-            <div class="form__item">
-                <label class="form__item-label">Your question</label>
-                <textarea class="form__item-textarea" id="question" name="" id="" cols="30" rows="10" placeholder="Your question" autocomplete="off"></textarea>
-            </div>
-            <a href="#" class="form__send">
-                <button id="clean" class="btn form__send-btn gradient" type="submit">
-                    <p>Send message</p>
-                </button>
-            </a>
+    <div class="auction__progress">
+        <h2 class="auction__progress-text">About the work</h2>
+        <div class="auction__progress-bar"></div>
+    </div>
 
-            <div class="form__agree">
-                
-                <label class="form__agree-label">
-                    <input type="checkbox" class="form__agree-checkbox" id="checkbox" autocomplete="off">
-                    <span class="form__agree-checkstyle"></span>
-                    I agree with<a href="#">Privacy Policy</a>and<a href="#">Terms of use</a></label>
+    <div class="auction__blocks">
+        <div class="auction__blocks-description description">
+            <h2 class="description__title">100% of the proceeds of this sale are donated to LAM.</h2>
+            <h3 class="description__paragraph">
+                Multidisciplinary artist Judy Chicago helped pioneer the feminist art movement in the 1960s and ’70s; for decades, she has made work
+                that celebrates the multiplicity of female identity. Chicago’s practice spans painting, textile arts, sculpture, and installation and
+                has explored the intricacies of childbirth (as seen in her “Birth Project” series, 1980–85), the possibilities of minimalist
+                sculpture, and the relationship between landscape and the female body. Her most famous work, an installation called The Dinner Party
+                (1974–79), is an homage to 39 influential female figures from Eastern and Western mythology and civilization. Chicago studied at the
+                University of California, Los Angeles. She founded a groundbreaking and widely influential feminist art program while on staff at
+                California State University, Fresno. Her work has been exhibited in New York, London, Milan, Chicago, and San Francisco and belongs in
+                the collections of the British Museum, Moderna Museet, the Metropolitan Museum of Art, the Los Angeles County Museum of Art, the Tate,
+                the Art Institute of Chicago, and the National Gallery of Art in Washington, D.C. <br><br>
+                Applicable sales tax will apply to all works shipped to and within the US. Please note, your card will automatically be charged for
+                the Total Purchase Price, buyer’s premium, shipping, and any applicable sales tax, based on your registration address. For
+                transactions over $50,000, you will be given the option to pay via wire transfer.
+            </h3>
+            <button class="btn grey description__btn">
+                <span>Hide info</span>
+            </button>
+        </div>
+        <div class="auction__blocks-banner banner">
+            <div class="banner__info">
+                <svg class="banner__info-svg">
+                    <use href="#default-crown"/>
+                </svg>
+                <h2 class="banner__info-title">Liked the work?</h2>
+                <h3 class="banner__info-subtitle">Share with friends in social media</h3>
+                <div class="social banner__info-social">
+                    <a class="social__link" href="#">
+                        <svg class="social__link-svg">
+                            <use href="#default-instagram"/>
+                        </svg>
+                    </a>
+
+                    <a class="social__link" href="#">
+                        <svg class="social__link-svg">
+                            <use href="#default-twitter"/>
+                        </svg>
+                    </a>
+
+                    <a class="social__link" href="#">
+                        <svg class="social__link-svg">
+                            <use href="#default-telegram"/>
+                        </svg>
+                    </a>
+
+                    <a class="social__link" href="#">
+                        <svg class="social__link-svg">
+                            <use href="#default-pinterest"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
-        </form>
+
+            <div class="banner__arrow">
+                <picture><source srcset="images/auction/arrow.webp" type="image/webp"><img src="images/auction/arrow.png" alt="arrow" class="banner__arrow-img"></picture>
+            </div>
+
+            <div class="banner__sapphire">
+                <picture><source srcset="images/auction/sapphire.webp" type="image/webp"><img src="images/auction/sapphire.png" alt="sapphire" class="banner__sapphire-img"></picture>
+            </div>
+
+            <div class="banner__ruby">
+                <picture><source srcset="images/auction/ruby.webp" type="image/webp"><img src="images/auction/ruby.png" alt="ruby" class="banner__ruby-img"></picture>
+            </div>
+
+            <div class="banner__circle">
+                <picture><source srcset="images/auction/circle.webp" type="image/webp"><img src="images/auction/circle.png" alt="circle" class="banner__circle-img"></picture>
+            </div>
+        </div>
     </div>
 </section>
 
-      </div>
-    </main>
-    <footer class="footer">
+          </div>
+        </main></div>
+      
+      <footer class="footer">
   <div class="footer__container">
     <div class="footer__content">
       <div class="footer__links">
@@ -223,7 +294,7 @@
           <a class="casual__link" href="#">Terms of use</a>
         </div>
 
-        <div class="footer__links-social social">
+        <div class="social footer__links-social">
           <a class="social__link" href="#">
             <svg class="social__link-svg">
               <use href="#icon-instagram"/>
@@ -253,8 +324,8 @@
     </div>
   </div>
 </footer>
-
-    <svg style="width: 0; height: 0; position: absolute" xmlns="http://www.w3.org/2000/svg">
+ 
+      <svg style="width: 0; height: 0; position: absolute" xmlns="http://www.w3.org/2000/svg">
     <symbol id="icon-logo" viewBox="0 0 161 46" fill="none">
         <path d="M20.6831 11.6895C14.9244 13.6289 15.3855 20.984 15.4131 21.1289C14.2363 14.1456 14.1933 10.4364 18.5445 8.37226C21.7122 6.86949 24.7754 10.3114 20.6831 11.6895Z" fill="url(#paint0_linear_78_3746)"/>
         <path d="M10.0627 13.0171C10.6057 11.5915 11.5654 11.3017 12.4698 11.4625C13.5732 11.6586 13.798 12.9906 13.4602 14.0592C11.993 18.6999 13.993 22.9244 15.5204 24.6699C11.5378 23.4899 8.88263 16.1147 10.0627 13.0171Z" fill="url(#paint1_linear_78_3746)"/>
@@ -538,8 +609,7 @@
     </symbol>
 </svg>
 
-</div></body>
-<script src="js/app.min.js?_v=20240221093427"></script>
-<script src="js/oneArt.min.js?_v=20240221093427"></script>
-
+  </body>
+  <script src="js/auction.min.js?_v=20240221093427"></script>
+  <script src="js/app.min.js?_v=20240221093427"></script>
 </html>
