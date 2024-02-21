@@ -13,27 +13,33 @@
     }
 
     &__btn {
+        font-family: ProximaNova;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 21px;
+
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border-radius: 9px;
-        padding: 20px 20px 20px 32px;
+
         width: 100%;
-        font-family: "ProximaNova";
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 21px;
+        padding: 20px 20px 20px 32px;
+
+        cursor: pointer;
+
         color: $whiteTwo;
+        border-radius: 9px;
         background: $backgroundSecond;
         transition: all 0.5 ease-in-out;
-        cursor: pointer;
 
         &_p {
             display: none;
+
             margin: 0;
 
             &--active {
                 display: block;
+
                 pointer-events: none;
             }
         }
@@ -41,8 +47,10 @@
         &_after {
             width: 24px;
             height: 24px;
-            transition: transform 0.3s ease-in-out;
+
             pointer-events: none;
+
+            transition: transform 0.3s ease-in-out;
 
             svg {
                 width: 100%;
@@ -56,39 +64,46 @@
     }
 
     &__list {
+        font-family: ProximaNova;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 21px;
+
         position: absolute;
-        top: 115%;
         z-index: 15;
+        top: 115%;
+
         display: none;
         overflow: auto;
-        border: 1px solid #6d787f;
-        border-radius: 9px;
+
         width: 100%;
         max-height: 206px;
-        font-family: "ProximaNova";
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 21px;
-        color: $whiteTwo;
-        background: $backgroundSecond;
+
         cursor: pointer;
 
+        color: $whiteTwo;
+        border: 1px solid #6d787f;
+        border-radius: 9px;
+        background: $backgroundSecond;
+
         &::-webkit-scrollbar {
-            border-radius: 50%;
             width: 4px;
             height: 4px;
+
+            border-radius: 50%;
             background-color: #6d787f;
         }
 
         &::-webkit-scrollbar-thumb {
-            border-radius: 12px;
             width: 100%;
+
+            border-radius: 12px;
             background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
         }
 
         &-item {
-            padding: 15px 20px 15px 32px;
             width: 100%;
+            padding: 15px 20px 15px 32px;
 
             &::before {
                 display: none;

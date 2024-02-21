@@ -1,15 +1,18 @@
 .art-head {
     position: relative;
+
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+
     margin-top: 60px;
     gap: 18px;
 
     svg {
         position: absolute;
-        left: 240px;
         top: -13px;
+        left: 240px;
+
         width: 45px;
         height: 65px;
 
@@ -19,13 +22,13 @@
         }
 
         @include media-breakpoint-down(md) {
-            left: auto;
             right: 140px;
+            left: auto;
         }
 
         @include media-breakpoint-down(sm) {
-            right: 15px;
             top: -20px;
+            right: 15px;
         }
 
         @include media-breakpoint-down(xs) {
@@ -34,10 +37,11 @@
     }
 
     &__title {
-        font-family: "ProximaNova";
-        font-weight: 700;
+        font-family: ProximaNova;
         font-size: clamp(36px, 5vw, 64px);
+        font-weight: bold;
         line-height: 65px;
+
         color: $whiteTwo;
 
         @include media-breakpoint-down(lg) {
@@ -46,12 +50,15 @@
     }
 
     &__subtitle {
-        max-width: 400px;
-        font-family: "ProximaNova";
-        font-weight: 400;
+        font-family: ProximaNova;
         font-size: clamp(15px, 2.5vw, 16px);
+        font-weight: normal;
         line-height: 28px;
+
+        max-width: 400px;
+
         text-align: center;
+
         color: $whiteTwo;
 
         @include media-breakpoint-down(lg) {
