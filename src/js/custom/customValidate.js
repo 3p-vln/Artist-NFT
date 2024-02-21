@@ -12,7 +12,7 @@ export function validate() {
         .addField('#coment', [
             {
                 rule: 'required',
-                errorMessage: 'Enter your question',
+                errorMessage: 'Enter your coment',
             },
             {
                 rule: 'maxLength',
