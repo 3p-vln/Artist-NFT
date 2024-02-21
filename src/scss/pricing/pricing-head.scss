@@ -478,7 +478,7 @@
             }
 
             @include media-breakpoint-down(md) {
-                max-width: 320px;
+                max-width: 345px;
                 height: 650px;
                 border-radius: 12px;
                 margin-bottom: 0px;
@@ -503,6 +503,10 @@
                         color: rgb(29, 31, 33);
                     }
                 }
+            }
+
+            @include media-breakpoint-down(xxs) {
+                max-width: 310px;
             }
         }
     }
