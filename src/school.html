@@ -114,9 +114,11 @@
                         />
                         <img src="./images/school/artist/right-big-brilliant.png" alt="diamond" class="artist__decor-img artist__decor-img_third" />
 
-                        <img src="./images/school/artist/left-bot-brilliant-mobile.png" alt="" class="artist__decor-img artist__decor-img_mob-first">
-
-                        <!-- <img src="./images/school/artist/right-big-brilliant.png" alt="" class="artist__decor-img artist__decor-img_mob-second"> -->
+                        <img
+                            src="./images/school/artist/left-bot-brilliant-mobile.png"
+                            alt=""
+                            class="artist__decor-img artist__decor-img_mob-first"
+                        />
                         <h2 class="artist__title">Artist School Fees</h2>
                         <p class="artist__descr">Indulgence announcing uncommonly met she continuing two unpleasing terminated</p>
 
@@ -281,12 +283,64 @@
                             </div>
                         </div>
                     </section>
+
+                    <section class="register-form">
+                        <img src="./images/school/artist/left-brilliant.png" alt="" class="register-form__decor register-form__decor_first" />
+                        <img src="./images/school/artist/left-small-brilliant.png" alt="" class="register-form__decor register-form__decor_second" />
+                        <img src="./images/school/artist/right-small-brilliant.png" alt="" class="register-form__decor register-form__decor_third" />
+                        <img src="./images/school/artist/register-cube-bot.png" alt="" class="register-form__decor register-form__decor_fourth" />
+                        <h2 class="register-form__title">Register to be a designer</h2>
+                        <div class="register-form__info">
+                            <span class="register-form__info-text">5/10</span>
+                            <span class="register-form__info-text">already tooken!</span>
+                        </div>
+                        <form action="#" class="form register-form__form" id="register-form">
+                            <div class="form__item">
+                                <label for="" class="form__item-label">Name</label>
+                                <input type="text" class="form__item-input" placeholder="Your name" id="name" />
+                            </div>
+                            <div class="form__item">
+                                <label for="" class="form__item-label">Mail</label>
+                                <input type="email" class="form__item-input" placeholder="Your mail" id="email" />
+                            </div>
+                            <div class="form__item">
+                                <label class="form__item-label">Design preferences</label>
+                                <textarea
+                                    class="form__item-textarea"
+                                    id="question"
+                                    name=""
+                                    cols="30"
+                                    rows="10"
+                                    placeholder="Your question"
+                                    autocomplete="off"
+                                ></textarea>
+                            </div>
+                            <div class="form__item form__item_last">
+                                <label for="" class="form__item-label">Choose your plan</label>
+                                <div class="register-form__plans">
+                                    <button class="register-form__plans-button"><span>One week</span></button>
+                                    <button class="register-form__plans-button"><span>Individual</span></button>
+                                    <button class="register-form__plans-button tabs__button_last"><span>One month</span></button>
+                                    <div class="tabs__select"></div>
+                                </div>
+                            </div>
+                            <button class="form__button" type="submit">Sign up</button>
+                            <div class="form__agree">
+                                <!-- <input type="checkbox" class="form__agree-checkbox" id="checkbox" autocomplete="off"> -->
+                                <label class="form__agree-label">
+                                    <input type="checkbox" class="form__agree-checkbox" id="checkbox" autocomplete="off" />
+                                    <span class="form__agree-checkstyle"></span>
+                                    I agree with<a href="#">Privacy Policy</a>and<a href="#">Terms of use</a></label
+                                >
+                            </div>
+                        </form>
+                    </section>
                 </div>
             </main>
             @@include('html/modules/footer.html') @@include('html/modules/Sprite.html')
         </div>
     </body>
-    
+
     <script src="js/app.min.js"></script>
     <script src="js/school.min.js"></script>
 </html>

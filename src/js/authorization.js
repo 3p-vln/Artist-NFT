@@ -4,6 +4,7 @@ const validator = new JustValidate(document.querySelector('#auth-form', {
             color: '#1D1F21',
         },
 }));
+
 const form = document.getElementById('auth-form');
 const tabButtons = document.querySelectorAll('.tabs__button');
 const roles = document.querySelector('.roles');
@@ -91,5 +92,3 @@ validator
             errorMessage: 'incorrect password',
         },
     ]);
-
-  

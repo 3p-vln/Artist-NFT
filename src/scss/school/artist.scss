@@ -5,6 +5,10 @@
 
     color: $whiteTwo;
 
+    @include media-breakpoint-down(xs) {
+        padding-bottom: 105px;
+    }
+
     &__decor-text {
         font-size: 80px;
         font-weight: bold;
@@ -121,10 +125,9 @@
             display: none;
 
             @include media-breakpoint-down(xs) {
-                bottom: -5%;
-                left: -4%;
-
                 display: block;
+                left: -4%;
+                bottom: -5%;
             }
         }
     }
@@ -364,6 +367,7 @@
 
             display: flex;
             justify-content: flex-end;
+            position: relative;
         }
 
         &__choise-descr-box {

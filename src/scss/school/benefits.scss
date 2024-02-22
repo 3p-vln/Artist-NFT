@@ -79,7 +79,6 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 30px;
-
         padding: 0 17px 0 10px;
 
         @include media-breakpoint-down(lg) {
