@@ -1,8 +1,5 @@
 import $ from 'jquery';
-export function copytext(el) {
-  var $tmp = $('<textarea>');
-  $('body').append($tmp);
-  $tmp.val($(el).text()).select();
-  document.execCommand('copy');
-  $tmp.remove();
+import ClipboardJS from 'clipboard';
+export function copytext() {
+    var clipboard = new ClipboardJS('.copy-btn');
 }

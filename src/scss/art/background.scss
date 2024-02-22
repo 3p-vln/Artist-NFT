@@ -1,17 +1,18 @@
 .background {
     position: absolute;
     z-index: 1;
-    margin-top: 65px;
+
     width: 100%;
+    margin-top: 65px;
 
     &__make-art {
-        left: -40px;
         top: 95px;
+        left: -40px;
     }
 
     &__no-war {
-        right: -28px;
         top: 95px;
+        right: -28px;
     }
 
     &__blur {
@@ -21,22 +22,26 @@
 
     svg {
         position: absolute;
-        right: 24.5%;
         top: 194px;
+        right: 24.5%;
+
         width: 25px;
         height: 25px;
     }
 
     &__make-art,
     &__no-war {
-        position: absolute;
-        font-family: "ProximaNova";
-        font-weight: 700;
+        font-family: ProximaNova;
         font-size: 79px;
+        font-weight: bold;
+
+        position: absolute;
+
         letter-spacing: 1px;
-        -webkit-text-stroke: 1px $whiteTwo;
-        color: transparent;
+
         opacity: 0.2;
+        color: transparent;
+        -webkit-text-stroke: 1px $whiteTwo;
     }
 
     @include media-breakpoint-down(md) {

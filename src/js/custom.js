@@ -9,15 +9,18 @@ import { imgLoad } from './custom/imgLoad';
 import { selectLoad } from './custom/select';
 
 document.addEventListener('DOMContentLoaded', async () => {
-    imgLoad();
+    await imgLoad();
     async function snap() {
         const querySnapshot = await getDocs(collection(db, 'art'));
         querySnapshot.forEach(doc => {
             new artLoad(doc.data(), doc.id, '.custom-mesh');
         });
     }
-    snap();
+    await snap();
     focus('.custom-mesh');
     selectLoad();
     validate();
+
+    const loadingIsFinished = new Event('loadingIsFinished');
+    document.dispatchEvent(loadingIsFinished);
 });

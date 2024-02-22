@@ -5,11 +5,12 @@
 
 .authorization {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+
+    max-width: 410px;
     margin: 0 auto;
     padding: 186px 0 196px;
-    max-width: 410px;
 
     &_log {
         padding-top: 144px;
@@ -21,12 +22,15 @@
     }
 
     &__title {
-        margin-bottom: 13px;
-        font-family: 'ProximaNova';
-        font-weight: 700;
+        font-family: ProximaNova;
         font-size: 36px;
+        font-weight: bold;
         line-height: 137%;
+
+        margin-bottom: 13px;
+
         text-align: center;
+
         color: $whiteTwo;
 
         @include media-breakpoint-down(xs) {
@@ -36,9 +40,11 @@
 
     &__tabs {
         display: flex;
+
         margin-bottom: 23px;
-        border-radius: 12px;
         padding: 7px 8px;
+
+        border-radius: 12px;
         background: $backgroundSecond;
 
         @include media-breakpoint-down(xs) {
@@ -53,46 +59,54 @@
         z-index: 1;
 
         &__button {
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 24px;
+
             display: flex;
             align-items: center;
             justify-content: center;
-            outline: none;
-            border-radius: 12px;
-            padding: 14px 19px;
+
             width: 129px;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 24px;
+            padding: 14px 19px;
+
             color: $whiteColor;
+            border-radius: 12px;
+            outline: none;
             background: none;
             transition: background 1000ms linear, color 300ms linear;
 
             &_active {
+                font-size: 18px;
+                font-weight: normal;
+
                 position: relative;
                 z-index: 2;
-                font-weight: 400;
-                font-size: 18px;
+
                 color: $background;
                 transition: transform 300ms linear;
             }
 
             @include media-breakpoint-down(xs) {
-                width: 164px;
                 font-size: 14px;
+
+                width: 164px;
             }
         }
 
         &__select {
             position: absolute;
-            left: 0;
-            top: 0;
             z-index: -1;
-            border-radius: inherit;
+            top: 0;
+            left: 0;
+
             width: 50%;
             height: 100%;
+
+            border-radius: inherit;
             background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
-            transform: translateX(100%);
             transition: 0.4s transform cubic-bezier(0.28, 1.33, 0.64, 1);
+            transform: translateX(100%);
 
             &_active {
                 transform: translateX(0%);
@@ -103,36 +117,42 @@
     .form {
         &__item {
             position: relative;
+
             display: flex;
-            flex-direction: column;
             align-items: flex-start;
+            flex-direction: column;
+
             margin-bottom: 17px;
             gap: 6px;
         }
 
         &__item-label {
-            font-family: 'ProximaNova';
-            font-weight: 400;
+            font-family: ProximaNova;
             font-size: 14px;
+            font-weight: normal;
             line-height: 150%;
+
             color: $gray6Color;
         }
 
         &__item-input {
-            border-radius: 9px;
-            padding: 21px 32px 22px;
-            width: 410px;
             font-size: 16px;
+
+            width: 410px;
+            padding: 21px 32px 22px;
+
             color: $whiteColor;
+            border-radius: 9px;
             background: $backgroundSecond;
 
             &::placeholder {
-                font-family: 'ProximaNova';
-                font-weight: 400;
+                font-family: ProximaNova;
                 font-size: 16px;
+                font-weight: normal;
                 line-height: 131%;
-                color: $gray6Color;
+
                 opacity: 0.6;
+                color: $gray6Color;
             }
 
             @include media-breakpoint-down(xs) {
@@ -141,43 +161,52 @@
         }
 
         .just-validate-error-label {
-            position: absolute;
-            right: 50%;
-            top: -10px;
-            z-index: 3;
-            border-radius: 7px;
-            padding: 8px;
-            font-weight: 700;
             font-size: 14px;
-            color: #1d1f21 !important;
-            background: $rainbowBtnGradient;
-            transform: translateX(50%);
+            font-weight: bold;
+
+            position: absolute;
+            z-index: 3;
+            top: -10px;
+            right: 50%;
+
+            padding: 8px;
+
             text-wrap: nowrap;
 
+            color: #1d1f21 !important;
+            border-radius: 7px;
+            background: $rainbowBtnGradient;
+            transform: translateX(50%);
+
             &::after {
-                content: '';
                 position: absolute;
-                left: 50%;
-                top: 28px;
                 z-index: 3;
-                clip-path: polygon(0 0, 53% 100%, 100% 0);
+                top: 28px;
+                left: 50%;
+
                 width: 10px;
                 height: 10px;
+
+                content: '';
+
                 background: $rainbowBtnGradient;
                 transform: translateX(-50%);
+                clip-path: polygon(0 0, 53% 100%, 100% 0);
             }
         }
 
         &__button {
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 147%;
+
+            width: 410px;
             margin-top: 5px;
             margin-bottom: 15px;
-            border-radius: 16px;
             padding: 18px 0 19px;
-            width: 410px;
-            font-weight: 700;
-            font-size: 18px;
-            line-height: 147%;
+
             color: $background;
+            border-radius: 16px;
             background: $rainbowBtnGradient;
 
             @include media-breakpoint-down(xs) {
@@ -198,44 +227,54 @@
     }
 
     &__text {
-        font-weight: 400;
         font-size: 14px;
+        font-weight: normal;
         line-height: 150%;
+
         color: $gray6Color;
     }
 
     &__link {
-        font-weight: 600;
         font-size: 14px;
+        font-weight: 600;
         line-height: 150%;
+
         text-decoration: underline;
+
         color: $blueAuthColor;
     }
 
     .roles {
         width: 410px;
         max-height: 0;
+
         opacity: 0;
         transition: max-height 300ms linear, opacity 200ms linear;
 
         &_visible {
             display: flex;
             justify-content: flex-start;
+
             margin-bottom: 29px;
+
             opacity: 1;
         }
 
         &__text {
-            margin-bottom: 15px;
-            font-weight: 400;
             font-size: 14px;
+            font-weight: normal;
             line-height: 150%;
+
+            margin-bottom: 15px;
+
             text-align: left;
+
             color: $gray6Color;
         }
 
         &__box {
             display: flex;
+
             color: $whiteColor;
             gap: 7px;
         }
@@ -247,13 +286,15 @@
         }
 
         &__check-label {
-            border: 1px solid #525960;
-            border-radius: 38px;
             width: 22px;
             height: 22px;
+
+            cursor: pointer;
+
+            border: 1px solid #525960;
+            border-radius: 38px;
             background: $backgroundSecond;
             transition: opacity 300ms linear;
-            cursor: pointer;
 
             &::before {
                 &::before {
@@ -264,36 +305,39 @@
                     position: relative;
 
                     &::before {
-                        content: '';
                         position: absolute;
-                        left: 50%;
                         top: 50%;
-                        border-radius: 5px;
+                        left: 50%;
+
                         width: 14px;
                         height: 14px;
-                        background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
+
+                        content: '';
+
                         opacity: 1;
+                        border-radius: 5px;
+                        background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
                         transform: translate(-50%, -50%);
                     }
                 }
             }
 
             &__check-text {
-                font-family: 'ProximaNova';
-                font-weight: 600;
+                font-family: ProximaNova;
                 font-size: 14px;
+                font-weight: 600;
                 line-height: 171%;
             }
         }
 
         @include media-breakpoint-down(xs) {
-            margin: 0 auto 29px;
             width: 345px;
+            margin: 0 auto 29px;
         }
 
         @include media-breakpoint-down(xs) {
-            margin: 0 auto 29px;
             width: 345px;
+            margin: 0 auto 29px;
         }
     }
 

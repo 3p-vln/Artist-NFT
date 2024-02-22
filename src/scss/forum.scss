@@ -1,0 +1,16 @@
+@import 'style';
+@import 'forum/asking';
+@import 'forum/stat';
+
+.page {
+    position: relative;
+
+    margin-top: 63px;
+
+    background: $background;
+
+    &__container {
+        position: relative;
+        z-index: 2;
+    }
+}

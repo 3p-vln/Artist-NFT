@@ -1,0 +1,54 @@
+.chat {
+    border-radius: 32px 32px 0px 0px;
+    background: rgb(33, 36, 38);
+    color: $whiteTwo;
+    padding: 22px 27px;
+    height: 100vh;
+    overflow: hidden;
+
+    &__list {
+        margin-top: 12px;
+        .chats {
+            margin-top: 41px;
+            &__item {
+                display: flex;
+                align-items: center;
+                padding: 14px 18px 14px 12px;
+                margin-bottom: 7px;
+                border-radius: 14px;
+                background: rgb(29, 31, 33);
+                max-width: 287px;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 15px;
+                position: relative;
+                gap: 13px;
+            }
+        }
+    }
+
+    &__header {
+        letter-spacing: -0.4px;
+    }
+
+    &__name {
+        font-size: 14px;
+        letter-spacing: -0.7px;
+    }
+
+    &__time {
+        position: absolute;
+        right: 17px;
+        top: 15px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    &__massage {
+        letter-spacing: 0.9px;
+    }
+}
