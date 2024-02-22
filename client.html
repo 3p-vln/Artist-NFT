@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/custom.min.css?_v=20240222180618">
-  <title>Custom by your own</title>
+  <link rel="stylesheet" href="css/client.min.css?_v=20240222180618">
+  <title>Client</title>
 </head>
 
   <body>
@@ -19,7 +19,7 @@
 </div>
 
     <div class="wrapper">
-      <header class="header">
+        <header class="header">
     <div class="burger__backdrop"></div>
 
     <div class="header__container">
@@ -30,344 +30,144 @@
         </a>
 
         <nav class="header__menu menu">
-            <ul class="menu__list">
-                <li class="menu__item"><a href="index.html">Main page</a></li>
-
-                <li class="menu__item">
-                    <a href="nft.html?page=1">
-                        <span class="menu__item-lock">
-                            <svg class="menu__item-lock-svg">
-                                <use href="#header-lock"></use>
-                            </svg>
-                        </span>
-                        NFT
-                    </a>
-                </li>
-
-                <li class="menu__item"><a href="art.html">Pictures</a></li>
-
-                <li class="menu__item"><a href="auction.html">Auction</a></li>
-
-                <li class="menu__item"><a href="pricing.html">Pricing</a></li>
-
-                <li class="menu__item"><a href="custom.html">Contacts</a></li>
-
-                <li class="menu__item"><a href="school.html">Blog</a></li>
-            </ul>
-
-            <div class="menu__buttons">
-                <div class="select__content header__dropdown">
-                    <a class="select__btn">
-                        <p class="select__btn_p select__btn_p--active">ENG</p>
-                        <div class="select__btn_after">
-                            <svg>
-                                <use href="#icon-arrow"></use>
-                            </svg>
-                        </div>
-                    </a>
-                    <ul class="select__list">
-                        <li class="select__list-item">ENG</li>
-                        <li class="select__list-item">UA</li>
-                        <li class="select__list-item">FR</li>
-                        <li class="select__list-item">POL</li>
-                        <li class="select__list-item">SPA</li>
-                    </ul>
-                    <input type="text" name="select-category" value="" class="select__input-hidden">
-                </div>
-
-                <a href="authorization.html" class="authorization header__authorization">
-                    <button class="btn authorization__btn grey">
-                        <span>Authorization</span>
+            <div class="tabs">
+                <div class="tabs__nav">
+                    <button class="tabs__nav-btn" type="button" data-tab="#messages">
+                        <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none">
+                            <defs>
+                                <clipPath id="clip26_3127">
+                                    <rect id="Hicon / Bold / Message 18" width="20.000000" height="20.000000" fill="white" fill-opacity="0"/>
+                                </clipPath>
+                                <linearGradient id="paint_linear_26_3125_0" x1="1.997289" y1="8.437826" x2="15.316255" y2="19.114910" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#68C9FF"/>
+                                    <stop offset="0.994746" stop-color="#D1B5FF"/>
+                                </linearGradient>
+                            </defs>
+                            <g clip-path="url(#clip26_3127)">
+                                <path id="Vector" d="M5.92627 5C4.86523 5 4.07568 5 3.45166 5.05469C3.51855 4.61816 3.62354 4.26074 3.7876 3.93848C4.18701 3.15625 4.82471 2.51953 5.6084 2.12012C6.5 1.66699 7.6665 1.66699 10 1.66699L11.667 1.66699C14.0005 1.66699 15.167 1.66699 16.0586 2.12012C16.8423 2.51953 17.48 3.15625 17.8794 3.93848C18.3335 4.8291 18.3335 5.99414 18.3335 8.32422L18.3335 11.8428C18.3335 13.5762 16.9263 14.9814 15.1904 14.9814L14.689 14.9814C14.0396 14.9814 13.5957 15.6367 13.8369 16.2383C14.1772 17.0889 13.1973 17.8564 12.4517 17.3252L11.3086 16.5098C12.4614 15.9199 13.2646 14.7422 13.3296 13.3672C13.3335 13.2783 13.3335 13.1748 13.3335 12.9668L13.3335 10.957C13.3335 8.87207 13.3335 7.8291 12.9297 7.0332C12.5747 6.33301 12.0083 5.7627 11.311 5.40625C10.519 5 9.48193 5 7.40771 5L5.92627 5ZM12.5 11.0898C12.5 9.25 12.5 8.33008 12.147 7.62695C11.8364 7.00879 11.3403 6.50684 10.7305 6.19141C10.0376 5.83398 9.12988 5.83398 7.31494 5.83398L6.01855 5.83398C4.20361 5.83398 3.29639 5.83398 2.60303 6.19141C1.99316 6.50684 1.49756 7.00879 1.18652 7.62695C0.833496 8.33008 0.833496 9.25 0.833496 11.0898L0.833496 13.8672C0.833496 15.2363 1.92773 16.3457 3.27832 16.3457L3.66797 16.3457C4.17285 16.3457 4.51855 16.8623 4.33105 17.3379C4.06592 18.0088 4.82812 18.6152 5.4082 18.1953L7.10059 16.9697L7.13477 16.9453C7.67529 16.5586 8.31982 16.3496 8.98096 16.3457L9.03271 16.3457C9.23486 16.3457 9.33594 16.3457 9.4126 16.3418C11.082 16.2617 12.4175 14.9082 12.4966 13.2158C12.5 13.1387 12.5 13.0459 12.5 12.8623L12.5 11.0898ZM5 11.667C5 12.127 4.62695 12.5 4.16699 12.5C3.70654 12.5 3.3335 12.127 3.3335 11.667C3.3335 11.207 3.70654 10.834 4.16699 10.834C4.62695 10.834 5 11.207 5 11.667ZM6.66699 12.5C7.12695 12.5 7.5 12.127 7.5 11.667C7.5 11.207 7.12695 10.834 6.66699 10.834C6.20654 10.834 5.8335 11.207 5.8335 11.667C5.8335 12.127 6.20654 12.5 6.66699 12.5ZM10 11.667C10 12.127 9.62695 12.5 9.16699 12.5C8.70654 12.5 8.3335 12.127 8.3335 11.667C8.3335 11.207 8.70654 10.834 9.16699 10.834C9.62695 10.834 10 11.207 10 11.667Z" fill="url(#paint_linear_26_3125_0)" fill-opacity="1.000000" fill-rule="evenodd"/>
+                            </g>
+                        </svg>
+                        <p>Messages</p>
                     </button>
-                </a>
+                    <button class="tabs__nav-btn" type="button" data-tab="#orders">
+                        <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none">
+                            <defs>
+                                <clipPath id="clip26_3175">
+                                    <rect id="Hicon / Bold / Bag 7" width="20.000000" height="20.000000" fill="white" fill-opacity="0"/>
+                                </clipPath>
+                                <linearGradient id="paint_linear_26_3173_0" x1="2.823991" y1="8.320638" x2="15.422565" y2="19.798500" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#68C9FF"/>
+                                    <stop offset="0.994746" stop-color="#D1B5FF"/>
+                                </linearGradient>
+                            </defs>
+                            <g clip-path="url(#clip26_3175)">
+                                <path id="Vector" d="M10 1.04199C7.97461 1.04199 6.30469 2.5625 6.06982 4.52441C5.7417 4.58789 5.43945 4.67871 5.14941 4.81152C4.31152 5.19531 3.60254 5.8125 3.10645 6.58984C2.80664 7.06055 2.62842 7.58594 2.48877 8.22852C2.35156 8.85742 2.24268 9.64062 2.10449 10.6387L2.09668 10.6934C1.91846 11.9766 1.7793 12.9805 1.73682 13.7881C1.69385 14.6094 1.74561 15.293 1.99268 15.9209C2.396 16.9463 3.14111 17.8018 4.10156 18.3428C4.68945 18.6738 5.35986 18.8193 6.17822 18.8896C6.98438 18.959 7.99756 18.959 9.29297 18.959L10.7065 18.959C12.0024 18.959 13.0151 18.959 13.8213 18.8896C14.6401 18.8193 15.3101 18.6738 15.8979 18.3428C16.8589 17.8018 17.6035 16.9463 18.0073 15.9209C18.2539 15.293 18.3062 14.6094 18.2632 13.7881C18.2207 12.9805 18.0815 11.9766 17.9028 10.6934L17.8955 10.6387C17.7568 9.64062 17.6479 8.85742 17.5112 8.22852C17.3711 7.58594 17.1929 7.06055 16.8931 6.58984C16.3975 5.8125 15.688 5.19531 14.8501 4.81152C14.5601 4.67871 14.2578 4.58789 13.9297 4.52441C13.6948 2.5625 12.0249 1.04199 10 1.04199ZM9.28516 4.375C8.53369 4.375 7.90088 4.375 7.35889 4.39648C7.63379 3.19141 8.71191 2.29199 10 2.29199C11.2881 2.29199 12.3662 3.19141 12.6406 4.39648C12.0986 4.375 11.4663 4.375 10.7144 4.375L9.28516 4.375ZM6.6665 6.875C6.32129 6.875 6.0415 7.15527 6.0415 7.5C6.0415 7.8457 6.32129 8.125 6.6665 8.125L13.333 8.125C13.6782 8.125 13.9585 7.8457 13.9585 7.5C13.9585 7.15527 13.6782 6.875 13.333 6.875L6.6665 6.875Z" fill="url(#paint_linear_26_3173_0)" fill-opacity="1.000000" fill-rule="evenodd"/>
+                            </g>
+                        </svg>
+                        <p>Orders</p>
+                    </button>
+                </div>
+            </div>
+            <div class="menu__end">
+                <button class="menu__logout">
+                    <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none">
+                        <defs/>
+                        <rect id="lucide:log-out" width="20.000000" height="20.000000" fill="#FFFFFF" fill-opacity="0"/>
+                        <path id="Vector" d="M7.5 17.5L4.1665 17.5C3.72461 17.5 3.30078 17.3242 2.98828 17.0117C2.67578 16.6992 2.5 16.2754 2.5 15.833L2.5 4.16699C2.5 3.72461 2.67578 3.30078 2.98828 2.98828C3.30078 2.67578 3.72461 2.5 4.1665 2.5L7.5 2.5" stroke="#525960" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+                        <path id="Vector" d="M13.3335 14.166L17.5 10L13.3335 5.83301" stroke="#525960" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+                        <path id="Vector" d="M17.5 10L7.5 10" stroke="#525960" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+                    </svg>
+                    <p>Log out</p>
+                </button>
+                <p class="menu__info">All rights reserved © 2022</p>
             </div>
         </nav>
 
         <div class="header__btn-wrapper">
-            <div class="select__content header__dropdown">
-                <a class="select__btn">
-                    <p class="select__btn_p select__btn_p--active">ENG</p>
-                    <div class="select__btn_after">
-                        <svg>
-                            <use href="#icon-arrow"></use>
-                        </svg>
-                    </div>
-                </a>
-                <ul class="select__list">
-                    <li class="select__list-item">ENG</li>
-                    <li class="select__list-item">UA</li>
-                    <li class="select__list-item">FR</li>
-                    <li class="select__list-item">POL</li>
-                    <li class="select__list-item">SPA</li>
-                </ul>
-                <input type="text" name="select-category" value="" class="select__input-hidden">
-            </div>
-
-            <a href="authorization.html" class="authorization header__authorization">
-                <button class="btn authorization__btn grey">
-                    <span>Authorization</span>
-                </button>
-            </a>
-
-            <a href="pricing.html" class="header__premium premium">
-                <button class="premium__btn">
-                    <span>Premium access</span>
-                    <svg class="premium__btn-icon">
-                        <use href="#header-crown"></use>
-                    </svg>
-                </button>
-            </a>
-
             <button class="header__burger">
-                <span class="header__burger-span-top"></span>
-                <span class="header__burger-span-middle"></span>
-                <span class="header__burger-span-bottom"></span>
+                <svg width="15.500000" height="13.500000" viewBox="0 0 15.5 13.5" fill="none">
+                    <defs>
+                        <linearGradient id="paint_linear_26_350_0" x1="1.681034" y1="5.624998" x2="12.336205" y2="13.312500" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#68C9FF"/>
+                            <stop offset="0.994746" stop-color="#D1B5FF"/>
+                        </linearGradient>
+                    </defs>
+                    <path id="Vector" d="M4.75 12.75L14.75 12.75M8.75 0.75L14.75 0.75M0.75 6.75L14.75 6.75" stroke="url(#paint_linear_26_350_0)" stroke-opacity="1.000000" stroke-width="1.500000"/>
+                </svg>
             </button>
         </div>
     </div>
 </header>
 
       <main class="page">
-        <div class="background">
-  <p class="background__custom">CUTOM BY YOUR OWN</p>
-  <svg>
-    <use href="#elipse"></use>
-  </svg>
-
-  <p class="background__unique">UNIQUE CLOTHES</p>
-  <img src="images/custom-by-your-own/blurs/blur.png" class="background__blur">
-  <img src="images/custom-by-your-own/blurs/blur-mobile.png" class="background__blur_mob">
-</div>
-
         <div class="page__container"> 
-            <div class="are-you-ready">
-  <div class="are-you-ready__info">
-    <h1 class="are-you-ready__title">Are you ready to get custom clothes?</h1>
-    <p class="are-you-ready__about">
-      Indulgence announcing uncommonly met she continuing two unpleasing
-      terminated
-    </p>
-    <div class="are-you-ready__btn">
-      <a href="#" class="btn gradient">
-        <svg>
-          <use href="#bag"></use>
-        </svg>
-        <span>Get custom now</span>
-      </a>
+            <div class="tabs__item chat" id="messages">
+    <div class="chat__content">
+        <div class="chat__list">
+            <h2 class="chat__header">My chat list</h2>
+            <ul class="chats">
+                <li class="chats__item">
+                    <div class="chat__img">
+                        <picture><source srcset="images/for-client/chat/ivan-img.webp" type="image/webp"><img src="images/for-client/chat/ivan-img.png"></picture>
+                    </div>
+                    <div class="chat__info">
+                        <p class="chat__name">Ivan Ivanov</p>
+                        <p class="chat__massage">Message that have been writed...</p>
+                    </div>
+                    <p class="chat__time">10 min ago</p>
+                </li>
+                <li class="chats__item">
+                    <div class="chat__img">
+                        <picture><source srcset="images/for-client/chat/ivan-img.webp" type="image/webp"><img src="images/for-client/chat/ivan-img.png"></picture>
+                    </div>
+                    <div class="chat__info">
+                        <p class="chat__name">Ivan Ivanov</p>
+                        <p class="chat__massage">Message that have been writed...</p>
+                    </div>
+                    <p class="chat__time">10 min ago</p>
+                </li>
+                <li class="chats__item">
+                    <div class="chat__img">
+                        <picture><source srcset="images/for-client/chat/ivan-img.webp" type="image/webp"><img src="images/for-client/chat/ivan-img.png"></picture>
+                    </div>
+                    <div class="chat__info">
+                        <p class="chat__name">Ivan Ivanov</p>
+                        <p class="chat__massage">Message that have been writed...</p>
+                    </div>
+                    <p class="chat__time">10 min ago</p>
+                </li>
+                <li class="chats__item">
+                    <div class="chat__img">
+                        <picture><source srcset="images/for-client/chat/ivan-img.webp" type="image/webp"><img src="images/for-client/chat/ivan-img.png"></picture>
+                    </div>
+                    <div class="chat__info">
+                        <p class="chat__name">Ivan Ivanov</p>
+                        <p class="chat__massage">Message that have been writed...</p>
+                    </div>
+                    <p class="chat__time">10 min ago</p>
+                </li>
+                <li class="chats__item">
+                    <div class="chat__img">
+                        <picture><source srcset="images/for-client/chat/ivan-img.webp" type="image/webp"><img src="images/for-client/chat/ivan-img.png"></picture>
+                    </div>
+                    <div class="chat__info">
+                        <p class="chat__name">Ivan Ivanov</p>
+                        <p class="chat__massage">Message that have been writed...</p>
+                    </div>
+                    <p class="chat__time">10 min ago</p>
+                </li>
+            </ul>
+        </div>
+        <div class="chat__one"></div>
     </div>
-  </div>
-
-  <div class="are-you-ready__picture">
-    <div class="are-you-ready__bg">
-      <picture><source srcset="images/custom-by-your-own/img-bg.webp" type="image/webp"><img src="images/custom-by-your-own/img-bg.png"></picture>
-    </div>
-
-    <div class="are-you-ready__img">
-      <picture>
-        <source id="clother-webp" srcset="" type="image/webp">
-        <img id="clother-img" src="" alt="ctother" itype="image/jpg">
-      </picture>
-      
-    </div>
-  </div>
 </div>
 
-            <div class="custom-mesh">
-            </div>
-            <section id="custom" class="custom-form">
-    <div class="custom-form__background">
-        <picture>
-            <source srcset="images/main/contact/sapphire-first-mobile.png" media="(max-width:576px)">
-            <img src="images/main/contact/sapphire-first.png" alt="" class="custom-form__background_sapphire-first">
-        </picture>
-        <picture>
-            <source srcset="images/main/contact/sapphire-second-mobile.png" media="(max-width:576px)">
-            <img src="images/main/contact/sapphire-second.png" alt="" class="custom-form__background_sapphire-second">
-        </picture>
-        <img src="images/main/contact/sapphire-third.png" alt="" class="custom-form__background_sapphire-third">
-        <picture><source srcset="images/main/contact/cube.webp" type="image/webp"><img src="images/main/contact/cube.png" alt="" class="custom-form__background_cube"></picture>
-    </div>
-
-    <div class="custom-form__content">
-        <h3 class="custom-form__subtitle">CUSTOM BY YOUR OWN</h3>
-        <h2 class="custom-form__title">Want to get your own?</h2>
-        <form class="custom-form__form form" id="form" autocomplete="off">
-            <div class="form__item">
-                <label class="form__item-label">Type of item</label>
-                <div class="select__content">
-                    <a class="select__btn">
-                        <p class="select__btn_p select__btn_p--active">T-SHIRT</p>
-                        <div class="select__btn_after">
-                            <svg>
-                                <use href="#form-arr"></use>
-                            </svg>
-                        </div>
-                    </a>
-                    <ul class="select__list" id="clothers">
-                        <li class="select__list-item" id="hoodie"></li>
-                        <li class="select__list-item" id="shitr"></li>
-                        <li class="select__list-item" id="sweater"></li>
-                        <li class="select__list-item" id="t-shitr"></li>
-                    </ul>
-                    <input type="text" name="select-category" value="" class="select__input-hidden">
-                </div>
-            </div>
-            <div class="form__item">
-                <label class="form__item-label">Color</label>
-                <div class="radio">
-                    <label class="radio__label">
-                        <input type="radio" class="read" name="color">
-                        <span class="custom-radio custom-radio_red"></span>
-                    </label>
-                    <label class="radio__label">
-                        <input type="radio" class="orange" name="color">
-                        <span class="custom-radio custom-radio_orange"></span>
-                    </label>
-                    <label class="radio__label">
-                        <input type="radio" class="yelow" name="color">
-                        <span class="custom-radio custom-radio_yelow"></span>
-                    </label>
-                    <label class="radio__label">
-                        <input type="radio" class="green" name="color">
-                        <span class="custom-radio custom-radio_green"></span>
-                    </label>
-                    <label class="radio__label">
-                        <input type="radio" class="aqua" name="color">
-                        <span class="custom-radio custom-radio_aqua"></span>
-                    </label>
-                    <label class="radio__label">
-                        <input type="radio" class="blue-light" name="color">
-                        <span class="custom-radio custom-radio_blue-light"></span>
-                    </label>
-                    <label class="radio__label">
-                        <input type="radio" class="blue" name="color">
-                        <span class="custom-radio custom-radio_blue"></span>
-                    </label>
-                    <label class="radio__label">
-                        <input type="radio" class="purple" name="color">
-                        <span class="custom-radio custom-radio_purple"></span>
-                    </label>
-                    <label class="radio__label">
-                        <input type="radio" class="purple-light" name="color">
-                        <span class="custom-radio custom-radio_purple-light"></span>
-                    </label>
-                    <label class="radio__label">
-                        <input type="radio" class="pink" name="color">
-                        <span class="custom-radio custom-radio_pink"></span>
-                    </label>
-                    <label class="radio__label">
-                        <input type="radio" class="chery" name="color">
-                        <span class="custom-radio custom-radio_chery"></span>
-                    </label>
-                    <label class="radio__label">
-                        <input type="radio" class="white" name="color">
-                        <span class="custom-radio custom-radio_white"></span>
-                    </label>
-                    <label class="radio__label">
-                        <input type="radio" class="gray" name="color">
-                        <span class="custom-radio custom-radio_gray"></span>
-                    </label>
-                    <label class="radio__label">
-                        <input type="radio" class="brown" name="color">
-                        <span class="custom-radio custom-radio_brown"></span>
-                    </label>
-                    <label class="radio__label">
-                        <input type="radio" class="black" name="color">
-                        <span class="custom-radio custom-radio_black"></span>
-                    </label>
-                </div>
-            </div>
-            <div class="form__item">
-                <label class="form__item-label">Size</label>
-                <div class="select__content">
-                    <a class="select__btn">
-                        <p class="select__btn_p select__btn_p--active">XL (99-99-99)</p>
-                        <div class="select__btn_after">
-                            <svg>
-                                <use href="#form-arr"></use>
-                            </svg>
-                        </div>
-                    </a>
-                    <ul class="select__list" id="size">
-                        <li class="select__list-item" id="xs"></li>
-                        <li class="select__list-item" id="s"></li>
-                        <li class="select__list-item" id="m"></li>
-                        <li class="select__list-item" id="l"></li>
-                        <li class="select__list-item" id="xl"></li>
-                        <li class="select__list-item" id="xxl"></li>
-                        <li class="select__list-item" id="xxxl"></li>
-                    </ul>
-                    <input type="text" name="select-category" value="" class="select__input-hidden">
-                </div>
-            </div>
-            <div class="form__item">
-                <label class="form__item-label">Your comment</label>
-                <textarea class="form__item-textarea" id="coment" name="" id="" cols="30" rows="10" placeholder="Comment" autocomplete="off"></textarea>
-            </div>
-            <a href="#" class="form__send">
-                <button class="btn gradient form__send-btn" type="submit">
-                    <p>Send message</p>
-                </button>
-            </a>
-            <div class="form__agree">
-                <label class="form__agree-label">
-                    <input type="checkbox" class="form__agree-checkbox" id="checkbox" autocomplete="off">
-                    <span class="form__agree-checkstyle"></span>
-                    I agree with<a href="#">Privacy Policy</a>and<a href="#">Terms of use</a>
-                </label>
-            </div>
-        </form>
-    </div>
-</section>
+            <div class="tabs__item orders" id="orders">
+    <div class="orders__content">orders</div>
+</div>
 
         </div>
       </main>
-      <footer class="footer">
-  <div class="footer__container">
-    <div class="footer__content">
-      <div class="footer__links">
-        <div class="casual footer__links-casual">
-          <a class="casual__link-logo" href="#">
-            <svg class="casual__link-logo-svg">
-              <use href="#icon-logo"/>
-            </svg>
-          </a>
-
-          <a class="casual__link" href="#">Privacy policy</a>
-          <a class="casual__link" href="#">Terms of use</a>
-        </div>
-
-        <div class="footer__links-social social">
-          <a class="social__link" href="#">
-            <svg class="social__link-svg">
-              <use href="#icon-instagram"/>
-            </svg>
-          </a>
-
-          <a class="social__link" href="#">
-            <svg class="social__link-svg">
-              <use href="#icon-twitter"/>
-            </svg>
-          </a>
-
-          <a class="social__link" href="#">
-            <svg class="social__link-svg">
-              <use href="#icon-telegram"/>
-            </svg>
-          </a>
-
-          <a class="social__link" href="#">
-            <svg class="social__link-svg">
-              <use href="#icon-pinterest"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-      <span class="footer__reserved">All rights reserved © 2022</span>
-    </div>
-  </div>
-</footer>
- 
       <svg style="width: 0; height: 0; position: absolute" xmlns="http://www.w3.org/2000/svg">
     <symbol id="icon-logo" viewBox="0 0 161 46" fill="none">
         <path d="M20.6831 11.6895C14.9244 13.6289 15.3855 20.984 15.4131 21.1289C14.2363 14.1456 14.1933 10.4364 18.5445 8.37226C21.7122 6.86949 24.7754 10.3114 20.6831 11.6895Z" fill="url(#paint0_linear_78_3746)"/>
@@ -700,5 +500,5 @@
 
   </div></body>
   <script src="js/app.min.js?_v=20240222180618"></script>
-  <script src="js/custom.min.js?_v=20240222180618"></script>
+  <script src="js/client.min.js?_v=20240222180618"></script>
 </html>

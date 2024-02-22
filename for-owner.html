@@ -1,374 +1,180 @@
 <!doctype html>
-<html lang="end">
-  <head>
+<html lang="eng">
+<head>
   <meta charset="UTF-8">
   <meta name="description" content="Put your description here.">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/custom.min.css?_v=20240222180618">
-  <title>Custom by your own</title>
+  <link rel="stylesheet" href="css/for-owner.min.css?_v=20240222180618">
+  <title>For owner</title>
 </head>
 
-  <body>
-    <div class="preloader visible">
+
+<body>
+  <div class="preloader visible">
     <div class="preloader__row">
         <div class="preloader__item"></div>
         <div class="preloader__item"></div>
     </div>
 </div>
 
-    <div class="wrapper">
-      <header class="header">
-    <div class="burger__backdrop"></div>
-
-    <div class="header__container">
-        <a class="header__logo" href="index.html">
-            <svg class="header__logo-svg">
-                <use href="#icon-logo"/>
-            </svg>
+  <div class="for-owner wrapper">
+    <header class="for-owner__header header">
+      <div class="page__container for-owner__container">
+        <a href="index.html" class="header__logo logo">
+          <svg class="header__logo-svg">
+            <use href="#icon-logo"></use>
+          </svg>
         </a>
-
-        <nav class="header__menu menu">
-            <ul class="menu__list">
-                <li class="menu__item"><a href="index.html">Main page</a></li>
-
-                <li class="menu__item">
-                    <a href="nft.html?page=1">
-                        <span class="menu__item-lock">
-                            <svg class="menu__item-lock-svg">
-                                <use href="#header-lock"></use>
-                            </svg>
-                        </span>
-                        NFT
-                    </a>
-                </li>
-
-                <li class="menu__item"><a href="art.html">Pictures</a></li>
-
-                <li class="menu__item"><a href="auction.html">Auction</a></li>
-
-                <li class="menu__item"><a href="pricing.html">Pricing</a></li>
-
-                <li class="menu__item"><a href="custom.html">Contacts</a></li>
-
-                <li class="menu__item"><a href="school.html">Blog</a></li>
-            </ul>
-
-            <div class="menu__buttons">
-                <div class="select__content header__dropdown">
-                    <a class="select__btn">
-                        <p class="select__btn_p select__btn_p--active">ENG</p>
-                        <div class="select__btn_after">
-                            <svg>
-                                <use href="#icon-arrow"></use>
-                            </svg>
-                        </div>
-                    </a>
-                    <ul class="select__list">
-                        <li class="select__list-item">ENG</li>
-                        <li class="select__list-item">UA</li>
-                        <li class="select__list-item">FR</li>
-                        <li class="select__list-item">POL</li>
-                        <li class="select__list-item">SPA</li>
-                    </ul>
-                    <input type="text" name="select-category" value="" class="select__input-hidden">
+        <a href="#" class="header__link">
+          <span class="header__link-text">Log out</span>
+          <svg class="header__svg">
+            <use href="#log-out-white"></use>
+          </svg>
+        </a>
+      </div>
+    </header>
+    <main class="for-owner__page page">
+      <div class="page__container for-owner__page-container">
+        <sidebar class="for-owner__sidebar sidebar">
+          <div class="sidebar__content">
+            <a href="#" class="sidebar__content-link">
+              <svg class="sidebar__content-svg">
+                <use href="#owner-message"></use>
+              </svg>
+              Messages
+            </a>
+            <a href="#" class="sidebar__content-link">
+              <svg class="sidebar__content-svg">
+                <use href="#owner-orders"></use>
+              </svg>
+              Orders
+            </a>
+            <a href="#" class="sidebar__content-link">
+              <svg class="sidebar__content-svg">
+                <use href="#owner-nft-orders"></use>
+              </svg>
+              NFT Orders
+            </a>
+            <a href="#" class="sidebar__content-link">
+              <svg class="sidebar__content-svg">
+                <use href="#workers"></use>
+              </svg>
+              Workers
+            </a>
+          </div>
+          <div class="sidebar__footer">
+            <a href="#" class="sidebar__footer-link">
+              <svg class="sidebar__footer-svg">
+                <use href="#log-out-white"></use>
+              </svg>
+              Log out
+            </a>
+            <p class="sidebar__footer-text">All rights reserved © 2022</p>
+          </div>
+        </sidebar>
+        <div class="chat for-owner__chat-box">
+          <div class="chat__inner">
+            <div class="chat__list">
+              <h3 class="chat__list-title">My chat list</h3>
+              <div class="card chat__list-card">
+                <picture><source srcset="./images/for-worker-and-owner/chat/ivan-img.webp" type="image/webp"><img src="./images/for-worker-and-owner/chat/ivan-img.png" alt="photo" class="card__photo"></picture>
+                <div class="card__info">
+                  <div class="card__info-top">
+                    <p class="card__name">Ivan Ivanov</p>
+                    <p class="card__time">10 min ago</p>
+                  </div>
+                  <p class="card__text">Message that have been writed...</p>
                 </div>
-
-                <a href="authorization.html" class="authorization header__authorization">
-                    <button class="btn authorization__btn grey">
-                        <span>Authorization</span>
-                    </button>
-                </a>
+              </div>
+              <div class="card chat__list-card">
+                <picture><source srcset="./images/for-worker-and-owner/chat/ivan-img.webp" type="image/webp"><img src="./images/for-worker-and-owner/chat/ivan-img.png" alt="photo" class="card__photo"></picture>
+                <div class="card__info">
+                  <div class="card__info-top">
+                    <p class="card__name">Ivan Ivanov</p>
+                    <p class="card__time">10 min ago</p>
+                  </div>
+                  <p class="card__text">Message that have been writed...</p>
+                </div>
+              </div>
+              <div class="card chat__list-card">
+                <picture><source srcset="./images/for-worker-and-owner/chat/ivan-img.webp" type="image/webp"><img src="./images/for-worker-and-owner/chat/ivan-img.png" alt="photo" class="card__photo"></picture>
+                <div class="card__info">
+                  <div class="card__info-top">
+                    <p class="card__name">Ivan Ivanov</p>
+                    <p class="card__time">10 min ago</p>
+                  </div>
+                  <p class="card__text">Message that have been writed...</p>
+                </div>
+              </div>
+              <div class="card chat__list-card">
+                <picture><source srcset="./images/for-worker-and-owner/chat/ivan-img.webp" type="image/webp"><img src="./images/for-worker-and-owner/chat/ivan-img.png" alt="photo" class="card__photo"></picture>
+                <div class="card__info">
+                  <div class="card__info-top">
+                    <p class="card__name">Ivan Ivanov</p>
+                    <p class="card__time">10 min ago</p>
+                  </div>
+                  <p class="card__text">Message that have been writed...</p>
+                </div>
+              </div>
+              <div class="card chat__list-card">
+                <picture><source srcset="./images/for-worker-and-owner/chat/ivan-img.webp" type="image/webp"><img src="./images/for-worker-and-owner/chat/ivan-img.png" alt="photo" class="card__photo"></picture>
+                <div class="card__info">
+                  <div class="card__info-top">
+                    <p class="card__name">Ivan Ivanov</p>
+                    <p class="card__time">10 min ago</p>
+                  </div>
+                  <p class="card__text">Message that have been writed...</p>
+                </div>
+              </div>
             </div>
-        </nav>
-
-        <div class="header__btn-wrapper">
-            <div class="select__content header__dropdown">
-                <a class="select__btn">
-                    <p class="select__btn_p select__btn_p--active">ENG</p>
-                    <div class="select__btn_after">
-                        <svg>
-                            <use href="#icon-arrow"></use>
-                        </svg>
+            <div class="chat__window">
+              <div class="chat__window-info">
+                <div class="chat__window-worker">
+                  <picture><source srcset="./images/for-worker-and-owner/chat/ivan-for-list.webp" type="image/webp"><img src="./images/for-worker-and-owner/chat/ivan-for-list.png" alt="worker" class="chat__window-photo"></picture>
+                  <p class="chat__window-name">Ivan Ivanov</p>
+                </div>
+                <p class="chat__window-status">Online</p>
+              </div>
+              <div class="chat__window-messages messages">
+                <div class="messages__old">
+                  <div class="messages__box">
+                    <div class="message messages__mesage message_photo">
+                      <picture><source srcset="./images/for-worker-and-owner/chat/message-img.webp" type="image/webp"><img src="./images/for-worker-and-owner/chat/message-img.png" alt="photo" class="message__img"></picture>
                     </div>
-                </a>
-                <ul class="select__list">
-                    <li class="select__list-item">ENG</li>
-                    <li class="select__list-item">UA</li>
-                    <li class="select__list-item">FR</li>
-                    <li class="select__list-item">POL</li>
-                    <li class="select__list-item">SPA</li>
-                </ul>
-                <input type="text" name="select-category" value="" class="select__input-hidden">
-            </div>
-
-            <a href="authorization.html" class="authorization header__authorization">
-                <button class="btn authorization__btn grey">
-                    <span>Authorization</span>
-                </button>
-            </a>
-
-            <a href="pricing.html" class="header__premium premium">
-                <button class="premium__btn">
-                    <span>Premium access</span>
-                    <svg class="premium__btn-icon">
-                        <use href="#header-crown"></use>
-                    </svg>
-                </button>
-            </a>
-
-            <button class="header__burger">
-                <span class="header__burger-span-top"></span>
-                <span class="header__burger-span-middle"></span>
-                <span class="header__burger-span-bottom"></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-      <main class="page">
-        <div class="background">
-  <p class="background__custom">CUTOM BY YOUR OWN</p>
-  <svg>
-    <use href="#elipse"></use>
-  </svg>
-
-  <p class="background__unique">UNIQUE CLOTHES</p>
-  <img src="images/custom-by-your-own/blurs/blur.png" class="background__blur">
-  <img src="images/custom-by-your-own/blurs/blur-mobile.png" class="background__blur_mob">
-</div>
-
-        <div class="page__container"> 
-            <div class="are-you-ready">
-  <div class="are-you-ready__info">
-    <h1 class="are-you-ready__title">Are you ready to get custom clothes?</h1>
-    <p class="are-you-ready__about">
-      Indulgence announcing uncommonly met she continuing two unpleasing
-      terminated
-    </p>
-    <div class="are-you-ready__btn">
-      <a href="#" class="btn gradient">
-        <svg>
-          <use href="#bag"></use>
-        </svg>
-        <span>Get custom now</span>
-      </a>
-    </div>
-  </div>
-
-  <div class="are-you-ready__picture">
-    <div class="are-you-ready__bg">
-      <picture><source srcset="images/custom-by-your-own/img-bg.webp" type="image/webp"><img src="images/custom-by-your-own/img-bg.png"></picture>
-    </div>
-
-    <div class="are-you-ready__img">
-      <picture>
-        <source id="clother-webp" srcset="" type="image/webp">
-        <img id="clother-img" src="" alt="ctother" itype="image/jpg">
-      </picture>
-      
-    </div>
-  </div>
-</div>
-
-            <div class="custom-mesh">
-            </div>
-            <section id="custom" class="custom-form">
-    <div class="custom-form__background">
-        <picture>
-            <source srcset="images/main/contact/sapphire-first-mobile.png" media="(max-width:576px)">
-            <img src="images/main/contact/sapphire-first.png" alt="" class="custom-form__background_sapphire-first">
-        </picture>
-        <picture>
-            <source srcset="images/main/contact/sapphire-second-mobile.png" media="(max-width:576px)">
-            <img src="images/main/contact/sapphire-second.png" alt="" class="custom-form__background_sapphire-second">
-        </picture>
-        <img src="images/main/contact/sapphire-third.png" alt="" class="custom-form__background_sapphire-third">
-        <picture><source srcset="images/main/contact/cube.webp" type="image/webp"><img src="images/main/contact/cube.png" alt="" class="custom-form__background_cube"></picture>
-    </div>
-
-    <div class="custom-form__content">
-        <h3 class="custom-form__subtitle">CUSTOM BY YOUR OWN</h3>
-        <h2 class="custom-form__title">Want to get your own?</h2>
-        <form class="custom-form__form form" id="form" autocomplete="off">
-            <div class="form__item">
-                <label class="form__item-label">Type of item</label>
-                <div class="select__content">
-                    <a class="select__btn">
-                        <p class="select__btn_p select__btn_p--active">T-SHIRT</p>
-                        <div class="select__btn_after">
-                            <svg>
-                                <use href="#form-arr"></use>
-                            </svg>
-                        </div>
-                    </a>
-                    <ul class="select__list" id="clothers">
-                        <li class="select__list-item" id="hoodie"></li>
-                        <li class="select__list-item" id="shitr"></li>
-                        <li class="select__list-item" id="sweater"></li>
-                        <li class="select__list-item" id="t-shitr"></li>
-                    </ul>
-                    <input type="text" name="select-category" value="" class="select__input-hidden">
+                    <div class="message messages__mesage">
+                      <p class="message__text">Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="message__time">10 min</div>
+                  </div>
                 </div>
-            </div>
-            <div class="form__item">
-                <label class="form__item-label">Color</label>
-                <div class="radio">
-                    <label class="radio__label">
-                        <input type="radio" class="read" name="color">
-                        <span class="custom-radio custom-radio_red"></span>
-                    </label>
-                    <label class="radio__label">
-                        <input type="radio" class="orange" name="color">
-                        <span class="custom-radio custom-radio_orange"></span>
-                    </label>
-                    <label class="radio__label">
-                        <input type="radio" class="yelow" name="color">
-                        <span class="custom-radio custom-radio_yelow"></span>
-                    </label>
-                    <label class="radio__label">
-                        <input type="radio" class="green" name="color">
-                        <span class="custom-radio custom-radio_green"></span>
-                    </label>
-                    <label class="radio__label">
-                        <input type="radio" class="aqua" name="color">
-                        <span class="custom-radio custom-radio_aqua"></span>
-                    </label>
-                    <label class="radio__label">
-                        <input type="radio" class="blue-light" name="color">
-                        <span class="custom-radio custom-radio_blue-light"></span>
-                    </label>
-                    <label class="radio__label">
-                        <input type="radio" class="blue" name="color">
-                        <span class="custom-radio custom-radio_blue"></span>
-                    </label>
-                    <label class="radio__label">
-                        <input type="radio" class="purple" name="color">
-                        <span class="custom-radio custom-radio_purple"></span>
-                    </label>
-                    <label class="radio__label">
-                        <input type="radio" class="purple-light" name="color">
-                        <span class="custom-radio custom-radio_purple-light"></span>
-                    </label>
-                    <label class="radio__label">
-                        <input type="radio" class="pink" name="color">
-                        <span class="custom-radio custom-radio_pink"></span>
-                    </label>
-                    <label class="radio__label">
-                        <input type="radio" class="chery" name="color">
-                        <span class="custom-radio custom-radio_chery"></span>
-                    </label>
-                    <label class="radio__label">
-                        <input type="radio" class="white" name="color">
-                        <span class="custom-radio custom-radio_white"></span>
-                    </label>
-                    <label class="radio__label">
-                        <input type="radio" class="gray" name="color">
-                        <span class="custom-radio custom-radio_gray"></span>
-                    </label>
-                    <label class="radio__label">
-                        <input type="radio" class="brown" name="color">
-                        <span class="custom-radio custom-radio_brown"></span>
-                    </label>
-                    <label class="radio__label">
-                        <input type="radio" class="black" name="color">
-                        <span class="custom-radio custom-radio_black"></span>
-                    </label>
+                <h3 class="messages__title">New messages</h3>
+                <div class="messages__new">
+                  <div class="messages__new-box">
+                    <div class="message__message-oper-box">
+                      <div class="message__message-oper-info">
+                        <picture><source srcset="./images/for-worker-and-owner/chat/ivan-for-list.webp" type="image/webp"><img src="./images/for-worker-and-owner/chat/ivan-for-list.png" alt="photo" class="message__message-oper-img"></picture>
+                        <p class="message__message-oper-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                      </div>
+                      <p class="message__time message__message-oper-time">10 min ago</p>
+                    </div>
+                    <div class="message__message-user-box">
+                      <p class="message__message-user">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                    </p>
+                    <div class="message__time">10 min</div>
+                    </div>
+                  </div>
                 </div>
+                <input type="text" class="messages__unwhrite" placeholder="Enter your message here">
+              </div>
             </div>
-            <div class="form__item">
-                <label class="form__item-label">Size</label>
-                <div class="select__content">
-                    <a class="select__btn">
-                        <p class="select__btn_p select__btn_p--active">XL (99-99-99)</p>
-                        <div class="select__btn_after">
-                            <svg>
-                                <use href="#form-arr"></use>
-                            </svg>
-                        </div>
-                    </a>
-                    <ul class="select__list" id="size">
-                        <li class="select__list-item" id="xs"></li>
-                        <li class="select__list-item" id="s"></li>
-                        <li class="select__list-item" id="m"></li>
-                        <li class="select__list-item" id="l"></li>
-                        <li class="select__list-item" id="xl"></li>
-                        <li class="select__list-item" id="xxl"></li>
-                        <li class="select__list-item" id="xxxl"></li>
-                    </ul>
-                    <input type="text" name="select-category" value="" class="select__input-hidden">
-                </div>
-            </div>
-            <div class="form__item">
-                <label class="form__item-label">Your comment</label>
-                <textarea class="form__item-textarea" id="coment" name="" id="" cols="30" rows="10" placeholder="Comment" autocomplete="off"></textarea>
-            </div>
-            <a href="#" class="form__send">
-                <button class="btn gradient form__send-btn" type="submit">
-                    <p>Send message</p>
-                </button>
-            </a>
-            <div class="form__agree">
-                <label class="form__agree-label">
-                    <input type="checkbox" class="form__agree-checkbox" id="checkbox" autocomplete="off">
-                    <span class="form__agree-checkstyle"></span>
-                    I agree with<a href="#">Privacy Policy</a>and<a href="#">Terms of use</a>
-                </label>
-            </div>
-        </form>
-    </div>
-</section>
-
-        </div>
-      </main>
-      <footer class="footer">
-  <div class="footer__container">
-    <div class="footer__content">
-      <div class="footer__links">
-        <div class="casual footer__links-casual">
-          <a class="casual__link-logo" href="#">
-            <svg class="casual__link-logo-svg">
-              <use href="#icon-logo"/>
-            </svg>
-          </a>
-
-          <a class="casual__link" href="#">Privacy policy</a>
-          <a class="casual__link" href="#">Terms of use</a>
-        </div>
-
-        <div class="footer__links-social social">
-          <a class="social__link" href="#">
-            <svg class="social__link-svg">
-              <use href="#icon-instagram"/>
-            </svg>
-          </a>
-
-          <a class="social__link" href="#">
-            <svg class="social__link-svg">
-              <use href="#icon-twitter"/>
-            </svg>
-          </a>
-
-          <a class="social__link" href="#">
-            <svg class="social__link-svg">
-              <use href="#icon-telegram"/>
-            </svg>
-          </a>
-
-          <a class="social__link" href="#">
-            <svg class="social__link-svg">
-              <use href="#icon-pinterest"/>
-            </svg>
-          </a>
+          </div>
         </div>
       </div>
-      <span class="footer__reserved">All rights reserved © 2022</span>
-    </div>
-  </div>
-</footer>
- 
-      <svg style="width: 0; height: 0; position: absolute" xmlns="http://www.w3.org/2000/svg">
+    </main>
+    <svg style="width: 0; height: 0; position: absolute" xmlns="http://www.w3.org/2000/svg">
     <symbol id="icon-logo" viewBox="0 0 161 46" fill="none">
         <path d="M20.6831 11.6895C14.9244 13.6289 15.3855 20.984 15.4131 21.1289C14.2363 14.1456 14.1933 10.4364 18.5445 8.37226C21.7122 6.86949 24.7754 10.3114 20.6831 11.6895Z" fill="url(#paint0_linear_78_3746)"/>
         <path d="M10.0627 13.0171C10.6057 11.5915 11.5654 11.3017 12.4698 11.4625C13.5732 11.6586 13.798 12.9906 13.4602 14.0592C11.993 18.6999 13.993 22.9244 15.5204 24.6699C11.5378 23.4899 8.88263 16.1147 10.0627 13.0171Z" fill="url(#paint1_linear_78_3746)"/>
@@ -698,7 +504,6 @@
     </symbol>
 </svg>
 
-  </div></body>
-  <script src="js/app.min.js?_v=20240222180618"></script>
-  <script src="js/custom.min.js?_v=20240222180618"></script>
+</div></body>
+<script src="js/app.min.js?_v=20240222180618"></script>
 </html>
