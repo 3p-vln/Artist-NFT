@@ -27,15 +27,21 @@
                 <form id="form" action="" class="bargain__form">
                     <label for="" class="bargain__form-label">Place your bid</label>
                     <div class="bargain__form-wrapper">
-                        <input id="number" type="text" class="bargain__form-input" placeholder="$100 322" />
+                        <input id="number" type="number" class="bargain__form-input" placeholder="$100 322" />
                         <button class="bargain__form-btn btn gradient">
                             <span>Place bid</span>
                         </button>
                     </div>
                 </form>
                 <div class="bargain__date">
-                    <h2 id="countdown" class="bargain__date-timer"></h2>
-                    <!-- <h2 class="bargain__date-timer">28d 17h 26m 31s</h2> -->
+                    <div class="bargain__date-timer">
+                        <div id="days"><span>00</span>d</div>
+                        <div id="hours"><span>00</span>h</div>
+                        <div id="minutes"><span>00</span>m</div>
+                        <div id="seconds"><span>00</span>s</div>
+                    </div>
+
+                    <!-- <h2 id="countdown" class="bargain__date-timer"></h2> -->
                     <h3 class="bargain__date-deadline">Live март 5, 8:00pm</h3>
                 </div>
                 <h4 class="bargain__description">
@@ -45,22 +51,27 @@
         </div>
     </div>
 
-    <!-- <div class="auction__progress">
-        <h2 class="auction__progress-text">About the work</h2>
-        <div class="auction__progress-bar progress">
-            <progress class="auction__progress-bar-filled" value="70" max="100">
-            </progress>
-        </div>
-    </div> -->
-
     <div class="auction__progress">
+        <h2 class="auction__progress-text">About the work</h2>
+        <div class="auction__progress-bar">
+            <progress id="progress" class="auction__progress-bar-filled" value="0" max="100"></progress>
+        </div>
+    </div>
+
+    <!-- <div class="auction__progress">
         <h2 class="auction__progress-text">About the work</h2>
         <div class="auction__progress-bar progress">
             <progress value="0" max="100">
                 <div class="progress-bg"><div class="progress-bar"></div></div>
             </progress>
         </div>
-    </div>
+    </div> -->
+
+    <!-- <div class="progress">
+        <progress max="100" value="0"></progress>
+        <div class="progress-value"></div>
+        <div class="progress-bg"><div class="progress-bar"></div></div>
+    </div> -->
 
     <div class="auction__blocks">
         <div class="auction__blocks-description description">

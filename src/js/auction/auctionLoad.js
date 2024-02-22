@@ -17,4 +17,3 @@ export async function snapAuction() {
         document.querySelector('#paragraphDescription').innerHTML = data.paragraphDescription;
     });
 }
-
