@@ -66,7 +66,7 @@
         align-items: start;
     }
 }
-/*
+
 .purchase {
     display: flex;
     align-items: center;
@@ -286,9 +286,8 @@
                 opacity: 0.2;
                 color: $backgroundSecond;
                 -webkit-text-stroke: 1px $whiteTwo;
-                opacity: 0.2;               
-                 padding-right: 30px;
-
+                opacity: 0.2;
+                padding-right: 30px;
             }
 
             &__blur {
@@ -585,4 +584,4 @@
             }
         }
     }
-} 
+}
