@@ -1,78 +1,8 @@
-.pricing-head {
-    position: relative;
-
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-    margin-top: 74px;
-    padding-top: 52px;
-    gap: 17px;
-
-    &__title {
-        font-family: ProximaNova;
-        font-size: clamp(36px, 5vw, 64px);
-        font-weight: bold;
-        line-height: 65px;
-
-        max-width: 569px;
-
-        text-align: center;
-
-        color: $whiteTwo;
-
-        @include media-breakpoint-down(lg) {
-            line-height: calc(40px + (65 - 40) * ((100vw - 375px) / (1440 - 375)));
-        }
-
-        @include media-breakpoint-down(xs) {
-            max-width: 271px;
-            padding-top: 22px;
-            padding-left: 2px;
-
-            text-align: left;
-        }
-    }
-
-    &__subtitle {
-        font-family: ProximaNova;
-        font-size: clamp(15px, 2.5vw, 16px);
-        font-weight: normal;
-        line-height: 28px;
-
-        max-width: 400px;
-
-        text-align: center;
-
-        color: $whiteTwo;
-
-        @include media-breakpoint-down(lg) {
-            line-height: calc(24px + (28 - 24) * ((100vw - 375px) / (1440 - 375)));
-        }
-
-        @include media-breakpoint-down(xs) {
-            max-width: 280px;
-
-            text-align: left;
-        }
-    }
-
-    @include media-breakpoint-down(lg) {
-        margin-top: calc(26px + (60 - 26) * ((100vw - 375px) / (1440 - 375)));
-        gap: calc(16px + (18 - 16) * ((100vw - 375px) / (1440 - 375)));
-    }
-
-    @include media-breakpoint-down(xs) {
-        align-items: start;
-    }
-}
-/*
 .purchase {
     display: flex;
-    align-items: center;
     flex-direction: column;
     justify-content: center;
-
+    align-items: center;
     padding-top: 78px;
     padding-bottom: 50px;
     gap: 20px;
@@ -85,16 +15,14 @@
 
     &__nav {
         display: grid;
-        display: none;
+        grid-template-columns: repeat(3, 1fr);
         justify-content: center;
-
+        display: none;
         width: 345px;
         height: 62px;
-        padding: 7px 8px;
-
+        padding: 7px 8px 7px 8px;
         border-radius: 12px;
         background: rgb(33, 36, 38);
-        grid-template-columns: repeat(3, 1fr);
         --active: 0;
 
         &:has(.purchase__nav-btn:nth-child(2).active) {
@@ -110,35 +38,31 @@
         }
 
         @include media-breakpoint-down(xxs) {
-            width: 100%;
             max-width: 345px;
+            width: 100%;
         }
 
         &-btn {
-            font-family: ProximaNova;
-            font-size: 14px;
-            font-weight: normal;
-            line-height: 21px;
-
             position: relative;
-            z-index: 5;
-
             display: flex;
-            align-items: center;
             justify-content: center;
-
+            align-items: center;
             width: 111px;
             height: 48px;
-
-            text-align: center;
-
-            color: rgb(255, 255, 255);
+            z-index: 5;
             border-radius: 12px;
             background: none;
 
+            color: rgb(255, 255, 255);
+            font-family: 'ProximaNova';
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21px;
+            text-align: center;
+
             @include media-breakpoint-down(xxs) {
-                width: 100%;
                 max-width: 111px;
+                width: 100%;
             }
 
             &:nth-child(1) {
@@ -154,8 +78,7 @@
             }
 
             &.active {
-                font-weight: bold;
-
+                font-weight: 700;
                 color: rgb(29, 31, 33);
                 transition: all 0.5s ease;
             }
@@ -163,30 +86,24 @@
 
         .selector {
             position: relative;
-
+            grid-area: 1/1/2/2;
+            border-radius: 12px;
             width: 100%;
             height: 100%;
-
             pointer-events: none;
-
-            border-radius: 12px;
-            grid-area: 1/1/2/2;
 
             &::before,
             &::after {
+                content: '';
                 position: absolute;
-                top: 0;
                 left: 0;
-
+                top: 0;
+                border-radius: inherit;
                 width: 100%;
                 height: 100%;
-
-                content: '';
-
-                border-radius: inherit;
                 background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
-                transition: 0.4s transform cubic-bezier(0.28, 1.33, 0.64, 1);
                 transform: translateX(calc(var(--active) * 100%));
+                transition: 0.4s transform cubic-bezier(0.28, 1.33, 0.64, 1);
             }
 
             &::before {
@@ -206,31 +123,26 @@
     }
 
     .card {
-        position: relative;
-
         display: flex;
         flex-direction: column;
-
+        position: relative;
         max-width: 350px;
         height: 650px;
-        /* padding: 13px 10px 18px 10px; */
-        padding: 5px 5px 18px;
-
         border-radius: 12px;
+        /* padding: 13px 10px 18px 10px; */
+        padding: 5px 5px 18px 5px;
         background: $backgroundSecond;
         transition: 0.5s ease-in-out;
 
         &.active {
             display: block;
-
             max-width: 350px;
-
             pointer-events: auto;
         }
 
         @include media-breakpoint-down(lg) {
             max-width: 320px;
-            padding: 5px 5px 18px;
+            padding: 5px 5px 18px 5px;
 
             &.active {
                 max-width: 320px;
@@ -253,10 +165,9 @@
 
         &-wrapper {
             max-width: 340px;
-            padding: 8px 30px 0 27px;
-
-            border-radius: 12px;
             background: $backgroundSecond;
+            padding: 8px 30px 0 27px;
+            border-radius: 12px;
             /* padding-left: 17px;  */
 
             @include media-breakpoint-down(lg) {
@@ -275,44 +186,41 @@
             }
 
             &__time {
-                font-family: ProximaNova;
+                font-family: 'ProximaNova';
                 font-size: 80px;
-                font-weight: bold;
+                font-weight: 700;
                 line-height: 97px;
-
-                text-align: center;
                 letter-spacing: 0%;
-
-                opacity: 0.2;
+                text-align: center;
                 color: $backgroundSecond;
                 -webkit-text-stroke: 1px $whiteTwo;
-                opacity: 0.2;               
+                opacity: 0.2;
+                /*
                  padding-right: 30px;
 
+                 @include media-breakpoint-down(lg) {
+                     padding-right: 5px;
+                 }
+                 */
             }
-
             &__blur {
                 position: absolute;
                 top: 0;
                 left: 0;
             }
-
             &__item {
                 position: absolute;
                 top: 44px;
                 left: 44px;
             }
-
             &__access {
-                position: relative;
-
-                width: 100%;
-                max-width: 275px;
-                margin: 44px 0 28px auto;
-                padding: 14px 0 11px 25px;
-
                 border-radius: 8px 0 0 8px;
                 background: $rainbowBtnGradient;
+                max-width: 275px;
+                width: 100%;
+                padding: 14px 0 11px 25px;
+                margin: 44px 0 28px auto;
+                position: relative;
                 transform: translateX(35px);
 
                 @include media-breakpoint-down(lg) {
@@ -320,9 +228,8 @@
                 }
 
                 @include media-breakpoint-down(md) {
-                    max-width: 270px;
-
                     transform: translateX(25px);
+                    max-width: 270px;
                 }
 
                 @include media-breakpoint-down(xxs) {
@@ -330,27 +237,22 @@
                 }
 
                 &-title {
-                    font-family: ProximaNova;
+                    color: rgb(29, 31, 33);
+                    font-family: 'ProximaNova';
                     font-size: 26px;
-                    font-weight: bold;
+                    font-weight: 700;
                     line-height: 33.5px;
-
+                    letter-spacing: 0%;
                     text-align: left;
-                    letter-spacing: 0%;
-
-                    color: rgb(29, 31, 33);
                 }
-
                 &-subtitle {
-                    font-family: ProximaNova;
-                    font-size: 14px;
-                    font-weight: normal;
-                    line-height: 21px;
-
-                    letter-spacing: 0%;
-
-                    opacity: 0.7;
                     color: rgb(29, 31, 33);
+                    font-family: 'ProximaNova';
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 21px;
+                    letter-spacing: 0%;
+                    opacity: 0.7;
                     transform: translateY(-5px);
                 }
             }
@@ -359,14 +261,9 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-
                 transform: translateY(-2px) translateX(-5px);
-
                 /* padding-right: 50px; */
-
                 padding-right: 0;
-
-                transform: translateY(-2px) translateX(-5px);
 
                 @include media-breakpoint-down(lg) {
                     padding-right: 5px;
@@ -375,53 +272,43 @@
 
                 &-item {
                     position: relative;
-
                     display: flex;
                     align-items: center;
                     gap: 16px;
-
                     padding-bottom: 20px;
 
                     &-svg {
                         min-width: 24px;
-                        max-width: 24px;
                         min-height: 24px;
+                        max-width: 24px;
                         max-height: 24px;
                     }
 
                     &-text {
-                        font-family: ProximaNova;
-                        font-size: 14px;
-                        font-weight: normal;
-                        line-height: 21px;
-
-                        padding-right: 5px;
-
-                        text-align: left;
-                        letter-spacing: 0%;
-
                         color: rgb(200, 210, 220);
+                        font-family: 'ProximaNova';
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 21px;
+                        letter-spacing: 0%;
+                        padding-right: 5px;
+                        text-align: left;
                     }
                 }
-
                 &-item:not(:last-child)::after {
+                    content: '';
                     position: absolute;
+                    display: flex;
                     top: 86%;
                     left: 0;
-
-                    display: flex;
                     /* width: 108%;  */
                     width: 100%;
                     height: 1px;
-
-                    content: '';
-
                     background: rgb(82, 89, 96);
 
                     @include media-breakpoint-down(md) {
-                        top: 87%;
-
                         width: 104%;
+                        top: 87%;
                     }
                 }
             }
@@ -429,12 +316,11 @@
 
         &__price {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-
-            padding: 23px 30px 0 27px;
+            align-items: center;
             /* padding-right: 35px; */
             padding-right: 0;
+            padding: 23px 30px 0 27px;
 
             @include media-breakpoint-down(lg) {
                 padding-right: 10px;
@@ -446,37 +332,30 @@
             }
 
             &-btn {
-                position: relative;
-
-                overflow: hidden;
-
                 padding: 14px 50px;
-
                 border-radius: 12px;
                 background: $rainbowBtnGradient;
+                position: relative;
+                overflow: hidden;
                 transform: translateX(-5px);
 
                 span {
                     /* color: rgb(29, 31, 33); */
-                    font-family: ProximaNova;
+                    font-family: 'ProximaNova';
                     font-size: 18px;
-                    font-weight: bold;
+                    font-weight: 700;
                     line-height: 26.5px;
-
-                    text-align: left;
                     letter-spacing: 0%;
+                    text-align: left;
                 }
 
                 &::before {
+                    content: '';
                     position: absolute;
-                    top: 0;
                     left: -95px;
-
+                    top: 0;
                     width: 50px;
                     height: 100px;
-
-                    content: '';
-
                     background: linear-gradient(90deg, rgb(255 255 255 / 10%), rgb(255 255 255 / 50%));
                     transform: skewX(-45deg);
                 }
@@ -484,7 +363,6 @@
                 &:hover {
                     &::before {
                         left: 130%;
-
                         transition: left 0.5s ease-in-out;
 
                         @include media-breakpoint-down(sm) {
@@ -493,38 +371,33 @@
                     }
                 }
             }
-
             &-value {
-                font-family: ProximaNova;
-                font-size: 22px;
-                font-weight: bold;
-                line-height: 33.5px;
-
-                text-align: left;
-                letter-spacing: 0%;
-
                 color: rgb(252, 255, 255);
+                font-family: 'ProximaNova';
+                font-size: 22px;
+                font-weight: 700;
+                line-height: 33.5px;
+                letter-spacing: 0%;
+                text-align: left;
             }
         }
 
         &:hover {
-            width: 100%;
-            max-width: 350px;
-            margin-top: 0;
-            padding-top: 5px;
-
-            border-radius: 12px;
             background: $rainbowBtnGradient;
-            transition: 0.3s ease-in-out;
-            transition: 0.5s ease-in-out;
+            border-radius: 12px;
+            max-width: 350px;
+            width: 100%;
+            padding-top: 5px;
+            margin-top: 0;
             transform: translateY(-40px);
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.5s ease-in-out;
 
             .card__price-btn {
+                /* background: $darkerGradientBtn; */
                 background: rgb(29, 31, 33);
-
                 span {
                     -webkit-text-fill-color: transparent;
-
                     background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
                     background-clip: text;
                 }
@@ -534,36 +407,29 @@
                 &-title {
                     color: rgb(252, 255, 255);
                 }
-
                 &-subtitle {
                     color: rgb(252, 255, 255);
                 }
             }
 
             @include media-breakpoint-down(lg) {
-                width: 100%;
                 max-width: 320px;
+                width: 100%;
             }
 
             @include media-breakpoint-down(md) {
                 max-width: 345px;
                 height: 650px;
-                margin-bottom: 0;
-
                 border-radius: 12px;
                 margin-bottom: 0px;
-                transform: translateY(0px);
-
-                background: $backgroundSecond;
                 /* padding: 13px 0px 18px 5px; */
-                transform: translateY(0);
+                transform: translateY(0px);
+                background: $backgroundSecond;
 
                 .card__price-btn {
                     background: $rainbowBtnGradient;
-
                     span {
                         -webkit-text-fill-color: transparent;
-
                         background: rgb(29, 31, 33);
                         background-clip: text;
                     }
@@ -573,7 +439,6 @@
                     &-title {
                         color: rgb(29, 31, 33);
                     }
-
                     &-subtitle {
                         color: rgb(29, 31, 33);
                     }
@@ -585,4 +450,4 @@
             }
         }
     }
-} 
+}

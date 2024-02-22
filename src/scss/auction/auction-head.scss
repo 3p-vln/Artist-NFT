@@ -285,9 +285,37 @@
                     gap: 12px;
 
                     padding-top: 6px;
+                    position: relative;
 
                     @include media-breakpoint-down(xs) {
                         flex-direction: column;
+                    }
+
+                    .just-validate-error-label {
+                        position: absolute;
+                        right: 50%;
+                        top: -30px;
+                        z-index: 3;
+                        border-radius: 7px;
+                        padding: 8px;
+                        font-weight: 700;
+                        font-size: 14px;
+                        background: $rainbowBtnGradient;
+                        transform: translateX(50%);
+                        text-wrap: nowrap;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            left: 50%;
+                            top: 28px;
+                            z-index: 3;
+                            clip-path: polygon(0 0, 53% 100%, 100% 0);
+                            width: 10px;
+                            height: 10px;
+                            background: $rainbowBtnGradient;
+                            transform: translateX(-50%);
+                        }
                     }
                 }
 
@@ -305,9 +333,6 @@
                     border-radius: 9px;
                     background: rgb(44, 47, 51);
 
-                    // @include media-breakpoint-down(md) {
-                    //     max-width: unset;max-widthmax-widthmax-widthmax-width
-                    // }
 
                     @include media-breakpoint-down(xs) {
                         min-width: unset;
@@ -341,6 +366,13 @@
                 padding-top: 19px;
 
                 &-timer {
+                    display: flex;
+                    gap: 5px;
+                    background: linear-gradient(130.1deg, rgb(104, 201, 255), rgb(209, 181, 255));
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    font-family: 'ProximaNova';
                     font-family: ProximaNova;
                     font-size: clamp(18px, 2.5vw, 22px);
                     font-weight: bold;
@@ -446,7 +478,16 @@
                 width: 100%;
                 margin-top: 4px;
             }
-        }
+
+            &-filled {
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 57px;
+                background-color: black;
+                background: linear-gradient(130.1deg, rgb(104, 201, 255) 6.697%, rgb(209, 181, 255) 82.389%);
+                height: 5px;
+                width: 540px;
 
         &-bar::after {
             position: absolute;
@@ -461,9 +502,30 @@
             border-radius: 57px;
             background: linear-gradient(130.1deg, rgb(104, 201, 255) 6.697%, rgb(209, 181, 255) 82.389%);
 
-            @include media-breakpoint-down(xs) {
-                width: 28%;
+                @include media-breakpoint-down(xs) {
+                    width: 100%;
+                }
             }
+        }
+
+        progress::-webkit-progress-bar {
+            background-color: rgb(33, 36, 38);
+            block-size: 100%;
+            inline-size: 100%;
+            box-sizing: border-box;
+            -webkit-user-modify: read-only !important;
+        }
+
+        progress::-webkit-progress-value {
+            background: linear-gradient(130.1deg, rgb(104, 201, 255) 6.697%, rgb(209, 181, 255) 82.389%);
+            block-size: 100%;
+            inline-size: 50%;
+            box-sizing: border-box;
+            -webkit-transition: width 1s linear;
+            -moz-transition: width 1s linear;
+            -ms-transition: width 1s linear;
+            transition: width 1s linear;
+            -webkit-user-modify: read-write !important;
         }
     }
 
@@ -495,15 +557,6 @@
 
             border-radius: 12px;
             background: rgb(33, 36, 38);
-
-            @include media-breakpoint-down(md) {
-                width: 100%;
-                max-width: unset;
-            }
-
-            @include media-breakpoint-down(xs) {
-                padding: 17px 13px 23px 16px;
-            }
 
             &__title {
                 font-family: ProximaNova;
@@ -556,9 +609,15 @@
                 line-height: 28px;
 
                 max-width: 679px;
+
+                height: 100%;
+                overflow: hidden;
+                transition: fade 0.3s ease 0s;
+
                 padding-top: 18px;
 
                 color: rgb(252, 255, 255);
+
 
                 @include media-breakpoint-down(md) {
                     width: 100%;
@@ -587,6 +646,32 @@
 
                 @include media-breakpoint-down(xs) {
                     display: block;
+                }
+            }
+
+            @include media-breakpoint-down(md) {
+                width: 100%;
+                max-width: unset;
+            }
+
+            @include media-breakpoint-down(xs) {
+                padding: 17px 13px 23px 16px;
+
+                &.active .description__paragraph {
+                    height: 100px;
+                    transition: fade 0.3s ease 0s;
+                }
+
+                @keyframes fade {
+                    from {
+                        opacity: 0;
+                        transform: translateY(-10px);
+                    }
+
+                    to {
+                        opacity: 1;
+                        transform: translateY(0px);
+                    }
                 }
             }
         }

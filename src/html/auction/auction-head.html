@@ -1,18 +1,21 @@
 <section class="auction">
     <div class="auction-content">
         <div class="auction__image">
-            <img src="images/nft-card/card-item.png" alt="lot" class="auction__image-img" />
+            <picture>
+                <source id="imgWebp" srcset="" type="webp" />
+                <img id="imgPng" src="images/nft-card/card-item.png" alt="lot" class="auction__image-img" />
+            </picture>
         </div>
         <div class="auction__info">
             <h3 class="auction__info-subtitle">AUCTION</h3>
-            <h2 class="auction__info-title">Title of picture or NFT</h2>
+            <h2 id="title" class="auction__info-title"></h2>
             <div class="auction__info-columns columns">
                 <div class="columns__item">
-                    <h2 class="columns__item-text">36 × 27 in <br class="br-desctop" />91.4 × 68.6 cm</h2>
+                    <h2 id="size" class="columns__item-text"></h2>
                 </div>
                 <div class="columns__item">
                     <h2 class="columns__item-text">Estimated value</h2>
-                    <h3 class="columns__item-value">$6,000</h3>
+                    <h3 id="estimatedValue" class="columns__item-value"></h3>
                 </div>
                 <div class="columns__item">
                     <h2 class="columns__item-text">This work is part of a limited edition set.</h2>
@@ -20,18 +23,25 @@
             </div>
             <div class="auction__info-bargain bargain">
                 <h2 class="bargain__title">highest price</h2>
-                <h3 class="bargain__value">$100 322</h3>
-                <form action="" class="bargain__form">
+                <h3 id="highestPrice" class="bargain__value"></h3>
+                <form id="form" action="" class="bargain__form">
                     <label for="" class="bargain__form-label">Place your bid</label>
                     <div class="bargain__form-wrapper">
-                        <input type="text" class="bargain__form-input" placeholder="$100 322" />
+                        <input id="number" type="number" class="bargain__form-input" placeholder="$100 322" />
                         <button class="bargain__form-btn btn gradient">
                             <span>Place bid</span>
                         </button>
                     </div>
                 </form>
                 <div class="bargain__date">
-                    <h2 class="bargain__date-timer">28d 17h 26m 31s</h2>
+                    <div class="bargain__date-timer">
+                        <div id="days"><span>00</span>d</div>
+                        <div id="hours"><span>00</span>h</div>
+                        <div id="minutes"><span>00</span>m</div>
+                        <div id="seconds"><span>00</span>s</div>
+                    </div>
+
+                    <!-- <h2 id="countdown" class="bargain__date-timer"></h2> -->
                     <h3 class="bargain__date-deadline">Live март 5, 8:00pm</h3>
                 </div>
                 <h4 class="bargain__description">
@@ -43,26 +53,30 @@
 
     <div class="auction__progress">
         <h2 class="auction__progress-text">About the work</h2>
-        <div class="auction__progress-bar"></div>
+        <div class="auction__progress-bar">
+            <progress id="progress" class="auction__progress-bar-filled" value="0" max="100"></progress>
+        </div>
     </div>
+
+    <!-- <div class="auction__progress">
+        <h2 class="auction__progress-text">About the work</h2>
+        <div class="auction__progress-bar progress">
+            <progress value="0" max="100">
+                <div class="progress-bg"><div class="progress-bar"></div></div>
+            </progress>
+        </div>
+    </div> -->
+
+    <!-- <div class="progress">
+        <progress max="100" value="0"></progress>
+        <div class="progress-value"></div>
+        <div class="progress-bg"><div class="progress-bar"></div></div>
+    </div> -->
 
     <div class="auction__blocks">
         <div class="auction__blocks-description description">
-            <h2 class="description__title">100% of the proceeds of this sale are donated to LAM.</h2>
-            <h3 class="description__paragraph">
-                Multidisciplinary artist Judy Chicago helped pioneer the feminist art movement in the 1960s and ’70s; for decades, she has made work
-                that celebrates the multiplicity of female identity. Chicago’s practice spans painting, textile arts, sculpture, and installation and
-                has explored the intricacies of childbirth (as seen in her “Birth Project” series, 1980–85), the possibilities of minimalist
-                sculpture, and the relationship between landscape and the female body. Her most famous work, an installation called The Dinner Party
-                (1974–79), is an homage to 39 influential female figures from Eastern and Western mythology and civilization. Chicago studied at the
-                University of California, Los Angeles. She founded a groundbreaking and widely influential feminist art program while on staff at
-                California State University, Fresno. Her work has been exhibited in New York, London, Milan, Chicago, and San Francisco and belongs in
-                the collections of the British Museum, Moderna Museet, the Metropolitan Museum of Art, the Los Angeles County Museum of Art, the Tate,
-                the Art Institute of Chicago, and the National Gallery of Art in Washington, D.C. <br /><br />
-                Applicable sales tax will apply to all works shipped to and within the US. Please note, your card will automatically be charged for
-                the Total Purchase Price, buyer’s premium, shipping, and any applicable sales tax, based on your registration address. For
-                transactions over $50,000, you will be given the option to pay via wire transfer.
-            </h3>
+            <h2 id="titleDescription" class="description__title"></h2>
+            <h3 id="paragraphDescription" class="description__paragraph"></h3>
             <button class="description__btn btn grey">
                 <span>Hide info</span>
             </button>

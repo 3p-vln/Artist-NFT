@@ -34,6 +34,19 @@ export function premiumSwiper() {
             },
         },
 
+        // breakpoints: {
+        //     320: {
+        //         slidesPerView: 'auto',
+        //         spaceBetween: 16,
+        //         loop: true,
+        //     },
+        //     1439: {
+        //         slidesPerView: 7,
+        //         spaceBetween: 30,
+        //         loop: true,
+        //     },
+        // },
+
         breakpoints: {
             320: {
                 slidesPerView: 1.15,
