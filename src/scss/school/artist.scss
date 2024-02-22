@@ -3,6 +3,10 @@
     padding-bottom: 65px;
     position: relative;
 
+    @include media-breakpoint-down(xs) {
+      padding-bottom: 105px;
+    }
+
     &__decor-text {
         position: absolute;
         font-weight: 700;
@@ -115,20 +119,11 @@
 
           @include media-breakpoint-down(xs) {
             display: block;
-            left: -4%;
-            bottom: -5%;
+            left: -5%;
+            bottom: 1%;
           }
         }
 
-        // &_mob-second {
-        //    display: none;
-
-        //   @include media-breakpoint-down(xs) {
-        //     display: block;
-        //     right: 0%;
-        //     bottom: 0%;
-        //   }
-        // }
     }
 
     &__title {
@@ -167,7 +162,6 @@
         display: none;
 
         @include media-breakpoint-down(sm) {
-            // display: flex;
             display: grid;
             align-items: flex-start;
             grid-template-columns: repeat(3, 1fr);
@@ -333,7 +327,6 @@
         &__choise {
             display: flex;
             justify-content: flex-end;
-            // align-items: flex-end;
             position: relative;
         }
 
@@ -419,7 +412,6 @@
 
         &__cost {
             display: flex;
-            // justify-content: space-between;
             gap: 20px;
             align-items: center;
             width: 293px;
@@ -490,9 +482,4 @@
             display: block;
         }
     }
-
-    // .card_individual .card__plan {
-    //   background: linear-gradient(130deg, #00adc5 0%, #ad7aff 99.47%);
-    //
-    // }
 }
