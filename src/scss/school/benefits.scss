@@ -1,5 +1,6 @@
 .benefits {
     padding: 32px 0 73px;
+
     color: $whiteTwo;
 
     @include media-breakpoint-down(sm) {
@@ -7,40 +8,49 @@
     }
 
     @include media-breakpoint-down(xs) {
-        padding-top: 37px;
         margin-bottom: 49px;
+        padding-top: 37px;
     }
 
     &__subtitle {
-        font-weight: 700;
         font-size: 18px;
+        font-weight: bold;
         line-height: 147%;
+
+        display: block;
+
+        max-width: 148px;
+        margin: 0 auto 2px;
+
         letter-spacing: 0.1em;
-        -webkit-text-fill-color: transparent;
+
         background: $rainbowBtnGradient;
         background-clip: text;
-        max-width: 148px;
-        display: block;
-        margin: 0 auto 2px;
         transform: translateX(-8px);
+        -webkit-text-fill-color: transparent;
 
         @include media-breakpoint-down(xs) {
             font-size: 14px;
             line-height: 189%;
-            letter-spacing: 0.1em;
-            transform: translateX(0);
-            margin-left: 0;
+
             margin-bottom: 0;
+            margin-left: 0;
+
+            letter-spacing: 0.1em;
+
+            transform: translateX(0);
         }
     }
 
     &__title {
-        font-weight: 700;
         font-size: 36px;
+        font-weight: bold;
         line-height: 137%;
-        text-align: center;
-        margin-bottom: 32px;
+
         margin-right: 18px;
+        margin-bottom: 32px;
+
+        text-align: center;
 
         @include media-breakpoint-down(xs) {
             display: none;
@@ -51,14 +61,17 @@
         display: none;
 
         @include media-breakpoint-down(xs) {
-            display: inline-block;
             font-size: 26px;
             line-height: 131%;
-            letter-spacing: 0.58px;
-            text-align: left;
-            margin-right: 0;
+
+            display: inline-block;
+
             max-width: 225px;
+            margin-right: 0;
             margin-bottom: 29px;
+
+            text-align: left;
+            letter-spacing: 0.58px;
         }
     }
 
@@ -66,6 +79,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 30px;
+
         padding: 0 17px 0 10px;
 
         @include media-breakpoint-down(lg) {
@@ -74,9 +88,9 @@
         }
 
         @include media-breakpoint-down(md) {
-            grid-template-columns: 0fr 0fr;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
+            grid-template-columns: 0fr 0fr;
         }
 
         @include media-breakpoint-down(xs) {
@@ -86,9 +100,10 @@
 
     .card {
         width: 255px;
-        background: $backgroundSecond;
-        border-radius: 12px;
         padding: 18px 23px 32px 19px;
+
+        border-radius: 12px;
+        background: $backgroundSecond;
 
         @include media-breakpoint-down(lg) {
             width: 240px;
@@ -100,16 +115,16 @@
         }
 
         &__svg-box {
-            border-radius: 12px;
-            width: 48px;
-            height: 48px;
             display: flex;
-            justify-content: center;
             align-items: center;
-            background: $darkerGradientBtn;
+            justify-content: center;
+
             width: 48px;
             height: 48px;
             margin-bottom: 9px;
+
+            border-radius: 12px;
+            background: $darkerGradientBtn;
 
             @include media-breakpoint-down(xs) {
                 width: 36px;
@@ -129,22 +144,25 @@
         }
 
         &__title {
-            font-weight: 700;
             font-size: 20px;
+            font-weight: bold;
             line-height: 150%;
+
             margin-bottom: 4px;
 
             @include media-breakpoint-down(xs) {
                 font-size: 14px;
                 line-height: 143%;
+
                 margin-bottom: 0;
             }
         }
 
         &__text {
-            font-weight: 400;
             font-size: 16px;
+            font-weight: normal;
             line-height: 175%;
+
             width: 210px;
 
             @include media-breakpoint-down(xs) {
@@ -154,10 +172,13 @@
 
         &__text-mobile {
             display: none;
+
             @include media-breakpoint-down(xs) {
-                display: block;
                 font-size: 12px;
                 line-height: 167%;
+
+                display: block;
+
                 width: 146px;
             }
         }

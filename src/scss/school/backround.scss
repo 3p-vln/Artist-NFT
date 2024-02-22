@@ -1,13 +1,14 @@
 .background {
     position: absolute;
-    left: 50%;
     z-index: 1;
+    left: 50%;
+
     width: 100%;
     height: 100%;
+
     transform: translateX(-50%);
 
     &__blur {
-      
         @include media-breakpoint-down(xs) {
             display: none;
         }

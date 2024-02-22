@@ -1,5 +1,4 @@
 @use 'sass:math';
-
 @import 'config/_media-breakpoints';
 @import 'config/fonts';
 @import 'config/vars';
@@ -12,26 +11,30 @@
 @import 'components/itemsTabs';
 
 body {
-    font-family: "ProximaNova";
+    font-family: ProximaNova;
 }
 
 [class*='__container'] {
     position: relative;
     z-index: 2;
+
+    max-width: $maxWidthContainer;
     margin: 0 auto;
     padding: 0 15px;
-    max-width: $maxWidthContainer;
 }
 
 .wrapper {
     display: flex;
-    flex-direction: column;
     overflow: hidden;
+    flex-direction: column;
+
     min-height: 100%;
 }
 
 .page {
     position: relative;
+
     flex: 1 1 auto;
+
     background: $background;
 }

@@ -2,6 +2,7 @@
     &__content {
         display: flex;
         justify-content: space-between;
+
         padding-top: 144px;
         padding-bottom: 88px;
 
@@ -18,31 +19,42 @@
 
     &__left {
         z-index: 2;
+
         display: flex;
         flex-direction: column;
-        padding: 60px 0 0 12px;
+
         max-width: 39.65%;
+        padding: 60px 0 0 12px;
 
         &-title {
             padding: 24px 0 0 2px;
             width: 475px;
             font-family: 'ProximaNova';
             font-weight: 700;
+            font-family: ProximaNova;
             font-size: 64px;
+            font-weight: bold;
             line-height: 65px;
+
+            width: 475px;
+            padding: 24px 0 0 2px;
+
             color: $whiteTwo;
 
             @include media-breakpoint-down(md) {
                 width: 100%;
                 max-width: 475px;
+
                 text-align: center;
             }
 
             @include media-breakpoint-down(xs) {
-                padding: 0;
-                max-width: 271px;
                 font-size: 36px;
                 line-height: 40px;
+
+                max-width: 271px;
+                padding: 0;
+
                 text-align: left;
             }
         }
@@ -52,8 +64,14 @@
             max-width: 271px;
             font-family: 'ProximaNova';
             font-weight: 400;
+            font-family: ProximaNova;
             font-size: clamp(15px, 2.5vw, 16px);
+            font-weight: normal;
             line-height: 28px;
+
+            max-width: 271px;
+            padding: 14px 0 0 3px;
+
             color: $whiteTwo;
 
             @include media-breakpoint-down(md) {
@@ -61,8 +79,10 @@
             }
 
             @include media-breakpoint-down(xs) {
-                padding: 8px 0 0;
                 line-height: 24px;
+
+                padding: 8px 0 0;
+
                 text-align: left;
             }
         }
@@ -70,8 +90,9 @@
         @include media-breakpoint-down(md) {
             align-items: center;
             justify-content: center;
-            padding: 0;
+
             max-width: 100%;
+            padding: 0;
         }
 
         @include media-breakpoint-down(xs) {
@@ -98,27 +119,32 @@
 
     .btns {
         display: flex;
+
         padding: 40px 0 0 2px;
         gap: 12px;
 
         &__premium {
             &-btn {
                 padding: 18px 22px;
+
                 text-wrap: nowrap;
 
                 &-svg {
                     min-width: 18px;
-                    min-height: 18px;
                     max-width: 24px;
+                    min-height: 18px;
                     max-height: 24px;
+
                     color: #1d1f21;
                 }
 
                 span {
-                    font-family: 'ProximaNova';
+                    font-family: ProximaNova;
                     font-size: clamp(15px, 2.5vw, 18px);
-                    color: $background;
+
                     text-wrap: nowrap;
+
+                    color: $background;
                 }
 
                 @include media-breakpoint-down(xs) {
@@ -133,10 +159,11 @@
                 padding: 18px 36px;
 
                 span {
-                    font-family: 'ProximaNova';
+                    font-family: ProximaNova;
                     font-size: clamp(15px, 2.5vw, 18px);
                     line-height: 26.5px;
                     -webkit-text-fill-color: transparent;
+
                     background: $rainbowBtnGradient;
                     background-clip: text;
                 }
@@ -160,6 +187,7 @@
         @include media-breakpoint-down(md) {
             display: flex;
             justify-content: center;
+
             max-width: 100%;
         }
     }
@@ -167,7 +195,9 @@
     &__right {
         display: flex;
         align-items: center;
+
         max-width: 688px;
+
         transform: translateX(-17px);
         aspect-ratio: 1 / 0.92;
 
@@ -178,7 +208,9 @@
             @include media-breakpoint-down(sm) {
                 position: relative;
                 left: 50%;
+
                 padding: 0 15px;
+
                 transform: translateX(-50%);
             }
         }
@@ -189,8 +221,10 @@
 
         @include media-breakpoint-down(sm) {
             display: block;
+
             min-width: 90%;
             min-height: 100%;
+
             transform: translateX(0);
         }
 

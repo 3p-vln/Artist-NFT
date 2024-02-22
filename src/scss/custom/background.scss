@@ -1,12 +1,13 @@
 .background {
     position: absolute;
     z-index: 1;
-    margin-top: 65px;
+
     width: 100%;
+    margin-top: 65px;
 
     &__custom {
-        left: -106px;
         top: 87px;
+        left: -106px;
 
         @include media-breakpoint-down(md) {
             display: none;
@@ -14,25 +15,26 @@
     }
 
     &__unique {
-        right: 381px;
         top: 612px;
+        right: 381px;
 
         @include media-breakpoint-down(md) {
-            right: -144px;
             top: 11px;
+            right: -144px;
         }
     }
 
     &__blur {
         position: absolute;
-        left: 0;
         top: -70px;
+        left: 0;
 
         &_mob {
             display: none;
 
             @include media-breakpoint-down(sm) {
                 display: block;
+
                 width: 100%;
                 object-fit: contain;
             }
@@ -45,8 +47,9 @@
 
     svg {
         position: absolute;
-        right: 54.25%;
         top: 476px;
+        right: 54.25%;
+
         width: 25px;
         height: 25px;
 
@@ -57,14 +60,17 @@
 
     &__custom,
     &__unique {
-        position: absolute;
-        font-family: "ProximaNova";
-        font-weight: 700;
+        font-family: ProximaNova;
         font-size: 79px;
+        font-weight: bold;
+
+        position: absolute;
+
         letter-spacing: 1px;
-        -webkit-text-stroke: 1px $whiteTwo;
-        color: transparent;
+
         opacity: 0.2;
+        color: transparent;
+        -webkit-text-stroke: 1px $whiteTwo;
 
         @include media-breakpoint-down(lg) {
             font-size: calc(50px + (79 - 50) * ((100vw - 375px) / (1440 - 375)));

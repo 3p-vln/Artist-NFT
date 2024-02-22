@@ -1,15 +1,28 @@
 import JustValidate from 'just-validate';
+import IMask from 'imask';
 
 export function validate() {
     const card = document.querySelectorAll('.tabs__nav-btn');
-    const forms = document.querySelectorAll('.form');
 
     card.forEach(item => {
         const tabId = item.getAttribute('data-tab');
         const currentTab = document.querySelector(tabId + ' .form');
-        console.log(currentTab);
+        const formId = currentTab.getAttribute('id');
+        const currentTabCard = document.querySelector('#' + formId + ' .card-numb');
+        const currentTabDate = document.querySelector('#' + formId + ' .date');
+        console.log(currentTabCard, currentTabDate);
+
+        const maskOptionsCard = {
+            mask: '0000 0000 0000 0000',
+        };
+        const maskOptionsDate = {
+            mask: '00/00',
+        };
 
         if (currentTab.getAttribute('id') == 'form-paypal') {
+            var maskCard = new IMask(currentTabCard, maskOptionsCard);
+            var maskDate = new IMask(currentTabDate, maskOptionsDate);
+
             const validate = new JustValidate('#form-paypal', {
                 errorLabelStyle: {
                     color: '#1D1F21',
@@ -26,45 +39,11 @@ export function validate() {
                         rule: 'required',
                         errorMessage: 'Enter your card number',
                     },
-                    // {
-                    //     rule: 'text',
-                    // },
-                    {
-                        rule: 'customRegexp',
-                        value: /^[0-9]+$/,
-                        errorMessage: 'Enter your card number with numbers',
-                    },
-                    {
-                        rule: 'minLength',
-                        value: 16,
-                        errorMessage: 'Minimum 16 characters',
-                    },
-                    {
-                        rule: 'maxLength',
-                        value: 16,
-                        errorMessage: 'Maximum 16 characters',
-                    },
                 ])
                 .addField('#date', [
                     {
                         rule: 'required',
                         errorMessage: 'Enter your card expiration date',
-                    },
-                    {
-                        rule: 'customRegexp',
-                        // value: /^[-\w.]+@([а-яёa-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$/,
-                        value: /^[0-9/]+$/,
-                        errorMessage: 'Write correct card expiration date',
-                    },
-                    {
-                        rule: 'minLength',
-                        value: 5,
-                        errorMessage: 'Minimum 5 characters',
-                    },
-                    {
-                        rule: 'maxLength',
-                        value: 5,
-                        errorMessage: 'Maximum 5 characters',
                     },
                 ])
                 .addField('#cvv', [
@@ -111,6 +90,9 @@ export function validate() {
                 '#form-paypal'.reset();
             });
         } else if (currentTab.getAttribute('id') == 'form-card') {
+            var maskCard = new IMask(currentTabCard, maskOptionsCard);
+            var maskDate = new IMask(currentTabDate, maskOptionsDate);
+
             const validate = new JustValidate('#form-card', {
                 errorLabelStyle: {
                     color: '#1D1F21',
@@ -130,42 +112,11 @@ export function validate() {
                     // {
                     //     rule: 'text',
                     // },
-                    {
-                        rule: 'customRegexp',
-                        value: /^[0-9]+$/,
-                        errorMessage: 'Enter your card number with numbers',
-                    },
-                    {
-                        rule: 'minLength',
-                        value: 16,
-                        errorMessage: 'Minimum 16 characters',
-                    },
-                    {
-                        rule: 'maxLength',
-                        value: 16,
-                        errorMessage: 'Maximum 16 characters',
-                    },
                 ])
                 .addField('#date', [
                     {
                         rule: 'required',
                         errorMessage: 'Enter your card expiration date',
-                    },
-                    {
-                        rule: 'customRegexp',
-                        // value: /^[-\w.]+@([а-яёa-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$/,
-                        value: /^[0-9/]+$/,
-                        errorMessage: 'Write correct card expiration date',
-                    },
-                    {
-                        rule: 'minLength',
-                        value: 5,
-                        errorMessage: 'Minimum 5 characters',
-                    },
-                    {
-                        rule: 'maxLength',
-                        value: 5,
-                        errorMessage: 'Maximum 5 characters',
                     },
                 ])
                 .addField('#cvv', [
