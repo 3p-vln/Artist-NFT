@@ -5,7 +5,6 @@
 
 .for-owner {
     color: $whiteColor;
-    // height: 0;
     &__container {
         display: flex;
         justify-content: space-between;
@@ -18,7 +17,6 @@
 
     &__page-container {
         display: flex;
-        // align-items: center;
     }
 
     .header {
@@ -297,7 +295,6 @@
 
         &__message-oper-info {
             display: flex;
-            // justify-content: space-between;
             align-items: flex-end;
             gap: 10px;
         }
