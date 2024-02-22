@@ -24,6 +24,7 @@ export const webpackConfig = isMode => {
             auction: path.join(paths.src, 'js/auction.js'),
             school: path.join(paths.src, 'js/school.js'),
             forum: path.join(paths.src, 'js/forum.js'),
+            client: path.join(paths.src, 'js/client.js'),
             app: path.join(paths.src, 'js/app.js'),
         },
 

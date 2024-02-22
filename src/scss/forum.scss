@@ -5,16 +5,12 @@
 .page {
     position: relative;
 
+    margin-top: 63px;
+
     background: $background;
 
     &__container {
         position: relative;
         z-index: 2;
-
-        margin-top: 85px;
-
-        @include media-breakpoint-down(md) {
-            margin-top: 125px;
-        }
     }
 }

@@ -1,0 +1,188 @@
+.header {
+    &__container {
+        display: block;
+        position: relative;
+
+        max-width: 1259px;
+        padding: 9px 15px;
+
+        height: 64px;
+
+        @media (max-width: 1100px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__logo {
+        opacity: 0.7;
+        transition: opacity 0.5s;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .tabs {
+        top: 100%;
+
+        width: 100%;
+        margin-top: 5px;
+        margin-left: 10px;
+
+        @media (max-width: 1100px) {
+            margin: 0;
+        }
+
+        &__nav {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+
+            @media (max-width: 1100px) {
+                gap: 30px;
+            }
+
+            &-btn {
+                font-size: 16px;
+                font-weight: normal;
+                line-height: 21px;
+
+                display: flex;
+                align-items: center;
+
+                color: $whiteTwo;
+                background: none;
+                gap: 11px;
+                position: relative;
+                width: 100%;
+                &:not(.active) {
+                    svg path {
+                        fill: rgb(82, 89, 96);
+                    }
+                }
+
+                &::before {
+                    display: none;
+                    position: absolute;
+                    bottom: -14.5px;
+                    left: 0;
+
+                    width: 100%;
+                    height: 1px;
+
+                    content: '';
+
+                    opacity: 0.1;
+                    background-color: $whiteTwo;
+
+                    @media (max-width: 1100px) {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    .menu {
+        position: absolute;
+        top: 92%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        width: 217px;
+        margin-left: 0;
+        padding: 36px 26px 36px 2px;
+        height: 92.6vh;
+
+        @media (max-width: 1100px) {
+            position: fixed;
+            top: 64px;
+            right: -100%;
+            display: flex;
+            overflow: auto;
+            align-items: start;
+            flex-direction: column;
+            gap: 30px;
+            width: 100%;
+            height: auto;
+            padding: 18px 15px 29px 15px;
+            background: #1d1f21;
+            background-size: cover;
+            transition: right 0.3s ease 0s;
+        }
+
+        &__logout {
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 21px;
+
+            position: relative;
+
+            display: flex;
+            align-items: center;
+
+            color: $whiteTwo;
+            background: none;
+            gap: 9px;
+
+            &::before {
+                position: absolute;
+                bottom: -15.5px;
+                left: 0;
+
+                width: 100%;
+                height: 1px;
+
+                content: '';
+
+                opacity: 0.7;
+                background-color: $whiteTwo;
+
+                @media (max-width: 1100px) {
+                    display: none;
+                }
+            }
+        }
+
+        &__info {
+            font-size: 12px;
+            font-weight: normal;
+            line-height: 20px;
+
+            color: $whiteTwo;
+
+            @media (max-width: 1100px) {
+                display: none;
+            }
+        }
+
+        &__end {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+    }
+
+    &__menu {
+        &_active {
+            position: absolute;
+            top: 0;
+        }
+    }
+
+    &__burger {
+        @media (max-width: 1100px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 9px;
+            background: linear-gradient(130.1deg, rgba(104, 201, 255, 0.1) 22.178%, rgba(209, 181, 255, 0.1) 92.41%);
+        }
+    }
+}
