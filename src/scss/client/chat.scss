@@ -2,12 +2,29 @@
     border-radius: 32px 32px 0px 0px;
     background: rgb(33, 36, 38);
     color: $whiteTwo;
-    padding: 22px 27px;
+    padding: 22px 33px 0 27px;
     height: 100vh;
     overflow: hidden;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        top: 0;
+        background-color: $whiteTwo;
+        opacity: 0.1;
+        left: 343px;
+    }
+
+    &__content {
+        display: flex;
+    }
 
     &__list {
         margin-top: 12px;
+        min-width: 320px;
         .chats {
             margin-top: 41px;
             &__item {
@@ -50,5 +67,177 @@
 
     &__massage {
         letter-spacing: 0.9px;
+    }
+
+    &__one {
+        padding: 3px 0 0 21px;
+        width: 100%;
+    }
+
+    .user {
+        display: flex;
+        align-items: center;
+
+        &__img {
+            width: 36px;
+            height: 36px;
+            margin-right: 14px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__online {
+            position: relative;
+            margin-left: 39px;
+            font-size: 13px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: #47cd7d;
+                right: 43px;
+                top: 2px;
+            }
+        }
+    }
+
+    .message {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100vh;
+        padding-bottom: 180px;
+
+        &__my {
+            padding: 12px 24px;
+            border-radius: 8px 8px 0 8px;
+            width: fit-content;
+            background-color: rgb(44, 47, 51);
+            max-width: 402px;
+            margin-left: auto;
+            margin-bottom: 6px;
+            font-size: 14px;
+            line-height: 18px;
+
+            &:first-child {
+                padding: 12px;
+            }
+        }
+
+        &__time {
+            opacity: 0.4;
+            margin-left: auto;
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+        &__img {
+            border-radius: 6px;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__new {
+            text-align: center;
+            opacity: 0.4;
+            font-size: 12px;
+            line-height: 15px;
+            margin: 24px 0;
+            position: relative;
+
+            &::after,
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background-color: $whiteTwo;
+                opacity: 0.4;
+                left: 0;
+            }
+
+            &::before {
+                top: -4.5px;
+            }
+
+            &::after {
+                bottom: -4.5px;
+            }
+        }
+
+        &__from {
+            max-width: 403px;
+            padding: 12px 24px;
+            border-radius: 8px 8px 8px 0;
+            background-color: rgb(54, 38, 234);
+            position: relative;
+            left: 29px;
+            margin-bottom: 28px;
+            font-size: 14px;
+            line-height: 18px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 19px;
+                height: 19px;
+                border-radius: 50%;
+                background-image: url(../images/for-client/chat/ivan-for-list.png);
+                background-size: cover;
+                left: -29px;
+                bottom: 0;
+            }
+
+            &::after {
+                content: '10 min ago';
+                position: absolute;
+                opacity: 0.4;
+                bottom: -22px;
+                left: -29px;
+                font-size: 12px;
+                line-height: 15px;
+            }
+        }
+
+        &__send {
+            width: 100%;
+            position: relative;
+            margin-top: 20px;
+
+            input {
+                width: 100%;
+                padding: 21px 21px 22px 32px;
+                font-family: ProximaNova;
+                font-size: 16px;
+                line-height: 21px;
+                color: $gray3Color;
+                background-color: rgb(44, 47, 51);
+                border-radius: 9px;
+            }
+
+            button {
+                background: none;
+                border: none;
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                right: 24px;
+                top: 21px;
+
+                svg {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
     }
 }
