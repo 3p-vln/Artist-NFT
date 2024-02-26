@@ -1,9 +1,9 @@
-<div class="chat tabs__item" id="messages">
+<div class="chat tabs__item pages" id="messages">
     <div class="chat__content">
         <div class="chat__list">
             <h2 class="chat__header">My chat list</h2>
-            <ul class="chats">
-                <li class="chats__item">
+            <div class="chats">
+                <button class="chats__item chat__nav-btn" data-tab="#chat-1">
                     <div class="chat__img">
                         <img src="images/for-client/chat/ivan-img.png" />
                     </div>
@@ -12,8 +12,18 @@
                         <p class="chat__massage">Message that have been writed...</p>
                     </div>
                     <p class="chat__time">10 min ago</p>
-                </li>
-                <li class="chats__item">
+                </button>
+                <button class="chats__item chat__nav-btn" data-tab="#chat-2">
+                <div class="chat__img">
+                    <img src="images/for-client/chat/ivan-img.png" />
+                </div>
+                    <div class="chat__info">
+                        <p class="chat__name">Ivan Ivanov</p>
+                        <p class="chat__massage">Message that have been writed...</p>
+                    </div>
+                    <p class="chat__time">10 min ago</p>
+                </button>
+                <button class="chats__item chat__nav-btn" data-tab="#chat-3">
                     <div class="chat__img">
                         <img src="images/for-client/chat/ivan-img.png" />
                     </div>
@@ -22,8 +32,8 @@
                         <p class="chat__massage">Message that have been writed...</p>
                     </div>
                     <p class="chat__time">10 min ago</p>
-                </li>
-                <li class="chats__item">
+                </button>
+                <button class="chats__item chat__nav-btn" data-tab="#chat-4">
                     <div class="chat__img">
                         <img src="images/for-client/chat/ivan-img.png" />
                     </div>
@@ -32,8 +42,8 @@
                         <p class="chat__massage">Message that have been writed...</p>
                     </div>
                     <p class="chat__time">10 min ago</p>
-                </li>
-                <li class="chats__item">
+                </button>
+                <button class="chats__item chat__nav-btn" data-tab="#chat-5">
                     <div class="chat__img">
                         <img src="images/for-client/chat/ivan-img.png" />
                     </div>
@@ -42,20 +52,10 @@
                         <p class="chat__massage">Message that have been writed...</p>
                     </div>
                     <p class="chat__time">10 min ago</p>
-                </li>
-                <li class="chats__item">
-                    <div class="chat__img">
-                        <img src="images/for-client/chat/ivan-img.png" />
-                    </div>
-                    <div class="chat__info">
-                        <p class="chat__name">Ivan Ivanov</p>
-                        <p class="chat__massage">Message that have been writed...</p>
-                    </div>
-                    <p class="chat__time">10 min ago</p>
-                </li>
-            </ul>
+                </button>
+            </div>
         </div>
-        <div class="chat__one">
+        <div class="chat__one chat__item" id="chat-1">
             <div class="chat__user user">
                 <div class="user__img">
                     <img src="images/for-client/chat/ivan-for-list.png" />
@@ -96,6 +96,177 @@
                     </button>
                 </form>
                 
+            </div>
+        </div>
+        <div class="chat__one chat__item" id="chat-2">
+            <div class="chat__user user">
+                <div class="user__img">
+                    <img src="images/for-client/chat/ivan-for-list.png" />
+                </div>
+                <p class="user__name">Ivan Ivanov</p>
+                <p class="user__online">Online</p>
+            </div>
+            <div class="chat__messages message">
+                <div class="message__my">
+                    <div class="message__img">
+                        <img src="images/for-client/chat/chat-img.jpeg" />
+                    </div>
+                </div>
+                <div class="message__my">
+                    <p class="message__text">Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="message__time">10 min ago</div>
+                <div class="message__new">New messages</div>
+                <div class="message__from">
+                    <p class="message__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                        enim ad minim veniam
+                    </p>
+                </div>
+                <div class="message__my">
+                    <p class="message__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                        enim ad minim veniam
+                    </p>
+                </div>
+                <div class="message__time">10 min ago</div>
+                <form class="message__send">
+                    <input type="text" class="message__input" placeholder="Enter your message here"></input>
+                    <button class="message__btn">
+                        <svg>
+                            <use href="#send"></use>
+                        </svg>
+                    </button>
+                </form>
+                
+            </div>
+        </div>
+        <div class="chat__one chat__item" id="chat-3">
+            <div class="chat__user user">
+                <div class="user__img">
+                    <img src="images/for-client/chat/ivan-for-list.png" />
+                </div>
+                <p class="user__name">Ivan Ivanov</p>
+                <p class="user__online">Online</p>
+            </div>
+            <div class="chat__messages message">
+                <div class="message__my">
+                    <div class="message__img">
+                        <img src="images/for-client/chat/chat-img.jpeg" />
+                    </div>
+                </div>
+                <div class="message__my">
+                    <p class="message__text">Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="message__time">10 min ago</div>
+                <div class="message__new">New messages</div>
+                <div class="message__from">
+                    <p class="message__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                        enim ad minim veniam
+                    </p>
+                </div>
+                <div class="message__my">
+                    <p class="message__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                        enim ad minim veniam
+                    </p>
+                </div>
+                <div class="message__time">10 min ago</div>
+                <form class="message__send">
+                    <input type="text" class="message__input" placeholder="Enter your message here"></input>
+                    <button class="message__btn">
+                        <svg>
+                            <use href="#send"></use>
+                        </svg>
+                    </button>
+                </form>
+                
+            </div>
+        </div>
+        <div class="chat__one chat__item" id="chat-4">
+            <div class="chat__user user">
+                <div class="user__img">
+                    <img src="images/for-client/chat/ivan-for-list.png" />
+                </div>
+                <p class="user__name">Ivan Ivanov</p>
+                <p class="user__online">Online</p>
+            </div>
+            <div class="chat__messages message">
+                <div class="message__my">
+                    <div class="message__img">
+                        <img src="images/for-client/chat/chat-img.jpeg" />
+                    </div>
+                </div>
+                <div class="message__my">
+                    <p class="message__text">Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="message__time">10 min ago</div>
+                <div class="message__new">New messages</div>
+                <div class="message__from">
+                    <p class="message__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                        enim ad minim veniam
+                    </p>
+                </div>
+                <div class="message__my">
+                    <p class="message__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                        enim ad minim veniam
+                    </p>
+                </div>
+                <div class="message__time">10 min ago</div>
+                <form class="message__send">
+                    <input type="text" class="message__input" placeholder="Enter your message here"></input>
+                    <button class="message__btn">
+                        <svg>
+                            <use href="#send"></use>
+                        </svg>
+                    </button>
+                </form>
+                
+            </div>
+        </div>
+        <div class="chat__one chat__item" id="chat-5">
+            <div class="chat__user user">
+                <div class="user__img">
+                    <img src="images/for-client/chat/ivan-for-list.png" />
+                </div>
+                <p class="user__name">Ivan Ivanov</p>
+                <p class="user__online">Online</p>
+            </div>
+            <div class="chat__messages message">
+                <div class="message__my">
+                    <div class="message__img">
+                        <img src="images/for-client/chat/chat-img.jpeg" />
+                    </div>
+                </div>
+                <div class="message__my">
+                    <p class="message__text">Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="message__time">10 min ago</div>
+                <div class="message__new">New messages</div>
+                <div class="message__from">
+                    <p class="message__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                        enim ad minim veniam
+                    </p>
+                </div>
+                <div class="message__my">
+                    <p class="message__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                        enim ad minim veniam
+                    </p>
+                </div>
+                <div class="message__time">10 min ago</div>
+                <form class="message__send">
+                    <input type="text" class="message__input" placeholder="Enter your message here"></input>
+                    <button class="message__btn">
+                        <svg>
+                            <use href="#send"></use>
+                        </svg>
+                    </button>
+                </form>
             </div>
         </div>
     </div>

@@ -39,7 +39,13 @@
                 font-weight: 400;
                 line-height: 15px;
                 position: relative;
+                color: $whiteTwo;
                 gap: 13px;
+                text-align: left;
+
+                &.active {
+                    background: rgb(44, 47, 51);
+                }
             }
         }
     }
@@ -72,6 +78,11 @@
     &__one {
         padding: 3px 0 0 21px;
         width: 100%;
+        display: none;
+
+        &.active {
+            display: block;
+        }
     }
 
     .user {
