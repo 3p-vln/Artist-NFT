@@ -27,7 +27,13 @@
                 <form id="form" action="" class="bargain__form">
                     <label for="" class="bargain__form-label">Place your bid</label>
                     <div class="bargain__form-wrapper">
-                        <input id="number" type="number" class="bargain__form-input" placeholder="$100 322" />
+                        <input
+                            id="number"
+                            type="text"
+                            class="bargain__form-input"
+                            placeholder="$100 322"
+                            oninput="this.value = this.value.replace(/\D/g, '')"
+                        />
                         <button class="bargain__form-btn btn gradient">
                             <span>Place bid</span>
                         </button>
