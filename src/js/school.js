@@ -32,13 +32,17 @@ buttons.forEach((button) => {
       btn.classList.remove('tabs__button_active');
     });
 
-    cards.forEach((card) => {
-      card.classList.remove('card_active');
-    });
+        buttons.forEach(btn => {
+            btn.classList.remove('tabs__button_active');
+        });
 
-    currentButton.classList.add('tabs__button_active');
-    currentCard.classList.add('card_active');
-  });
+        cards.forEach(card => {
+            card.classList.remove('card_active');
+        });
+
+        currentButton.classList.add('tabs__button_active');
+        currentCard.classList.add('card_active');
+    });
 });
 
 buttons[0].click();
