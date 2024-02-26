@@ -22,7 +22,6 @@ tabButtons.forEach(button => {
 
         tabButtons.forEach(tabButton => {
           tabButton.classList.remove('tabs__button_active');
-          // tabsSelect.classList.remove('tabs__select_active');
         });
 
       button.classList.add('tabs__button_active');
@@ -82,7 +81,7 @@ validator
             errorMessage: 'Write correct email',
         },
     ])
-    .addField(document.querySelector('#password'), [
+    .addField(document.querySelector('#password'), [  
         {
             rule: 'required',
         },
@@ -92,3 +91,6 @@ validator
             errorMessage: 'incorrect password',
         },
     ]);
+
+    const artLoadEvent = new Event('loadingIsFinished');
+    document.dispatchEvent(artLoadEvent);

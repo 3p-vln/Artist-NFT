@@ -18,33 +18,38 @@
             <use href="#log-out-white"></use>
           </svg>
         </a>
+        <button class="header__menu">
+          <span class="header__menu-span-top"></span>
+          <span class="header__menu-span-middle"></span>
+          <span class="header__menu-span-bottom"></span>
+        </button>
       </div>
     </header>
     <main class="page for-owner__page">
       <div class="page__container for-owner__page-container">
         <sidebar class="sidebar for-owner__sidebar">
           <div class="sidebar__content">
-            <a href="#" class="sidebar__content-link">
+            <a href="#" class="sidebar__content-link" data-tab="#chat">
               <svg class="sidebar__content-svg">
                 <use href="#owner-message"></use>
               </svg>
               Messages
             </a>
-            <a href="#" class="sidebar__content-link">
+            <a href="#" class="sidebar__content-link" data-tab="#orders">
               <svg class="sidebar__content-svg">
                 <use href="#owner-orders"></use>
               </svg>
               Orders
             </a>
-            <a href="#" class="sidebar__content-link">
+            <a href="#" class="sidebar__content-link" data-tab="#nft-orders">
               <svg class="sidebar__content-svg">
                 <use href="#owner-nft-orders"></use>
               </svg>
               NFT Orders
             </a>
-            <a href="#" class="sidebar__content-link">
+            <a href="#" class="sidebar__content-link" data-tab="#workers">
               <svg class="sidebar__content-svg">
-                <use href="#workers"></use>
+                <use href="#owner-workers"></use>
               </svg>
               Workers
             </a>
@@ -59,8 +64,8 @@
             <p class="sidebar__footer-text">All rights reserved © 2022</p>
           </div>
         </sidebar>
-        <div class="chat for-owner__chat-box">
-          <div class="chat__inner">
+        <div class="content for-owner__content-box">
+          <div class="content__box chat" id="chat">
             <div class="chat__list">
               <h3 class="chat__list-title">My chat list</h3>
               <div class="card chat__list-card">
@@ -156,9 +161,13 @@
               </div>
             </div>
           </div>
+          <div class="content__box orders" id="orders">orders</div>
+          <div class="content__box nft-orders" id="nft-orders">Nft-orders</div>
+          <div class="content__box workers" id="workers">Workers</div>
         </div>
       </div>
     </main>
     @@include('html/modules/Sprite.html')
 </body>
 <script src="js/app.min.js"></script>
+<script src="js/forOwner.min.js"></script>
