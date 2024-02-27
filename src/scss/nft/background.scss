@@ -1,9 +1,20 @@
 .background {
     position: absolute;
     z-index: 1;
-
     width: 100%;
     margin-top: 65px;
+
+    &__make-art,
+    &__no-war {
+        font-family: "ProximaNova";
+        font-size: 79px;
+        font-weight: bold;
+        position: absolute;
+        letter-spacing: 1px;
+        opacity: 0.2;
+        color: transparent;
+        -webkit-text-stroke: 1px $whiteTwo;
+    }
 
     &__make-art {
         top: 95px;
@@ -24,7 +35,6 @@
         position: absolute;
         top: 194px;
         right: 24.5%;
-
         width: 25px;
         height: 25px;
     }
@@ -33,24 +43,8 @@
         position: absolute;
         top: 46px;
         left: 27%;
-
         width: 45px;
         height: 65px;
-    }
-
-    &__make-art,
-    &__no-war {
-        font-family: ProximaNova;
-        font-size: 79px;
-        font-weight: bold;
-
-        position: absolute;
-
-        letter-spacing: 1px;
-
-        opacity: 0.2;
-        color: transparent;
-        -webkit-text-stroke: 1px $whiteTwo;
     }
 
     @include media-breakpoint-down(md) {

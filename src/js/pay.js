@@ -7,11 +7,11 @@ import { validate } from './pay/payValidate';
 import { copytext } from './pay/copy';
 
 document.addEventListener('DOMContentLoaded', async () => {
-    tab();
-    await getPayInfo();
-    validate();
-    copytext();
+  tab();
+  await getPayInfo();
+  validate();
+  copytext();
 
-    const loadingIsFinished = new Event('loadingIsFinished');
-    document.dispatchEvent(loadingIsFinished);
+  const loadingIsFinished = new Event('loadingIsFinished');
+  document.dispatchEvent(loadingIsFinished);
 });

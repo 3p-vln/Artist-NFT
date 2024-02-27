@@ -1,141 +1,146 @@
 <section class="auction">
-    <div class="auction-content">
-        <div class="auction__image">
-            <picture>
-                <source id="imgWebp" srcset="" type="webp" />
-                <img id="imgPng" src="images/nft-card/card-item.png" alt="lot" class="auction__image-img" />
-            </picture>
-        </div>
-        <div class="auction__info">
-            <h3 class="auction__info-subtitle">AUCTION</h3>
-            <h2 id="title" class="auction__info-title"></h2>
-            <div class="auction__info-columns columns">
-                <div class="columns__item">
-                    <h2 id="size" class="columns__item-text"></h2>
-                </div>
-                <div class="columns__item">
-                    <h2 class="columns__item-text">Estimated value</h2>
-                    <h3 id="estimatedValue" class="columns__item-value"></h3>
-                </div>
-                <div class="columns__item">
-                    <h2 class="columns__item-text">This work is part of a limited edition set.</h2>
-                </div>
-            </div>
-            <div class="auction__info-bargain bargain">
-                <h2 class="bargain__title">highest price</h2>
-                <h3 id="highestPrice" class="bargain__value"></h3>
-                <form id="form" action="" class="bargain__form">
-                    <label for="" class="bargain__form-label">Place your bid</label>
-                    <div class="bargain__form-wrapper">
-                        <input
-                            id="number"
-                            type="text"
-                            class="bargain__form-input"
-                            placeholder="$100 322"
-                            oninput="this.value = this.value.replace(/\D/g, '')"
-                        />
-                        <button class="bargain__form-btn btn gradient">
-                            <span>Place bid</span>
-                        </button>
-                    </div>
-                </form>
-                <div class="bargain__date">
-                    <div class="bargain__date-timer">
-                        <div id="days"><span>00</span>d</div>
-                        <div id="hours"><span>00</span>h</div>
-                        <div id="minutes"><span>00</span>m</div>
-                        <div id="seconds"><span>00</span>s</div>
-                    </div>
+  <div class="auction-content">
+    <div class="auction__image">
+      <picture>
+        <source id="imgWebp" srcset="" type="webp" />
 
-                    <!-- <h2 id="countdown" class="bargain__date-timer"></h2> -->
-                    <h3 class="bargain__date-deadline">Live март 5, 8:00pm</h3>
-                </div>
-                <h4 class="bargain__description">
-                    You can purchase Art or NFT using popular system of payment. We accepting PayPal, Visa/Mastercard. Any crypto currency
-                </h4>
-            </div>
-        </div>
+        <img id="imgPng" src="images/nft-card/card-item.png" alt="lot" class="auction__image-img" />
+      </picture>
     </div>
 
-    <div class="auction__progress">
-        <h2 class="auction__progress-text">About the work</h2>
-        <div class="auction__progress-bar">
-            <progress id="progress" class="auction__progress-bar-filled" value="0" max="100"></progress>
+    <div class="auction__info">
+      <h3 class="auction__info-subtitle">AUCTION</h3>
+
+      <h2 id="title" class="auction__info-title"></h2>
+
+      <div class="auction__info-columns columns">
+        <div class="columns__item">
+          <h2 id="size" class="columns__item-text"></h2>
         </div>
-    </div>
 
-    <!-- <div class="auction__progress">
-        <h2 class="auction__progress-text">About the work</h2>
-        <div class="auction__progress-bar progress">
-            <progress value="0" max="100">
-                <div class="progress-bg"><div class="progress-bar"></div></div>
-            </progress>
+        <div class="columns__item">
+          <h2 class="columns__item-text">Estimated value</h2>
+
+          <h3 id="estimatedValue" class="columns__item-value"></h3>
         </div>
-    </div> -->
 
-    <!-- <div class="progress">
-        <progress max="100" value="0"></progress>
-        <div class="progress-value"></div>
-        <div class="progress-bg"><div class="progress-bar"></div></div>
-    </div> -->
+        <div class="columns__item">
+          <h2 class="columns__item-text">This work is part of a limited edition set.</h2>
+        </div>
+      </div>
 
-    <div class="auction__blocks">
-        <div class="auction__blocks-description description">
-            <h2 id="titleDescription" class="description__title"></h2>
-            <h3 id="paragraphDescription" class="description__paragraph"></h3>
-            <button class="description__btn btn grey">
-                <span>Hide info</span>
+      <div class="auction__info-bargain bargain">
+        <h2 class="bargain__title">highest price</h2>
+
+        <h3 id="highestPrice" class="bargain__value"></h3>
+
+        <form id="form" action="" class="bargain__form">
+          <label for="" class="bargain__form-label">Place your bid</label>
+
+          <div class="bargain__form-wrapper">
+            <input
+              id="number"
+              type="text"
+              class="bargain__form-input"
+              placeholder="$100 322"
+              oninput="this.value = this.value.replace(/\D/g, '')"
+            />
+
+            <button class="bargain__form-btn btn gradient">
+              <span>Place bid</span>
             </button>
+          </div>
+        </form>
+
+        <div class="bargain__date">
+          <div class="bargain__date-timer">
+            <div id="days"><span>00</span>d</div>
+            <div id="hours"><span>00</span>h</div>
+            <div id="minutes"><span>00</span>m</div>
+            <div id="seconds"><span>00</span>s</div>
+          </div>
+
+          <h3 class="bargain__date-deadline">Live март 5, 8:00pm</h3>
         </div>
-        <div class="auction__blocks-banner banner">
-            <div class="banner__info">
-                <svg class="banner__info-svg">
-                    <use href="#default-crown" />
-                </svg>
-                <h2 class="banner__info-title">Liked the work?</h2>
-                <h3 class="banner__info-subtitle">Share with friends in social media</h3>
-                <div class="banner__info-social social">
-                    <a class="social__link" href="#">
-                        <svg class="social__link-svg">
-                            <use href="#default-instagram" />
-                        </svg>
-                    </a>
 
-                    <a class="social__link" href="#">
-                        <svg class="social__link-svg">
-                            <use href="#default-twitter" />
-                        </svg>
-                    </a>
-
-                    <a class="social__link" href="#">
-                        <svg class="social__link-svg">
-                            <use href="#default-telegram" />
-                        </svg>
-                    </a>
-
-                    <a class="social__link" href="#">
-                        <svg class="social__link-svg">
-                            <use href="#default-pinterest" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="banner__arrow">
-                <img src="images/auction/arrow.png" alt="arrow" class="banner__arrow-img" />
-            </div>
-
-            <div class="banner__sapphire">
-                <img src="images/auction/sapphire.png" alt="sapphire" class="banner__sapphire-img" />
-            </div>
-
-            <div class="banner__ruby">
-                <img src="images/auction/ruby.png" alt="ruby" class="banner__ruby-img" />
-            </div>
-
-            <div class="banner__circle">
-                <img src="images/auction/circle.png" alt="circle" class="banner__circle-img" />
-            </div>
-        </div>
+        <h4 class="bargain__description">
+          You can purchase Art or NFT using popular system of payment. We accepting PayPal,
+          Visa/Mastercard. Any crypto currency
+        </h4>
+      </div>
     </div>
+  </div>
+
+  <div class="auction__progress">
+    <h2 class="auction__progress-text">About the work</h2>
+    <div class="auction__progress-bar">
+      <progress id="progress" class="auction__progress-bar-filled" value="0" max="100"></progress>
+    </div>
+  </div>
+
+  <div class="auction__blocks">
+    <div class="auction__blocks-description description">
+      <h2 id="titleDescription" class="description__title"></h2>
+
+      <h3 id="paragraphDescription" class="description__paragraph"></h3>
+
+      <button class="description__btn btn grey">
+        <span>Hide info</span>
+      </button>
+    </div>
+
+    <div class="auction__blocks-banner banner">
+      <div class="banner__info">
+        <svg class="banner__info-svg">
+          <use href="#default-crown" />
+        </svg>
+
+        <h2 class="banner__info-title">Liked the work?</h2>
+
+        <h3 class="banner__info-subtitle">Share with friends in social media</h3>
+
+        <div class="banner__info-social social">
+          <a class="social__link" href="#">
+            <svg class="social__link-svg">
+              <use href="#default-instagram" />
+            </svg>
+          </a>
+
+          <a class="social__link" href="#">
+            <svg class="social__link-svg">
+              <use href="#default-twitter" />
+            </svg>
+          </a>
+
+          <a class="social__link" href="#">
+            <svg class="social__link-svg">
+              <use href="#default-telegram" />
+            </svg>
+          </a>
+
+          <a class="social__link" href="#">
+            <svg class="social__link-svg">
+              <use href="#default-pinterest" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="banner__arrow">
+        <img src="images/auction/arrow.png" alt="arrow" class="banner__arrow-img" />
+      </div>
+
+      <div class="banner__sapphire">
+        <img src="images/auction/sapphire.png" alt="sapphire" class="banner__sapphire-img" />
+      </div>
+
+      <div class="banner__ruby">
+        <img src="images/auction/ruby.png" alt="ruby" class="banner__ruby-img" />
+      </div>
+
+      <div class="banner__circle">
+        <img src="images/auction/circle.png" alt="circle" class="banner__circle-img" />
+      </div>
+    </div>
+  </div>
 </section>

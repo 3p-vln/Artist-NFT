@@ -1,69 +1,58 @@
 .pricing-head {
-    position: relative;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 74px;
+  padding-top: 52px;
+  gap: 17px;
 
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-    margin-top: 74px;
-    padding-top: 52px;
-    gap: 17px;
-
-    &__title {
-        font-family: ProximaNova;
-        font-size: clamp(36px, 5vw, 64px);
-        font-weight: bold;
-        line-height: 65px;
-
-        max-width: 569px;
-
-        text-align: center;
-
-        color: $whiteTwo;
-
-        @include media-breakpoint-down(lg) {
-            line-height: calc(40px + (65 - 40) * ((100vw - 375px) / (1440 - 375)));
-        }
-
-        @include media-breakpoint-down(xs) {
-            max-width: 271px;
-            padding-top: 22px;
-            padding-left: 2px;
-
-            text-align: left;
-        }
-    }
-
-    &__subtitle {
-        font-family: ProximaNova;
-        font-size: clamp(15px, 2.5vw, 16px);
-        font-weight: normal;
-        line-height: 28px;
-
-        max-width: 400px;
-
-        text-align: center;
-
-        color: $whiteTwo;
-
-        @include media-breakpoint-down(lg) {
-            line-height: calc(24px + (28 - 24) * ((100vw - 375px) / (1440 - 375)));
-        }
-
-        @include media-breakpoint-down(xs) {
-            max-width: 280px;
-
-            text-align: left;
-        }
-    }
+  &__title {
+    font-family: 'ProximaNova';
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: bold;
+    line-height: 65px;
+    max-width: 569px;
+    text-align: center;
+    color: $whiteTwo;
 
     @include media-breakpoint-down(lg) {
-        margin-top: calc(26px + (60 - 26) * ((100vw - 375px) / (1440 - 375)));
-        gap: calc(16px + (18 - 16) * ((100vw - 375px) / (1440 - 375)));
+      line-height: calc(40px + (65 - 40) * ((100vw - 375px) / (1440 - 375)));
     }
 
     @include media-breakpoint-down(xs) {
-        align-items: start;
+      max-width: 271px;
+      padding-top: 22px;
+      padding-left: 2px;
+      text-align: left;
     }
-}
+  }
 
+  &__subtitle {
+    font-family: 'ProximaNova';
+    font-size: clamp(15px, 2.5vw, 16px);
+    font-weight: normal;
+    line-height: 28px;
+    max-width: 400px;
+    text-align: center;
+    color: $whiteTwo;
+
+    @include media-breakpoint-down(lg) {
+      line-height: calc(24px + (28 - 24) * ((100vw - 375px) / (1440 - 375)));
+    }
+
+    @include media-breakpoint-down(xs) {
+      max-width: 280px;
+      text-align: left;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    margin-top: calc(26px + (60 - 26) * ((100vw - 375px) / (1440 - 375)));
+    gap: calc(16px + (18 - 16) * ((100vw - 375px) / (1440 - 375)));
+  }
+
+  @include media-breakpoint-down(xs) {
+    align-items: start;
+  }
+}

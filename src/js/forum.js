@@ -1,8 +1,8 @@
 import { questionToBD } from './forum/asking';
 
 document.addEventListener('DOMContentLoaded', async () => {
-    await questionToBD();
+  await questionToBD();
 
-    const loadingIsFinished = new Event('loadingIsFinished');
-    document.dispatchEvent(loadingIsFinished);
+  const loadingIsFinished = new Event('loadingIsFinished');
+  document.dispatchEvent(loadingIsFinished);
 });

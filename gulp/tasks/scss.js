@@ -14,27 +14,27 @@ import { isBuild, isDev } from '../../gulpfile.js';
 
 const sass = gulpSass(dartSass);
 const scss = () => {
-    const webpConfig = {
-        webpClass: '.webp',
-        noWebpClass: '.no-webp',
-    };
-    return (
-        gulp
-            .src(filePaths.src.scss, { sourcemaps: isDev })
-            .pipe(plugins.handleError('SCSS'))
-            .pipe(sass({ outputStyle: 'expanded' }))
-            .pipe(plugins.replace(/@img\//g, '../images/'))
-            /** Группировка медиа-запросов только для production */
-            .pipe(plugins.if(isBuild, groupMediaQueries()))
+  const webpConfig = {
+    webpClass: '.webp',
+    noWebpClass: '.no-webp',
+  };
+  return (
+    gulp
+      .src(filePaths.src.scss, { sourcemaps: isDev })
+      .pipe(plugins.handleError('SCSS'))
+      .pipe(sass({ outputStyle: 'expanded' }))
+      .pipe(plugins.replace(/@img\//g, '../images/'))
+      /** Группировка медиа-запросов только для production */
+      .pipe(plugins.if(isBuild, groupMediaQueries()))
 
-            .pipe(plugins.if(isBuild, webpCss(webpConfig)))
+      .pipe(plugins.if(isBuild, webpCss(webpConfig)))
 
-            /** Раскомментировать если нужен не сжатый дубль файла стилей */
-            // .pipe(gulp.dest(filePaths.build.css))
-            .pipe(plugins.if(isBuild, cleanCss()))
-            .pipe(rename({ extname: '.min.css' }))
-            .pipe(gulp.dest(filePaths.build.css))
-            .pipe(plugins.browserSync.stream())
-    );
+      /** Раскомментировать если нужен не сжатый дубль файла стилей */
+      // .pipe(gulp.dest(filePaths.build.css))
+      .pipe(plugins.if(isBuild, cleanCss()))
+      .pipe(rename({ extname: '.min.css' }))
+      .pipe(gulp.dest(filePaths.build.css))
+      .pipe(plugins.browserSync.stream())
+  );
 };
 export { scss };

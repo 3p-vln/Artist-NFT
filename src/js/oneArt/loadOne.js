@@ -1,9 +1,9 @@
 import $ from 'jquery';
 
 export async function load(art) {
-    const product = $('.one-art');
-    document.querySelector('#product').innerHTML = art[0].name;
-    product.append(`
+  const product = $('.one-art');
+  document.querySelector('#product').innerHTML = art[0].name;
+  product.append(`
           <div class="art ${art[0].id}">
               <div class="art__picture">
                   <picture>
@@ -40,9 +40,9 @@ export async function load(art) {
           </div>
           </div>
       `);
-    const info = $('.about');
-    if (art[0].lock == true) {
-        info.append(`
+  const info = $('.about');
+  if (art[0].lock == true) {
+    info.append(`
               <div class="about__bg about__bg_blur">
                   <picture>
                       <source srcset="${art[0].imgWebP}" type="image/webp">
@@ -67,8 +67,8 @@ export async function load(art) {
                   </div>
               </div>
           `);
-    } else if (art[0].lock == false) {
-        info.append(`
+  } else if (art[0].lock == false) {
+    info.append(`
               <div class="about__bg">
                   <picture>
                       <source srcset="${art[0].imgWebP}" type="image/webp">
@@ -101,5 +101,5 @@ export async function load(art) {
                   </div>
               </div>
           `);
-    }
+  }
 }

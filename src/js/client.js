@@ -1,8 +1,8 @@
 import { tab } from './pay/tabs';
 
 document.addEventListener('DOMContentLoaded', async () => {
-    tab();
+  tab();
 
-    const loadingIsFinished = new Event('loadingIsFinished');
-    document.dispatchEvent(loadingIsFinished);
+  const loadingIsFinished = new Event('loadingIsFinished');
+  document.dispatchEvent(loadingIsFinished);
 });
