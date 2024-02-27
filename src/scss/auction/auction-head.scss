@@ -87,7 +87,6 @@
         .columns {
             display: flex;
             gap: 48px;
-
             padding-top: 26px;
 
             @include media-breakpoint-down(xs) {
@@ -281,40 +280,40 @@
                 }
 
                 &-wrapper {
+                    position: relative;
                     display: flex;
-                    gap: 12px;
 
                     padding-top: 6px;
-                    position: relative;
+                    gap: 12px;
 
                     @include media-breakpoint-down(xs) {
                         flex-direction: column;
                     }
 
                     .just-validate-error-label {
-                        position: absolute;
-                        right: 50%;
-                        top: -30px;
-                        z-index: 3;
-                        border-radius: 7px;
-                        padding: 8px;
-                        font-weight: 700;
                         font-size: 14px;
+                        font-weight: bold;
+                        position: absolute;
+                        z-index: 3;
+                        top: -30px;
+                        right: 50%;
+                        padding: 8px;
+                        text-wrap: nowrap;
+                        border-radius: 7px;
                         background: $rainbowBtnGradient;
                         transform: translateX(50%);
-                        text-wrap: nowrap;
 
                         &::after {
-                            content: '';
                             position: absolute;
-                            left: 50%;
-                            top: 28px;
                             z-index: 3;
-                            clip-path: polygon(0 0, 53% 100%, 100% 0);
+                            top: 28px;
+                            left: 50%;
                             width: 10px;
                             height: 10px;
+                            content: '';
                             background: $rainbowBtnGradient;
                             transform: translateX(-50%);
+                            clip-path: polygon(0 0, 53% 100%, 100% 0);
                         }
                     }
                 }
@@ -365,22 +364,19 @@
                 padding-top: 19px;
 
                 &-timer {
-                    display: flex;
-                    gap: 5px;
-                    background: linear-gradient(130.1deg, rgb(104, 201, 255), rgb(209, 181, 255));
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    background-clip: text;
-                    font-family: 'ProximaNova';
+                    font-family: ProximaNova;
                     font-family: ProximaNova;
                     font-size: clamp(18px, 2.5vw, 22px);
                     font-weight: bold;
                     line-height: 33.5px;
+                    display: flex;
 
                     letter-spacing: 1.4px;
 
                     background: linear-gradient(130.1deg, rgb(104, 201, 255), rgb(209, 181, 255));
                     background-clip: text;
+                    background-clip: text;
+                    gap: 5px;
                     -webkit-text-fill-color: transparent;
 
                     @include media-breakpoint-down(xs) {
@@ -482,11 +478,11 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                border-radius: 57px;
-                background-color: black;
-                background: linear-gradient(130.1deg, rgb(104, 201, 255) 6.697%, rgb(209, 181, 255) 82.389%);
-                height: 5px;
                 width: 540px;
+                height: 5px;
+                border-radius: 57px;
+                background: linear-gradient(130.1deg, rgb(104, 201, 255) 6.697%, rgb(209, 181, 255) 82.389%);
+                background-color: black;
 
                 &-bar::after {
                     position: absolute;
@@ -508,22 +504,22 @@
             }
 
             progress::-webkit-progress-bar {
+                box-sizing: border-box;
                 background-color: rgb(33, 36, 38);
                 block-size: 100%;
                 inline-size: 100%;
-                box-sizing: border-box;
                 -webkit-user-modify: read-only !important;
             }
 
             progress::-webkit-progress-value {
+                box-sizing: border-box;
                 background: linear-gradient(130.1deg, rgb(104, 201, 255) 6.697%, rgb(209, 181, 255) 82.389%);
+                transition: width 1s linear;
+                transition: width 1s linear;
+                transition: width 1s linear;
+                transition: width 1s linear;
                 block-size: 100%;
                 inline-size: 50%;
-                box-sizing: border-box;
-                -webkit-transition: width 1s linear;
-                -moz-transition: width 1s linear;
-                -ms-transition: width 1s linear;
-                transition: width 1s linear;
                 -webkit-user-modify: read-write !important;
             }
         }
@@ -544,7 +540,6 @@
 
             @include media-breakpoint-down(xs) {
                 gap: 18px;
-
                 padding-bottom: 30px;
             }
 
@@ -606,16 +601,16 @@
                     font-size: clamp(15px, 2.5vw, 16px);
                     font-weight: normal;
                     line-height: 28px;
+                    overflow: hidden;
 
                     max-width: 679px;
 
                     height: 100%;
-                    overflow: hidden;
-                    transition: fade 0.3s ease 0s;
 
                     padding-top: 18px;
 
                     color: rgb(252, 255, 255);
+                    transition: fade 0.3s ease 0s;
 
                     @include media-breakpoint-down(md) {
                         width: 100%;
@@ -668,7 +663,7 @@
 
                         to {
                             opacity: 1;
-                            transform: translateY(0px);
+                            transform: translateY(0);
                         }
                     }
                 }
@@ -773,7 +768,7 @@
                     }
 
                     &-img {
-                        // width: 100%;widthwidthwidthwidth
+                        // width: 100%;widthwidthwidthwidthwidth
                     }
                 }
 

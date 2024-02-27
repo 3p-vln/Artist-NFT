@@ -120,7 +120,6 @@
 
             @include media-breakpoint-down(sm) {
                 grid-column: auto;
-
                 height: calc(199px + (412 - 199) * ((100vw - 375px) / (768 - 375)));
             }
         }
@@ -155,7 +154,6 @@
         &:nth-child(7) {
             @include media-breakpoint-down(sm) {
                 grid-column: auto;
-
                 height: calc(199px + (412 - 199) * ((100vw - 375px) / (768 - 375)));
             }
         }
@@ -259,7 +257,6 @@
     @include media-breakpoint-down(sm) {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: auto;
-
         margin-bottom: 57px;
         aspect-ratio: 1/6.5766;
     }

@@ -12,20 +12,17 @@ export async function snapBiography() {
     document.querySelector('#biography-subtitle').innerHTML = data.subtitle;
     document.querySelector('#biography-title').innerHTML = data.title;
     document.querySelector('#biography-paragraph').innerHTML = data.paragraph;
-    document.querySelector('#biography-column-year-first').innerHTML =
-      data.columnYearFirst;
+    document.querySelector('#biography-column-year-first').innerHTML = data.columnYearFirst;
     document.querySelector('#biography-column-paragraph-first').innerHTML =
       data.columnParagraphFirst;
-    document.querySelector('#biography-column-year-second').innerHTML =
-      data.columnYearSecond;
+    document.querySelector('#biography-column-year-second').innerHTML = data.columnYearSecond;
     document.querySelector('#biography-column-paragraph-second').innerHTML =
       data.columnParagraphSecond;
-    document.querySelector('#biography-column-year-third').innerHTML =
-      data.columnYearThird;
+    document.querySelector('#biography-column-year-third').innerHTML = data.columnYearThird;
     document.querySelector('#biography-column-paragraph-third').innerHTML =
       data.columnParagraphThird;
   });
   // console.log(querySnapshot);
-};
+}
 
 // snapBiography();

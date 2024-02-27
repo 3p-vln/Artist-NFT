@@ -5,10 +5,11 @@
 
 .for-owner {
     color: $whiteColor;
+
     &__container {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
     }
 
     &__page {
@@ -29,6 +30,7 @@
 
         &__link-text {
         }
+
         &__svg {
             width: 24px;
             height: 24px;
@@ -36,11 +38,11 @@
     }
 
     &__sidebar {
-        width: 245px;
-        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        width: 245px;
+        height: 100vh;
     }
 
     .sidebar {
@@ -53,13 +55,13 @@
         }
 
         &__content-link {
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 131%;
             display: flex;
             align-items: center;
-            gap: 10px;
             color: $gray6Color;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 131%;
+            gap: 10px;
 
             &_active {
                 color: $whiteTwo;
@@ -75,17 +77,17 @@
         }
 
         &__footer-link {
-            font-weight: 400;
             font-size: 16px;
+            font-weight: normal;
             line-height: 131%;
             display: flex;
             align-items: center;
             width: 189px;
+            margin-bottom: 12px;
             padding-bottom: 16px;
             color: $gray6Color;
             border-bottom: 1px solid $borderGrayColor;
             gap: 10px;
-            margin-bottom: 12px;
         }
 
         &__footer-svg {
@@ -101,8 +103,8 @@
     }
 
     .chat {
+        border-radius: 32px 0 0;
         background: $backgroundSecond;
-        border-radius: 32px 0 0 0;
 
         &__inner {
             display: flex;
@@ -114,15 +116,15 @@
         }
 
         &__list-title {
-            font-weight: 700;
             font-size: 14px;
+            font-weight: bold;
             line-height: 143%;
             margin-bottom: 39px;
         }
 
         &__list-card {
-            margin-bottom: 8px;
             width: 287px;
+            margin-bottom: 8px;
         }
 
         &__window {
@@ -148,39 +150,39 @@
         }
 
         &__name {
-            font-weight: 600;
             font-size: 16px;
+            font-weight: 600;
             line-height: 94%;
             color: $gray6Color;
         }
 
         &__window-status {
-            font-weight: 400;
             font-size: 12px;
+            font-weight: normal;
             line-height: 125%;
             position: relative;
 
             &::before {
-                content: '';
                 position: absolute;
+                top: 2px;
+                left: -20px;
                 width: 10px;
                 height: 10px;
-                background: #47cd7d;
+                content: '';
                 border-radius: 50%;
-                left: -20px;
-                top: 2px;
+                background: #47cd7d;
             }
         }
     }
 
     .card {
-        width: 287px;
-        background: $background;
-        border-radius: 14px;
         display: flex;
-        gap: 12px;
         align-items: center;
+        width: 287px;
         padding: 14px 18px 16px 12px;
+        border-radius: 14px;
+        background: $background;
+        gap: 12px;
 
         &_active {
             background: $individPlanGradient;
@@ -192,22 +194,22 @@
         }
 
         &__name {
-            font-weight: 600;
             font-size: 12px;
+            font-weight: 600;
             line-height: 125%;
             color: $gray6Color;
         }
 
         &__time {
-            font-weight: 400;
             font-size: 12px;
+            font-weight: normal;
             line-height: 125%;
             opacity: 0.6;
         }
 
         &__text {
-            font-weight: 400;
             font-size: 14px;
+            font-weight: normal;
             line-height: 107%;
         }
     }
@@ -216,31 +218,31 @@
         &__old {
             display: flex;
             justify-content: flex-end;
-            border-bottom: 1px solid $borderGrayColor;
             padding-bottom: 20px;
+            border-bottom: 1px solid $borderGrayColor;
         }
 
         &__box {
             display: flex;
-            flex-direction: column;
             align-items: flex-end;
+            flex-direction: column;
             gap: 6px;
         }
 
         &__title {
-            font-weight: 400;
             font-size: 12px;
+            font-weight: normal;
             line-height: 125%;
-            text-align: center;
-            opacity: 0.6;
             margin-top: 6px;
             margin-bottom: 6px;
+            text-align: center;
+            opacity: 0.6;
         }
 
         &__new {
+            margin-bottom: 20px;
             padding-top: 20px;
             border-top: 1px solid $borderGrayColor;
-            margin-bottom: 20px;
         }
 
         &__new-box {
@@ -252,15 +254,15 @@
 
         &__unwhrite {
             width: 100%;
-            background-color: transparent;
-            outline: none;
-            background: $blackChatColor;
             padding: 21px 32px 22px;
             border-radius: 9px;
+            outline: none;
+            background: $blackChatColor;
+            background-color: transparent;
 
             &::placeholder {
-                font-weight: 400;
                 font-size: 16px;
+                font-weight: normal;
                 line-height: 131%;
                 color: $gray6Color;
             }
@@ -268,21 +270,21 @@
     }
 
     .message {
-        border-radius: 8px 8px 0 8px;
-        padding: 12px;
-        background: $blackChatColor;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 213px;
+        padding: 12px;
+        border-radius: 8px 8px 0;
+        background: $blackChatColor;
 
         &_photo {
             width: 248px;
         }
 
         &__time {
-            font-weight: 400;
             font-size: 12px;
+            font-weight: normal;
             line-height: 125%;
             opacity: 0.6;
         }
@@ -305,30 +307,29 @@
         }
 
         &__message-oper-text {
-            display: block;
-            padding: 12px 24px;
-            max-width: 354px;
-            background: #3626ea;
-            font-weight: 400;
             font-size: 14px;
+            font-weight: normal;
             line-height: 129%;
+            display: block;
+            max-width: 354px;
+            padding: 12px 24px;
             border-radius: 8px 8px 8px 0;
+            background: #3626ea;
         }
 
         &__message-user-box {
             display: flex;
-            flex-direction: column;
 
             align-items: flex-end;
             align-self: flex-end;
+            flex-direction: column;
         }
 
         &__message-user {
             display: block;
-            padding: 12px 24px;
             max-width: 354px;
-            border-radius: 8px 8px 0 8px;
             padding: 12px 24px;
+            border-radius: 8px 8px 0;
             background: $blackChatColor;
         }
     }

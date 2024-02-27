@@ -4,7 +4,7 @@ import $ from 'jquery';
 import { priciingTabs } from './pricing/pricingTabs';
 
 document.addEventListener('DOMContentLoaded', () => {
-    priciingTabs();
-    const artLoadEvent = new Event('loadingIsFinished');
-    document.dispatchEvent(artLoadEvent);
+  priciingTabs();
+  const artLoadEvent = new Event('loadingIsFinished');
+  document.dispatchEvent(artLoadEvent);
 });

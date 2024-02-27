@@ -6,8 +6,8 @@
         position: absolute;
 
         &_first {
-            left: -13%;
             bottom: 14%;
+            left: -13%;
 
           @include media-breakpoint-down(sm) {
             display: none;
@@ -15,8 +15,8 @@
         }
 
         &_second {
-          left: 7%;
           bottom: 4%;
+          left: 7%;
 
           @include media-breakpoint-down(sm) {
             display: none;
@@ -33,8 +33,8 @@
         }
 
         &_fourth {
-            bottom: 12%;
             right: -13%;
+            bottom: 12%;
 
           @include media-breakpoint-down(sm) {
             display: none;
@@ -43,12 +43,12 @@
     }
 
     &__title {
-        font-weight: 700;
         font-size: 36px;
+        font-weight: bold;
         line-height: 137%;
+        margin-bottom: 6px;
         text-align: center;
         color: $whiteTwo;
-        margin-bottom: 6px;
 
         @include media-breakpoint-down(xs) {
             font-size: 26px;
@@ -58,14 +58,14 @@
     }
 
     &__info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 191px;
+        height: 38px;
         margin: 0 auto 20px;
         border-radius: 12px;
-        width: 191px;
         background: $rainbowBtnGradient;
-        height: 38px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         gap: 5px;
 
         @include media-breakpoint-down(xs) {
@@ -74,22 +74,23 @@
     }
 
     &__info-text {
-        color: $background;
         line-height: 175%;
+        color: $background;
+
         &:first-child {
-            font-weight: 800;
             font-size: 16px;
+            font-weight: 800;
         }
     }
 
     &__tabs {
         display: grid;
         align-items: flex-start;
-        grid-template-columns: repeat(3, 1fr);
         margin-bottom: 23px;
-        border-radius: 12px;
         padding: 7px 8px;
+        border-radius: 12px;
         background: $backgroundSecond;
+        grid-template-columns: repeat(3, 1fr);
     }
 
      &__plans {
@@ -103,21 +104,21 @@
         }
 
         &__plans-button {
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 147%;
             position: relative;
+            z-index: 2;
             display: flex;
             align-items: center;
             justify-content: center;
-            outline: none;
-            border-radius: 12px;
-            padding: 17px 19px;
             width: 120px;
-            font-weight: 700;
-            font-size: 18px;
-            line-height: 147%;
-            color: $whiteColor;
-            background: $backgroundSecond;
-            z-index: 2;
+            padding: 17px 19px;
             white-space: nowrap;
+            color: $whiteColor;
+            border-radius: 12px;
+            outline: none;
+            background: $backgroundSecond;
 
              &:first-child {
                 margin-right: 10px;
@@ -138,14 +139,14 @@
         }
 
     .form {
-        margin: 0 auto;
         width: 410px;
+        margin: 0 auto;
 
         &__item {
             position: relative;
             display: flex;
-            flex-direction: column;
             align-items: flex-start;
+            flex-direction: column;
             margin-bottom: 10px;
             gap: 6px;
 
@@ -159,28 +160,28 @@
         }
 
         &__item-label {
-            font-family: 'ProximaNova';
-            font-weight: 400;
+            font-family: ProximaNova;
             font-size: 14px;
+            font-weight: normal;
             line-height: 150%;
             color: $gray6Color;
         }
 
         &__item-input {
-            border-radius: 9px;
-            padding: 21px 32px 22px;
-            width: 410px;
             font-size: 16px;
+            width: 410px;
+            padding: 21px 32px 22px;
             color: $whiteColor;
+            border-radius: 9px;
             background: $backgroundSecond;
 
             &::placeholder {
-                font-family: 'ProximaNova';
-                font-weight: 400;
+                font-family: ProximaNova;
                 font-size: 16px;
+                font-weight: normal;
                 line-height: 131%;
-                color: $gray6Color;
                 opacity: 0.6;
+                color: $gray6Color;
             }
 
             @include media-breakpoint-down(xs) {
@@ -189,21 +190,21 @@
         }
 
         &__item-textarea {
-            border-radius: 9px;
-            padding: 21px 32px 22px;
-            height: 120px;
-            width: 410px;
             font-size: 16px;
+            width: 410px;
+            height: 120px;
+            padding: 21px 32px 22px;
             color: $whiteColor;
+            border-radius: 9px;
             background: $backgroundSecond;
 
             &::placeholder {
-                font-family: 'ProximaNova';
-                font-weight: 400;
+                font-family: ProximaNova;
                 font-size: 16px;
+                font-weight: normal;
                 line-height: 131%;
-                color: $gray6Color;
                 opacity: 0.6;
+                color: $gray6Color;
             }
 
             @include media-breakpoint-down(xs) {
@@ -212,43 +213,43 @@
         }
 
         .just-validate-error-label {
-            position: absolute;
-            right: 50%;
-            top: -10px;
-            z-index: 3;
-            border-radius: 7px;
-            padding: 8px;
-            font-weight: 700;
             font-size: 14px;
+            font-weight: bold;
+            position: absolute;
+            z-index: 3;
+            top: -10px;
+            right: 50%;
+            padding: 8px;
+            text-wrap: nowrap;
             color: #1d1f21 !important;
+            border-radius: 7px;
             background: $rainbowBtnGradient;
             transform: translateX(50%);
-            text-wrap: nowrap;
 
             &::after {
-                content: '';
                 position: absolute;
-                left: 50%;
-                top: 28px;
                 z-index: 3;
-                clip-path: polygon(0 0, 53% 100%, 100% 0);
+                top: 28px;
+                left: 50%;
                 width: 10px;
                 height: 10px;
+                content: '';
                 background: $rainbowBtnGradient;
                 transform: translateX(-50%);
+                clip-path: polygon(0 0, 53% 100%, 100% 0);
             }
         }
 
         &__button {
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 147%;
+            width: 410px;
             margin-top: 5px;
             margin-bottom: 5px;
-            border-radius: 16px;
             padding: 18px 0 19px;
-            width: 410px;
-            font-weight: 700;
-            font-size: 18px;
-            line-height: 147%;
             color: $background;
+            border-radius: 16px;
             background: $rainbowBtnGradient;
 
             @include media-breakpoint-down(xs) {
@@ -267,75 +268,75 @@
             &-checkbox {
                 position: absolute;
                 overflow: hidden;
-                padding-left: 20px;
+                clip: rect(0 0 0 0);
                 width: 1px;
                 height: 1px;
-                clip: rect(0 0 0 0);
+                padding-left: 20px;
             }
 
             &-checkstyle {
                 position: absolute;
-                left: 0%;
                 top: 0;
-                border: 1px solid var(--stroke, #525960);
-                border-radius: 7px;
+                left: 0%;
                 width: 20px;
                 height: 20px;
+                border: 1px solid var(--stroke, #525960);
+                border-radius: 7px;
             }
 
             &-checkbox:checked + .form__agree-checkstyle::before {
-                content: '';
                 position: absolute;
-                left: 50%;
                 top: 50%;
-                border-radius: 5px;
+                left: 50%;
                 width: 14px;
                 height: 14px;
+                content: '';
+                border-radius: 5px;
                 background: $rainbowBtnGradient;
                 transform: translateX(-50%) translateY(-50%);
             }
 
             &-label {
-                padding-left: 30px;
-                font-family: 'ProximaNova';
-                font-weight: 400;
+                font-family: ProximaNova;
                 font-size: 14px;
+                font-weight: normal;
                 line-height: 21px;
+                padding-left: 30px;
+                cursor: pointer;
                 color: $gray6Color;
                 transform: translateY(1px);
-                cursor: pointer;
 
                 a {
-                    padding: 0 8px;
-                    font-weight: 600;
                     font-size: 14px;
-                    text-decoration-line: underline;
+                    font-weight: 600;
+                    padding: 0 8px;
                     color: var(--color-3, #86a8ff);
+                    text-decoration-line: underline;
                 }
             }
 
             .just-validate-error-label {
-                position: absolute;
-                left: 0;
-                bottom: -40px;
-                z-index: 3;
-                border-radius: 7px;
-                padding: 8px;
-                font-weight: 700;
                 font-size: 14px;
-                background: $rainbowBtnGradient;
+                font-weight: bold;
+                position: absolute;
+                z-index: 3;
+                bottom: -40px;
+                left: 0;
+                padding: 8px;
                 text-wrap: nowrap;
+                border-radius: 7px;
+                background: $rainbowBtnGradient;
 
                 &::after {
-                    content: '';
                     position: absolute;
-                    left: 4%;
-                    top: -9px;
                     z-index: 3;
-                    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+                    top: -9px;
+                    left: 4%;
                     width: 10px;
                     height: 10px;
+                    content: '';
                     background: rgb(104 201 255);
+                    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
                 }
             }
 

@@ -1,22 +1,28 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
   @@include('html/modules/head.html', { 'title': 'Art which inspire', 'srcStyle': 'art' })
+  
   <body>
     @@include('html/modules/preloader.html')
+    
     <div class="wrapper">
       @@include('html/modules/header.html')
+      
       <main class="page">
         @@include('html/art/background.html')
+        
         <div class="page__container"> 
             @@include('html/art/art-head.html')
-            <div class="art-mesh">
-              
-          </div>
+            
+            <div class="art-mesh"></div>
         </div>
       </main>
+      
       @@include('html/modules/footer.html') 
+      
       @@include('html/modules/Sprite.html')
   </body>
+  
   <script src="js/app.min.js"></script>
   <script src="js/art.min.js"></script>
 </html>

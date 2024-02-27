@@ -2,7 +2,6 @@
     &__content {
         display: grid;
         grid-template-columns: minmax(208px, 500px) auto;
-
         padding-top: 2px;
         padding-bottom: 80px;
 
@@ -14,7 +13,6 @@
 
         @include media-breakpoint-down(md) {
             place-items: center center;
-
             justify-content: center;
             grid-template-columns: minmax(345px, 1fr);
             gap: 32px;

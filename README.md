@@ -1,2 +1,1 @@
 # Artist NFT
-

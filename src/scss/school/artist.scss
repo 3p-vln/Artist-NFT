@@ -125,9 +125,9 @@
             display: none;
 
             @include media-breakpoint-down(xs) {
-                display: block;
-                left: -4%;
                 bottom: -5%;
+                left: -4%;
+                display: block;
             }
         }
     }
@@ -367,7 +367,6 @@
 
             display: flex;
             justify-content: flex-end;
-            position: relative;
         }
 
         &__choise-descr-box {
@@ -461,7 +460,6 @@
         &__cost {
             display: flex;
             gap: 20px;
-
             align-items: center;
 
             width: 293px;

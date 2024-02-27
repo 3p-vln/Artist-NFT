@@ -1,21 +1,21 @@
 .chat {
-    border-radius: 32px 32px 0px 0px;
-    background: rgb(33, 36, 38);
-    color: $whiteTwo;
-    padding: 22px 33px 0 27px;
-    height: 100vh;
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
+    height: 100vh;
+    padding: 22px 33px 0 27px;
+    color: $whiteTwo;
+    border-radius: 32px 32px 0 0;
+    background: rgb(33, 36, 38);
 
     &::after {
-        content: '';
         position: absolute;
+        top: 0;
+        left: 343px;
         width: 1px;
         height: 100%;
-        top: 0;
-        background-color: $whiteTwo;
+        content: '';
         opacity: 0.1;
-        left: 343px;
+        background-color: $whiteTwo;
     }
 
     &__content {
@@ -23,25 +23,27 @@
     }
 
     &__list {
-        margin-top: 12px;
         min-width: 320px;
+        margin-top: 12px;
+
         .chats {
             margin-top: 41px;
+
             &__item {
-                display: flex;
-                align-items: center;
-                padding: 14px 18px 14px 12px;
-                margin-bottom: 7px;
-                border-radius: 14px;
-                background: rgb(29, 31, 33);
-                max-width: 287px;
                 font-size: 12px;
-                font-weight: 400;
+                font-weight: normal;
                 line-height: 15px;
                 position: relative;
-                color: $whiteTwo;
-                gap: 13px;
+                display: flex;
+                align-items: center;
+                max-width: 287px;
+                margin-bottom: 7px;
+                padding: 14px 18px 14px 12px;
                 text-align: left;
+                color: $whiteTwo;
+                border-radius: 14px;
+                background: rgb(29, 31, 33);
+                gap: 13px;
 
                 &.active {
                     background: rgb(44, 47, 51);
@@ -61,8 +63,8 @@
 
     &__time {
         position: absolute;
-        right: 17px;
         top: 15px;
+        right: 17px;
     }
 
     &__info {
@@ -76,9 +78,9 @@
     }
 
     &__one {
-        padding: 3px 0 0 21px;
-        width: 100%;
         display: none;
+        width: 100%;
+        padding: 3px 0 0 21px;
 
         &.active {
             display: block;
@@ -101,19 +103,19 @@
         }
 
         &__online {
+            font-size: 13px;
             position: relative;
             margin-left: 39px;
-            font-size: 13px;
 
             &::before {
-                content: '';
                 position: absolute;
+                top: 2px;
+                right: 43px;
                 width: 8px;
                 height: 8px;
+                content: '';
                 border-radius: 50%;
                 background: #47cd7d;
-                right: 43px;
-                top: 2px;
             }
         }
     }
@@ -126,15 +128,15 @@
         padding-bottom: 180px;
 
         &__my {
-            padding: 12px 24px;
-            border-radius: 8px 8px 0 8px;
-            width: fit-content;
-            background-color: rgb(44, 47, 51);
-            max-width: 402px;
-            margin-left: auto;
-            margin-bottom: 6px;
             font-size: 14px;
             line-height: 18px;
+            width: fit-content;
+            max-width: 402px;
+            margin-bottom: 6px;
+            margin-left: auto;
+            padding: 12px 24px;
+            border-radius: 8px 8px 0;
+            background-color: rgb(44, 47, 51);
 
             &:first-child {
                 padding: 12px;
@@ -142,15 +144,16 @@
         }
 
         &__time {
-            opacity: 0.4;
-            margin-left: auto;
             font-size: 12px;
             line-height: 15px;
+            margin-left: auto;
+            opacity: 0.4;
         }
 
         &__img {
-            border-radius: 6px;
             overflow: hidden;
+            border-radius: 6px;
+
             img {
                 width: 100%;
                 height: 100%;
@@ -158,22 +161,22 @@
         }
 
         &__new {
-            text-align: center;
-            opacity: 0.4;
             font-size: 12px;
             line-height: 15px;
-            margin: 24px 0;
             position: relative;
+            margin: 24px 0;
+            text-align: center;
+            opacity: 0.4;
 
             &::after,
             &::before {
-                content: '';
                 position: absolute;
+                left: 0;
                 width: 100%;
                 height: 1px;
-                background-color: $whiteTwo;
+                content: '';
                 opacity: 0.4;
-                left: 0;
+                background-color: $whiteTwo;
             }
 
             &::before {
@@ -186,63 +189,63 @@
         }
 
         &__from {
+            font-size: 14px;
+            line-height: 18px;
+            position: relative;
+            left: 29px;
             max-width: 403px;
+            margin-bottom: 28px;
             padding: 12px 24px;
             border-radius: 8px 8px 8px 0;
             background-color: rgb(54, 38, 234);
-            position: relative;
-            left: 29px;
-            margin-bottom: 28px;
-            font-size: 14px;
-            line-height: 18px;
 
             &::before {
-                content: '';
                 position: absolute;
+                bottom: 0;
+                left: -29px;
                 width: 19px;
                 height: 19px;
+                content: '';
                 border-radius: 50%;
-                background-image: url(../images/for-client/chat/ivan-for-list.png);
+                background-image: url("../images/for-client/chat/ivan-for-list.png");
                 background-size: cover;
-                left: -29px;
-                bottom: 0;
             }
 
             &::after {
-                content: '10 min ago';
-                position: absolute;
-                opacity: 0.4;
-                bottom: -22px;
-                left: -29px;
                 font-size: 12px;
                 line-height: 15px;
+                position: absolute;
+                bottom: -22px;
+                left: -29px;
+                content: '10 min ago';
+                opacity: 0.4;
             }
         }
 
         &__send {
-            width: 100%;
             position: relative;
+            width: 100%;
             margin-top: 20px;
 
             input {
-                width: 100%;
-                padding: 21px 21px 22px 32px;
                 font-family: ProximaNova;
                 font-size: 16px;
                 line-height: 21px;
+                width: 100%;
+                padding: 21px 21px 22px 32px;
                 color: $gray3Color;
-                background-color: rgb(44, 47, 51);
                 border-radius: 9px;
+                background-color: rgb(44, 47, 51);
             }
 
             button {
-                background: none;
-                border: none;
+                position: absolute;
+                top: 21px;
+                right: 24px;
                 width: 24px;
                 height: 24px;
-                position: absolute;
-                right: 24px;
-                top: 21px;
+                border: none;
+                background: none;
 
                 svg {
                     width: 100%;
