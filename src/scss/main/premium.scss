@@ -1,8 +1,5 @@
 .premium {
     &__content {
-        display: flex;
-        flex-direction: column;
-
         padding-top: 16px;
 
         @include media-breakpoint-down(md) {
@@ -459,6 +456,7 @@
         display: flex;
         overflow: visible;
         align-items: start;
+        z-index: 2;
 
         width: 100%;
         max-width: 100%;
@@ -467,12 +465,16 @@
         padding-bottom: 24px;
         padding-left: 15px;
 
+        @include media-breakpoint-down(md) {
+            transform: translateY(-38px);
+        }
+
         @include media-breakpoint-down(xs) {
             padding-top: 14px;
             padding-bottom: 0;
             padding-left: 0;
 
-            transform: translateX(-26px);
+            transform: translateY(-38px) translateX(-26px);
         }
     }
 }

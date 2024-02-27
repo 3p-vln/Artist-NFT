@@ -1,29 +1,4 @@
 export function auctionTimer(time) {
-  // function random(min, max) {
-  //     var rand = min + Math.random() * (max + 1 - min);
-  //     rand = Math.floor(rand);
-  //     return rand;
-  // }
-
-  // setTimeout(function () {
-  //     document.querySelector('progress').value = random(10, 100);
-  // }, 0);
-
-  // function progress(time) {
-  //     let start = 0;
-  //     let progressElement = document.getElementById('progress');
-  //     let intervalId = setInterval(function () {
-  //         if (start > 100) {
-  //             clearInterval(intervalId);
-  //         } else {
-  //             progressElement.value = start;
-  //         }
-  //         start++;
-  //     }, time);
-  // }
-
-  // progress(1000);
-
   function progress() {
     const progressElement = document.getElementById('progress');
     const start = new Date('2024-02-05 00:08:00');
@@ -45,7 +20,7 @@ export function auctionTimer(time) {
   }
 
   progress();
-  setInterval(progress, 10000);
+  setInterval(progress, 60000);
 
   function timer() {
     const dateEnd = new Date('2024-03-05 00:08:00');

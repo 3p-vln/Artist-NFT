@@ -26,13 +26,13 @@ export function premiumSwiper() {
   new Swiper('.premium-swiper', {
     loop: true,
     centeredSlides: true,
-    updateOnWindowResize: true,
+    // updateOnWindowResize: true,
 
-    on: {
-      init: function () {
-        console.log('swiper initialized');
-      },
-    },
+    // on: {
+    //     init: function () {
+    //         console.log('swiper initialized');
+    //     },
+    // },
 
     // breakpoints: {
     //     320: {
@@ -47,31 +47,57 @@ export function premiumSwiper() {
     //     },
     // },
 
+    // breakpoints: {
+    //     320: {
+    //         slidesPerView: 1.15,
+    //         spaceBetween: 16,
+    //     },
+    //     376: {
+    //         slidesPerView: 1.3,
+    //         spaceBetween: 16,
+    //     },
+    //     576: {
+    //         slidesPerView: 1.7,
+    //         spaceBetween: 16,
+    //     },
+    //     768: {
+    //         slidesPerView: 2.5,
+    //         spaceBetween: 30,
+    //     },
+    //     1439: {
+    //         slidesPerView: 3,
+    //         spaceBetween: 30,
+    //     },
+    // },
+
     breakpoints: {
       320: {
-        slidesPerView: 1.15,
-        spaceBetween: 16,
-        loop: true,
-      },
-      376: {
         slidesPerView: 1.3,
         spaceBetween: 16,
-        loop: true,
       },
-      576: {
+      430: {
         slidesPerView: 1.7,
         spaceBetween: 16,
-        loop: true,
       },
       768: {
         slidesPerView: 2.5,
         spaceBetween: 30,
-        loop: true,
       },
-      1439: {
+      1200: {
         slidesPerView: 3,
         spaceBetween: 30,
-        loop: true,
+      },
+      1439: {
+        slidesPerView: 3.8,
+        spaceBetween: 30,
+      },
+      1700: {
+        slidesPerView: 5,
+        spaceBetween: 30,
+      },
+      1920: {
+        slidesPerView: 5,
+        spaceBetween: 30,
       },
     },
   });

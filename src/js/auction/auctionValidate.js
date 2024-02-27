@@ -14,6 +14,11 @@ export function auctionValidate() {
       errorMessage: 'Enter your price',
     },
     {
+      rule: 'customRegexp',
+      value: /^[0-9]+$/,
+      errorMessage: 'Enter your price with numbers',
+    },
+    {
       rule: 'minLength',
       value: 4,
       errorMessage: 'Minimum 4 characters',
