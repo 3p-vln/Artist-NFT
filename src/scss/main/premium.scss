@@ -453,10 +453,10 @@
     }
 
     &-swiper {
+        z-index: 2;
         display: flex;
         overflow: visible;
         align-items: start;
-        z-index: 2;
 
         width: 100%;
         max-width: 100%;
