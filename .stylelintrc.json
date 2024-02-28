@@ -3,13 +3,6 @@
 
   "rules": {
     "at-rule-blacklist": null,
-    "at-rule-empty-line-before": [
-      "always",
-      {
-        "except": ["blockless-after-blockless", "first-nested"],
-        "ignore": ["after-comment"]
-      }
-    ],
     "at-rule-name-case": "lower",
     "at-rule-name-newline-after": "always-multi-line",
     "at-rule-name-space-after": "always",
@@ -136,14 +129,6 @@
     "property-no-vendor-prefix": true,
     "property-whitelist": null,
     "property-case": "lower",
-
-    "rule-empty-line-before": [
-      "always",
-      {
-        "except": ["first-nested"],
-        "ignore": ["after-comment"]
-      }
-    ],
 
     "selector-attribute-brackets-space-inside": "never",
     "selector-attribute-operator-blacklist": null,
