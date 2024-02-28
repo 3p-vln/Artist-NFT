@@ -20,8 +20,8 @@ export function validate() {
     };
 
     if (currentTab.getAttribute('id') == 'form-paypal') {
-      var maskCard = new IMask(currentTabCard, maskOptionsCard);
-      var maskDate = new IMask(currentTabDate, maskOptionsDate);
+      new IMask(currentTabCard, maskOptionsCard);
+      new IMask(currentTabDate, maskOptionsDate);
 
       const validate = new JustValidate('#form-paypal', {
         errorLabelStyle: {
@@ -85,8 +85,8 @@ export function validate() {
         '#form-paypal'.reset();
       });
     } else if (currentTab.getAttribute('id') == 'form-card') {
-      var maskCard = new IMask(currentTabCard, maskOptionsCard);
-      var maskDate = new IMask(currentTabDate, maskOptionsDate);
+      new IMask(currentTabCard, maskOptionsCard);
+      new IMask(currentTabDate, maskOptionsDate);
 
       const validate = new JustValidate('#form-card', {
         errorLabelStyle: {

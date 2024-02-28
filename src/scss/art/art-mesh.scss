@@ -41,12 +41,7 @@
       pointer-events: none;
       transition: opacity 0.5s ease;
       opacity: 0;
-      background: linear-gradient(
-        141deg,
-        rgb(104 128 255 / 90%) 3.3%,
-        rgb(60 167 244 / 90%) 52.35%,
-        rgb(140 69 255 / 90%) 92.15%
-      );
+      background: $cardHover;
 
       .info {
         display: flex;
@@ -62,9 +57,7 @@
           color: $whiteTwo;
 
           @include media-breakpoint-down(lg) {
-            line-height: calc(
-              35px + (49.5 - 35) * ((100vw - 375px) / (1440 - 375))
-            );
+            line-height: calc(35px + (49.5 - 35) * ((100vw - 375px) / (1440 - 375)));
           }
         }
 
@@ -88,9 +81,7 @@
 
           @include media-breakpoint-down(lg) {
             margin-top: calc(5px + (16 - 5) * ((100vw - 375px) / (1440 - 375)));
-            line-height: calc(
-              20px + (33.5 - 20) * ((100vw - 375px) / (1440 - 375))
-            );
+            line-height: calc(20px + (33.5 - 20) * ((100vw - 375px) / (1440 - 375)));
           }
         }
       }
@@ -180,10 +171,7 @@
           text-align: center;
           letter-spacing: 1.8px;
           font-size: 18px;
-          background: var(
-            --primary,
-            linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%)
-          );
+          background: $rainbowBtnGradient;
           background-clip: text;
           -webkit-text-fill-color: transparent;
         }

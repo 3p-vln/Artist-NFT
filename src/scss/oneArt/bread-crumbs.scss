@@ -10,12 +10,10 @@
     padding: 0 15px;
     margin-bottom: 25px;
 
-    /* stylelint-disable */
     @include media-breakpoint-down(sm) {
         padding: 0;
         margin-bottom: 32px;
     }
-    /* stylelint-enable */
 
     .main,
     .art,
