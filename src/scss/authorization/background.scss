@@ -1,11 +1,9 @@
 .background {
     position: absolute;
-    z-index: 1;
     left: 50%;
-
     width: 100%;
-
     transform: translateX(-50%);
+    z-index: 1;
 
     &__blur-left {
         position: absolute;
@@ -27,32 +25,30 @@
 
     &__svg-star {
         position: absolute;
-        z-index: 1;
-        top: 61%;
         left: 25.8%;
-
+        top: 61%;
         width: 46px;
         height: 62px;
+        z-index: 1;
 
         @include media-breakpoint-down(sm) {
-            top: 24%;
             left: 7%;
+            top: 24%;
         }
 
         @include media-breakpoint-down(xs) {
-            top: 8%;
             left: 0%;
+            top: 8%;
         }
     }
 
     &__svg-ellipse {
         position: absolute;
-        z-index: 1;
-        top: 93%;
         left: 72.5%;
-
+        top: 93%;
         width: 25px;
         height: 25px;
+        z-index: 1;
     }
 
     &__blur-mobile {
@@ -60,12 +56,10 @@
 
         @include media-breakpoint-down(sm) {
             position: absolute;
-            top: 0;
-            right: 0;
             left: 0;
-
+            right: 0;
+            top: 0;
             display: block;
-
             width: 100%;
         }
     }

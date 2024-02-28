@@ -3,50 +3,43 @@
 
     &__head {
         display: flex;
-        align-items: center;
         flex-direction: column;
+        align-items: center;
 
         @include media-breakpoint-down(md) {
             align-items: flex-start;
-
             padding-right: 65px;
         }
     }
 
     &__subtitle {
-        font-size: clamp(14px, 2.5vw, 18px);
         font-weight: bold;
         line-height: 26.5px;
-
         letter-spacing: 1.8px;
-
+        font-size: clamp(14px, 2.5vw, 18px);
         background: $rainbowBtnGradient;
         background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
     &__title {
-        font-size: clamp(26px, 2.5vw, 36px);
+        padding-bottom: 34px;
         font-weight: bold;
         line-height: 49.5px;
-
-        padding-bottom: 34px;
-
+        font-size: clamp(26px, 2.5vw, 36px);
         color: $whiteTwo;
 
         @include media-breakpoint-down(md) {
-            line-height: 34px;
-
             padding-bottom: 29px;
+            line-height: 34px;
         }
     }
 
     &__list {
         display: grid;
-
-        max-width: 1110px;
-        margin: 0 auto;
         grid-template-columns: repeat(4, 1fr);
+        margin: 0 auto;
+        max-width: 1110px;
         gap: 30px;
 
         @include media-breakpoint-down(md) {
@@ -56,10 +49,9 @@
     }
 
     &__item {
-        width: 100%;
-        padding: 18px 19px 32px;
-
         border-radius: 12px;
+        padding: 18px 19px 32px;
+        width: 100%;
         background: $backgroundSecond;
 
         @include media-breakpoint-down(sm) {
@@ -69,46 +61,40 @@
 
     &__star {
         display: flex;
-        align-items: center;
         flex-shrink: 0;
+        align-items: center;
         justify-content: center;
-
+        border-radius: 12px;
+        padding: 10px;
         width: 48px;
         height: 48px;
-        padding: 10px;
-
-        border-radius: 12px;
         background: linear-gradient(95deg, rgb(104 201 255 / 10%) 9.27%, rgb(209 181 255 / 10%) 84.06%);
 
         @include media-breakpoint-down(md) {
+            padding: 9px;
             width: 36px;
             height: 36px;
-            padding: 9px;
         }
     }
 
     &__name {
-        font-size: clamp(14px, 2.5vw, 20px);
+        padding: 7px 0;
         font-weight: bold;
         line-height: 30px;
-
-        padding: 7px 0;
-
+        font-size: clamp(14px, 2.5vw, 20px);
         color: $whiteTwo;
 
         @include media-breakpoint-down(sm) {
-            line-height: 20px;
-
             padding: 0;
             padding-top: 7px;
+            line-height: 20px;
         }
     }
 
     &__about {
-        font-size: clamp(12px, 2.5vw, 16px);
         font-weight: normal;
         line-height: 28px;
-
+        font-size: clamp(12px, 2.5vw, 16px);
         color: $whiteTwo;
 
         @include media-breakpoint-down(sm) {

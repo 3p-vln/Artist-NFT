@@ -52,18 +52,16 @@
 
       &_active .header__menu-span-top {
         @include media-breakpoint-down(md) {
-          width: 20px;
           margin-left: -1px;
-
+          width: 20px;
           transform: translateY(8px) translateX(10px) rotate(45deg);
         }
       }
 
       &_active .header__menu-span-bottom {
         @include media-breakpoint-down(md) {
-          width: 20px;
           margin-left: 8px;
-
+          width: 20px;
           transform: translateY(-6px) translateX(1px) rotate(-45deg);
         }
       }
@@ -74,43 +72,43 @@
         flex-direction: column;
         order: 2;
         margin-right: 5px;
-        cursor: pointer;
         border-radius: 9px;
-
-        // background: $background2;background
+        cursor: pointer;
+        // background: $background2;backgroundbackgroundbackgroundbackgroundbackground
         gap: 5px;
 
-        &-span-top {
-          z-index: 13;
+gapgap
 
-          width: 6px;
-          height: 2px;
+gapgap
+
+        &-span-top {
           margin-left: 22px;
           border-radius: 9px;
-          background: $benefitsStarBoxGradient;
+          width: 6px;
+          height: 2px;
           transition: all 0.3s ease-in-out;
+          z-index: 13;
+          background: $benefitsStarBoxGradient;
         }
 
         &-span-middle {
-          z-index: 13;
-          width: 16px;
-          height: 2px;
           margin-left: 12px;
           border-radius: 9px;
-
-          background: $benefitsStarBoxGradient;
+          width: 16px;
+          height: 2px;
           transition: all 0.3s ease-in-out;
+          z-index: 13;
+          background: $benefitsStarBoxGradient;
         }
 
         &-span-bottom {
-          z-index: 13;
-
-          width: 12px;
-          height: 2px;
           margin-left: 16px;
           border-radius: 9px;
-          background: $benefitsStarBoxGradient;
+          width: 12px;
+          height: 2px;
           transition: all 0.3s ease-in-out;
+          z-index: 13;
+          background: $benefitsStarBoxGradient;
         }
       }
     }
@@ -134,11 +132,11 @@
     }
 
     &__content-link {
-      font-size: 16px;
-      font-weight: normal;
-      line-height: 131%;
       display: flex;
       align-items: center;
+      font-weight: normal;
+      line-height: 131%;
+      font-size: 16px;
       color: $gray6Color;
       gap: 10px;
 
@@ -156,16 +154,16 @@
     }
 
     &__footer-link {
-      font-size: 16px;
-      font-weight: normal;
-      line-height: 131%;
       display: flex;
       align-items: center;
-      width: 189px;
       margin-bottom: 12px;
-      padding-bottom: 16px;
-      color: $gray6Color;
       border-bottom: 1px solid $borderGrayColor;
+      padding-bottom: 16px;
+      width: 189px;
+      font-weight: normal;
+      line-height: 131%;
+      font-size: 16px;
+      color: $gray6Color;
       gap: 10px;
     }
 
@@ -175,8 +173,8 @@
     }
 
     &__footer-text {
-      font-size: 12px;
       line-height: 167%;
+      font-size: 12px;
       color: $greenColor;
     }
   }
@@ -200,33 +198,37 @@
     .chat {
       // display: flex;display
 
+displaydisplay
+
+displaydisplay
+
       &__list {
-        padding: 32px 29px;
         border-right: 1px solid $borderGrayColor;
+        padding: 32px 29px;
       }
 
       &__list-title {
-        font-size: 14px;
+        margin-bottom: 39px;
         font-weight: bold;
         line-height: 143%;
-        margin-bottom: 39px;
+        font-size: 14px;
       }
 
       &__list-card {
-        width: 287px;
         margin-bottom: 8px;
+        width: 287px;
       }
 
       &__window {
-        width: 690px;
         padding: 25px 32px 30px 24px;
+        width: 690px;
       }
 
       &__window-info {
         display: flex;
         align-items: center;
-        gap: 38px;
         margin-bottom: 76px;
+        gap: 38px;
       }
 
       &__window-worker {
@@ -241,26 +243,26 @@
       }
 
       &__name {
-        font-size: 16px;
         font-weight: 600;
         line-height: 94%;
+        font-size: 16px;
         color: $gray6Color;
       }
 
       &__window-status {
-        font-size: 12px;
+        position: relative;
         font-weight: normal;
         line-height: 125%;
-        position: relative;
+        font-size: 12px;
 
         &::before {
+          content: '';
           position: absolute;
-          top: 2px;
           left: -20px;
+          top: 2px;
+          border-radius: 50%;
           width: 10px;
           height: 10px;
-          content: '';
-          border-radius: 50%;
           background: #47cd7d;
         }
       }
@@ -279,9 +281,9 @@
   .card {
     display: flex;
     align-items: center;
-    width: 287px;
-    padding: 14px 18px 16px 12px;
     border-radius: 14px;
+    padding: 14px 18px 16px 12px;
+    width: 287px;
     background: $background;
     gap: 12px;
 
@@ -295,23 +297,23 @@
     }
 
     &__name {
-      font-size: 12px;
       font-weight: 600;
       line-height: 125%;
+      font-size: 12px;
       color: $gray6Color;
     }
 
     &__time {
-      font-size: 12px;
       font-weight: normal;
       line-height: 125%;
+      font-size: 12px;
       opacity: 0.6;
     }
 
     &__text {
-      font-size: 14px;
       font-weight: normal;
       line-height: 107%;
+      font-size: 14px;
     }
   }
 
@@ -319,31 +321,31 @@
     &__old {
       display: flex;
       justify-content: flex-end;
-      padding-bottom: 20px;
       border-bottom: 1px solid $borderGrayColor;
+      padding-bottom: 20px;
     }
 
     &__box {
       display: flex;
-      align-items: flex-end;
       flex-direction: column;
+      align-items: flex-end;
       gap: 6px;
     }
 
     &__title {
-      font-size: 12px;
-      font-weight: normal;
-      line-height: 125%;
       margin-top: 6px;
       margin-bottom: 6px;
+      font-weight: normal;
+      line-height: 125%;
       text-align: center;
+      font-size: 12px;
       opacity: 0.6;
     }
 
     &__new {
       margin-bottom: 20px;
-      padding-top: 20px;
       border-top: 1px solid $borderGrayColor;
+      padding-top: 20px;
     }
 
     &__new-box {
@@ -354,17 +356,17 @@
     }
 
     &__unwhrite {
-      width: 100%;
-      padding: 21px 32px 22px;
-      border-radius: 9px;
       outline: none;
+      border-radius: 9px;
+      padding: 21px 32px 22px;
+      width: 100%;
       background: $blackChatColor;
       background-color: transparent;
 
       &::placeholder {
-        font-size: 16px;
         font-weight: normal;
         line-height: 131%;
+        font-size: 16px;
         color: $gray6Color;
       }
     }
@@ -374,9 +376,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 213px;
-    padding: 12px;
     border-radius: 8px 8px 0;
+    padding: 12px;
+    width: 213px;
     background: $blackChatColor;
 
     &_photo {
@@ -384,9 +386,9 @@
     }
 
     &__time {
-      font-size: 12px;
       font-weight: normal;
       line-height: 125%;
+      font-size: 12px;
       opacity: 0.6;
     }
 
@@ -408,29 +410,28 @@
     }
 
     &__message-oper-text {
-      font-size: 14px;
+      display: block;
+      border-radius: 8px 8px 8px 0;
+      padding: 12px 24px;
+      max-width: 354px;
       font-weight: normal;
       line-height: 129%;
-      display: block;
-      max-width: 354px;
-      padding: 12px 24px;
-      border-radius: 8px 8px 8px 0;
+      font-size: 14px;
       background: #3626ea;
     }
 
     &__message-user-box {
       display: flex;
-
+      flex-direction: column;
       align-items: flex-end;
       align-self: flex-end;
-      flex-direction: column;
     }
 
     &__message-user {
       display: block;
-      max-width: 354px;
-      padding: 12px 24px;
       border-radius: 8px 8px 0;
+      padding: 12px 24px;
+      max-width: 354px;
       background: $blackChatColor;
     }
   }

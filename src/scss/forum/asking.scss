@@ -1,21 +1,17 @@
 .asking {
-    max-width: 365px;
-    padding: 20px 28px 24px;
-
-    color: $whiteTwo;
     border-radius: 12px;
+    padding: 20px 28px 24px;
+    max-width: 365px;
+    color: $whiteTwo;
     background-color: $backgroundSecond;
 
     &__title {
+        max-width: 75px;
         font-family: ProximaNova;
-        font-size: clamp(14px, 2.5vw, 18px);
         font-weight: bold;
         line-height: 26px;
-
-        max-width: 75px;
-
         letter-spacing: 1.8px;
-
+        font-size: clamp(14px, 2.5vw, 18px);
         background: $rainbowBtnGradient;
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -26,21 +22,17 @@
     }
 
     &__subtitle {
+        max-width: 540px;
         font-family: ProximaNova;
-        font-size: clamp(22px, 2.5vw, 26px);
         font-weight: bold;
         line-height: 38.5px;
-
-        max-width: 540px;
-
+        font-size: clamp(22px, 2.5vw, 26px);
         color: $whiteTwo;
 
         @include media-breakpoint-down(xs) {
-            line-height: 34px;
-
-            max-width: 306px;
             padding-bottom: 0;
-
+            max-width: 306px;
+            line-height: 34px;
             text-align: left;
         }
     }
@@ -52,71 +44,58 @@
 
         &__item {
             position: relative;
-
             display: flex;
             flex-direction: column;
-
             padding-top: 13px;
             gap: 7px;
 
             .just-validate-error-label {
-                font-size: 14px;
-                font-weight: bold;
-
                 position: absolute;
-                z-index: 3;
-                top: 10px;
                 right: 50%;
-
-                padding: 8px;
-
-                text-wrap: nowrap;
-
+                top: 10px;
                 border-radius: 7px;
-                background: $rainbowBtnGradient;
+                padding: 8px;
+                font-weight: bold;
+                text-wrap: nowrap;
                 transform: translateX(50%);
+                z-index: 3;
+                font-size: 14px;
+                background: $rainbowBtnGradient;
 
                 &::after {
+                    content: '';
                     position: absolute;
-                    z-index: 3;
-                    top: 28px;
                     left: 50%;
-
+                    top: 28px;
+                    clip-path: polygon(0 0, 53% 100%, 100% 0);
                     width: 10px;
                     height: 10px;
-
-                    content: '';
-
-                    background: $rainbowBtnGradient;
                     transform: translateX(-50%);
-                    clip-path: polygon(0 0, 53% 100%, 100% 0);
+                    z-index: 3;
+                    background: $rainbowBtnGradient;
                 }
             }
 
             &-label {
                 font-family: ProximaNova;
-                font-size: 14px;
                 font-weight: normal;
                 line-height: 21px;
-
+                font-size: 14px;
                 color: $gray6Color;
             }
 
             &-input {
-                font-family: ProximaNova;
-                font-size: 16px;
-                font-weight: normal;
-                line-height: 21px;
-
                 display: flex;
                 align-items: center;
-
-                max-width: 410px;
-                height: 64px;
-                padding: 21px 32px 22px;
-
-                color: $gray6Color;
                 border-radius: 9px;
+                padding: 21px 32px 22px;
+                height: 64px;
+                max-width: 410px;
+                font-family: ProximaNova;
+                font-weight: normal;
+                line-height: 21px;
+                font-size: 16px;
+                color: $gray6Color;
                 background: rgb(44, 47, 51);
 
                 @include media-breakpoint-down(xs) {
@@ -125,23 +104,19 @@
             }
 
             &-textarea {
-                font-family: ProximaNova;
-                font-size: 16px;
-                font-weight: normal;
-                line-height: 21px;
-
                 display: flex;
                 align-items: center;
-
-                max-width: 410px;
-                height: 182px;
                 margin-bottom: 31px;
-                padding: 21px 32px 22px;
-
-                resize: none;
-
-                color: $gray6Color;
                 border-radius: 9px;
+                padding: 21px 32px 22px;
+                height: 182px;
+                max-width: 410px;
+                font-family: ProximaNova;
+                font-weight: normal;
+                line-height: 21px;
+                resize: none;
+                font-size: 16px;
+                color: $gray6Color;
                 background: rgb(44, 47, 51);
 
                 @include media-breakpoint-down(xs) {
@@ -151,15 +126,14 @@
         }
 
         &__send-btn {
-            width: 100%;
             padding: 15px 6px 15px 10px;
+            width: 100%;
 
             p {
                 font-family: ProximaNova;
-                font-size: 18px;
                 font-weight: bold;
                 line-height: 26.5px;
-
+                font-size: 18px;
                 color: $background;
             }
 
@@ -170,105 +144,84 @@
 
         &__agree {
             position: relative;
-
             display: flex;
             align-items: center;
             justify-content: start;
-
             padding-top: 18px;
             gap: 10px;
 
             &-checkbox {
                 position: absolute;
-
                 overflow: hidden;
-                clip: rect(0 0 0 0);
-
+                padding-left: 20px;
                 width: 1px;
                 height: 1px;
-                padding-left: 20px;
+                clip: rect(0 0 0 0);
             }
 
             &-checkstyle {
                 position: absolute;
-                top: 0;
                 left: 0%;
-
-                width: 20px;
-                height: 20px;
-
+                top: 0;
                 border: 1px solid var(--stroke, #525960);
                 border-radius: 7px;
+                width: 20px;
+                height: 20px;
             }
 
             &-checkbox:checked + .form__agree-checkstyle::before {
+                content: '';
                 position: absolute;
-                top: 50%;
                 left: 50%;
-
+                top: 50%;
+                border-radius: 5px;
                 width: 14px;
                 height: 14px;
-
-                content: '';
-
-                border-radius: 5px;
-                background: $rainbowBtnGradient;
                 transform: translateX(-50%) translateY(-50%);
+                background: $rainbowBtnGradient;
             }
 
             &-label {
+                padding-left: 30px;
                 font-family: ProximaNova;
-                font-size: 14px;
                 font-weight: normal;
                 line-height: 21px;
-
-                padding-left: 30px;
-
                 cursor: pointer;
-
-                color: $gray6Color;
                 transform: translateY(1px);
+                font-size: 14px;
+                color: $gray6Color;
 
                 a {
-                    font-size: 14px;
-                    font-weight: 600;
-
                     padding: 0 8px;
-
-                    color: var(--color-3, #86a8ff);
+                    font-weight: 600;
                     text-decoration-line: underline;
+                    font-size: 14px;
+                    color: var(--color-3, #86a8ff);
                 }
             }
 
             .just-validate-error-label {
-                font-size: 14px;
-                font-weight: bold;
-
                 position: absolute;
-                z-index: 3;
-                bottom: -40px;
                 left: 0;
-
-                padding: 8px;
-
-                text-wrap: nowrap;
-
+                bottom: -40px;
                 border-radius: 7px;
+                padding: 8px;
+                font-weight: bold;
+                text-wrap: nowrap;
+                z-index: 3;
+                font-size: 14px;
                 background: $rainbowBtnGradient;
 
                 &::after {
+                    content: '';
                     position: absolute;
-                    z-index: 3;
-                    top: -9px;
                     left: 4%;
-
+                    top: -9px;
+                    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
                     width: 10px;
                     height: 10px;
-
-                    content: '';
-
+                    z-index: 3;
                     background: rgb(104 201 255);
-                    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
                 }
             }
 

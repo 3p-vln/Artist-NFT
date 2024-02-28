@@ -1,19 +1,19 @@
 .chat {
     position: relative;
     overflow: hidden;
-    height: 100vh;
-    padding: 22px 33px 0 27px;
-    color: $whiteTwo;
     border-radius: 32px 32px 0 0;
+    padding: 22px 33px 0 27px;
+    height: 100vh;
+    color: $whiteTwo;
     background: rgb(33, 36, 38);
 
     &::after {
+        content: '';
         position: absolute;
-        top: 0;
         left: 343px;
+        top: 0;
         width: 1px;
         height: 100%;
-        content: '';
         opacity: 0.1;
         background-color: $whiteTwo;
     }
@@ -23,25 +23,25 @@
     }
 
     &__list {
-        min-width: 320px;
         margin-top: 12px;
+        min-width: 320px;
 
         .chats {
             margin-top: 41px;
 
             &__item {
-                font-size: 12px;
-                font-weight: normal;
-                line-height: 15px;
                 position: relative;
                 display: flex;
                 align-items: center;
-                max-width: 287px;
                 margin-bottom: 7px;
-                padding: 14px 18px 14px 12px;
-                text-align: left;
-                color: $whiteTwo;
                 border-radius: 14px;
+                padding: 14px 18px 14px 12px;
+                max-width: 287px;
+                font-weight: normal;
+                line-height: 15px;
+                text-align: left;
+                font-size: 12px;
+                color: $whiteTwo;
                 background: rgb(29, 31, 33);
                 gap: 13px;
 
@@ -57,14 +57,14 @@
     }
 
     &__name {
-        font-size: 14px;
         letter-spacing: -0.7px;
+        font-size: 14px;
     }
 
     &__time {
         position: absolute;
-        top: 15px;
         right: 17px;
+        top: 15px;
     }
 
     &__info {
@@ -79,8 +79,8 @@
 
     &__one {
         display: none;
-        width: 100%;
         padding: 3px 0 0 21px;
+        width: 100%;
 
         &.active {
             display: block;
@@ -92,9 +92,9 @@
         align-items: center;
 
         &__img {
+            margin-right: 14px;
             width: 36px;
             height: 36px;
-            margin-right: 14px;
 
             img {
                 width: 100%;
@@ -103,18 +103,18 @@
         }
 
         &__online {
-            font-size: 13px;
             position: relative;
             margin-left: 39px;
+            font-size: 13px;
 
             &::before {
+                content: '';
                 position: absolute;
-                top: 2px;
                 right: 43px;
+                top: 2px;
+                border-radius: 50%;
                 width: 8px;
                 height: 8px;
-                content: '';
-                border-radius: 50%;
                 background: #47cd7d;
             }
         }
@@ -124,18 +124,18 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        height: 100vh;
         padding-bottom: 180px;
+        height: 100vh;
 
         &__my {
-            font-size: 14px;
-            line-height: 18px;
-            width: fit-content;
-            max-width: 402px;
             margin-bottom: 6px;
             margin-left: auto;
-            padding: 12px 24px;
             border-radius: 8px 8px 0;
+            padding: 12px 24px;
+            width: fit-content;
+            max-width: 402px;
+            line-height: 18px;
+            font-size: 14px;
             background-color: rgb(44, 47, 51);
 
             &:first-child {
@@ -144,9 +144,9 @@
         }
 
         &__time {
-            font-size: 12px;
-            line-height: 15px;
             margin-left: auto;
+            line-height: 15px;
+            font-size: 12px;
             opacity: 0.4;
         }
 
@@ -161,20 +161,20 @@
         }
 
         &__new {
-            font-size: 12px;
-            line-height: 15px;
             position: relative;
             margin: 24px 0;
+            line-height: 15px;
             text-align: center;
+            font-size: 12px;
             opacity: 0.4;
 
             &::after,
             &::before {
+                content: '';
                 position: absolute;
                 left: 0;
                 width: 100%;
                 height: 1px;
-                content: '';
                 opacity: 0.4;
                 background-color: $whiteTwo;
             }
@@ -189,62 +189,62 @@
         }
 
         &__from {
-            font-size: 14px;
-            line-height: 18px;
             position: relative;
             left: 29px;
-            max-width: 403px;
             margin-bottom: 28px;
-            padding: 12px 24px;
             border-radius: 8px 8px 8px 0;
+            padding: 12px 24px;
+            max-width: 403px;
+            line-height: 18px;
+            font-size: 14px;
             background-color: rgb(54, 38, 234);
 
             &::before {
+                content: '';
                 position: absolute;
-                bottom: 0;
                 left: -29px;
+                bottom: 0;
+                border-radius: 50%;
                 width: 19px;
                 height: 19px;
-                content: '';
-                border-radius: 50%;
                 background-image: url("../images/for-client/chat/ivan-for-list.png");
                 background-size: cover;
             }
 
             &::after {
-                font-size: 12px;
-                line-height: 15px;
-                position: absolute;
-                bottom: -22px;
-                left: -29px;
                 content: '10 min ago';
+                position: absolute;
+                left: -29px;
+                bottom: -22px;
+                line-height: 15px;
+                font-size: 12px;
                 opacity: 0.4;
             }
         }
 
         &__send {
             position: relative;
-            width: 100%;
             margin-top: 20px;
+            width: 100%;
 
             input {
-                font-family: ProximaNova;
-                font-size: 16px;
-                line-height: 21px;
-                width: 100%;
-                padding: 21px 21px 22px 32px;
-                color: $gray3Color;
                 border-radius: 9px;
+                padding: 21px 21px 22px 32px;
+                width: 100%;
+                font-family: ProximaNova;
+                line-height: 21px;
+                font-size: 16px;
+                color: $gray3Color;
                 background-color: rgb(44, 47, 51);
             }
 
             button {
                 position: absolute;
-                top: 21px;
                 right: 24px;
+                top: 21px;
+                border: none;
                 width: 24px;
                 height: 24px;
-                border: none;
                 background: none;
 
                 svg {
