@@ -1,6 +1,6 @@
 import { getElement } from '../composables/callDom';
 
-'use strict';
+('use strict');
 
 window.onload = function () {
   const paralax = getElement('.wrapper');
@@ -39,7 +39,11 @@ window.onload = function () {
     let coordXpersent = 0,
       coordYpersent = 0;
 
-    function setMouseParalaxStyle() {
+    let isParallaxActive = true; 
+
+    function setMouseParallaxStyle() {
+      if (!isParallaxActive) return; 
+
       const distX = coordXpersent - positionX;
       const distY = coordYpersent - positionY;
 
@@ -59,11 +63,22 @@ window.onload = function () {
         }
       });
 
-      requestAnimationFrame(setMouseParalaxStyle);
+      requestAnimationFrame(setMouseParallaxStyle);
     }
-    setMouseParalaxStyle();
+
+    function checkScreenWidth() {
+      isParallaxActive = window.innerWidth >= 768;
+    }
+
+    checkScreenWidth(); 
+
+    window.addEventListener('resize', checkScreenWidth);
+
+    setMouseParallaxStyle();
 
     paralax.addEventListener('mousemove', function (e) {
+      if (!isParallaxActive) return; 
+
       const paralaxWidth = paralax.offsetWidth;
       const paralaxHeight = paralax.offsetHeight;
 
