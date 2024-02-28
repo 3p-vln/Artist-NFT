@@ -4,18 +4,14 @@
 @import 'client/tabs';
 @import 'client/orders';
 
-// .preloader {
-//     display: none;displaydisplaydisplaydisplaydisplaydisplay
-// }
-
 .page {
-    margin-top: 64px;
+  margin-top: 64px;
 
-    &__container {
-        max-width: 1259px;
-    }
+  &__container {
+    max-width: 1259px;
+  }
 }
 
 .wrapper {
-    height: 100vh;
+  height: 100vh;
 }

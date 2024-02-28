@@ -37,7 +37,6 @@ export function validate() {
       },
       {
         rule: 'customRegexp',
-        // value: /^[-\w.]+@([а-яёa-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$/,
         value: /^[а-яА-ЯёЁa-zA-Z0-9._%+-]+@[а-яА-ЯёЁa-zA-Z0-9.-]+\.[а-яА-ЯёЁa-zA-Z]{2,4}$/,
         errorMessage: 'Write correct email',
       },

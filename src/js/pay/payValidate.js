@@ -27,10 +27,6 @@ export function validate() {
         errorLabelStyle: {
           color: '#1D1F21',
         },
-        // submitHandler: function (form, values, ajax) {
-        //     console.log('Form is valid. Resetting...');
-        //     form.reset();
-        // },
       });
 
       validate
@@ -53,7 +49,6 @@ export function validate() {
           },
           {
             rule: 'customRegexp',
-            // value: /^[-\w.]+@([а-яёa-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$/,
             value: /^[0-9]+$/,
             errorMessage: 'Write correct CVV',
           },
@@ -97,10 +92,6 @@ export function validate() {
         errorLabelStyle: {
           color: '#1D1F21',
         },
-        // submitHandler: function (form, values, ajax) {
-        //     console.log('Form is valid. Resetting...');
-        //     form.reset();
-        // },
       });
 
       validate
@@ -109,9 +100,6 @@ export function validate() {
             rule: 'required',
             errorMessage: 'Enter your card number',
           },
-          // {
-          //     rule: 'text',
-          // },
         ])
         .addField('#date', [
           {
@@ -126,7 +114,6 @@ export function validate() {
           },
           {
             rule: 'customRegexp',
-            // value: /^[-\w.]+@([а-яёa-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$/,
             value: /^[0-9]+$/,
             errorMessage: 'Write correct CVV',
           },
@@ -167,10 +154,6 @@ export function validate() {
         errorLabelStyle: {
           color: '#1D1F21',
         },
-        // submitHandler: function (form, values, ajax) {
-        //     console.log('Form is valid. Resetting...');
-        //     form.reset();
-        // },
       });
 
       validate
@@ -181,7 +164,6 @@ export function validate() {
           },
           {
             rule: 'customRegexp',
-            // value: /^[-\w.]+@([а-яёa-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$/,
             value: /^[а-яА-ЯёЁa-zA-Z0-9._%+-]+@[а-яА-ЯёЁa-zA-Z0-9.-]+\.[а-яА-ЯёЁa-zA-Z]{2,4}$/,
             errorMessage: 'Write correct email',
           },
@@ -202,5 +184,3 @@ export function validate() {
     }
   });
 }
-
-// validate();
