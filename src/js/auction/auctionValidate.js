@@ -1,12 +1,21 @@
 import JustValidate from 'just-validate';
 
-export function auctionValidate() {
+export function auctionValidate(highestPrice) {
   const form = document.querySelector('#form');
+  const highestPriceElement = document.getElementById('highestPrice');
   const validate = new JustValidate('#form', {
     errorLabelStyle: {
       color: '#1D1F21',
     },
   });
+
+  // validate.addRule('customRule', {
+  //   handler: (value) => {
+  //     const inputValue = parseFloat(value);
+  //     return inputValue > highestPrice;
+  //   },
+  //   errorMessage: `Price must be higher than ${highestPrice}`,
+  // });
 
   validate.addField('#number', [
     {
@@ -20,7 +29,7 @@ export function auctionValidate() {
     },
     {
       rule: 'minLength',
-      value: 4,
+      value: 1,
       errorMessage: 'Minimum 4 characters',
     },
     {
@@ -28,9 +37,6 @@ export function auctionValidate() {
       value: 16,
       errorMessage: 'Maximum 16 characters',
     },
+    // 'customRule',
   ]);
-
-  validate.onSuccess((event) => {
-    form.reset();
-  });
 }

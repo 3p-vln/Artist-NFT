@@ -1,28 +1,36 @@
+import { getElement } from '../composables/callDom';
+
 'use strict';
 
 window.onload = function () {
-  const paralax = document.querySelector('.wrapper');
+  const paralax = getElement('.wrapper');
 
   if (paralax) {
-    const mainEllipseFirst = document.querySelector('.background__ellipse-first');
-    const mainEllipseSecond = document.querySelector('.background__ellipse-second');
-    const mainEllipseThird = document.querySelector('.background__ellipse-third');
-    const mainStarFirst = document.querySelector('.background__star-first');
-    const mainStarSecond = document.querySelector('.background__star-second');
-    const mainStarThird = document.querySelector('.background__star-third');
+    const elements = {
+      mainEllipseFirst: '.background__ellipse-first',
+      mainEllipseSecond: '.background__ellipse-second',
+      mainEllipseThird: '.background__ellipse-third',
+      mainStarFirst: '.background__star-first',
+      mainStarSecond: '.background__star-second',
+      mainStarThird: '.background__star-third',
+      contactSapphireFirst: '.contact-background__sapphire-first',
+      contactSapphireSecond: '.contact-background__sapphire-second',
+      contactSapphireThird: '.contact-background__sapphire-third',
+      contactCube: '.contact-background__cube',
 
-    const contactSapphireFirst = document.querySelector('.contact-background__sapphire-first');
-    const contactSapphireSecond = document.querySelector('.contact-background__sapphire-second');
-    const contactSapphireThird = document.querySelector('.contact-background__sapphire-third');
-    const contactCube = document.querySelector('.contact-background__cube');
+      nftsEllipse: '.background__ellipse',
+      nftsStar: '.background__star',
 
-    // const nftsEllipse = document.querySelector('.background__ellipse');
-    // const nftsStar = document.querySelector('.background__star');
+      sapphireFirst: '.background__brilliant-first',
+      sapphireSecond: '.background__brilliant-second',
+      sapphireThird: '.background__brilliant-third',
+    };
 
-    const forEllipse = 3;
-    const forStar = 3;
-
-    const forContact = 20;
+    const forElements = {
+      ellipse: 3,
+      star: 3,
+      contact: 20,
+    };
 
     const speed = 0.05;
 
@@ -38,20 +46,18 @@ window.onload = function () {
       positionX = positionX + distX * speed;
       positionY = positionY + distY * speed;
 
-      mainEllipseFirst.style.cssText = `transform: translate(${positionX / forEllipse}%,${positionY / forEllipse}%);`;
-      mainEllipseSecond.style.cssText = `transform: translate(${positionX / forEllipse}%,${positionY / forEllipse}%);`;
-      mainEllipseThird.style.cssText = `transform: translate(${positionX / forEllipse}%,${positionY / forEllipse}%);`;
-      mainStarFirst.style.cssText = `transform: translate(${positionX / forStar}%,${positionY / forStar}%);`;
-      mainStarSecond.style.cssText = `transform: translate(${positionX / forStar}%,${positionY / forStar}%);`;
-      mainStarThird.style.cssText = `transform: translate(${positionX / forStar}%,${positionY / forStar}%);`;
-
-      contactSapphireFirst.style.cssText = `transform: translate(${positionX / forContact}%,${positionY / forContact}%);`;
-      contactSapphireSecond.style.cssText = `transform: translate(${positionX / forContact}%,${positionY / forContact}%);`;
-      contactSapphireThird.style.cssText = `transform: translate(${positionX / forContact}%,${positionY / forContact}%);`;
-      contactCube.style.cssText = `transform: translate(${positionX / forContact}%,${positionY / forContact}%);`;
-
-      // nftsEllipse.style.cssText = `transform: translate(${positionX / forEllipse}%,${positionY / forEllipse}%);`;
-      // nftsStar.style.cssText = `transform: translate(${positionX / forStar}%,${positionY / forStar}%);`;
+      Object.keys(elements).forEach((key) => {
+        const element = document.querySelector(elements[key]);
+        if (element) {
+          const type = key.includes('Ellipse')
+            ? 'ellipse'
+            : key.includes('Star')
+              ? 'star'
+              : 'contact';
+          const forValue = forElements[type];
+          element.style.cssText = `transform: translate(${positionX / forValue}%,${positionY / forValue}%);`;
+        }
+      });
 
       requestAnimationFrame(setMouseParalaxStyle);
     }

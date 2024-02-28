@@ -78,7 +78,7 @@
       &.active {
         font-weight: 700;
         color: $background;
-        transition: all 0.5s ease;
+        transition: color 0.5s ease;
       }
     }
 
@@ -129,7 +129,7 @@
     border-radius: 12px;
     padding: 5px 5px 18px 5px;
     background: $backgroundSecond;
-    transition: 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 
     &.active {
       display: flex;
@@ -375,7 +375,7 @@
       margin-top: 0;
       transform: translateY(-40px);
       -webkit-transition: 0.3s ease-in-out;
-      transition: 0.5s ease-in-out;
+      transition: transform 0.5s ease-in-out;
 
       .card__price-btn {
         background: $background;

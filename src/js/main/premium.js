@@ -1,9 +1,8 @@
 import $ from 'jquery';
 import { db } from '../modules/firebase';
 import { collection, getDocs } from 'firebase/firestore';
+import { getElementId } from '../composables/callDom.js';
 import { premiumLoad } from './premiumLoad';
-
-const wrapper = document.querySelector('wrapper');
 
 export async function snapPremiumSwiper() {
   const querySnapshot = await getDocs(collection(db, 'main-swiper'));
@@ -17,9 +16,8 @@ export async function snapPremiumBanner() {
   querySnapshot.forEach((doc) => {
     const data = doc.data();
 
-    document.querySelector('#premium-banner-title').innerHTML = data.bannerTitle;
-    document.querySelector('#premium-banner-paragraph').innerHTML = data.bannerParagraph;
-    document.querySelector('#premium-banner-btn-text').innerHTML = data.bannerBtnText;
+    getElementId('premium-banner-title').innerHTML = data.bannerTitle;
+    getElementId('premium-banner-paragraph').innerHTML = data.bannerParagraph;
+    getElementId('premium-banner-btn-text').innerHTML = data.bannerBtnText;
   });
 }
-
