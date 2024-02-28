@@ -1,110 +1,110 @@
 .select {
-    &__content {
-        position: relative;
+  &__content {
+    position: relative;
+  }
+
+  &__input-hidden {
+    display: none;
+  }
+
+  &__btn-clicked {
+    box-shadow: 0 0 10px 2px #26489a;
+    transition: box-shadow 0.5 ease-in-out;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 9px;
+    padding: 20px 20px 20px 32px;
+    width: 100%;
+    font-family: ProximaNova;
+    font-weight: 600;
+    line-height: 21px;
+    cursor: pointer;
+    transition: all 0.5 ease-in-out;
+    font-size: 16px;
+    color: $whiteTwo;
+    background: $backgroundSecond;
+
+    &_p {
+      display: none;
+      margin: 0;
+
+      &--active {
+        display: block;
+        pointer-events: none;
+      }
     }
 
-    &__input-hidden {
-        display: none;
-    }
+    &_after {
+      width: 24px;
+      height: 24px;
+      pointer-events: none;
+      transition: transform 0.3s ease-in-out;
 
-    &__btn-clicked {
-        box-shadow: 0 0 10px 2px #26489a;
-        transition: box-shadow 0.5 ease-in-out;
-    }
-
-    &__btn {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-radius: 9px;
-        padding: 20px 20px 20px 32px;
+      svg {
         width: 100%;
-        font-family: ProximaNova;
-        font-weight: 600;
-        line-height: 21px;
-        cursor: pointer;
-        transition: all 0.5 ease-in-out;
-        font-size: 16px;
-        color: $whiteTwo;
-        background: $backgroundSecond;
+        height: 100%;
+      }
 
-        &_p {
-            display: none;
-            margin: 0;
+      &--active {
+        transform: rotate(180deg);
+      }
+    }
+  }
 
-            &--active {
-                display: block;
-                pointer-events: none;
-            }
-        }
+  &__list {
+    position: absolute;
+    top: 115%;
+    display: none;
+    overflow: auto;
+    border: 1px solid #6d787f;
+    border-radius: 9px;
+    width: 100%;
+    max-height: 206px;
+    font-family: ProximaNova;
+    font-weight: 600;
+    line-height: 21px;
+    cursor: pointer;
+    z-index: 15;
+    font-size: 16px;
+    color: $whiteTwo;
+    background: $backgroundSecond;
 
-        &_after {
-            width: 24px;
-            height: 24px;
-            pointer-events: none;
-            transition: transform 0.3s ease-in-out;
-
-            svg {
-                width: 100%;
-                height: 100%;
-            }
-
-            &--active {
-                transform: rotate(180deg);
-            }
-        }
+    &::-webkit-scrollbar {
+      border-radius: 50%;
+      width: 4px;
+      height: 4px;
+      background-color: #6d787f;
     }
 
-    &__list {
-        position: absolute;
-        top: 115%;
+    &::-webkit-scrollbar-thumb {
+      border-radius: 12px;
+      width: 100%;
+      background: $rainbowBtnGradient;
+    }
+
+    &-item {
+      padding: 15px 20px 15px 32px;
+      width: 100%;
+
+      &::before {
         display: none;
-        overflow: auto;
-        border: 1px solid #6d787f;
-        border-radius: 9px;
-        width: 100%;
-        max-height: 206px;
-        font-family: ProximaNova;
-        font-weight: 600;
-        line-height: 21px;
-        cursor: pointer;
-        z-index: 15;
-        font-size: 16px;
-        color: $whiteTwo;
-        background: $backgroundSecond;
+      }
 
-        &::-webkit-scrollbar {
-            border-radius: 50%;
-            width: 4px;
-            height: 4px;
-            background-color: #6d787f;
-        }
-
-        &::-webkit-scrollbar-thumb {
-            border-radius: 12px;
-            width: 100%;
-            background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
-        }
-
-        &-item {
-            padding: 15px 20px 15px 32px;
-            width: 100%;
-
-            &::before {
-                display: none;
-            }
-
-            &:hover {
-                background-color: #ebebebb0;
-            }
-        }
-
-        .active {
-            display: block;
-        }
-
-        &--visible {
-            display: block;
-        }
+      &:hover {
+        background-color: #ebebebb0;
+      }
     }
+
+    .active {
+      display: block;
+    }
+
+    &--visible {
+      display: block;
+    }
+  }
 }
