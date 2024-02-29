@@ -23,8 +23,8 @@ const images = () => {
           svgoPlugins: [{ removeViewBox: false }],
           interlaced: true,
           optimizationLevel: 3, // 0 to 7
-        })
-      )
+        }),
+      ),
     )
     .pipe(gulp.dest(filePaths.build.images))
     .pipe(gulp.src(filePaths.src.svg))

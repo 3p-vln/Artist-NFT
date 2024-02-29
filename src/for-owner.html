@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
 @@include('html/modules/head.html', { 'title': 'For owner', 'srcStyle': 'for-owner' })
 
 <body>
@@ -1093,7 +1093,44 @@
 
             </div>
           </div>
-          <div class="content__box workers" id="workers">Workers</div>
+          <div class="content__box workers" id="workers">
+            <h2 class="orders__title">My NFT orders</h2>
+
+            <div class="workers__head-table-box">
+              <table class="workers__table workers__table_head table">
+                <tbody class="table__body">
+                  <tr class="table__titles">
+                    <th class="table__title table__title_name">Name</th>
+                    <th class="table__title table__title_workers-mail">Mail</th>
+                    <th class="table__title table__title_workers-comment">Comment</th>
+                    <th class="table__title table__title_plan">Plan</th>
+                  </tr>
+                </tbody>
+            </table>
+            </div>
+
+            <div class="workers__table-box">
+              <table class="workers__table orders__table_body table">
+                <tbody class="table__body table__body_orders">
+
+                  <tr class="table__order table__order_workers">
+                    <td class="table__name table__name_workers">T-SHIRT</td>
+                    <td class="table__mail table__mail_workers">emailofcustomer@gmail.com</td>
+                    
+                    <td class="table__descr table__descr_workers">
+                      <span class="table__descr-text">Kindness to he horrible reserved ye. Effect twenty indeed beyond for not had county. The use him without greatly can private. </span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__action">
+                      <button class="btn table__button">One month</button>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+
+          </div>
         </div>
       </div>
     </main>

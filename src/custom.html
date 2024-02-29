@@ -1,22 +1,30 @@
 <!DOCTYPE html>
-<html lang="end">
+<html lang="en">
   @@include('html/modules/head.html', { 'title': 'Custom by your own', 'srcStyle': 'custom' })
+  
   <body>
     @@include('html/modules/preloader.html')
+    
     <div class="wrapper">
       @@include('html/modules/header.html')
+      
       <main class="page">
         @@include('html/custom/background.html')
+        
         <div class="page__container"> 
             @@include('html/custom/are-you-ready.html')
-            <div class="custom-mesh">
-            </div>
+            
+            <div class="custom-mesh"></div>
+            
             @@include('html/custom/custom-form.html')
         </div>
       </main>
+      
       @@include('html/modules/footer.html') 
+      
       @@include('html/modules/Sprite.html')
   </body>
+  
   <script src="js/app.min.js"></script>
   <script src="js/custom.min.js"></script>
 </html>

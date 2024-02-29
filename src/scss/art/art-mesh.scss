@@ -1,25 +1,20 @@
 .art-mesh {
   display: grid;
-
-  max-width: 1111px;
+  grid-template-columns: repeat(3, 1fr);
   margin: 0 auto;
   margin-top: 50px;
   margin-bottom: 75px;
-  grid-template-columns: repeat(3, 1fr);
+  max-width: 1111px;
   aspect-ratio: 1/1.5766;
   gap: 25px 30px;
 
   .card {
     position: relative;
-
     overflow: hidden;
-
+    border-radius: 12px;
     width: 100%;
     height: 100%;
-
     cursor: pointer;
-
-    border-radius: 12px;
 
     &__picture {
       width: 100%;
@@ -34,80 +29,59 @@
 
     &__info {
       position: absolute;
-      top: 0;
       left: 0;
-
+      top: 0;
       display: flex;
-      align-items: center;
       flex-direction: column;
+      align-items: center;
       justify-content: center;
-
+      padding: 94px 39px 94px 40px;
       width: 100%;
       height: 100%;
-      padding: 94px 39px 94px 40px;
-
       pointer-events: none;
-
-      opacity: 0;
-      background: linear-gradient(
-        141deg,
-        rgb(104 128 255 / 90%) 3.3%,
-        rgb(60 167 244 / 90%) 52.35%,
-        rgb(140 69 255 / 90%) 92.15%
-      );
       transition: opacity 0.5s ease;
+      opacity: 0;
+      background: $cardHover;
 
       .info {
         display: flex;
-        align-items: center;
         flex-direction: column;
+        align-items: center;
 
         &__name {
           font-family: ProximaNova;
-          font-size: clamp(25px, 2.5vw, 36px);
           font-weight: bold;
           line-height: 49.5px;
-
           text-align: center;
-
+          font-size: clamp(25px, 2.5vw, 36px);
           color: $whiteTwo;
 
           @include media-breakpoint-down(lg) {
-            line-height: calc(
-              35px + (49.5 - 35) * ((100vw - 375px) / (1440 - 375))
-            );
+            line-height: calc(35px + (49.5 - 35) * ((100vw - 375px) / (1440 - 375)));
           }
         }
 
         &__about {
+          max-width: 257px;
           font-family: ProximaNova;
-          font-size: 14px;
           font-weight: normal;
           line-height: 21px;
-
-          max-width: 257px;
-
           text-align: center;
-
+          font-size: 14px;
           color: $whiteTwo;
         }
 
         &__price {
+          margin-top: 16px;
           font-family: ProximaNova;
-          font-size: clamp(20px, 2.5vw, 26px);
           font-weight: bold;
           line-height: 33.5px;
-
-          margin-top: 16px;
-
+          font-size: clamp(20px, 2.5vw, 26px);
           color: $whiteTwo;
 
           @include media-breakpoint-down(lg) {
-            line-height: calc(
-              20px + (33.5 - 20) * ((100vw - 375px) / (1440 - 375))
-            );
-
             margin-top: calc(5px + (16 - 5) * ((100vw - 375px) / (1440 - 375)));
+            line-height: calc(20px + (33.5 - 20) * ((100vw - 375px) / (1440 - 375)));
           }
         }
       }
@@ -115,9 +89,8 @@
       .btns {
         display: flex;
         justify-content: center;
-
-        width: 257px;
         margin-top: 20px;
+        width: 257px;
         gap: 12px;
       }
     }
@@ -127,7 +100,6 @@
 
       @include media-breakpoint-down(sm) {
         grid-column: auto;
-
         height: calc(199px + (412 - 199) * ((100vw - 375px) / (768 - 375)));
       }
     }
@@ -178,7 +150,6 @@
     &.active {
       .card__info {
         pointer-events: all;
-
         opacity: 1;
       }
     }
@@ -189,41 +160,32 @@
       .card {
         &__info {
           display: flex;
-
           padding: 0 5px;
-
           background: rgb(29 31 33 / 80%);
         }
 
         &__access {
           font-family: ProximaNova;
-          font-size: 18px;
           font-weight: bold;
           line-height: 26.5px;
-
           text-align: center;
           letter-spacing: 1.8px;
-
-          background: var(
-            --primary,
-            linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%)
-          );
+          font-size: 18px;
+          background: $rainbowBtnGradient;
           background-clip: text;
           -webkit-text-fill-color: transparent;
         }
 
         &__content {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
           font-family: ProximaNova;
-          font-size: 26px;
           font-weight: bold;
           line-height: 33.5px;
-
-          display: flex;
-          align-items: center;
-          flex-wrap: wrap;
-          justify-content: center;
-
           text-align: center;
+          font-size: 26px;
           gap: 16px;
 
           svg {
@@ -257,7 +219,6 @@
   @include media-breakpoint-down(sm) {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: auto;
-
     margin-bottom: 35px;
     aspect-ratio: 1/6.5766;
   }

@@ -1,73 +1,66 @@
 .art-head {
-    position: relative;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+  gap: 18px;
 
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-    margin-top: 60px;
-    gap: 18px;
-
-    svg {
-        position: absolute;
-        top: -13px;
-        left: 240px;
-
-        width: 45px;
-        height: 65px;
-
-        @include media-breakpoint-down(lg) {
-            width: calc(26px + (45 - 26) * ((100vw - 375px) / (1440 - 375)));
-            height: calc(36px + (65 - 36) * ((100vw - 375px) / (1440 - 375)));
-        }
-
-        @include media-breakpoint-down(md) {
-            right: 140px;
-            left: auto;
-        }
-
-        @include media-breakpoint-down(sm) {
-            top: -20px;
-            right: 15px;
-        }
-
-        @include media-breakpoint-down(xs) {
-            right: -20px;
-        }
-    }
-
-    &__title {
-        font-family: ProximaNova;
-        font-size: clamp(36px, 5vw, 64px);
-        font-weight: bold;
-        line-height: 65px;
-
-        color: $whiteTwo;
-
-        @include media-breakpoint-down(lg) {
-            line-height: calc(40px + (65 - 40) * ((100vw - 375px) / (1440 - 375)));
-        }
-    }
-
-    &__subtitle {
-        font-family: ProximaNova;
-        font-size: clamp(15px, 2.5vw, 16px);
-        font-weight: normal;
-        line-height: 28px;
-
-        max-width: 400px;
-
-        text-align: center;
-
-        color: $whiteTwo;
-
-        @include media-breakpoint-down(lg) {
-            line-height: calc(24px + (28 - 24) * ((100vw - 375px) / (1440 - 375)));
-        }
-    }
+  svg {
+    position: absolute;
+    left: 240px;
+    top: -13px;
+    width: 45px;
+    height: 65px;
 
     @include media-breakpoint-down(lg) {
-        margin-top: calc(26px + (60 - 26) * ((100vw - 375px) / (1440 - 375)));
-        gap: calc(16px + (18 - 16) * ((100vw - 375px) / (1440 - 375)));
+      width: calc(26px + (45 - 26) * ((100vw - 375px) / (1440 - 375)));
+      height: calc(36px + (65 - 36) * ((100vw - 375px) / (1440 - 375)));
     }
+
+    @include media-breakpoint-down(md) {
+      left: auto;
+      right: 140px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      right: 15px;
+      top: -20px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      right: -20px;
+    }
+  }
+
+  &__title {
+    font-family: ProximaNova;
+    font-weight: bold;
+    line-height: 65px;
+    font-size: clamp(36px, 5vw, 64px);
+    color: $whiteTwo;
+
+    @include media-breakpoint-down(lg) {
+      line-height: calc(40px + (65 - 40) * ((100vw - 375px) / (1440 - 375)));
+    }
+  }
+
+  &__subtitle {
+    max-width: 400px;
+    font-family: ProximaNova;
+    font-weight: normal;
+    line-height: 28px;
+    text-align: center;
+    font-size: clamp(15px, 2.5vw, 16px);
+    color: $whiteTwo;
+
+    @include media-breakpoint-down(lg) {
+      line-height: calc(24px + (28 - 24) * ((100vw - 375px) / (1440 - 375)));
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    margin-top: calc(26px + (60 - 26) * ((100vw - 375px) / (1440 - 375)));
+    gap: calc(16px + (18 - 16) * ((100vw - 375px) / (1440 - 375)));
+  }
 }

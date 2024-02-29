@@ -1,207 +1,184 @@
 .background {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+
+  &__blurs {
     position: relative;
+    width: 100%;
     z-index: 1;
 
-    width: 100%;
-
-    &__blurs {
-        position: relative;
-        z-index: 1;
-
-        width: 100%;
-
-        &-first {
-            position: absolute;
-            z-index: -1;
-            top: 64px;
-            left: 0%;
-
-            overflow: clip;
-
-            max-width: 100%;
-
-            vertical-align: top;
-        }
-
-        &-second {
-            position: absolute;
-            z-index: -1;
-            top: 600px;
-            left: 0%;
-
-            overflow: clip;
-
-            max-width: 100%;
-
-            vertical-align: top;
-
-            @include media-breakpoint-down(md) {
-                top: 1100px;
-                left: 0%;
-            }
-
-            @include media-breakpoint-down(xs) {
-                top: 600px;
-                left: 0%;
-            }
-        }
-
-        &-third {
-            position: absolute;
-            z-index: -1;
-            top: 1564px;
-            left: 0%;
-
-            overflow: clip;
-
-            max-width: 100%;
-
-            vertical-align: top;
-
-            @include media-breakpoint-down(md) {
-                top: 2700px;
-                left: 0%;
-            }
-
-            @include media-breakpoint-down(sm) {
-                top: 2200px;
-                left: 0%;
-            }
-
-            @include media-breakpoint-down(xs) {
-                top: 1900px;
-                left: 0%;
-            }
-        }
+    &-first {
+      position: absolute;
+      left: 0%;
+      top: 64px;
+      vertical-align: top;
+      overflow: clip;
+      max-width: 100%;
+      z-index: -1;
     }
 
-    &__make {
-        top: 90px;
-        left: -1.3%;
+    &-second {
+      position: absolute;
+      left: 0%;
+      top: 600px;
+      vertical-align: top;
+      overflow: clip;
+      max-width: 100%;
+      z-index: -1;
 
-        @include media-breakpoint-down(xs) {
-            font-size: 50px;
+      @include media-breakpoint-down(md) {
+        left: 0%;
+        top: 1100px;
+      }
 
-            top: 76px;
-            left: 50%;
-        }
+      @include media-breakpoint-down(xs) {
+        left: 0%;
+        top: 600px;
+      }
     }
 
-    &__not {
-        right: 41.2%;
-        bottom: -768px;
+    &-third {
+      position: absolute;
+      left: 0%;
+      top: 1564px;
+      vertical-align: top;
+      overflow: clip;
+      max-width: 100%;
+      z-index: -1;
 
-        @include media-breakpoint-down(md) {
-            display: none;
-        }
+      @include media-breakpoint-down(md) {
+        left: 0%;
+        top: 2700px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        left: 0%;
+        top: 2200px;
+      }
+
+      @include media-breakpoint-down(xs) {
+        left: 0%;
+        top: 1900px;
+      }
+    }
+  }
+
+  &__not,
+  &__make {
+    position: absolute;
+    font-family: ProximaNova;
+    font-weight: bold;
+    text-wrap: nowrap;
+    letter-spacing: 1px;
+    font-size: 79px;
+    opacity: 0.2;
+    color: transparent;
+    -webkit-text-stroke: 1px $whiteTwo;
+  }
+
+  &__make {
+    left: -1.3%;
+    top: 90px;
+
+    @include media-breakpoint-down(xs) {
+      left: 50%;
+      top: 76px;
+      font-size: 50px;
+    }
+  }
+
+  &__not {
+    right: 41.2%;
+    bottom: -768px;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  &__ellipse-first {
+    position: absolute;
+    right: 11.9%;
+    top: 112px;
+    width: 10px;
+    height: 10px;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  &__ellipse-second {
+    position: absolute;
+    left: 52.9%;
+    top: 294px;
+    width: 25px;
+    height: 25px;
+
+    @include media-breakpoint-down(xs) {
+      left: 28%;
+      top: 464px;
+    }
+  }
+
+  &__star-first {
+    position: absolute;
+    right: 45.5%;
+    top: 124px;
+    width: 46px;
+    height: 62px;
+
+    @include media-breakpoint-down(md) {
+      right: 30%;
+      top: 74px;
     }
 
-    &__ellipse-first {
-        position: absolute;
-        top: 112px;
-        right: 11.9%;
-
-        width: 10px;
-        height: 10px;
-
-        @include media-breakpoint-down(md) {
-            display: none;
-        }
+    @include media-breakpoint-down(xs) {
+      right: 9.5%;
+      top: 426px;
+      width: 36px;
+      height: 48px;
     }
+  }
 
-    &__ellipse-second {
-        position: absolute;
-        top: 294px;
-        left: 52.9%;
+  &__star-second {
+    position: absolute;
+    left: 44%;
+    top: 614px;
+    width: 36px;
+    height: 48px;
+    z-index: 3;
 
-        width: 25px;
-        height: 25px;
-
-        @include media-breakpoint-down(xs) {
-            top: 464px;
-            left: 28%;
-        }
+    @include media-breakpoint-down(xs) {
+      left: 0%;
+      top: 431px;
+      width: 30px;
+      height: 41px;
     }
+  }
 
-    &__star-first {
-        position: absolute;
-        top: 124px;
-        right: 45.5%;
+  &__ellipse-third {
+    position: absolute;
+    left: 7%;
+    top: 1184px;
+    width: 25px;
+    height: 25px;
 
-        width: 46px;
-        height: 62px;
-
-        @include media-breakpoint-down(md) {
-            top: 74px;
-            right: 30%;
-        }
-
-        @include media-breakpoint-down(xs) {
-            top: 426px;
-            right: 9.5%;
-
-            width: 36px;
-            height: 48px;
-        }
+    @include media-breakpoint-down(md) {
+      display: none;
     }
+  }
 
-    &__star-second {
-        position: absolute;
-        z-index: 3;
-        top: 614px;
-        left: 44%;
+  &__star-third {
+    position: absolute;
+    left: 5.3%;
+    top: 1018px;
+    width: 46px;
+    height: 62px;
 
-        width: 36px;
-        height: 48px;
-
-        @include media-breakpoint-down(xs) {
-            top: 431px;
-            left: 0%;
-
-            width: 30px;
-            height: 41px;
-        }
+    @include media-breakpoint-down(md) {
+      display: none;
     }
-
-    &__ellipse-third {
-        position: absolute;
-        top: 1184px;
-        left: 7%;
-
-        width: 25px;
-        height: 25px;
-
-        @include media-breakpoint-down(md) {
-            display: none;
-        }
-    }
-
-    &__star-third {
-        position: absolute;
-        top: 1018px;
-        left: 5.3%;
-
-        width: 46px;
-        height: 62px;
-
-        @include media-breakpoint-down(md) {
-            display: none;
-        }
-    }
-
-    &__not,
-    &__make {
-        font-family: ProximaNova;
-        font-size: 79px;
-        font-weight: bold;
-
-        position: absolute;
-
-        letter-spacing: 1px;
-        text-wrap: nowrap;
-
-        opacity: 0.2;
-        color: transparent;
-        -webkit-text-stroke: 1px $whiteTwo;
-    }
+  }
 }

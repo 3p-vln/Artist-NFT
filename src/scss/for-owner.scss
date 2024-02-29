@@ -362,12 +362,11 @@
                 color: $whiteTwo;
 
                 &_head {
-                    // padding: 28px 30px 20px;
-                    // margin: 28px auto 20px 30px;
+                
                 }
 
                 &_body {
-                    // display: flex;
+                    
                 }
             }
         }
@@ -382,6 +381,12 @@
         }
 
         .workers {
+           &__head-table-box {
+                padding-right: 20px;
+                padding-left: 23px;
+                padding-top: 27px;
+                padding-bottom: 10px;
+            }
         }
     }
 
@@ -564,20 +569,16 @@
         }
 
         &__body {
-            // display: flex;
-            // justify-content: space-between;
 
             &_orders {
                 display: flex;
-                // padding: 25px 31px 33px 24px;
                 flex-direction: column;
                 gap: 8px;
             }
         }
 
         &__titles {
-            // display: flex;
-            // justify-content: space-between;
+            
         }
 
         &__title {
@@ -610,7 +611,7 @@
                 width: 15.8%;
             }
 
-            &_name {
+            &_product-name {
                 width: 20.7%;
             }
 
@@ -624,6 +625,18 @@
 
             &_price {
                 width: 14.7%;
+            }
+
+            &_name {
+              width: 13.6%;
+            }
+
+            &_workers_mail {
+              width: 26.5%;
+            }
+
+            &_workers_comment {
+              width: 45.1%;
             }
         }
 
@@ -643,6 +656,14 @@
                 justify-content: initial;
                 flex-wrap: nowrap;
             }
+
+            &_workers {
+              padding-top: 26px;
+              padding-bottom: 18px;
+              padding-left: 30px;
+              // justify-content: initial;
+              // flex-wrap: nowrap;
+            }
         }
 
         &__name {
@@ -651,8 +672,11 @@
             line-height: 131%;
             white-space: nowrap;
             margin-right: 1px;
-            // width: 6.9%;
             flex-shrink: 0;
+
+            &_workers {
+              width: 15.2%;
+            }
         }
 
         &__color {
@@ -671,6 +695,11 @@
             margin-right: 1px;
             // width:20%;
             flex-shrink: 0;
+
+            &_workers {
+              // margin-right: 76px;
+              width: 20%;
+            }
         }
 
         &__size {
@@ -690,6 +719,10 @@
             font-size: 12px;
             margin-right: 1px;
             flex-shrink: 10;
+
+            &_workers {
+              max-width: 406px;
+            }
         }
 
         &__descr-text {

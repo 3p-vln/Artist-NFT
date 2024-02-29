@@ -1,43 +1,41 @@
 .background {
     position: absolute;
+    margin-top: 65px;
+    width: 100%;
     z-index: 1;
 
-    width: 100%;
-    margin-top: 65px;
-
     &__become {
-        top: 48px;
         left: -7.5%;
+        top: 48px;
 
         @include media-breakpoint-down(md) {
-            top: 2px;
-            right: -95px;
             left: auto;
+            right: -95px;
+            top: 2px;
         }
     }
 
     &__team {
-        top: 517px;
         right: 30.5%;
+        top: 517px;
 
         @include media-breakpoint-down(md) {
-            top: 495px;
-            right: auto;
             left: -82px;
+            right: auto;
+            top: 495px;
         }
     }
 
     &__blur {
         position: absolute;
-        top: -70px;
         left: 0;
+        top: -70px;
 
         &_mob {
             display: none;
 
             @include media-breakpoint-down(sm) {
                 display: block;
-
                 width: 100%;
                 object-fit: contain;
             }
@@ -50,9 +48,8 @@
 
     svg {
         position: absolute;
-        top: 486px;
         right: 54.5%;
-
+        top: 486px;
         width: 25px;
         height: 25px;
 
@@ -63,14 +60,11 @@
 
     &__become,
     &__team {
-        font-family: ProximaNova;
-        font-size: 79px;
-        font-weight: bold;
-
         position: absolute;
-
+        font-family: ProximaNova;
+        font-weight: bold;
         letter-spacing: 1px;
-
+        font-size: 79px;
         opacity: 0.2;
         color: transparent;
         -webkit-text-stroke: 1px $whiteTwo;

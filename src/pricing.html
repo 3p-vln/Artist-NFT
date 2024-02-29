@@ -1,19 +1,24 @@
-<!DOCTYPE html>
-<html lang="eng">
-  @@include('html/modules/head.html', { 'title': 'Pricing', 'srcStyle': 'pricing' })
+<!doctype html>
+<html lang="en">
+  @@include('html/modules/head.html', { 'title': 'Pricing', 'srcStyle':
+  'pricing' })
+
   <body>
     @@include('html/modules/preloader.html')
     <div class="wrapper">
       @@include('html/modules/header.html')
+
       <main class="page">
         @@include('html/pricing/background.html')
-        <div class="page__container"> 
-            @@include('html/pricing/pricing-head.html')
-          </div>
+
+        <div class="page__container">
+          @@include('html/pricing/pricing-head.html')
         </div>
+        
       </main>
-      @@include('html/modules/footer.html') 
+      @@include('html/modules/footer.html')
       @@include('html/modules/Sprite.html')
+    </div>
   </body>
   <script src="js/pricing.min.js"></script>
   <script src="js/app.min.js"></script>

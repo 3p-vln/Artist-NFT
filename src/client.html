@@ -1,18 +1,24 @@
 <!DOCTYPE html>
-<html lang="end">
+<html lang="en">
   @@include('html/modules/head.html', { 'title': 'Client', 'srcStyle': 'client' })
+  
   <body>
     @@include('html/modules/preloader.html')
+    
     <div class="wrapper">
-        @@include('html/client/header.html')
+      @@include('html/client/header.html')
+      
       <main class="page">
         <div class="page__container"> 
-            @@include('html/client/chat.html')
-            @@include('html/client/orders.html')
+          @@include('html/client/chat.html')
+            
+          @@include('html/client/orders.html')
         </div>
       </main>
+      
       @@include('html/modules/Sprite.html')
   </body>
+  
   <script src="js/app.min.js"></script>
   <script src="js/client.min.js"></script>
 </html>

@@ -1,8 +1,6 @@
 .artist {
     position: relative;
-
     padding-bottom: 65px;
-
     color: $whiteTwo;
 
     @include media-breakpoint-down(xs) {
@@ -10,14 +8,11 @@
     }
 
     &__decor-text {
-        font-size: 80px;
-        font-weight: bold;
-
         position: absolute;
-        z-index: 2;
-
+        font-weight: bold;
         white-space: nowrap;
-
+        z-index: 2;
+        font-size: 80px;
         opacity: 0.2;
         color: transparent;
         -webkit-text-stroke: 1px #fcffff;
@@ -27,46 +22,45 @@
         }
 
         &_first {
-            top: 3%;
             left: -17%;
+            top: 3%;
 
             @include media-breakpoint-down(sm) {
                 top: 13%;
             }
 
             @include media-breakpoint-down(xs) {
-                top: 11%;
                 left: -9%;
+                top: 11%;
             }
         }
 
         &_second {
-            top: 31px;
             right: -176px;
+            top: 31px;
 
             @include media-breakpoint-down(sm) {
-                top: -68px;
                 right: 12px;
+                top: -68px;
             }
 
             @include media-breakpoint-down(xs) {
-                top: -63px;
                 right: -14px;
+                top: -63px;
             }
         }
     }
 
     &__decor-star {
         position: absolute;
-        top: -1%;
         left: 21%;
-
+        top: -1%;
         width: 46px;
         height: 62px;
 
         @include media-breakpoint-down(sm) {
-            top: -3%;
             left: 2%;
+            top: -3%;
         }
 
         @include media-breakpoint-down(xs) {
@@ -76,9 +70,8 @@
 
     &__decor-elipse {
         position: absolute;
-        top: 14%;
         left: 80%;
-
+        top: 14%;
         width: 25px;
         height: 25px;
     }
@@ -87,15 +80,15 @@
         position: absolute;
 
         &_blur {
-            z-index: -2;
-            bottom: 10%;
             left: -24%;
+            bottom: 10%;
+            z-index: -2;
         }
 
         &_first {
-            z-index: 1;
-            top: 6%;
             left: -13%;
+            top: 6%;
+            z-index: 1;
 
             @include media-breakpoint-down(sm) {
                 display: none;
@@ -103,18 +96,18 @@
         }
 
         &_second {
-            top: -2%;
             right: 12%;
+            top: -2%;
 
             @include media-breakpoint-down(xs) {
-                top: 4%;
                 right: -12%;
+                top: 4%;
             }
         }
 
         &_third {
-            top: 9%;
             right: -13%;
+            top: 9%;
 
             @include media-breakpoint-down(sm) {
                 display: none;
@@ -125,50 +118,42 @@
             display: none;
 
             @include media-breakpoint-down(xs) {
-                display: block;
                 left: -4%;
                 bottom: -5%;
+                display: block;
             }
         }
     }
 
     &__title {
-        font-size: 36px;
+        margin-bottom: 16px;
         font-weight: bold;
         line-height: 137%;
-
-        margin-bottom: 16px;
-
         text-align: center;
+        font-size: 36px;
 
         @include media-breakpoint-down(xs) {
-            font-size: 26px;
-            line-height: 131%;
-
             margin-bottom: 4px;
-
+            line-height: 131%;
             text-align: left;
+            font-size: 26px;
         }
     }
 
     &__descr {
-        font-size: 16px;
-        font-weight: normal;
-        line-height: 175%;
-
-        max-width: 415px;
         margin: 0 auto;
         margin-bottom: 93px;
-
+        max-width: 415px;
+        font-weight: normal;
+        line-height: 175%;
         text-align: center;
+        font-size: 16px;
 
         @include media-breakpoint-down(xs) {
-            font-size: 15px;
-            line-height: 160%;
-
             margin-bottom: 87px;
-
+            line-height: 160%;
             text-align: left;
+            font-size: 15px;
         }
     }
 
@@ -178,21 +163,18 @@
         @include media-breakpoint-down(sm) {
             display: grid;
             align-items: flex-start;
-
-            margin-bottom: 23px;
-            padding: 7px 8px;
-
-            border-radius: 12px;
-            background: $backgroundSecond;
             grid-template-columns: repeat(3, 1fr);
+            margin-bottom: 23px;
+            border-radius: 12px;
+            padding: 7px 8px;
+            background: $backgroundSecond;
         }
     }
 
     .tabs {
         position: relative;
-
-        width: 345px;
         margin: 0 auto 20px;
+        width: 345px;
         --active: 0;
 
         &:has(.tabs__button:nth-child(2).tabs__button_active) {
@@ -204,23 +186,19 @@
         }
 
         &__button {
-            font-size: 14px;
-            font-weight: normal;
-            line-height: 24px;
-
             position: relative;
-            z-index: 2;
-
             display: flex;
             align-items: center;
             justify-content: center;
-
-            width: 111px;
-            padding: 14px 19px;
-
-            color: $whiteColor;
-            border-radius: 12px;
             outline: none;
+            border-radius: 12px;
+            padding: 14px 19px;
+            width: 111px;
+            font-weight: normal;
+            line-height: 24px;
+            z-index: 2;
+            font-size: 14px;
+            color: $whiteColor;
             background: none;
 
             &_active {
@@ -246,30 +224,24 @@
 
         &__select {
             position: relative;
-
+            grid-area: 1/1/2/1;
+            border-radius: 12px;
             width: 100%;
             height: 100%;
-
             pointer-events: none;
 
-            border-radius: 12px;
-            grid-area: 1/1/2/1;
-
             &::after {
+                content: '';
                 position: absolute;
-                z-index: 0;
-                top: 0;
                 left: 0;
-
+                top: 0;
+                border-radius: inherit;
                 width: 100%;
                 height: 100%;
-
-                content: '';
-
-                border-radius: inherit;
-                background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
-                transition: 0.4s transform cubic-bezier(0.28, 1.33, 0.64, 1);
                 transform: translateX(calc(var(--active) * 100%));
+                transition: 0.4s transform cubic-bezier(0.28, 1.33, 0.64, 1);
+                z-index: 0;
+                background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
             }
         }
 
@@ -281,7 +253,6 @@
     &__cards {
         display: flex;
         justify-content: space-between;
-
         padding: 0 14px 0 15px;
 
         @include media-breakpoint-down(lg) {
@@ -296,10 +267,9 @@
     }
 
     &__card {
-        width: 350px;
-        padding: 21px 0 18px;
-
         border-radius: 12px;
+        padding: 21px 0 18px;
+        width: 350px;
         background: $backgroundSecond;
 
         @include media-breakpoint-down(xs) {
@@ -316,47 +286,39 @@
 
         &_individual {
             top: -40px;
-
             background: $benefitsStarBoxGradient;
             background: linear-gradient(130deg, #31fff3 0%, #ad7aff 99.47%);
 
             &::before {
-                position: absolute;
-                z-index: -2;
-                top: -5px;
-                right: -5px;
-                bottom: -5px;
-                left: -5px;
-
                 content: '';
-
+                position: absolute;
+                left: -5px;
+                right: -5px;
+                top: -5px;
+                bottom: -5px;
                 border-radius: 12px;
+                z-index: -2;
                 background: linear-gradient(283deg, #ad7aff, rgb(10, 159, 185));
             }
 
             @include media-breakpoint-down(lg) {
                 top: 0;
-
                 order: 3;
             }
         }
 
         &__box {
             margin-top: -20px;
-            padding-top: 16px;
-
             border-radius: 12px;
+            padding-top: 16px;
             background: $backgroundSecond;
         }
 
         &__plan {
-            font-size: 80px;
-            font-weight: bold;
-
             margin-bottom: 55px;
-
+            font-weight: bold;
             text-align: center;
-
+            font-size: 80px;
             opacity: 0.2;
             color: transparent;
             -webkit-text-stroke: 1px #fcffff;
@@ -364,21 +326,17 @@
 
         &__choise {
             position: relative;
-
             display: flex;
             justify-content: flex-end;
-            position: relative;
         }
 
         &__choise-descr-box {
             position: relative;
-            z-index: 4;
-
-            width: 275px;
             margin-bottom: 27px;
-            padding: 14px 0 15px 25px;
-
             border-radius: 8px 0 0 8px;
+            padding: 14px 0 15px 25px;
+            width: 275px;
+            z-index: 4;
             background: $benefitsStarBoxGradient;
 
             @include media-breakpoint-down(xs) {
@@ -387,34 +345,32 @@
         }
 
         &__choise-descr-title {
-            font-size: 26px;
             font-weight: bold;
             line-height: 110%;
-
+            font-size: 26px;
             color: $background;
         }
 
         &__choise-descr-text {
-            font-size: 14px;
             font-weight: normal;
             line-height: 150%;
-
+            font-size: 14px;
             opacity: 0.7;
             color: $background;
         }
 
         &__choise-img {
             position: absolute;
-            z-index: 1;
-            bottom: 17px;
             left: 0;
+            bottom: 17px;
+            z-index: 1;
         }
 
         &__choise-decor {
             position: absolute;
-            z-index: 0;
-            top: -136px;
             left: 0;
+            top: -136px;
+            z-index: 0;
         }
 
         &__descr-box {
@@ -429,13 +385,11 @@
             display: flex;
             align-items: center;
             justify-content: flex-start;
-
-            width: 293px;
             margin: 0 auto;
             margin-bottom: 10px;
-            padding-bottom: 10px;
-
             border-bottom: 1px solid $borderGrayColor;
+            padding-bottom: 10px;
+            width: 293px;
             gap: 16px;
 
             &_last {
@@ -449,23 +403,19 @@
         }
 
         &__descr-text {
-            font-size: 14px;
+            max-width: 226px;
             font-weight: normal;
             line-height: 150%;
-
-            max-width: 226px;
-
+            font-size: 14px;
             color: $gray6Color;
         }
 
         &__cost {
             display: flex;
-            gap: 20px;
-
             align-items: center;
-
-            width: 293px;
             margin: 0 auto;
+            width: 293px;
+            gap: 20px;
 
             @include media-breakpoint-down(xs) {
                 gap: 25px;
@@ -473,16 +423,14 @@
         }
 
         &__button {
-            font-size: 18px;
+            margin-left: -2px;
+            border-radius: 12px;
+            padding: 18px 0 16px;
+            width: 177px;
             font-weight: bold;
             line-height: 147%;
-
-            width: 177px;
-            margin-left: -2px;
-            padding: 18px 0 16px;
-
+            font-size: 18px;
             color: $background;
-            border-radius: 12px;
             background: $rainbowBtnGradient;
 
             @include media-breakpoint-down(xs) {
@@ -492,9 +440,9 @@
         }
 
         &__price {
-            font-size: 22px;
             font-weight: bold;
             line-height: 152%;
+            font-size: 22px;
         }
 
         &_individual .card__plan {
@@ -524,7 +472,6 @@
 
         &_individual .card__button-text {
             display: inline-block;
-
             background: linear-gradient(130deg, #31fff3 0%, #ad7aff 99.47%);
             background-clip: text;
             -webkit-text-fill-color: transparent;

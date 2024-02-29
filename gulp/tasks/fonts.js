@@ -80,7 +80,7 @@ const fontStyle = () => {
             fs.appendFile(
               fontStylesFile,
               `@font-face {\n\tfont-family: ${fontName};\n\tfont-display: swap;\n\tsrc: url("../fonts/${fileName}.woff2") format("woff2");\n\tfont-weight: ${fontWeightValue};\n\tfont-style: normal;\n}\n`,
-              cb
+              cb,
             );
 
             newFileOnly = fileName;
@@ -90,8 +90,8 @@ const fontStyle = () => {
         /** Предупреждение, если файл есть - его нужно удалить */
         console.log(
           chalk.bold.white.bgGreenBright(
-            'Файл scss/config/fonts.scss уже существует.\nДля обновления файла его нужно удалить!'
-          )
+            'Файл scss/config/fonts.scss уже существует.\nДля обновления файла его нужно удалить!',
+          ),
         );
       }
     }
@@ -103,9 +103,8 @@ const fontStyle = () => {
     if (err) {
       console.log(chalk.bold.white.bgRed('Ошибка записи файла: '), err);
     } else {
-      console.log(
-        chalk.bold.white.bgGreenBright('[Файл fonts.scss успешно записан]')
-      );
+      console.log(chalk.bold.white.bgGreenBright('[Файл fonts.scss успешно записан]'));
+      console.log(chalk.bold.white.bgGreenBright('[Файл fonts.scss успешно записан]'));
     }
   }
 };

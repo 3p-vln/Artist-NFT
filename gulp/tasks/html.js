@@ -23,7 +23,7 @@ const html = () => {
 
         /** Раскомментировать если требуется минификация html */
         //collapseWhitespace: isBuild,
-      })
+      }),
     )
     .pipe(
       plugins.if(
@@ -40,8 +40,8 @@ const html = () => {
           output: {
             file: 'gulp/version.json',
           },
-        })
-      )
+        }),
+      ),
     )
     .pipe(gulp.dest(filePaths.build.html))
     .pipe(plugins.browserSync.stream());
