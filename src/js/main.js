@@ -1,5 +1,3 @@
-// import stockSwiper from './modules/swiper';
-// import setMouseParalaxStyle from './modules/paralax';
 import { biographySwiper } from './modules/swiper';
 import { snapBiography } from './main/biography';
 import { snapPremiumSwiper } from './main/premium';

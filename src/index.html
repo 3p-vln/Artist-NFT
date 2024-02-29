@@ -1,24 +1,32 @@
-<!DOCTYPE html>
-<html lang="eng">
+<!doctype html>
+<html lang="en">
   @@include('html/modules/head.html', { 'title': 'Artist NFT', 'srcStyle': 'main' })
+
   <body>
     @@include('html/modules/preloader.html')
+
     <div class="wrapper">
       @@include('html/modules/header.html')
+
       <main class="page">
-        @@include('html/main/background.html') 
-        <div class="page__container"> 
+        @@include('html/main/background.html')
+
+        <div class="page__container">
           @@include('html/main/make.html') 
-          @@include('html/main/biography.html') 
-          @@include('html/main/premium.html') 
+          @@include('html/main/biography.html')
+          @@include('html/main/premium.html')
         </div>
+
         @@include('html/main/premium-swiper.html')
-        <div class="page__container"> 
-        @@include('html/main/contact.html') 
-      </div>
+
+        <div class="page__container">
+          @@include('html/main/contact.html')
+        </div>
+        
       </main>
-      @@include('html/modules/footer.html')
+      @@include('html/modules/footer.html') 
       @@include('html/modules/Sprite.html')
+    </div>
   </body>
   <script src="js/app.min.js"></script>
   <script src="js/main.min.js"></script>

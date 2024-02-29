@@ -35,31 +35,32 @@
   }
 
   &__info {
-    padding-top: 8px;
     max-width: 48%;
+    padding-top: 8px;
 
     @include media-breakpoint-down(md) {
+      max-width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
-      max-width: 100%;
     }
 
     @include media-breakpoint-down(xs) {
-      align-items: start;
       padding-top: 5px;
+      align-items: start;
     }
 
     &-subtitle {
+      background: $rainbowBtnGradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-family: 'ProximaNova';
+      font-size: clamp(14px, 2.5vw, 18px);
       max-width: 91px;
-      font-family: ProximaNova;
-      font-weight: bold;
+      font-weight: 700;
       line-height: 26.5px;
       letter-spacing: 1.8px;
-      font-size: clamp(14px, 2.5vw, 18px);
-      background: $rainbowBtnGradient;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
 
       @include media-breakpoint-down(xs) {
         letter-spacing: 1.4px;
@@ -67,11 +68,11 @@
     }
 
     &-title {
-      font-family: ProximaNova;
-      font-weight: bold;
-      line-height: 49.5px;
+      color: $whiteTwo;
+      font-family: 'ProximaNova';
       font-size: clamp(26px, 2.5vw, 36px);
-      color: rgb(252, 255, 255);
+      font-weight: 700;
+      line-height: 49.5px;
 
       @include media-breakpoint-down(xs) {
         transform: translateY(-7px);
@@ -80,15 +81,15 @@
 
     .columns {
       display: flex;
-      padding-top: 26px;
       gap: 48px;
+      padding-top: 26px;
 
       @include media-breakpoint-down(xs) {
-        flex-direction: column;
         padding-top: 0;
+        flex-direction: column;
+        gap: 30px;
         width: 100%;
         transform: translateY(-7px);
-        gap: 30px;
       }
 
       &__item {
@@ -98,18 +99,18 @@
 
         @include media-breakpoint-down(xs) {
           display: flex;
-          align-items: center;
           justify-content: space-between;
-          width: 100%;
+          align-items: center;
           max-width: unset;
+          width: 100%;
         }
 
         &-text {
-          font-family: ProximaNova;
-          font-weight: normal;
-          line-height: 28px;
+          color: $whiteTwo;
+          font-family: 'ProximaNova';
           font-size: clamp(15px, 2.5vw, 16px);
-          color: rgb(252, 255, 255);
+          font-weight: 400;
+          line-height: 28px;
 
           @include media-breakpoint-down(sm) {
             .br-desctop {
@@ -119,11 +120,11 @@
         }
 
         &-value {
-          font-family: ProximaNova;
-          font-weight: bold;
-          line-height: 33.5px;
+          color: $whiteTwo;
+          font-family: 'ProximaNova';
           font-size: clamp(18px, 2.5vw, 22px);
-          color: rgb(252, 255, 255);
+          font-weight: 700;
+          line-height: 33.5px;
         }
       }
 
@@ -139,26 +140,26 @@
         transform: translateX(-4px);
 
         @include media-breakpoint-down(xs) {
-          transform: translateX(0) translateY(-6px);
+          transform: translateX(0px) translateY(-6px);
         }
       }
 
       &__item:not(:last-child)::after {
         content: '';
         position: absolute;
-        right: -25px;
         top: 0;
+        right: -25px;
         width: 1px;
         height: 95%;
-        background: rgb(82, 89, 96);
+        background: $gray7Color;
 
         @include media-breakpoint-down(xs) {
-          left: 0;
-          right: unset;
+          max-width: 431px;
           top: 42px;
+          right: unset;
+          left: 0;
           width: 100%;
           height: 1px;
-          max-width: 431px;
         }
       }
 
@@ -166,52 +167,43 @@
         transform: translateX(-4px);
 
         @include media-breakpoint-down(xs) {
-          transform: translateX(0);
+          transform: translateX(0px);
         }
       }
     }
 
     .bargain {
-      position: relative;
+      margin-top: 47px;
+      padding: 22px 43px;
+      border-radius: 12px;
+      max-width: 540px;
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin-top: 47px;
-      border-radius: 12px;
-      padding: 22px 43px;
-      width: 100%;
-      max-width: 540px;
-      background: rgb(33, 36, 38);
+      position: relative;
+      background: $backgroundSecond;
 
       @include media-breakpoint-down(md) {
         max-width: unset;
       }
 
-      // &::nth-child(3) {
-      //     align-items: start;align-itemsalign-itemsalign-itemsalign-itemsalign-items
-      //     width: 100%;widthwidthwidthwidthwidth
-      // }
-
       @include media-breakpoint-down(xs) {
         margin-top: 17px;
-        padding: 28px 16px 20px;
+        padding: 28px 16px 20px 16px;
       }
 
       &::after {
         content: '';
         position: absolute;
+        top: 0px;
         left: 50%;
-        top: 0;
-        border-radius: 0 0 8px 8px;
-        width: 75%;
-        height: 16px;
         transform: translateX(-50%);
-        background: linear-gradient(
-          130.1deg,
-          rgb(104, 201, 255) 6.695%,
-          rgb(209, 181, 255) 82.388%
-        );
+        height: 16px;
+        width: 75%;
+        border-radius: 0px 0px 8px 8px;
+        background: $rainbowSecondGradient;
 
         @include media-breakpoint-down(xs) {
           height: 10px;
@@ -219,24 +211,25 @@
       }
 
       &__title {
+        background: $rainbowSecondGradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-family: 'ProximaNova';
+        font-size: 14px;
         max-width: 106px;
-        font-family: ProximaNova;
-        font-weight: bold;
+        font-weight: 700;
         line-height: 26.5px;
         letter-spacing: 1.5px;
-        font-size: 14px;
-        background: linear-gradient(130.1deg, rgb(104, 201, 255), rgb(209, 181, 255));
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
       }
 
       &__value {
-        font-family: ProximaNova;
-        font-weight: bold;
+        color: $whiteTwo;
+        font-family: 'ProximaNova';
+        font-size: 26px;
+        font-weight: 700;
         line-height: 33.5px;
         transform: translateY(-4px);
-        font-size: 26px;
-        color: rgb(252, 255, 255);
       }
 
       &__form {
@@ -253,62 +246,39 @@
         }
 
         &-label {
-          font-family: ProximaNova;
-          font-weight: normal;
-          line-height: 21px;
+          color: $grayLabel;
+          font-family: 'ProximaNova';
           font-size: 14px;
-          color: rgb(200, 210, 220);
+          font-weight: 400;
+          line-height: 21px;
         }
 
         &-wrapper {
-          position: relative;
           display: flex;
-          padding-top: 6px;
           gap: 12px;
+          padding-top: 6px;
+          position: relative;
 
           @include media-breakpoint-down(xs) {
             flex-direction: column;
           }
 
           .just-validate-error-label {
-            position: absolute;
-            right: 50%;
             top: -30px;
-            border-radius: 7px;
-            padding: 8px;
-            font-weight: bold;
-            text-wrap: nowrap;
-            transform: translateX(50%);
-            z-index: 3;
-            font-size: 14px;
-            background: $rainbowBtnGradient;
-
-            &::after {
-              content: '';
-              position: absolute;
-              left: 50%;
-              top: 28px;
-              clip-path: polygon(0 0, 53% 100%, 100% 0);
-              width: 10px;
-              height: 10px;
-              transform: translateX(-50%);
-              z-index: 3;
-              background: $rainbowBtnGradient;
-            }
           }
         }
 
         &-input {
           border-radius: 9px;
+          background: $gray8Color;
           padding: 22px 32px;
-          height: 64px;
           min-width: 266px;
-          font-family: ProximaNova;
-          font-weight: normal;
-          line-height: 21px;
+          height: 64px;
+          color: $grayLabel;
+          font-family: 'ProximaNova';
           font-size: 16px;
-          color: rgb(200, 210, 220);
-          background: rgb(44, 47, 51);
+          font-weight: 400;
+          line-height: 21px;
 
           @include media-breakpoint-down(xs) {
             min-width: unset;
@@ -316,8 +286,8 @@
         }
 
         &-btn {
-          border-radius: 12px;
           padding: 18px 51px;
+          border-radius: 12px;
           height: 64px;
 
           @include media-breakpoint-down(xs) {
@@ -325,12 +295,12 @@
           }
 
           span {
-            font-family: ProximaNova;
-            font-weight: bold;
+            color: $background;
+            font-family: 'ProximaNova';
+            font-size: 18px;
+            font-weight: 700;
             line-height: 26.5px;
             text-wrap: nowrap;
-            font-size: 18px;
-            color: rgb(29, 31, 33);
           }
         }
       }
@@ -340,42 +310,42 @@
 
         &-timer {
           display: flex;
-          font-family: ProximaNova;
-          font-weight: bold;
+          gap: 5px;
+          background: $rainbowSecondGradient;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          font-family: 'ProximaNova';
+          font-size: clamp(18px, 2.5vw, 22px);
+          font-weight: 700;
           line-height: 33.5px;
           letter-spacing: 1.4px;
-          font-size: clamp(18px, 2.5vw, 22px);
-          background: linear-gradient(130.1deg, rgb(104, 201, 255), rgb(209, 181, 255));
-          background-clip: text;
-          gap: 5px;
-          -webkit-text-fill-color: transparent;
 
           @include media-breakpoint-down(xs) {
             letter-spacing: 1px;
           }
         }
-
         &-deadline {
-          font-family: ProximaNova;
+          color: $grayLabel;
+          font-family: 'ProximaNova';
+          font-size: 14px;
           font-weight: 600;
           line-height: 24px;
           text-align: center;
           transform: translateY(-5px);
-          font-size: 14px;
-          color: rgb(200, 210, 220);
         }
       }
 
       &__description {
-        position: relative;
         padding-top: 7px;
-        max-width: 345px;
-        font-family: ProximaNova;
-        font-weight: normal;
+        color: $grayLabel;
+        font-family: 'ProximaNova';
+        font-size: 12px;
+        font-weight: 400;
         line-height: 20px;
         text-align: center;
-        font-size: 12px;
-        color: rgb(200, 210, 220);
+        max-width: 345px;
+        position: relative;
 
         @include media-breakpoint-down(xs) {
           padding-top: 25px;
@@ -383,365 +353,12 @@
           &::after {
             content: '';
             position: absolute;
-            left: 0;
             top: 9px;
+            left: 0;
             width: 100%;
             height: 1px;
-            background: rgb(82, 89, 96);
+            background: $gray7Color;
           }
-        }
-      }
-    }
-  }
-
-  &__progress {
-    padding-top: 30px;
-
-    @include media-breakpoint-down(md) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    @include media-breakpoint-down(xs) {
-      align-items: start;
-      padding-top: 20px;
-    }
-
-    &-text {
-      font-family: ProximaNova;
-      font-weight: 600;
-      line-height: 24px;
-      text-align: left;
-      letter-spacing: 0%;
-      font-size: 14px;
-      color: rgb(200, 210, 220);
-    }
-
-    &-bar {
-      position: relative;
-      margin-top: 10px;
-      border-radius: 57px;
-      width: 540px;
-      height: 5px;
-      background: rgb(33, 36, 38);
-
-      @include media-breakpoint-down(xs) {
-        margin-top: 4px;
-        width: 100%;
-      }
-
-      &-filled {
-        position: absolute;
-        left: 0;
-        top: 0;
-        border-radius: 57px;
-        width: 540px;
-        height: 5px;
-        background: linear-gradient(
-          130.1deg,
-          rgb(104, 201, 255) 6.697%,
-          rgb(209, 181, 255) 82.389%
-        );
-
-        @include media-breakpoint-down(xs) {
-          width: 100%;
-        }
-      }
-    }
-
-    progress::-webkit-progress-bar {
-      box-sizing: border-box;
-      block-size: 100%;
-      background-color: rgb(33, 36, 38);
-      inline-size: 100%;
-      -webkit-user-modify: read-only !important;
-    }
-
-    progress::-webkit-progress-value {
-      box-sizing: border-box;
-      block-size: 100%;
-      transition: width 1s linear;
-      background: linear-gradient(130.1deg, rgb(104, 201, 255) 6.697%, rgb(209, 181, 255) 82.389%);
-      inline-size: 50%;
-      -webkit-user-modify: read-write !important;
-    }
-  }
-
-  &__blocks {
-    display: flex;
-    padding-top: 20px;
-    padding-bottom: 56px;
-    gap: 50px;
-
-    @include media-breakpoint-down(md) {
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-    }
-
-    @include media-breakpoint-down(xs) {
-      padding-bottom: 30px;
-      gap: 18px;
-    }
-
-    .description {
-      border-radius: 12px;
-      padding: 33px 21px 24px 30px;
-      width: 100%;
-      height: 100%;
-      max-width: 730px;
-      background: rgb(33, 36, 38);
-
-      &__title {
-        position: relative;
-        padding-left: 13px;
-        max-width: 360px;
-        font-family: ProximaNova;
-        font-weight: 600;
-        line-height: 24px;
-        font-size: 14px;
-        background: linear-gradient(130.1deg, rgb(104, 201, 255), rgb(209, 181, 255));
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-
-        @include media-breakpoint-down(md) {
-          width: 100%;
-          max-width: unset;
-        }
-
-        @include media-breakpoint-down(xs) {
-          max-width: 230px;
-        }
-      }
-
-      &__title::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 4px;
-        height: 100%;
-        background: linear-gradient(
-          130.1deg,
-          rgb(104, 201, 255) 39.821%,
-          rgb(209, 181, 255) 103.83%
-        );
-
-        @include media-breakpoint-down(xs) {
-          top: 5px;
-          height: 70%;
-        }
-      }
-
-      &__paragraph {
-        overflow: hidden;
-        padding-top: 18px;
-        height: 100%;
-        max-width: 679px;
-        font-family: ProximaNova;
-        font-weight: normal;
-        line-height: 28px;
-        transition: fade 0.3s ease 0s;
-        font-size: clamp(15px, 2.5vw, 16px);
-        color: rgb(252, 255, 255);
-
-        @include media-breakpoint-down(md) {
-          width: 100%;
-          max-width: unset;
-        }
-
-        @include media-breakpoint-down(xs) {
-          padding-top: 4px;
-          line-height: 24px;
-        }
-      }
-
-      &__btn {
-        display: none;
-        margin-top: 15px;
-        border-radius: 6px;
-        padding: 8px 16px;
-
-        span {
-          line-height: 24px;
-          font-size: 18px;
-        }
-
-        @include media-breakpoint-down(xs) {
-          display: block;
-        }
-      }
-
-      @include media-breakpoint-down(md) {
-        width: 100%;
-        max-width: unset;
-      }
-
-      @include media-breakpoint-down(xs) {
-        padding: 17px 13px 23px 16px;
-
-        &.active .description__paragraph {
-          height: 100px;
-          transition: fade 0.3s ease 0s;
-        }
-
-        @keyframes fade {
-          from {
-            transform: translateY(-10px);
-            opacity: 0;
-          }
-
-          to {
-            transform: translateY(0);
-            opacity: 1;
-          }
-        }
-      }
-    }
-
-    .banner {
-      position: relative;
-      overflow: hidden;
-      border-radius: 12px;
-      padding: 32px 26px;
-      width: 100%;
-      height: 100%;
-      min-height: 514px;
-      max-width: 345px;
-      background: linear-gradient(
-        176.26deg,
-        rgb(104, 128, 255) -3.708%,
-        rgb(60, 167, 244) 78.905%,
-        rgb(140, 69, 255) 145.945%
-      );
-
-      @include media-breakpoint-down(md) {
-        width: 100%;
-        max-width: unset;
-      }
-
-      @include media-breakpoint-down(xs) {
-        min-height: 368px;
-      }
-
-      &__info {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        z-index: 3;
-
-        &-svg {
-          min-width: 24px;
-          min-height: 24px;
-          max-width: 24px;
-          max-height: 24px;
-          color: $whiteTwo;
-        }
-
-        &-title {
-          padding-top: 4px;
-          font-family: ProximaNova;
-          font-weight: bold;
-          line-height: 34px;
-          font-size: 26px;
-          color: $whiteTwo;
-        }
-
-        &-subtitle {
-          padding-top: 8px;
-          font-family: ProximaNova;
-          font-weight: normal;
-          line-height: 24px;
-          font-size: 15px;
-          color: $whiteTwo;
-        }
-
-        .social {
-          display: flex;
-          padding-top: 20px;
-          gap: 18px;
-
-          &__link {
-            &-svg {
-              min-width: 24px;
-              min-height: 24px;
-              max-width: 24px;
-              max-height: 24px;
-              color: $whiteTwo;
-            }
-          }
-        }
-      }
-
-      &__arrow {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        z-index: 2;
-
-        @include media-breakpoint-down(md) {
-          left: 50%;
-          transform: translateX(-50%);
-        }
-
-        @include media-breakpoint-down(md) {
-          bottom: -75px;
-          transform: translateX(-50%) scale(0.56);
-        }
-
-        &-img {
-          // width: 100%;widthwidthwidthwidthwidth
-        }
-      }
-
-      &__sapphire {
-        position: absolute;
-        left: -85px;
-        bottom: -8px;
-        z-index: 2;
-
-        @include media-breakpoint-down(md) {
-          bottom: 30px;
-          transform: scale(0.66);
-        }
-
-        &-img {
-        }
-      }
-
-      &__ruby {
-        position: absolute;
-        right: -60px;
-        bottom: -55px;
-        z-index: 2;
-
-        @include media-breakpoint-down(md) {
-          right: -80px;
-          bottom: -5px;
-          transform: scale(0.66);
-        }
-
-        &-img {
-        }
-      }
-
-      &__circle {
-        position: absolute;
-        left: -27px;
-        bottom: -225px;
-
-        @include media-breakpoint-down(md) {
-          left: 50%;
-          transform: translateX(-50%);
-        }
-
-        @include media-breakpoint-down(md) {
-          bottom: -255px;
-          transform: translateX(-50%);
-        }
-
-        &-img {
         }
       }
     }

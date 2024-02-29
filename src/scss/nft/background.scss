@@ -1,53 +1,55 @@
 .background {
+  position: absolute;
+  margin-top: 65px;
+  width: 100%;
+  z-index: 1;
+  width: 100%;
+  margin-top: 65px;
+
+  &__make-art,
+  &__no-war {
+    font-family: 'ProximaNova';
+    font-size: 79px;
+    font-weight: bold;
     position: absolute;
-    margin-top: 65px;
-    width: 100%;
-    z-index: 1;
+    letter-spacing: 1px;
+    opacity: 0.2;
+    color: transparent;
+    -webkit-text-stroke: 1px $whiteTwo;
+  }
 
-    &__make-art {
-        left: -40px;
-        top: 95px;
-    }
+  &__make-art {
+    left: -40px;
+    top: 95px;
+  }
 
-    &__no-war {
-        right: -28px;
-        top: 95px;
-    }
+  &__no-war {
+    right: -28px;
+    top: 95px;
+  }
 
-    &__blur {
-        position: absolute;
-        left: 9%;
-    }
+  &__blur {
+    position: absolute;
+    left: 9%;
+  }
 
-    &__ellipse {
-        position: absolute;
-        right: 24.5%;
-        top: 194px;
-        width: 25px;
-        height: 25px;
-    }
+  &__ellipse {
+    position: absolute;
+    right: 24.5%;
+    width: 25px;
+    height: 25px;
+  }
 
-    &__star {
-        position: absolute;
-        left: 27%;
-        top: 46px;
-        width: 45px;
-        height: 65px;
-    }
+  &__star {
+    position: absolute;
+    left: 27%;
+    top: 46px;
+    left: 27%;
+    width: 45px;
+    height: 65px;
+  }
 
-    &__make-art,
-    &__no-war {
-        position: absolute;
-        font-family: ProximaNova;
-        font-weight: bold;
-        letter-spacing: 1px;
-        font-size: 79px;
-        opacity: 0.2;
-        color: transparent;
-        -webkit-text-stroke: 1px $whiteTwo;
-    }
-
-    @include media-breakpoint-down(md) {
-        display: none;
-    }
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
 }

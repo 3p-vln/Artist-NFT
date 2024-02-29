@@ -1,118 +1,121 @@
 .background {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  margin-top: 65px;
+
+  &__make-art,
+  &__no-war {
+    font-family: 'ProximaNova';
+    font-size: 79px;
+    font-weight: bold;
+
     position: absolute;
-    margin-top: 65px;
-    width: 100%;
-    z-index: 1;
 
-    &__make-art {
-        left: -40px;
-        top: 95px;
+    letter-spacing: 1px;
 
-        @include media-breakpoint-down(sm) {
-            display: none;
-        }
+    opacity: 0.2;
+    color: transparent;
+    -webkit-text-stroke: 1px $whiteTwo;
+  }
+
+  &__make-art {
+    top: 95px;
+    left: -40px;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  &__no-war {
+    top: 95px;
+    right: -28px;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  &__ellipse {
+    position: absolute;
+    top: 194px;
+    right: 24.5%;
+    width: 25px;
+    height: 25px;
+
+    @include media-breakpoint-down(xs) {
+      top: 154px;
+      right: 9%;
+    }
+  }
+
+  &__star {
+    position: absolute;
+    top: 46px;
+    left: 27%;
+    width: 45px;
+    height: 65px;
+
+    @include media-breakpoint-down(lg) {
+      top: 116px;
+      left: 20%;
     }
 
-    &__no-war {
-        right: -28px;
-        top: 95px;
-
-        @include media-breakpoint-down(sm) {
-            display: none;
-        }
+    @include media-breakpoint-down(xs) {
+      top: 10px;
+      right: 0;
+      left: unset;
     }
+  }
 
-    &__ellipse {
-        position: absolute;
-        right: 24.5%;
-        top: 194px;
-        width: 25px;
-        height: 25px;
+  &__blur-first {
+    position: absolute;
+    z-index: -1;
+    top: -60px;
+    left: 0;
 
-        @include media-breakpoint-down(xs) {
-            right: 9%;
-            top: 154px;
-        }
+    @include media-breakpoint-down(xs) {
+      display: none;
     }
+  }
 
-    &__star {
-        position: absolute;
-        left: 27%;
-        top: 46px;
-        width: 45px;
-        height: 65px;
+  &__blur-second {
+    position: absolute;
+    z-index: -1;
+    top: -60px;
+    right: 0;
+  }
 
-        @include media-breakpoint-down(lg) {
-            left: 20%;
-            top: 116px;
-        }
+  &__brilliant-first {
+    position: absolute;
+    top: 116px;
+    left: -10.8%;
 
-        @include media-breakpoint-down(xs) {
-            left: unset;
-            right: 0;
-            top: 10px;
-        }
+    @include media-breakpoint-down(xs) {
+      display: none;
     }
+  }
 
-    &__make-art,
-    &__no-war {
-        position: absolute;
-        font-family: ProximaNova;
-        font-weight: bold;
-        letter-spacing: 1px;
-        font-size: 79px;
-        opacity: 0.2;
-        color: transparent;
-        -webkit-text-stroke: 1px $whiteTwo;
+  &__brilliant-second {
+    position: absolute;
+    z-index: -3;
+    top: 36px;
+    right: 19.5%;
+
+    @include media-breakpoint-down(xs) {
+      display: none;
     }
+  }
 
-    &__blur-first {
-        position: absolute;
-        left: 0;
-        top: -60px;
-        z-index: -1;
+  &__brilliant-third {
+    position: absolute;
+    top: 150px;
+    right: -8%;
 
-        @include media-breakpoint-down(xs) {
-            display: none;
-        }
+    @include media-breakpoint-down(xs) {
+      top: 74px;
+      right: -11%;
     }
-
-    &__blur-second {
-        position: absolute;
-        right: 0;
-        top: -60px;
-        z-index: -1;
-    }
-
-    &__brilliant-first {
-        position: absolute;
-        left: -10.8%;
-        top: 116px;
-
-        @include media-breakpoint-down(xs) {
-            display: none;
-        }
-    }
-
-    &__brilliant-second {
-        position: absolute;
-        right: 19.5%;
-        top: 36px;
-        z-index: -3;
-
-        @include media-breakpoint-down(xs) {
-            display: none;
-        }
-    }
-
-    &__brilliant-third {
-        position: absolute;
-        right: -8%;
-        top: 150px;
-
-        @include media-breakpoint-down(xs) {
-            right: -11%;
-            top: 74px;
-        }
-    }
+  }
 }

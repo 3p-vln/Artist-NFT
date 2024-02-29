@@ -20,55 +20,11 @@ export function biographySwiper() {
     },
   });
 }
-// biographySwiper();
 
 export function premiumSwiper() {
   new Swiper('.premium-swiper', {
     loop: true,
     centeredSlides: true,
-    // updateOnWindowResize: true,
-
-    // on: {
-    //     init: function () {
-    //         console.log('swiper initialized');
-    //     },
-    // },
-
-    // breakpoints: {
-    //     320: {
-    //         slidesPerView: 'auto',
-    //         spaceBetween: 16,
-    //         loop: true,
-    //     },
-    //     1439: {
-    //         slidesPerView: 7,
-    //         spaceBetween: 30,
-    //         loop: true,
-    //     },
-    // },
-
-    // breakpoints: {
-    //     320: {
-    //         slidesPerView: 1.15,
-    //         spaceBetween: 16,
-    //     },
-    //     376: {
-    //         slidesPerView: 1.3,
-    //         spaceBetween: 16,
-    //     },
-    //     576: {
-    //         slidesPerView: 1.7,
-    //         spaceBetween: 16,
-    //     },
-    //     768: {
-    //         slidesPerView: 2.5,
-    //         spaceBetween: 30,
-    //     },
-    //     1439: {
-    //         slidesPerView: 3,
-    //         spaceBetween: 30,
-    //     },
-    // },
 
     breakpoints: {
       320: {

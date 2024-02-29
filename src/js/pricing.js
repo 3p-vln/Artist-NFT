@@ -1,10 +1,7 @@
-import $ from 'jquery';
-// import { db } from './modules/firebase';
-// import { collection, doc, getDocs } from 'firebase/firestore';
-import { priciingTabs } from './pricing/pricingTabs';
+import { pricingTabs } from './pricing/pricingTabs';
 
 document.addEventListener('DOMContentLoaded', () => {
-  priciingTabs();
+  pricingTabs();
   const artLoadEvent = new Event('loadingIsFinished');
   document.dispatchEvent(artLoadEvent);
 });

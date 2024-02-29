@@ -1,5 +1,7 @@
 const buttons = document.querySelectorAll('.tabs__button');
-const registerButtons = document.querySelectorAll('.register-form__plans-button');
+const registerButtons = document.querySelectorAll(
+  '.register-form__plans-button',
+);
 const cards = document.querySelectorAll('.card');
 
 import JustValidate from 'just-validate';

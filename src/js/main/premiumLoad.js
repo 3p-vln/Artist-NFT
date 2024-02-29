@@ -24,5 +24,4 @@ export function premiumLoad(data, id) {
                     </div>
                 </div>
                 `);
-  // console.log(premium)
 }

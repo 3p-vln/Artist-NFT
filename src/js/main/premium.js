@@ -1,81 +1,23 @@
 import $ from 'jquery';
 import { db } from '../modules/firebase';
 import { collection, getDocs } from 'firebase/firestore';
+import { getElementId } from '../composables/callDom.js';
 import { premiumLoad } from './premiumLoad';
-
-import Swiper from 'swiper';
-import { Navigation, Pagination, Autoplay, Scrollbar } from 'swiper/modules';
-
-const wrapper = document.querySelector('wrapper');
 
 export async function snapPremiumSwiper() {
   const querySnapshot = await getDocs(collection(db, 'main-swiper'));
   querySnapshot.forEach((doc) => {
     premiumLoad(doc.data(), doc.id);
   });
-  // console.log(querySnapshot);
-
-  // new Swiper('.premium-swiper', {
-  //     loop: true,
-  //     // centeredSlides: true,
-  //     updateOnWindowResize: true,
-
-  //     // on: {
-  //     //   init: function () {
-  //     //     console.log('swiper initialized');
-  //     //   },
-  //     // },
-
-  //     breakpoints: {
-  //         420: {
-  //                   slidesPerView: 2.3,
-  //                   centeredSlides: true,
-  //                   loop: true,
-  //                 },
-  //                 940: {
-  //                   slidesPerView: 3,
-  //                   centeredSlides: true,
-  //                   loop: true,
-  //                 },
-  //                 1024: {
-  //                   slidesPerView: 3.3,
-  //                   spaceBetween: 20,
-  //                   centeredSlides: true,
-  //                   loop: true,
-  //                 },
-  //                 1240: {
-  //                   slidesPerView: 4,
-  //                   spaceBetween: 20,
-  //                   centeredSlides: true,
-  //                   loop: true,
-  //                 },
-  //                 1441: {
-  //                   slidesPerView: 4.5,
-  //                   spaceBetween: 30,
-  //                   centeredSlides: true,
-  //                   loop: true,
-  //                 },
-  //                 1550: {
-  //                   slidesPerView: 5,
-  //                   spaceBetween: 30,
-  //                   centeredSlides: true,
-  //                   loop: true,
-  //                 },
-  //     }
-  //   });
 }
-// snapPremiumSwiper();
 
 export async function snapPremiumBanner() {
   const querySnapshot = await getDocs(collection(db, 'main-premium'));
   querySnapshot.forEach((doc) => {
     const data = doc.data();
 
-    // до сих пор не переделал!!!!!
-    document.querySelector('#premium-banner-title').innerHTML = data.bannerTitle;
-    document.querySelector('#premium-banner-paragraph').innerHTML = data.bannerParagraph;
-    document.querySelector('#premium-banner-btn-text').innerHTML = data.bannerBtnText;
+    getElementId('premium-banner-title').innerHTML = data.bannerTitle;
+    getElementId('premium-banner-paragraph').innerHTML = data.bannerParagraph;
+    getElementId('premium-banner-btn-text').innerHTML = data.bannerBtnText;
   });
-  // console.log(querySnapshot);
 }
-// snapPremiumBanner();

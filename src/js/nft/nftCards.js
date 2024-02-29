@@ -43,7 +43,6 @@ export function navigation() {
             text: data.text,
           });
         });
-        // console.log(nftArr);
         renderNFTs(nftArr.slice(0, 12));
         updateActiveClass();
         updateURL();

@@ -104,6 +104,7 @@ const fontStyle = () => {
       console.log(chalk.bold.white.bgRed('Ошибка записи файла: '), err);
     } else {
       console.log(chalk.bold.white.bgGreenBright('[Файл fonts.scss успешно записан]'));
+      console.log(chalk.bold.white.bgGreenBright('[Файл fonts.scss успешно записан]'));
     }
   }
 };

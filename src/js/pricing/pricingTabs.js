@@ -1,4 +1,4 @@
-export function priciingTabs() {
+export function pricingTabs() {
   const tabsBtn = document.querySelectorAll('.purchase__nav-btn');
   const tabsItems = document.querySelectorAll('.card');
 

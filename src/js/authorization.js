@@ -24,6 +24,7 @@ tabButtons.forEach((button) => {
 
     tabButtons.forEach((tabButton) => {
       tabButton.classList.remove('tabs__button_active');
+      // tabsSelect.classList.remove('tabs__select_active');
     });
 
     button.classList.add('tabs__button_active');
