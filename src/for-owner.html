@@ -26,6 +26,7 @@
       </div>
     </header>
     <main class="page for-owner__page">
+      <div class="for-owner__overlay"></div>
       <div class="page__container for-owner__page-container">
         <sidebar class="sidebar for-owner__sidebar">
           <div class="sidebar__content">
@@ -65,10 +66,12 @@
           </div>
         </sidebar>
         <div class="content for-owner__content-box">
+
           <div class="content__box chat" id="chat">
             <div class="chat__list">
               <h3 class="chat__list-title">My chat list</h3>
-              <div class="card chat__list-card">
+              <div class="chat__list-cards">
+                <div class="card chat__list-card">
                 <img src="./images/for-worker-and-owner/chat/ivan-img.png" alt="photo" class="card__photo">
                 <div class="card__info">
                   <div class="card__info-top">
@@ -108,6 +111,8 @@
                   <p class="card__text">Message that have been writed...</p>
                 </div>
               </div>
+              </div>
+              
               <div class="card chat__list-card">
                 <img src="./images/for-worker-and-owner/chat/ivan-img.png" alt="photo" class="card__photo">
                 <div class="card__info">
@@ -136,7 +141,7 @@
                     <div class="messages__mesage message">
                       <p class="message__text">Lorem ipsum dolor sit amet</p>
                     </div>
-                    <div class="message__time">10 min</div>
+                    <div class="message__time">10 min ago</div>
                   </div>
                 </div>
                 <h3 class="messages__title">New messages</h3>
@@ -161,8 +166,933 @@
               </div>
             </div>
           </div>
-          <div class="content__box orders" id="orders">orders</div>
-          <div class="content__box nft-orders" id="nft-orders">Nft-orders</div>
+
+          <div class="content__box orders" id="orders">
+            <h2 class="orders__title">My orders</h2>
+            <div class="orders__head-table-box">
+              <table class="orders__table orders__table_head table">
+                <tbody class="table__body">
+                  <tr class="table__titles">
+                    <th class="table__title table__title_type">Type of item</th>
+                    <th class="table__title table__title_color">Color</th>
+                    <th class="table__title table__title_mail">E-mail</th>
+                    <th class="table__title table__title_size">Size</th>
+                    <th class="table__title table__title_comment">Comment</th>
+                    <th class="table__title table__title_delivery">Delivery address</th>
+                    <th class="table__title table__title_action">Action</th>
+                  </tr>
+                </tbody>
+            </table>
+            </div>
+            
+            <div class="orders__table-box">
+              <table class="orders__table orders__table_body table">
+                <tbody class="table__body table__body_orders">
+                  <tr class="table__order">
+                    <td class="table__name">T-SHIRT</td>
+                    <td class="table__color"></td>
+                    <td class="table__mail">emailofcustomer@gmail.com</td>
+                    <td class="table__size">XL (99-99-99)</td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__action">
+                      <button class="btn table__button">Message</button>
+                    </td>
+                  </tr>
+                  <tr class="table__order">
+                    <td class="table__name">T-SHIRT</td>
+                    <td class="table__color"></td>
+                    <td class="table__mail">emailofcustomer@gmail.com</td>
+                    <td class="table__size">XL (99-99-99)</td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__action">
+                      <button class="btn table__button">Message</button>
+                    </td>
+                  </tr>
+                  <tr class="table__order">
+                    <td class="table__name">T-SHIRT</td>
+                    <td class="table__color"></td>
+                    <td class="table__mail">emailofcustomer@gmail.com</td>
+                    <td class="table__size">XL (99-99-99)</td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__action">
+                      <button class="btn table__button">Message</button>
+                    </td>
+                  </tr>
+                  <tr class="table__order">
+                    <td class="table__name">T-SHIRT</td>
+                    <td class="table__color"></td>
+                    <td class="table__mail">emailofcustomer@gmail.com</td>
+                    <td class="table__size">XL (99-99-99)</td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__action">
+                      <button class="btn table__button">Message</button>
+                    </td>
+                  </tr>
+                  <tr class="table__order">
+                    <td class="table__name">T-SHIRT</td>
+                    <td class="table__color"></td>
+                    <td class="table__mail">emailofcustomer@gmail.com</td>
+                    <td class="table__size">XL (99-99-99)</td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__action">
+                      <button class="btn table__button">Message</button>
+                    </td>
+                  </tr>
+                  <tr class="table__order">
+                    <td class="table__name">T-SHIRT</td>
+                    <td class="table__color"></td>
+                    <td class="table__mail">emailofcustomer@gmail.com</td>
+                    <td class="table__size">XL (99-99-99)</td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__action">
+                      <button class="btn table__button">Message</button>
+                    </td>
+                  </tr>
+                  <tr class="table__order">
+                    <td class="table__name">T-SHIRT</td>
+                    <td class="table__color"></td>
+                    <td class="table__mail">emailofcustomer@gmail.com</td>
+                    <td class="table__size">XL (99-99-99)</td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__action">
+                      <button class="btn table__button">Message</button>
+                    </td>
+                  </tr>
+                  <tr class="table__order">
+                    <td class="table__name">T-SHIRT</td>
+                    <td class="table__color"></td>
+                    <td class="table__mail">emailofcustomer@gmail.com</td>
+                    <td class="table__size">XL (99-99-99)</td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__action">
+                      <button class="btn table__button">Message</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <div class="content__box-mobile">
+              <div class="orders-card order">
+                <div class="order__head">
+
+                  <div class="table__color"></div>
+
+                  <div class="order__info">
+                    <p class="table__name">T-SHIRT</p>
+                    <p class="order__mail">emailofcustomer@gmail.com</p>
+                  </div>
+                </div>
+
+                <div class="order__size-info">
+                    <p class="table__title">Size</p>
+                    <p class="table__size">XL (99-99-99)</p>
+                </div>
+
+                <div class="order__del-info">
+                  <div class="order__del-info-left">
+                    <p class="order__del-title">Delivery address</p>
+                    <p class="order__descr-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+                  </div>
+
+                  <div class="order__del-info-right">
+                    <p class="table__title">Comment</p>
+                    <p class="table__descr-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+                  </div>
+
+                </div>
+
+                <button class="btn order__button">Message</button>
+              </div>
+
+              <div class="orders-card order">
+                <div class="order__head">
+
+                  <div class="table__color"></div>
+
+                  <div class="order__info">
+                    <p class="table__name">T-SHIRT</p>
+                    <p class="order__mail">emailofcustomer@gmail.com</p>
+                  </div>
+                </div>
+
+                <div class="order__size-info">
+                    <p class="table__title">Size</p>
+                    <p class="table__size">XL (99-99-99)</p>
+                </div>
+
+                <div class="order__del-info">
+                  <div class="order__del-info-left">
+                    <p class="order__del-title">Delivery address</p>
+                    <p class="order__descr-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+                  </div>
+
+                  <div class="order__del-info-right">
+                    <p class="table__title">Comment</p>
+                    <p class="table__descr-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+                  </div>
+
+                </div>
+
+                <button class="btn order__button">Message</button>
+              </div>
+
+              <div class="orders-card order">
+                <div class="order__head">
+
+                  <div class="table__color"></div>
+
+                  <div class="order__info">
+                    <p class="table__name">T-SHIRT</p>
+                    <p class="order__mail">emailofcustomer@gmail.com</p>
+                  </div>
+                </div>
+
+                <div class="order__size-info">
+                    <p class="table__title">Size</p>
+                    <p class="table__size">XL (99-99-99)</p>
+                </div>
+
+                <div class="order__del-info">
+                  <div class="order__del-info-left">
+                    <p class="order__del-title">Delivery address</p>
+                    <p class="order__descr-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+                  </div>
+
+                  <div class="order__del-info-right">
+                    <p class="table__title">Comment</p>
+                    <p class="table__descr-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+                  </div>
+
+                </div>
+
+                <button class="btn order__button">Message</button>
+              </div>
+
+              <div class="orders-card order">
+                <div class="order__head">
+
+                  <div class="table__color"></div>
+
+                  <div class="order__info">
+                    <p class="table__name">T-SHIRT</p>
+                    <p class="order__mail">emailofcustomer@gmail.com</p>
+                  </div>
+                </div>
+
+                <div class="order__size-info">
+                    <p class="table__title">Size</p>
+                    <p class="table__size">XL (99-99-99)</p>
+                </div>
+
+                <div class="order__del-info">
+                  <div class="order__del-info-left">
+                    <p class="order__del-title">Delivery address</p>
+                    <p class="order__descr-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+                  </div>
+
+                  <div class="order__del-info-right">
+                    <p class="table__title">Comment</p>
+                    <p class="table__descr-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+                  </div>
+
+                </div>
+
+                <button class="btn order__button">Message</button>
+              </div>
+
+              <div class="orders-card order">
+                <div class="order__head">
+
+                  <div class="table__color"></div>
+
+                  <div class="order__info">
+                    <p class="table__name">T-SHIRT</p>
+                    <p class="order__mail">emailofcustomer@gmail.com</p>
+                  </div>
+                </div>
+
+                <div class="order__size-info">
+                    <p class="table__title">Size</p>
+                    <p class="table__size">XL (99-99-99)</p>
+                </div>
+
+                <div class="order__del-info">
+                  <div class="order__del-info-left">
+                    <p class="order__del-title">Delivery address</p>
+                    <p class="order__descr-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+                  </div>
+
+                  <div class="order__del-info-right">
+                    <p class="table__title">Comment</p>
+                    <p class="table__descr-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+                  </div>
+
+                </div>
+
+                <button class="btn order__button">Message</button>
+              </div>
+
+              <div class="orders-card order">
+                <div class="order__head">
+
+                  <div class="table__color"></div>
+
+                  <div class="order__info">
+                    <p class="table__name">T-SHIRT</p>
+                    <p class="order__mail">emailofcustomer@gmail.com</p>
+                  </div>
+                </div>
+
+                <div class="order__size-info">
+                    <p class="table__title">Size</p>
+                    <p class="table__size">XL (99-99-99)</p>
+                </div>
+
+                <div class="order__del-info">
+                  <div class="order__del-info-left">
+                    <p class="order__del-title">Delivery address</p>
+                    <p class="order__descr-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+                  </div>
+
+                  <div class="order__del-info-right">
+                    <p class="table__title">Comment</p>
+                    <p class="table__descr-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+                  </div>
+
+                </div>
+
+                <button class="btn order__button">Message</button>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="content__box nft-orders" id="nft-orders">
+            <h2 class="orders__title">My NFT orders</h2>
+            <div class="nft-orders__head-table-box">
+              <table class="nft-orders__table nft-orders__table_head table">
+                <tbody class="table__body">
+                  <tr class="table__titles">
+                    <th class="table__title table__title_name">Name of product</th>
+                    <th class="table__title table__title_crypto">Crypto</th>
+                    <th class="table__title table__title_status">Status</th>
+                    <th class="table__title table__title_price">Price</th>
+                    <th class="table__title table__title_date">Date</th>
+                  </tr>
+                </tbody>
+            </table>
+            </div>
+
+            <div class="orders__table-box">
+              <table class="orders__table orders__table_body table">
+                <tbody class="table__body table__body_orders">
+
+                  <tr class="table__order table__order_nft">
+
+                    <td class="table__name-nft">
+
+                      <img src="./images/for-worker-and-owner/nft-orders/for-item.png" alt="order" class="table__name-nft-img">
+
+                      <span class="table__name-nft-text">Name of NFT </span>
+
+                    </td>
+
+                    <td class="table__crypto">
+
+                      <span class="table__crypto-text">EQBSSl0Xlo3...kkHTmFw5YVYOiWJ. </span>
+
+                      <svg class="table__crypto-svg">
+                        <use href="#nft-order-card"></use>
+                      </svg>
+                    </td>
+
+
+                    <td class="table__status">Success</td>
+
+                    <td class="table__price">$100 322</td>
+
+                    <td class="table__date">12, June 14:00</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+
+            <div class="orders__table-box">
+              <table class="orders__table orders__table_body table">
+                <tbody class="table__body table__body_orders">
+
+                  <tr class="table__order table__order_nft">
+
+                    <td class="table__name-nft">
+
+                      <img src="./images/for-worker-and-owner/nft-orders/for-item.png" alt="order" class="table__name-nft-img">
+
+                      <span class="table__name-nft-text">Name of NFT </span>
+
+                    </td>
+
+                    <td class="table__crypto">
+
+                      <span class="table__crypto-text">EQBSSl0Xlo3...kkHTmFw5YVYOiWJ. </span>
+
+                      <svg class="table__crypto-svg">
+                        <use href="#nft-order-card"></use>
+                      </svg>
+                    </td>
+
+
+                    <td class="table__status">Success</td>
+
+                    <td class="table__price">$100 322</td>
+
+                    <td class="table__date">12, June 14:00</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+
+            <div class="orders__table-box">
+              <table class="orders__table orders__table_body table">
+                <tbody class="table__body table__body_orders">
+
+                  <tr class="table__order table__order_nft">
+
+                    <td class="table__name-nft">
+
+                      <img src="./images/for-worker-and-owner/nft-orders/for-item.png" alt="order" class="table__name-nft-img">
+
+                      <span class="table__name-nft-text">Name of NFT </span>
+
+                    </td>
+
+                    <td class="table__crypto">
+
+                      <span class="table__crypto-text">EQBSSl0Xlo3...kkHTmFw5YVYOiWJ. </span>
+
+                      <svg class="table__crypto-svg">
+                        <use href="#nft-order-card"></use>
+                      </svg>
+                    </td>
+
+
+                    <td class="table__status">Success</td>
+
+                    <td class="table__price">$100 322</td>
+
+                    <td class="table__date">12, June 14:00</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+
+            <div class="orders__table-box">
+              <table class="orders__table orders__table_body table">
+                <tbody class="table__body table__body_orders">
+
+                  <tr class="table__order table__order_nft">
+
+                    <td class="table__name-nft">
+
+                      <img src="./images/for-worker-and-owner/nft-orders/for-item.png" alt="order" class="table__name-nft-img">
+
+                      <span class="table__name-nft-text">Name of NFT </span>
+
+                    </td>
+
+                    <td class="table__crypto">
+
+                      <span class="table__crypto-text">EQBSSl0Xlo3...kkHTmFw5YVYOiWJ. </span>
+
+                      <svg class="table__crypto-svg">
+                        <use href="#nft-order-card"></use>
+                      </svg>
+                    </td>
+
+
+                    <td class="table__status">Success</td>
+
+                    <td class="table__price">$100 322</td>
+
+                    <td class="table__date">12, June 14:00</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+
+            <div class="orders__table-box">
+              <table class="orders__table orders__table_body table">
+                <tbody class="table__body table__body_orders">
+
+                  <tr class="table__order table__order_nft">
+
+                    <td class="table__name-nft">
+
+                      <img src="./images/for-worker-and-owner/nft-orders/for-item.png" alt="order" class="table__name-nft-img">
+
+                      <span class="table__name-nft-text">Name of NFT </span>
+
+                    </td>
+
+                    <td class="table__crypto">
+
+                      <span class="table__crypto-text">EQBSSl0Xlo3...kkHTmFw5YVYOiWJ. </span>
+
+                      <svg class="table__crypto-svg">
+                        <use href="#nft-order-card"></use>
+                      </svg>
+                    </td>
+
+
+                    <td class="table__status">Success</td>
+
+                    <td class="table__price">$100 322</td>
+
+                    <td class="table__date">12, June 14:00</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+
+            <div class="orders__table-box">
+              <table class="orders__table orders__table_body table">
+                <tbody class="table__body table__body_orders">
+
+                  <tr class="table__order table__order_nft">
+
+                    <td class="table__name-nft">
+
+                      <img src="./images/for-worker-and-owner/nft-orders/for-item.png" alt="order" class="table__name-nft-img">
+
+                      <span class="table__name-nft-text">Name of NFT </span>
+
+                    </td>
+
+                    <td class="table__crypto">
+
+                      <span class="table__crypto-text">EQBSSl0Xlo3...kkHTmFw5YVYOiWJ. </span>
+
+                      <svg class="table__crypto-svg">
+                        <use href="#nft-order-card"></use>
+                      </svg>
+                    </td>
+
+
+                    <td class="table__status">Success</td>
+
+                    <td class="table__price">$100 322</td>
+
+                    <td class="table__date">12, June 14:00</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+
+            <div class="orders__table-box">
+              <table class="orders__table orders__table_body table">
+                <tbody class="table__body table__body_orders">
+
+                  <tr class="table__order table__order_nft">
+
+                    <td class="table__name-nft">
+
+                      <img src="./images/for-worker-and-owner/nft-orders/for-item.png" alt="order" class="table__name-nft-img">
+
+                      <span class="table__name-nft-text">Name of NFT </span>
+
+                    </td>
+
+                    <td class="table__crypto">
+
+                      <span class="table__crypto-text">EQBSSl0Xlo3...kkHTmFw5YVYOiWJ. </span>
+
+                      <svg class="table__crypto-svg">
+                        <use href="#nft-order-card"></use>
+                      </svg>
+                    </td>
+
+
+                    <td class="table__status">Success</td>
+
+                    <td class="table__price">$100 322</td>
+
+                    <td class="table__date">12, June 14:00</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+
+            <div class="orders__table-box">
+              <table class="orders__table orders__table_body table">
+                <tbody class="table__body table__body_orders">
+
+                  <tr class="table__order table__order_nft">
+
+                    <td class="table__name-nft">
+
+                      <img src="./images/for-worker-and-owner/nft-orders/for-item.png" alt="order" class="table__name-nft-img">
+
+                      <span class="table__name-nft-text">Name of NFT </span>
+
+                    </td>
+
+                    <td class="table__crypto">
+
+                      <span class="table__crypto-text">EQBSSl0Xlo3...kkHTmFw5YVYOiWJ. </span>
+
+                      <svg class="table__crypto-svg">
+                        <use href="#nft-order-card"></use>
+                      </svg>
+                    </td>
+
+
+                    <td class="table__status">Success</td>
+
+                    <td class="table__price">$100 322</td>
+
+                    <td class="table__date">12, June 14:00</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          
+            <div class="content__box-mobile">
+              <div class="orders-card order">
+                <div class="order__head">
+
+                  <img src="./images/for-worker-and-owner/nft-orders/for-item.png" alt="order" class="table__name-nft-img">
+
+                  <div class="order__info">
+                    <p class="table__name">NFT #9238239</p>
+                    <p class="table__date">12, June 14:00</p>
+                  </div>
+                </div>
+
+                <div class="order__size-info">
+                    <p class="table__title">Adress</p>
+                    <div class="table__crypto table__crypto_order">
+                      <span class="table__crypto-text">EQBS...5YVYOiWJ.</span>
+
+                      <svg class="table__crypto-svg">
+                        <use href="#nft-order-card"></use>
+                      </svg>
+                    </div>
+                </div>
+
+                <div class="order__del-info">
+                  <p class="order__del-title">Price</p>
+                  <p class="order__price">$100 322</p>
+                </div>
+
+                <button class="btn order__button order__button_nft">Message</button>
+              </div>
+
+              <div class="orders-card order">
+                <div class="order__head">
+
+                  <img src="./images/for-worker-and-owner/nft-orders/for-item.png" alt="order" class="table__name-nft-img">
+
+                  <div class="order__info">
+                    <p class="table__name">NFT #9238239</p>
+                    <p class="table__date">12, June 14:00</p>
+                  </div>
+                </div>
+
+                <div class="order__size-info">
+                    <p class="table__title">Adress</p>
+                    <div class="table__crypto table__crypto_order">
+                      <span class="table__crypto-text">EQBS...5YVYOiWJ.</span>
+
+                      <svg class="table__crypto-svg">
+                        <use href="#nft-order-card"></use>
+                      </svg>
+                    </div>
+                </div>
+
+                <div class="order__del-info">
+                  <p class="order__del-title">Price</p>
+                  <p class="order__price">$100 322</p>
+                </div>
+
+                <button class="btn order__button order__button_nft">Message</button>
+              </div>
+
+              <div class="orders-card order">
+                <div class="order__head">
+
+                  <img src="./images/for-worker-and-owner/nft-orders/for-item.png" alt="order" class="table__name-nft-img">
+
+                  <div class="order__info">
+                    <p class="table__name">NFT #9238239</p>
+                    <p class="table__date">12, June 14:00</p>
+                  </div>
+                </div>
+
+                <div class="order__size-info">
+                    <p class="table__title">Adress</p>
+                    <div class="table__crypto table__crypto_order">
+                      <span class="table__crypto-text">EQBS...5YVYOiWJ.</span>
+
+                      <svg class="table__crypto-svg">
+                        <use href="#nft-order-card"></use>
+                      </svg>
+                    </div>
+                </div>
+
+                <div class="order__del-info">
+                  <p class="order__del-title">Price</p>
+                  <p class="order__price">$100 322</p>
+                </div>
+
+                <button class="btn order__button order__button_nft">Message</button>
+              </div>
+
+              <div class="orders-card order">
+                <div class="order__head">
+
+                  <img src="./images/for-worker-and-owner/nft-orders/for-item.png" alt="order" class="table__name-nft-img">
+
+                  <div class="order__info">
+                    <p class="table__name">NFT #9238239</p>
+                    <p class="table__date">12, June 14:00</p>
+                  </div>
+                </div>
+
+                <div class="order__size-info">
+                    <p class="table__title">Adress</p>
+                    <div class="table__crypto table__crypto_order">
+                      <span class="table__crypto-text">EQBS...5YVYOiWJ.</span>
+
+                      <svg class="table__crypto-svg">
+                        <use href="#nft-order-card"></use>
+                      </svg>
+                    </div>
+                </div>
+
+                <div class="order__del-info">
+                  <p class="order__del-title">Price</p>
+                  <p class="order__price">$100 322</p>
+                </div>
+
+                <button class="btn order__button order__button_nft">Message</button>
+              </div>
+
+              <div class="orders-card order">
+                <div class="order__head">
+
+                  <img src="./images/for-worker-and-owner/nft-orders/for-item.png" alt="order" class="table__name-nft-img">
+
+                  <div class="order__info">
+                    <p class="table__name">NFT #9238239</p>
+                    <p class="table__date">12, June 14:00</p>
+                  </div>
+                </div>
+
+                <div class="order__size-info">
+                    <p class="table__title">Adress</p>
+                    <div class="table__crypto table__crypto_order">
+                      <span class="table__crypto-text">EQBS...5YVYOiWJ.</span>
+
+                      <svg class="table__crypto-svg">
+                        <use href="#nft-order-card"></use>
+                      </svg>
+                    </div>
+                </div>
+
+                <div class="order__del-info">
+                  <p class="order__del-title">Price</p>
+                  <p class="order__price">$100 322</p>
+                </div>
+
+                <button class="btn order__button order__button_nft">Message</button>
+              </div>
+
+              <div class="orders-card order">
+                <div class="order__head">
+
+                  <img src="./images/for-worker-and-owner/nft-orders/for-item.png" alt="order" class="table__name-nft-img">
+
+                  <div class="order__info">
+                    <p class="table__name">NFT #9238239</p>
+                    <p class="table__date">12, June 14:00</p>
+                  </div>
+                </div>
+
+                <div class="order__size-info">
+                    <p class="table__title">Adress</p>
+                    <div class="table__crypto table__crypto_order">
+                      <span class="table__crypto-text">EQBS...5YVYOiWJ.</span>
+
+                      <svg class="table__crypto-svg">
+                        <use href="#nft-order-card"></use>
+                      </svg>
+                    </div>
+                </div>
+
+                <div class="order__del-info">
+                  <p class="order__del-title">Price</p>
+                  <p class="order__price">$100 322</p>
+                </div>
+
+                <button class="btn order__button order__button_nft">Message</button>
+              </div>
+
+              <div class="orders-card order">
+                <div class="order__head">
+
+                  <img src="./images/for-worker-and-owner/nft-orders/for-item.png" alt="order" class="table__name-nft-img">
+
+                  <div class="order__info">
+                    <p class="table__name">NFT #9238239</p>
+                    <p class="table__date">12, June 14:00</p>
+                  </div>
+                </div>
+
+                <div class="order__size-info">
+                    <p class="table__title">Adress</p>
+                    <div class="table__crypto table__crypto_order">
+                      <span class="table__crypto-text">EQBS...5YVYOiWJ.</span>
+
+                      <svg class="table__crypto-svg">
+                        <use href="#nft-order-card"></use>
+                      </svg>
+                    </div>
+                </div>
+
+                <div class="order__del-info">
+                  <p class="order__del-title">Price</p>
+                  <p class="order__price">$100 322</p>
+                </div>
+
+                <button class="btn order__button order__button_nft">Message</button>
+              </div>
+
+              <div class="orders-card order">
+                <div class="order__head">
+
+                  <img src="./images/for-worker-and-owner/nft-orders/for-item.png" alt="order" class="table__name-nft-img">
+
+                  <div class="order__info">
+                    <p class="table__name">NFT #9238239</p>
+                    <p class="table__date">12, June 14:00</p>
+                  </div>
+                </div>
+
+                <div class="order__size-info">
+                    <p class="table__title">Adress</p>
+                    <div class="table__crypto table__crypto_order">
+                      <span class="table__crypto-text">EQBS...5YVYOiWJ.</span>
+
+                      <svg class="table__crypto-svg">
+                        <use href="#nft-order-card"></use>
+                      </svg>
+                    </div>
+                </div>
+
+                <div class="order__del-info">
+                  <p class="order__del-title">Price</p>
+                  <p class="order__price">$100 322</p>
+                </div>
+
+                <button class="btn order__button order__button_nft">Message</button>
+              </div>
+
+              <div class="orders-card order">
+                <div class="order__head">
+
+                  <img src="./images/for-worker-and-owner/nft-orders/for-item.png" alt="order" class="table__name-nft-img">
+
+                  <div class="order__info">
+                    <p class="table__name">NFT #9238239</p>
+                    <p class="table__date">12, June 14:00</p>
+                  </div>
+                </div>
+
+                <div class="order__size-info">
+                    <p class="table__title">Adress</p>
+                    <div class="table__crypto table__crypto_order">
+                      <span class="table__crypto-text">EQBS...5YVYOiWJ.</span>
+
+                      <svg class="table__crypto-svg">
+                        <use href="#nft-order-card"></use>
+                      </svg>
+                    </div>
+                </div>
+
+                <div class="order__del-info">
+                  <p class="order__del-title">Price</p>
+                  <p class="order__price">$100 322</p>
+                </div>
+
+                <button class="btn order__button order__button_nft">Message</button>
+              </div>
+
+            </div>
+          </div>
           <div class="content__box workers" id="workers">Workers</div>
         </div>
       </div>
