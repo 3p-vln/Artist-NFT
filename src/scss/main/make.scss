@@ -17,23 +17,20 @@
   }
 
   &__left {
-    z-index: 2;
     display: flex;
     flex-direction: column;
-    max-width: 39.65%;
     padding: 60px 0 0 12px;
+    max-width: 39.65%;
+    z-index: 2;
 
     &-title {
       padding: 24px 0 0 2px;
       width: 475px;
-      font-family: 'ProximaNova';
-      font-weight: 700;
-      font-family: 'ProximaNova';
-      font-size: 64px;
+      font-family: ProximaNova;
+      font-weight: bold;
       font-weight: bold;
       line-height: 65px;
-      width: 475px;
-      padding: 24px 0 0 2px;
+      font-size: 64px;
       color: $whiteTwo;
 
       @include media-breakpoint-down(md) {
@@ -43,25 +40,22 @@
       }
 
       @include media-breakpoint-down(xs) {
-        font-size: 36px;
-        line-height: 40px;
-        max-width: 271px;
         padding: 0;
+        max-width: 271px;
+        line-height: 40px;
         text-align: left;
+        font-size: 36px;
       }
     }
 
     &-text {
       padding: 14px 0 0 3px;
       max-width: 271px;
-      font-family: 'ProximaNova';
-      font-weight: 400;
-      font-family: 'ProximaNova';
-      font-size: clamp(15px, 2.5vw, 16px);
+      font-family: ProximaNova;
+      font-weight: normal;
       font-weight: normal;
       line-height: 28px;
-      max-width: 271px;
-      padding: 14px 0 0 3px;
+      font-size: clamp(15px, 2.5vw, 16px);
       color: $whiteTwo;
 
       @include media-breakpoint-down(md) {
@@ -69,8 +63,8 @@
       }
 
       @include media-breakpoint-down(xs) {
-        line-height: 24px;
         padding: 8px 0 0;
+        line-height: 24px;
         text-align: left;
       }
     }
@@ -78,8 +72,8 @@
     @include media-breakpoint-down(md) {
       align-items: center;
       justify-content: center;
-      max-width: 100%;
       padding: 0;
+      max-width: 100%;
     }
 
     @include media-breakpoint-down(xs) {
@@ -116,16 +110,16 @@
 
         &-svg {
           min-width: 18px;
-          max-width: 24px;
           min-height: 18px;
+          max-width: 24px;
           max-height: 24px;
           color: $background;
         }
 
         span {
-          font-family: 'ProximaNova';
-          font-size: clamp(15px, 2.5vw, 18px);
+          font-family: ProximaNova;
           text-wrap: nowrap;
+          font-size: clamp(15px, 2.5vw, 18px);
           color: $background;
         }
 
@@ -141,9 +135,9 @@
         padding: 18px 36px;
 
         span {
-          font-family: 'ProximaNova';
-          font-size: clamp(15px, 2.5vw, 18px);
+          font-family: ProximaNova;
           line-height: 26.5px;
+          font-size: clamp(15px, 2.5vw, 18px);
           -webkit-text-fill-color: transparent;
           background: $rainbowBtnGradient;
           background-clip: text;

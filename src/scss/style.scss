@@ -17,16 +17,16 @@ body {
 
 [class*='__container'] {
   position: relative;
-  z-index: 2;
-  max-width: $maxWidthContainer;
   margin: 0 auto;
   padding: 0 15px;
+  max-width: $maxWidthContainer;
+  z-index: 2;
 }
 
 .wrapper {
   display: flex;
-  overflow: hidden;
   flex-direction: column;
+  overflow: hidden;
   min-height: 100%;
 }
 
@@ -37,28 +37,28 @@ body {
 }
 
 .just-validate-error-label {
-  font-size: 14px;
-  font-weight: bold;
   position: absolute;
-  z-index: 3;
-  top: 10px;
   right: 50%;
-  padding: 8px;
-  text-wrap: nowrap;
+  top: 10px;
   border-radius: 7px;
-  background: $rainbowBtnGradient;
+  padding: 8px;
+  font-weight: bold;
+  text-wrap: nowrap;
   transform: translateX(50%);
+  z-index: 3;
+  font-size: 14px;
+  background: $rainbowBtnGradient;
 
   &::after {
+    content: '';
     position: absolute;
-    z-index: 3;
-    top: 28px;
     left: 50%;
+    top: 28px;
+    clip-path: polygon(0 0, 53% 100%, 100% 0);
     width: 10px;
     height: 10px;
-    content: '';
-    background: $rainbowBtnGradient;
     transform: translateX(-50%);
-    clip-path: polygon(0 0, 53% 100%, 100% 0);
+    z-index: 3;
+    background: $rainbowBtnGradient;
   }
 }

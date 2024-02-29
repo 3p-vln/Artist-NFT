@@ -3,16 +3,14 @@
   margin-top: 65px;
   width: 100%;
   z-index: 1;
-  width: 100%;
-  margin-top: 65px;
 
   &__make-art,
   &__no-war {
-    font-family: 'ProximaNova';
-    font-size: 79px;
-    font-weight: bold;
     position: absolute;
+    font-family: ProximaNova;
+    font-weight: bold;
     letter-spacing: 1px;
+    font-size: 79px;
     opacity: 0.2;
     color: transparent;
     -webkit-text-stroke: 1px $whiteTwo;
@@ -44,7 +42,6 @@
     position: absolute;
     left: 27%;
     top: 46px;
-    left: 27%;
     width: 45px;
     height: 65px;
   }

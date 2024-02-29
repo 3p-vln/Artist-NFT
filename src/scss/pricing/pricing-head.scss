@@ -1,19 +1,19 @@
 .pricing-head {
   position: relative;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   margin-top: 74px;
   padding-top: 52px;
   gap: 17px;
 
   &__title {
-    font-family: 'ProximaNova';
-    font-size: clamp(36px, 5vw, 64px);
+    max-width: 569px;
+    font-family: ProximaNova;
     font-weight: bold;
     line-height: 65px;
-    max-width: 569px;
     text-align: center;
+    font-size: clamp(36px, 5vw, 64px);
     color: $whiteTwo;
 
     @include media-breakpoint-down(lg) {
@@ -21,20 +21,20 @@
     }
 
     @include media-breakpoint-down(xs) {
-      max-width: 271px;
       padding-top: 22px;
       padding-left: 2px;
+      max-width: 271px;
       text-align: left;
     }
   }
 
   &__subtitle {
-    font-family: 'ProximaNova';
-    font-size: clamp(15px, 2.5vw, 16px);
+    max-width: 400px;
+    font-family: ProximaNova;
     font-weight: normal;
     line-height: 28px;
-    max-width: 400px;
     text-align: center;
+    font-size: clamp(15px, 2.5vw, 16px);
     color: $whiteTwo;
 
     @include media-breakpoint-down(lg) {

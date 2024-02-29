@@ -1,13 +1,13 @@
 .background {
   position: absolute;
-  z-index: 1;
-  width: 100%;
   margin-top: 65px;
+  width: 100%;
+  z-index: 1;
 
   &__ellipse {
     position: absolute;
-    top: 582px;
     left: 9.3%;
+    top: 582px;
     width: 15px;
     height: 15px;
 
@@ -18,8 +18,8 @@
 
   &__star-first {
     position: absolute;
-    top: 50px;
     left: 7.2%;
+    top: 50px;
     width: 46px;
     height: 62px;
 
@@ -30,8 +30,8 @@
 
   &__star-second {
     position: absolute;
-    top: 48px;
     right: 16.3%;
+    top: 48px;
     width: 24px;
     height: 33px;
 
@@ -42,9 +42,9 @@
 
   &__blur-first {
     position: absolute;
-    z-index: -1;
-    top: -60px;
     left: 0;
+    top: -60px;
+    z-index: -1;
 
     @include media-breakpoint-down(xs) {
       display: none;
@@ -53,9 +53,9 @@
 
   &__blur-second {
     position: absolute;
-    z-index: -1;
-    top: -60px;
     right: 0;
+    top: -60px;
+    z-index: -1;
 
     @include media-breakpoint-down(md) {
       display: none;
