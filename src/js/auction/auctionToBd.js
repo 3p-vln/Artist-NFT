@@ -1,22 +1,40 @@
 import { db } from '../modules/firebase';
-import { collection, addDoc } from 'firebase/firestore';
+import { collection, getDoc, doc, updateDoc } from 'firebase/firestore';
 
 export async function auctionToBD() {
-    const date = new Date();
-    document.getElementById('form').addEventListener('submit', async function (e) {
-        e.preventDefault();
+  const collectionRef = collection(db, 'auction');
+  const docRef = doc(collectionRef, '0');
+  const docSnap = await getDoc(docRef);
 
-        const docRef = await addDoc(collection(db, 'auction'), {
-            highestPrice: document.getElementById('highestPrice').value,
-            dateYear: date.getFullYear(),
-            dateDay: date.getDate(),
-            dateMonth: date.getMonth() + 1,
-        });
-        console.log('Document written with ID: ', docRef.id);
-        document.getElementById('form').reset();
-    });
-    console.log('111');
-    console.log(date.getFullYear());
-    console.log(date.getMonth() + 1);
-    console.log(date.getDate());
+  if (docSnap.exists()) {
+    const currentValue = docSnap.data().highestPrice;
+
+    const inputValue = document.getElementById('number').value;
+
+    if (inputValue.trim() === '') {
+      return;
+    }
+
+    let newValue = parseInt(inputValue);
+
+    if (isNaN(newValue)) {
+      return;
+    }
+
+    if (newValue > currentValue) {
+      await updateDoc(docRef, {
+        highestPrice: newValue,
+      });
+
+      // Добавляем символ "$" к новому значению
+      const formattedNewValue = `$${newValue}`;
+
+      const highestPriceElement = document.getElementById('highestPrice');
+      if (highestPriceElement) {
+        highestPriceElement.textContent = formattedNewValue;
+      }
+
+      document.getElementById('number').value = '';
+    }
+  }
 }

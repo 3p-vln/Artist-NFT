@@ -5,6 +5,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     tab();
     chatTab();
 
-    const loadingIsFinished = new Event('loadingIsFinished');
-    document.dispatchEvent(loadingIsFinished);
+  const loadingIsFinished = new Event('loadingIsFinished');
+  document.dispatchEvent(loadingIsFinished);
 });

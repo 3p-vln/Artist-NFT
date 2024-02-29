@@ -18,7 +18,7 @@ const createSvgSprite = () => {
             example: true,
           },
         },
-      })
+      }),
     )
     .pipe(gulp.dest(filePaths.build.images));
 };
