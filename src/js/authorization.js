@@ -22,6 +22,7 @@ tabButtons.forEach((button) => {
     console.log(tabId);
     let currentTab = document.querySelector(tabId);
 
+
     tabButtons.forEach((tabButton) => {
       tabButton.classList.remove('tabs__button_active');
       // tabsSelect.classList.remove('tabs__select_active');
@@ -93,3 +94,6 @@ validator
       errorMessage: 'incorrect password',
     },
   ]);
+
+    const artLoadEvent = new Event('loadingIsFinished');
+    document.dispatchEvent(artLoadEvent);
