@@ -34,10 +34,18 @@ $grayLabel: rgb(200, 210, 220);
 
 $greenColor: #c5ff98; // цвет для оплаты или для первого мейн свайпера
 $greenBg: rgba(197, 255, 152, 0.1); // цвет бєка для оплаты или для первого мейн свайпера
+$greenStatusColor: #c8d2dc;
 $blueAuthColor: #7e51ff;
+
+$blueOwnerColor:#86a8ff;
+$borderGrayColor:#525960;
+
+
 $borderGrayColor: #525960;
 $forLinksBlue: #86a8ff;
 $forValidateBlue: rgb(104 201 255);
+
+
 
 $fontFamily: $mainFont, sans-serif; // Семейство шрифта по умолчанию
 $fontColor: $blackColor; // Цвет шрифта по умолчанию
@@ -61,6 +69,8 @@ $darkerGradientBtn: linear-gradient(
 ); // темный градиент
 $benefitsStarBoxGradient: linear-gradient(130deg, #68c9ff 0%, #d1b5ff 99.47%);
 $individPlanGradient: linear-gradient(130deg, #00adc5 0%, #ad7aff 99.47%);
+
+
 $cardHover: linear-gradient(
   141deg,
   rgb(104 128 255 / 90%) 3.3%,
@@ -94,3 +104,4 @@ $chery: #a14051;
 $gray: #cfcfcf;
 $brown: #4a3221;
 $black: #000;
+
