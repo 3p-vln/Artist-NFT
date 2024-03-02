@@ -3,7 +3,7 @@
   overflow: hidden;
   border-radius: 32px 32px 0 0;
   padding: 22px 33px 0 27px;
-  height: 100vh;
+  // height: 100vh;
   color: $whiteTwo;
   background: rgb(33, 36, 38);
 
@@ -127,8 +127,8 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding-bottom: 180px;
-    height: 100vh;
+    // padding-bottom: 180px;
+    // height: 100vh;
 
     &__my {
       margin-bottom: 6px;
