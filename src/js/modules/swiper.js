@@ -23,7 +23,7 @@ export function biographySwiper() {
 
 export function premiumSwiper() {
   new Swiper('.premium-swiper', {
-    loop: true,
+    // loop: true,
     centeredSlides: true,
 
     breakpoints: {
