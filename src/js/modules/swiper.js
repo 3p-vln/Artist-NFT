@@ -25,6 +25,7 @@ export function premiumSwiper() {
   new Swiper('.premium-swiper', {
     loop: true,
     centeredSlides: true,
+    maxBackfaceHiddenSlides: 30,
 
     breakpoints: {
       320: {
