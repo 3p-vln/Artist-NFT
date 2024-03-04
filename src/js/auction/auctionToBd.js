@@ -26,7 +26,6 @@ export async function auctionToBD() {
         highestPrice: newValue,
       });
 
-      // Добавляем символ "$" к новому значению
       const formattedNewValue = `$${newValue}`;
 
       const highestPriceElement = document.getElementById('highestPrice');
