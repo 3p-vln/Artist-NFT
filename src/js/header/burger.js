@@ -27,11 +27,11 @@ function burger() {
   }
 
   if (headerBurger) {
-    headerBurger.addEventListener('click', () => {
+    headerBurger.addEventListener('touchstart', () => {
       activeBurger();
     });
 
-    burgerBackdrop.addEventListener('click', () => {
+    burgerBackdrop.addEventListener('touchstart', () => {
       activeBurger();
     });
   }
