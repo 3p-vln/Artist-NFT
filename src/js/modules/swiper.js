@@ -59,3 +59,20 @@ export function premiumSwiper() {
   });
 }
 // premiumSwiper();
+
+export function chat() {
+  let swiper = new Swiper('.chat-swiper', {
+    slidesPerView: 'auto',
+    breakpoints: {
+      767: {
+        slidesPerView: 6,
+      },
+      425: {
+        slidesPerView: 5,
+      },
+      375: {
+        slidesPerView: 4.2,
+      },
+    },
+  });
+}

@@ -1,11 +1,15 @@
 .chat {
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
   border-radius: 32px 32px 0 0;
   padding: 22px 33px 0 27px;
   // height: 100vh;
   color: $whiteTwo;
   background: rgb(33, 36, 38);
+  @include media-breakpoint-down(sm) {
+    background: none;
+    padding: 0;
+  }
 
   &::after {
     content: '';
@@ -16,15 +20,33 @@
     height: 100%;
     opacity: 0.1;
     background-color: $whiteTwo;
+
+    @include media-breakpoint-down(md) {
+      left: 263px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
   }
 
   &__content {
-    display: flex;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(830px, 1fr));
+
+    @include media-breakpoint-down(md) {
+      grid-template-columns: 225px 1fr;
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
   }
 
   &__list {
     margin-top: 12px;
-    min-width: 320px;
+    // min-width: 320px;
 
     .chats {
       margin-top: 41px;
@@ -48,17 +70,34 @@
         &.active {
           background: rgb(44, 47, 51);
         }
+
+        @include media-breakpoint-down(sm) {
+          background: rgb(44, 47, 51);
+          max-width: 100%;
+          width: 100%;
+        }
       }
     }
   }
 
   &__header {
     letter-spacing: -0.4px;
+
+    @include media-breakpoint-down(sm) {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 10px;
+    }
   }
 
   &__name {
     letter-spacing: -0.7px;
     font-size: 14px;
+
+    &.hide {
+      display: none;
+    }
   }
 
   &__time {
@@ -90,7 +129,6 @@
   .user {
     display: flex;
     align-items: center;
-    background-color: rgb(33, 36, 38);
     position: relative;
     z-index: 5;
 
@@ -128,7 +166,7 @@
     flex-direction: column;
     justify-content: flex-end;
     // padding-bottom: 180px;
-    // height: 100vh;
+    height: 80%;
 
     &__my {
       margin-bottom: 6px;
@@ -255,6 +293,76 @@
           height: 100%;
         }
       }
+    }
+  }
+
+  .swiper {
+    display: none;
+    max-width: 410px;
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
+    &-wrapper {
+      display: flex;
+      gap: 27px;
+    }
+    &-slide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .chat {
+      &__nav-btn {
+        background: none;
+        color: $whiteTwo;
+      }
+
+      &__img {
+        width: 60px;
+        height: 60px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &__name {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 15px;
+        text-wrap: nowrap;
+      }
+
+      &__time {
+        position: unset;
+        opacity: 0.4;
+        font-size: 10px;
+        line-height: 15px;
+      }
+    }
+  }
+
+  &__search {
+    position: relative;
+    width: 100%;
+    margin-top: 17px;
+
+    .search {
+      width: 100%;
+      border-radius: 12px;
+      background-color: rgb(33, 36, 38);
+      color: $whiteTwo;
+      padding: 18px 47px;
+      font-size: 14px;
+      line-height: 15px;
+    }
+    svg {
+      position: absolute;
+      width: 17px;
+      height: 17px;
+      top: 17px;
+      left: 22px;
     }
   }
 }
