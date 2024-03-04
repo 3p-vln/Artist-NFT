@@ -5,7 +5,6 @@ function burger() {
   const headerMenu = document.querySelector('.header__menu');
   const burgerBackdrop = document.querySelector('.burger__backdrop');
   const buttonAuthorization = document.querySelector('.authorization');
-  const scrollableElement = document.querySelector('.my-scrollable-element');
 
   function activeBurger() {
     headerBurger.classList.toggle('header__burger_active');
@@ -14,24 +13,18 @@ function burger() {
     buttonAuthorization.classList.toggle('authorization_active');
 
     if (headerBurger.classList.contains('header__burger_active')) {
-      disablePageScroll(scrollableElement);
-      document.body.addEventListener('touchmove', preventScroll, { passive: false });
+      disablePageScroll(headerMenu);
     } else {
-      enablePageScroll(scrollableElement);
-      document.body.removeEventListener('touchmove', preventScroll, { passive: false });
+      enablePageScroll(headerMenu);
     }
   }
 
-  function preventScroll(event) {
-    event.preventDefault();
-  }
-
   if (headerBurger) {
-    headerBurger.addEventListener('touchstart', () => {
+    headerBurger.addEventListener('click', () => {
       activeBurger();
     });
 
-    burgerBackdrop.addEventListener('touchstart', () => {
+    burgerBackdrop.addEventListener('click', () => {
       activeBurger();
     });
   }
