@@ -192,18 +192,14 @@
   }
 
   &-wrapper {
-    display: flex;
-    align-items: start;
-    justify-content: start;
     width: 100%;
-    transform: translate3d(0, 0, 0, 0) translateX(-50%);
   }
 
   &-slide {
     display: flex;
     flex-direction: column;
     border-radius: 12px;
-    width: 437.5px;
+    /* width: 437.5px; */
     height: 600px;
     transition: transform 0.3s ease-in-out;
     background: $backgroundSecond;
@@ -388,12 +384,8 @@
   }
 
   &-swiper {
-    display: flex;
-    align-items: start;
     overflow: visible;
-    padding-right: 15px;
-    padding-bottom: 24px;
-    padding-left: 15px;
+    padding: 0 15px 24px 15px;
     width: 100%;
     height: 100%;
     max-width: 100%;
@@ -404,10 +396,7 @@
     }
 
     @include media-breakpoint-down(xs) {
-      padding-top: 14px;
-      padding-bottom: 0;
-      padding-left: 0;
-      transform: translateY(-38px) translateX(-26px);
+      padding: 14px 0 0 0;
     }
   }
 }
