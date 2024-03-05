@@ -1,9 +1,14 @@
 import JustValidate from 'just-validate';
+import { db } from '../modules/firebase';
+import { collection, getDoc, doc } from 'firebase/firestore';
 
-export function auctionValidate(highestPrice) {
-  const form = document.querySelector('#form');
-  const highestPriceElement = document.getElementById('highestPrice').innerHTML;
-  console.log(highestPriceElement);
+export async function auctionValidate() {
+  const collectionRef = collection(db, 'auction');
+  const docRef = doc(collectionRef, '0');
+  const docSnap = await getDoc(docRef);
+  const highestPriceElement = docSnap.data().highestPrice;
+  const end = new Date('2024-03-10 00:08:00');
+
   const validate = new JustValidate('#form', {
     errorLabelStyle: {
       color: '#1D1F21',
@@ -20,14 +25,21 @@ export function auctionValidate(highestPrice) {
       value: /^[0-9]+$/,
       errorMessage: 'Enter your price with numbers',
     },
-    // {
-    //   rule: 'custom',
-    //   handler: (value) => {
-    //     const inputValue = parseFloat(value);
-    //     return inputValue > highestPriceElement;
-    //   },
-    //   errorMessage: `Price must be higher than ${highestPrice}`,
-    // },
+    {
+      rule: 'minNumber',
+      value: highestPriceElement + 1,
+      errorMessage: `Price must be higher than $${highestPriceElement}`,
+    },
+    {
+      validator: (value) => {
+        const now = new Date();
+        if (now > end) {
+          return false;
+        }
+        return true;
+      },
+      errorMessage: 'Auction has ended',
+    },
     {
       rule: 'minLength',
       value: 1,
@@ -35,8 +47,8 @@ export function auctionValidate(highestPrice) {
     },
     {
       rule: 'maxLength',
-      value: 16,
-      errorMessage: 'Maximum 16 characters',
+      value: 9,
+      errorMessage: 'Maximum 9 characters',
     },
   ]);
 }

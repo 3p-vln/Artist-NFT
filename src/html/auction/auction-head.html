@@ -41,9 +41,10 @@
             <input
               id="number"
               name="number"
-              type="text"
+              type="number"
               class="bargain__form-input"
               placeholder="$100 322"
+              oninput="this.value = this.value.replace(/\D/g, '')"
             />
 
             <button class="bargain__form-btn btn gradient">
@@ -60,7 +61,7 @@
             <div id="seconds"><span>00</span>s</div>
           </div>
 
-          <h3 class="bargain__date-deadline">Live март 5, 8:00pm</h3>
+          <h3 class="bargain__date-deadline">Live март 10, 8:00pm</h3>
         </div>
 
         <h4 class="bargain__description">
