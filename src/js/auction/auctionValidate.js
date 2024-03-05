@@ -17,6 +17,16 @@ export async function auctionValidate() {
 
   validate.addField('#number', [
     {
+      validator: () => {
+        const now = new Date();
+        if (now > end) {
+          return false;
+        }
+        return true;
+      },
+      errorMessage: 'Auction has ended',
+    },
+    {
       rule: 'required',
       errorMessage: 'Enter your price',
     },
@@ -29,16 +39,6 @@ export async function auctionValidate() {
       rule: 'minNumber',
       value: highestPriceElement + 1,
       errorMessage: `Price must be higher than $${highestPriceElement}`,
-    },
-    {
-      validator: (value) => {
-        const now = new Date();
-        if (now > end) {
-          return false;
-        }
-        return true;
-      },
-      errorMessage: 'Auction has ended',
     },
     {
       rule: 'minLength',

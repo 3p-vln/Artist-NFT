@@ -103,6 +103,19 @@
 
       &-img {
         width: 100%;
+
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
+      }
+
+      &-img-mobile {
+        display: none;
+        width: 100%;
+
+        @include media-breakpoint-down(md) {
+          display: block;
+        }
       }
 
       @include media-breakpoint-down(md) {
@@ -119,6 +132,19 @@
 
       &-img {
         width: 100%;
+
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
+      }
+
+      &-img-mobile {
+        display: none;
+        width: 100%;
+
+        @include media-breakpoint-down(md) {
+          display: block;
+        }
       }
 
       @include media-breakpoint-down(md) {
@@ -147,6 +173,19 @@
 
       &-img {
         width: 100%;
+
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
+      }
+
+      &-img-mobile {
+        display: none;
+        width: 100%;
+
+        @include media-breakpoint-down(md) {
+          display: block;
+        }
       }
 
       @include media-breakpoint-down(md) {
