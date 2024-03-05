@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/main.min.css?_v=20240304164524">
+  <link rel="stylesheet" href="css/main.min.css?_v=20240305175533">
   <title>Artist NFT</title>
 </head>
 
@@ -133,23 +133,17 @@
       <main class="page">
         <div class="background">
   <div class="background__blurs">
-    <picture>
-      <source srcset="images/main/make-art/blurs/blur-mobile.png" media="(max-width:576px)" width="958" height="899" alt="blur">
+    <img src="images/main/make-art/blurs/blur-mobile.png" width="958" height="899" alt="blur" class="background__blurs-first-mobile">
 
-      <img src="images/main/make-art/blurs/blur.png" width="758" height="899" alt="blur" class="background__blurs-first">
-    </picture>
+    <img src="images/main/make-art/blurs/blur.png" width="758" height="899" alt="blur" class="background__blurs-first">
 
-    <picture>
-      <source srcset="images/main/biography/blurs/blur-mobile.png" media="(max-width:576px)" width="958" height="899" alt="blur">
+    <img src="images/main/biography/blurs/blur-mobile.png" width="958" height="899" alt="blur" class="background__blurs-second-mobile">
 
-      <img src="images/main/biography/blurs/blur.png" width="958" height="1199" alt="blur" class="background__blurs-second">
-    </picture>
+    <img src="images/main/biography/blurs/blur.png" width="958" height="1199" alt="blur" class="background__blurs-second">
 
-    <picture>
-      <source srcset="images/main/get-premium/blurs/blur-mobile.png" media="(max-width:576px)" width="958" height="899" alt="blur">
+    <img src="images/main/get-premium/blurs/blur-mobile.png" width="958" height="899" alt="blur" class="background__blurs-third-mobile">
 
-      <img src="images/main/get-premium/blurs/blur.png" width="1558" height="1399" alt="blur" class="background__blurs-third">
-    </picture>
+    <img src="images/main/get-premium/blurs/blur.png" width="1558" height="1399" alt="blur" class="background__blurs-third">
   </div>
 
   <p class="background__make">MAKE ART</p>
@@ -183,7 +177,7 @@
 
 
         <div class="page__container">
-          <section id="make" class="make">
+          <div class="make">
   <div class="make__content">
     <div class="make__left">
       <div class="social make__left-social">
@@ -235,17 +229,15 @@
 
     <div class="make__wrapper">
       <div class="make__right">
-        <picture>
-          <source srcset="images/main/make-art/make-art-mobile.png" media="(max-width: 768px)">
+          <picture><source srcset="images/main/make-art/make-art-mobile.webp" type="image/webp"><img src="images/main/make-art/make-art-mobile.png" alt="woman" class="make__right-img-mobile"></picture>
 
-          <img src="images/main/make-art/make-art.png" alt="woman" class="make__right-img">
-        </picture>
+          <picture><source srcset="images/main/make-art/make-art.webp" type="image/webp"><img src="images/main/make-art/make-art.png" alt="woman" class="make__right-img"></picture>
       </div>
     </div>
   </div>
-</section>
+</div>
  
-          <section id="biography" class="biography">
+          <div class="biography">
   <div class="biography__content">
     <div class="biography__text">
       <h3 id="biography-subtitle" class="biography__text-subtitle"></h3>
@@ -285,9 +277,9 @@
       </div>
     </div>
   </div>
-</section>
+</div>
 
-          <section id="premium" class="premium">
+          <div class="premium">
   <div class="premium__content">
     <div class="premium__banner">
       <div class="info premium__banner-info">
@@ -305,27 +297,21 @@
       </div>
 
       <div class="premium__banner-ruby">
-        <picture>
-          <source srcset="images/main/get-premium/ruby-mobile.png" media="(max-width: 1023px)">
+        <img src="images/main/get-premium/ruby-mobile.png" alt="ruby" class="premium__banner-ruby-img-mobile">
 
-          <img src="images/main/get-premium/ruby.png" alt="ruby" class="premium__banner-ruby-img">
-        </picture>
+        <picture><source srcset="images/main/get-premium/ruby.webp" type="image/webp"><img src="images/main/get-premium/ruby.png" alt="ruby" class="premium__banner-ruby-img"></picture>
       </div>
 
       <div class="premium__banner-emerald">
-        <picture>
-          <source srcset="images/main/get-premium/emerald-mobile.png" media="(max-width: 1023px)">
+        <img src="images/main/get-premium/emerald-mobile.png" alt="emerald" class="premium__banner-emerald-img-mobile">
 
-          <img src="images/main/get-premium/emerald.png" alt="emerald" class="premium__banner-emerald-img">
-        </picture>
+        <img src="images/main/get-premium/emerald.png" alt="emerald" class="premium__banner-emerald-img">
       </div>
 
       <div class="premium__banner-sapphire">
-        <picture>
-          <source srcset="images/main/get-premium/sapphire-mobile.png" media="(max-width: 1023px)">
+        <img srcset="images/main/get-premium/sapphire-mobile.png" alt="sapphire" class="premium__banner-sapphire-img-mobile">
 
-          <img src="images/main/get-premium/sapphire.png" alt="sapphire" class="premium__banner-sapphire-img">
-        </picture>
+        <img src="images/main/get-premium/sapphire.png" alt="sapphire" class="premium__banner-sapphire-img">
       </div>
 
       <div class="premium__banner-circle">
@@ -333,7 +319,7 @@
       </div>
     </div>
   </div>
-</section>
+</div>
 
         </div>
 
@@ -345,19 +331,18 @@
 
 
         <div class="page__container">
-          <section id="contact" class="contact">
+          <div class="contact">
   <div class="contact-background">
-    <picture>
-      <source srcset="images/main/contact/sapphire-first-mobile.png" media="(max-width:576px)">
-      <img src="images/main/contact/sapphire-first.png" alt="sapphire" class="sapphire contact-background__sapphire-first">
-    </picture>
+    <img src="images/main/contact/sapphire-first-mobile.png" alt="sapphire" class="sapphire contact-background__sapphire-first-mobile">
 
-    <picture>
-      <source srcset="images/main/contact/sapphire-second-mobile.png" media="(max-width:576px)">
-      <img src="images/main/contact/sapphire-second.png" alt="sapphire" class="sapphire contact-background__sapphire-second">
-    </picture>
+    <img src="images/main/contact/sapphire-first.png" alt="sapphire" class="sapphire contact-background__sapphire-first">
 
-    <img src="images/main/contact/sapphire-third.png" alt="" class="sapphire contact-background__sapphire-third">
+    <img srcset="images/main/contact/sapphire-second-mobile.png" alt="sapphire" class="sapphire contact-background__sapphire-second-mobile">
+
+    <img src="images/main/contact/sapphire-second.png" alt="sapphire" class="sapphire contact-background__sapphire-second">
+
+    <img src="images/main/contact/sapphire-third.png" alt="sapphire" class="sapphire contact-background__sapphire-third">
+
     <picture><source srcset="images/main/contact/cube.webp" type="image/webp"><img src="images/main/contact/cube.png" alt="cube" class="contact-background__cube cube"></picture>
   </div>
 
@@ -400,7 +385,7 @@
       </div>
     </form>
   </div>
-</section>
+</div>
 
         </div>
         
@@ -783,6 +768,6 @@
 
     </div>
   </body>
-  <script src="js/app.min.js?_v=20240304164524"></script>
-  <script src="js/main.min.js?_v=20240304164524"></script>
+  <script src="js/app.min.js?_v=20240305175533"></script>
+  <script src="js/main.min.js?_v=20240305175533"></script>
 </html>

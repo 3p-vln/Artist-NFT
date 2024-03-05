@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/auction.min.css?_v=20240304164524">
+  <link rel="stylesheet" href="css/auction.min.css?_v=20240305175533">
   <title>Auction</title>
 </head>
 
@@ -160,13 +160,13 @@
   <a href="auction.html" class="auction-page">Auction</a>
 </div>
 
-          <section class="auction">
+          <div class="auction">
   <div class="auction-content">
     <div class="auction__image">
       <picture>
         <source id="imgWebp" srcset="" type="webp">
 
-        <img id="imgPng" src="images/nft-card/card-item.png" alt="lot" class="auction__image-img">
+        <img id="imgPng" alt="lot" class="auction__image-img">
       </picture>
     </div>
 
@@ -200,7 +200,7 @@
           <label class="bargain__form-label">Place your bid</label>
 
           <div class="bargain__form-wrapper">
-            <input id="number" name="number" type="text" class="bargain__form-input" placeholder="$100 322">
+            <input id="number" name="number" type="number" class="bargain__form-input" placeholder="$100 322" oninput="this.value = this.value.replace(/\D/g, '')">
 
             <button class="btn bargain__form-btn gradient">
               <span>Place bid</span>
@@ -216,7 +216,7 @@
             <div id="seconds"><span>00</span>s</div>
           </div>
 
-          <h3 class="bargain__date-deadline">Live март 5, 8:00pm</h3>
+          <h3 class="bargain__date-deadline">Live март 10, 8:00pm</h3>
         </div>
 
         <h4 class="bargain__description">
@@ -299,7 +299,7 @@
       </div>
     </div>
   </div>
-</section>
+</div>
 
         </div>
         
@@ -683,6 +683,6 @@
     </div>
   </body>
 
-  <script src="js/app.min.js?_v=20240304164524"></script>
-  <script src="js/auction.min.js?_v=20240304164524"></script>
+  <script src="js/app.min.js?_v=20240305175533"></script>
+  <script src="js/auction.min.js?_v=20240305175533"></script>
 </html>
