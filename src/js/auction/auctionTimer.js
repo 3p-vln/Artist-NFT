@@ -2,7 +2,7 @@ export function auctionTimer(time) {
   function progress() {
     const progressElement = document.getElementById('progress');
     const start = new Date('2024-02-05 00:08:00');
-    const end = new Date('2024-03-05 00:08:00');
+    const end = new Date('2024-03-10 00:08:00');
     const now = new Date();
 
     const finish = Math.floor((end.getTime() - start.getTime()) / 1000);
@@ -23,7 +23,7 @@ export function auctionTimer(time) {
   setInterval(progress, 60000);
 
   function timer() {
-    const dateEnd = new Date('2024-03-05 00:08:00');
+    const dateEnd = new Date('2024-03-10 00:08:00');
     const dateNow = new Date();
     let date = Math.floor((dateEnd.getTime() - dateNow.getTime()) / 1000);
 

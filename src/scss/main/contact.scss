@@ -16,9 +16,23 @@
       z-index: -1;
 
       @include media-breakpoint-down(xs) {
-        left: unset;
-        right: 10%;
-        top: -20px;
+        display: none;
+      }
+    }
+
+    &__sapphire-first-mobile {
+      display: none;
+      position: absolute;
+      left: unset;
+      right: 10%;
+      top: -20px;
+      vertical-align: top;
+      overflow: clip;
+      max-width: 100%;
+      z-index: -1;
+
+      @include media-breakpoint-down(xs) {
+        display: block;
       }
     }
 
@@ -32,9 +46,23 @@
       z-index: -1;
 
       @include media-breakpoint-down(xs) {
-        left: unset;
-        right: -6.5%;
-        top: -38px;
+        display: none;
+      }
+    }
+
+    &__sapphire-second-mobile {
+      display: none;
+      position: absolute;
+      left: unset;
+      right: -6.5%;
+      top: -38px;
+      vertical-align: top;
+      overflow: clip;
+      max-width: 100%;
+      z-index: -1;
+
+      @include media-breakpoint-down(xs) {
+        display: block;
       }
     }
 

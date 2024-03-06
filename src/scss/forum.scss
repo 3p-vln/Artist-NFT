@@ -1,14 +1,16 @@
 @import 'style';
+@import '../../node_modules/swiper/swiper-bundle';
+@import 'forum/popular';
 @import 'forum/asking';
 @import 'forum/stat';
 
 .page {
-    position: relative;
-    margin-top: 63px;
-    background: $background;
+  position: relative;
+  margin-top: 63px;
+  background: $background;
 
-    &__container {
-        position: relative;
-        z-index: 2;
-    }
+  &__container {
+    position: relative;
+    z-index: 2;
+  }
 }
