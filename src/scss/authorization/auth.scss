@@ -1,0 +1,244 @@
+.authorization {
+  display: flex;
+  margin: 0 auto;
+  max-width: 410px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+
+  &_log {
+    padding-top: 144px;
+  }
+
+  &__svg {
+    width: 172px;
+    height: 46px;
+  }
+
+  &__title {
+    margin-bottom: 5px;
+    font-family: ProximaNova;
+    font-weight: bold;
+    line-height: 137%;
+    text-align: center;
+    font-size: 36px;
+    color: $whiteTwo;
+
+    @include media-breakpoint-down(xs) {
+      font-size: 26px;
+    }
+  }
+
+  &__tabs {
+    margin-bottom: 5px;
+    border-radius: 12px;
+    padding: 7px 8px;
+    width: 274px;
+
+    @include media-breakpoint-down(xs) {
+      width: 345px;
+    }
+
+    .tabs {
+      &__nav {
+        grid-template-columns: repeat(2, 1fr);
+
+        &-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 16px 0;
+        }
+      }
+    }
+  }
+
+  .form {
+    &__item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 17px;
+      gap: 6px;
+    }
+
+    &__item-label {
+      font-family: ProximaNova;
+      font-weight: normal;
+      line-height: 150%;
+      font-size: 14px;
+      color: $gray6Color;
+    }
+
+    &__item-input {
+      border-radius: 9px;
+      padding: 21px 32px 22px;
+      width: 410px;
+      font-size: 16px;
+      color: $whiteColor;
+      background: $backgroundSecond;
+
+      &::placeholder {
+        font-family: ProximaNova;
+        font-weight: normal;
+        line-height: 131%;
+        font-size: 16px;
+        opacity: 0.6;
+        color: $gray6Color;
+      }
+
+      @include media-breakpoint-down(xs) {
+        width: 345px;
+      }
+    }
+
+    .just-validate-error-label {
+      position: absolute;
+      right: 50%;
+      top: -10px;
+      border-radius: 7px;
+      padding: 8px;
+      font-weight: bold;
+      text-wrap: nowrap;
+      transform: translateX(50%);
+      z-index: 3;
+      font-size: 14px;
+      color: #1d1f21 !important;
+      background: $rainbowBtnGradient;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 28px;
+        clip-path: polygon(0 0, 53% 100%, 100% 0);
+        width: 10px;
+        height: 10px;
+        transform: translateX(-50%);
+        z-index: 3;
+        background: $rainbowBtnGradient;
+      }
+    }
+
+    &__button {
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border-radius: 16px;
+      padding: 18px 0 19px;
+      width: 410px;
+      font-weight: bold;
+      line-height: 147%;
+      font-size: 18px;
+
+      @include media-breakpoint-down(xs) {
+        width: 345px;
+      }
+    }
+  }
+
+  &__accaunt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  &__text {
+    font-weight: normal;
+    line-height: 150%;
+    font-size: 14px;
+    color: $gray6Color;
+  }
+
+  &__link {
+    font-weight: 600;
+    line-height: 150%;
+    text-decoration: underline;
+    font-size: 14px;
+    color: $blueAuthColor;
+  }
+
+  .roles {
+    width: 410px;
+    margin-bottom: 30px;
+
+    &__text {
+      margin-bottom: 15px;
+      font-weight: normal;
+      line-height: 150%;
+      text-align: left;
+      font-size: 14px;
+      color: $gray6Color;
+    }
+
+    &__box {
+      display: flex;
+      color: $whiteColor;
+      gap: 7px;
+    }
+
+    &__check {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    &__check-label {
+      border: 1px solid #525960;
+      border-radius: 38px;
+      width: 22px;
+      height: 22px;
+      cursor: pointer;
+      transition: opacity 300ms linear;
+      background: $backgroundSecond;
+
+      &::before {
+        opacity: 0;
+      }
+
+      &_active {
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          border-radius: 5px;
+          width: 14px;
+          height: 14px;
+          transform: translate(-50%, -50%);
+          opacity: 1;
+          background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
+        }
+      }
+
+      &__check-text {
+        font-family: ProximaNova;
+        font-weight: 600;
+        line-height: 171%;
+        font-size: 14px;
+      }
+    }
+
+    @include media-breakpoint-down(xs) {
+      margin: 0 auto 29px;
+      width: 345px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      margin: 0 auto 29px;
+      width: 345px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 20px 0 196px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 20px 0 196px;
+  }
+}

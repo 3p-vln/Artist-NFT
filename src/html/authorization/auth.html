@@ -1,0 +1,78 @@
+<div class="authorization">
+  <a class="authorization__logo">
+    <svg class="authorization__svg">
+      <use href="#icon-logo"></use>
+    </svg>
+  </a>
+  <h2 class="authorization__title">Authorization</h2>
+  <div class="tabs authorization__tabs">
+    <div class="tabs__nav">
+      <button class="tabs__button tabs__nav-btn" data-tab="#accaunt-log">Log in</button>
+      <button class="tabs__button tabs__nav-btn" data-tab="#accaunt-sign">Sign up</button>
+      <div class="selector"></div>
+    </div>
+  </div>
+  <div class="tabs__item" id="accaunt-log">
+    <form action="#" class="form authorization__form" id="login">
+      <div class="form__item">
+        <label for="#email-login" class="form__item-label">E-mail</label>
+        <input type="email" class="form__item-input" placeholder="Your e-mail" id="email-login" />
+      </div>
+      <div class="form__item">
+        <label for="#password-login" class="form__item-label">Passwrod</label>
+        <input
+          type="password"
+          class="form__item-input"
+          placeholder="Your password"
+          id="password-login"
+        />
+      </div>
+      <button class="form__button btn gradient" type="submit">Send message</button>
+      <div class="authorization__accaunt">
+        <p class="authorization__text">Don’t have account yet?</p>
+        <a href="#accaunt-sign" class="authorization__link">Sign up</a>
+      </div>
+    </form>
+  </div>
+  <div class="tabs__item" id="accaunt-sign">
+    <form action="#" class="form authorization__form" id="signin">
+      <div class="roles autorization__roles">
+        <div class="roles__inner">
+          <p class="roles__text">Select your role</p>
+          <div class="roles__box">
+            <div class="roles__check">
+              <span class="roles__check-label"></span>
+              <p class="roles__check-text">Customer</p>
+            </div>
+            <div class="roles__check">
+              <span class="roles__check-label"></span>
+              <p class="roles__check-text">Admin</p>
+            </div>
+            <div class="roles__check">
+              <span class="roles__check-label"></span>
+              <p class="roles__check-text">Artist</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form__item">
+        <label for="#email-signin" class="form__item-label">E-mail</label>
+        <input type="email" class="form__item-input" placeholder="Your e-mail" id="email-signin" />
+      </div>
+      <div class="form__item">
+        <label for="#password-signin" class="form__item-label">Passwrod</label>
+        <input
+          type="password"
+          class="form__item-input"
+          placeholder="Your password"
+          id="password-signin"
+        />
+      </div>
+      <button class="form__button btn gradient" type="submit">Send message</button>
+      <div class="authorization__accaunt">
+        <p class="authorization__text">Already have accoun?</p>
+        <a href="#accaunt-log" class="authorization__link">Log in</a>
+      </div>
+    </form>
+  </div>
+</div>

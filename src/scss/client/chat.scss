@@ -1,14 +1,13 @@
 .chat {
   position: relative;
-  // overflow: hidden;
   border-radius: 32px 32px 0 0;
   padding: 22px 33px 0 27px;
-  // height: 100vh;
   color: $whiteTwo;
   background: rgb(33, 36, 38);
+
   @include media-breakpoint-down(sm) {
-    background: none;
     padding: 0;
+    background: none;
   }
 
   &::after {
@@ -46,10 +45,13 @@
 
   &__list {
     margin-top: 12px;
-    // min-width: 320px;
 
     .chats {
       margin-top: 41px;
+
+      @include media-breakpoint-down(sm) {
+        margin-top: 0;
+      }
 
       &__item {
         position: relative;
@@ -71,10 +73,14 @@
           background: rgb(44, 47, 51);
         }
 
+        &.hide {
+          display: none;
+        }
+
         @include media-breakpoint-down(sm) {
-          background: rgb(44, 47, 51);
-          max-width: 100%;
           width: 100%;
+          max-width: 100%;
+          background: rgb(44, 47, 51);
         }
       }
     }
@@ -84,20 +90,16 @@
     letter-spacing: -0.4px;
 
     @include media-breakpoint-down(sm) {
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 30px;
       margin-bottom: 10px;
+      font-weight: bold;
+      line-height: 30px;
+      font-size: 20px;
     }
   }
 
   &__name {
     letter-spacing: -0.7px;
     font-size: 14px;
-
-    &.hide {
-      display: none;
-    }
   }
 
   &__time {
@@ -127,9 +129,9 @@
   }
 
   .user {
+    position: relative;
     display: flex;
     align-items: center;
-    position: relative;
     z-index: 5;
 
     &__img {
@@ -165,7 +167,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    // padding-bottom: 180px;
     height: 80%;
 
     &__my {
@@ -299,18 +300,22 @@
   .swiper {
     display: none;
     max-width: 410px;
+
     @include media-breakpoint-down(sm) {
       display: block;
     }
+
     &-wrapper {
       display: flex;
       gap: 27px;
     }
+
     &-slide {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
+
     .chat {
       &__nav-btn {
         background: none;
@@ -329,40 +334,47 @@
 
       &__name {
         font-weight: 600;
-        font-size: 12px;
         line-height: 15px;
         text-wrap: nowrap;
+        font-size: 12px;
       }
 
       &__time {
         position: unset;
+        line-height: 15px;
         opacity: 0.4;
         font-size: 10px;
-        line-height: 15px;
       }
     }
   }
 
   &__search {
     position: relative;
-    width: 100%;
+    display: none;
     margin-top: 17px;
+    margin-bottom: 14px;
+    width: 100%;
+
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
 
     .search {
-      width: 100%;
       border-radius: 12px;
+      padding: 18px 47px;
+      width: 100%;
+      line-height: 15px;
       background-color: rgb(33, 36, 38);
       color: $whiteTwo;
-      padding: 18px 47px;
       font-size: 14px;
-      line-height: 15px;
     }
+
     svg {
       position: absolute;
+      left: 22px;
+      top: 17px;
       width: 17px;
       height: 17px;
-      top: 17px;
-      left: 22px;
     }
   }
 }

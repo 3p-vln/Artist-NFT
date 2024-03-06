@@ -10,6 +10,7 @@ export function validate() {
     const formId = currentTab.getAttribute('id');
     const currentTabCard = document.querySelector('#' + formId + ' .card-numb');
     const currentTabDate = document.querySelector('#' + formId + ' .date');
+    const currentTabCvv = document.querySelector('#' + formId + ' .cvv');
     console.log(currentTabCard, currentTabDate);
 
     const maskOptionsCard = {
@@ -18,10 +19,14 @@ export function validate() {
     const maskOptionsDate = {
       mask: '00/00',
     };
+    const maskOptionsCvv = {
+      mask: '000',
+    };
 
     if (currentTab.getAttribute('id') == 'form-paypal') {
       var maskCard = new IMask(currentTabCard, maskOptionsCard);
       var maskDate = new IMask(currentTabDate, maskOptionsDate);
+      var maskCvv = new IMask(currentTabCvv, maskOptionsCvv);
 
       const validate = new JustValidate('#form-paypal', {
         errorLabelStyle: {
@@ -92,6 +97,7 @@ export function validate() {
     } else if (currentTab.getAttribute('id') == 'form-card') {
       var maskCard = new IMask(currentTabCard, maskOptionsCard);
       var maskDate = new IMask(currentTabDate, maskOptionsDate);
+      var maskCvv = new IMask(currentTabCvv, maskOptionsCvv);
 
       const validate = new JustValidate('#form-card', {
         errorLabelStyle: {
