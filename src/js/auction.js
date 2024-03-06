@@ -6,21 +6,12 @@ import { auctionTimer } from './auction/auctionTimer';
 
 document.addEventListener('DOMContentLoaded', async () => {
   await snapAuction();
+  await auctionValidate();
   auctionTimer();
-  auctionValidate();
   auctionAccordion();
 
   document.getElementById('form').addEventListener('submit', async function (event) {
     event.preventDefault();
-
-    const inputValue = document.getElementById('number').value;
-
-    if (inputValue.trim() === '') {
-      return;
-    }
-
-    const newValue = parseInt(inputValue);
-
     await auctionToBD();
   });
 

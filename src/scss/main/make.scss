@@ -178,10 +178,20 @@
       height: 100%;
 
       @include media-breakpoint-down(sm) {
-        position: relative;
-        left: 50%;
-        padding: 0 15px;
-        transform: translateX(-50%);
+        display: none;
+      }
+    }
+
+    &-img-mobile {
+      display: none;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      left: 50%;
+      padding: 0 15px;
+      transform: translateX(-50%);
+      @include media-breakpoint-down(sm) {
+        display: block;
       }
     }
 
