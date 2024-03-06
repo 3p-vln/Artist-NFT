@@ -1,13 +1,12 @@
 import JustValidate from 'just-validate';
+import { getElement, getElements } from '../composables/callDom';
 
 export function validate() {
-  const auth = document.querySelectorAll('.tabs__nav-btn');
+  const auth = getElements('.tabs__nav-btn');
 
   auth.forEach((item) => {
     const tabId = item.getAttribute('data-tab');
-    const currentTab = document.querySelector(tabId + ' .form');
-    console.log(tabId, currentTab);
-    console.log(currentTab.getAttribute('id'));
+    const currentTab = getElement(tabId + ' .form');
 
     if (currentTab.getAttribute('id') == 'login') {
       const validate = new JustValidate('#login', {
@@ -17,7 +16,7 @@ export function validate() {
       });
 
       validate
-        .addField(document.querySelector('#email-login'), [
+        .addField(getElement('#email-login'), [
           {
             rule: 'required',
             errorMessage: 'Enter your email',
@@ -28,7 +27,7 @@ export function validate() {
             errorMessage: 'Write correct email',
           },
         ])
-        .addField(document.querySelector('#password-login'), [
+        .addField(getElement('#password-login'), [
           {
             rule: 'required',
           },
@@ -50,7 +49,7 @@ export function validate() {
       });
 
       validate
-        .addField(document.querySelector('#email-signin'), [
+        .addField(getElement('#email-signin'), [
           {
             rule: 'required',
             errorMessage: 'Enter your email',
@@ -61,7 +60,7 @@ export function validate() {
             errorMessage: 'Write correct email',
           },
         ])
-        .addField(document.querySelector('#password-signin'), [
+        .addField(getElement('#password-signin'), [
           {
             rule: 'required',
           },
