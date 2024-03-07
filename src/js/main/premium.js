@@ -10,13 +10,13 @@ export async function snapPremiumSwiper() {
     });
 }
 
-// export async function snapPremiumBanner() {
-//   const querySnapshot = await getDocs(collection(db, 'main-premium'));
-//   querySnapshot.forEach((doc) => {
-//     const data = doc.data();
+export async function snapPremiumBanner() {
+  const querySnapshot = await getDocs(collection(db, 'main-premium'));
+  querySnapshot.forEach((doc) => {
+    const data = doc.data();
 
-//     getElementId('premium-banner-title').innerHTML = data.bannerTitle;
-//     getElementId('premium-banner-paragraph').innerHTML = data.bannerParagraph;
-//     getElementId('premium-banner-btn-text').innerHTML = data.bannerBtnText;
-//   });
-// }
+    getElementId('premium-banner-title').innerHTML = data.bannerTitle;
+    getElementId('premium-banner-paragraph').innerHTML = data.bannerParagraph;
+    getElementId('premium-banner-btn-text').innerHTML = data.bannerBtnText;
+  });
+}

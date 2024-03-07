@@ -239,7 +239,7 @@
     flex-direction: column;
     border-radius: 12px;
     height: 600px;
-    /* transition: transform 0.3s ease-in-out; */
+    transition: transform 0.3s ease-in-out;
     background: $backgroundSecond;
 
     &__nft {
@@ -383,7 +383,7 @@
         &:hover {
           &::before {
             left: 130%;
-           /* transition: left 0.5s ease-in-out; */
+            transition: left 0.5s ease-in-out;
 
             @include media-breakpoint-down(sm) {
               display: none;
@@ -414,7 +414,7 @@
 
   .swiper-slide-active {
     transform: translateY(-30px);
-    /* transition: transform 0.3s ease-in-out; */
+    transition: transform 0.3s ease-in-out;
 
     @include media-breakpoint-down(md) {
       transform: none;
