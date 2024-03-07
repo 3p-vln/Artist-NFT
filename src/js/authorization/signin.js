@@ -2,9 +2,8 @@ import firebase from '../modules/firebase';
 import $ from 'jquery';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { getElement, getElementId, getElements } from '../composables/callDom';
-import { getUsers } from './getUsers';
 import { db } from '../modules/firebase';
-import { collection, getDocs } from 'firebase/firestore';
+import { addDoc, collection, getDocs } from 'firebase/firestore';
 
 const auth = getAuth();
 const signInForm = getElement('#login');
@@ -40,30 +39,44 @@ export const loginEmailPassword = async () => {
         console.log(currentUser);
     } catch (error) {
         console.log(error);
-        showLoginError(error);
+        // showLoginError(error);
     }
 };
 
 export const createAccount = async () => {
-    const email = getElementId('email-signin');
-    const password = getElementId('password-signin');
+    const email = getElementId('email-signin').value;
+    const password = getElementId('password-signin').value;
     try {
         const user = await createUserWithEmailAndPassword(auth, email, password);
-        console.log(user.user);
+        const radio = getElements('.roles__check-label');
+        if (radio[0].classList.contains('roles__check-label_active')) {
+            const userAdd = await addDoc(collection(db, 'users'), {
+                uid: user.user.uid,
+                modifier: 'customer',
+            });
+            console.log('Document written with ID: ', userAdd.id);
+            window.location.href = '/client.html';
+        } else {
+            const userAdd = await addDoc(collection(db, 'users'), {
+                uid: user.user.uid,
+                modifier: 'admin',
+            });
+            console.log('Document written with ID: ', userAdd.id);
+            window.location.href = '/for-owner.html';
+        }
     } catch (error) {
         console.log(`There was an error: ${error}`);
-        showLoginError(error);
     }
 };
 
-const showLoginError = (error) => {
-    // divLoginError.style.display = 'block';
-    if (error.code == AuthErrorCodes.INVALID_PASSWORD) {
-        lblLoginErrorMessage.innerHTML = `Wrong password. Try again.`;
-    } else {
-        lblLoginErrorMessage.innerHTML = `Error: ${error.message}`;
-    }
-};
+// const showLoginError = (error) => {
+//     // divLoginError.style.display = 'block';
+//     if (error.code == AuthErrorCodes.INVALID_PASSWORD) {
+//         lblLoginErrorMessage.innerHTML = `Wrong password. Try again.`;
+//     } else {
+//         lblLoginErrorMessage.innerHTML = `Error: ${error.message}`;
+//     }
+// };
 
 // forms.forEach((item) => {
 //     if (item.classList.contains('active') && item.getAttribute('id') == 'accaunt-log') {
