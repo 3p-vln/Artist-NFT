@@ -4,6 +4,6 @@ import { premiumSwiper } from './modules/swiper';
 document.addEventListener('DOMContentLoaded', async () => {
   await snapPremiumSwiper();
   premiumSwiper();
-  const artLoadEvent = new Event('loadingIsFinished');
-  document.dispatchEvent(artLoadEvent);
+//   const artLoadEvent = new Event('loadingIsFinished');
+//   document.dispatchEvent(artLoadEvent);
 });
