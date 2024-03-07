@@ -1,6 +1,8 @@
+import { getElement } from '../composables/callDom';
+
 export function preloader() {
   setTimeout(() => {
-    const loader = document.querySelector('.preloader');
+    const loader = getElement('.preloader');
     loader.classList.add('loaded');
   }, 1000);
 }

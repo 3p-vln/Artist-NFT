@@ -1,8 +1,399 @@
 .orders {
-    overflow: hidden;
-    border-radius: 32px 32px 0 0;
-    padding: 22px 27px;
-    height: 100vh;
+  position: relative;
+  overflow: hidden;
+  border-radius: 32px 32px 0 0;
+  padding: 22px 33px 0 27px;
+  color: $whiteTwo;
+  background: rgb(33, 36, 38);
+
+  @include media-breakpoint-down(md) {
+    overflow: visible;
+    padding: 0;
+    background: none;
+  }
+
+  &__title {
+    display: none;
+
+    @include media-breakpoint-down(md) {
+      display: inline-block;
+      font-weight: bold;
+      line-height: 150%;
+      font-size: 20px;
+    }
+  }
+
+  &__head-table-box {
+    padding-top: 5px;
+    padding-right: 41px;
+    padding-bottom: 20px;
+    padding-left: 0;
+  }
+
+  &__table-box {
+    padding: 7px 0 0;
+  }
+
+  &__table {
     color: $whiteTwo;
-    background: rgb(33, 36, 38);
+
+    &_head {
+    }
+
+    &_body {
+    }
+  }
+
+  &__box-mobile {
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
+    gap: 20px;
+
+    @include media-breakpoint-down(md) {
+      display: grid;
+    }
+  }
+}
+
+.table {
+  width: 100%;
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+
+  &__body {
+    &_orders {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+
+  &__titles {
+  }
+
+  &__title {
+    font-weight: normal;
+    line-height: 107%;
+    text-align: left;
+    font-size: 14px;
+
+    &_type {
+      width: 10%;
+    }
+
+    &_color {
+      width: 5%;
+    }
+
+    &_mail {
+      width: 24.5%;
+    }
+
+    &_size {
+      width: 13.3%;
+    }
+
+    &_comment {
+      width: 18.4%;
+    }
+
+    &_delivery {
+      width: 19%;
+    }
+
+    &_product-name {
+      width: 20.7%;
+    }
+
+    &_crypto {
+      width: 35%;
+    }
+
+    &_status {
+      width: 16.5%;
+    }
+
+    &_price {
+      width: 14.7%;
+    }
+
+    &_name {
+      width: 13.6%;
+    }
+
+    &_workers_mail {
+      width: 26.5%;
+    }
+
+    &_workers_comment {
+      width: 45.1%;
+    }
+  }
+
+  &__order {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 14px;
+    padding: 8px;
+    padding: 13px;
+    background: $background;
+    gap: 5px;
+
+    &_nft {
+      flex-wrap: nowrap;
+      justify-content: initial;
+      padding-top: 20px;
+      padding-bottom: 18px;
+    }
+
+    &_workers {
+      padding-top: 26px;
+      padding-bottom: 18px;
+      padding-left: 30px;
+    }
+  }
+
+  &__name {
+    flex-shrink: 0;
+    margin-right: 1px;
+    font-weight: 600;
+    line-height: 131%;
+    white-space: nowrap;
+    font-size: 16px;
+
+    &_workers {
+      width: 15.2%;
+    }
+  }
+
+  &__color {
+    flex-shrink: 0;
+    margin-right: 1px;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    background: #eb8032;
+  }
+
+  &__mail {
+    flex-shrink: 0;
+    margin-right: 1px;
+    font-weight: 600;
+    line-height: 150%;
+    font-size: 14px;
+
+    &_workers {
+      width: 20%;
+    }
+  }
+
+  &__size {
+    flex-shrink: 0;
+    margin-right: 1px;
+    font-weight: 600;
+    line-height: 131%;
+    white-space: nowrap;
+    font-size: 16px;
+  }
+
+  &__descr {
+    display: flex;
+    flex-shrink: 10;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 1px;
+    font-size: 12px;
+
+    &_workers {
+      max-width: 406px;
+    }
+  }
+
+  &__descr-text {
+    font-weight: normal;
+    line-height: 150%;
+    font-size: 12px;
+  }
+
+  &__descr-show {
+    font-weight: bold;
+    line-height: 150%;
+    font-size: 12px;
+    color: $blueOwnerColor;
+  }
+
+  &__button {
+    border-radius: 8px;
+    padding: 12px 10px;
+    font-weight: bold;
+    line-height: 143%;
+    background: $rainbowBtnGradient;
+    font-size: 14px;
+  }
+
+  &__name-nft {
+    display: flex;
+    align-items: center;
+    width: 20.9%;
+    gap: 20px;
+  }
+
+  &__name-nft-text {
+    font-weight: normal;
+    line-height: 175%;
+    font-size: 16px;
+  }
+
+  &__crypto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 26px;
+    border-radius: 13px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 310px;
+    font-weight: bold;
+    line-height: 143%;
+    background: $backgroundSecond;
+    gap: 28px;
+    font-size: 14px;
+
+    &_order {
+      margin-right: 0;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: 8px 11px;
+      width: 148px;
+      line-height: 167%;
+      gap: 10px;
+      font-size: 12px;
+    }
+  }
+
+  &__status {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    height: 40px;
+    font-weight: bold;
+    line-height: 175%;
+    font-size: 16px;
+
+    button {
+      background: $greenBg;
+      color: $greenColor;
+    }
+
+    @include media-breakpoint-down(md) {
+      height: auto;
+      color: $greenColor;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -11px;
+      display: none;
+      border-radius: 50%;
+      width: 6px;
+      height: 6px;
+      background-color: $greenColor;
+
+      @include media-breakpoint-down(md) {
+        display: block;
+      }
+    }
+  }
+
+  &__crypto-svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  &__price {
+    width: 15%;
+    font-weight: bold;
+    line-height: 175%;
+    font-size: 16px;
+  }
+
+  &__date {
+    color: $gray6Color;
+  }
+}
+
+.order {
+  display: flex;
+  flex-direction: column;
+  border-radius: 14px;
+  padding: 19px 19px 27px 18px;
+  width: 100%;
+  background: $blackChatColor;
+
+  &__head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+    border-bottom: 1px solid $borderGrayColor;
+    padding-bottom: 17px;
+    gap: 7px;
+  }
+
+  &__mail {
+    font-weight: normal;
+    line-height: 150%;
+    font-size: 14px;
+  }
+
+  &__size-info,
+  &__status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    border-bottom: 1px solid $borderGrayColor;
+    padding-bottom: 15px;
+  }
+
+  &__del-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 17px;
+    gap: 5px;
+  }
+
+  &__del-title {
+    margin-bottom: 7px;
+    font-weight: normal;
+    line-height: 107%;
+    font-size: 14px;
+  }
+
+  &__del-text {
+    font-weight: normal;
+    line-height: 129%;
+    font-size: 14px;
+  }
+
+  &__button {
+    border-radius: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-weight: bold;
+    line-height: 143%;
+    background: $rainbowBtnGradient;
+    font-size: 14px;
+
+    &_nft {
+      background: $greenBg;
+      color: $greenColor;
+    }
+  }
 }
