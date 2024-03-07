@@ -76,9 +76,6 @@ export async function load(art) {
                   </picture>
               </div>
               <div class="about__unlock">
-                  <svg class="play">
-                      <use href="#play"></use>
-                  </svg>
                   <div class="about__info">
                       <div class="info">
                           <div class="auth">

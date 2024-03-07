@@ -1,5 +1,6 @@
 import { db } from '../modules/firebase';
 import { collection, getDocs } from 'firebase/firestore';
+import { getElement } from '../composables/callDom';
 
 export async function selectLoad() {
   const querySnapshot = await getDocs(collection(db, 'clothers'));
@@ -7,19 +8,19 @@ export async function selectLoad() {
     const data = doc.data();
     console.log(doc.id);
     if (doc.id == 'type') {
-      document.querySelector('#hoodie').innerHTML = data.hoodie;
-      document.querySelector('#shitr').innerHTML = data.shitr;
-      document.querySelector('#sweater').innerHTML = data.sweater;
-      document.querySelector('#t-shitr').innerHTML = data.tShitr;
+      getElement('#hoodie').innerHTML = data.hoodie;
+      getElement('#shitr').innerHTML = data.shitr;
+      getElement('#sweater').innerHTML = data.sweater;
+      getElement('#t-shitr').innerHTML = data.tShitr;
     }
     if (doc.id == 'size') {
-      document.querySelector('#xs').innerHTML = data.xs;
-      document.querySelector('#s').innerHTML = data.s;
-      document.querySelector('#m').innerHTML = data.m;
-      document.querySelector('#l').innerHTML = data.l;
-      document.querySelector('#xl').innerHTML = data.xl;
-      document.querySelector('#xxl').innerHTML = data.xxl;
-      document.querySelector('#xxxl').innerHTML = data.xxxl;
+      getElement('#xs').innerHTML = data.xs;
+      getElement('#s').innerHTML = data.s;
+      getElement('#m').innerHTML = data.m;
+      getElement('#l').innerHTML = data.l;
+      getElement('#xl').innerHTML = data.xl;
+      getElement('#xxl').innerHTML = data.xxl;
+      getElement('#xxxl').innerHTML = data.xxxl;
     }
   });
 }

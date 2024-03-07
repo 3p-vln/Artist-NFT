@@ -1,4 +1,6 @@
-document.querySelectorAll('.select__content').forEach(function (dropDownWrapper) {
+import { getElements } from "../composables/callDom";
+
+getElements('.select__content').forEach(function (dropDownWrapper) {
   const dropDownBtn = dropDownWrapper.querySelector('.select__btn');
   const dropDownTitle = dropDownWrapper.querySelector('.select__btn_p');
   const dropDownAfter = dropDownWrapper.querySelector('.select__btn_after');

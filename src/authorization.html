@@ -5,69 +5,10 @@
 <body>
   @@include('html/modules/preloader.html')
   <div class="wrapper">
-    
-    <svg class="background__svg-star">
-      <use href="#star"></use>
-    </svg>
-    <svg class="background__svg-ellipse">
-      <use href="#elipse"></use>
-    </svg>
     <main class="page">
       @@include('html/authorization/background.html')
         <div class="page__container">
-          <div class="authorization">
-            
-            <a class="authorization__logo">
-              <svg class="authorization__svg">
-                <use href="#icon-logo"></use>
-              </svg>
-              
-            </a>
-            <h2 class="authorization__title">Authorization</h2>
-            <div class="tabs authorization__tabs">
-              <button class="tabs__button" data-tab="#accaunt-sign">Log in</button>
-              <button class="tabs__button" data-tab="#accaunt-log">Sign up</button>
-              <div class="tabs__select"></div>
-            </div>
-            <div class=" roles autorization__roles">
-              <div class="roles__inner">
-                <p class="roles__text">Select your role</p>
-              <div class="roles__box">
-                <div class="roles__check">
-                  <span class="roles__check-label"></span>
-                  <p class="roles__check-text">Customer</p>
-                </div>
-                <div class="roles__check">
-                  <span class="roles__check-label"></span>
-                  <p class="roles__check-text">Admin</p>
-                </div>
-                <div class="roles__check">
-                  <span class="roles__check-label"></span>
-                  <p class="roles__check-text">Artist</p>
-                </div>
-              </div>
-              </div>
-            </div>
-            <form action="#" class="form authorization__form" id="auth-form">
-              <div class="form__item">
-                <label for="" class="form__item-label">E-mail</label>
-                <input type="email" class="form__item-input" placeholder="Your e-mail" id="email">
-              </div>
-              <div class="form__item">
-                <label for="" class="form__item-label">Passwrod</label>
-                <input type="password" class="form__item-input" placeholder="Your password" id="password">
-              </div>
-              <button class="form__button" type="submit" onclick="location.href='for-owner.html';">Send message</button>
-            </form>
-            <div class="authorization__accaunt" id="accaunt-sign">
-              <p class="authorization__text">Don’t have account yet?</p>
-              <a href="#" class="authorization__link">Sign up</a>
-            </div>
-            <div class="authorization__accaunt" id="accaunt-log">
-              <p class="authorization__text">Already have accoun?</p>
-              <a href="#" class="authorization__link">Log in</a>
-            </div>
-          </div>
+          @@include('html/authorization/auth.html')
         </div>
     </main>
     @@include('html/modules/Sprite.html')
