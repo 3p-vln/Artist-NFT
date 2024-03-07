@@ -12,6 +12,9 @@
             <div class="selector"></div>
         </div>
     </div>
+    <div class="authorization__error">
+        <div id="lblLoginErrorMessage" class="errorlabel">Error message</div>
+    </div>
     <div class="tabs__item" id="accaunt-log">
         <form action="#" class="form authorization__form" id="login">
             <div class="form__item">
@@ -22,7 +25,6 @@
                 <label for="#password-login" class="form__item-label">Passwrod</label>
                 <input type="password" class="form__item-input" placeholder="Your password" id="password-login" onsubmit="event.preventDefault();" />
             </div>
-            <div class="authorization__error"></div>
             <button class="form__button btn gradient" type="submit">Send message</button>
             <div class="authorization__accaunt">
                 <p class="authorization__text">Don’t have account yet?</p>
@@ -59,7 +61,6 @@
                 <label for="#password-signin" class="form__item-label">Passwrod</label>
                 <input type="password" class="form__item-input" placeholder="Your password" id="password-signin" onsubmit="event.preventDefault();" />
             </div>
-            <div class="authorization__error"></div>
             <button class="form__button btn gradient" type="submit">Send message</button>
             <div class="authorization__accaunt">
                 <p class="authorization__text">Already have accoun?</p>

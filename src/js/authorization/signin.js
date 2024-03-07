@@ -1,6 +1,6 @@
 import firebase from '../modules/firebase';
 import $ from 'jquery';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, AuthErrorCodes } from 'firebase/auth';
 import { getElement, getElementId, getElements } from '../composables/callDom';
 import { db } from '../modules/firebase';
 import { addDoc, collection, getDocs } from 'firebase/firestore';
@@ -39,7 +39,7 @@ export const loginEmailPassword = async () => {
         console.log(currentUser);
     } catch (error) {
         console.log(error);
-        // showLoginError(error);
+        showLoginError(error);
     }
 };
 
@@ -66,17 +66,18 @@ export const createAccount = async () => {
         }
     } catch (error) {
         console.log(`There was an error: ${error}`);
+        showLoginError(error);
     }
 };
 
-// const showLoginError = (error) => {
-//     // divLoginError.style.display = 'block';
-//     if (error.code == AuthErrorCodes.INVALID_PASSWORD) {
-//         lblLoginErrorMessage.innerHTML = `Wrong password. Try again.`;
-//     } else {
-//         lblLoginErrorMessage.innerHTML = `Error: ${error.message}`;
-//     }
-// };
+const showLoginError = (error) => {
+    getElement('.authorization__error').style.display = 'block';
+    if (error.code == AuthErrorCodes.INVALID_PASSWORD) {
+        getElement('#lblLoginErrorMessage').innerHTML = `Wrong password. Try again.`;
+    } else {
+        getElement('#lblLoginErrorMessage').innerHTML = `Error: ${error.message}`;
+    }
+};
 
 // forms.forEach((item) => {
 //     if (item.classList.contains('active') && item.getAttribute('id') == 'accaunt-log') {
