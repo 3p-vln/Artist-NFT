@@ -4,10 +4,10 @@ import { getElementId } from '../composables/callDom.js';
 import { premiumLoad } from './premiumLoad';
 
 export async function snapPremiumSwiper() {
-  const querySnapshot = await getDocs(collection(db, 'main-swiper'));
-  querySnapshot.forEach((doc) => {
-    premiumLoad(doc.data(), doc.id);
-  });
+    const querySnapshot = await getDocs(collection(db, 'main-swiper'));
+    querySnapshot.forEach((doc) => {
+        premiumLoad(doc.data(), doc.id);
+    });
 }
 
 export async function snapPremiumBanner() {
