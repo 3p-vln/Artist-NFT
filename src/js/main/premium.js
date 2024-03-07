@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import { db } from '../modules/firebase';
 import { collection, getDocs } from 'firebase/firestore';
 import { getElementId } from '../composables/callDom.js';
