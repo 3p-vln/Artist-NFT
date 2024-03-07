@@ -285,6 +285,12 @@
           }
         }
 
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
         &-btn {
           border-radius: 12px;
           padding: 18px 51px;
