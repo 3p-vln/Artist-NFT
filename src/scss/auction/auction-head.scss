@@ -1,373 +1,376 @@
 .auction {
-  padding: 0 0 0 15px;
-
-  @include media-breakpoint-down(md) {
-    padding: 0;
-  }
-
-  &-content {
-    display: flex;
-    gap: 32px;
+    padding: 0 0 0 15px;
 
     @include media-breakpoint-down(md) {
-      flex-direction: column;
-      align-items: center;
+        padding: 0;
     }
 
-    @include media-breakpoint-down(xs) {
-      gap: 16px;
-    }
-  }
-
-  &__image {
-    max-width: 52%;
-
-    @include media-breakpoint-down(md) {
-      max-width: 100%;
-    }
-
-    &-img {
-      width: 100%;
-      height: 100%;
-      max-width: 538px;
-      max-height: 538px;
-    }
-  }
-
-  &__info {
-    padding-top: 8px;
-    max-width: 48%;
-
-    @include media-breakpoint-down(md) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 100%;
-    }
-
-    @include media-breakpoint-down(xs) {
-      align-items: start;
-      padding-top: 5px;
-    }
-
-    &-subtitle {
-      max-width: 91px;
-      font-family: ProximaNova;
-      font-weight: bold;
-      line-height: 26.5px;
-      letter-spacing: 1.8px;
-      background: $rainbowBtnGradient;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      font-size: clamp(14px, 2.5vw, 18px);
-
-      @include media-breakpoint-down(xs) {
-        letter-spacing: 1.4px;
-      }
-    }
-
-    &-title {
-      font-family: ProximaNova;
-      font-weight: bold;
-      line-height: 49.5px;
-      color: $whiteTwo;
-      font-size: clamp(26px, 2.5vw, 36px);
-
-      @include media-breakpoint-down(xs) {
-        transform: translateY(-7px);
-      }
-    }
-
-    .columns {
-      display: flex;
-      padding-top: 26px;
-      gap: 48px;
-
-      @include media-breakpoint-down(xs) {
-        flex-direction: column;
-        padding-top: 0;
-        width: 100%;
-        transform: translateY(-7px);
-        gap: 30px;
-      }
-
-      &__item {
-        position: relative;
-        min-width: 101px;
-        max-width: 180px;
-
-        @include media-breakpoint-down(xs) {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          width: 100%;
-          max-width: unset;
-        }
-
-        &-text {
-          font-family: ProximaNova;
-          font-weight: normal;
-          line-height: 28px;
-          color: $whiteTwo;
-          font-size: clamp(15px, 2.5vw, 16px);
-
-          @include media-breakpoint-down(sm) {
-            .br-desctop {
-              display: none;
-            }
-          }
-        }
-
-        &-value {
-          font-family: ProximaNova;
-          font-weight: bold;
-          line-height: 33.5px;
-          color: $whiteTwo;
-          font-size: clamp(18px, 2.5vw, 22px);
-        }
-      }
-
-      &__item:nth-child(2) {
-        min-width: 115px;
-
-        @include media-breakpoint-down(xs) {
-          min-width: unset;
-        }
-      }
-
-      &__item:last-child {
-        transform: translateX(-4px);
-
-        @include media-breakpoint-down(xs) {
-          transform: translateX(0) translateY(-6px);
-        }
-      }
-
-      &__item:not(:last-child)::after {
-        content: '';
-        position: absolute;
-        right: -25px;
-        top: 0;
-        width: 1px;
-        height: 95%;
-        background: $gray7Color;
-
-        @include media-breakpoint-down(xs) {
-          left: 0;
-          right: unset;
-          top: 42px;
-          width: 100%;
-          height: 1px;
-          max-width: 431px;
-        }
-      }
-
-      &__item:nth-child(2)::after {
-        transform: translateX(-4px);
-
-        @include media-breakpoint-down(xs) {
-          transform: translateX(0);
-        }
-      }
-    }
-
-    .bargain {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin-top: 47px;
-      border-radius: 12px;
-      padding: 22px 43px;
-      width: 100%;
-      max-width: 540px;
-      background: $backgroundSecond;
-
-      @include media-breakpoint-down(md) {
-        max-width: unset;
-      }
-
-      @include media-breakpoint-down(xs) {
-        margin-top: 17px;
-        padding: 28px 16px 20px;
-      }
-
-      &::after {
-        content: '';
-        position: absolute;
-        left: 50%;
-        top: 0;
-        border-radius: 0 0 8px 8px;
-        width: 75%;
-        height: 16px;
-        transform: translateX(-50%);
-        background: $rainbowSecondGradient;
-
-        @include media-breakpoint-down(xs) {
-          height: 10px;
-        }
-      }
-
-      &__title {
-        max-width: 106px;
-        font-family: ProximaNova;
-        font-weight: bold;
-        line-height: 26.5px;
-        letter-spacing: 1.5px;
-        background: $rainbowSecondGradient;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        font-size: 14px;
-      }
-
-      &__value {
-        font-family: ProximaNova;
-        font-weight: bold;
-        line-height: 33.5px;
-        transform: translateY(-4px);
-        color: $whiteTwo;
-        font-size: 26px;
-      }
-
-      &__form {
+    &-content {
         display: flex;
-        flex-direction: column;
-        padding-top: 2px;
+        gap: 32px;
 
         @include media-breakpoint-down(md) {
-          max-width: 100%;
+            flex-direction: column;
+            align-items: center;
         }
 
         @include media-breakpoint-down(xs) {
-          padding-top: 12px;
+            gap: 16px;
+        }
+    }
+
+    &__image {
+        max-width: 52%;
+
+        @include media-breakpoint-down(md) {
+            max-width: 100%;
         }
 
-        &-label {
-          font-family: ProximaNova;
-          font-weight: normal;
-          line-height: 21px;
-          color: $grayLabel;
-          font-size: 14px;
+        &-img {
+            width: 100%;
+            height: 100%;
+            max-width: 538px;
+            max-height: 538px;
         }
+    }
 
-        &-wrapper {
-          position: relative;
-          display: flex;
-          padding-top: 6px;
-          gap: 12px;
+    &__info {
+        padding-top: 8px;
+        max-width: 48%;
 
-          @include media-breakpoint-down(xs) {
+        @include media-breakpoint-down(md) {
+            display: flex;
             flex-direction: column;
-          }
-
-          .just-validate-error-label {
-            top: -30px;
-          }
+            align-items: center;
+            max-width: 100%;
         }
 
-        &-input {
-          border-radius: 9px;
-          padding: 22px 32px;
-          height: 64px;
-          min-width: 266px;
-          font-family: ProximaNova;
-          font-weight: normal;
-          line-height: 21px;
-          background: $gray8Color;
-          color: $grayLabel;
-          font-size: 16px;
-
-          @include media-breakpoint-down(xs) {
-            min-width: unset;
-          }
+        @include media-breakpoint-down(xs) {
+            align-items: start;
+            padding-top: 5px;
         }
 
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-          -webkit-appearance: none;
-          margin: 0;
-        }
-
-        &-btn {
-          border-radius: 12px;
-          padding: 18px 51px;
-          height: 64px;
-
-          @include media-breakpoint-down(xs) {
-            height: 50px;
-          }
-
-          span {
+        &-subtitle {
+            max-width: 91px;
             font-family: ProximaNova;
             font-weight: bold;
             line-height: 26.5px;
-            text-wrap: nowrap;
-            color: $background;
-            font-size: 18px;
-          }
-        }
-      }
+            letter-spacing: 1.8px;
+            background: $rainbowBtnGradient;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: clamp(14px, 2.5vw, 18px);
 
-      &__date {
-        padding-top: 19px;
-
-        &-timer {
-          display: flex;
-          font-family: ProximaNova;
-          font-weight: bold;
-          line-height: 33.5px;
-          letter-spacing: 1.4px;
-          gap: 5px;
-          background: $rainbowSecondGradient;
-          background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-          font-size: clamp(18px, 2.5vw, 22px);
-
-          @include media-breakpoint-down(xs) {
-            letter-spacing: 1px;
-          }
+            @include media-breakpoint-down(xs) {
+                letter-spacing: 1.4px;
+            }
         }
 
-        &-deadline {
-          font-family: ProximaNova;
-          font-weight: 600;
-          line-height: 24px;
-          text-align: center;
-          transform: translateY(-5px);
-          color: $grayLabel;
-          font-size: 14px;
+        &-title {
+            font-family: ProximaNova;
+            font-weight: bold;
+            line-height: 49.5px;
+            color: $whiteTwo;
+            font-size: clamp(26px, 2.5vw, 36px);
+
+            @include media-breakpoint-down(xs) {
+                transform: translateY(-7px);
+            }
         }
-      }
 
-      &__description {
-        position: relative;
-        padding-top: 7px;
-        max-width: 345px;
-        font-family: ProximaNova;
-        font-weight: normal;
-        line-height: 20px;
-        text-align: center;
-        color: $grayLabel;
-        font-size: 12px;
+        .columns {
+            display: flex;
+            padding-top: 26px;
+            gap: 48px;
 
-        @include media-breakpoint-down(xs) {
-          padding-top: 25px;
+            @include media-breakpoint-down(xs) {
+                flex-direction: column;
+                padding-top: 0;
+                width: 100%;
+                transform: translateY(-7px);
+                gap: 30px;
+            }
 
-          &::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 9px;
+            &__item {
+                position: relative;
+                min-width: 101px;
+                max-width: 180px;
+
+                @include media-breakpoint-down(xs) {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    max-width: unset;
+                }
+
+                &-text {
+                    font-family: ProximaNova;
+                    font-weight: normal;
+                    line-height: 28px;
+                    color: $whiteTwo;
+                    font-size: clamp(15px, 2.5vw, 16px);
+
+                    @include media-breakpoint-down(sm) {
+                        .br-desctop {
+                            display: none;
+                        }
+                    }
+                }
+
+                &-value {
+                    font-family: ProximaNova;
+                    font-weight: bold;
+                    line-height: 33.5px;
+                    color: $whiteTwo;
+                    font-size: clamp(18px, 2.5vw, 22px);
+                }
+            }
+
+            &__item:nth-child(2) {
+                min-width: 115px;
+
+                @include media-breakpoint-down(xs) {
+                    min-width: unset;
+                }
+            }
+
+            &__item:last-child {
+                transform: translateX(-4px);
+
+                @include media-breakpoint-down(xs) {
+                    transform: translateX(0) translateY(-6px);
+                }
+            }
+
+            &__item:not(:last-child)::after {
+                content: '';
+                position: absolute;
+                right: -25px;
+                top: 0;
+                width: 1px;
+                height: 95%;
+                background: $gray7Color;
+
+                @include media-breakpoint-down(xs) {
+                    left: 0;
+                    right: unset;
+                    top: 42px;
+                    width: 100%;
+                    height: 1px;
+                    max-width: 431px;
+                }
+            }
+
+            &__item:nth-child(2)::after {
+                transform: translateX(-4px);
+
+                @include media-breakpoint-down(xs) {
+                    transform: translateX(0);
+                }
+            }
+        }
+
+        .bargain {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 47px;
+            border-radius: 12px;
+            padding: 22px 43px;
             width: 100%;
-            height: 1px;
-            background: $gray7Color;
-          }
+            max-width: 540px;
+            background: $backgroundSecond;
+
+            @include media-breakpoint-down(md) {
+                max-width: unset;
+            }
+
+            @include media-breakpoint-down(xs) {
+                margin-top: 17px;
+                padding: 28px 16px 20px;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 0;
+                border-radius: 0 0 8px 8px;
+                width: 75%;
+                height: 16px;
+                transform: translateX(-50%);
+                background: $rainbowSecondGradient;
+
+                @include media-breakpoint-down(xs) {
+                    height: 10px;
+                }
+            }
+
+            &__title {
+                max-width: 106px;
+                font-family: ProximaNova;
+                font-weight: bold;
+                line-height: 26.5px;
+                letter-spacing: 1.5px;
+                background: $rainbowSecondGradient;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                font-size: 14px;
+            }
+
+            &__value {
+                font-family: ProximaNova;
+                font-weight: bold;
+                line-height: 33.5px;
+                transform: translateY(-4px);
+                color: $whiteTwo;
+                font-size: 26px;
+            }
+
+            &__form {
+                display: flex;
+                flex-direction: column;
+                padding-top: 2px;
+
+                @include media-breakpoint-down(md) {
+                    max-width: 100%;
+                }
+
+                @include media-breakpoint-down(xs) {
+                    padding-top: 12px;
+                }
+
+                &-label {
+                    font-family: ProximaNova;
+                    font-weight: normal;
+                    line-height: 21px;
+                    color: $grayLabel;
+                    font-size: 14px;
+                }
+
+                &-wrapper {
+                    position: relative;
+                    display: flex;
+                    padding-top: 6px;
+                    gap: 12px;
+
+                    @include media-breakpoint-down(xs) {
+                        flex-direction: column;
+                        width: 100%;
+                    }
+
+                    .just-validate-error-label {
+                        top: -30px;
+                    }
+                }
+
+                &-input {
+                    border-radius: 9px;
+                    padding: 22px 32px;
+                    height: 64px;
+                    min-width: 266px;
+                    font-family: ProximaNova;
+                    font-weight: normal;
+                    line-height: 21px;
+                    background: $gray8Color;
+                    color: $grayLabel;
+                    font-size: 16px;
+
+                    @include media-breakpoint-down(xs) {
+                        min-width: unset;
+                        width: 100%;
+                    }
+                }
+
+                input::-webkit-outer-spin-button,
+                input::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+
+                &-btn {
+                    border-radius: 12px;
+                    padding: 18px 51px;
+                    text-wrap: nowrap;
+
+                    @include media-breakpoint-down(xs) {
+                        padding: 12px 51px;
+                        width: 100%;
+                    }
+
+                    span {
+                        font-family: ProximaNova;
+                        font-weight: bold;
+                        line-height: 26.5px;
+                        text-wrap: nowrap;
+                        color: $background;
+                        font-size: clamp(15px, 2.5vw, 18px);
+                    }
+                }
+            }
+
+            &__date {
+                padding-top: 19px;
+
+                &-timer {
+                    display: flex;
+                    font-family: ProximaNova;
+                    font-weight: bold;
+                    line-height: 33.5px;
+                    letter-spacing: 1.4px;
+                    gap: 5px;
+                    background: $rainbowSecondGradient;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    font-size: clamp(18px, 2.5vw, 22px);
+
+                    @include media-breakpoint-down(xs) {
+                        letter-spacing: 1px;
+                    }
+                }
+
+                &-deadline {
+                    font-family: ProximaNova;
+                    font-weight: 600;
+                    line-height: 24px;
+                    text-align: center;
+                    transform: translateY(-5px);
+                    color: $grayLabel;
+                    font-size: 14px;
+                }
+            }
+
+            &__description {
+                position: relative;
+                padding-top: 7px;
+                max-width: 345px;
+                font-family: ProximaNova;
+                font-weight: normal;
+                line-height: 20px;
+                text-align: center;
+                color: $grayLabel;
+                font-size: 12px;
+
+                @include media-breakpoint-down(xs) {
+                    padding-top: 25px;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 9px;
+                        width: 100%;
+                        height: 1px;
+                        background: $gray7Color;
+                    }
+                }
+            }
         }
-      }
     }
-  }
 }
