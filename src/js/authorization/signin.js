@@ -32,9 +32,9 @@ export const loginEmailPassword = async () => {
         const currentUser = [];
         currentUser.push(allUsers.find((item) => item.uid === userUid));
         if (currentUser[0].modifier == 'admin') {
-            window.location.href = '/for-owner.html';
+            window.location.href = '/Artist-NFT/for-owner.html';
         } else {
-            window.location.href = '/client.html';
+            window.location.href = '/Artist-NFT/client.html';
         }
         console.log(currentUser);
     } catch (error) {
@@ -55,14 +55,14 @@ export const createAccount = async () => {
                 modifier: 'customer',
             });
             console.log('Document written with ID: ', userAdd.id);
-            window.location.href = '/client.html';
+            window.location.href = '/Artist-NFT/client.html';
         } else {
             const userAdd = await addDoc(collection(db, 'users'), {
                 uid: user.user.uid,
                 modifier: 'admin',
             });
             console.log('Document written with ID: ', userAdd.id);
-            window.location.href = '/for-owner.html';
+            window.location.href = '/Artist-NFT/for-owner.html';
         }
     } catch (error) {
         console.log(`There was an error: ${error}`);
