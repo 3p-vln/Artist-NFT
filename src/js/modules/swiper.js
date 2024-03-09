@@ -20,42 +20,43 @@ export function biographySwiper() {
     });
 }
 
-export function premiumSwiper() {
-    new Swiper('.premium-swiper', {
-        loop: true,
-        centeredSlides: true,
-
-        breakpoints: {
-            320: {
-                slidesPerView: 1.3,
-                spaceBetween: 16,
-            },
-            430: {
-                slidesPerView: 1.7,
-                spaceBetween: 16,
-            },
-            768: {
-                slidesPerView: 2.5,
-                spaceBetween: 30,
-            },
-            1200: {
-                slidesPerView: 3,
-                spaceBetween: 30,
-            },
-            1439: {
-                slidesPerView: 3.8,
-                spaceBetween: 30,
-            },
-            1700: {
-                slidesPerView: 5,
-                spaceBetween: 30,
-            },
-            1920: {
-                slidesPerView: 5,
-                spaceBetween: 30,
-            },
-        },
-    });
+export function premiumSwiper() { 
+    new Swiper('.premium-swiper', { 
+        loop: true, 
+        spaceBetween: 30, 
+        centeredSlides: true, 
+ 
+        breakpoints: { 
+            320: { 
+                slidesPerView: 'auto', 
+                spaceBetween: 16, 
+            }, 
+        //     430: { 
+        //       slidesPerView: 'auto', 
+        //         spaceBetween: 16, 
+        //     }, 
+        //     768: { 
+        //         slidesPerView: 2.5, 
+        //         spaceBetween: 30, 
+        //     }, 
+        //     1200: { 
+        //         slidesPerView: 3, 
+        //         spaceBetween: 30, 
+        //     }, 
+        //     1439: { 
+        //         slidesPerView: 3.8, 
+        //         spaceBetween: 30, 
+        //     }, 
+        //     1700: { 
+        //         slidesPerView: 5, 
+        //         spaceBetween: 30, 
+        //     }, 
+        //     1920: { 
+        //         slidesPerView: 5, 
+        //         spaceBetween: 30, 
+        //     }, 
+        }, 
+    }); 
 }
 
 export function popularSwiper() {
