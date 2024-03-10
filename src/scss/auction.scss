@@ -3,3 +3,29 @@
 @import 'auction/auction-body';
 @import 'auction/background';
 @import 'auction/bread-crumbs';
+@import '../../node_modules/tippy.js/dist/tippy.css';
+@import 'config/vars';
+
+.tippy-box[data-theme~='gradient'] {
+    background: $rainbowBtnGradient;
+    color: $backgroundSecond;
+    border-radius: 7px;
+    padding: 8px;
+    font-weight: bold;
+    text-wrap: nowrap;
+    font-size: 14px;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 30px;
+        clip-path: polygon(0 0, 53% 100%, 100% 0);
+        width: 10px;
+        height: 10px;
+        transform: translateX(-50%);
+        z-index: 3;
+        background: $rainbowBtnGradient;
+    }
+}

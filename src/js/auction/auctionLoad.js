@@ -1,6 +1,7 @@
 import { db } from '../modules/firebase';
 import { collection, getDocs } from 'firebase/firestore';
 import { getElementId } from '../composables/callDom.js';
+import tippy from 'tippy.js';
 
 export async function snapAuction() {
     const querySnapshot = await getDocs(collection(db, 'auction'));
@@ -22,6 +23,11 @@ export async function snapAuction() {
     if (priceValue.length > 7) {
         let truncatedValue = priceValue.slice(0, 4) + '...' + priceValue.slice(-3);
         priceElement.textContent = truncatedValue;
-        priceElement.title = priceValue;
     }
+
+    tippy('#highestPrice', {
+        content: priceValue,
+        animation: 'fade',
+        theme: 'gradient',
+    });
 }
