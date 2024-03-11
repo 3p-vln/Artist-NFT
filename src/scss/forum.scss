@@ -3,14 +3,44 @@
 @import 'forum/popular';
 @import 'forum/asking';
 @import 'forum/stat';
+@import './forum/form.scss';
+@import './forum/card.scss';
 
 .page {
-  position: relative;
-  margin-top: 63px;
-  background: $background;
-
-  &__container {
     position: relative;
-    z-index: 2;
-  }
+    margin-top: 63px;
+    background: $background;
+
+    &__container {
+        position: relative;
+        z-index: 2;
+    }
+
+    .forum {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__form {
+            position: relative;
+            margin-bottom: 16px;
+        }
+
+        &__cards {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        &__questions-form {
+            @include media-breakpoint-down(md) {
+                order: -1;
+            }
+        }
+    }
 }

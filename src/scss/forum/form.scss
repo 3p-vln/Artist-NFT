@@ -1,0 +1,51 @@
+.form {
+    &__svg {
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 23px;
+        bottom: 50%;
+        transform: translateY(50%);
+        cursor: pointer;
+    }
+
+    &__input {
+        border-radius: 12px;
+        width: 730px;
+        background: $backgroundSecond;
+        padding: 22px 60px 23px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 136%;
+        font-family: ProximaNova;
+        border: 1px solid $gray6Color;
+        color: $gray6Color;
+
+        @include media-breakpoint-down(sm) {
+          width: 500px;
+        }
+
+        @include media-breakpoint-down(xs) {
+          width: 345px;
+        }
+    }
+
+    &__button {
+        background: $darkerGradientBtn;
+        padding: 10px 15px 10px 21px;
+        border-radius: 10px;
+        position: absolute;
+        right: 11px;
+        bottom: 50%;
+        transform: translateY(50%);
+    }
+
+    &__button-text {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 143%;
+        background: $rainbowBtnGradient;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}

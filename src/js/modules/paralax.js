@@ -7,23 +7,28 @@ window.onload = function () {
 
   if (paralax) {
     const elements = {
-      mainEllipseFirst: '.background__ellipse-first',
-      mainEllipseSecond: '.background__ellipse-second',
-      mainEllipseThird: '.background__ellipse-third',
-      mainStarFirst: '.background__star-first',
-      mainStarSecond: '.background__star-second',
-      mainStarThird: '.background__star-third',
-      contactSapphireFirst: '.contact-background__sapphire-first',
-      contactSapphireSecond: '.contact-background__sapphire-second',
-      contactSapphireThird: '.contact-background__sapphire-third',
-      contactCube: '.contact-background__cube',
+        mainEllipseFirst: '.background__ellipse-first',
+        mainEllipseSecond: '.background__ellipse-second',
+        mainEllipseThird: '.background__ellipse-third',
+        mainStarFirst: '.background__star-first',
+        mainStarSecond: '.background__star-second',
+        mainStarThird: '.background__star-third',
+        contactSapphireFirst: '.contact-background__sapphire-first',
+        contactSapphireSecond: '.contact-background__sapphire-second',
+        contactSapphireThird: '.contact-background__sapphire-third',
+        contactCube: '.contact-background__cube',
 
-      nftsEllipse: '.background__ellipse',
-      nftsStar: '.background__star',
+        nftsEllipse: '.background__ellipse',
+        nftsStar: '.background__star',
 
-      sapphireFirst: '.background__brilliant-first',
-      sapphireSecond: '.background__brilliant-second',
-      sapphireThird: '.background__brilliant-third',
+        sapphireFirst: '.background__brilliant-first',
+        sapphireSecond: '.background__brilliant-second',
+        sapphireThird: '.background__brilliant-third',
+
+        schoolStarFirst: '.register__svg-star-first',
+        schoolStarSecond: '.register__svg-star-second',
+        schoolStarThird: '.artist__decor-star',
+        schoolEllipse: '.artist__decor-elipse',
     };
 
     const forElements = {
