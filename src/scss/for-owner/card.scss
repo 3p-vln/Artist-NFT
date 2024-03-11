@@ -8,54 +8,62 @@
     padding: 14px 18px 16px 12px;
 
     @include media-breakpoint-down(md) {
-      background: $blackChatColor;
-      width: 450px;
-      margin: 0 auto;
+        background: $blackChatColor;
+        width: 100%;
+        margin: 0 auto;
     }
 
     @include media-breakpoint-down(xs) {
-      width: 350px;
+        // width: 350px;
     }
 
     &_active {
-      background: $individPlanGradient;
+        background: $individPlanGradient;
+    }
+
+    &__info {
+        width: 100%;
     }
 
     &_hidden {
-      display: none;
+        display: none;
     }
 
     &__info-top {
-      display: flex;
-      justify-content: space-between;
-      width: 370px;
+        display: flex;
+        justify-content: space-between;
+        width: 215px;
 
-      @include media-breakpoint-down(xs) {
-        width: 273px;
-      }
+        @include media-breakpoint-down(md) {
+            width: 100%;
+        }
+
+        // @include media-breakpoint-down(xs) {
+        //     width: 273px;
+        // }
     }
 
     &__name {
-      font-weight: 600;
-      font-size: 12px;
-      line-height: 125%;
-      color: $gray6Color;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 125%;
+        color: $gray6Color;
 
-      &_hidden {
-        display: none;
-      }
+        &_hidden {
+            display: none;
+        }
     }
 
     &__time {
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 125%;
-      opacity: 0.6;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 125%;
+        opacity: 0.6;
     }
 
     &__text {
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 107%;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 107%;
     }
-  }
+}
