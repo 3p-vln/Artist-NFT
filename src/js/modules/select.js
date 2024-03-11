@@ -7,47 +7,28 @@ getElements('.select__content').forEach(function (dropDownWrapper) {
     const dropDownList = dropDownWrapper.querySelector('.select__list');
     const dropDownListItems = dropDownList.querySelectorAll('.select__list-item');
     const dropDownInput = dropDownWrapper.querySelector('.select__input-hidden');
-    // var height = dropDownList.height;
 
-    // var options = {
-    //     rootMargin: `0px 0px -${height + 70}px 0px`,
-    //     threshold: 0,
-    // };
-    // var observer = new IntersectionObserver(callback, options);
+    const options = {
+        rootMargin: `0px 0px -250px 0px`,
+        threshold: 0,
+    };
 
-    // function callback(entries) {
-    //     entries.forEach(function (entry) {
-    //         if (entry.isIntersecting) {
-    //             dropDownList.style.top = '64px';
-    //         } else {
-    //             dropDownList.style.top = -height + 'px';
-    //         }
-    //     });
-    // }
-    // const options = {
-    //     rootMargin: `0px 0px -250px 0px`,
-    //     threshold: 0,
-    // };
-
-    // // const observer = new IntersectionObserver(callback, options);
-    // // const self = this;
-
-    // const observer = new IntersectionObserver((entries) => {
-    //     entries.forEach((entry) => {
-    //         if (entry.isIntersecting) {
-    //             dropDownList.style.top = '115px';
-    //         } else {
-    //             dropDownList.style.top = -dropDownList.height + 'px';
-    //         }
-    //     });
-    // }, options);
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                dropDownList.style.top = '65px';
+            } else {
+                dropDownList.style.top = '-204px';
+            }
+        });
+    }, options);
 
     dropDownBtn.addEventListener('click', function (e) {
         dropDownList.classList.toggle('select__list--visible');
         dropDownAfter.classList.toggle('select__btn_after--active');
         dropDownBtn.classList.toggle('select__btn-clicked');
         this.classList.add('select__button--active');
-        observer.observe(dropDownList);
+        observer.observe(dropDownBtn);
     });
 
     dropDownListItems.forEach(function (listItem) {

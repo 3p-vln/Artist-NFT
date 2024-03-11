@@ -1,23 +1,558 @@
 <!DOCTYPE html>
 <html lang="en">
-  @@include('html/modules/head.html', { 'title': 'Client', 'srcStyle': 'client' })
-  
-  <body>
-    @@include('html/modules/preloader.html')
-    
-    <div class="wrapper">
-      @@include('html/client/header.html')
-      
-      <main class="page">
-        <div class="page__container"> 
-          @@include('html/client/chat.html')
-          @@include('html/client/orders.html')
+@@include('html/modules/head.html', { 'title': 'For owner', 'srcStyle': 'for-owner' })
+
+<body>
+  @@include('html/modules/preloader.html')
+  <div class="wrapper for-owner">
+    <header class="header for-owner__header">
+      <div class=" for-owner__container page__container">
+        <a href="index.html" class="logo header__logo">
+          <svg class="header__logo-svg">
+            <use href="#icon-logo"></use>
+          </svg>
+        </a>
+        <a href="#" class="header__link">
+          <span class="header__link-text">Log out</span>
+          <svg class="header__svg">
+            <use href="#log-out-white"></use>
+          </svg>
+        </a>
+        <button class="header__menu">
+          <span class="header__menu-span-top"></span>
+          <span class="header__menu-span-middle"></span>
+          <span class="header__menu-span-bottom"></span>
+        </button>
+      </div>
+    </header>
+    <main class="page for-owner__page">
+      <div class="for-owner__overlay"></div>
+      <div class="page__container for-owner__page-container">
+        <sidebar class="sidebar for-owner__sidebar">
+          <div class="sidebar__content">
+            <a href="#" class="sidebar__content-link" data-tab="#chat">
+              <svg class="sidebar__content-svg">
+                <use href="#owner-message"></use>
+              </svg>
+              Messages
+            </a>
+            <a href="#" class="sidebar__content-link" data-tab="#orders">
+              <svg class="sidebar__content-svg">
+                <use href="#owner-orders"></use>
+              </svg>
+              Orders
+            </a>
+          </div>
+          <div class="sidebar__footer">
+            <a href="#" class="sidebar__footer-link">
+              <svg class="sidebar__footer-svg">
+                <use href="#log-out-white"></use>
+              </svg>
+              Log out
+            </a>
+            <p class="sidebar__footer-text">All rights reserved © 2022</p>
+          </div>
+        </sidebar>
+        <div class="content for-owner__content-box">
+
+          <div class="content__box chat" id="chat">
+
+            <h2 class="orders__title">My chat list</h2>
+            <span class="chat__mobile-title">
+              <img src="./images/for-worker-and-owner/chat-list-mobile/arrow-left.svg" alt="arrow" class="chat__mobile-title-arrow">
+              <h2 class="orders__title">Chat with Ivan Ivanov</h2>
+            </span>
+            
+            <div class="chat__opers-mobile opers-mobile">
+              <div class="opers-mobile__cards">
+                <div class="opers-mobile__card">
+                  <img src="./images/for-worker-and-owner/chat-list-mobile/oper-2.png" alt="oper" class="opers-mobile__card-img">
+                  <p class="opers-mobile__card-name">Ivan Ivanov</p>
+                  <p class="opers-mobile__card-time">10 min ago</p>
+                </div>
+
+                <div class="opers-mobile__card">
+                  <img src="./images/for-worker-and-owner/chat-list-mobile/oper-1.png" alt="oper" class="opers-mobile__card-img">
+                  <p class="opers-mobile__card-name">Arlene McCoy</p>
+                  <p class="opers-mobile__card-time">10 min ago</p>
+                </div>
+
+                <div class="opers-mobile__card">
+                  <img src="./images/for-worker-and-owner/chat-list-mobile/oper-3.png" alt="oper" class="opers-mobile__card-img">
+                  <p class="opers-mobile__card-name">Kathryn Murphy</p>
+                  <p class="opers-mobile__card-time">10 min ago</p>
+                </div>
+
+                <div class="opers-mobile__card">
+                  <img src="./images/for-worker-and-owner/chat-list-mobile/oper-2.png" alt="oper" class="opers-mobile__card-img">
+                  <p class="opers-mobile__card-name">Jane Cooper</p>
+                  <p class="opers-mobile__card-time">10 min ago</p>
+                </div>
+
+              </div>
+
+              <input type="search" class="opers-mobile__input" placeholder="Search" id="search">
+            </div>
+
+            <div class="chat__list">
+              <h3 class="chat__list-title">My chat list</h3>
+              <div class="chat__list-cards">
+                <div class="card chat__list-card">
+                  <img src="./images/for-worker-and-owner/chat/ivan-img.png" alt="photo" class="card__photo">
+                  <div class="card__info">
+                    <div class="card__info-top">
+                      <p class="card__name">Ivan Ivanov</p>
+                      <p class="card__time">10 min ago</p>
+                    </div>
+                    <p class="card__text">Message that have been writed...</p>
+                  </div>
+                </div>
+                <div class="card chat__list-card">
+                  <img src="./images/for-worker-and-owner/chat/ivan-img.png" alt="photo" class="card__photo">
+                  <div class="card__info">
+                    <div class="card__info-top">
+                      <p class="card__name">Danilo Kozlov</p>
+                      <p class="card__time">10 min ago</p>
+                    </div>
+                    <p class="card__text">Message that have been writed...</p>
+                  </div>
+                </div>
+                <div class="card chat__list-card">
+                  <img src="./images/for-worker-and-owner/chat/ivan-img.png" alt="photo" class="card__photo">
+                  <div class="card__info">
+                    <div class="card__info-top">
+                      <p class="card__name">Timur Laypavlov</p>
+                      <p class="card__time">10 min ago</p>
+                    </div>
+                    <p class="card__text">Message that have been writed...</p>
+                  </div>
+                </div>
+                <div class="card chat__list-card">
+                  <img src="./images/for-worker-and-owner/chat/ivan-img.png" alt="photo" class="card__photo">
+                  <div class="card__info">
+                    <div class="card__info-top">
+                      <p class="card__name">Eneken Jim</p>
+                      <p class="card__time">10 min ago</p>
+                    </div>
+                    <p class="card__text">Message that have been writed...</p>
+                  </div>
+                </div>
+                <div class="card chat__list-card">
+                <img src="./images/for-worker-and-owner/chat/ivan-img.png" alt="photo" class="card__photo">
+                <div class="card__info">
+                  <div class="card__info-top">
+                    <p class="card__name">Ivan Ivanov</p>
+                    <p class="card__time">10 min ago</p>
+                  </div>
+                  <p class="card__text">Message that have been writed...</p>
+                </div>
+              </div>
+              </div>
+            </div>
+
+            <div class="chat__window">
+              <div class="chat__window-info">
+                <div class="chat__window-worker">
+                  <img src="./images/for-worker-and-owner/chat/ivan-for-list.png" alt="worker" class="chat__window-photo">
+                  <p class="chat__window-name">Ivan Ivanov</p>
+                </div>
+                <p class="chat__window-status">Online</p>
+              </div>
+              <div class="messages chat__window-messages">
+                <div class="messages__old">
+                  <div class="messages__box">
+                    <div class="messages__mesage message message_photo">
+                      <img src="./images/for-worker-and-owner/chat/message-img.png" alt="photo" class="message__img">
+                    </div>
+                    <div class="messages__mesage message">
+                      <p class="message__text">Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="message__time">10 min ago</div>
+                  </div>
+                </div>
+                <h3 class="messages__title">New messages</h3>
+                <div class="messages__new">
+                  <div class="messages__new-box">
+                    <div class="message__message-oper-box">
+                      <div class="message__message-oper-info">
+                        <img src="./images/for-worker-and-owner/chat/ivan-for-list.png" alt="photo" class="message__message-oper-img">
+                        <p class="message__message-oper-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                      </div>
+                      <p class="message__time message__message-oper-time">10 min ago</p>
+                    </div>
+                    <div class="message__message-user-box">
+                      <p class="message__message-user">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                    </p>
+                    <div class="message__time">10 min</div>
+                    </div>
+                  </div>
+                </div>
+                <input type="text" class="messages__unwhrite" placeholder="Enter your message here">
+              </div>
+            </div>
+          </div>
+
+          <div class="content__box orders" id="orders">
+            <h2 class="orders__title">My orders</h2>
+            <div class="orders__head-table-box">
+              <table class="orders__table orders__table_head table">
+                <tbody class="table__body">
+                  <tr class="table__titles">
+                    <th class="table__title table__title_type">Type of item</th>
+                    <th class="table__title table__title_color">Color</th>
+                    <th class="table__title table__title_mail">E-mail</th>
+                    <th class="table__title table__title_size">Size</th>
+                    <th class="table__title table__title_comment">Comment</th>
+                    <th class="table__title table__title_delivery">Delivery address</th>
+                    <th class="table__title table__title_action">Action</th>
+                  </tr>
+                </tbody>
+            </table>
+            </div>
+            
+            <div class="orders__table-box">
+              <table class="orders__table orders__table_body table">
+                <tbody class="table__body table__body_orders">
+                  <tr class="table__order">
+                    <td class="table__name">T-SHIRT</td>
+                    <td class="table__color"></td>
+                    <td class="table__mail">emailofcustomer@gmail.com</td>
+                    <td class="table__size">XL (99-99-99)</td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__action">
+                      <button class="btn table__button">Message</button>
+                    </td>
+                  </tr>
+                  <tr class="table__order">
+                    <td class="table__name">T-SHIRT</td>
+                    <td class="table__color"></td>
+                    <td class="table__mail">emailofcustomer@gmail.com</td>
+                    <td class="table__size">XL (99-99-99)</td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__action">
+                      <button class="btn table__button">Message</button>
+                    </td>
+                  </tr>
+                  <tr class="table__order">
+                    <td class="table__name">T-SHIRT</td>
+                    <td class="table__color"></td>
+                    <td class="table__mail">emailofcustomer@gmail.com</td>
+                    <td class="table__size">XL (99-99-99)</td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__action">
+                      <button class="btn table__button">Message</button>
+                    </td>
+                  </tr>
+                  <tr class="table__order">
+                    <td class="table__name">T-SHIRT</td>
+                    <td class="table__color"></td>
+                    <td class="table__mail">emailofcustomer@gmail.com</td>
+                    <td class="table__size">XL (99-99-99)</td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__action">
+                      <button class="btn table__button">Message</button>
+                    </td>
+                  </tr>
+                  <tr class="table__order">
+                    <td class="table__name">T-SHIRT</td>
+                    <td class="table__color"></td>
+                    <td class="table__mail">emailofcustomer@gmail.com</td>
+                    <td class="table__size">XL (99-99-99)</td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__action">
+                      <button class="btn table__button">Message</button>
+                    </td>
+                  </tr>
+                  <tr class="table__order">
+                    <td class="table__name">T-SHIRT</td>
+                    <td class="table__color"></td>
+                    <td class="table__mail">emailofcustomer@gmail.com</td>
+                    <td class="table__size">XL (99-99-99)</td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__action">
+                      <button class="btn table__button">Message</button>
+                    </td>
+                  </tr>
+                  <tr class="table__order">
+                    <td class="table__name">T-SHIRT</td>
+                    <td class="table__color"></td>
+                    <td class="table__mail">emailofcustomer@gmail.com</td>
+                    <td class="table__size">XL (99-99-99)</td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__action">
+                      <button class="btn table__button">Message</button>
+                    </td>
+                  </tr>
+                  <tr class="table__order">
+                    <td class="table__name">T-SHIRT</td>
+                    <td class="table__color"></td>
+                    <td class="table__mail">emailofcustomer@gmail.com</td>
+                    <td class="table__size">XL (99-99-99)</td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__descr">
+                      <span class="table__descr-text">Lorem ipsum dolor sit amet</span>
+                      <span class="table__descr-show">Show more</span>
+                    </td>
+                    <td class="table__action">
+                      <button class="btn table__button">Message</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <div class="content__box-mobile">
+              <div class="orders-card order">
+                <div class="order__head">
+
+                  <div class="table__color"></div>
+
+                  <div class="order__info">
+                    <p class="table__name">T-SHIRT</p>
+                    <p class="order__mail">emailofcustomer@gmail.com</p>
+                  </div>
+                </div>
+
+                <div class="order__size-info">
+                    <p class="table__title">Size</p>
+                    <p class="table__size">XL (99-99-99)</p>
+                </div>
+
+                <div class="order__del-info">
+                  <div class="order__del-info-left">
+                    <p class="order__del-title">Delivery address</p>
+                    <p class="order__descr-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+                  </div>
+
+                  <div class="order__del-info-right">
+                    <p class="table__title">Comment</p>
+                    <p class="table__descr-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+                  </div>
+
+                </div>
+
+                <button class="btn order__button">Message</button>
+              </div>
+
+              <div class="orders-card order">
+                <div class="order__head">
+
+                  <div class="table__color"></div>
+
+                  <div class="order__info">
+                    <p class="table__name">T-SHIRT</p>
+                    <p class="order__mail">emailofcustomer@gmail.com</p>
+                  </div>
+                </div>
+
+                <div class="order__size-info">
+                    <p class="table__title">Size</p>
+                    <p class="table__size">XL (99-99-99)</p>
+                </div>
+
+                <div class="order__del-info">
+                  <div class="order__del-info-left">
+                    <p class="order__del-title">Delivery address</p>
+                    <p class="order__descr-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+                  </div>
+
+                  <div class="order__del-info-right">
+                    <p class="table__title">Comment</p>
+                    <p class="table__descr-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+                  </div>
+
+                </div>
+
+                <button class="btn order__button">Message</button>
+              </div>
+
+              <div class="orders-card order">
+                <div class="order__head">
+
+                  <div class="table__color"></div>
+
+                  <div class="order__info">
+                    <p class="table__name">T-SHIRT</p>
+                    <p class="order__mail">emailofcustomer@gmail.com</p>
+                  </div>
+                </div>
+
+                <div class="order__size-info">
+                    <p class="table__title">Size</p>
+                    <p class="table__size">XL (99-99-99)</p>
+                </div>
+
+                <div class="order__del-info">
+                  <div class="order__del-info-left">
+                    <p class="order__del-title">Delivery address</p>
+                    <p class="order__descr-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+                  </div>
+
+                  <div class="order__del-info-right">
+                    <p class="table__title">Comment</p>
+                    <p class="table__descr-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+                  </div>
+
+                </div>
+
+                <button class="btn order__button">Message</button>
+              </div>
+
+              <div class="orders-card order">
+                <div class="order__head">
+
+                  <div class="table__color"></div>
+
+                  <div class="order__info">
+                    <p class="table__name">T-SHIRT</p>
+                    <p class="order__mail">emailofcustomer@gmail.com</p>
+                  </div>
+                </div>
+
+                <div class="order__size-info">
+                    <p class="table__title">Size</p>
+                    <p class="table__size">XL (99-99-99)</p>
+                </div>
+
+                <div class="order__del-info">
+                  <div class="order__del-info-left">
+                    <p class="order__del-title">Delivery address</p>
+                    <p class="order__descr-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+                  </div>
+
+                  <div class="order__del-info-right">
+                    <p class="table__title">Comment</p>
+                    <p class="table__descr-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+                  </div>
+
+                </div>
+
+                <button class="btn order__button">Message</button>
+              </div>
+
+              <div class="orders-card order">
+                <div class="order__head">
+
+                  <div class="table__color"></div>
+
+                  <div class="order__info">
+                    <p class="table__name">T-SHIRT</p>
+                    <p class="order__mail">emailofcustomer@gmail.com</p>
+                  </div>
+                </div>
+
+                <div class="order__size-info">
+                    <p class="table__title">Size</p>
+                    <p class="table__size">XL (99-99-99)</p>
+                </div>
+
+                <div class="order__del-info">
+                  <div class="order__del-info-left">
+                    <p class="order__del-title">Delivery address</p>
+                    <p class="order__descr-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+                  </div>
+
+                  <div class="order__del-info-right">
+                    <p class="table__title">Comment</p>
+                    <p class="table__descr-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+                  </div>
+
+                </div>
+
+                <button class="btn order__button">Message</button>
+              </div>
+
+              <div class="orders-card order">
+                <div class="order__head">
+
+                  <div class="table__color"></div>
+
+                  <div class="order__info">
+                    <p class="table__name">T-SHIRT</p>
+                    <p class="order__mail">emailofcustomer@gmail.com</p>
+                  </div>
+                </div>
+
+                <div class="order__size-info">
+                    <p class="table__title">Size</p>
+                    <p class="table__size">XL (99-99-99)</p>
+                </div>
+
+                <div class="order__del-info">
+                  <div class="order__del-info-left">
+                    <p class="order__del-title">Delivery address</p>
+                    <p class="order__descr-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+                  </div>
+
+                  <div class="order__del-info-right">
+                    <p class="table__title">Comment</p>
+                    <p class="table__descr-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+                  </div>
+
+                </div>
+
+                <button class="btn order__button">Message</button>
+              </div>
+            </div>
+
+          </div>
         </div>
-      </main>
-      
-      @@include('html/modules/Sprite.html')
-  </body>
-  
-  <script src="js/app.min.js"></script>
-  <script src="js/client.min.js"></script>
-</html>
+      </div>
+    </main>
+    @@include('html/modules/Sprite.html')
+</body>
+<script src="js/app.min.js"></script>
+<script src="js/forOwner.min.js"></script>
