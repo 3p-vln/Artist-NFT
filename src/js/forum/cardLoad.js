@@ -17,7 +17,7 @@ export function cardLoad(info,id,content) {
                             </svg>
                         </div>
 
-                        <img src="../../images/forum/img-for-common-question.png" alt="user" class="card__img" />
+                        <img src="${info.userImg}" alt="user" class="card__img" />
 
                         <div class="card__head-info">
                           <p class="card__head-name">${info.name}</p>
@@ -28,7 +28,7 @@ export function cardLoad(info,id,content) {
                     </div>
 
                     <div class="card__answer-box">
-
+                      <p class="card__answer-question-mobile">${info.question}</p>
                       <p class="card__answer">${info.about} </p>
 
                       <div class="card__buttons">

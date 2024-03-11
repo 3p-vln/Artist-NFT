@@ -5,15 +5,16 @@
     padding: 19px 39px 30px 22px;
 
     @include media-breakpoint-down(sm) {
-      width: 500px;
+        width: 500px;
+        padding: 18px 17px 42px 22px;
     }
 
     @include media-breakpoint-down(xs) {
-      width: 345px;
+        width: 345px;
     }
 
     &_hidden {
-      display: none;
+        display: none;
     }
 
     &__head {
@@ -47,6 +48,10 @@
         font-weight: 700;
         font-size: 20px;
         line-height: 150%;
+
+        @include media-breakpoint-down(xs) {
+            display: none;
+        }
     }
 
     &__head-date {
@@ -67,48 +72,65 @@
         font-size: 16px;
         line-height: 175%;
         margin-bottom: 16px;
+
+        @include media-breakpoint-down(xs) {
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 160%;
+        }
+    }
+
+    &__answer-question-mobile {
+        display: none;
+
+        @include media-breakpoint-down(xs) {
+            display: block;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 144%;
+            margin-bottom: 11px;
+        }
     }
 
     &__buttons {
-      display: flex;
-      gap: 10px;
-      align-items: center;
+        display: flex;
+        gap: 10px;
+        align-items: center;
     }
 
     &__button-view {
-      background: $darkerGradientBtn;
-      padding: 10px 15px 10px 21px;
-      border-radius: 10px;
+        background: $darkerGradientBtn;
+        padding: 10px 15px 10px 21px;
+        border-radius: 10px;
     }
 
     &__button-text {
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 143%;
-      background: $rainbowBtnGradient;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 143%;
+        background: $rainbowBtnGradient;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     &__button-answer {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: $backgroundSecond;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: $backgroundSecond;
     }
 
     &__button-svg {
-      max-width: 20px;
-      max-height: 20px;
-      min-width: 20px;
-      min-height: 20px;
+        max-width: 20px;
+        max-height: 20px;
+        min-width: 20px;
+        min-height: 20px;
     }
 
     &__button-answer-text {
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 143%;
-      color: $greenColor;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 143%;
+        color: $greenColor;
     }
-
 }

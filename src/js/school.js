@@ -1,10 +1,21 @@
-const buttons = document.querySelectorAll('.tabs__button');
-const registerButtons = document.querySelectorAll(
-  '.register-form__plans-button',
-);
-const cards = document.querySelectorAll('.card');
+// const buttons = document.querySelectorAll('.tabs__button');
+import { buttonsTabsChange } from './school/buttonsTabs';
+import { registerButtonsChange } from './school/registerButtonsChange';
+import { cardCheck } from './school/cardsCheck';
+
+const artLoadEvent = new Event('loadingIsFinished');
+document.dispatchEvent(artLoadEvent);
+
+document.addEventListener('DOMContentLoaded', async () => {
+  buttonsTabsChange();
+  registerButtonsChange();
+  cardCheck();
+});
+
+
 
 import JustValidate from 'just-validate';
+
 const validator = new JustValidate(
   document.querySelector('#register-form', {
     errorLabelStyle: {
@@ -13,40 +24,6 @@ const validator = new JustValidate(
   }),
 );
 
-registerButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    registerButtons.forEach((btn) => {
-      btn.classList.remove('tabs__button_active');
-    });
-
-    button.classList.add('tabs__button_active');
-  });
-});
-
-buttons.forEach((button) => {
-  button.addEventListener('click', () => {
-    let currentButton = button;
-    let tabId = currentButton.getAttribute('data-tab');
-    let currentCard = document.querySelector(tabId);
-
-    buttons.forEach((btn) => {
-      btn.classList.remove('tabs__button_active');
-    });
-
-    buttons.forEach((btn) => {
-      btn.classList.remove('tabs__button_active');
-    });
-
-    cards.forEach((card) => {
-      card.classList.remove('card_active');
-    });
-
-    currentButton.classList.add('tabs__button_active');
-    currentCard.classList.add('card_active');
-  });
-});
-
-buttons[0].click();
 
 // validator
 //     .addField(document.querySelector('#email'), [
@@ -75,8 +52,8 @@ buttons[0].click();
 //         },
 //     ]);
 
-const artLoadEvent = new Event('loadingIsFinished');
-document.dispatchEvent(artLoadEvent);
+
+
 validator
   .addField(document.querySelector('#email'), [
     {

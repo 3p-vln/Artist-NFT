@@ -6,6 +6,10 @@
   color: $whiteTwo;
   background-color: $backgroundSecond;
 
+  @include media-breakpoint-down(xs) {
+    display: none;
+  }
+
   &__head {
     display: flex;
     align-items: center;

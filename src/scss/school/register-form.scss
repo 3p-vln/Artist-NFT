@@ -2,45 +2,45 @@
     position: relative;
     padding-bottom: 67px;
 
-    &__decor {
-        position: absolute;
+    // &__decor {
+    //     position: absolute;
 
-        &_first {
-            left: -13%;
-            bottom: 14%;
+    //     &_first {
+    //         left: -13%;
+    //         bottom: 14%;
 
-          @include media-breakpoint-down(sm) {
-            display: none;
-          }
-        }
+    //       @include media-breakpoint-down(sm) {
+    //         display: none;
+    //       }
+    //     }
 
-        &_second {
-          left: 7%;
-          bottom: 4%;
+    //     &_second {
+    //       left: 7%;
+    //       bottom: 4%;
 
-          @include media-breakpoint-down(sm) {
-            display: none;
-          }
-        }
+    //       @include media-breakpoint-down(sm) {
+    //         display: none;
+    //       }
+    //     }
 
-        &_third {
-            left: 2%;
-            top: 24%;
+    //     &_third {
+    //         left: 2%;
+    //         top: 24%;
 
-          @include media-breakpoint-down(sm) {
-            display: none;
-          }
-        }
+    //       @include media-breakpoint-down(sm) {
+    //         display: none;
+    //       }
+    //     }
 
-        &_fourth {
-            right: -13%;
-            bottom: 12%;
+    //     &_fourth {
+    //         right: -13%;
+    //         bottom: 12%;
 
-          @include media-breakpoint-down(sm) {
-            display: none;
-          }
-        }
-    }
+    //       @include media-breakpoint-down(sm) {
+    //         display: none;
+    //       }
+    //     }
+    // }
 
     &__title {
         margin-bottom: 6px;
@@ -103,40 +103,44 @@
           }
         }
 
-        &__plans-button {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            outline: none;
-            border-radius: 12px;
-            padding: 17px 19px;
-            width: 120px;
-            font-weight: bold;
-            line-height: 147%;
-            white-space: nowrap;
-            z-index: 2;
-            font-size: 18px;
-            color: $whiteColor;
-            background: $backgroundSecond;
+      &__plans-button {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          outline: none;
+          border-radius: 12px;
+          padding: 17px 19px;
+          width: 120px;
+          white-space: nowrap;
+          z-index: 2;
+          font-size: 18px;
+          background: $backgroundSecond;
 
-             &:first-child {
-                margin-right: 10px;
+          &_active {
+              background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+          }
 
-                @include media-breakpoint-down(xs) {
-                  margin-right: 0;
-                }
-             }
+          @include media-breakpoint-down(xs) {
+            width: 109px;
+          }
+          
+      }
 
-             &_active {
-                 background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
-             }
+      &__plans-button-text {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 147%;
+        text-align: center;
+        background: linear-gradient(130deg, #68c9ff 0%, #d1b5ff 99.47%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
 
-            @include media-breakpoint-down(xs) {
-              width: 109px;
-            }
-            
-        }
+      &__plans-button_active .register-form__plans-button-text {
+        -webkit-text-fill-color: $background;
+      }
 
     .form {
         margin: 0 auto;
@@ -197,6 +201,7 @@
             font-size: 16px;
             color: $whiteColor;
             background: $backgroundSecond;
+            resize: none;
 
             &::placeholder {
                 font-family: ProximaNova;
