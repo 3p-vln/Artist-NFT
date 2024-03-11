@@ -13,7 +13,7 @@ export function premiumLoad(slide) {
     <div class="premium-slide__item"> 
     <picture> 
         <source srcset="${item.cardImgWebp}" type="webp"> 
-        <img src="${item.cardImg}" alt="${item.cardTitle}" loading="lazy" class="premium-slide__item-img"> 
+        <img src="${item.cardImg}" alt="${item.cardTitle}" class="premium-slide__item-img"> 
     </picture> 
     </div> 
     <h3 class="premium-slide__title">${item.cardTitle}</h3> 
