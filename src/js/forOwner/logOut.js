@@ -1,8 +1,9 @@
 import { getElement } from '../composables/callDom';
-import { onAuthStateChanged, signOut } from 'firebase/auth';
+import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
 import firebase from '../modules/firebase';
 export async function logOut() {
-    onAuthStateChanged((user) => {
+    const auth = getAuth();
+    onAuthStateChanged(auth, (user) => {
         if (user) {
             this.user = user;
         } else {
