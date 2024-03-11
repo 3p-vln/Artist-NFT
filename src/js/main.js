@@ -8,7 +8,7 @@ import { validate } from './main/contactValidate';
 document.addEventListener('DOMContentLoaded', async () => {
     await snapBiography();
     await snapPremiumBanner();
-    // await snapPremiumSwiper();
+    await snapPremiumSwiper();
     biographySwiper();
     premiumSwiper();
     validate();
