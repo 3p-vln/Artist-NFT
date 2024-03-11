@@ -1,0 +1,257 @@
+ .table {
+    width: 100%;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+
+    &__body {
+      &_orders {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+
+    &__titles {
+    }
+
+    &__title {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 107%;
+      text-align: left;
+
+      &_type {
+        width: 10.3%;
+      }
+
+      &_color {
+        width: 7.4%;
+      }
+
+      &_mail {
+        width: 21.5%;
+      }
+
+      &_size {
+        width: 13.3%;
+      }
+
+      &_comment {
+        width: 16.3%;
+      }
+
+      &_delivery {
+        width: 15.8%;
+      }
+
+      &_product-name {
+        width: 20.7%;
+      }
+
+      &_crypto {
+        width: 35%;
+      }
+
+      &_status {
+        width: 16.5%;
+      }
+
+      &_price {
+        width: 14.7%;
+      }
+
+      &_name {
+        width: 13.6%;
+      }
+
+      &_workers_mail {
+        width: 26.5%;
+      }
+
+      &_workers_comment {
+        width: 45.1%;
+      }
+    }
+
+    &__order {
+      border-radius: 14px;
+      padding: 8px;
+      background: $background;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 28px 31px 33px 24px;
+
+      &_nft {
+        padding-top: 20px;
+        padding-bottom: 18px;
+        justify-content: initial;
+        flex-wrap: nowrap;
+      }
+
+      &_workers {
+        padding-top: 26px;
+        padding-bottom: 18px;
+        padding-left: 30px;
+      }
+    }
+
+    &__name {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 131%;
+      white-space: nowrap;
+      margin-right: 1px;
+      flex-shrink: 0;
+
+      &_workers {
+        width: 7.2%;
+      }
+    }
+
+    &__color {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #eb8032;
+      margin-right: 1px;
+      flex-shrink: 0;
+    }
+
+    &__mail {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 150%;
+      margin-right: 1px;
+      // width:20%;
+      flex-shrink: 0;
+
+      &_workers {
+        // margin-right: 76px;
+        width: 20%;
+      }
+    }
+
+    &__size {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 131%;
+      margin-right: 1px;
+      white-space: nowrap;
+      // width: 10%;
+      flex-shrink: 0;
+    }
+
+    &__descr {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 12px;
+      margin-right: 1px;
+      flex-shrink: 10;
+
+      &_workers {
+        max-width: 406px;
+      }
+    }
+
+    &__descr-text {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 150%;
+    }
+
+    &__descr-show {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 150%;
+      color: $blueOwnerColor;
+    }
+
+    &__button {
+      width: 116px;
+      background: $rainbowBtnGradient;
+      padding-bottom: 12px;
+      padding-top: 12px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 143%;
+    }
+
+    &__name-nft {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      width: 20.9%;
+    }
+
+    &__name-nft-text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 175%;
+    }
+
+    &__crypto {
+      border-radius: 13px;
+      width: 310px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $backgroundSecond;
+      // height: 48px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      gap: 28px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 143%;
+      margin-right: 26px;
+
+      &_order {
+        margin-right: 0;
+      }
+
+      @include media-breakpoint-down(md) {
+        width: 148px;
+        padding: 8px 11px;
+        gap: 10px;
+        font-size: 12px;
+        line-height: 167%;
+      }
+    }
+
+    &__status {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      width: 103px;
+      height: 40px;
+      background: $greenBg;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 175%;
+      color: $greenColor;
+      margin-right: 55px;
+    }
+
+    &__crypto-svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    &__price {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 175%;
+      width: 15%;
+    }
+
+    &__date {
+      color: $gray6Color;
+    }
+  }

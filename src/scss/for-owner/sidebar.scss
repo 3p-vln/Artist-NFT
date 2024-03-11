@@ -1,0 +1,76 @@
+.sidebar {
+    padding: 36px 0 50px 22px;
+    background: $background;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      @include media-breakpoint-down(md) {
+        gap: 10px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        gap: 0;
+      }
+    }
+
+    &__content-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: $gray6Color;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 131%;
+
+      &_active {
+        color: $whiteTwo;
+      }
+    }
+
+    &__content-svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    &__footer {
+      position: relative;
+      top: 32px;
+      left: -10px;
+    }
+
+    &__footer-link {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 131%;
+      display: flex;
+      align-items: center;
+      width: 189px;
+      padding-bottom: 16px;
+      color: $gray6Color;
+      border-bottom: 1px solid $borderGrayColor;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    &__footer-svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    &__footer-text {
+      font-size: 12px;
+      line-height: 167%;
+      color: $greenColor;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: 36px 20px 20px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 0;
+    }
+  }

@@ -92,3 +92,16 @@ export function popularSwiper() {
         },
     });
 }
+
+export function opersSwiper() {
+  new Swiper('.opers-mobile', {
+    loop: true,
+    
+    breakpoints: {
+      320: {
+        slidesPerView: 4.4, 
+        spaceBetween:27,
+      }
+    }
+  });
+}
