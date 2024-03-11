@@ -1,7 +1,6 @@
 // import Swiper, { Navigation, Pagination, Autoplay, Scrollbar } from 'swiper';
 import Swiper from 'swiper';
-import { Navigation, Pagination, Autoplay, Scrollbar } from 'swiper/modules';
-Swiper.use([Navigation, Pagination, Autoplay, Scrollbar]);
+
 
 export function biographySwiper() {
     let swiper = new Swiper('.columns-swiper', {

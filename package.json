@@ -1,40 +1,40 @@
 {
-  "name": "gulp-2022",
-  "version": "1.7.5",
-  "description": "Сборка Gulp+Webpack+Babel",
-  "main": "gulpfile.js",
-  "type": "module",
-  "scripts": {
-    "dev": "gulp",
-    "build": "gulp build --build",
-    "zip": "gulp deployZIP --build",
-    "deployFTP": "gulp deployFTP --build",
-    "svgSprive": "gulp svgSprive",
-    "deploy": "gh-pages -d dist",
-    "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,json,html,css,md,yaml,yml}\"",
-    "predeploy": "npm run build",
-    "stylelint": "stylelint '**/*{.css,.scss}'",
-    "stylelint:fix": "stylelint '**/*{.css,.scss}' --fix"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/3p-vln/Artist-NFT.git"
-  },
-  "keywords": [
-    "gulp",
-    "webpack",
-    "js",
-    "css",
-    "scss",
-    "html"
-  ],
-  "author": "Sergei Chevdar <serj.elessar@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/StarkElessar/gulp-2022/issues"
-  },
-  "homepage": "https://github.com/StarkElessar/gulp-2022#readme",
-  "devDependencies": {
+    "name": "gulp-2022",
+    "version": "1.7.5",
+    "description": "Сборка Gulp+Webpack+Babel",
+    "main": "gulpfile.js",
+    "type": "module",
+    "scripts": {
+        "dev": "gulp",
+        "build": "gulp build --build",
+        "zip": "gulp deployZIP --build",
+        "deployFTP": "gulp deployFTP --build",
+        "svgSprive": "gulp svgSprive",
+        "deploy": "gh-pages -d dist",
+        "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,json,html,css,md,yaml,yml}\"",
+        "predeploy": "npm run build",
+        "stylelint": "stylelint '**/*{.css,.scss}'",
+        "stylelint:fix": "stylelint '**/*{.css,.scss}' --fix"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/3p-vln/Artist-NFT.git"
+    },
+    "keywords": [
+        "gulp",
+        "webpack",
+        "js",
+        "css",
+        "scss",
+        "html"
+    ],
+    "author": "Sergei Chevdar <serj.elessar@gmail.com>",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/StarkElessar/gulp-2022/issues"
+    },
+    "homepage": "https://github.com/StarkElessar/gulp-2022#readme",
+"devDependencies": {
     "@babel/core": "^7.19.1",
     "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.19.1",
@@ -42,7 +42,7 @@
     "browser-sync": "^2.29.3",
     "chalk": "^5.2.0",
     "del": "^6.0.0",
-    "firebase": "^10.1.0",
+    "firebase": "10.1.0",
     "fs": "^0.0.1-security",
     "gh-pages": "^4.0.0",
     "gulp": "^4.0.2",
@@ -99,6 +99,7 @@
     "sass-loader": "^13.3.2",
     "scroll-lock": "^2.1.5",
     "style-loader": "^3.3.3",
-    "swiper": "^11.0.5"
+    "swiper": "^11.0.5",
+    "tippy.js": "^6.3.7"
   }
 }

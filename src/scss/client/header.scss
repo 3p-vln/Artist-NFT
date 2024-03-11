@@ -1,172 +1,90 @@
 .header {
-    &__container {
-        position: relative;
-        display: block;
-        padding: 9px 15px;
-        height: 64px;
-        max-width: 1259px;
-
-        @media (max-width: 1100px) {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-    }
-
-    &__logo {
-        transition: opacity 0.5s;
-        opacity: 0.7;
-
-        &:hover {
-            opacity: 1;
-        }
-    }
-
-    .tabs {
-        top: 100%;
-        margin-top: 5px;
-        margin-left: 10px;
-        width: 100%;
-
-        @media (max-width: 1100px) {
-            margin: 0;
-        }
-
-        &__nav {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-
-            @media (max-width: 1100px) {
-                gap: 30px;
-            }
-
-            &-btn {
-                position: relative;
-                display: flex;
-                align-items: center;
-                width: 100%;
-                font-weight: normal;
-                line-height: 21px;
-                font-size: 16px;
-                color: $whiteTwo;
-                background: none;
-                gap: 11px;
-
-                &:not(.active) {
-                    svg path {
-                        fill: rgb(82, 89, 96);
-                    }
-                }
-
-                &::before {
-                    content: '';
-                    position: absolute;
-                    left: 0;
-                    bottom: -14.5px;
-                    display: none;
-                    width: 100%;
-                    height: 1px;
-                    opacity: 0.1;
-                    background-color: $whiteTwo;
-
-                    @media (max-width: 1100px) {
-                        display: block;
-                    }
-                }
-            }
-        }
-    }
-
-    .menu {
-        position: absolute;
-        top: 92%;
+    padding-top: 10px;
+    &__link {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-left: 0;
-        padding: 36px 26px 36px 2px;
-        width: 217px;
-        height: 92.6vh;
+        align-items: center;
+        gap: 5px;
+        color: $gray6Color;
 
-        @media (max-width: 1100px) {
-            position: fixed;
-            right: -100%;
-            top: 64px;
-            display: flex;
-            flex-direction: column;
-            align-items: start;
-            overflow: auto;
-            padding: 18px 15px 29px;
-            width: 100%;
-            height: auto;
-            transition: right 0.3s ease 0s;
-            gap: 30px;
-            background: #1d1f21;
-            background-size: cover;
+        @include media-breakpoint-down(md) {
+            display: none;
         }
+    }
 
-        &__logout {
-            position: relative;
-            display: flex;
-            align-items: center;
-            font-weight: normal;
-            line-height: 21px;
-            font-size: 14px;
-            color: $whiteTwo;
-            background: none;
-            gap: 9px;
-
-            &::before {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: -15.5px;
-                width: 100%;
-                height: 1px;
-                opacity: 0.7;
-                background-color: $whiteTwo;
-
-                @media (max-width: 1100px) {
-                    display: none;
-                }
-            }
-        }
-
-        &__info {
-            font-weight: normal;
-            line-height: 20px;
-            font-size: 12px;
-            color: $whiteTwo;
-
-            @media (max-width: 1100px) {
-                display: none;
-            }
-        }
-
-        &__end {
-            display: flex;
-            flex-direction: column;
-            gap: 28px;
-        }
+    &__link-text {
+    }
+    &__svg {
+        width: 24px;
+        height: 24px;
     }
 
     &__menu {
-        &_active {
-            position: absolute;
-            top: 0;
-        }
-    }
+        display: none;
 
-    &__burger {
-        @media (max-width: 1100px) {
+        &_active .header__menu-span-middle {
+            @include media-breakpoint-down(md) {
+                opacity: 0;
+            }
+        }
+
+        &_active .header__menu-span-top {
+            @include media-breakpoint-down(md) {
+                width: 20px;
+                margin-left: -1px;
+
+                transform: translateY(8px) translateX(10px) rotate(45deg);
+            }
+        }
+
+        &_active .header__menu-span-bottom {
+            @include media-breakpoint-down(md) {
+                width: 20px;
+                margin-left: 8px;
+
+                transform: translateY(-6px) translateX(1px) rotate(-45deg);
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            position: relative;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            flex-direction: column;
+            order: 2;
             border-radius: 9px;
-            width: 32px;
-            height: 32px;
-            background: linear-gradient(130.1deg, rgba(104, 201, 255, 0.1) 22.178%, rgba(209, 181, 255, 0.1) 92.41%);
+            margin-right: 5px;
+            cursor: pointer;
+            gap: 5px;
+            background: $background;
+
+            &-span-top {
+                z-index: 13;
+                width: 6px;
+                height: 2px;
+                margin-left: 22px;
+                border-radius: 9px;
+                background: $benefitsStarBoxGradient;
+                transition: all 0.3s ease-in-out;
+            }
+
+            &-span-middle {
+                z-index: 13;
+                border-radius: 9px;
+                width: 16px;
+                height: 2px;
+                margin-left: 12px;
+                background: $benefitsStarBoxGradient;
+                transition: all 0.3s ease-in-out;
+            }
+
+            &-span-bottom {
+                z-index: 13;
+                width: 12px;
+                height: 2px;
+                margin-left: 16px;
+                border-radius: 9px;
+                background: $benefitsStarBoxGradient;
+                transition: all 0.3s ease-in-out;
+            }
         }
     }
 }

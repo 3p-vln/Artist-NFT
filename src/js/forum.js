@@ -1,4 +1,5 @@
 import { popularSwiper } from './modules/swiper';
+import { snapPopularSwiper } from './forum/questions';
 import { questionToBD } from './forum/asking';
 import { stop } from './modules/stopPreload';
 import { searching } from './forum/search';
@@ -6,7 +7,7 @@ import { querySnapshot } from './modules/snap';
 import { cardLoad } from './forum/cardLoad';
 
 document.addEventListener('DOMContentLoaded', async () => {
-    await questionToBD();
+    await snapPopularSwiper();
     await questionToBD();
     popularSwiper();
   searching();
@@ -17,8 +18,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     await snap();
 
     stop();
-    // const artLoadEvent = new Event('loadingIsFinished');
-    // document.dispatchEvent(artLoadEvent);
 });
 
 // const cards = document.querySelectorAll('.card');
