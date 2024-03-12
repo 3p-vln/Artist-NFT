@@ -19,8 +19,9 @@
     .forum {
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
-        padding-bottom:56px;
+        // flex-wrap: wrap;
+        padding-bottom: 56px;
+        gap: 15px;
 
         @include media-breakpoint-down(md) {
             flex-direction: column;
@@ -43,6 +44,11 @@
             @include media-breakpoint-down(md) {
                 order: -1;
             }
+        }
+
+        &__questions {
+            width: 100%;
+            max-width: 730px;
         }
     }
 }
