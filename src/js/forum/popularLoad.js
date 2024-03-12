@@ -4,7 +4,7 @@ export function popularLoad(data, id) {
     const premium = $('.popular-wrapper');
 
     premium.append(`
-                <div class="swiper-slide popular-slide ${id}">
+                <div class="popular-slide ${id}">
                     <div class="popular-slide__bg">
                         <img src="images/forum/first-bg-questions.png" alt="background" class="popular-slide__bg-img" />
                     </div>
