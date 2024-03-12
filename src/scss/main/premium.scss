@@ -4,7 +4,7 @@
 
         @include media-breakpoint-down(md) {
             padding-top: 0;
-            transform: translateY(-38px);
+            transform: translateY(-28px);
         }
     }
 
@@ -235,7 +235,7 @@
         z-index: 2;
 
         @include media-breakpoint-down(md) {
-            transform: translateY(-38px);
+            transform: translateY(-28px);
         }
 
         @include media-breakpoint-down(xs) {
@@ -424,8 +424,7 @@
             height: 465px;
         }
     }
-
-    .swiper-slide-active {
+    .slick-current {
         transform: translateY(-30px);
         transition: transform 0.3s ease-in-out;
 
@@ -433,32 +432,28 @@
             transform: none;
         }
     }
-}
 
-.slick-current {
-    transform: translateY(-30px);
-    transition: transform 0.3s ease-in-out;
+    .slick-list {
+        margin: 0 auto;
+        overflow: visible;
 
-    @include media-breakpoint-down(md) {
-        transform: none;
+        @include media-breakpoint-down(xs) {
+            margin: 0;
+            transform: translateX(-25px) !important;
+        }
+
+        @include media-breakpoint-down(xxs) {
+            margin: 0;
+            transform: translateX(0px) !important;
+        }
     }
-}
 
-.slick-list {
-    margin: 0 auto;
-    overflow: visible;
+    .slick-slide {
+        transition: transform 0.3s ease-in-out;
+        margin-right: 30px;
 
-    @include media-breakpoint-down(xs) {
-        margin: 0;
-        transform: translateX(-25px) !important;
-    }
-}
-
-.slick-slide {
-    transition: transform 0.3s ease-in-out;
-    margin-right: 30px;
-
-    @include media-breakpoint-down(xs) {
-        margin-right: 0px;
+        @include media-breakpoint-down(xs) {
+            margin-right: 0px;
+        }
     }
 }

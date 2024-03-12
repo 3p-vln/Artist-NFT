@@ -1,6 +1,10 @@
 .contact {
     position: relative;
 
+    @include media-breakpoint-down(md) {
+        padding-top: 10px;
+    }
+
     &-background {
         position: absolute;
         width: 100%;

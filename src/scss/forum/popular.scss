@@ -91,16 +91,29 @@
         }
     }
 
-    &-swiper {
+    &-wrapper {
         padding-top: 23px;
+    }
+
+    .slick-list {
+        overflow: hidden;
 
         @include media-breakpoint-down(md) {
             overflow: visible;
         }
     }
 
-    &-wrapper {
-        display: flex;
+    .slick-track {
+        display: flex !important;
+        flex-direction: row !important;
+    }
+
+    .slick-slide {
+        margin-right: 30px;
+
+        @include media-breakpoint-down(lg) {
+            margin-right: 14px;
+        }
     }
 
     &-slide {
@@ -109,7 +122,9 @@
         overflow: hidden;
         position: relative;
         z-index: 2;
-        padding: 129px 22px 22px 21px;
+        padding: 129px 28px 22px 21px;
+        min-width: 290px !important;
+        min-height: 350px;
 
         @include media-breakpoint-down(xs) {
             padding: 141px 11px 28px 12px;
@@ -188,6 +203,7 @@
             font-size: clamp(18px, 2.5vw, 20px);
             font-weight: 700;
             line-height: 30px;
+            max-width: 302px;
 
             @include media-breakpoint-down(xs) {
                 padding: 10px 0 0 0;
