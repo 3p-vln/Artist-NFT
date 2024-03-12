@@ -1,9 +1,9 @@
-// import Swiper, { Navigation, Pagination, Autoplay, Scrollbar } from 'swiper';
+import $ from 'jquery';
+import 'slick-carousel';
 import Swiper from 'swiper';
 
-
 export function biographySwiper() {
-    let swiper = new Swiper('.columns-swiper', {
+    new Swiper('.columns-swiper', {
         slidesPerView: 'auto',
         breakpoints: {
             576: {
@@ -21,40 +21,19 @@ export function biographySwiper() {
 }
 
 export function premiumSwiper() {
-    new Swiper('.premium-swiper', {
-        loop: true,
-        centeredSlides: true,
-
-        breakpoints: {
-            320: {
-                slidesPerView: 1.3,
-                spaceBetween: 16,
+    $('.premium-wrapper').slick({
+        centerMode: true,
+        arrows: false,
+        slidesToShow: 5,
+        variableWidth: true,
+        responsive: [
+            {
+                breakpoints: 576,
+                settings: {
+                    centerMode: false,
+                },
             },
-            430: {
-                slidesPerView: 1.7,
-                spaceBetween: 16,
-            },
-            768: {
-                slidesPerView: 2.5,
-                spaceBetween: 30,
-            },
-            1200: {
-                slidesPerView: 3,
-                spaceBetween: 30,
-            },
-            1439: {
-                slidesPerView: 3.8,
-                spaceBetween: 30,
-            },
-            1700: {
-                slidesPerView: 5,
-                spaceBetween: 30,
-            },
-            1920: {
-                slidesPerView: 5,
-                spaceBetween: 30,
-            },
-        },
+        ],
     });
 }
 

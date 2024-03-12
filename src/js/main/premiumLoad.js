@@ -8,7 +8,7 @@ export function premiumLoad(slide) {
 
     slide.forEach((item) => {
         const cardSlide = ` 
-  <div class="swiper-slide premium-slide"> 
+  <div class="premium-slide"> 
     <h2 class="premium-slide__nft">${item.cardNftText}</h2> 
     <div class="premium-slide__item"> 
     <picture> 
@@ -30,11 +30,9 @@ export function premiumLoad(slide) {
     });
 
     const swiperWrapper = ` 
-    <div class="swiper premium-swiper"> 
-        <div class="swiper-wrapper premium-wrapper"> 
+        <div class="premium-wrapper"> 
             ${swiperSlide} 
-        </div> 
-    </div>`;
+        </div> `;
 
     premium.append(swiperWrapper);
 }

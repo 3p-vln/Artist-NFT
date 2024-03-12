@@ -284,12 +284,12 @@
                 left: 0;
                 right: unset;
                 top: unset;
-                bottom: -40px;
+                bottom: -35px;
                 transform: unset;
 
                 &::after {
-                    left: 4%;
-                    top: -9px;
+                    left: 4.5%;
+                    top: -8px;
                     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
                     background: $forValidateBlue;
                 }

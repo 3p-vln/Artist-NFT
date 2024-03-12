@@ -230,13 +230,25 @@
     }
 
     &-wrapper {
-        width: 100%;
+        overflow: visible;
+        padding: 0 0px 24px 0px;
+        z-index: 2;
+
+        @include media-breakpoint-down(md) {
+            transform: translateY(-38px);
+        }
+
+        @include media-breakpoint-down(xs) {
+            padding: 10px 0 0 0;
+        }
     }
 
     &-slide {
-        display: flex;
+        display: flex !important;
         flex-direction: column;
+        min-width: 0;
         border-radius: 12px;
+        max-width: 345px;
         height: 600px;
         transition: transform 0.3s ease-in-out;
         background: $backgroundSecond;
@@ -255,7 +267,7 @@
 
             @include media-breakpoint-down(xs) {
                 order: 2;
-                padding: 26px 0 0 17px;
+                padding: 26px 0 0 13px;
                 max-width: 60px;
                 letter-spacing: 1.4px;
             }
@@ -302,7 +314,7 @@
 
             @include media-breakpoint-down(xs) {
                 order: 3;
-                padding: 0 17px;
+                padding: 0 13px;
                 transform: translateY(-3px);
             }
         }
@@ -318,7 +330,7 @@
 
             @include media-breakpoint-down(xs) {
                 order: 4;
-                padding: 0 17px 10px;
+                padding: 0 13px 10px;
                 transform: translateY(-3px);
             }
         }
@@ -398,12 +410,14 @@
 
             @include media-breakpoint-down(xs) {
                 order: 5;
-                padding: 9px 21px 17px 17px;
+                padding: 9px 21px 17px 13px;
             }
         }
 
         @include media-breakpoint-down(xs) {
             height: 450px;
+            max-width: 280px;
+            margin-right: 16px;
         }
 
         @include media-breakpoint-down(xxs) {
@@ -419,21 +433,32 @@
             transform: none;
         }
     }
+}
 
-    &-swiper {
-        overflow: visible;
-        padding: 0 15px 24px 15px;
-        width: 100%;
-        height: 100%;
-        max-width: 100%;
-        z-index: 2;
+.slick-current {
+    transform: translateY(-30px);
+    transition: transform 0.3s ease-in-out;
 
-        @include media-breakpoint-down(md) {
-            transform: translateY(-38px);
-        }
+    @include media-breakpoint-down(md) {
+        transform: none;
+    }
+}
 
-        @include media-breakpoint-down(xs) {
-            padding: 10px 0 0 0;
-        }
+.slick-list {
+    margin: 0 auto;
+    overflow: visible;
+
+    @include media-breakpoint-down(xs) {
+        margin: 0;
+        transform: translateX(-25px) !important;
+    }
+}
+
+.slick-slide {
+    transition: transform 0.3s ease-in-out;
+    margin-right: 30px;
+
+    @include media-breakpoint-down(xs) {
+        margin-right: 0px;
     }
 }
