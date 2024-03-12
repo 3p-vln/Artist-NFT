@@ -29,6 +29,13 @@ window.onload = function () {
         schoolStarSecond: '.register__svg-star-second',
         schoolStarThird: '.artist__decor-star',
         schoolEllipse: '.artist__decor-elipse',
+        schoolBrilliantFirst: '.background__decor-img_first',
+        schoolBrilliantSecond: '.background__decor-img_second',
+        schoolBrilliantThird: '.background__decor-img_third',
+        schoolBrilliantFourth: '.background__decor-img_fourth',
+        schoolBrilliantFivth: '.background__decor-img_fivth',
+        schoolBrilliantSixth: '.background__decor-img_sixth',
+        schoolBrilliantSeveth: '.background__decor-img_seventh',
     };
 
     const forElements = {

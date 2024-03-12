@@ -6,9 +6,98 @@
     transform: translateX(-50%);
     z-index: 1;
 
-    &__blur {
-        @include media-breakpoint-down(xs) {
+    &__blur-first {
+      position: absolute;
+      top:50%;
+      left:-1%;
+
+      @include media-breakpoint-down(xs) {
+        display: none;
+      }
+    }
+
+    &__decor-img {
+        position: absolute;
+
+        &_blur {
+            left: -24%;
+            bottom: 10%;
+            z-index: -2;
+        }
+
+        &_first {
+            left: 0%;
+            top: 44%;
+            z-index: 1;
+
+            @include media-breakpoint-down(sm) {
+                display: none;
+            }
+        }
+
+        &_second {
+            right: 19.5%;
+            top: 41%;
+
+            @include media-breakpoint-down(xs) {
+                right: 0%;
+                top: 0%;
+            }
+        }
+
+        &_third {
+            right: 0%;
+            top: 45%;
+
+            @include media-breakpoint-down(sm) {
+                display: none;
+            }
+        }
+
+        &_mob-first {
             display: none;
+
+            @include media-breakpoint-down(xs) {
+                left: 0%;
+                bottom: 0%;
+                display: block;
+            }
+        }
+
+        &_fourth {
+            left: 00;
+            bottom: 100px;
+
+          @include media-breakpoint-down(sm) {
+            display: none;
+          }
+        }
+
+        &_fivth {
+          left: 16%;
+          bottom: 1%;
+
+          @include media-breakpoint-down(sm) {
+            display: none;
+          }
+        }
+
+        &_sixth {
+            left: 12%;
+            bottom: 14%;
+
+          @include media-breakpoint-down(sm) {
+            display: none;
+          }
+        }
+
+        &_seventh {
+            right: 0%;
+            bottom: 3%;
+
+          @include media-breakpoint-down(sm) {
+            display: none;
+          }
         }
     }
 }

@@ -5,6 +5,10 @@
   color: $whiteTwo;
   background-color: $backgroundSecond;
 
+  @include media-breakpoint-down(xs) {
+    max-width: 345px;
+  }
+
   &__title {
     max-width: 75px;
     font-family: ProximaNova;
