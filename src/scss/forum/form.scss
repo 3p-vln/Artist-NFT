@@ -11,7 +11,7 @@
 
     &__input {
         border-radius: 12px;
-        width: 730px;
+        width: 100%;
         background: $backgroundSecond;
         padding: 22px 60px 23px;
         font-weight: 400;
@@ -20,14 +20,6 @@
         font-family: ProximaNova;
         border: 1px solid $gray6Color;
         color: $gray6Color;
-
-        @include media-breakpoint-down(sm) {
-          width: 500px;
-        }
-
-        @include media-breakpoint-down(xs) {
-          width: 345px;
-        }
     }
 
     &__button {
