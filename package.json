@@ -100,7 +100,6 @@
     "scroll-lock": "^2.1.5",
     "slick-carousel": "^1.8.1",
     "style-loader": "^3.3.3",
-    "swiper": "^11.0.5",
     "tippy.js": "^6.3.7"
   }
 }

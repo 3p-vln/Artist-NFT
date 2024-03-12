@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import 'slick-carousel';
-import Swiper from 'swiper';
 
 export function biographySwiper() {
     $('.columns-wrapper').slick({
