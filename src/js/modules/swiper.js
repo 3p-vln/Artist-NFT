@@ -73,14 +73,18 @@ export function popularSwiper() {
 }
 
 export function opersSwiper() {
-  new Swiper('.opers-mobile', {
-    loop: true,
-    
-    breakpoints: {
-      320: {
-        slidesPerView: 4.4, 
-        spaceBetween:27,
-      }
-    }
-  });
+    $('.opers-mobile__cards').slick({
+        arrows: false,
+        slidesToShow: 7,
+        variableWidth: true,
+        infinite: false,
+        responsive: [
+            {
+                breakpoint: 495,
+                settings: {
+                    slidesToShow: 4,
+                },
+            },
+        ],
+    });
 }

@@ -183,14 +183,18 @@
 
     .opers-mobile {
         &__cards {
-            display: flex;
+            display: flex !important;
             justify-content: space-between;
-            max-width: 350px;
             margin-bottom: 17px;
+
+            .swiper-slide {
+                margin-right: 15px;
+                max-width: 76px;
+            }
         }
 
         &__card {
-            display: flex;
+            display: flex !important;
             flex-direction: column;
             align-items: center;
             // gap: 10px;
