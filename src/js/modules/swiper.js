@@ -59,38 +59,3 @@ export function popularSwiper() {
         ],
     });
 }
-
-// export function popularSwiper() {
-//     new Swiper('.popular-swiper', {
-//         breakpoints: {
-//             320: {
-//                 slidesPerView: 1.1,
-//                 spaceBetween: 10,
-//             },
-//             375: {
-//                 slidesPerView: 1.185,
-//                 spaceBetween: 15,
-//             },
-//             576: {
-//                 slidesPerView: 1.8,
-//                 spaceBetween: 15,
-//             },
-//             768: {
-//                 slidesPerView: 2.5,
-//                 spaceBetween: 15,
-//             },
-//             1023: {
-//                 slidesPerView: 2.5,
-//                 spaceBetween: 15,
-//             },
-//             1024: {
-//                 slidesPerView: 3,
-//                 spaceBetween: 30,
-//             },
-//             1920: {
-//                 slidesPerView: 3,
-//                 spaceBetween: 30,
-//             },
-//         },
-//     });
-// }

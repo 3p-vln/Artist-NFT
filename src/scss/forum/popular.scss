@@ -92,13 +92,10 @@
     }
 
     &-wrapper {
-        // display: flex !important;
-        // flex-direction: row !important;
         padding-top: 23px;
     }
 
     .slick-list {
-        // margin: 0 auto;
         overflow: hidden;
 
         @include media-breakpoint-down(md) {
@@ -107,9 +104,6 @@
     }
 
     .slick-track {
-        // width: 1136px !important;
-        // height: 400px;
-
         display: flex !important;
         flex-direction: row !important;
     }
