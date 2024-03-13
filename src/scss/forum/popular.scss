@@ -236,6 +236,7 @@
                     line-height: 20px;
                     background: $rainbowBtnGradient;
                     background-clip: text;
+                    -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     text-wrap: nowrap;
                 }

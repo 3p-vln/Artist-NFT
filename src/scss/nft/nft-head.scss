@@ -88,6 +88,7 @@
       font-size: clamp(12px, 2.5vw, 18px);
       background: $rainbowBtnGradient;
       background-clip: text;
+      -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
 
       @include media-breakpoint-down(xs) {

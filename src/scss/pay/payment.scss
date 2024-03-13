@@ -17,6 +17,7 @@
       font-size: clamp(14px, 2.5vw, 18px);
       background: $rainbowBtnGradient;
       background-clip: text;
+      -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
@@ -29,6 +30,7 @@
         -webkit-text-fill-color: transparent;
         background: $rainbowBtnGradient;
         background-clip: text;
+        -webkit-background-clip: text;
       }
     }
 
@@ -410,6 +412,7 @@
           font-size: 14px;
           background: $rainbowBtnGradient;
           background-clip: text;
+          -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
 
@@ -442,6 +445,7 @@
         font-size: 14px;
         background: $rainbowBtnGradient;
         background-clip: text;
+        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
 
