@@ -1,4 +1,4 @@
-import { getElements } from '../composables/callDom';
+import { getElement, getElements } from '../composables/callDom';
 
 getElements('.select__content').forEach(function (dropDownWrapper) {
     const dropDownBtn = dropDownWrapper.querySelector('.select__btn');
@@ -8,6 +8,8 @@ getElements('.select__content').forEach(function (dropDownWrapper) {
     const dropDownListItems = dropDownList.querySelectorAll('.select__list-item');
     const dropDownInput = dropDownWrapper.querySelector('.select__input-hidden');
 
+    const dropDownHeight = dropDownBtn.clientHeight;
+    const dropDownTop = dropDownHeight * 3 + 14;
     const options = {
         rootMargin: `0px 0px -250px 0px`,
         threshold: 0,
@@ -16,9 +18,9 @@ getElements('.select__content').forEach(function (dropDownWrapper) {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                dropDownList.style.top = '65px';
+                dropDownList.style.top = `${dropDownHeight}px`;
             } else {
-                dropDownList.style.top = '-204px';
+                dropDownList.style.top = `-${dropDownTop}px`;
             }
         });
     }, options);
