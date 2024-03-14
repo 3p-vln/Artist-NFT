@@ -36,6 +36,9 @@ window.onload = function () {
         schoolBrilliantFivth: '.background__decor-img_fivth',
         schoolBrilliantSixth: '.background__decor-img_sixth',
         schoolBrilliantSeveth: '.background__decor-img_seventh',
+
+        authEllipse: '.background__ellipse',
+        authStar: '.background__star',
     };
 
     const forElements = {

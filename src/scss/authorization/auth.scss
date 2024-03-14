@@ -5,7 +5,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
+    padding: 186px 0 196px;
 
     &_log {
         padding-top: 144px;
@@ -206,7 +207,7 @@
                     position: absolute;
                     left: 50%;
                     top: 50%;
-                    border-radius: 5px;
+                    border-radius: 50%;
                     width: 14px;
                     height: 14px;
                     transform: translate(-50%, -50%);
@@ -241,10 +242,6 @@
             color: $whiteTwo;
             font-size: clamp(12px, 2.5vw, 15px);
         }
-    }
-
-    @include media-breakpoint-down(sm) {
-        padding: 20px 0 196px;
     }
 
     @include media-breakpoint-down(sm) {
