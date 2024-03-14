@@ -23,6 +23,7 @@ export function premiumSwiper() {
         centerMode: true,
         arrows: false,
         slidesToShow: 3,
+        slidesToScroll: 'auto',
         variableWidth: true,
         responsive: [
             {
