@@ -73,6 +73,7 @@
                     font-size: clamp(15px, 2.5vw, 18px);
                     -webkit-text-fill-color: transparent;
                     background-clip: text;
+                    -webkit-background-clip: text;
                 }
 
                 @include media-breakpoint-down(md) {
@@ -270,6 +271,7 @@
             font-size: clamp(14px, 2.5vw, 18px);
             background: $rainbowBtnGradient;
             background-clip: text;
+            -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
 
             @include media-breakpoint-down(xs) {

@@ -38,6 +38,7 @@
         line-height: 143%;
         background: $rainbowBtnGradient;
         background-clip: text;
+        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 }

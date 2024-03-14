@@ -386,6 +386,7 @@
                     -webkit-text-fill-color: transparent;
                     background: $rainbowBtnGradient;
                     background-clip: text;
+                    -webkit-background-clip: text;
                 }
             }
 
@@ -419,6 +420,7 @@
                         -webkit-text-fill-color: transparent;
                         background: $background;
                         background-clip: text;
+                        -webkit-background-clip: text;
                     }
                 }
 
