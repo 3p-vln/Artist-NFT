@@ -150,7 +150,7 @@
             }
         }
 
-        &.active {
+        &:hover {
             .card__info {
                 pointer-events: all;
                 opacity: 1;
@@ -207,7 +207,7 @@
                 }
             }
 
-            &.active {
+            &:hover {
                 .card__picture {
                     filter: blur(11px);
                 }
