@@ -33,6 +33,13 @@
     &__content-svg {
       width: 20px;
       height: 20px;
+      position: relative;
+
+        &_active {
+          // background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+          // fill: red;
+          display:none;
+        }
     }
 
     &__footer {

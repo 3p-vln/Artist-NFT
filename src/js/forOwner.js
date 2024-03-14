@@ -18,3 +18,19 @@ document.addEventListener('DOMContentLoaded', async () => {
     await logOut();
     opersSwiper();
 });
+
+const links = document.querySelectorAll('.sidebar__content-link');
+
+links.forEach((link) => {
+    link.addEventListener('click', () => {
+      const svgIcon = link.children[0];
+      const svgIcon1 = link.children[1];
+        links.forEach((currentLink) => {
+          currentLink.children[0].classList.add('sidebar__content-svg_active');
+          currentLink.children[1].classList.remove('sidebar__content-svg_active');
+        });
+      svgIcon.classList.remove('sidebar__content-svg_active');
+      svgIcon1.classList.add('sidebar__content-svg_active');
+      
+    });
+});

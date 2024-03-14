@@ -10,13 +10,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     await snapPopularSwiper();
     await questionToBD();
     popularSwiper();
-  searching();
-  
     async function snap() {
         await querySnapshot('questions', (doc) => new cardLoad(doc.data(), doc.id, '.forum__cards'));
     }
     await snap();
 
+    searching();
     stop();
 });
 
