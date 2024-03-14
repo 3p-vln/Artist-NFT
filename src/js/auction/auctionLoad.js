@@ -29,5 +29,6 @@ export async function snapAuction() {
         content: priceValue,
         animation: 'fade',
         theme: 'gradient',
+        zIndex: 10,
     });
 }
