@@ -50,10 +50,9 @@ export function navigation() {
             });
         }
 
-        function renderNFTs(product) {
+        function renderNFTs(product, nftArr) {
             product.forEach((nft, index) => {
                 const cardId = `card-${index}`;
-                // const card = getElementIdForFB(cardId);
 
                 getElementIdForFB('cardNftText', cardId).innerHTML = nft.cardNftText;
                 getElementIdForFB('cardImgWebp', cardId).src = nft.cardImgWebp;
@@ -69,40 +68,29 @@ export function navigation() {
         //   const card = $('.nfts-content');
         //   card.html('');
         //   let index = 0;
-        //   const cardItem = $('.card');
 
         //   product.forEach((nft) => {
-        //     const cardHtml = nft.data();
-        //     cardItem.classList.toggle(`${nftArr[index].id}`);
-        //     getElementId('cardNftText').innerHTML = nft.cardNftText;
-        //     getElementId('cardImgWebp').src = nft.cardImgWebp;
-        //     getElementId('cardImg').src = nft.cardImg;
-        //     getElementId('cardTitle').innerHTML = nft.cardTitle;
-        //     getElementId('cardParagraph').innerHTML = nft.cardParagraph;
-        //     getElementId('cardValue').innerHTML = nft.cardValue;
-        //     getElementId('cardBtnText').innerHTML = nft.cardBtnText;
-
-        // const cardHtml = `
-        //         <div class="nfts-content__item card ${nftArr[index].id}">
-        //             <h2 class="card__nft">${nft.cardNftText}</h2>
-        //             <div class="card__item">
-        //                 <picture>
-        //                     <source srcset="${nft.cardImgWebp}" type="webp">
-        //                     <img src="${nft.cardImg}" alt="item" class="card__item-img" />
-        //                 </picture>
+        //     const cardHtml = `
+        //             <div class="nfts-content__item card ${nftArr[index].id}">
+        //                 <h2 class="card__nft">${nft.cardNftText}</h2>
+        //                 <div class="card__item">
+        //                     <picture>
+        //                         <source srcset="${nft.cardImgWebp}" type="webp">
+        //                         <img src="${nft.cardImg}" alt="item" class="card__item-img" />
+        //                     </picture>
+        //                 </div>
+        //                 <h3 class="card__title">${nft.cardTitle}</h3>
+        //                 <p class="card__paragraph">${nft.cardParagraph}</p>
+        //                 <div class="card__price">
+        //                     <h2 class="card__price-value">${nft.cardValue}</h2>
+        //                     <a href="pay.html?id=${nftArr[index].id}&name=nft">
+        //                         <button class="card__price-btn">
+        //                             <p>${nft.cardBtnText}</p>
+        //                         </button>
+        //                     </a>
+        //                 </div>
         //             </div>
-        //             <h3 class="card__title">${nft.cardTitle}</h3>
-        //             <p class="card__paragraph">${nft.cardParagraph}</p>
-        //             <div class="card__price">
-        //                 <h2 class="card__price-value">${nft.cardValue}</h2>
-        //                 <a href="pay.html?id=${nftArr[index].id}&name=nft">
-        //                     <button class="card__price-btn">
-        //                         <p>${nft.cardBtnText}</p>
-        //                     </button>
-        //                 </a>
-        //             </div>
-        //         </div>
-        //         `;
+        //             `;
 
         //     card.append(cardHtml);
         //     index++;
@@ -139,9 +127,9 @@ export function navigation() {
                 const $number = $(number);
                 if (index === currentPage - 1) {
                     $number.addClass('nfts-pagination__list-item_active');
-                    renderNFTs(nftArr.slice(index * 12, index * 12 + 12));
+                    renderNFTs(nftArr.slice(index * 12, index * 12 + 12), nftArr);
                     window.scrollTo({ top: 0, behavior: 'smooth' });
-                } else {
+                } else {  
                     $number.removeClass('nfts-pagination__list-item_active');
                 }
             });
