@@ -11,10 +11,12 @@ export const mobilePagesChange = function () {
 
   cards.forEach((card) => {
     card.addEventListener('click', () => {
-      chatList.classList.add('chat__list_hidden');
-      chatWindow.classList.add('chat__window_active');
-      opersMobile.classList.add('opers-mobile_hidden');
-      chatMobileTitle.classList.add('chat__mobile-title_active');
+      if (window.innerWidth <= 1024) {
+        opersMobile.classList.add('opers-mobile_hidden');
+        chatList.classList.add('chat__list_hidden');
+        chatWindow.classList.add('chat__window_active');
+        chatMobileTitle.classList.add('chat__mobile-title_active');
+      }
     })
   })
 

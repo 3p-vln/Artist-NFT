@@ -5,7 +5,7 @@ export const searching = function () {
 
  searchInput.oninput = function () {
      let value = this.value.trim();
-
+    console.log(value)
      if (value !== '') {
          cards.forEach(function (element) {
              if (element.innerText.search(value) == -1) {
@@ -21,5 +21,6 @@ export const searching = function () {
      }
  };
 }
+
 
 
