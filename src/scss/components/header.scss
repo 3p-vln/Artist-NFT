@@ -78,6 +78,7 @@
                     -webkit-text-fill-color: transparent;
                     background: $rainbowBtnGradient;
                     background-clip: text;
+                    -webkit-background-clip: text;
                 }
 
                 &:hover::before {
@@ -236,6 +237,7 @@
                 font-size: 14px;
                 background: $rainbowBtnGradient;
                 background-clip: text;
+                -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
 

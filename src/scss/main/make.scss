@@ -142,6 +142,7 @@
                     -webkit-text-fill-color: transparent;
                     background: $rainbowBtnGradient;
                     background-clip: text;
+                    -webkit-background-clip: text;
                 }
 
                 @include media-breakpoint-down(xs) {
