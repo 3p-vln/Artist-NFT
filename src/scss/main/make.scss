@@ -25,7 +25,7 @@
 
         &-title {
             padding: 24px 0 0 2px;
-            width: 475px;
+            width: 440px;
             font-family: ProximaNova;
             font-weight: bold;
             font-weight: bold;
@@ -102,6 +102,7 @@
         display: flex;
         padding: 40px 0 0 2px;
         gap: 12px;
+        width: fit-content;
 
         &__premium {
             &-btn {

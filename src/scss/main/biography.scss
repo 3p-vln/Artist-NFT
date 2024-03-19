@@ -31,8 +31,9 @@
     &__text {
         &-subtitle {
             padding-top: 44px;
-            padding-left: 56px;
+            transform: translateX(56px);
             max-width: 210px;
+            width: fit-content;
             font-family: ProximaNova;
             font-weight: bold;
             line-height: 26.5px;
@@ -44,7 +45,7 @@
             -webkit-text-fill-color: transparent;
 
             @include media-breakpoint-down(md) {
-                padding-left: 0;
+                transform: translateX(0px);
             }
 
             @include media-breakpoint-down(xs) {
@@ -55,7 +56,7 @@
 
         &-title {
             padding-top: 10px;
-            padding-left: 56px;
+            transform: translateX(56px);
             font-family: ProximaNova;
             font-weight: bold;
             line-height: 34px;
@@ -63,7 +64,7 @@
             color: $whiteTwo;
 
             @include media-breakpoint-down(md) {
-                padding-left: 0;
+                transform: translateX(0px);
             }
 
             @include media-breakpoint-down(xs) {

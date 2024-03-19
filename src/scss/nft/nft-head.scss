@@ -1,77 +1,11 @@
 .nft-head {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 60px;
-  padding-top: 52px;
-  gap: 18px;
-
-  &__title {
-    font-family: ProximaNova;
-    font-weight: bold;
-    line-height: 65px;
-    text-align: center;
-    font-size: clamp(36px, 5vw, 64px);
-    color: $whiteTwo;
-
-    @include media-breakpoint-down(lg) {
-      line-height: calc(40px + (65 - 40) * ((100vw - 375px) / (1440 - 375)));
-    }
-
-    @include media-breakpoint-down(xs) {
-      padding-top: 12px;
-    }
-  }
-
-  &__subtitle {
-    max-width: 400px;
-    font-family: ProximaNova;
-    font-weight: normal;
-    line-height: 28px;
-    text-align: center;
-    font-size: clamp(15px, 2.5vw, 16px);
-    color: $whiteTwo;
-
-    @include media-breakpoint-down(lg) {
-      line-height: calc(24px + (28 - 24) * ((100vw - 375px) / (1440 - 375)));
-    }
-  }
-
-  @include media-breakpoint-down(lg) {
-    margin-top: calc(26px + (60 - 26) * ((100vw - 375px) / (1440 - 375)));
-    gap: calc(16px + (18 - 16) * ((100vw - 375px) / (1440 - 375)));
-  }
-}
-
-.nfts {
-  &-content {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    grid-template-columns: repeat(3, minmax(200px, 350px));
-    padding-top: 50px;
-    padding-bottom: 52px;
-    gap: 24px 30px;
-
-    @include media-breakpoint-down(md) {
-      grid-template-columns: repeat(2, minmax(163px, 350px));
-    }
-
-    @include media-breakpoint-down(xs) {
-      grid-template-columns: repeat(2, auto);
-      padding-top: 44px;
-      gap: 16px 20px;
-    }
-
-    @include media-breakpoint-down(xxs) {
-      gap: 10px 10px;
-    }
-  }
-
-  .card {
+    position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    padding-top: 52px;
+    gap: 18px;
     border-radius: 12px;
     height: 600px;
     max-width: 100%;
@@ -99,303 +33,402 @@
       }
     }
 
-    &__item {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 53px 70px;
-      height: 350px;
-
-      &-img {
-        border-radius: 50%;
-        width: fit-content;
-        height: 100%;
-        max-width: 264px;
-        aspect-ratio: 1/1;
-        object-fit: cover;
-
-        @include media-breakpoint-down(sm) {
-          max-width: 200px;
-          max-height: 200px;
-        }
-
-        @include media-breakpoint-down(xs) {
-          max-width: 123px;
-          max-height: 123px;
-        }
-      }
-
-      @include media-breakpoint-down(sm) {
-        padding: 35px;
-      }
-
-      @include media-breakpoint-down(xs) {
-        order: 1;
-        padding: 20px;
-      }
-    }
-
     &__title {
-      padding: 33px 24px 0;
-      font-family: ProximaNova;
-      font-weight: bold;
-      line-height: 30px;
-      font-size: clamp(13px, 2.5vw, 20px);
-      color: $whiteTwo;
-
-      @include media-breakpoint-down(xs) {
-        order: 3;
-        padding: 0 11px;
-        line-height: 26.5px;
-        transform: translateY(-10px);
-      }
-
-      @include media-breakpoint-down(xxs) {
-        padding: 5px 11px;
-        line-height: 16.5px;
-      }
-    }
-
-    &__paragraph {
-      padding: 0 24px 20px;
-      max-width: 350px;
-      font-family: ProximaNova;
-      font-weight: normal;
-      line-height: 21px;
-      font-size: clamp(10px, 2.5vw, 14px);
-      color: $gray6Color;
-
-      @include media-breakpoint-down(xs) {
-        order: 4;
-        padding: 0 17px 0 12px;
-        line-height: 15.5px;
-        transform: translateY(-10px);
-      }
-    }
-
-    &__price {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 13px 21px 17px 24px;
-      text-wrap: nowrap;
-
-      &::before {
-        content: '';
-        position: absolute;
-        left: 5%;
-        top: -2px;
-        width: 90%;
-        height: 1px;
-        opacity: 0.05;
-        background: $whiteTwo;
-
-        @include media-breakpoint-down(xs) {
-          display: none;
-        }
-      }
-
-      &-value {
         font-family: ProximaNova;
         font-weight: bold;
-        line-height: 33.5px;
-        font-size: clamp(14px, 2.5vw, 26px);
+        line-height: 65px;
+        text-align: center;
+        font-size: clamp(36px, 5vw, 64px);
         color: $whiteTwo;
 
-        @include media-breakpoint-down(xs) {
-          padding-top: 2px;
-        }
-      }
-
-      &-btn {
-        position: relative;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        border-radius: 12px;
-        padding: 14px 30px;
-        background: $rainbowBtnGradient;
-
-        &::before {
-          content: '';
-          position: absolute;
-          left: -95px;
-          top: 0;
-          width: 50px;
-          height: 100px;
-          transform: skewX(-45deg);
-          background: $hoverBtn;
-        }
-
-        p {
-          font-family: ProximaNova;
-          font-weight: bold;
-          line-height: 20px;
-          font-size: clamp(12px, 2.5vw, 14px);
-          color: $background;
-        }
-
-        &:hover {
-          &::before {
-            left: 130%;
-            transition: left 0.5s ease-in-out;
-
-            @include media-breakpoint-down(sm) {
-              display: none;
-            }
-          }
+        @include media-breakpoint-down(lg) {
+            line-height: calc(40px + (65 - 40) * ((100vw - 375px) / (1440 - 375)));
         }
 
         @include media-breakpoint-down(xs) {
-          margin-top: 2px;
+            padding-top: 12px;
         }
-
-        @include media-breakpoint-down(xs) {
-          border-radius: 8px;
-          padding: 7px 15px;
-          width: 100%;
-          max-width: 100%;
-          transform: translateY(1px);
-        }
-      }
-
-      @include media-breakpoint-down(xs) {
-        flex-direction: column;
-        align-items: start;
-        order: 5;
-        padding: 0 11px 17px;
-        transform: translateY(-10px);
-
-        a {
-          width: 100%;
-        }
-      }
     }
 
-    @include media-breakpoint-down(sm) {
-      max-height: 535px;
-    }
-
-    @include media-breakpoint-down(xs) {
-      min-width: 163px;
-      max-height: 339px;
-    }
-
-    @include media-breakpoint-down(xxs) {
-      min-width: 145px;
-      max-height: 370px;
-    }
-  }
-
-  &-pagination {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 50px;
-
-    &__prev {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 55px;
-      border: 2px solid $gray7Color;
-      border-radius: 10px;
-      width: 48px;
-      height: 48px;
-      box-sizing: border-box;
-      cursor: pointer;
-      background: $backgroundSecond;
-
-      svg {
-        width: 30.52px;
-        height: 26.25px;
-        transform: rotate(90deg);
-      }
-
-      @include media-breakpoint-down(xs) {
-        margin: 0 15px 0 5px;
-        width: 40px;
-        height: 40px;
-      }
-    }
-
-    &__next {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 55px;
-      border: 2px solid $gray7Color;
-      border-radius: 10px;
-      width: 48px;
-      height: 48px;
-      box-sizing: border-box;
-      cursor: pointer;
-      background: $backgroundSecond;
-
-      svg {
-        width: 30.52px;
-        height: 26.25px;
-        transform: rotate(-90deg);
-      }
-
-      @include media-breakpoint-down(xs) {
-        margin: 0 5px 0 15px;
-        width: 40px;
-        height: 40px;
-      }
-    }
-
-    &__list {
-      display: flex;
-
-      &-item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 9px;
-        border-radius: 10px;
-        width: 48px;
-        height: 48px;
+    &__subtitle {
+        max-width: 400px;
         font-family: ProximaNova;
-        font-weight: bold;
-        line-height: 30px;
+        font-weight: normal;
+        line-height: 28px;
         text-align: center;
-        cursor: pointer;
-        font-size: clamp(18px, 2.5vw, 20px);
-        color: $whiteColor;
+        font-size: clamp(15px, 2.5vw, 16px);
+        color: $whiteTwo;
+
+        @include media-breakpoint-down(lg) {
+            line-height: calc(24px + (28 - 24) * ((100vw - 375px) / (1440 - 375)));
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        margin-top: calc(26px + (60 - 26) * ((100vw - 375px) / (1440 - 375)));
+        gap: calc(16px + (18 - 16) * ((100vw - 375px) / (1440 - 375)));
+    }
+}
+
+.nfts {
+    &-content {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(3, minmax(200px, 350px));
+        padding-top: 50px;
+        padding-bottom: 52px;
+        gap: 24px 30px;
+
+        @include media-breakpoint-down(md) {
+            grid-template-columns: repeat(2, minmax(163px, 350px));
+        }
+
+        @include media-breakpoint-down(xs) {
+            grid-template-columns: repeat(2, auto);
+            padding-top: 44px;
+            gap: 16px 20px;
+        }
+
+        @include media-breakpoint-down(xxs) {
+            gap: 10px 10px;
+        }
+    }
+
+    // .card-wrapper {
+    //     display: none;
+    // }
+
+    // .card-wrapper.active {
+    //     display: block;
+    // }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        border-radius: 12px;
+        height: 600px;
+        max-width: 100%;
+        transition: transform 0.3s ease-in-out;
         background: $backgroundSecond;
 
-        @include media-breakpoint-down(xs) {
-          width: 40px;
-          height: 40px;
-        }
-      }
+        &__nft {
+            padding: 17px 0 0 20px;
+            max-width: 65px;
+            font-family: ProximaNova;
+            font-weight: bold;
+            line-height: 26.5px;
+            letter-spacing: 1.8px;
+            font-size: clamp(12px, 2.5vw, 18px);
+            background: $rainbowBtnGradient;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
 
-      &-item_active {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 9px;
-        border-radius: 10px;
-        width: 48px;
-        height: 48px;
-        font-family: ProximaNova;
-        font-weight: bold;
-        line-height: 30px;
-        text-align: center;
-        cursor: pointer;
-        font-size: clamp(18px, 2.5vw, 20px);
-        color: $background;
-        background: $rainbowBtnGradient;
+            @include media-breakpoint-down(xs) {
+                order: 2;
+                padding: 4px 0 0 11px;
+                max-width: 60px;
+                letter-spacing: 1.4px;
+            }
+        }
+
+        &__item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 53px 70px;
+            height: 350px;
+
+            &-img {
+                border-radius: 50%;
+                width: fit-content;
+                height: 100%;
+                max-width: 264px;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+
+                @include media-breakpoint-down(sm) {
+                    max-width: 200px;
+                    max-height: 200px;
+                }
+
+                @include media-breakpoint-down(xs) {
+                    max-width: 123px;
+                    max-height: 123px;
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+                padding: 35px;
+            }
+
+            @include media-breakpoint-down(xs) {
+                order: 1;
+                padding: 20px;
+            }
+        }
+
+        &__title {
+            padding: 33px 24px 0;
+            font-family: ProximaNova;
+            font-weight: bold;
+            line-height: 30px;
+            font-size: clamp(13px, 2.5vw, 20px);
+            color: $whiteTwo;
+
+            @include media-breakpoint-down(xs) {
+                order: 3;
+                padding: 0 11px;
+                line-height: 26.5px;
+                transform: translateY(-10px);
+            }
+
+            @include media-breakpoint-down(xxs) {
+                padding: 5px 11px;
+                line-height: 16.5px;
+            }
+        }
+
+        &__paragraph {
+            padding: 0 24px 20px;
+            max-width: 350px;
+            font-family: ProximaNova;
+            font-weight: normal;
+            line-height: 21px;
+            font-size: clamp(10px, 2.5vw, 14px);
+            color: $gray6Color;
+
+            @include media-breakpoint-down(xs) {
+                order: 4;
+                padding: 0 17px 0 12px;
+                line-height: 15.5px;
+                transform: translateY(-10px);
+            }
+        }
+
+        &__price {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 13px 21px 17px 24px;
+            text-wrap: nowrap;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 5%;
+                top: -2px;
+                width: 90%;
+                height: 1px;
+                opacity: 0.05;
+                background: $whiteTwo;
+
+                @include media-breakpoint-down(xs) {
+                    display: none;
+                }
+            }
+
+            &-value {
+                font-family: ProximaNova;
+                font-weight: bold;
+                line-height: 33.5px;
+                font-size: clamp(14px, 2.5vw, 26px);
+                color: $whiteTwo;
+
+                @include media-breakpoint-down(xs) {
+                    padding-top: 2px;
+                }
+            }
+
+            &-btn {
+                position: relative;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                border-radius: 12px;
+                padding: 14px 30px;
+                background: $rainbowBtnGradient;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: -95px;
+                    top: 0;
+                    width: 50px;
+                    height: 100px;
+                    transform: skewX(-45deg);
+                    background: $hoverBtn;
+                }
+
+                p {
+                    font-family: ProximaNova;
+                    font-weight: bold;
+                    line-height: 20px;
+                    font-size: clamp(12px, 2.5vw, 14px);
+                    color: $background;
+                }
+
+                &:hover {
+                    &::before {
+                        left: 130%;
+                        transition: left 0.5s ease-in-out;
+
+                        @include media-breakpoint-down(sm) {
+                            display: none;
+                        }
+                    }
+                }
+
+                @include media-breakpoint-down(xs) {
+                    margin-top: 2px;
+                }
+
+                @include media-breakpoint-down(xs) {
+                    border-radius: 8px;
+                    padding: 7px 15px;
+                    width: 100%;
+                    max-width: 100%;
+                    transform: translateY(1px);
+                }
+            }
+
+            @include media-breakpoint-down(xs) {
+                flex-direction: column;
+                align-items: start;
+                order: 5;
+                padding: 0 11px 17px;
+                transform: translateY(-10px);
+
+                a {
+                    width: 100%;
+                }
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            max-height: 535px;
+        }
 
         @include media-breakpoint-down(xs) {
-          width: 40px;
-          height: 40px;
+            min-width: 163px;
+            max-height: 339px;
         }
-      }
+
+        @include media-breakpoint-down(xxs) {
+            min-width: 145px;
+            max-height: 370px;
+        }
     }
-  }
+
+    &-pagination {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 50px;
+
+        &__prev {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 55px;
+            border: 2px solid $gray7Color;
+            border-radius: 10px;
+            width: 48px;
+            height: 48px;
+            box-sizing: border-box;
+            cursor: pointer;
+            background: $backgroundSecond;
+
+            svg {
+                width: 30.52px;
+                height: 26.25px;
+                transform: rotate(90deg);
+            }
+
+            @include media-breakpoint-down(xs) {
+                margin: 0 15px 0 5px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        &__next {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 55px;
+            border: 2px solid $gray7Color;
+            border-radius: 10px;
+            width: 48px;
+            height: 48px;
+            box-sizing: border-box;
+            cursor: pointer;
+            background: $backgroundSecond;
+
+            svg {
+                width: 30.52px;
+                height: 26.25px;
+                transform: rotate(-90deg);
+            }
+
+            @include media-breakpoint-down(xs) {
+                margin: 0 5px 0 15px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        &__list {
+            display: flex;
+
+            &-item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 9px;
+                border-radius: 10px;
+                width: 48px;
+                height: 48px;
+                font-family: ProximaNova;
+                font-weight: bold;
+                line-height: 30px;
+                text-align: center;
+                cursor: pointer;
+                font-size: clamp(18px, 2.5vw, 20px);
+                color: $whiteColor;
+                background: $backgroundSecond;
+
+                @include media-breakpoint-down(xs) {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+            &-item_active {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 9px;
+                border-radius: 10px;
+                width: 48px;
+                height: 48px;
+                font-family: ProximaNova;
+                font-weight: bold;
+                line-height: 30px;
+                text-align: center;
+                cursor: pointer;
+                font-size: clamp(18px, 2.5vw, 20px);
+                color: $background;
+                background: $rainbowBtnGradient;
+
+                @include media-breakpoint-down(xs) {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+    }
 }
