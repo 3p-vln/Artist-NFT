@@ -5,16 +5,16 @@ import { auctionValidate } from './auction/auctionValidate';
 import { auctionTimer } from './auction/auctionTimer';
 
 document.addEventListener('DOMContentLoaded', async () => {
-  await snapAuction();
-  await auctionValidate();
-  auctionTimer();
-  auctionAccordion();
+    await snapAuction();
+    await auctionValidate();
+    auctionTimer();
+    auctionAccordion();
 
-  document.getElementById('form').addEventListener('submit', async function (event) {
-    event.preventDefault();
-    await auctionToBD();
-  });
+    document.getElementById('form').addEventListener('submit', async function (event) {
+        event.preventDefault();
+        await auctionToBD();
+    });
 
-  const artLoadEvent = new Event('loadingIsFinished');
-  document.dispatchEvent(artLoadEvent);
+    const artLoadEvent = new Event('loadingIsFinished');
+    document.dispatchEvent(artLoadEvent);
 });

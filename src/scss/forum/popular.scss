@@ -91,6 +91,68 @@
         }
     }
 
+    .skeleton-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: visible;
+        width: 100%;
+
+        // @include media-breakpoint-down(l) {
+        //     .skeleton-card:nth-child(3) {
+        //         display: none;
+        //     }
+        // }
+
+        // @include media-breakpoint-down(xs) {
+        //     .skeleton-card:nth-child(3),
+        //     .skeleton-card:nth-child(2) {
+        //         display: none;
+        //     }
+        // }
+    }
+
+    .skeleton-card {
+        max-width: 350px;
+        height: 350px;
+        width: 100%;
+        position: relative;
+        margin-right: 30px;
+
+        @include media-breakpoint-down(xs) {
+            height: 450px;
+            max-width: 280px;
+            margin-right: 16px;
+        }
+
+        @include media-breakpoint-down(xxs) {
+            height: 465px;
+        }
+    }
+
+    .skeleton-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        border-radius: 12px;
+        background: linear-gradient(90deg, $backgroundSecond, $mainDarkColor, $backgroundSecond);
+        background-size: 200%;
+        animation: skeleton 1s infinite reverse;
+    }
+
+    @keyframes skeleton {
+        0% {
+            background-position: -100% 0;
+        }
+        100% {
+            background-position: 100% 0;
+        }
+    }
+
     &-wrapper {
         padding-top: 23px;
     }

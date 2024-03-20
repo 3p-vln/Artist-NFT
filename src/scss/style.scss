@@ -171,9 +171,7 @@ body {
     height: 100%;
     z-index: 10;
     border-radius: 12px;
-    // background: linear-gradient(90deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%, rgba(104, 201, 255, 0.1) 9.27%);
-    background: linear-gradient(90deg, $gray7Color, $mainDarkColor, $gray7Color);
-    opacity: 0.5;
+    background: linear-gradient(90deg, $backgroundSecond, $mainDarkColor, $backgroundSecond);
     background-size: 200%;
     animation: skeleton 1s infinite reverse;
 }
