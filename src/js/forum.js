@@ -7,7 +7,7 @@ import { querySnapshot } from './modules/snap';
 import { cardLoad } from './forum/cardLoad';
 
 document.addEventListener('DOMContentLoaded', async () => {
-    skeletonCardLoad();
+    // skeletonCardLoad();
     await snapPopularSwiper();
     await questionToBD();
     popularSwiper();
@@ -18,13 +18,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     searching();
     stop();
+
+    const artLoadEvent = new Event('loadingIsFinished');
+    document.dispatchEvent(artLoadEvent);
 });
 
-function skeletonCardLoad() {
-    window.addEventListener('load', function () {
-        document.querySelector('.skeleton-wrapper').remove();
-    });
-}
+// function skeletonCardLoad() {
+//     window.addEventListener('load', function () {
+//         document.querySelector('.skeleton-wrapper').remove();
+//     });
+// }
 
 // const cards = document.querySelectorAll('.card');
 // const questions = document.querySelectorAll('.card__head-question');

@@ -9,6 +9,8 @@ import { select } from './modules/select';
 import setMouseParalaxStyle from './modules/paralax';
 import { skeletonsCustom } from './custom/removeSkeletonCustom';
 import { skeletonsMain } from './main/removeSkeletonMain';
+import { skeletonsNft } from './nft/removeSkeletonNft';
+import { skeletonsForumPopular } from './forum/removeSkeletonPopular';
 
 const allSkeleton = document.querySelectorAll('.skeleton');
 
@@ -32,6 +34,10 @@ document.addEventListener('loadingIsFinished', () => {
                 skeletonsCustom('.custom-mesh');
             } else if (window.location.toString().includes('index.html')) {
                 skeletonsMain();
+            } else if (window.location.toString().includes('nft.html')) {
+                skeletonsNft();
+            } else if (window.location.toString().includes('forum.html')) {
+                skeletonsForumPopular();
             } else {
                 item.classList.remove('skeleton');
             }
