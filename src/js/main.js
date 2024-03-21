@@ -6,7 +6,6 @@ import { premiumSwiper } from './modules/swiper';
 import { validate } from './main/contactValidate';
 
 document.addEventListener('DOMContentLoaded', async () => {
-    skeletonCardLoad();
     await snapBiography();
     await snapPremiumBanner();
     await snapPremiumSwiper();
@@ -16,9 +15,3 @@ document.addEventListener('DOMContentLoaded', async () => {
     const artLoadEvent = new Event('loadingIsFinished');
     document.dispatchEvent(artLoadEvent);
 });
-
-function skeletonCardLoad() {
-    window.addEventListener('load', function () {
-        document.querySelectorAll('.skeleton-card').remove();
-    });
-}

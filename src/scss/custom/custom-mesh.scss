@@ -228,6 +228,10 @@
                 }
             }
         }
+
+        &:not(.skeleton) {
+            display: none;
+        }
     }
 
     @include media-breakpoint-down(md) {
