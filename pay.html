@@ -6,18 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/pay.min.css?_v=20240318134017">
+    <link rel="stylesheet" href="css/pay.min.css?_v=20240321175125">
     <title>PURCHASE</title>
 </head>
 
 
 <body>
-  <div class="preloader visible">
-    <div class="preloader__row">
-        <div class="preloader__item"></div>
-        <div class="preloader__item"></div>
-    </div>
-</div>
+  
 
   <div class="wrapper">
     <header class="header">
@@ -127,7 +122,7 @@
       <div class="page__container">
         <div class="payment">
     <div class="form payment__form">
-        <div class="form__head">
+        <div class="skeleton form__head">
             <h2 class="form__subtitle">PURCHASE</h2>
             <h3 class="form__title">
                 Payment for
@@ -135,13 +130,13 @@
             </h3>
         </div>
         <div class="form__tabs tabs">
-            <div class="tabs__nav">
+            <div class="skeleton tabs__nav">
                 <button class="tabs__nav-btn" type="button" data-tab="#card">Credit card</button>
                 <button class="tabs__nav-btn" type="button" data-tab="#paypal">PayPal</button>
                 <button class="tabs__nav-btn" type="button" data-tab="#crypto">Crypto</button>
                 <div class="selector"></div>
             </div>
-            <div class="tabs__content">
+            <div class="skeleton tabs__content">
                 <div class="tabs__item" id="card">
                     <form class="form tabs__form" autocomplete="off" id="form-card">
                         <div class="form__item">
@@ -216,7 +211,7 @@
                             <label class="form__item-label">To purchase item by crypto you have to send money to this wallet. After 5 minute result will sent in your mail</label>
                             <div class="form__copy">
                                 <p class="copy-text">EQBSSl0Xlo15gkkHTmFw5YVYOiWJ.</p>
-                                <button href="#" class="copy-btn" data-clipboard-target=".copy-text">
+                                <button type="button" href="#" class="copy-btn">
                                     <svg>
                                         <use href="#copy"></use>
                                     </svg>
@@ -245,7 +240,7 @@
         </div>
     </div>
     <div class="payment__about">
-        <div class="about">
+        <div class="skeleton about">
             <h3 class="about__title" id="art-name"></h3>
             <div class="about__price">
                 <div class="price">
@@ -770,7 +765,7 @@
 
 </div></body>
 
-<script src="js/app.min.js?_v=20240318134017"></script>
-<script src="js/pay.min.js?_v=20240318134017"></script>
+<script src="js/app.min.js?_v=20240321175125"></script>
+<script src="js/pay.min.js?_v=20240321175125"></script>
 
 </html>
