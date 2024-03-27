@@ -8,6 +8,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         await querySnapshot('art', (doc) => new artLoad(doc.data(), doc.id, '.art-mesh'));
     }
     await snap();
-    // focus('.art-mesh');
+    focus('.art-mesh');
     stop();
 });
