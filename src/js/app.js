@@ -11,6 +11,7 @@ import { skeletonsCustom } from './custom/removeSkeletonCustom';
 import { skeletonsMain } from './main/removeSkeletonMain';
 import { skeletonsNft } from './nft/removeSkeletonNft';
 import { skeletonsForumPopular } from './forum/removeSkeletonPopular';
+import { skeletonsOneArt } from './oneArt/removeSkeletonOneArt';
 
 const allSkeleton = document.querySelectorAll('.skeleton');
 
@@ -38,6 +39,8 @@ document.addEventListener('loadingIsFinished', () => {
                 skeletonsNft();
             } else if (window.location.toString().includes('forum.html')) {
                 skeletonsForumPopular();
+            } else if (window.location.toString().includes('oneArt.htm')) {
+                skeletonsOneArt();
             } else {
                 item.classList.remove('skeleton');
             }
