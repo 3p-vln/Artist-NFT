@@ -93,41 +93,40 @@
         background: $backgroundSecond;
     }
 
-     &__plans {
-          display: flex;
-          justify-content: space-between;
-          width: 410px;
+    &__plans {
+        display: flex;
+        justify-content: space-between;
+        width: 410px;
 
-          @include media-breakpoint-down(xs) {
+        @include media-breakpoint-down(xs) {
             width: 350px;
-          }
+        }
+    }
+
+    &__plans-button {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        border-radius: 12px;
+        padding: 17px 19px;
+        width: 120px;
+        white-space: nowrap;
+        z-index: 2;
+        font-size: 18px;
+        background: $backgroundSecond;
+
+        &_active {
+            background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
         }
 
-      &__plans-button {
-          position: relative;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          outline: none;
-          border-radius: 12px;
-          padding: 17px 19px;
-          width: 120px;
-          white-space: nowrap;
-          z-index: 2;
-          font-size: 18px;
-          background: $backgroundSecond;
-
-          &_active {
-              background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
-          }
-
-          @include media-breakpoint-down(xs) {
+        @include media-breakpoint-down(xs) {
             width: 109px;
-          }
-          
-      }
+        }
+    }
 
-      &__plans-button-text {
+    &__plans-button-text {
         font-weight: 700;
         font-size: 18px;
         line-height: 147%;
@@ -136,11 +135,11 @@
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-      }
+    }
 
-      &__plans-button_active .register-form__plans-button-text {
+    &__plans-button_active .register-form__plans-button-text {
         -webkit-text-fill-color: $background;
-      }
+    }
 
     .form {
         margin: 0 auto;
@@ -155,11 +154,11 @@
             gap: 6px;
 
             &_last {
-              margin-bottom: 38px;
+                margin-bottom: 38px;
 
-              @include media-breakpoint-down(xs) {
-                margin-bottom: 2px;
-              }
+                @include media-breakpoint-down(xs) {
+                    margin-bottom: 2px;
+                }
             }
         }
 
@@ -323,6 +322,7 @@
             .just-validate-error-label {
                 position: absolute;
                 left: 0;
+                top: auto;
                 bottom: -40px;
                 border-radius: 7px;
                 padding: 8px;

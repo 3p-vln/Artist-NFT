@@ -151,11 +151,14 @@
         border-radius: 16px;
         padding: 18px 0 19px;
         width: 209px;
-        font-weight: bold;
-        line-height: 147%;
-        font-size: 18px;
-        color: $background;
         background: $rainbowBtnGradient;
+
+        a {
+            font-weight: bold;
+            line-height: 147%;
+            font-size: 18px;
+            color: $background;
+        }
 
         @include media-breakpoint-down(xs) {
             border-radius: 12px;
